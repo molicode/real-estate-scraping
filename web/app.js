@@ -199,6 +199,7 @@ document.querySelectorAll(".tab").forEach((btn) => {
     $(`tab-${btn.dataset.tab}`).classList.remove("hidden");
     if (btn.dataset.tab === "results" && !$("results-list").innerHTML) loadResults();
     if (btn.dataset.tab === "top" && !$("top-rent").innerHTML) loadResults();
+    if (btn.dataset.tab === "fav" && !$("fav-list").innerHTML) loadFavorites().then(renderFavorites);
     if (btn.dataset.tab === "runs" && !$("runs-list").innerHTML) loadRuns();
   });
 });
@@ -474,6 +475,7 @@ async function loadResults() {
       return;
     }
     allListings = Object.values(await resp.json());
+    if (!favLoaded) await loadFavorites();
     populateSearchSelects();
     applySearch();
     renderTop();
@@ -547,6 +549,122 @@ function fmtPrice(l) {
   return `${cur} ${Number(l.price_amount).toLocaleString("es-AR")}`;
 }
 
+/* ---------- Favoritos (Me gustan) ---------- */
+
+let favorites = {};
+let favSha = null;
+let favLoaded = false;
+let favQueue = Promise.resolve(); // serializa los commits de favoritos
+
+async function loadFavorites() {
+  try {
+    const { content, sha } = await fetchFile("data/favorites.json");
+    favSha = sha;
+    favorites = content ? JSON.parse(content) : {};
+  } catch {
+    favorites = {};
+  }
+  favLoaded = true;
+}
+
+function isFav(id) {
+  return Boolean(favorites[id]);
+}
+
+function heartHtml(l) {
+  const on = isFav(l.id);
+  return `<button class="fav-btn${on ? " on" : ""}" data-fav="${escapeHtml(l.id)}"
+    title="${on ? "Quitar de Me gustan" : "Guardar en Me gustan"}">${on ? "❤️" : "🤍"}</button>`;
+}
+
+function refreshHearts() {
+  document.querySelectorAll("button[data-fav]").forEach((btn) => {
+    const on = isFav(btn.dataset.fav);
+    btn.classList.toggle("on", on);
+    btn.textContent = on ? "❤️" : "🤍";
+    btn.title = on ? "Quitar de Me gustan" : "Guardar en Me gustan";
+  });
+}
+
+function toggleFavorite(id) {
+  if (isFav(id)) {
+    delete favorites[id];
+  } else {
+    const listing = allListings.find((l) => l.id === id);
+    if (!listing) return;
+    favorites[id] = {
+      ...listing,
+      saved_at: new Date().toISOString().slice(0, 19) + "Z",
+    };
+  }
+  refreshHearts();
+  renderFavorites();
+  setStatus($("fav-status"), "Guardando en el repo...");
+  favQueue = favQueue.then(saveFavorites).catch(() => {});
+}
+
+async function saveFavorites() {
+  const body = JSON.stringify(favorites, null, 2) + "\n";
+  const message = "chore: actualizar favoritos desde la web";
+  try {
+    favSha = await putFile("data/favorites.json", body, favSha, message);
+  } catch (err) {
+    // sha desactualizado (otro navegador guardó en el medio): refrescar y reintentar
+    try {
+      const { sha } = await fetchFile("data/favorites.json");
+      favSha = await putFile("data/favorites.json", body, sha, message);
+    } catch (err2) {
+      setStatus($("fav-status"), "❌ No pude guardar: " + err2.message, "error");
+      return;
+    }
+  }
+  setStatus($("fav-status"), `✅ ${Object.keys(favorites).length} favoritos guardados en el repo`, "ok");
+}
+
+document.body.addEventListener("click", (e) => {
+  const btn = e.target.closest("button[data-fav]");
+  if (!btn) return;
+  e.preventDefault();
+  toggleFavorite(btn.dataset.fav);
+});
+
+function favCardHtml(l) {
+  const imgs = (l.images && l.images.length ? l.images : [l.image]).filter(Boolean);
+  const photo = imgs.length
+    ? `<img class="zoomable" src="${escapeHtml(imgs[0])}" loading="lazy" alt=""
+        onerror="this.outerHTML='<div class=\\'noimg\\'>🏠</div>'">`
+    : `<div class="noimg">🏠</div>`;
+  const meta = [
+    l.rooms ? `${l.rooms} amb` : null,
+    l.surface_m2 ? `${Math.round(l.surface_m2)} m²` : null,
+  ].filter(Boolean).join(" · ");
+  return `
+    <div class="top-card">
+      <div class="top-thumb">${photo}
+        <button class="fav-btn on thumb-fav" data-fav="${escapeHtml(l.id)}" title="Quitar de Me gustan">❤️</button>
+      </div>
+      <div class="top-body">
+        <div class="top-price">${fmtPrice(l)}</div>
+        <a class="top-title" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.title || l.address || "ver aviso")}</a>
+        <div class="top-meta">${escapeHtml(meta)}</div>
+        <div class="top-meta">${escapeHtml(l.address || "")}</div>
+        <div class="top-meta"><span class="badge">${escapeHtml(l.site)}</span> ${escapeHtml((l.saved_at || "").slice(0, 10))}</div>
+      </div>
+    </div>`;
+}
+
+function renderFavorites() {
+  const items = Object.values(favorites).sort((a, b) =>
+    (b.saved_at || "").localeCompare(a.saved_at || "")
+  );
+  $("fav-list").innerHTML = items.length
+    ? `<div class="fav-grid">${items.map(favCardHtml).join("")}</div>`
+    : '<p class="status">Todavía no guardaste ningún aviso. Tocá el 🤍 en la pestaña Buscar o en el Top 5.</p>';
+  if (favLoaded) setStatus($("fav-status"), `${items.length} guardados`);
+}
+
+$("reload-fav").addEventListener("click", () => loadFavorites().then(renderFavorites));
+
 function thumbHtml(l, cls = "thumb") {
   if (!l.image) return `<div class="${cls} noimg">🏠</div>`;
   return `<img class="${cls} zoomable" src="${escapeHtml(l.image)}" loading="lazy" alt=""
@@ -569,10 +687,11 @@ function renderResults(listings) {
       <td>${fmtPrice(l)}</td>
       <td>${l.rooms ?? "-"} amb / ${l.surface_m2 ? l.surface_m2 + " m²" : "-"}</td>
       <td><small>${escapeHtml(l.search_name || "")}</small></td>
+      <td>${heartHtml(l)}</td>
     </tr>`).join("");
   $("results-list").innerHTML = `
     <table>
-      <thead><tr><th>Foto</th><th>Visto</th><th>Portal</th><th>Aviso</th><th>Precio</th><th>Amb/m²</th><th>Job</th></tr></thead>
+      <thead><tr><th>Foto</th><th>Visto</th><th>Portal</th><th>Aviso</th><th>Precio</th><th>Amb/m²</th><th>Job</th><th>♥</th></tr></thead>
       <tbody>${rows}</tbody>
     </table>`;
 }
@@ -636,7 +755,9 @@ function topCardHtml({ l, score }, rank) {
   ].filter(Boolean).join(" · ");
   return `
     <div class="top-card">
-      <div class="top-thumb">${photo}<span class="top-rank">#${rank}</span></div>
+      <div class="top-thumb">${photo}<span class="top-rank">#${rank}</span>
+        <span class="thumb-fav">${heartHtml(l)}</span>
+      </div>
       <div class="top-body">
         <div class="top-price">${fmtPrice(l)} <span class="badge">match ${Math.round(score * 100)}%</span></div>
         <a class="top-title" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.title || l.address || "ver aviso")}</a>

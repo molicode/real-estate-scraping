@@ -363,6 +363,26 @@ img.zoomable { cursor: zoom-in; }
 }
 .top-meta { font-size: 0.78rem; color: var(--muted); margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
+/* Favoritos */
+.fav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 2px 4px;
+  line-height: 1;
+  filter: grayscale(0.15);
+  transition: transform 0.12s;
+}
+.fav-btn:hover { transform: scale(1.25); }
+.thumb-fav { position: absolute; top: 6px; right: 6px; }
+.thumb-fav .fav-btn, button.thumb-fav {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  padding: 5px 6px;
+}
+.fav-grid { display: flex; flex-wrap: wrap; gap: 14px; }
+
 table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
 th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
 th { color: var(--muted); font-weight: 600; position: sticky; top: 0; background: var(--bg); }
