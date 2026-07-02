@@ -198,6 +198,7 @@ document.querySelectorAll(".tab").forEach((btn) => {
     document.querySelectorAll(".tab-panel").forEach((p) => p.classList.add("hidden"));
     $(`tab-${btn.dataset.tab}`).classList.remove("hidden");
     if (btn.dataset.tab === "results" && !$("results-list").innerHTML) loadResults();
+    if (btn.dataset.tab === "top" && !$("top-rent").innerHTML) loadResults();
     if (btn.dataset.tab === "runs" && !$("runs-list").innerHTML) loadRuns();
   });
 });
@@ -475,8 +476,10 @@ async function loadResults() {
     allListings = Object.values(await resp.json());
     populateSearchSelects();
     applySearch();
+    renderTop();
   } catch (err) {
     setStatus($("results-status"), "❌ " + err.message, "error");
+    setStatus($("top-status"), "❌ " + err.message, "error");
   }
 }
 
@@ -544,6 +547,12 @@ function fmtPrice(l) {
   return `${cur} ${Number(l.price_amount).toLocaleString("es-AR")}`;
 }
 
+function thumbHtml(l, cls = "thumb") {
+  if (!l.image) return `<div class="${cls} noimg">🏠</div>`;
+  return `<img class="${cls} zoomable" src="${escapeHtml(l.image)}" loading="lazy" alt=""
+    onerror="this.outerHTML='<div class=\\'${cls} noimg\\'>🏠</div>'">`;
+}
+
 function renderResults(listings) {
   if (!listings.length) {
     $("results-list").innerHTML =
@@ -552,6 +561,7 @@ function renderResults(listings) {
   }
   const rows = listings.map((l) => `
     <tr>
+      <td>${thumbHtml(l)}</td>
       <td>${escapeHtml((l.first_seen || "").slice(0, 16).replace("T", " "))}</td>
       <td><span class="badge">${escapeHtml(l.site)}</span></td>
       <td><a href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.title || l.address || "ver aviso")}</a><br>
@@ -562,10 +572,150 @@ function renderResults(listings) {
     </tr>`).join("");
   $("results-list").innerHTML = `
     <table>
-      <thead><tr><th>Visto</th><th>Portal</th><th>Aviso</th><th>Precio</th><th>Amb/m²</th><th>Job</th></tr></thead>
+      <thead><tr><th>Foto</th><th>Visto</th><th>Portal</th><th>Aviso</th><th>Precio</th><th>Amb/m²</th><th>Job</th></tr></thead>
       <tbody>${rows}</tbody>
     </table>`;
 }
+
+/* ---------- Top 5 por operación ---------- */
+
+function jobOperation(searchName) {
+  const job = (jobsDoc?.searches || []).find((s) => s.name === searchName);
+  return job?.operation || "";
+}
+
+function listingOperation(l) {
+  return l.operation || jobOperation(l.search_name);
+}
+
+/* Score 0-1 entre avisos de la misma operación: mejor precio (50%),
+ * más superficie (30%), más ambientes (20%). El precio solo se compara
+ * contra avisos de la misma moneda. */
+function computeTop(operation, count = 5) {
+  const group = allListings.filter(
+    (l) => listingOperation(l) === operation && l.price_amount != null
+  );
+  if (!group.length) return [];
+
+  const byCurrency = {};
+  for (const l of group) {
+    (byCurrency[l.price_currency || "?"] ||= []).push(l.price_amount);
+  }
+  const range = (values) => [Math.min(...values), Math.max(...values)];
+  const priceRanges = Object.fromEntries(
+    Object.entries(byCurrency).map(([c, v]) => [c, range(v)])
+  );
+  const surfs = group.filter((l) => l.surface_m2).map((l) => l.surface_m2);
+  const [smin, smax] = surfs.length ? range(surfs) : [0, 0];
+  const rooms = group.filter((l) => l.rooms).map((l) => l.rooms);
+  const [rmin, rmax] = rooms.length ? range(rooms) : [0, 0];
+
+  const norm = (v, min, max) => (max > min ? (v - min) / (max - min) : 0.5);
+
+  const scored = group.map((l) => {
+    const [pmin, pmax] = priceRanges[l.price_currency || "?"];
+    const priceScore = 1 - norm(l.price_amount, pmin, pmax); // más barato mejor
+    const surfScore = l.surface_m2 ? norm(l.surface_m2, smin, smax) : 0.4;
+    const roomScore = l.rooms ? norm(l.rooms, rmin, rmax) : 0.4;
+    return { l, score: 0.5 * priceScore + 0.3 * surfScore + 0.2 * roomScore };
+  });
+  scored.sort((a, b) => b.score - a.score || (b.l.first_seen || "").localeCompare(a.l.first_seen || ""));
+  return scored.slice(0, count);
+}
+
+function topCardHtml({ l, score }, rank) {
+  const imgs = (l.images && l.images.length ? l.images : [l.image]).filter(Boolean);
+  const imgAttr = imgs.length > 1 ? `data-images='${escapeHtml(JSON.stringify(imgs))}'` : "";
+  const photo = imgs.length
+    ? `<img class="zoomable cycling" src="${escapeHtml(imgs[0])}" loading="lazy" alt="" ${imgAttr}
+        onerror="this.outerHTML='<div class=\\'noimg\\'>🏠</div>'">`
+    : `<div class="noimg">🏠</div>`;
+  const meta = [
+    l.rooms ? `${l.rooms} amb` : null,
+    l.surface_m2 ? `${Math.round(l.surface_m2)} m²` : null,
+  ].filter(Boolean).join(" · ");
+  return `
+    <div class="top-card">
+      <div class="top-thumb">${photo}<span class="top-rank">#${rank}</span></div>
+      <div class="top-body">
+        <div class="top-price">${fmtPrice(l)} <span class="badge">match ${Math.round(score * 100)}%</span></div>
+        <a class="top-title" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.title || l.address || "ver aviso")}</a>
+        <div class="top-meta">${escapeHtml(meta)}</div>
+        <div class="top-meta">${escapeHtml(l.address || "")}</div>
+        <div class="top-meta"><span class="badge">${escapeHtml(l.site)}</span> ${escapeHtml(l.search_name || "")}</div>
+      </div>
+    </div>`;
+}
+
+function renderTopGroup(operation, container) {
+  const top = computeTop(operation);
+  if (!top.length) {
+    container.innerHTML = `<p class="status">Todavía no hay avisos de ${operation === "venta" ? "venta" : "alquiler"} guardados. Activá un job de esa operación y ejecutá el scraper.</p>`;
+    return;
+  }
+  const cards = top.map((item, i) => topCardHtml(item, i + 1)).join("");
+  // con suficientes tarjetas el carrusel se desliza solo (se pausa con el mouse)
+  const animate = top.length >= 3;
+  container.innerHTML = `
+    <div class="carousel${animate ? " auto" : ""}">
+      <div class="carousel-track">${cards}${animate ? cards : ""}</div>
+    </div>`;
+}
+
+function renderTop() {
+  renderTopGroup("alquiler", $("top-rent"));
+  renderTopGroup("venta", $("top-buy"));
+  setStatus($("top-status"), `${allListings.length} avisos analizados`);
+  startImageCycling();
+}
+
+$("reload-top").addEventListener("click", loadResults);
+
+/* Las tarjetas con varias fotos (Remax) van rotando la imagen */
+let cyclingTimer = null;
+function startImageCycling() {
+  if (cyclingTimer) clearInterval(cyclingTimer);
+  cyclingTimer = setInterval(() => {
+    document.querySelectorAll("img.cycling[data-images]").forEach((img) => {
+      try {
+        const imgs = JSON.parse(img.dataset.images);
+        const idx = (Number(img.dataset.idx || 0) + 1) % imgs.length;
+        img.dataset.idx = idx;
+        img.src = imgs[idx];
+      } catch { /* data-images inválido: se ignora */ }
+    });
+  }, 2500);
+}
+
+/* ---------- Preview ampliado al pasar el mouse ---------- */
+
+const imgPreview = document.createElement("img");
+imgPreview.id = "img-preview";
+document.body.appendChild(imgPreview);
+
+document.body.addEventListener("mouseover", (e) => {
+  const img = e.target.closest("img.zoomable");
+  if (!img) return;
+  imgPreview.src = img.src;
+  imgPreview.classList.add("show");
+});
+document.body.addEventListener("mousemove", (e) => {
+  if (!imgPreview.classList.contains("show")) return;
+  const margin = 20;
+  const w = imgPreview.offsetWidth || 420;
+  const h = imgPreview.offsetHeight || 300;
+  let x = e.clientX + margin;
+  let y = e.clientY + margin;
+  if (x + w > window.innerWidth) x = e.clientX - w - margin;
+  if (y + h > window.innerHeight) y = Math.max(8, window.innerHeight - h - margin);
+  imgPreview.style.left = `${Math.max(8, x)}px`;
+  imgPreview.style.top = `${y}px`;
+});
+document.body.addEventListener("mouseout", (e) => {
+  if (e.target.closest && e.target.closest("img.zoomable")) {
+    imgPreview.classList.remove("show");
+  }
+});
 
 $("reload-results").addEventListener("click", loadResults);
 
