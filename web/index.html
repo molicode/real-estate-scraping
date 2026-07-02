@@ -93,6 +93,13 @@
               <option value="zonaprop">Zonaprop (puede bloquear, ver nota)</option>
             </select>
           </label>
+          <label>Operación
+            <span class="info" tabindex="0" data-tip="Alquiler o compra (venta). Importante: la operación real la define la URL que pegues (buscá 'alquiler' o 'venta' en el portal); este campo etiqueta el job y te permite filtrar por operación en la pestaña Buscar."></span>
+            <select id="f-operation">
+              <option value="alquiler">Alquiler</option>
+              <option value="venta">Compra (venta)</option>
+            </select>
+          </label>
         </div>
         <label>URL de búsqueda del portal
           <span class="info" tabindex="0" data-tip="Entrá al portal en otra pestaña, buscá usando los filtros DEL SITIO (zona, operación, precio...) y copiá acá la URL de la página de resultados. El scraper visita exactamente esa URL cada hora."></span>
@@ -224,6 +231,13 @@
       </label>
       <label>Job
         <select id="s-job"><option value="">Todos</option></select>
+      </label>
+      <label>Operación
+        <select id="s-operation">
+          <option value="">Todas</option>
+          <option value="alquiler">Alquiler</option>
+          <option value="venta">Compra (venta)</option>
+        </select>
       </label>
       <label>Moneda
         <select id="s-currency">

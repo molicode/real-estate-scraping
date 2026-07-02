@@ -14,8 +14,12 @@
         "currency": "ARS",
         "max_price": 900000,
         "min_rooms": 2,
-        "keywords_exclude": ["temporario", "temporal"]
-      }
+        "keywords_exclude": [
+          "temporario",
+          "temporal"
+        ]
+      },
+      "operation": "alquiler"
     },
     {
       "name": "Ejemplo: Alquiler deptos CABA (Remax)",
@@ -27,7 +31,8 @@
         "currency": "ARS",
         "max_price": 900000,
         "min_rooms": 2
-      }
+      },
+      "operation": "alquiler"
     },
     {
       "name": "Ejemplo: Venta deptos Caballito (MercadoLibre)",
@@ -40,7 +45,8 @@
         "max_price": 150000,
         "min_bedrooms": 2,
         "min_surface_m2": 50
-      }
+      },
+      "operation": "venta"
     }
   ]
 }

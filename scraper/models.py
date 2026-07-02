@@ -26,6 +26,7 @@ class Listing:
     surface_m2: Optional[float] = None
     image: str = ""
     search_name: str = ""
+    operation: str = ""  # alquiler | venta (heredado del job)
     first_seen: str = ""
 
     def to_dict(self) -> dict[str, Any]:
@@ -44,6 +45,7 @@ class Search:
     name: str
     url: str
     site: str = ""
+    operation: str = ""  # alquiler | venta (informativo, la URL manda)
     max_pages: int = 1
     filters: dict[str, Any] = field(default_factory=dict)
 

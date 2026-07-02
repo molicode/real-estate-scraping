@@ -167,18 +167,33 @@ nav#tabs { display: flex; gap: 8px; margin-bottom: 16px; }
 .toolbar input[type="text"] { max-width: 320px; width: auto; flex: 1; margin-top: 0; }
 
 .job-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 12px;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 14px 16px;
   margin-bottom: 10px;
+  overflow: hidden;
 }
-.job-card.disabled { opacity: 0.55; }
-.job-card .title { font-weight: 600; }
+.job-card.disabled { opacity: 0.6; }
+.job-card summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+.job-card summary::-webkit-details-marker { display: none; }
+.job-card summary .job-name { font-weight: 600; }
+.job-card summary .summary-hint {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+.job-card[open] summary { border-bottom: 1px solid var(--border); }
+.job-card .details-body { padding: 12px 16px; }
+.job-card .details-body .row { margin-top: 10px; }
 .job-card .meta { font-size: 0.85rem; color: var(--muted); word-break: break-all; }
 .badge {
   display: inline-block;

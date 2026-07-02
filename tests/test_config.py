@@ -36,6 +36,32 @@ def test_sin_lista_searches_falla(tmp_path):
         load_config(config_file)
 
 
+def test_operation_fluye_del_job_al_aviso(tmp_path):
+    config_file = tmp_path / "jobs.json"
+    config_file.write_text(json.dumps({
+        "searches": [
+            {"name": "a", "url": "https://www.argenprop.com/x", "operation": "Venta"},
+            {"name": "b", "url": "https://www.argenprop.com/y"},
+        ]
+    }))
+    searches = build_searches(load_config(config_file))
+    assert searches[0].operation == "venta"  # normalizado a minúsculas
+    assert searches[1].operation == ""
+
+    # base.search() copia la operación a cada aviso
+    from unittest.mock import patch
+    from scraper.models import Listing
+    from scraper.sites.argenprop import ArgenpropScraper
+
+    scraper = ArgenpropScraper()
+    fake = Listing(id="argenprop:1", site="argenprop", url="https://x")
+    with patch.object(scraper, "fetch", return_value="<html></html>"), \
+         patch.object(scraper, "parse", return_value=iter([fake])):
+        (result,) = scraper.search(searches[0])
+    assert result.operation == "venta"
+    assert result.search_name == "a"
+
+
 def test_defaults_y_filtros_se_mezclan(tmp_path):
     config_file = tmp_path / "jobs.json"
     config_file.write_text(json.dumps({
