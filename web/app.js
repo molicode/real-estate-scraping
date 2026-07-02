@@ -520,7 +520,7 @@ function applySearch() {
     if (q && !`${l.title} ${l.address} ${l.search_name}`.toLowerCase().includes(q)) return false;
     if (site && l.site !== site) return false;
     if (job && l.search_name !== job) return false;
-    if (operation && l.operation !== operation) return false;
+    if (operation && listingOperation(l) !== operation) return false;
     if (currency && l.price_currency !== currency) return false;
     if (pmin != null && !(l.price_amount != null && l.price_amount >= pmin)) return false;
     if (pmax != null && !(l.price_amount != null && l.price_amount <= pmax)) return false;
@@ -703,8 +703,17 @@ function jobOperation(searchName) {
   return job?.operation || "";
 }
 
+/* Avisos guardados antes de que existiera el campo 'operation' (o de jobs
+ * renombrados): se infiere de la URL del aviso o del nombre del job. */
+function inferOperation(l) {
+  const hay = `${l.url || ""} ${l.search_name || ""}`.toLowerCase();
+  if (/alquiler|alquilo|\/rent\b|rent\?|operationid=2/.test(hay)) return "alquiler";
+  if (/venta|compra|\/buy\b|buy\?|operationid=1/.test(hay)) return "venta";
+  return "";
+}
+
 function listingOperation(l) {
-  return l.operation || jobOperation(l.search_name);
+  return l.operation || jobOperation(l.search_name) || inferOperation(l);
 }
 
 /* Score 0-1 entre avisos de la misma operación: mejor precio (50%),
