@@ -1,5 +1,5 @@
 {
-  "retention_days": 60,
+  "retention_days": 365,
   "defaults": {
     "max_pages": 2
   },
