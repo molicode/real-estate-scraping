@@ -8,20 +8,53 @@
 </head>
 <body>
 <header>
-  <h1>🏠 Real Estate Scraper AR</h1>
-  <p class="subtitle">Administrá los jobs de scraping de Argenprop, Zonaprop y MercadoLibre. El scraper corre cada hora en GitHub Actions con los jobs activos.</p>
+  <div class="header-row">
+    <h1>🏠 Real Estate Scraper AR</h1>
+    <div class="header-actions">
+      <button id="theme-toggle" class="btn small" title="Cambiar tema">🌙</button>
+      <button id="gate-logout" class="btn small hidden" title="Cerrar sesión">🚪 Salir</button>
+    </div>
+  </div>
+  <p class="subtitle">Administrá los jobs de scraping de Argenprop, Zonaprop, MercadoLibre y Remax. El scraper corre cada hora en GitHub Actions con los jobs activos.</p>
 </header>
 
-<section id="auth-section" class="card">
-  <h2>🔑 Conexión con GitHub</h2>
-  <p>Necesitás un <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained personal access token</a> con acceso a <strong>este repositorio</strong> y permisos: <code>Contents: Read and write</code> y <code>Actions: Read and write</code>. Se guarda solo en tu navegador (localStorage).</p>
-  <div class="row">
-    <input type="password" id="token-input" placeholder="github_pat_...">
-    <button id="token-save" class="btn primary">Conectar</button>
-    <button id="token-clear" class="btn danger hidden">Desconectar</button>
-  </div>
-  <p id="auth-status" class="status"></p>
+<!-- Pantalla de login -->
+<section id="login-section" class="card login-card hidden">
+  <h2>🔐 Iniciar sesión</h2>
+  <p class="status">Acceso restringido. Ingresá tus credenciales para administrar el scraper.</p>
+  <form id="login-form">
+    <label>Usuario
+      <input type="text" id="login-user" autocomplete="username" required>
+    </label>
+    <label>Contraseña
+      <input type="password" id="login-pass" autocomplete="current-password" required>
+    </label>
+    <div class="row">
+      <button type="submit" class="btn primary">Entrar</button>
+      <span id="login-status" class="status"></span>
+    </div>
+  </form>
 </section>
+
+<!-- App (visible solo tras el login) -->
+<div id="app" class="hidden">
+
+<details id="auth-details" class="card auth-details">
+  <summary>
+    <span id="auth-dot" class="dot red"></span>
+    <span id="auth-summary-text">Sin conexión con GitHub</span>
+    <span class="summary-hint">▾ detalles</span>
+  </summary>
+  <div class="details-body">
+    <p>Necesitás un <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained personal access token</a> con acceso a <strong>este repositorio</strong> y permisos: <code>Contents: Read and write</code> y <code>Actions: Read and write</code>. Se guarda solo en tu navegador (localStorage).</p>
+    <div class="row">
+      <input type="password" id="token-input" placeholder="github_pat_...">
+      <button id="token-save" class="btn primary">Conectar</button>
+      <button id="token-clear" class="btn danger hidden">Desconectar</button>
+    </div>
+    <p id="auth-status" class="status"></p>
+  </div>
+</details>
 
 <nav id="tabs" class="hidden">
   <button class="tab active" data-tab="jobs">⚙️ Jobs</button>
@@ -144,6 +177,8 @@
 <footer>
   <p>Los jobs se guardan en <code>jobs.json</code> del repo. El scraper corre cada hora (cron de GitHub Actions) y también podés dispararlo al instante con "Ejecutar ahora".</p>
 </footer>
+
+</div><!-- /app -->
 
 <script src="app.js"></script>
 </body>
