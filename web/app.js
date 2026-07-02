@@ -238,30 +238,40 @@ function fmtFilters(f = {}) {
 
 function renderJobs() {
   const wrap = $("jobs-list");
+  // conservar qué desplegables estaban abiertos al re-renderizar
+  const openIdx = new Set(
+    [...wrap.querySelectorAll("details.job-card")]
+      .map((d, i) => (d.open ? i : -1))
+      .filter((i) => i >= 0)
+  );
   wrap.innerHTML = "";
   if (!jobsDoc.searches.length) {
     wrap.innerHTML = '<p class="status">No hay jobs todavía. Creá el primero con "Nuevo job".</p>';
   }
   jobsDoc.searches.forEach((job, i) => {
     const enabled = job.enabled !== false;
-    const div = document.createElement("div");
-    div.className = "job-card" + (enabled ? "" : " disabled");
-    div.innerHTML = `
-      <div>
-        <div class="title">
-          <span class="badge ${enabled ? "on" : "off"}">${enabled ? "ACTIVO" : "PAUSADO"}</span>
-          <span class="badge">${job.site || "?"}</span>
-          ${escapeHtml(job.name || `job ${i + 1}`)}
-        </div>
+    const det = document.createElement("details");
+    det.className = "job-card" + (enabled ? "" : " disabled");
+    det.open = openIdx.has(i);
+    det.innerHTML = `
+      <summary>
+        <span class="dot ${enabled ? "green" : "yellow"}" title="${enabled ? "Activo" : "Pausado"}"></span>
+        <span class="badge ${enabled ? "on" : "off"}">${enabled ? "ACTIVO" : "PAUSADO"}</span>
+        <span class="badge">${job.site || "?"}</span>
+        <span class="badge">${job.operation === "venta" ? "compra" : job.operation || "?"}</span>
+        <span class="job-name">${escapeHtml(job.name || `job ${i + 1}`)}</span>
+        <span class="summary-hint">▾ detalles</span>
+      </summary>
+      <div class="details-body">
         <div class="meta">${escapeHtml(job.url || "")}</div>
         <div class="meta">${escapeHtml(fmtFilters(job.filters))} · ${job.max_pages || 1} pág.</div>
-      </div>
-      <div class="row">
-        <button class="btn small" data-act="toggle" data-i="${i}">${enabled ? "⏸ Pausar" : "▶ Activar"}</button>
-        <button class="btn small" data-act="edit" data-i="${i}">✏️ Editar</button>
-        <button class="btn small danger" data-act="del" data-i="${i}">🗑</button>
+        <div class="row">
+          <button class="btn small" data-act="toggle" data-i="${i}">${enabled ? "⏸ Pausar" : "▶ Activar"}</button>
+          <button class="btn small" data-act="edit" data-i="${i}">✏️ Editar</button>
+          <button class="btn small danger" data-act="del" data-i="${i}">🗑 Eliminar</button>
+        </div>
       </div>`;
-    wrap.appendChild(div);
+    wrap.appendChild(det);
   });
   $("save-jobs").disabled = !dirty;
 }
@@ -327,6 +337,7 @@ function openForm(index) {
   const f = job?.filters || {};
   $("f-name").value = job?.name || "";
   $("f-site").value = job?.site || "argenprop";
+  $("f-operation").value = job?.operation === "venta" ? "venta" : "alquiler";
   $("f-url").value = job?.url || "";
   $("f-max-pages").value = job?.max_pages ?? jobsDoc.defaults?.max_pages ?? 2;
   $("f-enabled").value = String(job ? job.enabled !== false : true);
@@ -399,6 +410,7 @@ $("job-form").addEventListener("submit", (e) => {
     name: $("f-name").value.trim(),
     url,
     site,
+    operation: $("f-operation").value,
     enabled: $("f-enabled").value === "true",
     max_pages: numOrNull("f-max-pages") || 1,
     filters,
@@ -490,6 +502,7 @@ function applySearch() {
   const q = $("s-text").value.trim().toLowerCase();
   const site = $("s-site").value;
   const job = $("s-job").value;
+  const operation = $("s-operation").value;
   const currency = $("s-currency").value;
   const pmin = numVal("s-min-price");
   const pmax = numVal("s-max-price");
@@ -502,6 +515,7 @@ function applySearch() {
     if (q && !`${l.title} ${l.address} ${l.search_name}`.toLowerCase().includes(q)) return false;
     if (site && l.site !== site) return false;
     if (job && l.search_name !== job) return false;
+    if (operation && l.operation !== operation) return false;
     if (currency && l.price_currency !== currency) return false;
     if (pmin != null && !(l.price_amount != null && l.price_amount >= pmin)) return false;
     if (pmax != null && !(l.price_amount != null && l.price_amount <= pmax)) return false;
@@ -556,7 +570,7 @@ function renderResults(listings) {
 $("reload-results").addEventListener("click", loadResults);
 
 const SEARCH_TEXT_FIELDS = ["s-text", "s-min-price", "s-max-price", "s-min-rooms", "s-min-bedrooms", "s-min-surface", "s-since"];
-const SEARCH_SELECT_FIELDS = ["s-site", "s-job", "s-currency", "s-sort"];
+const SEARCH_SELECT_FIELDS = ["s-site", "s-job", "s-operation", "s-currency", "s-sort"];
 SEARCH_TEXT_FIELDS.forEach((id) => $(id).addEventListener("input", applySearch));
 SEARCH_SELECT_FIELDS.forEach((id) => $(id).addEventListener("change", applySearch));
 

@@ -74,6 +74,7 @@ class BaseScraper:
                 break
             for listing in new:
                 listing.search_name = search.name
+                listing.operation = search.operation
                 seen_ids.add(listing.id)
             results.extend(new)
             if page < search.max_pages:

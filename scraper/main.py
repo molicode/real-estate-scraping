@@ -60,6 +60,7 @@ def build_searches(config: dict[str, Any]) -> list[Search]:
                 name=raw.get("name") or f"busqueda-{i}",
                 url=url,
                 site=site,
+                operation=(raw.get("operation") or "").strip().lower(),
                 max_pages=int(raw.get("max_pages", defaults.get("max_pages", 1))),
                 filters=merged_filters,
             )
