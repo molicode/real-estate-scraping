@@ -6,6 +6,15 @@ const REPO = "real-estate-scraping";
 const BRANCH = "main";
 const API = `https://api.github.com/repos/${OWNER}/${REPO}`;
 const TOKEN_KEY = "resc_token";
+const GATE_KEY = "resc_gate";
+const THEME_KEY = "resc_theme";
+
+// SHA-256 de "usuario:contraseña". Para cambiar las credenciales generá
+// un hash nuevo (en la consola del navegador):
+//   await sha256Hex("nuevo-usuario:nueva-clave")
+// y reemplazá el valor de abajo. Nota: esto restringe el acceso a la UI,
+// pero la protección real es el token de GitHub que cada uno ingresa.
+const ACCESS_HASH = "9e932d7a7a91db411c0ba210b2bea230d4953a427132bb0120a0e44be436d365";
 
 const SITE_HINTS = {
   argenprop:
@@ -76,29 +85,94 @@ async function putFile(path, content, sha, message) {
   return (await resp.json()).content.sha;
 }
 
-/* ---------- Auth ---------- */
+/* ---------- Login (gate de acceso a la UI) ---------- */
+
+async function sha256Hex(str) {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
+  return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+window.sha256Hex = sha256Hex; // para regenerar el hash desde la consola
+
+function unlockApp() {
+  $("login-section").classList.add("hidden");
+  $("app").classList.remove("hidden");
+  $("gate-logout").classList.remove("hidden");
+  if (token) connect();
+  else $("auth-details").open = true;
+}
+
+function showLogin() {
+  $("login-section").classList.remove("hidden");
+  $("app").classList.add("hidden");
+  $("gate-logout").classList.add("hidden");
+}
+
+document.getElementById("login-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const user = $("login-user").value.trim();
+  const pass = $("login-pass").value;
+  const hash = await sha256Hex(`${user}:${pass}`);
+  if (hash === ACCESS_HASH) {
+    localStorage.setItem(GATE_KEY, hash);
+    setStatus($("login-status"), "");
+    unlockApp();
+  } else {
+    setStatus($("login-status"), "❌ Usuario o contraseña incorrectos", "error");
+    $("login-pass").value = "";
+  }
+});
+
+$("gate-logout").addEventListener("click", () => {
+  localStorage.removeItem(GATE_KEY);
+  location.reload();
+});
+
+/* ---------- Tema claro/oscuro ---------- */
+
+function applyTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  $("theme-toggle").textContent = theme === "light" ? "🌙" : "☀️";
+  localStorage.setItem(THEME_KEY, theme);
+}
+
+$("theme-toggle").addEventListener("click", () => {
+  applyTheme(document.documentElement.dataset.theme === "light" ? "dark" : "light");
+});
+
+/* ---------- Conexión con GitHub ---------- */
 
 function setStatus(el, msg, cls = "") {
   el.textContent = msg;
   el.className = "status " + cls;
 }
 
+function setConnState(state, text) {
+  // state: "green" | "yellow" | "red"
+  $("auth-dot").className = `dot ${state}`;
+  $("auth-summary-text").textContent = text;
+}
+
 async function connect() {
   if (!token) return;
+  setConnState("yellow", "Verificando conexión...");
   setStatus($("auth-status"), "Verificando acceso al repo...");
   try {
     const resp = await gh("");
     if (resp.status === 404) throw new Error("El token no ve el repositorio (¿le diste acceso a este repo?)");
     const repo = await resp.json();
+    setConnState("green", `Conectado a ${repo.full_name}`);
     setStatus($("auth-status"), `✅ Conectado a ${repo.full_name}`, "ok");
     $("token-input").value = "••••••••";
     $("token-save").classList.add("hidden");
     $("token-clear").classList.remove("hidden");
+    $("auth-details").open = false; // colapsar: el semáforo ya informa
     $("tabs").classList.remove("hidden");
     $("main").classList.remove("hidden");
     await loadJobs();
   } catch (err) {
+    setConnState("red", "Error de conexión con GitHub");
     setStatus($("auth-status"), "❌ " + err.message, "error");
+    $("auth-details").open = true;
   }
 }
 
@@ -439,4 +513,9 @@ $("reload-runs").addEventListener("click", loadRuns);
 /* ---------- Init ---------- */
 
 updateHint();
-if (token) connect();
+applyTheme(
+  localStorage.getItem(THEME_KEY) ||
+    (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+);
+if (localStorage.getItem(GATE_KEY) === ACCESS_HASH) unlockApp();
+else showLogin();
