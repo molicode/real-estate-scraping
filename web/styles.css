@@ -193,6 +193,81 @@ nav#tabs { display: flex; gap: 8px; margin-bottom: 16px; }
 .badge.on { color: var(--success); border-color: var(--success); }
 .badge.off { color: var(--warn); border-color: var(--warn); }
 
+/* Secciones del formulario con color propio */
+.form-section {
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 14px 16px 10px;
+  margin-bottom: 14px;
+  background: color-mix(in srgb, var(--accent) 4%, transparent);
+}
+.form-section > h3 {
+  margin: 0 0 12px;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+.sec-basic { border-left-color: var(--accent); background: color-mix(in srgb, var(--accent) 5%, transparent); }
+.sec-price { border-left-color: var(--success); background: color-mix(in srgb, var(--success) 5%, transparent); }
+.sec-feat { border-left-color: #9d6bff; background: color-mix(in srgb, #9d6bff 5%, transparent); }
+.sec-kw { border-left-color: var(--warn); background: color-mix(in srgb, var(--warn) 6%, transparent); }
+
+/* Ícono (i) con tooltip */
+.info {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  margin-left: 6px;
+  cursor: help;
+  position: relative;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+.info::before { content: "i"; font-size: 0.68rem; font-weight: 700; font-style: italic; }
+.info::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(320px, 74vw);
+  background: var(--card2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.45;
+  z-index: 40;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.12s;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  white-space: normal;
+}
+.info:hover::after, .info:focus::after { opacity: 1; }
+
+/* Chips de sugerencias */
+.chip-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 14px; }
+.chip {
+  padding: 3px 12px;
+  border-radius: 20px;
+  border: 1px dashed var(--border);
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.chip:hover { border-color: var(--accent); color: var(--accent); border-style: solid; }
+
+.search-card .grid { margin-top: 10px; }
+
 table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
 th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
 th { color: var(--muted); font-weight: 600; position: sticky; top: 0; background: var(--bg); }

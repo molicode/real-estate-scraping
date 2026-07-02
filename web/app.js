@@ -348,6 +348,20 @@ function openForm(index) {
 $("new-job").addEventListener("click", () => openForm(null));
 $("job-cancel").addEventListener("click", () => $("job-form-wrap").classList.add("hidden"));
 
+// Chips de palabras clave sugeridas: agregan al input sin duplicar
+document.querySelectorAll(".chip-row").forEach((row) => {
+  row.addEventListener("click", (e) => {
+    const chip = e.target.closest(".chip");
+    if (!chip) return;
+    const input = $(row.dataset.target);
+    const values = input.value.split(",").map((s) => s.trim()).filter(Boolean);
+    if (!values.includes(chip.dataset.kw)) {
+      values.push(chip.dataset.kw);
+      input.value = values.join(", ");
+    }
+  });
+});
+
 function numOrNull(id) {
   const v = $(id).value.trim();
   return v === "" ? null : Number(v);
@@ -430,7 +444,9 @@ $("run-now").addEventListener("click", async () => {
   }
 });
 
-/* ---------- Resultados ---------- */
+/* ---------- Buscador sobre los avisos guardados ---------- */
+
+let allListings = [];
 
 async function loadResults() {
   setStatus($("results-status"), "Cargando resultados...");
@@ -439,17 +455,73 @@ async function loadResults() {
       headers: { Accept: "application/vnd.github.raw+json" },
     });
     if (resp.status === 404) {
+      allListings = [];
       $("results-list").innerHTML = '<p class="status">Todavía no hay resultados (data/listings.json no existe).</p>';
       setStatus($("results-status"), "");
       return;
     }
-    const listings = Object.values(await resp.json());
-    listings.sort((a, b) => (b.first_seen || "").localeCompare(a.first_seen || ""));
-    renderResults(listings);
-    setStatus($("results-status"), `${listings.length} avisos`);
+    allListings = Object.values(await resp.json());
+    populateSearchSelects();
+    applySearch();
   } catch (err) {
     setStatus($("results-status"), "❌ " + err.message, "error");
   }
+}
+
+function fillSelect(sel, values) {
+  const current = sel.value;
+  sel.innerHTML =
+    '<option value="">Todos</option>' +
+    values.map((v) => `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join("");
+  sel.value = current;
+}
+
+function populateSearchSelects() {
+  fillSelect($("s-site"), [...new Set(allListings.map((l) => l.site).filter(Boolean))].sort());
+  fillSelect($("s-job"), [...new Set(allListings.map((l) => l.search_name).filter(Boolean))].sort());
+}
+
+function numVal(id) {
+  const v = $(id).value.trim();
+  return v === "" ? null : Number(v);
+}
+
+function applySearch() {
+  const q = $("s-text").value.trim().toLowerCase();
+  const site = $("s-site").value;
+  const job = $("s-job").value;
+  const currency = $("s-currency").value;
+  const pmin = numVal("s-min-price");
+  const pmax = numVal("s-max-price");
+  const rooms = numVal("s-min-rooms");
+  const beds = numVal("s-min-bedrooms");
+  const surf = numVal("s-min-surface");
+  const since = $("s-since").value; // yyyy-mm-dd, comparable con first_seen ISO
+
+  const out = allListings.filter((l) => {
+    if (q && !`${l.title} ${l.address} ${l.search_name}`.toLowerCase().includes(q)) return false;
+    if (site && l.site !== site) return false;
+    if (job && l.search_name !== job) return false;
+    if (currency && l.price_currency !== currency) return false;
+    if (pmin != null && !(l.price_amount != null && l.price_amount >= pmin)) return false;
+    if (pmax != null && !(l.price_amount != null && l.price_amount <= pmax)) return false;
+    if (rooms != null && !(l.rooms != null && l.rooms >= rooms)) return false;
+    if (beds != null && !(l.bedrooms != null && l.bedrooms >= beds)) return false;
+    if (surf != null && !(l.surface_m2 != null && l.surface_m2 >= surf)) return false;
+    if (since && (l.first_seen || "") < since) return false;
+    return true;
+  });
+
+  const sorters = {
+    recent: (a, b) => (b.first_seen || "").localeCompare(a.first_seen || ""),
+    price_asc: (a, b) => (a.price_amount ?? Infinity) - (b.price_amount ?? Infinity),
+    price_desc: (a, b) => (b.price_amount ?? -1) - (a.price_amount ?? -1),
+    surface_desc: (a, b) => (b.surface_m2 ?? -1) - (a.surface_m2 ?? -1),
+  };
+  out.sort(sorters[$("s-sort").value] || sorters.recent);
+
+  renderResults(out);
+  setStatus($("results-status"), `${out.length} de ${allListings.length} avisos`);
 }
 
 function fmtPrice(l) {
@@ -459,8 +531,13 @@ function fmtPrice(l) {
 }
 
 function renderResults(listings) {
+  if (!listings.length) {
+    $("results-list").innerHTML =
+      '<p class="status">Ningún aviso coincide con los filtros. Probá aflojar alguno o tocá "Limpiar filtros".</p>';
+    return;
+  }
   const rows = listings.map((l) => `
-    <tr data-text="${escapeHtml(`${l.title} ${l.address} ${l.site} ${l.search_name}`.toLowerCase())}">
+    <tr>
       <td>${escapeHtml((l.first_seen || "").slice(0, 16).replace("T", " "))}</td>
       <td><span class="badge">${escapeHtml(l.site)}</span></td>
       <td><a href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.title || l.address || "ver aviso")}</a><br>
@@ -477,11 +554,16 @@ function renderResults(listings) {
 }
 
 $("reload-results").addEventListener("click", loadResults);
-$("results-filter").addEventListener("input", () => {
-  const q = $("results-filter").value.toLowerCase();
-  document.querySelectorAll("#results-list tbody tr").forEach((tr) => {
-    tr.style.display = tr.dataset.text.includes(q) ? "" : "none";
-  });
+
+const SEARCH_TEXT_FIELDS = ["s-text", "s-min-price", "s-max-price", "s-min-rooms", "s-min-bedrooms", "s-min-surface", "s-since"];
+const SEARCH_SELECT_FIELDS = ["s-site", "s-job", "s-currency", "s-sort"];
+SEARCH_TEXT_FIELDS.forEach((id) => $(id).addEventListener("input", applySearch));
+SEARCH_SELECT_FIELDS.forEach((id) => $(id).addEventListener("change", applySearch));
+
+$("search-clear").addEventListener("click", () => {
+  SEARCH_TEXT_FIELDS.forEach((id) => ($(id).value = ""));
+  SEARCH_SELECT_FIELDS.forEach((id) => ($(id).value = id === "s-sort" ? "recent" : ""));
+  applySearch();
 });
 
 /* ---------- Corridas ---------- */
