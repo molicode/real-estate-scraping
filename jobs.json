@@ -18,6 +18,18 @@
       }
     },
     {
+      "name": "Ejemplo: Alquiler deptos CABA (Remax)",
+      "url": "https://www.remax.com.ar/listings/rent?page=0&pageSize=24&sort=-createdAt&in:operationId=2&in:eStageId=0,1,2,3,4&locations=in:CF@Capital%20Federal::::::",
+      "site": "remax",
+      "enabled": false,
+      "max_pages": 2,
+      "filters": {
+        "currency": "ARS",
+        "max_price": 900000,
+        "min_rooms": 2
+      }
+    },
+    {
       "name": "Ejemplo: Venta deptos Caballito (MercadoLibre)",
       "url": "https://inmuebles.mercadolibre.com.ar/departamentos/venta/capital-federal/caballito/",
       "site": "mercadolibre",
