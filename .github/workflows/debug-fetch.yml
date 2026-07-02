@@ -1,0 +1,42 @@
+name: Debug fetch
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "URL de búsqueda a diagnosticar"
+        required: true
+      site:
+        description: "Scraper a usar"
+        required: true
+        default: mercadolibre
+        type: choice
+        options: [argenprop, zonaprop, mercadolibre, remax]
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Descargar y analizar página
+        run: python scripts/debug_fetch.py "${{ inputs.url }}" "${{ inputs.site }}"
+
+      - name: Subir HTML como artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-page
+          path: debug_page.html
+          retention-days: 3
