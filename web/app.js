@@ -14,6 +14,8 @@ const SITE_HINTS = {
     'Entrá a <a href="https://inmuebles.mercadolibre.com.ar" target="_blank" rel="noopener">inmuebles.mercadolibre.com.ar</a>, aplicá los filtros y pegá la URL de resultados. Ej: https://inmuebles.mercadolibre.com.ar/departamentos/alquiler/capital-federal/',
   zonaprop:
     '⚠️ Zonaprop usa protección Cloudflare y suele bloquear a los servidores de GitHub: el job puede devolver 0 avisos. Ej: https://www.zonaprop.com.ar/departamentos-alquiler-palermo.html',
+  remax:
+    'Entrá a <a href="https://www.remax.com.ar" target="_blank" rel="noopener">remax.com.ar</a>, buscá con los filtros del sitio y pegá la URL de resultados (la que empieza con /listings/...). Ej: https://www.remax.com.ar/listings/rent?page=0&pageSize=24&in:operationId=2',
 };
 
 let token = localStorage.getItem(TOKEN_KEY) || "";
@@ -228,6 +230,7 @@ function detectSite(url) {
   if (url.includes("argenprop")) return "argenprop";
   if (url.includes("zonaprop")) return "zonaprop";
   if (url.includes("mercadolibre")) return "mercadolibre";
+  if (url.includes("remax")) return "remax";
   return null;
 }
 
@@ -285,7 +288,7 @@ $("job-form").addEventListener("submit", (e) => {
   const url = $("f-url").value.trim();
   const site = detectSite(url);
   if (!site) {
-    alert("La URL debe ser de argenprop.com, zonaprop.com.ar o mercadolibre.com.ar");
+    alert("La URL debe ser de argenprop.com, zonaprop.com.ar, mercadolibre.com.ar o remax.com.ar");
     return;
   }
   const filters = {};

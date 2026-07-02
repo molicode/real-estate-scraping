@@ -7,12 +7,14 @@ from urllib.parse import urlsplit
 from .argenprop import ArgenpropScraper
 from .base import BaseScraper
 from .mercadolibre import MercadoLibreScraper
+from .remax import RemaxScraper
 from .zonaprop import ZonapropScraper
 
 SCRAPERS: dict[str, type[BaseScraper]] = {
     "argenprop": ArgenpropScraper,
     "zonaprop": ZonapropScraper,
     "mercadolibre": MercadoLibreScraper,
+    "remax": RemaxScraper,
 }
 
 
@@ -25,6 +27,8 @@ def detect_site(url: str) -> str | None:
         return "zonaprop"
     if "mercadolibre" in host or "mercadolibre" in url:
         return "mercadolibre"
+    if "remax" in host:
+        return "remax"
     return None
 
 

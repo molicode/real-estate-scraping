@@ -2,6 +2,7 @@ from pathlib import Path
 
 from scraper.sites.argenprop import ArgenpropScraper
 from scraper.sites.mercadolibre import MercadoLibreScraper
+from scraper.sites.remax import RemaxScraper
 from scraper.sites.zonaprop import ZonapropScraper
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -75,6 +76,50 @@ def test_mercadolibre_parse():
     second = listings[1]
     assert second.price_currency == "ARS"
     assert second.rooms == 1
+
+
+def test_remax_parse():
+    listings = list(RemaxScraper().parse(read_fixture("remax.json")))
+    assert len(listings) == 2
+    first = listings[0]
+    assert first.id == "remax:ab12cd34-5678-90ef-1234-567890abcdef"
+    assert first.url == (
+        "https://www.remax.com.ar/listings/"
+        "depto-2-ambientes-palermo-hollywood-123456789-22"
+    )
+    assert first.price_amount == 210000.0
+    assert first.price_currency == "USD"
+    assert first.expenses == 180000.0
+    assert first.rooms == 2
+    assert first.bedrooms == 1
+    assert first.surface_m2 == 58.0
+    assert first.image.startswith("https://")
+    second = listings[1]
+    assert second.price_currency == "ARS"
+    assert second.bedrooms == 3
+    assert second.image == "https://cdn.example.com/foto-completa.jpg"
+
+
+def test_remax_page_url_convierte_a_api():
+    scraper = RemaxScraper()
+    url = (
+        "https://www.remax.com.ar/listings/rent"
+        "?page=0&pageSize=24&sort=-createdAt&in:operationId=2"
+    )
+    page1 = scraper.page_url(url, 1)
+    assert page1.startswith("https://api-ar.redremax.com/remaxweb-ar/api/listings/findAll?")
+    assert "page=0" in page1
+    assert "pageSize=24" in page1
+    assert "operationId" in page1
+    page3 = scraper.page_url(url, 3)
+    assert "page=2" in page3
+    # Si la URL no trae pageSize, se agrega uno por defecto
+    assert "pageSize=24" in scraper.page_url("https://www.remax.com.ar/listings/buy", 1)
+
+
+def test_remax_parse_json_invalido_no_explota():
+    assert list(RemaxScraper().parse("<html>not json</html>")) == []
+    assert list(RemaxScraper().parse('{"data": {"data": null}}')) == []
 
 
 def test_mercadolibre_pagination():

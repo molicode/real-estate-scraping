@@ -1,0 +1,44 @@
+{
+  "code": 200,
+  "data": {
+    "page": 0,
+    "pageSize": 24,
+    "totalPages": 3,
+    "data": [
+      {
+        "id": "ab12cd34-5678-90ef-1234-567890abcdef",
+        "slug": "depto-2-ambientes-palermo-hollywood-123456789-22",
+        "title": "Departamento 2 ambientes en Palermo Hollywood",
+        "price": 210000,
+        "currency": { "id": 2, "value": "USD" },
+        "expensesPrice": 180000,
+        "displayAddress": "Bonpland 2200, Palermo, Capital Federal",
+        "totalRooms": 2,
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "dimensionTotalBuilt": 58,
+        "dimensionCovered": 52,
+        "photos": [
+          { "order": 1, "value": "listings/foto-remax-1.jpg" }
+        ],
+        "operation": { "id": 1, "value": "Venta" }
+      },
+      {
+        "id": "ff98ee87-6543-21dc-4321-fedcba098765",
+        "slug": "casa-3-dormitorios-villa-urquiza-987654321-11",
+        "title": "Casa 3 dormitorios con patio en Villa Urquiza",
+        "price": 950000,
+        "currency": { "id": 1, "value": "ARS" },
+        "displayAddress": "Mendoza 5100, Villa Urquiza, Capital Federal",
+        "totalRooms": 4,
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "dimensionTotalBuilt": 140,
+        "photos": [
+          { "order": 1, "value": "https://cdn.example.com/foto-completa.jpg" }
+        ],
+        "operation": { "id": 2, "value": "Alquiler" }
+      }
+    ]
+  }
+}

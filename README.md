@@ -9,6 +9,7 @@ Scraper de portales inmobiliarios argentinos que corre **cada 1 hora, todos los 
 | Argenprop | `argenprop.com` | HTML server-side, el más estable para scrapear |
 | Zonaprop | `zonaprop.com.ar` | Protegido por Cloudflare; se usa `cloudscraper`, puede bloquear IPs de GitHub |
 | MercadoLibre Inmuebles | `inmuebles.mercadolibre.com.ar` | HTML server-side |
+| Remax | `remax.com.ar` | Se consume la API JSON pública del sitio (SPA sin HTML server-side) |
 
 ## Cómo funciona
 
