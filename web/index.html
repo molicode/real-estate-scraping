@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Estate Scraper AR — Administración</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>🏠 Real Estate Scraper AR</h1>
+  <p class="subtitle">Administrá los jobs de scraping de Argenprop, Zonaprop y MercadoLibre. El scraper corre cada hora en GitHub Actions con los jobs activos.</p>
+</header>
+
+<section id="auth-section" class="card">
+  <h2>🔑 Conexión con GitHub</h2>
+  <p>Necesitás un <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained personal access token</a> con acceso a <strong>este repositorio</strong> y permisos: <code>Contents: Read and write</code> y <code>Actions: Read and write</code>. Se guarda solo en tu navegador (localStorage).</p>
+  <div class="row">
+    <input type="password" id="token-input" placeholder="github_pat_...">
+    <button id="token-save" class="btn primary">Conectar</button>
+    <button id="token-clear" class="btn danger hidden">Desconectar</button>
+  </div>
+  <p id="auth-status" class="status"></p>
+</section>
+
+<nav id="tabs" class="hidden">
+  <button class="tab active" data-tab="jobs">⚙️ Jobs</button>
+  <button class="tab" data-tab="results">📋 Resultados</button>
+  <button class="tab" data-tab="runs">🕐 Corridas</button>
+</nav>
+
+<main class="hidden" id="main">
+
+<section id="tab-jobs" class="tab-panel">
+  <div class="toolbar">
+    <button id="new-job" class="btn primary">➕ Nuevo job</button>
+    <button id="save-jobs" class="btn success" disabled>💾 Guardar cambios</button>
+    <button id="run-now" class="btn">▶️ Ejecutar scraper ahora</button>
+    <span id="jobs-status" class="status"></span>
+  </div>
+  <div id="jobs-list"></div>
+
+  <div id="job-form-wrap" class="card hidden">
+    <h2 id="job-form-title">Nuevo job</h2>
+    <form id="job-form">
+      <div class="grid">
+        <label>Nombre del job
+          <input type="text" id="f-name" required placeholder="Alquiler 2 amb Palermo">
+        </label>
+        <label>Portal
+          <select id="f-site">
+            <option value="argenprop">Argenprop</option>
+            <option value="mercadolibre">MercadoLibre Inmuebles</option>
+            <option value="zonaprop">Zonaprop (puede bloquear, ver nota)</option>
+          </select>
+        </label>
+      </div>
+      <label>URL de búsqueda del portal
+        <input type="url" id="f-url" required placeholder="https://...">
+        <small id="site-hint"></small>
+      </label>
+      <div class="grid">
+        <label>Páginas a recorrer
+          <input type="number" id="f-max-pages" min="1" max="10" value="2">
+        </label>
+        <label>Activo
+          <select id="f-enabled">
+            <option value="true">Sí</option>
+            <option value="false">No (pausado)</option>
+          </select>
+        </label>
+      </div>
+
+      <h3>Filtros (se aplican después del scraping; dejá vacío lo que no uses)</h3>
+      <div class="grid">
+        <label>Moneda
+          <select id="f-currency">
+            <option value="">Cualquiera</option>
+            <option value="ARS">ARS (pesos)</option>
+            <option value="USD">USD (dólares)</option>
+          </select>
+        </label>
+        <label>Precio mínimo
+          <input type="number" id="f-min-price" min="0" placeholder="ej. 300000">
+        </label>
+        <label>Precio máximo
+          <input type="number" id="f-max-price" min="0" placeholder="ej. 900000">
+        </label>
+        <label>Ambientes mín.
+          <input type="number" id="f-min-rooms" min="1" placeholder="ej. 2">
+        </label>
+        <label>Ambientes máx.
+          <input type="number" id="f-max-rooms" min="1">
+        </label>
+        <label>Dormitorios mín.
+          <input type="number" id="f-min-bedrooms" min="1">
+        </label>
+        <label>Superficie mín. (m²)
+          <input type="number" id="f-min-surface" min="0" placeholder="ej. 45">
+        </label>
+        <label>Exigir precio publicado
+          <select id="f-require-price">
+            <option value="false">No</option>
+            <option value="true">Sí</option>
+          </select>
+        </label>
+      </div>
+      <div class="grid">
+        <label>Palabras que DEBE contener (separadas por coma)
+          <input type="text" id="f-kw-include" placeholder="balcón, luminoso">
+        </label>
+        <label>Palabras que lo EXCLUYEN (separadas por coma)
+          <input type="text" id="f-kw-exclude" placeholder="temporario, pozo">
+        </label>
+      </div>
+      <div class="row">
+        <button type="submit" class="btn primary">Aceptar</button>
+        <button type="button" id="job-cancel" class="btn">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section id="tab-results" class="tab-panel hidden">
+  <div class="toolbar">
+    <button id="reload-results" class="btn">🔄 Recargar</button>
+    <input type="text" id="results-filter" placeholder="Filtrar por texto, job o portal...">
+    <span id="results-status" class="status"></span>
+  </div>
+  <div id="results-list"></div>
+</section>
+
+<section id="tab-runs" class="tab-panel hidden">
+  <div class="toolbar">
+    <button id="reload-runs" class="btn">🔄 Recargar</button>
+    <span id="runs-status" class="status"></span>
+  </div>
+  <div id="runs-list"></div>
+</section>
+
+</main>
+
+<footer>
+  <p>Los jobs se guardan en <code>jobs.json</code> del repo. El scraper corre cada hora (cron de GitHub Actions) y también podés dispararlo al instante con "Ejecutar ahora".</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

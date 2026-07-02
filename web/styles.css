@@ -1,0 +1,164 @@
+:root {
+  --bg: #0f1420;
+  --card: #1a2233;
+  --card2: #212b40;
+  --text: #e6ebf5;
+  --muted: #93a1bd;
+  --accent: #4f8cff;
+  --success: #2ebd6b;
+  --danger: #e05252;
+  --warn: #e0a53a;
+  --border: #2c3952;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 24px 16px 60px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+header h1 { margin: 0 0 4px; font-size: 1.6rem; }
+.subtitle { color: var(--muted); margin: 0 0 20px; }
+
+a { color: var(--accent); }
+code {
+  background: var(--card2);
+  padding: 1px 6px;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-bottom: 18px;
+}
+.card h2 { margin-top: 0; font-size: 1.1rem; }
+.card h3 { font-size: 0.95rem; color: var(--muted); margin-bottom: 8px; }
+
+.hidden { display: none !important; }
+
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 8px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+label { display: block; font-size: 0.85rem; color: var(--muted); }
+input, select {
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card2);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+input:focus, select:focus { outline: 2px solid var(--accent); border-color: transparent; }
+small { color: var(--muted); display: block; margin-top: 4px; }
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card2);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+.btn:hover:not(:disabled) { filter: brightness(1.2); }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn.success { background: var(--success); border-color: var(--success); color: #fff; }
+.btn.danger { background: var(--danger); border-color: var(--danger); color: #fff; }
+.btn.small { padding: 4px 10px; font-size: 0.85rem; }
+
+.status { font-size: 0.88rem; color: var(--muted); }
+.status.ok { color: var(--success); }
+.status.error { color: var(--danger); }
+
+nav#tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+.tab {
+  padding: 8px 18px;
+  border-radius: 8px 8px 0 0;
+  border: 1px solid var(--border);
+  border-bottom: none;
+  background: var(--card);
+  color: var(--muted);
+  cursor: pointer;
+}
+.tab.active { background: var(--card2); color: var(--text); font-weight: 600; }
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.toolbar input[type="text"] { max-width: 320px; width: auto; flex: 1; margin-top: 0; }
+
+.job-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+.job-card.disabled { opacity: 0.55; }
+.job-card .title { font-weight: 600; }
+.job-card .meta { font-size: 0.85rem; color: var(--muted); word-break: break-all; }
+.badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 20px;
+  background: var(--card2);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  margin-right: 6px;
+}
+.badge.on { color: var(--success); border-color: var(--success); }
+.badge.off { color: var(--warn); border-color: var(--warn); }
+
+table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; position: sticky; top: 0; background: var(--bg); }
+tr:hover td { background: var(--card); }
+
+.run-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+footer { margin-top: 30px; color: var(--muted); font-size: 0.85rem; }
+
+@media (max-width: 640px) {
+  .job-card { flex-direction: column; }
+}

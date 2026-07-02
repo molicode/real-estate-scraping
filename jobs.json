@@ -1,0 +1,34 @@
+{
+  "retention_days": 60,
+  "defaults": {
+    "max_pages": 2
+  },
+  "searches": [
+    {
+      "name": "Ejemplo: Alquiler 2 amb Palermo (Argenprop)",
+      "url": "https://www.argenprop.com/departamentos/alquiler/palermo",
+      "site": "argenprop",
+      "enabled": false,
+      "max_pages": 2,
+      "filters": {
+        "currency": "ARS",
+        "max_price": 900000,
+        "min_rooms": 2,
+        "keywords_exclude": ["temporario", "temporal"]
+      }
+    },
+    {
+      "name": "Ejemplo: Venta deptos Caballito (MercadoLibre)",
+      "url": "https://inmuebles.mercadolibre.com.ar/departamentos/venta/capital-federal/caballito/",
+      "site": "mercadolibre",
+      "enabled": false,
+      "max_pages": 2,
+      "filters": {
+        "currency": "USD",
+        "max_price": 150000,
+        "min_bedrooms": 2,
+        "min_surface_m2": 50
+      }
+    }
+  ]
+}

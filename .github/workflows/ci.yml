@@ -24,8 +24,8 @@ jobs:
           pip install -r requirements.txt
           pip install pytest
 
-      - name: Validar config.yaml
-        run: python -c "import yaml; yaml.safe_load(open('config.yaml'))"
+      - name: Validar jobs.json
+        run: python -c "import json; json.load(open('jobs.json'))"
 
       - name: Correr tests
         run: python -m pytest tests/ -v

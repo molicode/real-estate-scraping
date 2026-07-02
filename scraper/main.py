@@ -20,14 +20,23 @@ logging.basicConfig(
 )
 logger = logging.getLogger("scraper")
 
-DEFAULT_CONFIG = Path(__file__).resolve().parent.parent / "config.yaml"
+ROOT = Path(__file__).resolve().parent.parent
+# jobs.json es la fuente canónica (lo edita la web de administración);
+# config.yaml queda como alternativa manual. YAML es superset de JSON,
+# así que ambos se leen con yaml.safe_load.
+JOBS_FILE = ROOT / "jobs.json"
+LEGACY_CONFIG = ROOT / "config.yaml"
+
+
+def default_config_path() -> Path:
+    return JOBS_FILE if JOBS_FILE.exists() else LEGACY_CONFIG
 
 
 def load_config(path: Path) -> dict[str, Any]:
     with path.open(encoding="utf-8") as fh:
         config = yaml.safe_load(fh) or {}
-    if not isinstance(config.get("searches"), list) or not config["searches"]:
-        raise SystemExit("config.yaml debe definir al menos una búsqueda en 'searches'")
+    if not isinstance(config.get("searches"), list):
+        raise SystemExit(f"{path.name} debe definir una lista 'searches'")
     return config
 
 
@@ -35,6 +44,8 @@ def build_searches(config: dict[str, Any]) -> list[Search]:
     defaults = config.get("defaults") or {}
     searches = []
     for i, raw in enumerate(config["searches"], start=1):
+        if raw.get("enabled") is False:
+            continue
         url = (raw.get("url") or "").strip()
         if not url:
             raise SystemExit(f"La búsqueda #{i} no tiene 'url'")
@@ -57,9 +68,13 @@ def build_searches(config: dict[str, Any]) -> list[Search]:
 
 
 def main() -> int:
-    config_path = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_CONFIG
+    config_path = Path(sys.argv[1]) if len(sys.argv) > 1 else default_config_path()
     config = load_config(config_path)
     searches = build_searches(config)
+    if not searches:
+        logger.info("No hay jobs activos en %s; nada para scrapear", config_path.name)
+        write_github_summary([], {}, ["No hay jobs activos: creá o activá jobs desde la web de administración"])
+        return 0
     retention_days = int(config.get("retention_days", 60))
 
     stored = load_listings()

@@ -12,33 +12,47 @@ Scraper de portales inmobiliarios argentinos que corre **cada 1 hora, todos los 
 
 ## Cómo funciona
 
-1. El workflow [`scraper.yml`](.github/workflows/scraper.yml) corre con cron `0 * * * *` (cada hora, UTC).
-2. Lee las búsquedas de [`config.yaml`](config.yaml), scrapea cada portal y aplica tus filtros.
+1. Definís **jobs** (búsquedas) desde la **web de administración** (GitHub Pages) o editando [`jobs.json`](jobs.json) a mano. Cada job apunta a un portal con sus filtros.
+2. El workflow [`scraper.yml`](.github/workflows/scraper.yml) corre con cron `0 * * * *` (cada hora, UTC) y ejecuta los jobs **activos**; si no hay ninguno, no scrapea nada. También podés dispararlo al instante desde la web.
 3. Compara contra `data/listings.json` (el "ya visto"), agrega los avisos nuevos y commitea el archivo al repo.
 4. Si configuraste Telegram, te envía un mensaje con los avisos nuevos. Siempre deja un resumen en el *job summary* de la corrida.
 
-## Configurar tus búsquedas
+## Web de administración
 
-Editá `config.yaml`. Para cada búsqueda:
+La carpeta [`web/`](web/) se despliega a GitHub Pages con [`pages.yml`](.github/workflows/pages.yml). Desde ahí podés:
 
-1. Entrá al portal y aplicá los filtros con la interfaz del sitio (zona, operación, precio, ambientes…).
-2. Copiá la URL de resultados y pegala en `url` — el sitio se detecta solo por el dominio.
-3. Opcionalmente afiná con filtros post-scraping:
+- **Crear/editar/pausar/eliminar jobs** por portal, con los filtros comunes (precio, moneda, ambientes, dormitorios, superficie, keywords) y ayuda específica por sitio para armar la URL.
+- **Guardar**: commitea `jobs.json` en `main` vía la API de GitHub.
+- **Ejecutar ahora**: dispara el workflow del scraper sin esperar al cron.
+- **Ver resultados** (`data/listings.json`) y el **historial de corridas**.
 
-```yaml
-searches:
-  - name: "Alquiler 2 amb Palermo"
-    url: "https://www.argenprop.com/departamentos/alquiler/palermo"
-    max_pages: 2
-    filters:
-      currency: ARS          # exige la moneda
-      max_price: 900000      # tope de precio
-      min_rooms: 2           # ambientes mínimos
-      min_surface_m2: 40     # superficie mínima
-      keywords_exclude: ["temporario"]
+Para usarla necesitás un [fine-grained personal access token](https://github.com/settings/personal-access-tokens/new) con acceso a este repo y permisos `Contents: Read and write` + `Actions: Read and write`. Se guarda solo en tu navegador.
+
+## Formato de jobs.json
+
+```json
+{
+  "retention_days": 60,
+  "defaults": { "max_pages": 2 },
+  "searches": [
+    {
+      "name": "Alquiler 2 amb Palermo",
+      "url": "https://www.argenprop.com/departamentos/alquiler/palermo",
+      "site": "argenprop",
+      "enabled": true,
+      "max_pages": 2,
+      "filters": {
+        "currency": "ARS",
+        "max_price": 900000,
+        "min_rooms": 2,
+        "keywords_exclude": ["temporario"]
+      }
+    }
+  ]
+}
 ```
 
-Filtros disponibles: `currency`, `min_price`, `max_price`, `require_price`, `min_rooms`, `max_rooms`, `min_bedrooms`, `min_surface_m2`, `keywords_include`, `keywords_exclude`. Los campos que el aviso no publica (ej. sin precio) no se descartan salvo que uses `require_price: true`.
+La `url` se copia del portal con sus filtros nativos aplicados; el `site` se detecta solo por el dominio. Filtros disponibles: `currency`, `min_price`, `max_price`, `require_price`, `min_rooms`, `max_rooms`, `min_bedrooms`, `min_surface_m2`, `keywords_include`, `keywords_exclude`. Los campos que el aviso no publica (ej. sin precio) no se descartan salvo que uses `require_price: true`.
 
 ## Notificaciones por Telegram (opcional)
 
