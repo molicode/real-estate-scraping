@@ -320,6 +320,73 @@ function detectSite(url) {
   return null;
 }
 
+/* ---------- Armador de URLs por menús ---------- */
+
+// Slug del tipo de propiedad según el portal
+const PTYPE_SLUGS = {
+  departamento: { argenprop: "departamentos", mercadolibre: "departamentos", zonaprop: "departamentos" },
+  casa: { argenprop: "casas", mercadolibre: "casas", zonaprop: "casas" },
+  ph: { argenprop: "ph", mercadolibre: "ph", zonaprop: "ph" },
+  local: { argenprop: "locales", mercadolibre: "locales", zonaprop: "locales-comerciales" },
+  oficina: { argenprop: "oficinas", mercadolibre: "oficinas", zonaprop: "oficinas-comerciales" },
+  terreno: { argenprop: "terrenos", mercadolibre: "terrenos", zonaprop: "terrenos" },
+};
+
+function slugifyZone(zone) {
+  return zone
+    .trim()
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "") // sin acentos
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/\s+/g, "-");
+}
+
+function buildSearchUrl(site, operation, ptype, zone) {
+  const t = PTYPE_SLUGS[ptype]?.[site];
+  const z = slugifyZone(zone || "") || "capital-federal";
+  const op = operation === "venta" ? "venta" : "alquiler";
+  switch (site) {
+    case "argenprop":
+      return `https://www.argenprop.com/${t}/${op}/${z}`;
+    case "mercadolibre":
+      return `https://inmuebles.mercadolibre.com.ar/${t}/${op}/${z}/`;
+    case "zonaprop":
+      return `https://www.zonaprop.com.ar/${t}-${op}-${z}.html`;
+    case "remax": {
+      // Remax no tiene URLs por slug: se arma la búsqueda general por
+      // operación; la zona se filtra en el sitio (modo 'Pegar URL').
+      const opId = operation === "venta" ? 1 : 2;
+      const path = operation === "venta" ? "buy" : "rent";
+      return `https://www.remax.com.ar/listings/${path}?page=0&pageSize=24&sort=-createdAt&in:operationId=${opId}`;
+    }
+    default:
+      return "";
+  }
+}
+
+function isMenuMode() {
+  return $("f-mode").value === "menu";
+}
+
+function syncBuilder() {
+  const menu = isMenuMode();
+  $("wrap-ptype").classList.toggle("hidden", !menu);
+  $("wrap-zone").classList.toggle("hidden", !menu);
+  $("f-url").readOnly = menu;
+  if (menu) {
+    $("f-url").value = buildSearchUrl(
+      $("f-site").value, $("f-operation").value, $("f-ptype").value, $("f-zone").value
+    );
+  }
+  updateHint();
+}
+
+["f-mode", "f-site", "f-operation", "f-ptype"].forEach((id) =>
+  $(id).addEventListener("change", syncBuilder)
+);
+$("f-zone").addEventListener("input", syncBuilder);
+
 function updateHint() {
   $("site-hint").innerHTML = SITE_HINTS[$("f-site").value] || "";
 }
@@ -340,6 +407,11 @@ function openForm(index) {
   $("f-name").value = job?.name || "";
   $("f-site").value = job?.site || "argenprop";
   $("f-operation").value = job?.operation === "venta" ? "venta" : "alquiler";
+  // Jobs existentes conservan su URL tal cual (modo URL); los nuevos
+  // arrancan con el armador de menús y valores limpios.
+  $("f-mode").value = job ? "url" : "menu";
+  $("f-ptype").value = "departamento";
+  $("f-zone").value = "";
   $("f-url").value = job?.url || "";
   $("f-max-pages").value = job?.max_pages ?? jobsDoc.defaults?.max_pages ?? 2;
   $("f-enabled").value = String(job ? job.enabled !== false : true);
@@ -353,7 +425,7 @@ function openForm(index) {
   $("f-require-price").value = String(!!f.require_price);
   $("f-kw-include").value = (f.keywords_include || []).join(", ");
   $("f-kw-exclude").value = (f.keywords_exclude || []).join(", ");
-  updateHint();
+  syncBuilder();
   $("job-form-wrap").classList.remove("hidden");
   $("f-name").focus();
 }
