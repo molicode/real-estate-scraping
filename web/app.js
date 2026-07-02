@@ -595,9 +595,6 @@ $("reload-runs").addEventListener("click", loadRuns);
 /* ---------- Init ---------- */
 
 updateHint();
-applyTheme(
-  localStorage.getItem(THEME_KEY) ||
-    (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
-);
+applyTheme(localStorage.getItem(THEME_KEY) || "light");
 if (localStorage.getItem(GATE_KEY) === ACCESS_HASH) unlockApp();
 else showLogin();
