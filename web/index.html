@@ -103,11 +103,43 @@
             </select>
           </label>
         </div>
+        <div class="grid">
+          <label>¿Cómo definir la búsqueda?
+            <span class="info" tabindex="0" data-tip="'Armar con menús' genera la URL sola a partir del tipo de propiedad y la zona. 'Pegar URL del portal' te deja usar cualquier búsqueda armada en el sitio con sus filtros nativos (recomendado para Remax o búsquedas complejas)."></span>
+            <select id="f-mode">
+              <option value="menu">Armar con menús</option>
+              <option value="url">Pegar URL del portal</option>
+            </select>
+          </label>
+          <label id="wrap-ptype">Tipo de propiedad
+            <span class="info" tabindex="0" data-tip="Qué tipo de inmueble buscar. 'PH' es un término argentino: propiedad horizontal, una casa/depto con entrada propia que comparte lote, generalmente sin expensas o muy bajas."></span>
+            <select id="f-ptype">
+              <option value="departamento">Departamento</option>
+              <option value="casa">Casa</option>
+              <option value="ph">PH</option>
+              <option value="local">Local comercial</option>
+              <option value="oficina">Oficina</option>
+              <option value="terreno">Terreno</option>
+            </select>
+          </label>
+          <label id="wrap-zone">Zona
+            <span class="info" tabindex="0" data-tip="Barrio o ciudad, en minúsculas y con guiones (ej: palermo, villa-urquiza, capital-federal). Elegí una del menú o escribí otra. En Remax la zona se elige en el sitio: usá el modo 'Pegar URL'."></span>
+            <input type="text" id="f-zone" placeholder="palermo" list="dl-zones">
+          </label>
+        </div>
         <label>URL de búsqueda del portal
-          <span class="info" tabindex="0" data-tip="Entrá al portal en otra pestaña, buscá usando los filtros DEL SITIO (zona, operación, precio...) y copiá acá la URL de la página de resultados. El scraper visita exactamente esa URL cada hora."></span>
+          <span class="info" tabindex="0" data-tip="La URL exacta que el scraper visita cada hora. Con 'Armar con menús' se genera sola; con 'Pegar URL' copiala desde el portal con los filtros del sitio aplicados."></span>
           <input type="url" id="f-url" required placeholder="https://...">
           <small id="site-hint"></small>
         </label>
+        <datalist id="dl-zones">
+          <option value="capital-federal"><option value="palermo"><option value="belgrano">
+          <option value="recoleta"><option value="caballito"><option value="villa-urquiza">
+          <option value="almagro"><option value="nunez"><option value="colegiales">
+          <option value="villa-crespo"><option value="flores"><option value="san-telmo">
+          <option value="puerto-madero"><option value="zona-norte"><option value="vicente-lopez">
+          <option value="san-isidro"><option value="la-plata"><option value="cordoba"><option value="rosario">
+        </datalist>
         <div class="grid">
           <label>Páginas a recorrer
             <span class="info" tabindex="0" data-tip="Cuántas páginas de resultados revisar por corrida (cada página trae entre 20 y 48 avisos según el portal). Más páginas = más avisos cubiertos, pero la corrida tarda más."></span>
