@@ -5,7 +5,13 @@ on:
     # Cada hora, todos los días (UTC). GitHub puede demorar el inicio
     # algunos minutos en horas pico.
     - cron: "0 * * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      telegram_test:
+        description: "Solo enviar un mensaje de prueba a Telegram (no scrapea)"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -31,13 +37,23 @@ jobs:
       - name: Instalar dependencias
         run: pip install -r requirements.txt
 
-      - name: Ejecutar scraper
+      - name: Prueba de Telegram
+        if: github.event_name == 'workflow_dispatch' && inputs.telegram_test
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/telegram_test.py
+
+      - name: Ejecutar scraper
+        if: github.event_name != 'workflow_dispatch' || !inputs.telegram_test
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SCRAPERAPI_KEY: ${{ secrets.SCRAPERAPI_KEY }}
         run: python -m scraper.main
 
       - name: Commitear resultados
+        if: github.event_name != 'workflow_dispatch' || !inputs.telegram_test
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
