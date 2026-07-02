@@ -570,17 +570,26 @@ $("search-clear").addEventListener("click", () => {
 
 const RUN_ICONS = { success: "✅", failure: "❌", cancelled: "⚪", in_progress: "🔄", queued: "⏳" };
 
+let runsCache = [];
+
 async function loadRuns() {
   setStatus($("runs-status"), "Cargando corridas...");
   try {
     const resp = await gh(`/actions/workflows/scraper.yml/runs?per_page=15`);
     const data = await resp.json();
-    const rows = (data.workflow_runs || []).map((r) => {
+    // Más nuevas arriba, siempre
+    runsCache = (data.workflow_runs || []).sort((a, b) =>
+      (b.created_at || "").localeCompare(a.created_at || "")
+    );
+    const rows = runsCache.map((r) => {
       const icon = RUN_ICONS[r.conclusion || r.status] || "▫️";
       const when = new Date(r.created_at).toLocaleString("es-AR");
       return `<div class="run-row">
         <span>${icon} <strong>#${r.run_number}</strong> · ${escapeHtml(r.event)} · ${when}</span>
-        <a href="${r.html_url}" target="_blank" rel="noopener">ver log →</a>
+        <span class="row">
+          <a href="${r.html_url}" target="_blank" rel="noopener">ver log →</a>
+          <button class="btn small danger" data-run="${r.id}" title="Borra del histórico los avisos que guardó esta corrida">🗑 Borrar datos</button>
+        </span>
       </div>`;
     }).join("");
     $("runs-list").innerHTML = rows || '<p class="status">Sin corridas todavía.</p>';
@@ -591,6 +600,61 @@ async function loadRuns() {
 }
 
 $("reload-runs").addEventListener("click", loadRuns);
+
+/* Borrar del histórico los avisos guardados por una corrida.
+ * Los avisos no guardan el id de la corrida, pero sí `first_seen` (UTC),
+ * que siempre cae dentro de la ventana de ejecución del run: se eliminan
+ * los avisos vistos por primera vez entre el inicio y el fin del run
+ * (+2 minutos de margen). */
+$("runs-list").addEventListener("click", async (e) => {
+  const btn = e.target.closest("button[data-run]");
+  if (!btn) return;
+  const run = runsCache.find((r) => String(r.id) === btn.dataset.run);
+  if (!run) return;
+  if (!confirm(
+    `¿Borrar del histórico los avisos que guardó la corrida #${run.run_number}?\n` +
+    `El cambio se commitea en el repo y esos avisos desaparecen de la pestaña Buscar ` +
+    `(si siguen publicados, una corrida futura puede volver a encontrarlos).`
+  )) return;
+
+  setStatus($("runs-status"), `Borrando datos de la corrida #${run.run_number}...`);
+  btn.disabled = true;
+  try {
+    const { content, sha } = await fetchFile("data/listings.json");
+    if (!content) {
+      setStatus($("runs-status"), "No hay datos guardados todavía");
+      return;
+    }
+    const listings = JSON.parse(content);
+    const from = run.run_started_at || run.created_at;
+    const to = new Date(new Date(run.updated_at).getTime() + 2 * 60000)
+      .toISOString().slice(0, 19) + "Z";
+    const before = Object.keys(listings).length;
+    for (const [key, item] of Object.entries(listings)) {
+      const seen = item.first_seen || "";
+      if (seen >= from && seen <= to) delete listings[key];
+    }
+    const removed = before - Object.keys(listings).length;
+    if (!removed) {
+      setStatus($("runs-status"), `La corrida #${run.run_number} no guardó avisos nuevos; nada para borrar`);
+      return;
+    }
+    await putFile(
+      "data/listings.json",
+      JSON.stringify(listings, null, 2) + "\n",
+      sha,
+      `chore: borrar ${removed} avisos de la corrida #${run.run_number} desde la web`
+    );
+    allListings = Object.values(listings);
+    populateSearchSelects();
+    applySearch();
+    setStatus($("runs-status"), `✅ ${removed} avisos de la corrida #${run.run_number} borrados del histórico`, "ok");
+  } catch (err) {
+    setStatus($("runs-status"), "❌ " + err.message, "error");
+  } finally {
+    btn.disabled = false;
+  }
+});
 
 /* ---------- Init ---------- */
 
