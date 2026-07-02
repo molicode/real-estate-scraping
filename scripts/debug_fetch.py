@@ -7,6 +7,9 @@ Uso: python scripts/debug_fetch.py <url> <site>
 
 import sys
 from collections import Counter
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from bs4 import BeautifulSoup
 
