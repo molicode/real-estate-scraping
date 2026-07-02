@@ -33,6 +33,9 @@ BASE = "https://www.zonaprop.com.ar"
 
 class ZonapropScraper(BaseScraper):
     site = "zonaprop"
+    # Cloudflare suele devolver 403 a los runners de GitHub: con el secret
+    # SCRAPERAPI_KEY configurado se reintenta vía proxy.
+    proxy_fallback = True
 
     def _build_session(self):
         try:

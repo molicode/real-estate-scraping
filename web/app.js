@@ -20,9 +20,9 @@ const SITE_HINTS = {
   argenprop:
     'Entrá a <a href="https://www.argenprop.com" target="_blank" rel="noopener">argenprop.com</a>, buscá con los filtros del sitio (zona, operación, precio…) y pegá acá la URL de resultados. Ej: https://www.argenprop.com/departamentos/alquiler/palermo',
   mercadolibre:
-    'Entrá a <a href="https://inmuebles.mercadolibre.com.ar" target="_blank" rel="noopener">inmuebles.mercadolibre.com.ar</a>, aplicá los filtros y pegá la URL de resultados. Ej: https://inmuebles.mercadolibre.com.ar/departamentos/alquiler/capital-federal/',
+    '⚠️ MercadoLibre bloquea a los servidores de GitHub: para scrapearlo hace falta el secret SCRAPERAPI_KEY en el repo (ScraperAPI tiene plan gratuito). Ej: https://inmuebles.mercadolibre.com.ar/departamentos/alquiler/capital-federal/',
   zonaprop:
-    '⚠️ Zonaprop usa protección Cloudflare y suele bloquear a los servidores de GitHub: el job puede devolver 0 avisos. Ej: https://www.zonaprop.com.ar/departamentos-alquiler-palermo.html',
+    '⚠️ Zonaprop usa protección Cloudflare y suele bloquear a los servidores de GitHub: para scrapearlo hace falta el secret SCRAPERAPI_KEY en el repo (ScraperAPI tiene plan gratuito). Ej: https://www.zonaprop.com.ar/departamentos-alquiler-palermo.html',
   remax:
     'Entrá a <a href="https://www.remax.com.ar" target="_blank" rel="noopener">remax.com.ar</a>, buscá con los filtros del sitio y pegá la URL de resultados (la que empieza con /listings/...). Ej: https://www.remax.com.ar/listings/rent?page=0&pageSize=24&in:operationId=2',
 };

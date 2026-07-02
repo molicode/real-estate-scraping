@@ -25,6 +25,15 @@ PAGE_SIZE = 48
 
 class MercadoLibreScraper(BaseScraper):
     site = "mercadolibre"
+    # MercadoLibre redirige a las IPs de datacenter (como los runners de
+    # GitHub) a una página de "verificación de cuenta": hace falta proxy.
+    proxy_fallback = True
+
+    def is_blocked(self, resp) -> bool:
+        return (
+            "/gz/account-verification" in (resp.url or "")
+            or "suspicious_traffic" in resp.text
+        )
 
     def page_url(self, base_url: str, page: int) -> str:
         if page <= 1:

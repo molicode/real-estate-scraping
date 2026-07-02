@@ -6,10 +6,14 @@ Scraper de portales inmobiliarios argentinos que corre **cada 1 hora, todos los 
 
 | Portal | Sitio | Notas |
 |---|---|---|
-| Argenprop | `argenprop.com` | HTML server-side, el más estable para scrapear |
-| Zonaprop | `zonaprop.com.ar` | Protegido por Cloudflare; se usa `cloudscraper`, puede bloquear IPs de GitHub |
-| MercadoLibre Inmuebles | `inmuebles.mercadolibre.com.ar` | HTML server-side |
+| Argenprop | `argenprop.com` | HTML server-side, funciona directo desde GitHub Actions |
+| Zonaprop | `zonaprop.com.ar` | Cloudflare bloquea a los runners de GitHub: requiere el secret `SCRAPERAPI_KEY` |
+| MercadoLibre Inmuebles | `inmuebles.mercadolibre.com.ar` | Bloquea IPs de datacenter (redirige a verificación): requiere el secret `SCRAPERAPI_KEY` |
 | Remax | `remax.com.ar` | Se consume la API JSON pública del sitio (SPA sin HTML server-side) |
+
+### Proxy de scraping (para Zonaprop y MercadoLibre)
+
+Estos dos portales bloquean el acceso directo desde los servidores de GitHub. El scraper intenta primero directo y, si detecta el bloqueo y existe el secret `SCRAPERAPI_KEY`, reintenta a través de [ScraperAPI](https://www.scraperapi.com/) (tiene plan gratuito de ~1.000 requests/mes). Para activarlo: creá una cuenta, copiá tu API key y agregala como secret `SCRAPERAPI_KEY` en **Settings → Secrets and variables → Actions**. Sin el secret, esos portales simplemente devuelven 0 avisos (queda marcado en el job summary).
 
 ## Cómo funciona
 
@@ -64,6 +68,8 @@ La `url` se copia del portal con sus filtros nativos aplicados; el `site` se det
    - `TELEGRAM_CHAT_ID`
 
 Sin estos secrets el scraper funciona igual; solo omite la notificación.
+
+Para probar que quedó bien configurado: **Actions → Scraper de propiedades → Run workflow** y marcá la opción *"Solo enviar un mensaje de prueba a Telegram"* — te tiene que llegar un 🔔 al chat.
 
 ## Correr localmente
 
