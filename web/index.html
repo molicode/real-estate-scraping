@@ -60,6 +60,7 @@
   <button class="tab active" data-tab="jobs">⚙️ Jobs</button>
   <button class="tab" data-tab="top">⭐ Top 5</button>
   <button class="tab" data-tab="results">🔍 Buscar</button>
+  <button class="tab" data-tab="fav">❤️ Me gustan</button>
   <button class="tab" data-tab="runs">🕐 Corridas</button>
 </nav>
 
@@ -293,6 +294,15 @@
     </div>
   </div>
   <div id="results-list"></div>
+</section>
+
+<section id="tab-fav" class="tab-panel hidden">
+  <div class="toolbar">
+    <button id="reload-fav" class="btn">🔄 Recargar</button>
+    <span class="info" tabindex="0" data-tip="Tus avisos guardados con el corazón (desde Buscar o Top 5). Se commitean a data/favorites.json del repo, así no se pierden aunque cambies de navegador o el aviso desaparezca del histórico."></span>
+    <span id="fav-status" class="status"></span>
+  </div>
+  <div id="fav-list"></div>
 </section>
 
 <section id="tab-runs" class="tab-panel hidden">
