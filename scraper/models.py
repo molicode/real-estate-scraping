@@ -25,6 +25,7 @@ class Listing:
     bathrooms: Optional[int] = None
     surface_m2: Optional[float] = None
     image: str = ""
+    images: list[str] = field(default_factory=list)  # fotos extra si el portal las da
     search_name: str = ""
     operation: str = ""  # alquiler | venta (heredado del job)
     first_seen: str = ""

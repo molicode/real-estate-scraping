@@ -104,17 +104,20 @@ class RemaxScraper(BaseScraper):
             if currency_raw:
                 currency = "USD" if "US" in str(currency_raw).upper() else "ARS"
 
-            photo = ""
+            images: list[str] = []
             photos = item.get("photos")
-            if isinstance(photos, list) and photos:
-                first_photo = photos[0]
-                value = (
-                    first_photo.get("value")
-                    if isinstance(first_photo, dict)
-                    else str(first_photo)
-                )
-                if value:
-                    photo = value if str(value).startswith("http") else CDN_BASE + str(value)
+            if isinstance(photos, list):
+                for photo_item in photos[:5]:
+                    value = (
+                        photo_item.get("value")
+                        if isinstance(photo_item, dict)
+                        else str(photo_item)
+                    )
+                    if value:
+                        images.append(
+                            value if str(value).startswith("http") else CDN_BASE + str(value)
+                        )
+            photo = images[0] if images else ""
 
             yield Listing(
                 id=listing_id,
@@ -132,4 +135,5 @@ class RemaxScraper(BaseScraper):
                     _first(item, "dimensionTotalBuilt", "dimensionCovered", "dimension")
                 ),
                 image=photo,
+                images=images,
             )

@@ -94,10 +94,12 @@ def test_remax_parse():
     assert first.bedrooms == 1
     assert first.surface_m2 == 58.0
     assert first.image.startswith("https://")
+    assert first.images == [first.image]
     second = listings[1]
     assert second.price_currency == "ARS"
     assert second.bedrooms == 3
     assert second.image == "https://cdn.example.com/foto-completa.jpg"
+    assert second.images == ["https://cdn.example.com/foto-completa.jpg"]
 
 
 def test_remax_page_url_convierte_a_api():

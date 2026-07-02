@@ -58,6 +58,7 @@
 
 <nav id="tabs" class="hidden">
   <button class="tab active" data-tab="jobs">⚙️ Jobs</button>
+  <button class="tab" data-tab="top">⭐ Top 5</button>
   <button class="tab" data-tab="results">🔍 Buscar</button>
   <button class="tab" data-tab="runs">🕐 Corridas</button>
 </nav>
@@ -216,6 +217,18 @@
       </div>
     </form>
   </div>
+</section>
+
+<section id="tab-top" class="tab-panel hidden">
+  <div class="toolbar">
+    <button id="reload-top" class="btn">🔄 Recargar</button>
+    <span class="info" tabindex="0" data-tip="El ranking se arma entre los avisos guardados que ya cumplieron los filtros de tus jobs. Score: mejor precio (50%) + más superficie (30%) + más ambientes (20%), comparando solo avisos de la misma moneda. Pasá el mouse sobre una foto para ampliarla; el carrusel se pausa al apoyar el mouse."></span>
+    <span id="top-status" class="status"></span>
+  </div>
+  <h2 class="top-heading">🏠 Top 5 para alquilar</h2>
+  <div id="top-rent"></div>
+  <h2 class="top-heading">💵 Top 5 para comprar</h2>
+  <div id="top-buy"></div>
 </section>
 
 <section id="tab-results" class="tab-panel hidden">
