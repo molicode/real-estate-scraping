@@ -1,0 +1,48 @@
+# Configuración de búsquedas de propiedades.
+#
+# Cómo agregar una búsqueda:
+#   1. Entrá al portal (Argenprop, Zonaprop o MercadoLibre Inmuebles),
+#      aplicá los filtros que quieras con la interfaz del sitio
+#      (operación, tipo, zona, precio, ambientes, etc.).
+#   2. Copiá la URL de resultados del navegador y pegala en `url`.
+#   3. (Opcional) Agregá filtros extra post-scraping en `filters`.
+#
+# Filtros disponibles en `filters`:
+#   currency: ARS | USD      -> exige esa moneda en el precio
+#   min_price / max_price    -> rango de precio (en la moneda de `currency`)
+#   require_price: true      -> descarta avisos sin precio publicado
+#   min_rooms / max_rooms    -> ambientes
+#   min_bedrooms             -> dormitorios
+#   min_surface_m2           -> superficie mínima
+#   keywords_include: [...]  -> el título/dirección debe contener todas
+#   keywords_exclude: [...]  -> descarta si contiene alguna
+
+# Días que se recuerda un aviso ya visto (evita que data/listings.json
+# crezca sin límite).
+retention_days: 60
+
+defaults:
+  max_pages: 2  # páginas de resultados a recorrer por búsqueda
+
+searches:
+  - name: "Alquiler 2 amb Palermo (Argenprop)"
+    url: "https://www.argenprop.com/departamentos/alquiler/palermo"
+    filters:
+      currency: ARS
+      max_price: 900000
+      min_rooms: 2
+      keywords_exclude: ["temporario", "temporal"]
+
+  - name: "Alquiler 2 amb Palermo (Zonaprop)"
+    url: "https://www.zonaprop.com.ar/departamentos-alquiler-palermo-2-ambientes.html"
+    filters:
+      currency: ARS
+      max_price: 900000
+
+  - name: "Venta deptos Caballito (MercadoLibre)"
+    url: "https://inmuebles.mercadolibre.com.ar/departamentos/venta/capital-federal/caballito/"
+    filters:
+      currency: USD
+      max_price: 150000
+      min_bedrooms: 2
+      min_surface_m2: 50
