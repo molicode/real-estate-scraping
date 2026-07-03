@@ -60,6 +60,30 @@ def test_zonaprop_403_reintenta_via_proxy(monkeypatch):
     assert scraper.session.get.call_count == 2
 
 
+def test_pagina_vacia_reintenta_con_sesion_nueva(monkeypatch):
+    from scraper.models import Search
+    from scraper.sites.argenprop import ArgenpropScraper
+
+    monkeypatch.setattr("time.sleep", lambda *_: None)
+    scraper = ArgenpropScraper()
+    empty = "<html><body></body></html>"
+    card = (
+        '<div class="listing__item"><a class="card" href="/x--1234567">'
+        '<p class="card__price">$ 100.000</p></a></div>'
+    )
+    first_session = Mock()
+    first_session.get.return_value = make_response(text=empty)
+    retry_session = Mock()
+    retry_session.get.return_value = make_response(text=card)
+    scraper.session = first_session
+    monkeypatch.setattr(scraper, "_build_session", lambda: retry_session)
+
+    result = scraper.search(Search(name="s", url="https://www.argenprop.com/x", site="argenprop"))
+    assert len(result) == 1
+    assert first_session.get.call_count == 1
+    assert retry_session.get.call_count == 1
+
+
 def test_fetch_directo_ok_no_usa_proxy(monkeypatch):
     monkeypatch.setenv("SCRAPERAPI_KEY", "clave-test")
     scraper = MercadoLibreScraper()
