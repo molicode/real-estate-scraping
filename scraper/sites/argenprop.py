@@ -50,8 +50,16 @@ class ArgenpropScraper(BaseScraper):
             features_el = card.select_one(".card__main-features, ul[class*='features']")
             features = parse_features(features_el.get_text(" · ") if features_el else "")
 
-            img_el = card.select_one("img[data-src], img[src]")
-            image = (img_el.get("data-src") or img_el.get("src") or "") if img_el else ""
+            # Argenprop publica varias fotos por aviso en el listado
+            # (carrusel con lazy-load: la primera trae src, el resto data-src)
+            images: list[str] = []
+            for img in card.select(".card__photos img") or card.select("img"):
+                src = img.get("data-src") or img.get("src") or ""
+                if src and "placeholder" not in src and src not in images:
+                    images.append(src)
+                if len(images) >= 5:
+                    break
+            image = images[0] if images else ""
 
             yield Listing(
                 id=make_listing_id(self.site, url),
@@ -63,5 +71,6 @@ class ArgenpropScraper(BaseScraper):
                 expenses=expenses,
                 address=clean_text(address_el.get_text(" ") if address_el else ""),
                 image=image,
+                images=images,
                 **features,
             )
