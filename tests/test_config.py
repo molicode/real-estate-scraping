@@ -9,11 +9,15 @@ ROOT = Path(__file__).resolve().parent.parent
 
 
 def test_jobs_json_del_repo_es_valido():
+    # El archivo del repo lo edita el usuario desde la web: acá solo se
+    # valida que parsea y que cada búsqueda construye sin errores.
     config = load_config(ROOT / "jobs.json")
-    searches = build_searches(config)
-    # Los ejemplos vienen pausados: no debe scrapearse nada hasta que el
-    # usuario active jobs desde la web.
-    assert searches == []
+    searches = build_searches(config, only_job=None)
+    all_names = [s.get("name") for s in config["searches"]]
+    assert len(all_names) == len(set(all_names)), "nombres de jobs duplicados"
+    for search in searches:
+        assert search.url.startswith("https://")
+        assert search.site in {"argenprop", "zonaprop", "mercadolibre", "remax"}
 
 
 def test_enabled_false_se_saltea(tmp_path):
@@ -78,6 +82,30 @@ def test_only_job_corre_aunque_este_pausado(tmp_path):
     assert build_searches(config, only_job="no-existe") == []
     # sin only_job, el detenido sigue excluido
     assert [s.name for s in build_searches(config)] == ["activo"]
+
+
+def test_filter_due_respeta_frecuencia():
+    from datetime import datetime, timezone
+    from scraper.main import filter_due
+    from scraper.models import Search
+
+    now = datetime(2026, 7, 3, 12, 0, tzinfo=timezone.utc)
+    searches = [
+        Search(name="cada-hora", url="u", every_hours=1),
+        Search(name="cada-6", url="u", every_hours=6),
+        Search(name="nunca-corrio", url="u", every_hours=24),
+    ]
+    history = [
+        {"finished_at": "2026-07-03T11:05:00Z", "jobs": {"cada-hora": 3}},
+        {"finished_at": "2026-07-03T08:00:00Z", "jobs": {"cada-6": 2}},
+    ]
+    due = [s.name for s in filter_due(searches, history, now)]
+    # cada-hora: pasaron 55 min (>= 60 - 10 de tolerancia) -> corre
+    assert "cada-hora" in due
+    # cada-6: pasaron 4 h de 6 -> se saltea
+    assert "cada-6" not in due
+    # sin historial -> corre siempre
+    assert "nunca-corrio" in due
 
 
 def test_run_history_se_appendea_y_se_recorta(tmp_path):

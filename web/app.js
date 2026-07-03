@@ -30,7 +30,6 @@ const SITE_HINTS = {
 let token = localStorage.getItem(TOKEN_KEY) || "";
 let jobsDoc = null; // contenido de jobs.json
 let jobsSha = null; // sha del archivo para poder commitear
-let dirty = false;
 let editingIndex = null; // null = nuevo
 
 const $ = (id) => document.getElementById(id);
@@ -213,9 +212,8 @@ async function loadJobs() {
     jobsSha = sha;
     jobsDoc = content
       ? JSON.parse(content)
-      : { retention_days: 60, defaults: { max_pages: 2 }, searches: [] };
+      : { retention_days: 365, defaults: { max_pages: 2 }, searches: [] };
     if (!Array.isArray(jobsDoc.searches)) jobsDoc.searches = [];
-    dirty = false;
     renderJobs();
     setStatus($("jobs-status"), `${jobsDoc.searches.length} jobs`);
   } catch (err) {
@@ -255,28 +253,30 @@ function renderJobs() {
     const det = document.createElement("details");
     det.className = "job-card" + (enabled ? "" : " disabled");
     det.open = openIdx.has(i);
+    const every = Math.max(1, Number(job.every_hours) || 1);
     det.innerHTML = `
       <summary>
-        <span class="dot ${enabled ? "green" : "yellow"}" title="${enabled ? "Activo" : "Pausado"}"></span>
-        <span class="badge ${enabled ? "on" : "off"}">${enabled ? "ACTIVO" : "PAUSADO"}</span>
+        <span class="dot ${enabled ? "green" : "yellow"}" title="${enabled ? "Activo" : "Detenido"}"></span>
+        <span class="badge ${enabled ? "on" : "off"}">${enabled ? "ACTIVO" : "DETENIDO"}</span>
         <span class="badge">${job.site || "?"}</span>
         <span class="badge">${job.operation === "venta" ? "compra" : job.operation || "?"}</span>
+        <span class="badge" title="Frecuencia con la que corre en el cron">⏱ cada ${every} h</span>
         <span class="job-name">${escapeHtml(job.name || `job ${i + 1}`)}</span>
         <span class="summary-hint">▾ detalles</span>
       </summary>
       <div class="details-body">
         <div class="meta">${escapeHtml(job.url || "")}</div>
-        <div class="meta">${escapeHtml(fmtFilters(job.filters))} · ${job.max_pages || 1} pág.</div>
+        <div class="meta">${escapeHtml(fmtFilters(job.filters))} · ${job.max_pages || 1} pág. · corre cada ${every} h</div>
         <div class="row">
-          <button class="btn small" data-act="toggle" data-i="${i}" title="${enabled ? "Deja de ejecutarse en el cron (se guarda al instante)" : "Vuelve a ejecutarse cada hora (se guarda al instante)"}">${enabled ? "⏹ Detener" : "▶ Activar"}</button>
-          <button class="btn small" data-act="run" data-i="${i}" title="Ejecuta SOLO este job ahora mismo, aunque esté detenido (usa la última versión guardada)">▶️ Ejecutar ahora</button>
+          <button class="btn small" data-act="toggle" data-i="${i}" title="${enabled ? "Deja de ejecutarse en el cron (se guarda al instante)" : "Vuelve a la programación (se guarda al instante)"}">${enabled ? "⏹ Detener" : "▶ Activar"}</button>
+          <button class="btn small" data-act="run" data-i="${i}" title="Ejecuta SOLO este job ahora mismo, aunque esté detenido">▶️ Ejecutar ahora</button>
           <button class="btn small" data-act="edit" data-i="${i}">✏️ Editar</button>
           <button class="btn small danger" data-act="del" data-i="${i}">🗑 Eliminar</button>
         </div>
+        <div class="job-flow" id="job-flow-${i}"></div>
       </div>`;
     wrap.appendChild(det);
   });
-  $("save-jobs").disabled = !dirty;
 }
 
 function escapeHtml(s) {
@@ -299,22 +299,20 @@ $("jobs-list").addEventListener("click", async (e) => {
       `${job.enabled ? "▶ Activado" : "⏹ Detenido"} "${job.name}"`
     );
   } else if (act === "run") {
-    runSingleJob(jobsDoc.searches[i]);
+    runSingleJob(jobsDoc.searches[i], i);
   } else if (act === "del") {
-    if (confirm(`¿Eliminar el job "${jobsDoc.searches[i].name}"?`)) {
+    const name = jobsDoc.searches[i].name;
+    if (confirm(`¿Eliminar el job "${name}"? Se guarda al instante.`)) {
       jobsDoc.searches.splice(i, 1);
-      markDirty();
       renderJobs();
+      await persistJobs(`🗑 Eliminado "${name}"`);
     }
   } else if (act === "edit") {
     openForm(i);
   }
 });
 
-async function runSingleJob(job) {
-  if (dirty && !confirm(
-    `Tenés cambios sin guardar: el job va a correr con la última versión GUARDADA de "${job.name}". ¿Continuar?`
-  )) return;
+async function runSingleJob(job, index) {
   setStatus($("jobs-status"), `Disparando "${job.name}"...`);
   try {
     const dispatchedAt = new Date().toISOString();
@@ -324,13 +322,20 @@ async function runSingleJob(job) {
     });
     if (resp.status !== 204) throw new Error(`status ${resp.status}`);
     setStatus($("jobs-status"), `✅ "${job.name}" disparado`, "ok");
-    watchRun(`Ejecutando "${job.name}"`, dispatchedAt);
+    // El flujo se muestra dentro del propio job (abrimos su desplegable)
+    const card = document.querySelectorAll("#jobs-list details.job-card")[index];
+    if (card) card.open = true;
+    watchRun($(`job-flow-${index}`), `Ejecutando "${job.name}"`, dispatchedAt);
   } catch (err) {
     setStatus($("jobs-status"), "❌ " + err.message, "error");
   }
 }
 
-/* ---------- Flujo animado de la corrida en curso ---------- */
+/* ---------- Flujo animado de la corrida en curso ----------
+ * Cada disparo tiene su propio watcher y su propio contenedor (el panel
+ * global para "Ejecutar scraper ahora", o el desplegable del job).
+ * Si se disparan varios, las corridas se encolan en GitHub (no corren en
+ * paralelo) y cada watcher reclama una corrida distinta. */
 
 const FLOW_STEPS = [
   "🚀 Disparado",
@@ -340,57 +345,60 @@ const FLOW_STEPS = [
   "💾 Guardando resultados",
   "✅ Listo",
 ];
-let flowTimer = null;
+const claimedRuns = new Set();
 
-function renderFlow(title, activeIdx, finished = false, resultHtml = "") {
+function renderFlow(container, title, activeIdx, finished = false, resultHtml = "") {
+  if (!container) return;
   const steps = FLOW_STEPS.map((label, i) => {
     const cls = finished || i < activeIdx ? "done" : i === activeIdx ? "active" : "pending";
     return `<div class="flow-step ${cls}"><span class="flow-dot"></span><span class="flow-label">${label}</span></div>`;
   }).join('<div class="flow-line"></div>');
-  $("run-flow").classList.remove("hidden");
-  $("run-flow").innerHTML = `
+  container.classList.remove("hidden");
+  container.innerHTML = `
     <div class="flow-title">${escapeHtml(title)}</div>
     <div class="flow-track">${steps}</div>
     ${resultHtml ? `<div class="flow-result">${resultHtml}</div>` : ""}`;
 }
 
-function watchRun(title, dispatchedAt) {
-  clearInterval(flowTimer);
-  renderFlow(title, 0);
+function watchRun(container, title, dispatchedAt) {
+  renderFlow(container, title, 0);
   let runId = null;
   let ticks = 0;
-  flowTimer = setInterval(async () => {
-    if (++ticks > 60) { // ~5 minutos de vigilancia máxima
-      clearInterval(flowTimer);
-      renderFlow(title, FLOW_STEPS.length - 1, true, "La corrida sigue en GitHub; mirá la pestaña Corridas.");
+  const timer = setInterval(async () => {
+    if (++ticks > 90) { // ~7 minutos de vigilancia máxima
+      clearInterval(timer);
+      renderFlow(container, title, FLOW_STEPS.length - 1, true, "La corrida sigue en GitHub; mirá la pestaña Corridas.");
       return;
     }
     try {
       if (!runId) {
-        const resp = await gh(`/actions/workflows/scraper.yml/runs?event=workflow_dispatch&per_page=1`);
-        const run = (await resp.json()).workflow_runs?.[0];
-        if (run && run.created_at >= dispatchedAt.slice(0, 19)) {
-          runId = run.id;
-          renderFlow(title, 1);
+        const resp = await gh(`/actions/workflows/scraper.yml/runs?event=workflow_dispatch&per_page=5`);
+        const runs = ((await resp.json()).workflow_runs || [])
+          .filter((r) => r.created_at >= dispatchedAt.slice(0, 19) && !claimedRuns.has(r.id))
+          .sort((a, b) => (a.created_at || "").localeCompare(b.created_at || ""));
+        if (runs.length) {
+          runId = runs[0].id;
+          claimedRuns.add(runId);
+          renderFlow(container, title, 1);
         }
         return;
       }
       const resp = await gh(`/actions/runs/${runId}/jobs`);
       const job = (await resp.json()).jobs?.[0];
-      if (!job || job.status === "queued") { renderFlow(title, 1); return; }
+      if (!job || job.status === "queued") { renderFlow(container, title, 1); return; }
       if (job.status === "in_progress") {
         const steps = job.steps || [];
         const running = (name) =>
           steps.some((s) => s.name.includes(name) && s.status === "in_progress");
         const doneStep = (name) =>
           steps.some((s) => s.name.includes(name) && s.status === "completed");
-        if (running("Commitear") || doneStep("Ejecutar scraper")) renderFlow(title, 4);
-        else if (running("Ejecutar scraper")) renderFlow(title, 3);
-        else renderFlow(title, 2);
+        if (running("Commitear") || doneStep("Ejecutar scraper")) renderFlow(container, title, 4);
+        else if (running("Ejecutar scraper")) renderFlow(container, title, 3);
+        else renderFlow(container, title, 2);
         return;
       }
       if (job.status === "completed") {
-        clearInterval(flowTimer);
+        clearInterval(timer);
         const ok = job.conclusion === "success";
         let result = "❌ La corrida falló — abrí el log desde la pestaña Corridas.";
         if (ok) {
@@ -402,17 +410,12 @@ function watchRun(title, dispatchedAt) {
             : "Completado (sin actividad registrada).";
           loadResults(); // refresca Buscar y Top con lo nuevo
         }
-        renderFlow(title, FLOW_STEPS.length - 1, ok, escapeHtml(result));
+        renderFlow(container, title, FLOW_STEPS.length - 1, ok, escapeHtml(result));
       }
     } catch { /* reintenta en el próximo tick */ }
   }, 5000);
 }
 
-function markDirty() {
-  dirty = true;
-  $("save-jobs").disabled = false;
-  setStatus($("jobs-status"), "Cambios sin guardar", "error");
-}
 
 /* ---------- Formulario ---------- */
 
@@ -518,6 +521,7 @@ function openForm(index) {
   $("f-zone").value = "";
   $("f-url").value = job?.url || "";
   $("f-max-pages").value = job?.max_pages ?? jobsDoc.defaults?.max_pages ?? 2;
+  $("f-every").value = String(Math.max(1, Number(job?.every_hours) || 1));
   $("f-enabled").value = String(job ? job.enabled !== false : true);
   $("f-currency").value = f.currency || "";
   $("f-min-price").value = f.min_price ?? "";
@@ -591,13 +595,15 @@ $("job-form").addEventListener("submit", (e) => {
     operation: $("f-operation").value,
     enabled: $("f-enabled").value === "true",
     max_pages: numOrNull("f-max-pages") || 1,
+    every_hours: Number($("f-every").value) || 1,
     filters,
   };
-  if (editingIndex != null) jobsDoc.searches[editingIndex] = job;
-  else jobsDoc.searches.push(job);
+  const isNew = editingIndex == null;
+  if (isNew) jobsDoc.searches.push(job);
+  else jobsDoc.searches[editingIndex] = job;
   $("job-form-wrap").classList.add("hidden");
-  markDirty();
   renderJobs();
+  persistJobs(isNew ? `➕ Job "${job.name}" creado` : `✏️ Job "${job.name}" actualizado`);
 });
 
 /* ---------- Guardar + ejecutar ---------- */
@@ -611,18 +617,28 @@ async function persistJobs(okMessage) {
       jobsSha,
       "chore: actualizar jobs desde la web de administración"
     );
-    dirty = false;
     renderJobs();
     setStatus($("jobs-status"), `✅ ${okMessage || "Guardado"}. El cron ya usa esta config.`, "ok");
   } catch (err) {
-    setStatus($("jobs-status"), "❌ " + err.message, "error");
+    // sha viejo (otro guardado en el medio): refrescar y reintentar una vez
+    try {
+      const { sha } = await fetchFile("jobs.json");
+      jobsSha = await putFile(
+        "jobs.json",
+        JSON.stringify(jobsDoc, null, 2) + "\n",
+        sha,
+        "chore: actualizar jobs desde la web de administración"
+      );
+      renderJobs();
+      setStatus($("jobs-status"), `✅ ${okMessage || "Guardado"}.`, "ok");
+    } catch (err2) {
+      setStatus($("jobs-status"), "❌ No se pudo guardar: " + err2.message, "error");
+      alert("No se pudo guardar jobs.json: " + err2.message);
+    }
   }
 }
 
-$("save-jobs").addEventListener("click", () => persistJobs("Guardado"));
-
 $("run-now").addEventListener("click", async () => {
-  if (dirty && !confirm("Tenés cambios sin guardar; el scraper va a correr con la última versión GUARDADA. ¿Continuar?")) return;
   const active = (jobsDoc?.searches || []).filter((s) => s.enabled !== false).length;
   if (active === 0 && !confirm("Tenés 0 jobs activos: la corrida no va a scrapear nada. ¿Ejecutar igual?")) return;
   setStatus($("jobs-status"), "Disparando workflow...");
@@ -634,7 +650,7 @@ $("run-now").addEventListener("click", async () => {
     });
     if (resp.status !== 204) throw new Error(`status ${resp.status}`);
     setStatus($("jobs-status"), `✅ Scraper disparado (${active} jobs activos).`, "ok");
-    watchRun(`Ejecutando ${active} jobs activos`, dispatchedAt);
+    watchRun($("run-flow"), `Ejecutando ${active} jobs activos`, dispatchedAt);
   } catch (err) {
     setStatus($("jobs-status"), "❌ " + err.message, "error");
   }
@@ -685,30 +701,47 @@ function numVal(id) {
   return v === "" ? null : Number(v);
 }
 
+function pricePerM2(l) {
+  return l.price_amount != null && l.surface_m2 ? l.price_amount / l.surface_m2 : null;
+}
+
 function applySearch() {
   const q = $("s-text").value.trim().toLowerCase();
+  const qNot = $("s-text-exclude").value.trim().toLowerCase();
   const site = $("s-site").value;
   const job = $("s-job").value;
   const operation = $("s-operation").value;
   const currency = $("s-currency").value;
   const pmin = numVal("s-min-price");
   const pmax = numVal("s-max-price");
+  const requirePrice = $("s-require-price").value === "yes";
   const rooms = numVal("s-min-rooms");
+  const roomsMax = numVal("s-max-rooms");
   const beds = numVal("s-min-bedrooms");
   const surf = numVal("s-min-surface");
+  const surfMax = numVal("s-max-surface");
+  const withPhoto = $("s-with-photo").value === "yes";
+  const onlyFav = $("s-only-fav").value === "yes";
   const since = $("s-since").value; // yyyy-mm-dd, comparable con first_seen ISO
 
   const out = allListings.filter((l) => {
-    if (q && !`${l.title} ${l.address} ${l.search_name}`.toLowerCase().includes(q)) return false;
+    const haystack = `${l.title} ${l.address} ${l.search_name}`.toLowerCase();
+    if (q && !haystack.includes(q)) return false;
+    if (qNot && haystack.includes(qNot)) return false;
     if (site && l.site !== site) return false;
     if (job && l.search_name !== job) return false;
     if (operation && listingOperation(l) !== operation) return false;
     if (currency && l.price_currency !== currency) return false;
+    if (requirePrice && l.price_amount == null) return false;
     if (pmin != null && !(l.price_amount != null && l.price_amount >= pmin)) return false;
     if (pmax != null && !(l.price_amount != null && l.price_amount <= pmax)) return false;
     if (rooms != null && !(l.rooms != null && l.rooms >= rooms)) return false;
+    if (roomsMax != null && l.rooms != null && l.rooms > roomsMax) return false;
     if (beds != null && !(l.bedrooms != null && l.bedrooms >= beds)) return false;
     if (surf != null && !(l.surface_m2 != null && l.surface_m2 >= surf)) return false;
+    if (surfMax != null && l.surface_m2 != null && l.surface_m2 > surfMax) return false;
+    if (withPhoto && !l.image) return false;
+    if (onlyFav && !isFav(l.id)) return false;
     if (since && (l.first_seen || "") < since) return false;
     return true;
   });
@@ -717,6 +750,7 @@ function applySearch() {
     recent: (a, b) => (b.first_seen || "").localeCompare(a.first_seen || ""),
     price_asc: (a, b) => (a.price_amount ?? Infinity) - (b.price_amount ?? Infinity),
     price_desc: (a, b) => (b.price_amount ?? -1) - (a.price_amount ?? -1),
+    ppm2_asc: (a, b) => (pricePerM2(a) ?? Infinity) - (pricePerM2(b) ?? Infinity),
     surface_desc: (a, b) => (b.surface_m2 ?? -1) - (a.surface_m2 ?? -1),
   };
   out.sort(sorters[$("s-sort").value] || sorters.recent);
@@ -724,6 +758,28 @@ function applySearch() {
   renderResults(out);
   setStatus($("results-status"), `${out.length} de ${allListings.length} avisos`);
 }
+
+/* Vaciar todo el histórico de avisos guardados */
+$("clear-history").addEventListener("click", async () => {
+  if (!confirm(
+    `¿Vaciar TODO el histórico (${allListings.length} avisos guardados)?\n` +
+    `Tus ❤️ favoritos NO se tocan. Los avisos que sigan publicados van a ` +
+    `volver a aparecer en futuras corridas.`
+  )) return;
+  setStatus($("results-status"), "Vaciando histórico...");
+  try {
+    const { sha } = await fetchFile("data/listings.json");
+    await putFile("data/listings.json", "{}\n", sha, "chore: vaciar histórico de avisos desde la web");
+    allListings = [];
+    populateSearchSelects();
+    applySearch();
+    renderTop();
+    setStatus($("results-status"), "✅ Histórico vaciado", "ok");
+  } catch (err) {
+    setStatus($("results-status"), "❌ " + err.message, "error");
+    alert("No pude vaciar el histórico: " + err.message);
+  }
+});
 
 function fmtPrice(l) {
   if (l.price_amount == null) return "consultar";
@@ -811,20 +867,14 @@ document.body.addEventListener("click", (e) => {
 });
 
 function favCardHtml(l) {
-  const imgs = (l.images && l.images.length ? l.images : [l.image]).filter(Boolean);
-  const photo = imgs.length
-    ? `<img class="zoomable" src="${escapeHtml(imgs[0])}" loading="lazy" alt=""
-        onerror="this.outerHTML='<div class=\\'noimg\\'>🏠</div>'">`
-    : `<div class="noimg">🏠</div>`;
   const meta = [
     l.rooms ? `${l.rooms} amb` : null,
     l.surface_m2 ? `${Math.round(l.surface_m2)} m²` : null,
   ].filter(Boolean).join(" · ");
+  const extra = `<button class="fav-btn on thumb-fav" data-fav="${escapeHtml(l.id)}" title="Quitar de Me gustan">❤️</button>`;
   return `
     <div class="top-card">
-      <div class="top-thumb">${photo}
-        <button class="fav-btn on thumb-fav" data-fav="${escapeHtml(l.id)}" title="Quitar de Me gustan">❤️</button>
-      </div>
+      <div class="top-thumb">${photoCarouselHtml(l, extra)}</div>
       <div class="top-body">
         <div class="top-price">${fmtPrice(l)}</div>
         <a class="top-title" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.title || l.address || "ver aviso")}</a>
@@ -847,10 +897,16 @@ function renderFavorites() {
 
 $("reload-fav").addEventListener("click", () => loadFavorites().then(renderFavorites));
 
-function thumbHtml(l, cls = "thumb") {
-  if (!l.image) return `<div class="${cls} noimg">🏠</div>`;
-  return `<img class="${cls} zoomable" src="${escapeHtml(l.image)}" loading="lazy" alt=""
-    onerror="this.outerHTML='<div class=\\'${cls} noimg\\'>🏠</div>'">`;
+function thumbHtml(l) {
+  const imgs = (l.images && l.images.length ? l.images : [l.image]).filter(Boolean);
+  if (!imgs.length) return `<div class="thumb noimg">🏠</div>`;
+  // miniatura que va rotando todas las fotos; click = popup con galería
+  return `
+    <div class="pcar thumb-pcar" data-images='${escapeHtml(JSON.stringify(imgs))}' data-idx="0" title="Click para ver las fotos">
+      <img class="pcar-img thumb zoomable" src="${escapeHtml(imgs[0])}" loading="lazy" alt=""
+        onerror="this.closest('.pcar').outerHTML='<div class=\\'thumb noimg\\'>🏠</div>'">
+      ${imgs.length > 1 ? `<span class="pcar-count">1/${imgs.length}</span>` : ""}
+    </div>`;
 }
 
 function renderResults(listings) {
@@ -898,59 +954,154 @@ function listingOperation(l) {
   return l.operation || jobOperation(l.search_name) || inferOperation(l);
 }
 
-/* Score 0-1 entre avisos de la misma operación: mejor precio (50%),
- * más superficie (30%), más ambientes (20%). El precio solo se compara
- * contra avisos de la misma moneda. */
+/* ---------- Criterios configurables del Top 5 ---------- */
+
+const TOP_PREFS_KEY = "resc_top_prefs";
+const TOP_FIELDS = ["t-criteria", "t-currency", "t-max-price", "t-min-rooms", "t-min-surface", "t-with-photo"];
+
+function loadTopPrefs() {
+  try {
+    const prefs = JSON.parse(localStorage.getItem(TOP_PREFS_KEY) || "{}");
+    TOP_FIELDS.forEach((id) => { if (prefs[id] != null) $(id).value = prefs[id]; });
+  } catch { /* prefs corruptas: defaults */ }
+}
+
+function saveTopPrefs() {
+  const prefs = {};
+  TOP_FIELDS.forEach((id) => (prefs[id] = $(id).value));
+  localStorage.setItem(TOP_PREFS_KEY, JSON.stringify(prefs));
+}
+
+TOP_FIELDS.forEach((id) => $(id).addEventListener("change", () => { saveTopPrefs(); renderTop(); }));
+document.querySelectorAll("#t-max-price, #t-min-rooms, #t-min-surface").forEach((el) =>
+  el.addEventListener("input", () => { saveTopPrefs(); renderTop(); })
+);
+
+/* Ranking según los criterios del usuario. El precio solo se compara
+ * entre avisos de la misma moneda. */
 function computeTop(operation, count = 5) {
-  const group = allListings.filter(
-    (l) => listingOperation(l) === operation && l.price_amount != null
-  );
+  const criteria = $("t-criteria").value;
+  const curFilter = $("t-currency").value;
+  const maxPrice = $("t-max-price").value.trim() === "" ? null : Number($("t-max-price").value);
+  const minRooms = $("t-min-rooms").value.trim() === "" ? null : Number($("t-min-rooms").value);
+  const minSurf = $("t-min-surface").value.trim() === "" ? null : Number($("t-min-surface").value);
+  const withPhoto = $("t-with-photo").value === "yes";
+
+  const group = allListings.filter((l) => {
+    if (listingOperation(l) !== operation) return false;
+    if (l.price_amount == null && criteria !== "recent") return false;
+    if (curFilter && l.price_currency !== curFilter) return false;
+    if (maxPrice != null && !(l.price_amount != null && l.price_amount <= maxPrice)) return false;
+    if (minRooms != null && !(l.rooms != null && l.rooms >= minRooms)) return false;
+    if (minSurf != null && !(l.surface_m2 != null && l.surface_m2 >= minSurf)) return false;
+    if (withPhoto && !l.image) return false;
+    return true;
+  });
   if (!group.length) return [];
 
-  const byCurrency = {};
-  for (const l of group) {
-    (byCurrency[l.price_currency || "?"] ||= []).push(l.price_amount);
-  }
   const range = (values) => [Math.min(...values), Math.max(...values)];
-  const priceRanges = Object.fromEntries(
-    Object.entries(byCurrency).map(([c, v]) => [c, range(v)])
-  );
-  const surfs = group.filter((l) => l.surface_m2).map((l) => l.surface_m2);
-  const [smin, smax] = surfs.length ? range(surfs) : [0, 0];
-  const rooms = group.filter((l) => l.rooms).map((l) => l.rooms);
-  const [rmin, rmax] = rooms.length ? range(rooms) : [0, 0];
-
   const norm = (v, min, max) => (max > min ? (v - min) / (max - min) : 0.5);
 
-  const scored = group.map((l) => {
-    const [pmin, pmax] = priceRanges[l.price_currency || "?"];
-    const priceScore = 1 - norm(l.price_amount, pmin, pmax); // más barato mejor
-    const surfScore = l.surface_m2 ? norm(l.surface_m2, smin, smax) : 0.4;
-    const roomScore = l.rooms ? norm(l.rooms, rmin, rmax) : 0.4;
-    return { l, score: 0.5 * priceScore + 0.3 * surfScore + 0.2 * roomScore };
-  });
-  scored.sort((a, b) => b.score - a.score || (b.l.first_seen || "").localeCompare(a.l.first_seen || ""));
+  let scored;
+  if (criteria === "price") {
+    scored = group.map((l) => ({ l, score: null, detail: fmtPrice(l) }));
+    scored.sort((a, b) => (a.l.price_amount ?? Infinity) - (b.l.price_amount ?? Infinity));
+  } else if (criteria === "ppm2") {
+    scored = group
+      .filter((l) => pricePerM2(l) != null)
+      .map((l) => ({ l, score: null, detail: `${Math.round(pricePerM2(l)).toLocaleString("es-AR")}/m²` }));
+    scored.sort((a, b) => pricePerM2(a.l) - pricePerM2(b.l));
+  } else if (criteria === "surface") {
+    scored = group
+      .filter((l) => l.surface_m2)
+      .map((l) => ({ l, score: null, detail: `${Math.round(l.surface_m2)} m²` }));
+    scored.sort((a, b) => b.l.surface_m2 - a.l.surface_m2);
+  } else if (criteria === "recent") {
+    scored = group.map((l) => ({ l, score: null, detail: (l.first_seen || "").slice(0, 10) }));
+    scored.sort((a, b) => (b.l.first_seen || "").localeCompare(a.l.first_seen || ""));
+  } else {
+    // balanceado
+    const byCurrency = {};
+    for (const l of group) (byCurrency[l.price_currency || "?"] ||= []).push(l.price_amount);
+    const priceRanges = Object.fromEntries(Object.entries(byCurrency).map(([c, v]) => [c, range(v)]));
+    const surfs = group.filter((l) => l.surface_m2).map((l) => l.surface_m2);
+    const [smin, smax] = surfs.length ? range(surfs) : [0, 0];
+    const roomVals = group.filter((l) => l.rooms).map((l) => l.rooms);
+    const [rmin, rmax] = roomVals.length ? range(roomVals) : [0, 0];
+    scored = group.map((l) => {
+      const [pmin, pmax] = priceRanges[l.price_currency || "?"];
+      const priceScore = 1 - norm(l.price_amount, pmin, pmax);
+      const surfScore = l.surface_m2 ? norm(l.surface_m2, smin, smax) : 0.4;
+      const roomScore = l.rooms ? norm(l.rooms, rmin, rmax) : 0.4;
+      const score = 0.5 * priceScore + 0.3 * surfScore + 0.2 * roomScore;
+      return { l, score, detail: `match ${Math.round(score * 100)}%` };
+    });
+    scored.sort((a, b) => b.score - a.score || (b.l.first_seen || "").localeCompare(a.l.first_seen || ""));
+  }
   return scored.slice(0, count);
 }
 
-function topCardHtml({ l, score }, rank) {
+/* Mini-carrusel de fotos DE LA PROPIEDAD: flechas, contador y auto-avance */
+function photoCarouselHtml(l, extra = "") {
   const imgs = (l.images && l.images.length ? l.images : [l.image]).filter(Boolean);
-  const imgAttr = imgs.length > 1 ? `data-images='${escapeHtml(JSON.stringify(imgs))}'` : "";
-  const photo = imgs.length
-    ? `<img class="zoomable cycling" src="${escapeHtml(imgs[0])}" loading="lazy" alt="" ${imgAttr}
-        onerror="this.outerHTML='<div class=\\'noimg\\'>🏠</div>'">`
-    : `<div class="noimg">🏠</div>`;
+  if (!imgs.length) return `<div class="noimg">🏠</div>${extra}`;
+  const multi = imgs.length > 1;
+  return `
+    <div class="pcar" data-images='${escapeHtml(JSON.stringify(imgs))}' data-idx="0">
+      <img class="pcar-img zoomable" src="${escapeHtml(imgs[0])}" loading="lazy" alt=""
+        onerror="this.closest('.pcar').outerHTML='<div class=\\'noimg\\'>🏠</div>'">
+      ${multi ? `
+        <button type="button" class="pcar-nav prev" data-nav="-1" title="Foto anterior">‹</button>
+        <button type="button" class="pcar-nav next" data-nav="1" title="Foto siguiente">›</button>
+        <span class="pcar-count">1/${imgs.length}</span>` : ""}
+      ${extra}
+    </div>`;
+}
+
+function stepCarousel(pcar, delta) {
+  try {
+    const imgs = JSON.parse(pcar.dataset.images);
+    const idx = (Number(pcar.dataset.idx || 0) + delta + imgs.length) % imgs.length;
+    pcar.dataset.idx = idx;
+    pcar.querySelector(".pcar-img").src = imgs[idx];
+    const count = pcar.querySelector(".pcar-count");
+    if (count) count.textContent = `${idx + 1}/${imgs.length}`;
+  } catch { /* data corrupta: se ignora */ }
+}
+
+document.body.addEventListener("click", (e) => {
+  const nav = e.target.closest(".pcar-nav");
+  if (!nav) return;
+  e.preventDefault();
+  e.stopPropagation();
+  const pcar = nav.closest(".pcar");
+  pcar.dataset.manual = "1"; // el auto-avance no pisa la navegación manual
+  stepCarousel(pcar, Number(nav.dataset.nav));
+});
+
+let cyclingTimer = null;
+function startImageCycling() {
+  if (cyclingTimer) clearInterval(cyclingTimer);
+  cyclingTimer = setInterval(() => {
+    document.querySelectorAll(".pcar[data-images]").forEach((pcar) => {
+      if (pcar.dataset.manual) return;
+      if (JSON.parse(pcar.dataset.images || "[]").length > 1) stepCarousel(pcar, 1);
+    });
+  }, 3000);
+}
+
+function topCardHtml({ l, detail }, rank) {
   const meta = [
     l.rooms ? `${l.rooms} amb` : null,
     l.surface_m2 ? `${Math.round(l.surface_m2)} m²` : null,
+    pricePerM2(l) ? `${Math.round(pricePerM2(l)).toLocaleString("es-AR")}/m²` : null,
   ].filter(Boolean).join(" · ");
+  const thumbExtras = `<span class="top-rank">#${rank}</span><span class="thumb-fav">${heartHtml(l)}</span>`;
   return `
     <div class="top-card">
-      <div class="top-thumb">${photo}<span class="top-rank">#${rank}</span>
-        <span class="thumb-fav">${heartHtml(l)}</span>
-      </div>
+      <div class="top-thumb">${photoCarouselHtml(l, thumbExtras)}</div>
       <div class="top-body">
-        <div class="top-price">${fmtPrice(l)} <span class="badge">match ${Math.round(score * 100)}%</span></div>
+        <div class="top-price">${fmtPrice(l)} <span class="badge">${escapeHtml(detail || "")}</span></div>
         <a class="top-title" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.title || l.address || "ver aviso")}</a>
         <div class="top-meta">${escapeHtml(meta)}</div>
         <div class="top-meta">${escapeHtml(l.address || "")}</div>
@@ -962,16 +1113,10 @@ function topCardHtml({ l, score }, rank) {
 function renderTopGroup(operation, container) {
   const top = computeTop(operation);
   if (!top.length) {
-    container.innerHTML = `<p class="status">Todavía no hay avisos de ${operation === "venta" ? "venta" : "alquiler"} guardados. Activá un job de esa operación y ejecutá el scraper.</p>`;
+    container.innerHTML = `<p class="status">No hay avisos de ${operation === "venta" ? "venta" : "alquiler"} que cumplan tus criterios. Ajustá los filtros de arriba o activá un job de esa operación.</p>`;
     return;
   }
-  const cards = top.map((item, i) => topCardHtml(item, i + 1)).join("");
-  // con suficientes tarjetas el carrusel se desliza solo (se pausa con el mouse)
-  const animate = top.length >= 3;
-  container.innerHTML = `
-    <div class="carousel${animate ? " auto" : ""}">
-      <div class="carousel-track">${cards}${animate ? cards : ""}</div>
-    </div>`;
+  container.innerHTML = `<div class="top-grid">${top.map((item, i) => topCardHtml(item, i + 1)).join("")}</div>`;
 }
 
 function renderTop() {
@@ -983,23 +1128,7 @@ function renderTop() {
 
 $("reload-top").addEventListener("click", loadResults);
 
-/* Las tarjetas con varias fotos (Remax) van rotando la imagen */
-let cyclingTimer = null;
-function startImageCycling() {
-  if (cyclingTimer) clearInterval(cyclingTimer);
-  cyclingTimer = setInterval(() => {
-    document.querySelectorAll("img.cycling[data-images]").forEach((img) => {
-      try {
-        const imgs = JSON.parse(img.dataset.images);
-        const idx = (Number(img.dataset.idx || 0) + 1) % imgs.length;
-        img.dataset.idx = idx;
-        img.src = imgs[idx];
-      } catch { /* data-images inválido: se ignora */ }
-    });
-  }, 2500);
-}
-
-/* ---------- Preview ampliado al pasar el mouse ---------- */
+/* ---------- Preview al pasar el mouse + Lightbox al hacer click ---------- */
 
 const imgPreview = document.createElement("img");
 imgPreview.id = "img-preview";
@@ -1007,7 +1136,7 @@ document.body.appendChild(imgPreview);
 
 document.body.addEventListener("mouseover", (e) => {
   const img = e.target.closest("img.zoomable");
-  if (!img) return;
+  if (!img || lightbox.classList.contains("show")) return;
   imgPreview.src = img.src;
   imgPreview.classList.add("show");
 });
@@ -1029,10 +1158,84 @@ document.body.addEventListener("mouseout", (e) => {
   }
 });
 
+/* Lightbox: galería con anterior/siguiente, zoom y teclado */
+
+const lightbox = document.createElement("div");
+lightbox.id = "lightbox";
+lightbox.innerHTML = `
+  <button id="lb-close" title="Cerrar (Esc)">✕</button>
+  <button id="lb-prev" title="Anterior (←)">‹</button>
+  <img id="lb-img" alt="" title="Click para hacer zoom">
+  <button id="lb-next" title="Siguiente (→)">›</button>
+  <span id="lb-count"></span>`;
+document.body.appendChild(lightbox);
+
+let lbImages = [];
+let lbIdx = 0;
+
+function lbShow() {
+  const img = $("lb-img");
+  img.src = lbImages[lbIdx];
+  img.classList.remove("zoomed");
+  $("lb-count").textContent = `${lbIdx + 1} / ${lbImages.length}`;
+  const multi = lbImages.length > 1;
+  $("lb-prev").style.visibility = multi ? "visible" : "hidden";
+  $("lb-next").style.visibility = multi ? "visible" : "hidden";
+}
+
+function openLightbox(images, idx = 0) {
+  lbImages = images.filter(Boolean);
+  if (!lbImages.length) return;
+  lbIdx = Math.min(idx, lbImages.length - 1);
+  imgPreview.classList.remove("show");
+  lightbox.classList.add("show");
+  lbShow();
+}
+
+function closeLightbox() {
+  lightbox.classList.remove("show");
+}
+
+$("lb-close").addEventListener("click", closeLightbox);
+$("lb-prev").addEventListener("click", (e) => { e.stopPropagation(); lbIdx = (lbIdx - 1 + lbImages.length) % lbImages.length; lbShow(); });
+$("lb-next").addEventListener("click", (e) => { e.stopPropagation(); lbIdx = (lbIdx + 1) % lbImages.length; lbShow(); });
+$("lb-img").addEventListener("click", (e) => { e.stopPropagation(); e.target.classList.toggle("zoomed"); });
+lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
+
+document.addEventListener("keydown", (e) => {
+  if (!lightbox.classList.contains("show")) return;
+  if (e.key === "Escape") closeLightbox();
+  if (e.key === "ArrowLeft" && lbImages.length > 1) { lbIdx = (lbIdx - 1 + lbImages.length) % lbImages.length; lbShow(); }
+  if (e.key === "ArrowRight" && lbImages.length > 1) { lbIdx = (lbIdx + 1) % lbImages.length; lbShow(); }
+});
+
+// Click en cualquier foto: abre la galería con TODAS las fotos del aviso
+document.body.addEventListener("click", (e) => {
+  const img = e.target.closest("img.zoomable");
+  if (!img || e.target.closest(".pcar-nav") || img.id === "lb-img") return;
+  const pcar = img.closest(".pcar");
+  let images = [img.src];
+  let idx = 0;
+  if (pcar && pcar.dataset.images) {
+    try {
+      images = JSON.parse(pcar.dataset.images);
+      idx = Number(pcar.dataset.idx || 0);
+    } catch { /* usa la imagen sola */ }
+  }
+  openLightbox(images, idx);
+});
+
 $("reload-results").addEventListener("click", loadResults);
 
-const SEARCH_TEXT_FIELDS = ["s-text", "s-min-price", "s-max-price", "s-min-rooms", "s-min-bedrooms", "s-min-surface", "s-since"];
-const SEARCH_SELECT_FIELDS = ["s-site", "s-job", "s-operation", "s-currency", "s-sort"];
+const SEARCH_TEXT_FIELDS = [
+  "s-text", "s-text-exclude", "s-min-price", "s-max-price",
+  "s-min-rooms", "s-max-rooms", "s-min-bedrooms",
+  "s-min-surface", "s-max-surface", "s-since",
+];
+const SEARCH_SELECT_FIELDS = [
+  "s-site", "s-job", "s-operation", "s-currency",
+  "s-require-price", "s-with-photo", "s-only-fav", "s-sort",
+];
 SEARCH_TEXT_FIELDS.forEach((id) => $(id).addEventListener("input", applySearch));
 SEARCH_SELECT_FIELDS.forEach((id) => $(id).addEventListener("change", applySearch));
 
@@ -1222,6 +1425,7 @@ $("runs-list").addEventListener("click", async (e) => {
 /* ---------- Init ---------- */
 
 updateHint();
+loadTopPrefs();
 applyTheme(localStorage.getItem(THEME_KEY) || "light");
 if (localStorage.getItem(GATE_KEY) === ACCESS_HASH) unlockApp();
 else showLogin();

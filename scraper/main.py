@@ -5,6 +5,7 @@ from __future__ import annotations
 import logging
 import os
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -18,6 +19,7 @@ from .storage import (
     add_new,
     append_run_history,
     load_listings,
+    load_run_history,
     prune_old,
     save_listings,
     utcnow_iso,
@@ -76,10 +78,43 @@ def build_searches(config: dict[str, Any], only_job: str | None = None) -> list[
                 site=site,
                 operation=(raw.get("operation") or "").strip().lower(),
                 max_pages=int(raw.get("max_pages", defaults.get("max_pages", 1))),
+                every_hours=max(1, int(raw.get("every_hours", defaults.get("every_hours", 1)))),
                 filters=merged_filters,
             )
         )
     return searches
+
+
+def filter_due(searches: list[Search], history: list[dict], now: datetime) -> list[Search]:
+    """En corridas del cron, deja solo los jobs cuya frecuencia (every_hours)
+    ya se cumplió desde su última ejecución registrada. Se usa una tolerancia
+    de 10 minutos porque GitHub demora los crons de forma variable."""
+    last_run: dict[str, datetime] = {}
+    for entry in history:
+        try:
+            finished = datetime.strptime(
+                entry.get("finished_at", ""), "%Y-%m-%dT%H:%M:%SZ"
+            ).replace(tzinfo=timezone.utc)
+        except ValueError:
+            continue
+        for job_name in (entry.get("jobs") or {}):
+            if job_name not in last_run or finished > last_run[job_name]:
+                last_run[job_name] = finished
+    due = []
+    for search in searches:
+        last = last_run.get(search.name)
+        if last is None:
+            due.append(search)
+            continue
+        elapsed = (now - last).total_seconds()
+        if elapsed >= search.every_hours * 3600 - 600:
+            due.append(search)
+        else:
+            logger.info(
+                "Job '%s' salteado: corre cada %dh y pasaron %.0f min",
+                search.name, search.every_hours, elapsed / 60,
+            )
+    return due
 
 
 def main() -> int:
@@ -99,6 +134,14 @@ def main() -> int:
         return 0
     if only_job:
         logger.info("Ejecución puntual del job '%s'", only_job)
+    elif os.environ.get("GITHUB_EVENT_NAME") == "schedule":
+        searches = filter_due(
+            searches, load_run_history(), datetime.now(timezone.utc)
+        )
+        if not searches:
+            logger.info("Ningún job cumplió su frecuencia todavía; nada para scrapear")
+            write_github_summary([], {}, ["Ningún job estaba vencido según su frecuencia configurada"])
+            return 0
     retention_days = int(config.get("retention_days", 60))
 
     stored = load_listings()

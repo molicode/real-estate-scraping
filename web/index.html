@@ -69,8 +69,8 @@
 <section id="tab-jobs" class="tab-panel">
   <div class="toolbar">
     <button id="new-job" class="btn primary">➕ Nuevo job</button>
-    <button id="save-jobs" class="btn success" disabled>💾 Guardar cambios</button>
     <button id="run-now" class="btn">▶️ Ejecutar scraper ahora</button>
+    <span class="info" tabindex="0" data-tip="Los cambios se guardan solos al crear, editar, detener o eliminar un job. El cron corre cada hora y ejecuta los jobs activos que ya hayan cumplido su frecuencia. Si disparás dos jobs a la vez, el segundo espera en cola (no corren en paralelo para no pisarse los datos)."></span>
     <span id="jobs-status" class="status"></span>
   </div>
   <div id="run-flow" class="card hidden"></div>
@@ -146,11 +146,22 @@
             <span class="info" tabindex="0" data-tip="Cuántas páginas de resultados revisar por corrida (cada página trae entre 20 y 48 avisos según el portal). Más páginas = más avisos cubiertos, pero la corrida tarda más."></span>
             <input type="number" id="f-max-pages" min="1" max="10" value="2" list="dl-pages">
           </label>
+          <label>Frecuencia
+            <span class="info" tabindex="0" data-tip="Cada cuántas horas corre este job. El cron del sistema pasa cada 1 hora (GitHub puede demorarlo algunos minutos) y ejecuta los jobs activos que ya hayan cumplido su frecuencia. 'Ejecutar ahora' ignora la frecuencia."></span>
+            <select id="f-every">
+              <option value="1">Cada 1 hora</option>
+              <option value="2">Cada 2 horas</option>
+              <option value="3">Cada 3 horas</option>
+              <option value="6">Cada 6 horas</option>
+              <option value="12">Cada 12 horas</option>
+              <option value="24">Una vez por día</option>
+            </select>
+          </label>
           <label>Activo
-            <span class="info" tabindex="0" data-tip="Los jobs pausados quedan guardados pero no se ejecutan en el cron horario ni con 'Ejecutar ahora'."></span>
+            <span class="info" tabindex="0" data-tip="Los jobs detenidos quedan guardados pero no corren en el cron. Igual podés ejecutarlos puntualmente con su botón 'Ejecutar ahora'."></span>
             <select id="f-enabled">
               <option value="true">Sí</option>
-              <option value="false">No (pausado)</option>
+              <option value="false">No (detenido)</option>
             </select>
           </label>
         </div>
@@ -254,10 +265,47 @@
 </section>
 
 <section id="tab-top" class="tab-panel hidden">
-  <div class="toolbar">
-    <button id="reload-top" class="btn">🔄 Recargar</button>
-    <span class="info" tabindex="0" data-tip="El ranking se arma entre los avisos guardados que ya cumplieron los filtros de tus jobs. Score: mejor precio (50%) + más superficie (30%) + más ambientes (20%), comparando solo avisos de la misma moneda. Pasá el mouse sobre una foto para ampliarla; el carrusel se pausa al apoyar el mouse."></span>
-    <span id="top-status" class="status"></span>
+  <div class="card form-section sec-basic">
+    <h3>🎛 Criterios del ranking
+      <span class="info" tabindex="0" data-tip="Vos definís qué hace 'mejor' a una propiedad y el Top 5 se rearma al instante con los avisos guardados. Los precios solo se comparan entre avisos de la misma moneda. Tus preferencias quedan guardadas en este navegador."></span>
+    </h3>
+    <div class="grid">
+      <label>Qué es "mejor" para vos
+        <select id="t-criteria">
+          <option value="balanced">Balanceado (precio 50% + superficie 30% + ambientes 20%)</option>
+          <option value="price">El precio más bajo</option>
+          <option value="ppm2">El mejor precio por m²</option>
+          <option value="surface">La mayor superficie</option>
+          <option value="recent">Los más recientes</option>
+        </select>
+      </label>
+      <label>Moneda
+        <select id="t-currency">
+          <option value="">Cualquiera</option>
+          <option value="ARS">ARS (pesos)</option>
+          <option value="USD">USD (dólares)</option>
+        </select>
+      </label>
+      <label>Precio máximo
+        <input type="number" id="t-max-price" min="0" placeholder="sin tope">
+      </label>
+      <label>Ambientes mín.
+        <input type="number" id="t-min-rooms" min="1" list="dl-rooms">
+      </label>
+      <label>Superficie mín. (m²)
+        <input type="number" id="t-min-surface" min="0" list="dl-surface">
+      </label>
+      <label>Solo con foto
+        <select id="t-with-photo">
+          <option value="">No importa</option>
+          <option value="yes">Sí</option>
+        </select>
+      </label>
+    </div>
+    <div class="row">
+      <button id="reload-top" class="btn">🔄 Recargar datos</button>
+      <span id="top-status" class="status"></span>
+    </div>
   </div>
   <h2 class="top-heading">🏠 Top 5 para alquilar</h2>
   <div id="top-rent"></div>
@@ -268,61 +316,113 @@
 <section id="tab-results" class="tab-panel hidden">
   <div class="card search-card">
     <h3>🔍 Buscar en los avisos guardados</h3>
-    <p class="status">Todo lo que el scraper encuentra queda guardado en el repo (hasta 1 año). Acá buscás sobre ese histórico; los filtros se aplican al instante.</p>
-    <div class="grid">
-      <label>Texto libre
-        <input type="text" id="s-text" placeholder="palermo, balcón, nombre de calle...">
-      </label>
-      <label>Portal
-        <select id="s-site"><option value="">Todos</option></select>
-      </label>
-      <label>Job
-        <select id="s-job"><option value="">Todos</option></select>
-      </label>
-      <label>Operación
-        <select id="s-operation">
-          <option value="">Todas</option>
-          <option value="alquiler">Alquiler</option>
-          <option value="venta">Compra (venta)</option>
-        </select>
-      </label>
-      <label>Moneda
-        <select id="s-currency">
-          <option value="">Todas</option>
-          <option value="ARS">ARS (pesos)</option>
-          <option value="USD">USD (dólares)</option>
-        </select>
-      </label>
-      <label>Precio desde
-        <input type="number" id="s-min-price" min="0">
-      </label>
-      <label>Precio hasta
-        <input type="number" id="s-max-price" min="0">
-      </label>
-      <label>Ambientes mín.
-        <input type="number" id="s-min-rooms" min="1" list="dl-rooms">
-      </label>
-      <label>Dormitorios mín.
-        <input type="number" id="s-min-bedrooms" min="1" list="dl-bedrooms">
-      </label>
-      <label>Superficie mín. (m²)
-        <input type="number" id="s-min-surface" min="0" list="dl-surface">
-      </label>
-      <label>Visto desde
-        <input type="date" id="s-since">
-      </label>
-      <label>Ordenar por
-        <select id="s-sort">
-          <option value="recent">Más recientes primero</option>
-          <option value="price_asc">Precio: menor a mayor</option>
-          <option value="price_desc">Precio: mayor a menor</option>
-          <option value="surface_desc">Superficie: mayor a menor</option>
-        </select>
-      </label>
+    <p class="status">Todo lo que el scraper encuentra queda guardado en el repo (hasta 1 año). Los filtros se aplican al instante. Click en una foto para verla grande con todas las imágenes.</p>
+
+    <div class="form-section sec-basic">
+      <h3>🔎 Texto y origen</h3>
+      <div class="grid">
+        <label>Contiene el texto
+          <input type="text" id="s-text" placeholder="palermo, balcón, nombre de calle...">
+        </label>
+        <label>NO contiene el texto
+          <input type="text" id="s-text-exclude" placeholder="pozo, contrafrente...">
+        </label>
+        <label>Portal
+          <select id="s-site"><option value="">Todos</option></select>
+        </label>
+        <label>Job
+          <select id="s-job"><option value="">Todos</option></select>
+        </label>
+        <label>Operación
+          <select id="s-operation">
+            <option value="">Todas</option>
+            <option value="alquiler">Alquiler</option>
+            <option value="venta">Compra (venta)</option>
+          </select>
+        </label>
+      </div>
     </div>
+
+    <div class="form-section sec-price">
+      <h3>💰 Precio</h3>
+      <div class="grid">
+        <label>Moneda
+          <select id="s-currency">
+            <option value="">Todas</option>
+            <option value="ARS">ARS (pesos)</option>
+            <option value="USD">USD (dólares)</option>
+          </select>
+        </label>
+        <label>Precio desde
+          <input type="number" id="s-min-price" min="0">
+        </label>
+        <label>Precio hasta
+          <input type="number" id="s-max-price" min="0">
+        </label>
+        <label>Solo con precio publicado
+          <select id="s-require-price">
+            <option value="">No importa</option>
+            <option value="yes">Sí</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="form-section sec-feat">
+      <h3>📐 Características</h3>
+      <div class="grid">
+        <label>Ambientes mín.
+          <input type="number" id="s-min-rooms" min="1" list="dl-rooms">
+        </label>
+        <label>Ambientes máx.
+          <input type="number" id="s-max-rooms" min="1" list="dl-rooms">
+        </label>
+        <label>Dormitorios mín.
+          <input type="number" id="s-min-bedrooms" min="1" list="dl-bedrooms">
+        </label>
+        <label>Superficie mín. (m²)
+          <input type="number" id="s-min-surface" min="0" list="dl-surface">
+        </label>
+        <label>Superficie máx. (m²)
+          <input type="number" id="s-max-surface" min="0" list="dl-surface">
+        </label>
+        <label>Solo con foto
+          <select id="s-with-photo">
+            <option value="">No importa</option>
+            <option value="yes">Sí</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="form-section sec-kw">
+      <h3>🗓 Fecha y orden</h3>
+      <div class="grid">
+        <label>Visto desde
+          <input type="date" id="s-since">
+        </label>
+        <label>Solo mis favoritos ❤️
+          <select id="s-only-fav">
+            <option value="">No</option>
+            <option value="yes">Sí</option>
+          </select>
+        </label>
+        <label>Ordenar por
+          <select id="s-sort">
+            <option value="recent">Más recientes primero</option>
+            <option value="price_asc">Precio: menor a mayor</option>
+            <option value="price_desc">Precio: mayor a menor</option>
+            <option value="ppm2_asc">Precio por m²: menor a mayor</option>
+            <option value="surface_desc">Superficie: mayor a menor</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
     <div class="row">
       <button id="search-clear" class="btn">✖ Limpiar filtros</button>
       <button id="reload-results" class="btn">🔄 Recargar datos</button>
+      <button id="clear-history" class="btn danger">🗑 Vaciar histórico</button>
       <span id="results-status" class="status"></span>
     </div>
   </div>

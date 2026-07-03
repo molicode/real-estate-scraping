@@ -48,6 +48,7 @@ class Search:
     site: str = ""
     operation: str = ""  # alquiler | venta (informativo, la URL manda)
     max_pages: int = 1
+    every_hours: int = 1  # frecuencia mínima entre corridas del cron
     filters: dict[str, Any] = field(default_factory=dict)
 
 

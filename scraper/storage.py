@@ -66,6 +66,18 @@ def prune_old(
     return kept
 
 
+def load_run_history(path: Path | None = None) -> list[dict[str, Any]]:
+    path = path or RUN_HISTORY_FILE
+    if not path.exists():
+        return []
+    try:
+        with path.open(encoding="utf-8") as fh:
+            loaded = json.load(fh)
+        return loaded if isinstance(loaded, list) else []
+    except (json.JSONDecodeError, OSError):
+        return []
+
+
 def append_run_history(entry: dict[str, Any], path: Path | None = None) -> None:
     """Registra las estadísticas de una corrida (para que la web las muestre
     sin abrir logs). Se conservan las últimas RUN_HISTORY_LIMIT corridas."""
