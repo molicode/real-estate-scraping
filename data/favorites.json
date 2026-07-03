@@ -17,24 +17,6 @@
     "url": "https://www.argenprop.com/departamento-en-alquiler-en-palermo-chico-2-ambientes--19899767",
     "saved_at": "2026-07-03T00:52:31Z"
   },
-  "argenprop:19120155": {
-    "address": "Niceto vega 5900, Piso 3",
-    "bathrooms": null,
-    "bedrooms": null,
-    "expenses": null,
-    "first_seen": "2026-07-02T03:03:32Z",
-    "id": "argenprop:19120155",
-    "image": "https://www.argenprop.com/static-content/55102191/4b70bee8-94f2-43fe-b489-a7751d022948_u_small.jpg",
-    "price_amount": 799000,
-    "price_currency": "ARS",
-    "rooms": null,
-    "search_name": "Alquiler 2 amb Palermo (Argenprop)",
-    "site": "argenprop",
-    "surface_m2": 47,
-    "title": "MONOAMBIENTE PALERMO",
-    "url": "https://www.argenprop.com/departamento-en-alquiler-en-palermo-soho-1-ambiente--19120155",
-    "saved_at": "2026-07-03T00:52:37Z"
-  },
   "argenprop:11458972": {
     "address": "Av Cordoba 3400",
     "bathrooms": 1,
