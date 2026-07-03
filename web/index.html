@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Real Estate Scraper AR — Administración</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header>
   <div class="header-row">
-    <h1>🏠 Real Estate Scraper AR</h1>
+    <h1><span class="ic-lead" data-icon="home"></span> Real Estate Scraper AR</h1>
     <div class="header-actions">
-      <button id="theme-toggle" class="btn small" title="Cambiar tema">🌙</button>
-      <button id="gate-logout" class="btn small hidden" title="Cerrar sesión">🚪 Salir</button>
+      <button id="theme-toggle" class="btn small" title="Cambiar tema"><span id="theme-icon" data-icon="moon"></span></button>
+      <button id="gate-logout" class="btn small hidden" title="Cerrar sesión"><span data-icon="log-out"></span> Salir</button>
     </div>
   </div>
   <p class="subtitle">Administrá los jobs de scraping de Argenprop, Zonaprop, MercadoLibre y Remax. El scraper corre cada hora en GitHub Actions con los jobs activos.</p>
@@ -20,7 +23,7 @@
 
 <!-- Pantalla de login -->
 <section id="login-section" class="card login-card hidden">
-  <h2>🔐 Iniciar sesión</h2>
+  <h2><span data-icon="lock"></span> Iniciar sesión</h2>
   <p class="status">Acceso restringido. Ingresá tus credenciales para administrar el scraper.</p>
   <form id="login-form">
     <label>Usuario
@@ -43,7 +46,7 @@
   <summary>
     <span id="auth-dot" class="dot red"></span>
     <span id="auth-summary-text">Sin conexión con GitHub</span>
-    <span class="summary-hint">▾ detalles</span>
+    <span class="summary-hint">detalles <span data-icon="chevron-down"></span></span>
   </summary>
   <div class="details-body">
     <p>Necesitás un <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained personal access token</a> con acceso a <strong>este repositorio</strong> y permisos: <code>Contents: Read and write</code> y <code>Actions: Read and write</code>. Se guarda solo en tu navegador (localStorage).</p>
@@ -57,19 +60,19 @@
 </details>
 
 <nav id="tabs" class="hidden">
-  <button class="tab active" data-tab="jobs">⚙️ Jobs</button>
-  <button class="tab" data-tab="top">⭐ Top 5</button>
-  <button class="tab" data-tab="results">🔍 Buscar</button>
-  <button class="tab" data-tab="fav">❤️ Me gustan</button>
-  <button class="tab" data-tab="runs">🕐 Corridas</button>
+  <button class="tab active" data-tab="jobs"><span data-icon="settings"></span> Jobs</button>
+  <button class="tab" data-tab="top"><span data-icon="star"></span> Top 5</button>
+  <button class="tab" data-tab="results"><span data-icon="search"></span> Buscar</button>
+  <button class="tab" data-tab="fav"><span data-icon="heart"></span> Me gustan</button>
+  <button class="tab" data-tab="runs"><span data-icon="clock"></span> Corridas</button>
 </nav>
 
 <main class="hidden" id="main">
 
 <section id="tab-jobs" class="tab-panel">
   <div class="toolbar">
-    <button id="new-job" class="btn primary">➕ Nuevo job</button>
-    <button id="run-now" class="btn">▶️ Ejecutar scraper ahora</button>
+    <button id="new-job" class="btn primary"><span data-icon="plus"></span> Nuevo job</button>
+    <button id="run-now" class="btn"><span data-icon="play"></span> Ejecutar scraper ahora</button>
     <span class="info" tabindex="0" data-tip="Los cambios se guardan solos al crear, editar, detener o eliminar un job. El cron corre cada hora y ejecuta los jobs activos que ya hayan cumplido su frecuencia. Si disparás dos jobs a la vez, el segundo espera en cola (no corren en paralelo para no pisarse los datos)."></span>
     <span id="jobs-status" class="status"></span>
   </div>
@@ -81,7 +84,7 @@
     <form id="job-form">
 
       <div class="form-section sec-basic">
-        <h3>📌 Datos básicos</h3>
+        <h3><span class="ic-h" data-icon="file-text"></span> Datos básicos</h3>
         <div class="grid">
           <label>Nombre del job
             <span class="info" tabindex="0" data-tip="Un nombre para identificar esta búsqueda en la lista y en los resultados. Ej: 'Alquiler 2 amb Palermo'."></span>
@@ -168,7 +171,7 @@
       </div>
 
       <div class="form-section sec-price">
-        <h3>💰 Precio</h3>
+        <h3><span class="ic-h" data-icon="banknote"></span> Precio</h3>
         <div class="grid">
           <label>Moneda
             <span class="info" tabindex="0" data-tip="En Argentina los ALQUILERES se publican casi siempre en pesos (ARS) y las VENTAS en dólares (USD). Los alquileres temporarios suelen estar en USD. Si elegís una moneda, los avisos publicados en la otra se descartan."></span>
@@ -197,7 +200,7 @@
       </div>
 
       <div class="form-section sec-feat">
-        <h3>📐 Características</h3>
+        <h3><span class="ic-h" data-icon="ruler"></span> Características</h3>
         <div class="grid">
           <label>Ambientes mín.
             <span class="info" tabindex="0" data-tip="'Ambientes' es el término argentino clave: cuenta el living + los dormitorios (cocina y baño NO cuentan). Monoambiente = estudio (1 ambiente). '2 ambientes' = living + 1 dormitorio. '3 ambientes' = living + 2 dormitorios."></span>
@@ -219,7 +222,7 @@
       </div>
 
       <div class="form-section sec-kw">
-        <h3>🔤 Palabras clave</h3>
+        <h3><span class="ic-h" data-icon="type"></span> Palabras clave</h3>
         <label>Palabras que DEBE contener (separadas por coma)
           <span class="info" tabindex="0" data-tip="El aviso se guarda solo si su título o dirección contiene TODAS estas palabras. Tocá los chips para agregarlas o escribí las tuyas separadas por coma."></span>
           <input type="text" id="f-kw-include" placeholder="balcón, luminoso">
@@ -266,7 +269,7 @@
 
 <section id="tab-top" class="tab-panel hidden">
   <div class="card form-section sec-basic">
-    <h3>🎛 Criterios del ranking
+    <h3><span class="ic-h" data-icon="sliders"></span> Criterios del ranking
       <span class="info" tabindex="0" data-tip="Vos definís qué hace 'mejor' a una propiedad y el Top 5 se rearma al instante con los avisos guardados. Los precios solo se comparan entre avisos de la misma moneda. Tus preferencias quedan guardadas en este navegador."></span>
     </h3>
     <div class="grid">
@@ -303,23 +306,23 @@
       </label>
     </div>
     <div class="row">
-      <button id="reload-top" class="btn">🔄 Recargar datos</button>
+      <button id="reload-top" class="btn"><span data-icon="refresh"></span> Recargar datos</button>
       <span id="top-status" class="status"></span>
     </div>
   </div>
-  <h2 class="top-heading">🏠 Top 5 para alquilar</h2>
+  <h2 class="top-heading"><span data-icon="home"></span> Top 5 para alquilar</h2>
   <div id="top-rent"></div>
-  <h2 class="top-heading">💵 Top 5 para comprar</h2>
+  <h2 class="top-heading"><span data-icon="banknote"></span> Top 5 para comprar</h2>
   <div id="top-buy"></div>
 </section>
 
 <section id="tab-results" class="tab-panel hidden">
   <div class="card search-card">
-    <h3>🔍 Buscar en los avisos guardados</h3>
+    <h3><span class="ic-h" data-icon="search"></span> Buscar en los avisos guardados</h3>
     <p class="status">Todo lo que el scraper encuentra queda guardado en el repo (hasta 1 año). Los filtros se aplican al instante. Click en una foto para verla grande con todas las imágenes.</p>
 
     <div class="form-section sec-basic">
-      <h3>🔎 Texto y origen</h3>
+      <h3><span class="ic-h" data-icon="search"></span> Texto y origen</h3>
       <div class="grid">
         <label>Contiene el texto
           <input type="text" id="s-text" placeholder="palermo, balcón, nombre de calle...">
@@ -344,7 +347,7 @@
     </div>
 
     <div class="form-section sec-price">
-      <h3>💰 Precio</h3>
+      <h3><span class="ic-h" data-icon="banknote"></span> Precio</h3>
       <div class="grid">
         <label>Moneda
           <select id="s-currency">
@@ -369,7 +372,7 @@
     </div>
 
     <div class="form-section sec-feat">
-      <h3>📐 Características</h3>
+      <h3><span class="ic-h" data-icon="ruler"></span> Características</h3>
       <div class="grid">
         <label>Ambientes mín.
           <input type="number" id="s-min-rooms" min="1" list="dl-rooms">
@@ -396,12 +399,12 @@
     </div>
 
     <div class="form-section sec-kw">
-      <h3>🗓 Fecha y orden</h3>
+      <h3><span class="ic-h" data-icon="calendar"></span> Fecha y orden</h3>
       <div class="grid">
         <label>Visto desde
           <input type="date" id="s-since">
         </label>
-        <label>Solo mis favoritos ❤️
+        <label>Solo mis favoritos
           <select id="s-only-fav">
             <option value="">No</option>
             <option value="yes">Sí</option>
@@ -420,9 +423,9 @@
     </div>
 
     <div class="row">
-      <button id="search-clear" class="btn">✖ Limpiar filtros</button>
-      <button id="reload-results" class="btn">🔄 Recargar datos</button>
-      <button id="clear-history" class="btn danger">🗑 Vaciar histórico</button>
+      <button id="search-clear" class="btn"><span data-icon="x"></span> Limpiar filtros</button>
+      <button id="reload-results" class="btn"><span data-icon="refresh"></span> Recargar datos</button>
+      <button id="clear-history" class="btn danger"><span data-icon="trash"></span> Vaciar histórico</button>
       <span id="results-status" class="status"></span>
     </div>
   </div>
@@ -431,7 +434,7 @@
 
 <section id="tab-fav" class="tab-panel hidden">
   <div class="toolbar">
-    <button id="reload-fav" class="btn">🔄 Recargar</button>
+    <button id="reload-fav" class="btn"><span data-icon="refresh"></span> Recargar</button>
     <span class="info" tabindex="0" data-tip="Tus avisos guardados con el corazón (desde Buscar o Top 5). Se commitean a data/favorites.json del repo, así no se pierden aunque cambies de navegador o el aviso desaparezca del histórico."></span>
     <span id="fav-status" class="status"></span>
   </div>
@@ -440,7 +443,7 @@
 
 <section id="tab-runs" class="tab-panel hidden">
   <div class="toolbar">
-    <button id="reload-runs" class="btn">🔄 Recargar</button>
+    <button id="reload-runs" class="btn"><span data-icon="refresh"></span> Recargar</button>
     <span id="runs-status" class="status"></span>
   </div>
   <div id="runs-list"></div>
