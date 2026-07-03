@@ -11,5 +11,16 @@
   "errors": [
    "Ejemplo: Alquiler 2 amb Palermo (Argenprop) (argenprop): 0 avisos — posible bloqueo o cambio de HTML"
   ]
+ },
+ {
+  "finished_at": "2026-07-03T00:10:15Z",
+  "only_job": "Ejemplo: Alquiler 2 amb Palermo (Argenprop)",
+  "jobs": {
+   "Ejemplo: Alquiler 2 amb Palermo (Argenprop)": 16
+  },
+  "found": 16,
+  "new": 1,
+  "total_stored": 19,
+  "errors": []
  }
 ]

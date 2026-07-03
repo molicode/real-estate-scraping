@@ -135,6 +135,25 @@
     "title": "CONTRAFRENTE VISTA JARDIN",
     "url": "https://www.argenprop.com/departamento-en-alquiler-en-botanico-1-ambiente--19840027"
   },
+  "argenprop:19861921": {
+    "address": "Scalabrini Ortiz al 2200",
+    "bathrooms": null,
+    "bedrooms": 1,
+    "expenses": null,
+    "first_seen": "2026-07-03T00:10:15Z",
+    "id": "argenprop:19861921",
+    "image": "https://www.argenprop.com/static-content/12916891/e4af9295-90a3-423f-b967-555674186d57_u_small.jpg",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 850000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "Ejemplo: Alquiler 2 amb Palermo (Argenprop)",
+    "site": "argenprop",
+    "surface_m2": 31.0,
+    "title": "Departamento de dos ambientes en alquiler en Palermo",
+    "url": "https://www.argenprop.com/departamento-en-alquiler-en-palermo-2-ambientes--19861921"
+  },
   "argenprop:19899767": {
     "address": "Ortiz De Ocampo",
     "bathrooms": null,
