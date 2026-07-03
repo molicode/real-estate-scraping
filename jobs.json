@@ -47,6 +47,30 @@
         "min_surface_m2": 50
       },
       "operation": "venta"
+    },
+    {
+      "name": "PH finding",
+      "url": "https://www.argenprop.com/ph/alquiler/caballito",
+      "site": "argenprop",
+      "operation": "alquiler",
+      "enabled": false,
+      "max_pages": 1,
+      "filters": {
+        "min_rooms": 4,
+        "min_bedrooms": 3,
+        "keywords_include": [
+          "patio",
+          "luminoso"
+        ],
+        "keywords_exclude": [
+          "pozo",
+          "temporario",
+          "en construcción",
+          "compartido",
+          "oficina",
+          "local"
+        ]
+      }
     }
   ]
 }
