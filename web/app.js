@@ -20,9 +20,9 @@ const SITE_HINTS = {
   argenprop:
     'Entrá a <a href="https://www.argenprop.com" target="_blank" rel="noopener">argenprop.com</a>, buscá con los filtros del sitio (zona, operación, precio…) y pegá acá la URL de resultados. Ej: https://www.argenprop.com/departamentos/alquiler/palermo',
   mercadolibre:
-    '⚠️ MercadoLibre bloquea a los servidores de GitHub: para scrapearlo hace falta el secret SCRAPERAPI_KEY en el repo (ScraperAPI tiene plan gratuito). Ej: https://inmuebles.mercadolibre.com.ar/departamentos/alquiler/capital-federal/',
+    '<b class="hint-warn">Ojo:</b> MercadoLibre bloquea a los servidores de GitHub: para scrapearlo hace falta el secret SCRAPERAPI_KEY en el repo (ScraperAPI tiene plan gratuito). Ej: https://inmuebles.mercadolibre.com.ar/departamentos/alquiler/capital-federal/',
   zonaprop:
-    '⚠️ Zonaprop usa protección Cloudflare y suele bloquear a los servidores de GitHub: para scrapearlo hace falta el secret SCRAPERAPI_KEY en el repo (ScraperAPI tiene plan gratuito). Ej: https://www.zonaprop.com.ar/departamentos-alquiler-palermo.html',
+    '<b class="hint-warn">Ojo:</b> Zonaprop usa protección Cloudflare y suele bloquear a los servidores de GitHub: para scrapearlo hace falta el secret SCRAPERAPI_KEY en el repo (ScraperAPI tiene plan gratuito). Ej: https://www.zonaprop.com.ar/departamentos-alquiler-palermo.html',
   remax:
     'Entrá a <a href="https://www.remax.com.ar" target="_blank" rel="noopener">remax.com.ar</a>, buscá con los filtros del sitio y pegá la URL de resultados (la que empieza con /listings/...). Ej: https://www.remax.com.ar/listings/rent?page=0&pageSize=24&in:operationId=2',
 };
@@ -33,6 +33,80 @@ let jobsSha = null; // sha del archivo para poder commitear
 let editingIndex = null; // null = nuevo
 
 const $ = (id) => document.getElementById(id);
+
+/* ---------- Íconos de línea (estilo Lucide, currentColor) ---------- */
+
+const ICONS = {
+  home: '<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>',
+  moon: '<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+  "log-out": '<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/>',
+  lock: '<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+  "chevron-down": '<polyline points="6 9 12 15 18 9"/>',
+  "chevron-left": '<polyline points="15 18 9 12 15 6"/>',
+  "chevron-right": '<polyline points="9 18 15 12 9 6"/>',
+  settings: '<path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/>',
+  star: '<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/>',
+  search: '<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>',
+  heart: '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>',
+  clock: '<circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/>',
+  plus: '<line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>',
+  play: '<polygon points="6 4 20 12 6 20"/>',
+  stop: '<rect x="6" y="6" width="12" height="12" rx="2"/>',
+  pencil: '<path d="M17 3a2.83 2.83 0 0 1 4 4L7.5 20.5 2 22l1.5-5.5z"/><line x1="15" y1="5" x2="19" y2="9"/>',
+  trash: '<polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/>',
+  "list-x": '<line x1="10" y1="6" x2="21" y2="6"/><line x1="10" y1="12" x2="21" y2="12"/><line x1="10" y1="18" x2="16" y2="18"/><path d="m3.5 5 4 4M7.5 5l-4 4"/>',
+  refresh: '<path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M3 22v-6h6"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/>',
+  x: '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>',
+  sliders: '<line x1="21" y1="4" x2="14" y2="4"/><line x1="10" y1="4" x2="3" y2="4"/><line x1="21" y1="12" x2="12" y2="12"/><line x1="8" y1="12" x2="3" y2="12"/><line x1="21" y1="20" x2="16" y2="20"/><line x1="12" y1="20" x2="3" y2="20"/><line x1="14" y1="2" x2="14" y2="6"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="16" y1="18" x2="16" y2="22"/>',
+  banknote: '<rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/>',
+  ruler: '<path d="M21.3 8.7 8.7 21.3a1 1 0 0 1-1.4 0l-4.6-4.6a1 1 0 0 1 0-1.4L15.3 2.7a1 1 0 0 1 1.4 0l4.6 4.6a1 1 0 0 1 0 1.4Z"/><path d="m7.5 10.5 2 2M10.5 7.5l2 2M13.5 4.5l2 2M4.5 13.5l2 2"/>',
+  calendar: '<rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>',
+  timer: '<line x1="10" y1="2" x2="14" y2="2"/><line x1="12" y1="14" x2="15" y2="11"/><circle cx="12" cy="14" r="8"/>',
+  "file-text": '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/>',
+  type: '<polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/>',
+  rocket: '<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>',
+  hourglass: '<path d="M5 22h14M5 2h14M17 22v-4.17a2 2 0 0 0-.59-1.42L12 12l-4.41 4.41A2 2 0 0 0 7 17.83V22M7 2v4.17a2 2 0 0 0 .59 1.42L12 12l4.41-4.41A2 2 0 0 0 17 6.17V2"/>',
+  wrench: '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+  globe: '<circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/>',
+  save: '<path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/>',
+  "check-circle": '<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>',
+  "x-circle": '<circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>',
+  circle: '<circle cx="12" cy="12" r="9"/>',
+  loader: '<line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.9" y1="4.9" x2="7.8" y2="7.8"/><line x1="16.2" y1="16.2" x2="19.1" y2="19.1"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.9" y1="19.1" x2="7.8" y2="16.2"/><line x1="16.2" y1="7.8" x2="19.1" y2="4.9"/>',
+  sparkles: '<path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/>',
+  list: '<line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/>',
+  alert: '<path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>',
+  "arrow-right": '<line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>',
+  image: '<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>',
+};
+
+function icon(name, size = 16) {
+  const paths = ICONS[name] || "";
+  return `<svg class="ic" viewBox="0 0 24 24" width="${size}" height="${size}" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths}</svg>`;
+}
+
+function hydrateIcons(root) {
+  (root || document).querySelectorAll("[data-icon]:not([data-ic-done])").forEach((el) => {
+    el.innerHTML = icon(el.dataset.icon, Number(el.dataset.iconSize) || 16);
+    el.setAttribute("data-ic-done", "");
+  });
+}
+
+const prefersReducedMotion =
+  window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+// Placeholder cuando no hay foto o la imagen falla al cargar
+function noImgHtml(cls) {
+  return `<div class="${cls}">${icon("image", 22)}</div>`;
+}
+window.imgFail = function (img) {
+  const thumb = img.classList.contains("thumb");
+  const el = document.createElement("div");
+  el.className = thumb ? "thumb noimg" : "noimg";
+  el.innerHTML = icon("image", 22);
+  (img.closest(".pcar") || img).replaceWith(el);
+};
 
 /* ---------- API helpers ---------- */
 
@@ -116,7 +190,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
     setStatus($("login-status"), "");
     unlockApp();
   } else {
-    setStatus($("login-status"), "❌ Usuario o contraseña incorrectos", "error");
+    setStatus($("login-status"), "Usuario o contraseña incorrectos", "error");
     $("login-pass").value = "";
   }
 });
@@ -130,7 +204,8 @@ $("gate-logout").addEventListener("click", () => {
 
 function applyTheme(theme) {
   document.documentElement.dataset.theme = theme;
-  $("theme-toggle").textContent = theme === "light" ? "🌙" : "☀️";
+  // en claro ofrece pasar a oscuro (luna); en oscuro ofrece pasar a claro (sol)
+  $("theme-icon").innerHTML = icon(theme === "light" ? "moon" : "sun", 16);
   localStorage.setItem(THEME_KEY, theme);
 }
 
@@ -160,7 +235,7 @@ async function connect() {
     if (resp.status === 404) throw new Error("El token no ve el repositorio (¿le diste acceso a este repo?)");
     const repo = await resp.json();
     setConnState("green", `Conectado a ${repo.full_name}`);
-    setStatus($("auth-status"), `✅ Conectado a ${repo.full_name}`, "ok");
+    setStatus($("auth-status"), `Conectado a ${repo.full_name}`, "ok");
     $("token-input").value = "••••••••";
     $("token-save").classList.add("hidden");
     $("token-clear").classList.remove("hidden");
@@ -170,7 +245,7 @@ async function connect() {
     await loadJobs();
   } catch (err) {
     setConnState("red", "Error de conexión con GitHub");
-    setStatus($("auth-status"), "❌ " + err.message, "error");
+    setStatus($("auth-status"), "" + err.message, "error");
     $("auth-details").open = true;
   }
 }
@@ -217,7 +292,7 @@ async function loadJobs() {
     renderJobs();
     setStatus($("jobs-status"), `${jobsDoc.searches.length} jobs`);
   } catch (err) {
-    setStatus($("jobs-status"), "❌ " + err.message, "error");
+    setStatus($("jobs-status"), "" + err.message, "error");
   }
 }
 
@@ -260,18 +335,18 @@ function renderJobs() {
         <span class="badge ${enabled ? "on" : "off"}">${enabled ? "ACTIVO" : "DETENIDO"}</span>
         <span class="badge">${job.site || "?"}</span>
         <span class="badge">${job.operation === "venta" ? "compra" : job.operation || "?"}</span>
-        <span class="badge" title="Frecuencia con la que corre en el cron">⏱ cada ${every} h</span>
+        <span class="badge" title="Frecuencia con la que corre en el cron">${icon("timer", 13)} cada ${every} h</span>
         <span class="job-name">${escapeHtml(job.name || `job ${i + 1}`)}</span>
-        <span class="summary-hint">▾ detalles</span>
+        <span class="summary-hint">detalles ${icon("chevron-down", 14)}</span>
       </summary>
       <div class="details-body">
         <div class="meta">${escapeHtml(job.url || "")}</div>
         <div class="meta">${escapeHtml(fmtFilters(job.filters))} · ${job.max_pages || 1} pág. · corre cada ${every} h</div>
         <div class="row">
-          <button class="btn small" data-act="toggle" data-i="${i}" title="${enabled ? "Deja de ejecutarse en el cron (se guarda al instante)" : "Vuelve a la programación (se guarda al instante)"}">${enabled ? "⏹ Detener" : "▶ Activar"}</button>
-          <button class="btn small" data-act="run" data-i="${i}" title="Ejecuta SOLO este job ahora mismo, aunque esté detenido">▶️ Ejecutar ahora</button>
-          <button class="btn small" data-act="edit" data-i="${i}">✏️ Editar</button>
-          <button class="btn small danger" data-act="del" data-i="${i}">🗑 Eliminar</button>
+          <button class="btn small" data-act="toggle" data-i="${i}" title="${enabled ? "Deja de ejecutarse en el cron (se guarda al instante)" : "Vuelve a la programación (se guarda al instante)"}">${enabled ? icon("stop") + " Detener" : icon("play") + " Activar"}</button>
+          <button class="btn small" data-act="run" data-i="${i}" title="Ejecuta SOLO este job ahora mismo, aunque esté detenido">${icon("play")} Ejecutar ahora</button>
+          <button class="btn small" data-act="edit" data-i="${i}">${icon("pencil")} Editar</button>
+          <button class="btn small danger" data-act="del" data-i="${i}">${icon("trash")} Eliminar</button>
         </div>
         <div class="job-flow" id="job-flow-${i}"></div>
       </div>`;
@@ -296,7 +371,7 @@ $("jobs-list").addEventListener("click", async (e) => {
     job.enabled = job.enabled === false;
     renderJobs();
     await persistJobs(
-      `${job.enabled ? "▶ Activado" : "⏹ Detenido"} "${job.name}"`
+      `${job.enabled ? "Activado" : "Detenido"} "${job.name}"`
     );
   } else if (act === "run") {
     runSingleJob(jobsDoc.searches[i], i);
@@ -305,7 +380,7 @@ $("jobs-list").addEventListener("click", async (e) => {
     if (confirm(`¿Eliminar el job "${name}"? Se guarda al instante.`)) {
       jobsDoc.searches.splice(i, 1);
       renderJobs();
-      await persistJobs(`🗑 Eliminado "${name}"`);
+      await persistJobs(`Eliminado "${name}"`);
     }
   } else if (act === "edit") {
     openForm(i);
@@ -321,13 +396,13 @@ async function runSingleJob(job, index) {
       body: JSON.stringify({ ref: BRANCH, inputs: { only_job: job.name } }),
     });
     if (resp.status !== 204) throw new Error(`status ${resp.status}`);
-    setStatus($("jobs-status"), `✅ "${job.name}" disparado`, "ok");
+    setStatus($("jobs-status"), `"${job.name}" disparado`, "ok");
     // El flujo se muestra dentro del propio job (abrimos su desplegable)
     const card = document.querySelectorAll("#jobs-list details.job-card")[index];
     if (card) card.open = true;
     watchRun($(`job-flow-${index}`), `Ejecutando "${job.name}"`, dispatchedAt);
   } catch (err) {
-    setStatus($("jobs-status"), "❌ " + err.message, "error");
+    setStatus($("jobs-status"), "" + err.message, "error");
   }
 }
 
@@ -338,20 +413,20 @@ async function runSingleJob(job, index) {
  * paralelo) y cada watcher reclama una corrida distinta. */
 
 const FLOW_STEPS = [
-  "🚀 Disparado",
-  "⏳ En cola",
-  "🔧 Preparando entorno",
-  "🕷️ Scrapeando portales",
-  "💾 Guardando resultados",
-  "✅ Listo",
+  { ic: "rocket", label: "Disparado" },
+  { ic: "hourglass", label: "En cola" },
+  { ic: "wrench", label: "Preparando entorno" },
+  { ic: "globe", label: "Scrapeando portales" },
+  { ic: "save", label: "Guardando resultados" },
+  { ic: "check-circle", label: "Listo" },
 ];
 const claimedRuns = new Set();
 
 function renderFlow(container, title, activeIdx, finished = false, resultHtml = "") {
   if (!container) return;
-  const steps = FLOW_STEPS.map((label, i) => {
+  const steps = FLOW_STEPS.map((step, i) => {
     const cls = finished || i < activeIdx ? "done" : i === activeIdx ? "active" : "pending";
-    return `<div class="flow-step ${cls}"><span class="flow-dot"></span><span class="flow-label">${label}</span></div>`;
+    return `<div class="flow-step ${cls}"><span class="flow-dot">${icon(step.ic, 14)}</span><span class="flow-label">${step.label}</span></div>`;
   }).join('<div class="flow-line"></div>');
   container.classList.remove("hidden");
   container.innerHTML = `
@@ -400,17 +475,17 @@ function watchRun(container, title, dispatchedAt) {
       if (job.status === "completed") {
         clearInterval(timer);
         const ok = job.conclusion === "success";
-        let result = "❌ La corrida falló — abrí el log desde la pestaña Corridas.";
+        let result = escapeHtml("La corrida falló — abrí el log desde la pestaña Corridas.");
         if (ok) {
           const history = await loadRunHistory();
           const h = history[history.length - 1];
           result = h && h.finished_at >= dispatchedAt.slice(0, 19)
-            ? `🆕 ${h.new} avisos nuevos · 📋 ${h.found} encontrados` +
-              (h.errors?.length ? ` · ⚠️ ${h.errors.length} avisos de error` : "")
+            ? `${icon("sparkles", 14)} ${h.new} avisos nuevos · ${icon("list", 14)} ${h.found} encontrados` +
+              (h.errors?.length ? ` · ${icon("alert", 14)} ${h.errors.length} avisos de error` : "")
             : "Completado (sin actividad registrada).";
           loadResults(); // refresca Buscar y Top con lo nuevo
         }
-        renderFlow(container, title, FLOW_STEPS.length - 1, ok, escapeHtml(result));
+        renderFlow(container, title, FLOW_STEPS.length - 1, ok, result);
       }
     } catch { /* reintenta en el próximo tick */ }
   }, 5000);
@@ -495,7 +570,10 @@ function syncBuilder() {
 $("f-zone").addEventListener("input", syncBuilder);
 
 function updateHint() {
-  $("site-hint").innerHTML = SITE_HINTS[$("f-site").value] || "";
+  const hint = SITE_HINTS[$("f-site").value] || "";
+  $("site-hint").innerHTML = hint.startsWith("<b")
+    ? `<span class="hint-warn-ic">${icon("alert", 14)}</span> ${hint}`
+    : hint;
 }
 $("f-site").addEventListener("change", updateHint);
 $("f-url").addEventListener("input", () => {
@@ -603,7 +681,7 @@ $("job-form").addEventListener("submit", (e) => {
   else jobsDoc.searches[editingIndex] = job;
   $("job-form-wrap").classList.add("hidden");
   renderJobs();
-  persistJobs(isNew ? `➕ Job "${job.name}" creado` : `✏️ Job "${job.name}" actualizado`);
+  persistJobs(isNew ? `Job "${job.name}" creado` : `Job "${job.name}" actualizado`);
 });
 
 /* ---------- Guardar + ejecutar ---------- */
@@ -618,7 +696,7 @@ async function persistJobs(okMessage) {
       "chore: actualizar jobs desde la web de administración"
     );
     renderJobs();
-    setStatus($("jobs-status"), `✅ ${okMessage || "Guardado"}. El cron ya usa esta config.`, "ok");
+    setStatus($("jobs-status"), `${okMessage || "Guardado"}. El cron ya usa esta config.`, "ok");
   } catch (err) {
     // sha viejo (otro guardado en el medio): refrescar y reintentar una vez
     try {
@@ -630,9 +708,9 @@ async function persistJobs(okMessage) {
         "chore: actualizar jobs desde la web de administración"
       );
       renderJobs();
-      setStatus($("jobs-status"), `✅ ${okMessage || "Guardado"}.`, "ok");
+      setStatus($("jobs-status"), `${okMessage || "Guardado"}.`, "ok");
     } catch (err2) {
-      setStatus($("jobs-status"), "❌ No se pudo guardar: " + err2.message, "error");
+      setStatus($("jobs-status"), "No se pudo guardar: " + err2.message, "error");
       alert("No se pudo guardar jobs.json: " + err2.message);
     }
   }
@@ -649,10 +727,10 @@ $("run-now").addEventListener("click", async () => {
       body: JSON.stringify({ ref: BRANCH }),
     });
     if (resp.status !== 204) throw new Error(`status ${resp.status}`);
-    setStatus($("jobs-status"), `✅ Scraper disparado (${active} jobs activos).`, "ok");
+    setStatus($("jobs-status"), `Scraper disparado (${active} jobs activos).`, "ok");
     watchRun($("run-flow"), `Ejecutando ${active} jobs activos`, dispatchedAt);
   } catch (err) {
-    setStatus($("jobs-status"), "❌ " + err.message, "error");
+    setStatus($("jobs-status"), "" + err.message, "error");
   }
 });
 
@@ -678,8 +756,8 @@ async function loadResults() {
     applySearch();
     renderTop();
   } catch (err) {
-    setStatus($("results-status"), "❌ " + err.message, "error");
-    setStatus($("top-status"), "❌ " + err.message, "error");
+    setStatus($("results-status"), "" + err.message, "error");
+    setStatus($("top-status"), "" + err.message, "error");
   }
 }
 
@@ -763,7 +841,7 @@ function applySearch() {
 $("clear-history").addEventListener("click", async () => {
   if (!confirm(
     `¿Vaciar TODO el histórico (${allListings.length} avisos guardados)?\n` +
-    `Tus ❤️ favoritos NO se tocan. Los avisos que sigan publicados van a ` +
+    `Tus favoritos NO se tocan. Los avisos que sigan publicados van a ` +
     `volver a aparecer en futuras corridas.`
   )) return;
   setStatus($("results-status"), "Vaciando histórico...");
@@ -774,9 +852,9 @@ $("clear-history").addEventListener("click", async () => {
     populateSearchSelects();
     applySearch();
     renderTop();
-    setStatus($("results-status"), "✅ Histórico vaciado", "ok");
+    setStatus($("results-status"), "Histórico vaciado", "ok");
   } catch (err) {
-    setStatus($("results-status"), "❌ " + err.message, "error");
+    setStatus($("results-status"), "" + err.message, "error");
     alert("No pude vaciar el histórico: " + err.message);
   }
 });
@@ -812,14 +890,13 @@ function isFav(id) {
 function heartHtml(l) {
   const on = isFav(l.id);
   return `<button class="fav-btn${on ? " on" : ""}" data-fav="${escapeHtml(l.id)}"
-    title="${on ? "Quitar de Me gustan" : "Guardar en Me gustan"}">${on ? "❤️" : "🤍"}</button>`;
+    title="${on ? "Quitar de Me gustan" : "Guardar en Me gustan"}">${icon("heart", 18)}</button>`;
 }
 
 function refreshHearts() {
   document.querySelectorAll("button[data-fav]").forEach((btn) => {
     const on = isFav(btn.dataset.fav);
     btn.classList.toggle("on", on);
-    btn.textContent = on ? "❤️" : "🤍";
     btn.title = on ? "Quitar de Me gustan" : "Guardar en Me gustan";
   });
 }
@@ -852,11 +929,11 @@ async function saveFavorites() {
       const { sha } = await fetchFile("data/favorites.json");
       favSha = await putFile("data/favorites.json", body, sha, message);
     } catch (err2) {
-      setStatus($("fav-status"), "❌ No pude guardar: " + err2.message, "error");
+      setStatus($("fav-status"), "No pude guardar: " + err2.message, "error");
       return;
     }
   }
-  setStatus($("fav-status"), `✅ ${Object.keys(favorites).length} favoritos guardados en el repo`, "ok");
+  setStatus($("fav-status"), `${Object.keys(favorites).length} favoritos guardados en el repo`, "ok");
 }
 
 document.body.addEventListener("click", (e) => {
@@ -871,7 +948,7 @@ function favCardHtml(l) {
     l.rooms ? `${l.rooms} amb` : null,
     l.surface_m2 ? `${Math.round(l.surface_m2)} m²` : null,
   ].filter(Boolean).join(" · ");
-  const extra = `<button class="fav-btn on thumb-fav" data-fav="${escapeHtml(l.id)}" title="Quitar de Me gustan">❤️</button>`;
+  const extra = `<button class="fav-btn on thumb-fav" data-fav="${escapeHtml(l.id)}" title="Quitar de Me gustan">${icon("heart", 16)}</button>`;
   return `
     <div class="top-card">
       <div class="top-thumb">${photoCarouselHtml(l, extra)}</div>
@@ -891,7 +968,7 @@ function renderFavorites() {
   );
   $("fav-list").innerHTML = items.length
     ? `<div class="fav-grid">${items.map(favCardHtml).join("")}</div>`
-    : '<p class="status">Todavía no guardaste ningún aviso. Tocá el 🤍 en la pestaña Buscar o en el Top 5.</p>';
+    : '<p class="status">Todavía no guardaste ningún aviso. Tocá el corazón en la pestaña Buscar o en el Top 5.</p>';
   if (favLoaded) setStatus($("fav-status"), `${items.length} guardados`);
 }
 
@@ -899,12 +976,11 @@ $("reload-fav").addEventListener("click", () => loadFavorites().then(renderFavor
 
 function thumbHtml(l) {
   const imgs = (l.images && l.images.length ? l.images : [l.image]).filter(Boolean);
-  if (!imgs.length) return `<div class="thumb noimg">🏠</div>`;
+  if (!imgs.length) return noImgHtml("thumb noimg");
   // miniatura que va rotando todas las fotos; click = popup con galería
   return `
     <div class="pcar thumb-pcar" data-images='${escapeHtml(JSON.stringify(imgs))}' data-idx="0" title="Click para ver las fotos">
-      <img class="pcar-img thumb zoomable" src="${escapeHtml(imgs[0])}" loading="lazy" alt=""
-        onerror="this.closest('.pcar').outerHTML='<div class=\\'thumb noimg\\'>🏠</div>'">
+      <img class="pcar-img thumb zoomable" src="${escapeHtml(imgs[0])}" loading="lazy" alt="" onerror="imgFail(this)">
       ${imgs.length > 1 ? `<span class="pcar-count">1/${imgs.length}</span>` : ""}
     </div>`;
 }
@@ -929,7 +1005,7 @@ function renderResults(listings) {
     </tr>`).join("");
   $("results-list").innerHTML = `
     <table>
-      <thead><tr><th>Foto</th><th>Visto</th><th>Portal</th><th>Aviso</th><th>Precio</th><th>Amb/m²</th><th>Job</th><th>♥</th></tr></thead>
+      <thead><tr><th>Foto</th><th>Visto</th><th>Portal</th><th>Aviso</th><th>Precio</th><th>Amb/m²</th><th>Job</th><th></th></tr></thead>
       <tbody>${rows}</tbody>
     </table>`;
 }
@@ -1044,15 +1120,14 @@ function computeTop(operation, count = 5) {
 /* Mini-carrusel de fotos DE LA PROPIEDAD: flechas, contador y auto-avance */
 function photoCarouselHtml(l, extra = "") {
   const imgs = (l.images && l.images.length ? l.images : [l.image]).filter(Boolean);
-  if (!imgs.length) return `<div class="noimg">🏠</div>${extra}`;
+  if (!imgs.length) return `${noImgHtml("noimg")}${extra}`;
   const multi = imgs.length > 1;
   return `
     <div class="pcar" data-images='${escapeHtml(JSON.stringify(imgs))}' data-idx="0">
-      <img class="pcar-img zoomable" src="${escapeHtml(imgs[0])}" loading="lazy" alt=""
-        onerror="this.closest('.pcar').outerHTML='<div class=\\'noimg\\'>🏠</div>'">
+      <img class="pcar-img zoomable" src="${escapeHtml(imgs[0])}" loading="lazy" alt="" onerror="imgFail(this)">
       ${multi ? `
-        <button type="button" class="pcar-nav prev" data-nav="-1" title="Foto anterior">‹</button>
-        <button type="button" class="pcar-nav next" data-nav="1" title="Foto siguiente">›</button>
+        <button type="button" class="pcar-nav prev" data-nav="-1" title="Foto anterior">${icon("chevron-left", 16)}</button>
+        <button type="button" class="pcar-nav next" data-nav="1" title="Foto siguiente">${icon("chevron-right", 16)}</button>
         <span class="pcar-count">1/${imgs.length}</span>` : ""}
       ${extra}
     </div>`;
@@ -1082,6 +1157,7 @@ document.body.addEventListener("click", (e) => {
 let cyclingTimer = null;
 function startImageCycling() {
   if (cyclingTimer) clearInterval(cyclingTimer);
+  if (prefersReducedMotion) return; // respetá prefers-reduced-motion: sin auto-avance
   cyclingTimer = setInterval(() => {
     document.querySelectorAll(".pcar[data-images]").forEach((pcar) => {
       if (pcar.dataset.manual) return;
@@ -1163,10 +1239,10 @@ document.body.addEventListener("mouseout", (e) => {
 const lightbox = document.createElement("div");
 lightbox.id = "lightbox";
 lightbox.innerHTML = `
-  <button id="lb-close" title="Cerrar (Esc)">✕</button>
-  <button id="lb-prev" title="Anterior (←)">‹</button>
+  <button id="lb-close" title="Cerrar (Esc)">${icon("x", 20)}</button>
+  <button id="lb-prev" title="Anterior (izquierda)">${icon("chevron-left", 26)}</button>
   <img id="lb-img" alt="" title="Click para hacer zoom">
-  <button id="lb-next" title="Siguiente (→)">›</button>
+  <button id="lb-next" title="Siguiente (derecha)">${icon("chevron-right", 26)}</button>
   <span id="lb-count"></span>`;
 document.body.appendChild(lightbox);
 
@@ -1247,7 +1323,17 @@ $("search-clear").addEventListener("click", () => {
 
 /* ---------- Corridas ---------- */
 
-const RUN_ICONS = { success: "✅", failure: "❌", cancelled: "⚪", in_progress: "🔄", queued: "⏳" };
+const RUN_ICONS = {
+  success: { ic: "check-circle", cls: "run-ic-ok" },
+  failure: { ic: "x-circle", cls: "run-ic-bad" },
+  cancelled: { ic: "circle", cls: "run-ic-muted" },
+  in_progress: { ic: "loader", cls: "run-ic-muted" },
+  queued: { ic: "hourglass", cls: "run-ic-muted" },
+};
+function runIconHtml(r) {
+  const m = RUN_ICONS[r.conclusion || r.status] || { ic: "circle", cls: "run-ic-muted" };
+  return `<span class="run-ic ${m.cls}">${icon(m.ic, 16)}</span>`;
+}
 
 let runsCache = [];
 
@@ -1279,12 +1365,12 @@ function runStatsHtml(run, history) {
   const h = historyForRun(run, history);
   if (!h) return '<span class="badge">— sin actividad (0 jobs activos o prueba)</span>';
   const parts = [
-    `<span class="badge run-ok">🆕 ${h.new} nuevos</span>`,
-    `<span class="badge">📋 ${h.found} encontrados</span>`,
+    `<span class="badge run-ok">${icon("sparkles", 13)} ${h.new} nuevos</span>`,
+    `<span class="badge">${icon("list", 13)} ${h.found} encontrados</span>`,
   ];
   if (h.only_job) parts.push(`<span class="badge">solo: ${escapeHtml(h.only_job)}</span>`);
   if (h.errors && h.errors.length) {
-    parts.push(`<span class="badge run-warn" title="${escapeHtml(h.errors.join(" | "))}">⚠️ ${h.errors.length} avisos de error</span>`);
+    parts.push(`<span class="badge run-warn" title="${escapeHtml(h.errors.join(" | "))}">${icon("alert", 13)} ${h.errors.length} avisos de error</span>`);
   }
   return parts.join(" ");
 }
@@ -1302,7 +1388,6 @@ async function loadRuns() {
       (b.created_at || "").localeCompare(a.created_at || "")
     );
     const rows = runsCache.map((r) => {
-      const icon = RUN_ICONS[r.conclusion || r.status] || "▫️";
       const when = new Date(r.created_at).toLocaleString("es-AR");
       const h = historyForRun(r, history);
       // Solo se deshabilita cuando el historial CONFIRMA que no guardó
@@ -1315,20 +1400,20 @@ async function loadRuns() {
           ? `Borra del histórico los ${h.new} avisos que guardó esta corrida`
           : "Borra del histórico los avisos que guardó esta corrida";
       return `<div class="run-row" data-row-run="${r.id}">
-        <span>${icon} <strong>#${r.run_number}</strong> · ${escapeHtml(r.event)} · ${when}<br>
+        <span>${runIconHtml(r)} <strong class="tabnum">#${r.run_number}</strong> · ${escapeHtml(r.event)} · <span class="tabnum">${when}</span><br>
           <span class="run-stats">${runStatsHtml(r, history)}</span>
         </span>
         <span class="row">
-          <a href="${r.html_url}" target="_blank" rel="noopener">ver log →</a>
-          <button class="btn small danger" data-run="${r.id}" ${knownEmpty ? "disabled" : ""} title="${escapeHtml(delTitle)}">🗑 Borrar datos</button>
-          <button class="btn small" data-del-run="${r.id}" title="Elimina esta corrida de la lista (no toca los avisos guardados)">🧹 Borrar corrida</button>
+          <a href="${r.html_url}" target="_blank" rel="noopener">ver log ${icon("arrow-right", 13)}</a>
+          <button class="btn small danger" data-run="${r.id}" ${knownEmpty ? "disabled" : ""} title="${escapeHtml(delTitle)}">${icon("trash")} Borrar datos</button>
+          <button class="btn small" data-del-run="${r.id}" title="Elimina esta corrida de la lista (no toca los avisos guardados)">${icon("list-x")} Borrar corrida</button>
         </span>
       </div>`;
     }).join("");
     $("runs-list").innerHTML = rows || '<p class="status">Sin corridas todavía.</p>';
     setStatus($("runs-status"), "");
   } catch (err) {
-    setStatus($("runs-status"), "❌ " + err.message, "error");
+    setStatus($("runs-status"), "" + err.message, "error");
   }
 }
 
@@ -1355,9 +1440,9 @@ async function deleteRunRecord(run) {
     const resp = await gh(`/actions/runs/${run.id}`, { method: "DELETE" });
     if (resp.status !== 204) throw new Error(`status ${resp.status}`);
     document.querySelector(`.run-row[data-row-run="${run.id}"]`)?.remove();
-    setStatus($("runs-status"), `✅ Corrida #${run.run_number} eliminada de la lista`, "ok");
+    setStatus($("runs-status"), `Corrida #${run.run_number} eliminada de la lista`, "ok");
   } catch (err) {
-    setStatus($("runs-status"), "❌ " + err.message, "error");
+    setStatus($("runs-status"), "" + err.message, "error");
     alert(`No pude eliminar la corrida #${run.run_number}: ${err.message}`);
   }
 }
@@ -1412,10 +1497,10 @@ $("runs-list").addEventListener("click", async (e) => {
     populateSearchSelects();
     applySearch();
     renderTop();
-    setRowStats(run.id, `<span class="badge run-ok">🗑 ${removed} avisos borrados del histórico</span>`);
-    setStatus($("runs-status"), `✅ ${removed} avisos de la corrida #${run.run_number} borrados del histórico`, "ok");
+    setRowStats(run.id, `<span class="badge run-ok">${icon("trash", 13)} ${removed} avisos borrados del histórico</span>`);
+    setStatus($("runs-status"), `${removed} avisos de la corrida #${run.run_number} borrados del histórico`, "ok");
   } catch (err) {
-    setStatus($("runs-status"), "❌ " + err.message, "error");
+    setStatus($("runs-status"), "" + err.message, "error");
     alert(`No pude borrar los datos de la corrida #${run.run_number}: ${err.message}`);
   } finally {
     btn.disabled = false;
@@ -1424,6 +1509,7 @@ $("runs-list").addEventListener("click", async (e) => {
 
 /* ---------- Init ---------- */
 
+hydrateIcons();
 updateHint();
 loadTopPrefs();
 applyTheme(localStorage.getItem(THEME_KEY) || "light");
