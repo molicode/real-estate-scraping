@@ -62,6 +62,39 @@ def test_operation_fluye_del_job_al_aviso(tmp_path):
     assert result.search_name == "a"
 
 
+def test_only_job_corre_aunque_este_pausado(tmp_path):
+    config_file = tmp_path / "jobs.json"
+    config_file.write_text(json.dumps({
+        "searches": [
+            {"name": "activo", "url": "https://www.argenprop.com/x"},
+            {"name": "detenido", "url": "https://www.argenprop.com/y", "enabled": False},
+        ]
+    }))
+    config = load_config(config_file)
+    # ejecución puntual: solo ese job, aunque esté detenido
+    searches = build_searches(config, only_job="detenido")
+    assert [s.name for s in searches] == ["detenido"]
+    # nombre inexistente -> vacío (el main lo reporta en el summary)
+    assert build_searches(config, only_job="no-existe") == []
+    # sin only_job, el detenido sigue excluido
+    assert [s.name for s in build_searches(config)] == ["activo"]
+
+
+def test_run_history_se_appendea_y_se_recorta(tmp_path):
+    from scraper import storage
+
+    path = tmp_path / "run_history.json"
+    for i in range(storage.RUN_HISTORY_LIMIT + 10):
+        storage.append_run_history({"finished_at": f"t{i}", "new": i}, path=path)
+    history = json.loads(path.read_text())
+    assert len(history) == storage.RUN_HISTORY_LIMIT
+    assert history[-1]["new"] == storage.RUN_HISTORY_LIMIT + 9  # el último quedó
+    # archivo corrupto no explota
+    path.write_text("{no es json")
+    storage.append_run_history({"finished_at": "x"}, path=path)
+    assert len(json.loads(path.read_text())) == 1
+
+
 def test_defaults_y_filtros_se_mezclan(tmp_path):
     config_file = tmp_path / "jobs.json"
     config_file.write_text(json.dumps({

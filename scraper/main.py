@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+import os
 import sys
 from pathlib import Path
 from typing import Any
@@ -13,7 +14,14 @@ from . import filters as listing_filters
 from .models import Search
 from .notify import send_telegram, write_github_summary
 from .sites import detect_site, get_scraper
-from .storage import add_new, load_listings, prune_old, save_listings
+from .storage import (
+    add_new,
+    append_run_history,
+    load_listings,
+    prune_old,
+    save_listings,
+    utcnow_iso,
+)
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s"
@@ -40,11 +48,17 @@ def load_config(path: Path) -> dict[str, Any]:
     return config
 
 
-def build_searches(config: dict[str, Any]) -> list[Search]:
+def build_searches(config: dict[str, Any], only_job: str | None = None) -> list[Search]:
     defaults = config.get("defaults") or {}
     searches = []
     for i, raw in enumerate(config["searches"], start=1):
-        if raw.get("enabled") is False:
+        name = raw.get("name") or f"busqueda-{i}"
+        if only_job:
+            # Ejecución puntual pedida desde la web: corre ese job aunque
+            # esté detenido.
+            if name != only_job:
+                continue
+        elif raw.get("enabled") is False:
             continue
         url = (raw.get("url") or "").strip()
         if not url:
@@ -57,7 +71,7 @@ def build_searches(config: dict[str, Any]) -> list[Search]:
         merged_filters = {**(defaults.get("filters") or {}), **(raw.get("filters") or {})}
         searches.append(
             Search(
-                name=raw.get("name") or f"busqueda-{i}",
+                name=name,
                 url=url,
                 site=site,
                 operation=(raw.get("operation") or "").strip().lower(),
@@ -71,11 +85,20 @@ def build_searches(config: dict[str, Any]) -> list[Search]:
 def main() -> int:
     config_path = Path(sys.argv[1]) if len(sys.argv) > 1 else default_config_path()
     config = load_config(config_path)
-    searches = build_searches(config)
+    only_job = os.environ.get("ONLY_JOB", "").strip() or None
+    searches = build_searches(config, only_job)
     if not searches:
-        logger.info("No hay jobs activos en %s; nada para scrapear", config_path.name)
-        write_github_summary([], {}, ["No hay jobs activos: creá o activá jobs desde la web de administración"])
+        if only_job:
+            logger.warning("El job '%s' no existe en %s", only_job, config_path.name)
+            write_github_summary(
+                [], {}, [f"El job '{only_job}' no existe en jobs.json (¿guardaste los cambios en la web?)"]
+            )
+        else:
+            logger.info("No hay jobs activos en %s; nada para scrapear", config_path.name)
+            write_github_summary([], {}, ["No hay jobs activos: creá o activá jobs desde la web de administración"])
         return 0
+    if only_job:
+        logger.info("Ejecución puntual del job '%s'", only_job)
     retention_days = int(config.get("retention_days", 60))
 
     stored = load_listings()
@@ -105,6 +128,15 @@ def main() -> int:
         all_new.extend(add_new(stored, matching))
 
     save_listings(stored)
+    append_run_history({
+        "finished_at": utcnow_iso(),
+        "only_job": only_job,
+        "jobs": stats,
+        "found": sum(stats.values()),
+        "new": len(all_new),
+        "total_stored": len(stored),
+        "errors": errors,
+    })
     logger.info(
         "Fin: %d avisos nuevos, %d en total, %d errores",
         len(all_new),
