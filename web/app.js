@@ -268,7 +268,8 @@ function renderJobs() {
         <div class="meta">${escapeHtml(job.url || "")}</div>
         <div class="meta">${escapeHtml(fmtFilters(job.filters))} · ${job.max_pages || 1} pág.</div>
         <div class="row">
-          <button class="btn small" data-act="toggle" data-i="${i}">${enabled ? "⏸ Pausar" : "▶ Activar"}</button>
+          <button class="btn small" data-act="toggle" data-i="${i}" title="${enabled ? "Deja de ejecutarse en el cron (se guarda al instante)" : "Vuelve a ejecutarse cada hora (se guarda al instante)"}">${enabled ? "⏹ Detener" : "▶ Activar"}</button>
+          <button class="btn small" data-act="run" data-i="${i}" title="Ejecuta SOLO este job ahora mismo, aunque esté detenido (usa la última versión guardada)">▶️ Ejecutar ahora</button>
           <button class="btn small" data-act="edit" data-i="${i}">✏️ Editar</button>
           <button class="btn small danger" data-act="del" data-i="${i}">🗑 Eliminar</button>
         </div>
@@ -284,15 +285,21 @@ function escapeHtml(s) {
   })[c]);
 }
 
-$("jobs-list").addEventListener("click", (e) => {
+$("jobs-list").addEventListener("click", async (e) => {
   const btn = e.target.closest("button[data-act]");
   if (!btn) return;
   const i = Number(btn.dataset.i);
   const act = btn.dataset.act;
   if (act === "toggle") {
-    jobsDoc.searches[i].enabled = jobsDoc.searches[i].enabled === false;
-    markDirty();
+    // Detener/Activar tiene efecto inmediato: se guarda solo
+    const job = jobsDoc.searches[i];
+    job.enabled = job.enabled === false;
     renderJobs();
+    await persistJobs(
+      `${job.enabled ? "▶ Activado" : "⏹ Detenido"} "${job.name}"`
+    );
+  } else if (act === "run") {
+    runSingleJob(jobsDoc.searches[i]);
   } else if (act === "del") {
     if (confirm(`¿Eliminar el job "${jobsDoc.searches[i].name}"?`)) {
       jobsDoc.searches.splice(i, 1);
@@ -303,6 +310,103 @@ $("jobs-list").addEventListener("click", (e) => {
     openForm(i);
   }
 });
+
+async function runSingleJob(job) {
+  if (dirty && !confirm(
+    `Tenés cambios sin guardar: el job va a correr con la última versión GUARDADA de "${job.name}". ¿Continuar?`
+  )) return;
+  setStatus($("jobs-status"), `Disparando "${job.name}"...`);
+  try {
+    const dispatchedAt = new Date().toISOString();
+    const resp = await gh(`/actions/workflows/scraper.yml/dispatches`, {
+      method: "POST",
+      body: JSON.stringify({ ref: BRANCH, inputs: { only_job: job.name } }),
+    });
+    if (resp.status !== 204) throw new Error(`status ${resp.status}`);
+    setStatus($("jobs-status"), `✅ "${job.name}" disparado`, "ok");
+    watchRun(`Ejecutando "${job.name}"`, dispatchedAt);
+  } catch (err) {
+    setStatus($("jobs-status"), "❌ " + err.message, "error");
+  }
+}
+
+/* ---------- Flujo animado de la corrida en curso ---------- */
+
+const FLOW_STEPS = [
+  "🚀 Disparado",
+  "⏳ En cola",
+  "🔧 Preparando entorno",
+  "🕷️ Scrapeando portales",
+  "💾 Guardando resultados",
+  "✅ Listo",
+];
+let flowTimer = null;
+
+function renderFlow(title, activeIdx, finished = false, resultHtml = "") {
+  const steps = FLOW_STEPS.map((label, i) => {
+    const cls = finished || i < activeIdx ? "done" : i === activeIdx ? "active" : "pending";
+    return `<div class="flow-step ${cls}"><span class="flow-dot"></span><span class="flow-label">${label}</span></div>`;
+  }).join('<div class="flow-line"></div>');
+  $("run-flow").classList.remove("hidden");
+  $("run-flow").innerHTML = `
+    <div class="flow-title">${escapeHtml(title)}</div>
+    <div class="flow-track">${steps}</div>
+    ${resultHtml ? `<div class="flow-result">${resultHtml}</div>` : ""}`;
+}
+
+function watchRun(title, dispatchedAt) {
+  clearInterval(flowTimer);
+  renderFlow(title, 0);
+  let runId = null;
+  let ticks = 0;
+  flowTimer = setInterval(async () => {
+    if (++ticks > 60) { // ~5 minutos de vigilancia máxima
+      clearInterval(flowTimer);
+      renderFlow(title, FLOW_STEPS.length - 1, true, "La corrida sigue en GitHub; mirá la pestaña Corridas.");
+      return;
+    }
+    try {
+      if (!runId) {
+        const resp = await gh(`/actions/workflows/scraper.yml/runs?event=workflow_dispatch&per_page=1`);
+        const run = (await resp.json()).workflow_runs?.[0];
+        if (run && run.created_at >= dispatchedAt.slice(0, 19)) {
+          runId = run.id;
+          renderFlow(title, 1);
+        }
+        return;
+      }
+      const resp = await gh(`/actions/runs/${runId}/jobs`);
+      const job = (await resp.json()).jobs?.[0];
+      if (!job || job.status === "queued") { renderFlow(title, 1); return; }
+      if (job.status === "in_progress") {
+        const steps = job.steps || [];
+        const running = (name) =>
+          steps.some((s) => s.name.includes(name) && s.status === "in_progress");
+        const doneStep = (name) =>
+          steps.some((s) => s.name.includes(name) && s.status === "completed");
+        if (running("Commitear") || doneStep("Ejecutar scraper")) renderFlow(title, 4);
+        else if (running("Ejecutar scraper")) renderFlow(title, 3);
+        else renderFlow(title, 2);
+        return;
+      }
+      if (job.status === "completed") {
+        clearInterval(flowTimer);
+        const ok = job.conclusion === "success";
+        let result = "❌ La corrida falló — abrí el log desde la pestaña Corridas.";
+        if (ok) {
+          const history = await loadRunHistory();
+          const h = history[history.length - 1];
+          result = h && h.finished_at >= dispatchedAt.slice(0, 19)
+            ? `🆕 ${h.new} avisos nuevos · 📋 ${h.found} encontrados` +
+              (h.errors?.length ? ` · ⚠️ ${h.errors.length} avisos de error` : "")
+            : "Completado (sin actividad registrada).";
+          loadResults(); // refresca Buscar y Top con lo nuevo
+        }
+        renderFlow(title, FLOW_STEPS.length - 1, ok, escapeHtml(result));
+      }
+    } catch { /* reintenta en el próximo tick */ }
+  }, 5000);
+}
 
 function markDirty() {
   dirty = true;
@@ -498,7 +602,7 @@ $("job-form").addEventListener("submit", (e) => {
 
 /* ---------- Guardar + ejecutar ---------- */
 
-$("save-jobs").addEventListener("click", async () => {
+async function persistJobs(okMessage) {
   setStatus($("jobs-status"), "Guardando jobs.json...");
   try {
     jobsSha = await putFile(
@@ -509,22 +613,28 @@ $("save-jobs").addEventListener("click", async () => {
     );
     dirty = false;
     renderJobs();
-    setStatus($("jobs-status"), "✅ Guardado. El próximo cron (o 'Ejecutar ahora') usa esta config.", "ok");
+    setStatus($("jobs-status"), `✅ ${okMessage || "Guardado"}. El cron ya usa esta config.`, "ok");
   } catch (err) {
     setStatus($("jobs-status"), "❌ " + err.message, "error");
   }
-});
+}
+
+$("save-jobs").addEventListener("click", () => persistJobs("Guardado"));
 
 $("run-now").addEventListener("click", async () => {
   if (dirty && !confirm("Tenés cambios sin guardar; el scraper va a correr con la última versión GUARDADA. ¿Continuar?")) return;
+  const active = (jobsDoc?.searches || []).filter((s) => s.enabled !== false).length;
+  if (active === 0 && !confirm("Tenés 0 jobs activos: la corrida no va a scrapear nada. ¿Ejecutar igual?")) return;
   setStatus($("jobs-status"), "Disparando workflow...");
   try {
+    const dispatchedAt = new Date().toISOString();
     const resp = await gh(`/actions/workflows/scraper.yml/dispatches`, {
       method: "POST",
       body: JSON.stringify({ ref: BRANCH }),
     });
     if (resp.status !== 204) throw new Error(`status ${resp.status}`);
-    setStatus($("jobs-status"), "✅ Scraper disparado. Mirá el estado en la pestaña Corridas.", "ok");
+    setStatus($("jobs-status"), `✅ Scraper disparado (${active} jobs activos).`, "ok");
+    watchRun(`Ejecutando ${active} jobs activos`, dispatchedAt);
   } catch (err) {
     setStatus($("jobs-status"), "❌ " + err.message, "error");
   }
@@ -938,10 +1048,51 @@ const RUN_ICONS = { success: "✅", failure: "❌", cancelled: "⚪", in_progres
 
 let runsCache = [];
 
+async function loadRunHistory() {
+  try {
+    const resp = await gh(`/contents/data/run_history.json?ref=${BRANCH}`, {
+      headers: { Accept: "application/vnd.github.raw+json" },
+    });
+    if (resp.status === 404) return [];
+    const data = await resp.json();
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+}
+
+/* Busca la entrada del historial cuyo fin cae dentro de la ventana del run */
+function historyForRun(run, history) {
+  const from = run.run_started_at || run.created_at;
+  const to = new Date(new Date(run.updated_at).getTime() + 2 * 60000)
+    .toISOString().slice(0, 19) + "Z";
+  return history.find((h) => h.finished_at >= from && h.finished_at <= to) || null;
+}
+
+function runStatsHtml(run, history) {
+  if ((run.conclusion || run.status) === "failure") {
+    return '<span class="badge run-bad">falló — ver log</span>';
+  }
+  const h = historyForRun(run, history);
+  if (!h) return '<span class="badge">— sin actividad (0 jobs activos o prueba)</span>';
+  const parts = [
+    `<span class="badge run-ok">🆕 ${h.new} nuevos</span>`,
+    `<span class="badge">📋 ${h.found} encontrados</span>`,
+  ];
+  if (h.only_job) parts.push(`<span class="badge">solo: ${escapeHtml(h.only_job)}</span>`);
+  if (h.errors && h.errors.length) {
+    parts.push(`<span class="badge run-warn" title="${escapeHtml(h.errors.join(" | "))}">⚠️ ${h.errors.length} avisos de error</span>`);
+  }
+  return parts.join(" ");
+}
+
 async function loadRuns() {
   setStatus($("runs-status"), "Cargando corridas...");
   try {
-    const resp = await gh(`/actions/workflows/scraper.yml/runs?per_page=15`);
+    const [resp, history] = await Promise.all([
+      gh(`/actions/workflows/scraper.yml/runs?per_page=15`),
+      loadRunHistory(),
+    ]);
     const data = await resp.json();
     // Más nuevas arriba, siempre
     runsCache = (data.workflow_runs || []).sort((a, b) =>
@@ -951,7 +1102,9 @@ async function loadRuns() {
       const icon = RUN_ICONS[r.conclusion || r.status] || "▫️";
       const when = new Date(r.created_at).toLocaleString("es-AR");
       return `<div class="run-row">
-        <span>${icon} <strong>#${r.run_number}</strong> · ${escapeHtml(r.event)} · ${when}</span>
+        <span>${icon} <strong>#${r.run_number}</strong> · ${escapeHtml(r.event)} · ${when}<br>
+          <span class="run-stats">${runStatsHtml(r, history)}</span>
+        </span>
         <span class="row">
           <a href="${r.html_url}" target="_blank" rel="noopener">ver log →</a>
           <button class="btn small danger" data-run="${r.id}" title="Borra del histórico los avisos que guardó esta corrida">🗑 Borrar datos</button>

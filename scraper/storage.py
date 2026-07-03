@@ -15,6 +15,8 @@ from .models import Listing
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 LISTINGS_FILE = DATA_DIR / "listings.json"
+RUN_HISTORY_FILE = DATA_DIR / "run_history.json"
+RUN_HISTORY_LIMIT = 200
 
 
 def utcnow_iso() -> str:
@@ -62,6 +64,27 @@ def prune_old(
         if first_seen >= cutoff:
             kept[key] = item
     return kept
+
+
+def append_run_history(entry: dict[str, Any], path: Path | None = None) -> None:
+    """Registra las estadísticas de una corrida (para que la web las muestre
+    sin abrir logs). Se conservan las últimas RUN_HISTORY_LIMIT corridas."""
+    path = path or RUN_HISTORY_FILE
+    history: list[dict[str, Any]] = []
+    if path.exists():
+        try:
+            with path.open(encoding="utf-8") as fh:
+                loaded = json.load(fh)
+            if isinstance(loaded, list):
+                history = loaded
+        except (json.JSONDecodeError, OSError):
+            history = []
+    history.append(entry)
+    history = history[-RUN_HISTORY_LIMIT:]
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as fh:
+        json.dump(history, fh, ensure_ascii=False, indent=1)
+        fh.write("\n")
 
 
 def add_new(
