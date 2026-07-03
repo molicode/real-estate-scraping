@@ -1101,13 +1101,24 @@ async function loadRuns() {
     const rows = runsCache.map((r) => {
       const icon = RUN_ICONS[r.conclusion || r.status] || "▫️";
       const when = new Date(r.created_at).toLocaleString("es-AR");
-      return `<div class="run-row">
+      const h = historyForRun(r, history);
+      // Solo se deshabilita cuando el historial CONFIRMA que no guardó
+      // nada; corridas sin historial (anteriores a esta función) pueden
+      // tener avisos, así que el botón queda habilitado.
+      const knownEmpty = Boolean(h) && !(h.new > 0);
+      const delTitle = knownEmpty
+        ? "Esta corrida no guardó avisos nuevos: no hay datos para borrar"
+        : h
+          ? `Borra del histórico los ${h.new} avisos que guardó esta corrida`
+          : "Borra del histórico los avisos que guardó esta corrida";
+      return `<div class="run-row" data-row-run="${r.id}">
         <span>${icon} <strong>#${r.run_number}</strong> · ${escapeHtml(r.event)} · ${when}<br>
           <span class="run-stats">${runStatsHtml(r, history)}</span>
         </span>
         <span class="row">
           <a href="${r.html_url}" target="_blank" rel="noopener">ver log →</a>
-          <button class="btn small danger" data-run="${r.id}" title="Borra del histórico los avisos que guardó esta corrida">🗑 Borrar datos</button>
+          <button class="btn small danger" data-run="${r.id}" ${knownEmpty ? "disabled" : ""} title="${escapeHtml(delTitle)}">🗑 Borrar datos</button>
+          <button class="btn small" data-del-run="${r.id}" title="Elimina esta corrida de la lista (no toca los avisos guardados)">🧹 Borrar corrida</button>
         </span>
       </div>`;
     }).join("");
@@ -1125,7 +1136,36 @@ $("reload-runs").addEventListener("click", loadRuns);
  * que siempre cae dentro de la ventana de ejecución del run: se eliminan
  * los avisos vistos por primera vez entre el inicio y el fin del run
  * (+2 minutos de margen). */
+function setRowStats(runId, html) {
+  const row = document.querySelector(`.run-row[data-row-run="${runId}"] .run-stats`);
+  if (row) row.innerHTML = html;
+}
+
+/* Elimina el registro de la corrida de la lista de GitHub Actions
+ * (no toca los avisos guardados). */
+async function deleteRunRecord(run) {
+  if (!confirm(
+    `¿Eliminar la corrida #${run.run_number} de la lista?\n` +
+    `Se borra el registro y su log en GitHub; los avisos guardados NO se tocan.`
+  )) return;
+  try {
+    const resp = await gh(`/actions/runs/${run.id}`, { method: "DELETE" });
+    if (resp.status !== 204) throw new Error(`status ${resp.status}`);
+    document.querySelector(`.run-row[data-row-run="${run.id}"]`)?.remove();
+    setStatus($("runs-status"), `✅ Corrida #${run.run_number} eliminada de la lista`, "ok");
+  } catch (err) {
+    setStatus($("runs-status"), "❌ " + err.message, "error");
+    alert(`No pude eliminar la corrida #${run.run_number}: ${err.message}`);
+  }
+}
+
 $("runs-list").addEventListener("click", async (e) => {
+  const delRunBtn = e.target.closest("button[data-del-run]");
+  if (delRunBtn) {
+    const run = runsCache.find((r) => String(r.id) === delRunBtn.dataset.delRun);
+    if (run) deleteRunRecord(run);
+    return;
+  }
   const btn = e.target.closest("button[data-run]");
   if (!btn) return;
   const run = runsCache.find((r) => String(r.id) === btn.dataset.run);
@@ -1156,6 +1196,7 @@ $("runs-list").addEventListener("click", async (e) => {
     const removed = before - Object.keys(listings).length;
     if (!removed) {
       setStatus($("runs-status"), `La corrida #${run.run_number} no guardó avisos nuevos; nada para borrar`);
+      setRowStats(run.id, '<span class="badge">sin avisos propios para borrar</span>');
       return;
     }
     await putFile(
@@ -1167,9 +1208,12 @@ $("runs-list").addEventListener("click", async (e) => {
     allListings = Object.values(listings);
     populateSearchSelects();
     applySearch();
+    renderTop();
+    setRowStats(run.id, `<span class="badge run-ok">🗑 ${removed} avisos borrados del histórico</span>`);
     setStatus($("runs-status"), `✅ ${removed} avisos de la corrida #${run.run_number} borrados del histórico`, "ok");
   } catch (err) {
     setStatus($("runs-status"), "❌ " + err.message, "error");
+    alert(`No pude borrar los datos de la corrida #${run.run_number}: ${err.message}`);
   } finally {
     btn.disabled = false;
   }
