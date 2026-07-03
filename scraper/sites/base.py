@@ -95,6 +95,15 @@ class BaseScraper:
             if html is None:
                 break
             page_listings = list(self.parse(html))
+            if not page_listings and page == 1:
+                # Algunos portales sirven páginas vacías de forma
+                # intermitente (según User-Agent o rate-limiting):
+                # un reintento con sesión nueva suele alcanzar.
+                logger.info("%s: página 1 sin avisos; reintento con sesión nueva", self.site)
+                time.sleep(random.uniform(2.0, 4.0))
+                self.session = self._build_session()
+                html = self.fetch(url)
+                page_listings = list(self.parse(html)) if html else []
             new = [l for l in page_listings if l.id not in seen_ids]
             if not new:
                 # Página vacía o repetida (fin de resultados / paginación
