@@ -283,5 +283,16 @@
   "new": 0,
   "total_stored": 21,
   "errors": []
+ },
+ {
+  "finished_at": "2026-07-04T21:57:05Z",
+  "only_job": null,
+  "jobs": {
+   "PH finding": 0
+  },
+  "found": 0,
+  "new": 0,
+  "total_stored": 21,
+  "errors": []
  }
 ]
