@@ -172,5 +172,16 @@
   "new": 0,
   "total_stored": 19,
   "errors": []
+ },
+ {
+  "finished_at": "2026-07-04T06:17:12Z",
+  "only_job": null,
+  "jobs": {
+   "Ejemplo: Alquiler 2 amb Palermo (Argenprop)": 18
+  },
+  "found": 18,
+  "new": 2,
+  "total_stored": 21,
+  "errors": []
  }
 ]

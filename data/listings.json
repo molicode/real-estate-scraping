@@ -33,6 +33,31 @@
     "title": "DEPARTAMENTO EN ALQUILER DE 2 AMBIENTES Y MEDIO AMPLIOS - PALERMO",
     "url": "https://www.argenprop.com/departamento-en-alquiler-en-palermo-2-ambientes--17197392"
   },
+  "argenprop:18519156": {
+    "address": "Ortiz de Ocampo 2500 , Piso 13",
+    "bathrooms": 1,
+    "bedrooms": 1,
+    "expenses": null,
+    "first_seen": "2026-07-04T06:17:12Z",
+    "id": "argenprop:18519156",
+    "image": "https://www.argenprop.com/static-content/65191581/dfa683dd-c114-4f46-bb51-faea4ebf16a7_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/65191581/dfa683dd-c114-4f46-bb51-faea4ebf16a7_u_small.jpg",
+      "https://www.argenprop.com/static-content/65191581/4bc13379-7146-49eb-b32f-158c1ae4a152_u_small.jpg",
+      "https://www.argenprop.com/static-content/65191581/965a40c3-9afd-462a-84d9-06826ab91dcb_u_small.jpg",
+      "https://www.argenprop.com/static-content/65191581/a049f50d-fc56-4d7a-940b-091cc9e4721a_u_small.jpg",
+      "https://www.argenprop.com/static-content/65191581/bf7224e7-2737-4cb0-85b4-33e7bee0b8e3_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 750000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "Ejemplo: Alquiler 2 amb Palermo (Argenprop)",
+    "site": "argenprop",
+    "surface_m2": 40.0,
+    "title": "Departamento en alquiler en Barrio Parque",
+    "url": "https://www.argenprop.com/departamento-en-alquiler-en-barrio-parque-2-ambientes--18519156"
+  },
   "argenprop:19120155": {
     "address": "Niceto vega 5900, Piso 3",
     "bathrooms": null,
@@ -117,6 +142,31 @@
     "surface_m2": null,
     "title": "Departamento en alquiler en Palermo Hollywood",
     "url": "https://www.argenprop.com/departamento-en-alquiler-en-palermo-hollywood-2-ambientes--19762627"
+  },
+  "argenprop:19819086": {
+    "address": "Honduras 3900",
+    "bathrooms": null,
+    "bedrooms": 1,
+    "expenses": null,
+    "first_seen": "2026-07-04T06:17:12Z",
+    "id": "argenprop:19819086",
+    "image": "https://www.argenprop.com/static-content/68091891/091616a8-e983-459e-a0a8-688e0bdba749_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/68091891/091616a8-e983-459e-a0a8-688e0bdba749_u_small.jpg",
+      "https://www.argenprop.com/static-content/68091891/5c3577c2-1bbf-4b42-afd9-89576514d41b_u_small.jpg",
+      "https://www.argenprop.com/static-content/68091891/c17bf40f-4af5-4ec6-981a-413e635c6e2a_u_small.jpg",
+      "https://www.argenprop.com/static-content/68091891/d227415b-42da-454b-b2b0-e02d820141be_u_small.jpg",
+      "https://www.argenprop.com/static-content/68091891/2e974363-9873-4679-8c28-1b8a086937dc_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 800000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "Ejemplo: Alquiler 2 amb Palermo (Argenprop)",
+    "site": "argenprop",
+    "surface_m2": 40.0,
+    "title": "2 amb. calle bcón.Fces. amoblado.2º piso x escal.",
+    "url": "https://www.argenprop.com/departamento-en-alquiler-en-palermo-viejo-2-ambientes--19819086"
   },
   "argenprop:19840027": {
     "address": "Av las heras 3700, Piso 4",
