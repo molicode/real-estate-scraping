@@ -8,7 +8,7 @@
       "name": "Ejemplo: Alquiler 2 amb Palermo (Argenprop)",
       "url": "https://www.argenprop.com/departamentos/alquiler/palermo",
       "site": "argenprop",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 2,
       "filters": {
         "currency": "ARS",
