@@ -53,7 +53,7 @@
       "url": "https://www.argenprop.com/ph/alquiler/caballito",
       "site": "argenprop",
       "operation": "alquiler",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 1,
       "filters": {
         "min_rooms": 4,
