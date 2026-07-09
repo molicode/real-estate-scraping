@@ -277,7 +277,10 @@ document.querySelectorAll(".tab").forEach((btn) => {
     if (btn.dataset.tab === "results" && !$("results-list").innerHTML) loadResults();
     if (btn.dataset.tab === "top" && !$("top-rent").innerHTML) loadResults();
     if (btn.dataset.tab === "fav" && !$("fav-list").innerHTML) loadFavorites().then(renderFavorites);
-    if (btn.dataset.tab === "risk" && !$("zones-list").innerHTML) loadRiskData().then(renderZones);
+    if (btn.dataset.tab === "risk" && !$("zones-list").innerHTML) {
+      loadRiskData().then(renderZones);
+      loadCrimeData().then(renderCrimeMap);
+    }
     if (btn.dataset.tab === "runs" && !$("runs-list").innerHTML) loadRuns();
   });
 });
@@ -566,6 +569,7 @@ function syncBuilder() {
     );
   }
   updateHint();
+  updateZoneSecurity();
 }
 
 ["f-mode", "f-site", "f-operation", "f-ptype"].forEach((id) =>
@@ -1073,6 +1077,145 @@ function flagChipsHtml(l) {
 function noteBtnHtml(l) {
   const has = Boolean(userNotes[l.id]);
   return `<button class="note-btn${has ? " has-note" : ""}" data-note="${escapeHtml(l.id)}" title="${has ? "Editar tu nota" : "Agregar una nota / marca"}">${icon("pencil", 15)}</button>`;
+}
+
+/* ---------- Mapa de inseguridad por comuna (datos oficiales GCBA) ---------- */
+
+const COMUNA_BARRIOS = {
+  1: ["retiro", "san nicolas", "puerto madero", "san telmo", "montserrat", "constitucion"],
+  2: ["recoleta"],
+  3: ["balvanera", "san cristobal"],
+  4: ["la boca", "barracas", "parque patricios", "nueva pompeya"],
+  5: ["almagro", "boedo"],
+  6: ["caballito"],
+  7: ["flores", "parque chacabuco"],
+  8: ["villa soldati", "villa lugano", "villa riachuelo"],
+  9: ["liniers", "mataderos", "parque avellaneda"],
+  10: ["villa real", "monte castro", "versalles", "floresta", "velez sarsfield", "villa luro"],
+  11: ["villa general mitre", "villa devoto", "villa del parque", "villa santa rita"],
+  12: ["coghlan", "saavedra", "villa urquiza", "villa pueyrredon"],
+  13: ["nunez", "belgrano", "colegiales"],
+  14: ["palermo"],
+  15: ["chacarita", "villa crespo", "la paternal", "villa ortuzar", "agronomia", "parque chas"],
+};
+const BARRIO_COMUNA = {};
+for (const [c, bs] of Object.entries(COMUNA_BARRIOS)) bs.forEach((b) => (BARRIO_COMUNA[b] = Number(c)));
+
+const LEVEL_INFO = {
+  alto: { cls: "cm-alto", dot: "red", txt: "Inseguridad alta", flag: "flag-high" },
+  medio: { cls: "cm-medio", dot: "yellow", txt: "Inseguridad media", flag: "flag-med" },
+  bajo: { cls: "cm-bajo", dot: "green", txt: "Inseguridad baja", flag: "flag-low" },
+};
+
+let crimeData = null;
+let comunasGeo = null;
+let crimeLoaded = false;
+
+async function loadCrimeData() {
+  if (crimeLoaded) return;
+  try {
+    const c = await fetchFile("data/crime.json");
+    crimeData = c.content ? safeParse(c.content, null) : null;
+    const g = await fetchFile("data/comunas.geojson");
+    comunasGeo = g.content ? safeParse(g.content, null) : null;
+  } catch { crimeData = null; comunasGeo = null; }
+  crimeLoaded = true;
+}
+
+function comunaFromZone(text) {
+  const hay = normZone(text);
+  for (const b of Object.keys(BARRIO_COMUNA).sort((a, z) => z.length - a.length)) {
+    if (hay.includes(b)) return BARRIO_COMUNA[b];
+  }
+  const m = hay.match(/comuna\s*0?(\d{1,2})/);
+  if (m) { const n = Number(m[1]); if (n >= 1 && n <= 15) return n; }
+  return null;
+}
+
+function securityBadge(level, comuna) {
+  const m = LEVEL_INFO[level] || LEVEL_INFO.medio;
+  return `<span class="sec-badge"><span class="dot ${m.dot}"></span> Seguridad de la zona: ${m.txt}${comuna ? ` (Comuna ${comuna})` : ""}</span>`;
+}
+
+function updateZoneSecurity() {
+  const el = $("zone-security");
+  if (!el) return;
+  if (!isMenuMode()) { el.innerHTML = ""; return; }
+  const comuna = comunaFromZone($("f-zone").value);
+  if (comuna == null) { el.innerHTML = ""; return; }
+  if (!crimeData) { loadCrimeData().then(updateZoneSecurity); el.innerHTML = ""; return; }
+  const info = crimeData.comunas[String(comuna)];
+  el.innerHTML = info
+    ? securityBadge(info.level, comuna)
+    : `<span class="sec-badge">Comuna ${comuna} — sin datos de delito</span>`;
+}
+
+// Proyección simple lon/lat -> plano (CABA es chica; corrijo la latitud)
+function buildMapSvg() {
+  const cos = Math.cos((-34.61 * Math.PI) / 180);
+  const proj = (lon, lat) => [lon * cos, -lat];
+  const polysOf = (geom) => (geom.type === "MultiPolygon" ? geom.coordinates : [geom.coordinates]);
+  let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+  comunasGeo.features.forEach((f) =>
+    polysOf(f.geometry).forEach((poly) => poly.forEach((ring) => ring.forEach(([lon, lat]) => {
+      const [x, y] = proj(lon, lat);
+      if (x < minX) minX = x; if (y < minY) minY = y; if (x > maxX) maxX = x; if (y > maxY) maxY = y;
+    })))
+  );
+  const W = 560, pad = 6, scale = (W - 2 * pad) / (maxX - minX);
+  const H = (maxY - minY) * scale + 2 * pad;
+  const tx = (x) => (x - minX) * scale + pad;
+  const ty = (y) => (y - minY) * scale + pad;
+
+  const paths = comunasGeo.features.map((f) => {
+    const n = f.properties.comuna;
+    const cls = (LEVEL_INFO[(crimeData.comunas[String(n)] || {}).level] || {}).cls || "cm-na";
+    let d = "";
+    polysOf(f.geometry).forEach((poly) => poly.forEach((ring) => {
+      ring.forEach(([lon, lat], i) => { const [x, y] = proj(lon, lat); d += `${i ? "L" : "M"}${tx(x).toFixed(1)} ${ty(y).toFixed(1)} `; });
+      d += "Z ";
+    }));
+    return `<path class="comuna ${cls}" data-comuna="${n}" d="${d.trim()}"><title>Comuna ${n}</title></path>`;
+  }).join("");
+
+  const labels = comunasGeo.features.map((f) => {
+    const n = f.properties.comuna;
+    let sx = 0, sy = 0, cnt = 0;
+    polysOf(f.geometry).forEach((poly) => poly[0].forEach(([lon, lat]) => { const [x, y] = proj(lon, lat); sx += tx(x); sy += ty(y); cnt++; }));
+    return `<text class="cm-label" x="${(sx / cnt).toFixed(0)}" y="${(sy / cnt).toFixed(0)}">${n}</text>`;
+  }).join("");
+
+  return `<svg viewBox="0 0 ${W} ${H.toFixed(0)}" class="crime-svg" role="img" aria-label="Mapa de comunas por inseguridad">${paths}${labels}</svg>`;
+}
+
+function renderCrimeMap() {
+  if (!$("crime-map")) return;
+  if (!crimeData || !comunasGeo) {
+    $("crime-map").innerHTML = '<p class="status">La base de delitos todavía no se generó. Corré el workflow "Actualizar base de delitos" en GitHub Actions.</p>';
+    return;
+  }
+  $("crime-meta").textContent = `Delitos por 100.000 habitantes · datos oficiales GCBA (Mapa del Delito) · años ${crimeData.years.join(", ")}`;
+  $("crime-map").innerHTML = buildMapSvg();
+  showComunaDetail(null);
+}
+
+function showComunaDetail(n) {
+  const box = $("comuna-detail");
+  if (!box) return;
+  if (n == null) { box.innerHTML = '<p class="status">Tocá una comuna en el mapa para ver el detalle de delitos.</p>'; return; }
+  const info = crimeData.comunas[String(n)];
+  if (!info) { box.innerHTML = ""; return; }
+  const m = LEVEL_INFO[info.level] || LEVEL_INFO.medio;
+  const barrios = (COMUNA_BARRIOS[n] || []).map((b) => b.replace(/\b\w/g, (c) => c.toUpperCase())).join(", ");
+  const maxV = Math.max(...Object.values(info.by_type || {}), 1);
+  const bars = Object.entries(info.by_type || {}).map(([t, v]) =>
+    `<div class="ctype"><span class="ctype-name">${escapeHtml(t)}</span><span class="ctype-bar"><span style="width:${Math.round(100 * v / maxV)}%"></span></span><span class="ctype-val tabnum">${v.toLocaleString("es-AR")}</span></div>`
+  ).join("");
+  box.innerHTML = `
+    <div class="cd-head"><span class="flag ${m.flag}">${m.txt}</span> <strong>Comuna ${n}</strong></div>
+    <div class="top-meta">${escapeHtml(barrios)}</div>
+    <div class="cd-stat"><span class="tabnum">${info.per100k.toLocaleString("es-AR")}</span> delitos / 100.000 hab · <span class="tabnum">${info.total.toLocaleString("es-AR")}</span> registrados</div>
+    <div class="ctypes">${bars}</div>`;
 }
 
 function thumbHtml(l) {
@@ -1724,6 +1867,15 @@ $("note-delete").addEventListener("click", async () => {
   closeNoteModal();
   applySearch(); renderTop(); renderFavorites();
   riskQueue = riskQueue.then(persistNotes).catch(() => {});
+});
+
+/* Selección de comuna en el mapa */
+document.body.addEventListener("click", (e) => {
+  const path = e.target.closest("#crime-map .comuna");
+  if (!path) return;
+  document.querySelectorAll("#crime-map .comuna.sel").forEach((x) => x.classList.remove("sel"));
+  path.classList.add("sel");
+  showComunaDetail(Number(path.dataset.comuna));
 });
 
 /* ---------- Init ---------- */
