@@ -34,9 +34,14 @@ CSV_URL_TEMPLATES = [
     "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/seguridad/delitos/delitos_{year}.csv",
 ]
 GEO_URLS = [
+    "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-educacion/comunas/comunas.geojson",
     "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-espacio-publico-e-higiene-urbana/comunas/comunas.geojson",
-    "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/comunas/comunas.geojson",
+    "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/secretaria-de-innovacion-y-transformacion-digital/comunas/comunas.geojson",
     "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/jefatura-de-gabinete/comunas/comunas.geojson",
+    "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/comunas/comunas.geojson",
+    "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/comunas/CABA_comunas.geojson",
+    "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/jefatura-de-gabinete-de-ministros/informacion-geografica/comunas.geojson",
+    "https://raw.githubusercontent.com/mgaitan/comunas_caba/master/comunas.geojson",
 ]
 
 # Población por comuna (censo 2022, aprox.) para normalizar por habitante.
@@ -55,9 +60,11 @@ session = requests.Session()
 session.headers["User-Agent"] = "real-estate-scraping/crime-builder"
 
 
-def fetch(url: str) -> bytes | None:
+def fetch(url: str, verbose: bool = False) -> bytes | None:
     try:
         r = session.get(url, timeout=90)
+        if verbose:
+            print(f"  [{r.status_code}] {url}")
         if r.status_code == 200 and r.content:
             return r.content
     except requests.RequestException as exc:
@@ -169,7 +176,7 @@ def build_crime() -> dict:
 
 def build_geojson():
     for url in GEO_URLS:
-        raw = fetch(url)
+        raw = fetch(url, verbose=True)
         if not raw:
             continue
         try:
