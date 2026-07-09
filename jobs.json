@@ -3,23 +3,5 @@
   "defaults": {
     "max_pages": 2
   },
-  "searches": [
-    {
-      "name": "Ejemplo: Alquiler 2 amb Palermo (Argenprop)",
-      "url": "https://www.argenprop.com/departamentos/alquiler/palermo",
-      "site": "argenprop",
-      "enabled": false,
-      "max_pages": 2,
-      "filters": {
-        "currency": "ARS",
-        "max_price": 900000,
-        "min_rooms": 2,
-        "keywords_exclude": [
-          "temporario",
-          "temporal"
-        ]
-      },
-      "operation": "alquiler"
-    }
-  ]
+  "searches": []
 }
