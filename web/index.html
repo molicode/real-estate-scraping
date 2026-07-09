@@ -130,6 +130,7 @@
           <label id="wrap-zone">Zona
             <span class="info" tabindex="0" data-tip="Barrio o ciudad, en minúsculas y con guiones (ej: palermo, villa-urquiza, capital-federal). Elegí una del menú o escribí otra. En Remax la zona se elige en el sitio: usá el modo 'Pegar URL'."></span>
             <input type="text" id="f-zone" placeholder="palermo" list="dl-zones">
+            <div id="zone-security" class="zone-sec"></div>
           </label>
         </div>
         <label>URL de búsqueda del portal
@@ -239,6 +240,18 @@
           <button type="button" class="chip" data-kw="pileta">pileta</button>
           <button type="button" class="chip" data-kw="apto profesional">apto profesional</button>
           <button type="button" class="chip" data-kw="apto crédito">apto crédito</button>
+          <button type="button" class="chip" data-kw="parrilla">parrilla</button>
+          <button type="button" class="chip" data-kw="baulera">baulera</button>
+          <button type="button" class="chip" data-kw="suite">suite</button>
+          <button type="button" class="chip" data-kw="lavadero">lavadero</button>
+          <button type="button" class="chip" data-kw="dependencia">dependencia</button>
+          <button type="button" class="chip" data-kw="sum">SUM</button>
+          <button type="button" class="chip" data-kw="gimnasio">gimnasio</button>
+          <button type="button" class="chip" data-kw="seguridad">seguridad 24h</button>
+          <button type="button" class="chip" data-kw="frente">al frente</button>
+          <button type="button" class="chip" data-kw="reciclado">reciclado</button>
+          <button type="button" class="chip" data-kw="apto mascota">apto mascota</button>
+          <button type="button" class="chip" data-kw="jardín">jardín</button>
         </div>
         <label>Palabras que lo EXCLUYEN (separadas por coma)
           <span class="info" tabindex="0" data-tip="Si el aviso contiene ALGUNA de estas palabras, se descarta. Glosario: 'temporario' = alquiler corto amoblado estilo Airbnb (más caro y suele estar en USD); 'pozo' o 'en construcción' = departamento que todavía no existe, se paga por adelantado; 'dueño directo' = sin inmobiliaria."></span>
@@ -252,6 +265,17 @@
           <button type="button" class="chip" data-kw="oficina">oficina</button>
           <button type="button" class="chip" data-kw="local">local</button>
           <button type="button" class="chip" data-kw="compartido">compartido</button>
+          <button type="button" class="chip" data-kw="cochera">cochera</button>
+          <button type="button" class="chip" data-kw="planta baja">planta baja</button>
+          <button type="button" class="chip" data-kw="interno">interno</button>
+          <button type="button" class="chip" data-kw="contrafrente">contrafrente</button>
+          <button type="button" class="chip" data-kw="a reciclar">a reciclar</button>
+          <button type="button" class="chip" data-kw="dueño directo">dueño directo</button>
+          <button type="button" class="chip" data-kw="ph">PH</button>
+          <button type="button" class="chip" data-kw="sin ascensor">sin ascensor</button>
+          <button type="button" class="chip" data-kw="apto comercial">apto comercial</button>
+          <button type="button" class="chip" data-kw="galpón">galpón</button>
+          <button type="button" class="chip" data-kw="cochera fija">cochera fija</button>
         </div>
       </div>
 
@@ -457,9 +481,25 @@
     <h3><span class="ic-h" data-icon="shield"></span> Señales de riesgo</h3>
     <p class="status">Las advertencias son ayudas para mirar con cuidado, no veredictos. Unas se calculan solas con los datos del aviso; otras dependen de tu criterio.</p>
     <div class="risk-legend">
-      <div><span class="flag flag-high"><span data-icon="alert"></span> Riesgo alto</span> precio anzuelo, publicación eterna, frase de alerta, o zona de inseguridad alta.</div>
+      <div><span class="flag flag-high"><span data-icon="alert"></span> Riesgo alto</span> precio anzuelo, publicación eterna, frase de alerta, villa, o zona de inseguridad alta.</div>
       <div><span class="flag flag-med"><span data-icon="alert"></span> Atención</span> publicada hace bastante, o zona de inseguridad media.</div>
       <div><span class="flag flag-low"><span data-icon="info"></span> Menor</span> una sola foto, sin precio, o una nota tuya.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3><span class="ic-h" data-icon="map-pin"></span> Mapa de inseguridad por comuna
+      <span class="info" tabindex="0" data-tip="Las 15 comunas de CABA coloreadas por delitos cada 100.000 habitantes, según los datos abiertos del GCBA (Mapa del Delito). Tocá una comuna para ver el desglose de delitos. Se actualiza una vez por mes."></span>
+    </h3>
+    <p class="status" id="crime-meta"></p>
+    <div class="crime-map-wrap">
+      <div id="crime-map"></div>
+      <div id="comuna-detail" class="comuna-detail"></div>
+    </div>
+    <div class="map-legend">
+      <span class="flag flag-high">Inseguridad alta</span>
+      <span class="flag flag-med">Media</span>
+      <span class="flag flag-low">Baja</span>
     </div>
   </div>
 

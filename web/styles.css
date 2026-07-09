@@ -41,6 +41,12 @@
 
   --code-bg: #F5F1E8;
 
+  /* --- Escala del mapa de inseguridad (rojo/ámbar/verde cálidos) --- */
+  --map-alto: #C15B47;
+  --map-medio: #D89A4E;
+  --map-bajo: #4E9E76;
+  --map-na: #D8D2C4;
+
   /* --- Radios / espaciado / movimiento --- */
   --r-sm: 8px;
   --r-md: 12px;
@@ -84,6 +90,11 @@
   --danger-container: #4A322B;
 
   --code-bg: #1A1713;
+
+  --map-alto: #C96650;
+  --map-medio: #D8A05C;
+  --map-bajo: #56A67E;
+  --map-na: #3E382F;
 
   color-scheme: dark;
 }
@@ -817,6 +828,34 @@ td .flags-wrap { margin-top: 4px; }
 }
 .note-btn:hover { color: var(--accent); }
 .note-btn.has-note { color: var(--accent); }
+
+/* Mapa de inseguridad por comuna */
+.crime-map-wrap { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 12px; }
+#crime-map { flex: 1 1 320px; max-width: 560px; }
+.crime-svg { width: 100%; height: auto; display: block; }
+.comuna { stroke: var(--card); stroke-width: 1; cursor: pointer; transition: opacity var(--dur) var(--ease); }
+.comuna:hover { opacity: 0.82; }
+.comuna.sel { stroke: var(--text); stroke-width: 2.5; }
+.cm-alto { fill: var(--map-alto); }
+.cm-medio { fill: var(--map-medio); }
+.cm-bajo { fill: var(--map-bajo); }
+.cm-na { fill: var(--map-na); }
+.cm-label { fill: #fff; font-size: 11px; font-weight: 500; text-anchor: middle; dominant-baseline: middle; pointer-events: none; }
+.map-legend { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+
+.comuna-detail { flex: 1 1 260px; min-width: 240px; }
+.cd-head { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.cd-stat { font-size: 13px; color: var(--text-soft); margin: 8px 0 12px; }
+.ctypes { display: flex; flex-direction: column; gap: 5px; }
+.ctype { display: grid; grid-template-columns: 92px 1fr 62px; gap: 8px; align-items: center; font-size: 12px; }
+.ctype-name { color: var(--text-soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ctype-bar { background: var(--surface-soft); border-radius: var(--r-pill); height: 8px; overflow: hidden; }
+.ctype-bar > span { display: block; height: 100%; background: var(--accent); border-radius: var(--r-pill); }
+.ctype-val { text-align: right; color: var(--text-soft); }
+
+/* Label de seguridad en el formulario de jobs */
+.zone-sec:empty { display: none; }
+.sec-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-soft); margin-top: 8px; }
 
 /* Modal */
 .modal-back {
