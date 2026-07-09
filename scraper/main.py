@@ -12,6 +12,7 @@ from typing import Any
 import yaml
 
 from . import filters as listing_filters
+from . import risk
 from .models import Search
 from .notify import send_telegram, write_github_summary
 from .sites import detect_site, get_scraper
@@ -169,6 +170,12 @@ def main() -> int:
         matching = [l for l in found if listing_filters.matches(l, search.filters)]
         stats[search.name] = len(matching)
         all_new.extend(add_new(stored, matching))
+
+    # Señales de riesgo: se recalculan sobre TODO el almacén (la antigüedad
+    # y las medianas cambian en cada corrida).
+    risk.compute_all(stored, config.get("risk"))
+    for listing in all_new:
+        listing.flags = stored.get(listing.id, {}).get("flags", [])
 
     save_listings(stored)
     append_run_history({

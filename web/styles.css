@@ -194,7 +194,7 @@ label {
   letter-spacing: 0.01em;
 }
 
-input, select {
+input, select, textarea {
   width: 100%;
   margin-top: 6px;
   padding: 9px 11px;
@@ -206,9 +206,10 @@ input, select {
   font-size: 15px;
   transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease);
 }
-input::placeholder { color: var(--text-faint); }
-input:hover, select:hover { border-color: var(--border-strong); }
-input:focus, select:focus {
+textarea { resize: vertical; line-height: 1.5; }
+input::placeholder, textarea::placeholder { color: var(--text-faint); }
+input:hover, select:hover, textarea:hover { border-color: var(--border-strong); }
+input:focus, select:focus, textarea:focus {
   outline: none;
   border-color: var(--accent);
   box-shadow: 0 0 0 1px var(--accent);
@@ -771,6 +772,65 @@ img.zoomable { cursor: zoom-in; }
 
 .job-flow:empty { display: none; }
 .job-flow { margin-top: 14px; border-top: 1px dashed var(--border); padding-top: 14px; }
+
+/* ============================================================
+   Señales de riesgo
+   ============================================================ */
+
+.flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  padding: 2px 9px;
+  border-radius: var(--r-pill);
+  white-space: nowrap;
+}
+.flag .ic { width: 0.95em; height: 0.95em; }
+.flag-high { background: var(--danger-container); color: var(--danger); }
+.flag-med { background: var(--warn-container); color: var(--warn); }
+.flag-low { background: var(--surface-soft); color: var(--text-soft); }
+.flags-wrap { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+.top-flags { padding: 0 14px 12px; }
+td .flags-wrap { margin-top: 4px; }
+
+.risk-legend { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; font-size: 14px; color: var(--text-soft); }
+.risk-legend .flag { margin-right: 6px; }
+
+.zone-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+.zone-row:last-child { border-bottom: none; }
+.zone-row .zone-name { flex: 1; text-transform: capitalize; }
+.note-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-faint);
+  display: inline-flex;
+  padding: 2px;
+}
+.note-btn:hover { color: var(--accent); }
+.note-btn.has-note { color: var(--accent); }
+
+/* Modal */
+.modal-back {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 17, 13, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 150;
+  padding: 24px;
+}
+.modal-card { width: min(480px, 100%); margin: 0; max-height: 88vh; overflow-y: auto; }
+.modal-card label { margin-top: 12px; }
 
 /* ============================================================
    Responsive + accesibilidad

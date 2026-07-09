@@ -52,7 +52,11 @@ def send_telegram(new_listings: list[Listing]) -> bool:
     for listing in new_listings:
         title = html.escape(listing.title or listing.address or listing.site)
         detail = html.escape(format_listing_line(listing))
-        lines.append(f"• <a href=\"{html.escape(listing.url)}\">{title}</a>\n  {detail}")
+        line = f"• <a href=\"{html.escape(listing.url)}\">{title}</a>\n  {detail}"
+        alerts = [f["label"] for f in (listing.flags or []) if f.get("level") == "high"]
+        if alerts:
+            line += "\n  ⚠️ " + html.escape(" · ".join(alerts))
+        lines.append(line)
 
     # Cortamos en mensajes de menos de 4096 caracteres.
     messages: list[str] = []
