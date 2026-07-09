@@ -1,0 +1,206 @@
+{
+ "generated_at": "2026-07-09T20:52:30Z",
+ "source": "GCBA datos abiertos — Mapa del Delito",
+ "years": [
+  2024,
+  2023,
+  2022
+ ],
+ "comunas": {
+  "1": {
+   "total": 59887,
+   "per100k": 24344,
+   "level": "alto",
+   "by_type": {
+    "Robo": 26372,
+    "Hurto": 23743,
+    "Lesiones": 3987,
+    "Amenazas": 2901,
+    "Vialidad": 2835,
+    "Homicidios": 49
+   }
+  },
+  "2": {
+   "total": 19978,
+   "per100k": 12725,
+   "level": "medio",
+   "by_type": {
+    "Hurto": 8700,
+    "Robo": 8492,
+    "Vialidad": 1004,
+    "Lesiones": 992,
+    "Amenazas": 786,
+    "Homicidios": 4
+   }
+  },
+  "3": {
+   "total": 36701,
+   "per100k": 21338,
+   "level": "alto",
+   "by_type": {
+    "Robo": 16413,
+    "Hurto": 14448,
+    "Vialidad": 2166,
+    "Lesiones": 2062,
+    "Amenazas": 1597,
+    "Homicidios": 15
+   }
+  },
+  "4": {
+   "total": 40182,
+   "per100k": 16742,
+   "level": "alto",
+   "by_type": {
+    "Robo": 19426,
+    "Hurto": 12445,
+    "Amenazas": 3259,
+    "Lesiones": 3253,
+    "Vialidad": 1738,
+    "Homicidios": 61
+   }
+  },
+  "5": {
+   "total": 23133,
+   "per100k": 12175,
+   "level": "medio",
+   "by_type": {
+    "Robo": 10740,
+    "Hurto": 9143,
+    "Lesiones": 1110,
+    "Amenazas": 1099,
+    "Vialidad": 1033,
+    "Homicidios": 8
+   }
+  },
+  "6": {
+   "total": 19409,
+   "per100k": 11028,
+   "level": "bajo",
+   "by_type": {
+    "Hurto": 8240,
+    "Robo": 8032,
+    "Vialidad": 1350,
+    "Lesiones": 931,
+    "Amenazas": 851,
+    "Homicidios": 5
+   }
+  },
+  "7": {
+   "total": 34735,
+   "per100k": 14178,
+   "level": "medio",
+   "by_type": {
+    "Robo": 16896,
+    "Hurto": 12278,
+    "Vialidad": 1998,
+    "Lesiones": 1890,
+    "Amenazas": 1635,
+    "Homicidios": 38
+   }
+  },
+  "8": {
+   "total": 29450,
+   "per100k": 13266,
+   "level": "medio",
+   "by_type": {
+    "Robo": 13247,
+    "Hurto": 9142,
+    "Amenazas": 2865,
+    "Lesiones": 2788,
+    "Vialidad": 1373,
+    "Homicidios": 35
+   }
+  },
+  "9": {
+   "total": 25741,
+   "per100k": 14709,
+   "level": "medio",
+   "by_type": {
+    "Hurto": 10868,
+    "Robo": 9742,
+    "Vialidad": 1982,
+    "Lesiones": 1574,
+    "Amenazas": 1568,
+    "Homicidios": 7
+   }
+  },
+  "10": {
+   "total": 21093,
+   "per100k": 12122,
+   "level": "bajo",
+   "by_type": {
+    "Hurto": 9793,
+    "Robo": 6958,
+    "Vialidad": 1851,
+    "Amenazas": 1328,
+    "Lesiones": 1162,
+    "Homicidios": 1
+   }
+  },
+  "11": {
+   "total": 21561,
+   "per100k": 11057,
+   "level": "bajo",
+   "by_type": {
+    "Hurto": 10269,
+    "Robo": 7545,
+    "Vialidad": 1641,
+    "Amenazas": 1144,
+    "Lesiones": 958,
+    "Homicidios": 4
+   }
+  },
+  "12": {
+   "total": 22162,
+   "per100k": 10308,
+   "level": "bajo",
+   "by_type": {
+    "Hurto": 9441,
+    "Robo": 7956,
+    "Vialidad": 2276,
+    "Amenazas": 1287,
+    "Lesiones": 1195,
+    "Homicidios": 7
+   }
+  },
+  "13": {
+   "total": 26165,
+   "per100k": 10680,
+   "level": "bajo",
+   "by_type": {
+    "Hurto": 11682,
+    "Robo": 10457,
+    "Vialidad": 1944,
+    "Lesiones": 1105,
+    "Amenazas": 973,
+    "Homicidios": 4
+   }
+  },
+  "14": {
+   "total": 37726,
+   "per100k": 16693,
+   "level": "alto",
+   "by_type": {
+    "Hurto": 17474,
+    "Robo": 15510,
+    "Vialidad": 2086,
+    "Lesiones": 1564,
+    "Amenazas": 1085,
+    "Homicidios": 7
+   }
+  },
+  "15": {
+   "total": 28257,
+   "per100k": 15030,
+   "level": "alto",
+   "by_type": {
+    "Hurto": 11489,
+    "Robo": 11445,
+    "Vialidad": 2438,
+    "Lesiones": 1445,
+    "Amenazas": 1429,
+    "Homicidios": 11
+   }
+  }
+ }
+}
