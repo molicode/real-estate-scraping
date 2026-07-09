@@ -3,5 +3,16 @@
   "defaults": {
     "max_pages": 2
   },
-  "searches": []
+  "searches": [
+    {
+      "name": "csdfsdfsdf",
+      "url": "https://www.argenprop.com/departamentos/alquiler/capital-federal",
+      "site": "argenprop",
+      "operation": "alquiler",
+      "enabled": true,
+      "max_pages": 2,
+      "every_hours": 1,
+      "filters": {}
+    }
+  ]
 }
