@@ -65,6 +65,35 @@ def test_no_price_y_few_photos():
     assert "few_photos" in flag_types(item)
 
 
+def test_villa_flag():
+    item = make("1", address="Depto cerca de Villa 31, Retiro")
+    risk.compute_all({"1": item}, now=NOW, crime={})
+    assert "villa" in flag_types(item)
+    assert next(f for f in item["flags"] if f["type"] == "villa")["level"] == "high"
+
+
+def test_crime_flag_por_comuna():
+    crime = {
+        "14": {"level": "bajo", "per100k": 1200},
+        "1": {"level": "alto", "per100k": 5400},
+    }
+    palermo = make("p", address="Thames 800, Palermo")
+    centro = make("c", address="Lima 100, Constitución")
+    store = {"p": palermo, "c": centro}
+    risk.compute_all(store, now=NOW, crime=crime)
+    cp = next(f for f in palermo["flags"] if f["type"] == "crime")
+    cc = next(f for f in centro["flags"] if f["type"] == "crime")
+    assert cp["level"] == "low"
+    assert cc["level"] == "high"
+    assert "Comuna 1" in cc["label"]
+
+
+def test_sin_crime_no_rompe():
+    item = make("1", address="Thames 800, Palermo")
+    risk.compute_all({"1": item}, now=NOW, crime={})
+    assert not any(f["type"] == "crime" for f in item["flags"])
+
+
 def test_summarize_solo_altas():
     item = make("1", first_seen=iso(NOW - timedelta(days=95)))
     risk.compute_all({"1": item}, now=NOW)

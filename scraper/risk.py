@@ -18,10 +18,22 @@ mantiene, porque no hay una fuente objetiva para inventarlas.
 
 from __future__ import annotations
 
+import json
 import re
 import statistics
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Any
+
+from . import geo
+
+CRIME_FILE = Path(__file__).resolve().parent.parent / "data" / "crime.json"
+
+_CRIME_LEVEL_FLAG = {
+    "alto": ("high", "inseguridad alta"),
+    "medio": ("med", "inseguridad media"),
+    "bajo": ("low", "inseguridad baja"),
+}
 
 # Frases (no palabras sueltas) para minimizar falsos positivos. "seña" sola
 # es normal en una operación; lo sospechoso es pedir plata sin ver.
@@ -64,10 +76,47 @@ def _group_key(item: dict[str, Any]) -> tuple:
     )
 
 
+def load_crime(path: Path | None = None) -> dict[str, Any]:
+    path = path or CRIME_FILE
+    try:
+        with (path).open(encoding="utf-8") as fh:
+            data = json.load(fh)
+        return data.get("comunas", {}) if isinstance(data, dict) else {}
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
+def _location_flags(item: dict[str, Any], crime: dict[str, Any]) -> list[dict[str, str]]:
+    """Señales de ubicación: villa (heurística) y nivel de delito oficial."""
+    text = f"{item.get('address', '')} {item.get('search_name', '')} {item.get('url', '')}"
+    flags: list[dict[str, str]] = []
+
+    villa = geo.is_villa(text)
+    if villa:
+        flags.append({
+            "type": "villa", "level": "high",
+            "label": f"Zona de villa/asentamiento ({villa}) — inseguridad alta",
+        })
+
+    comuna = geo.find_comuna(text)
+    if comuna is not None and crime:
+        info = crime.get(str(comuna))
+        if info and info.get("level") in _CRIME_LEVEL_FLAG:
+            lvl, txt = _CRIME_LEVEL_FLAG[info["level"]]
+            per = info.get("per100k")
+            extra = f" ({round(per):,} delitos/100k hab)".replace(",", ".") if per else ""
+            flags.append({
+                "type": "crime", "level": lvl,
+                "label": f"Comuna {comuna}: {txt} según datos oficiales{extra}",
+            })
+    return flags
+
+
 def compute_all(
     listings: dict[str, dict[str, Any]],
     config: dict[str, Any] | None = None,
     now: datetime | None = None,
+    crime: dict[str, Any] | None = None,
 ) -> None:
     """Calcula y asigna `flags` a cada aviso del almacén (in place).
 
@@ -77,6 +126,7 @@ def compute_all(
     cfg = {**DEFAULTS, **(config or {})}
     now = now or datetime.now(timezone.utc)
     keywords = [k.lower() for k in (cfg.get("keywords") or [])]
+    crime = load_crime() if crime is None else crime
 
     # Medianas de precio por grupo (operación + moneda + ambientes)
     groups: dict[tuple, list[float]] = {}
@@ -134,6 +184,9 @@ def compute_all(
         images = item.get("images") or ([item["image"]] if item.get("image") else [])
         if len(images) <= 1:
             flags.append({"type": "few_photos", "level": "low", "label": "Una sola foto o sin fotos"})
+
+        # 5) Ubicación: villa + nivel de delito oficial por comuna
+        flags.extend(_location_flags(item, crime))
 
         item["flags"] = flags
 
