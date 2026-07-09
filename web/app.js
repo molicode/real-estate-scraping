@@ -246,6 +246,9 @@ async function connect() {
     $("tabs").classList.remove("hidden");
     $("main").classList.remove("hidden");
     await loadJobs();
+    // Cargar la base de delitos en segundo plano para los puntos de
+    // seguridad en las tarjetas de jobs y el label del formulario.
+    loadCrimeData().then(() => { if (jobsDoc) renderJobs(); });
   } catch (err) {
     setConnState("red", "Error de conexión con GitHub");
     setStatus($("auth-status"), "" + err.message, "error");
@@ -311,11 +314,51 @@ function fmtFilters(f = {}) {
   if (f.min_rooms) parts.push(`${f.min_rooms}+ amb`);
   if (f.max_rooms) parts.push(`máx ${f.max_rooms} amb`);
   if (f.min_bedrooms) parts.push(`${f.min_bedrooms}+ dorm`);
+  if (f.min_bathrooms) parts.push(`${f.min_bathrooms}+ baños`);
   if (f.min_surface_m2) parts.push(`${f.min_surface_m2}+ m²`);
   if (f.require_price) parts.push("con precio");
   if (f.keywords_include?.length) parts.push(`incluye: ${f.keywords_include.join(", ")}`);
   if (f.keywords_exclude?.length) parts.push(`excluye: ${f.keywords_exclude.join(", ")}`);
   return parts.join(" · ") || "sin filtros extra";
+}
+
+const PTYPE_LABEL = {
+  departamento: "depto", casa: "casa", ph: "PH",
+  local: "local", oficina: "oficina", terreno: "terreno",
+};
+
+// Tipo de propiedad del job: guardado (modo menú) o derivado de la URL
+function jobPtype(job) {
+  if (job.ptype) return PTYPE_LABEL[job.ptype] || job.ptype;
+  const u = (job.url || "").toLowerCase();
+  if (/\bdepartamento|deptos?\b/.test(u)) return "depto";
+  if (/\bcasas?\b/.test(u)) return "casa";
+  if (/\bph\b/.test(u)) return "PH";
+  if (/local/.test(u)) return "local";
+  if (/oficina/.test(u)) return "oficina";
+  if (/terreno/.test(u)) return "terreno";
+  return null;
+}
+
+// Zona/barrio del job: guardada o buscada en la URL
+function jobZone(job) {
+  if (job.zone) return job.zone.replace(/-/g, " ");
+  const hay = normZone(job.url || "");
+  for (const b of Object.keys(BARRIO_COMUNA).sort((a, z) => z.length - a.length)) {
+    if (hay.includes(b)) return b;
+  }
+  if (hay.includes("capital-federal") || hay.includes("capital federal")) return "capital federal";
+  return null;
+}
+
+// Punto de color con el nivel de inseguridad de la zona (si hay datos)
+function zoneDot(job) {
+  if (!crimeData) return "";
+  const comuna = comunaFromZone(job.zone || job.url || "");
+  const info = comuna && crimeData.comunas[String(comuna)];
+  if (!info) return "";
+  const dot = (LEVEL_INFO[info.level] || {}).dot || "";
+  return `<span class="dot ${dot}" title="Seguridad: ${(LEVEL_INFO[info.level] || {}).txt}"></span>`;
 }
 
 function renderJobs() {
@@ -342,13 +385,15 @@ function renderJobs() {
         <span class="badge ${enabled ? "on" : "off"}">${enabled ? "ACTIVO" : "DETENIDO"}</span>
         <span class="badge">${job.site || "?"}</span>
         <span class="badge">${job.operation === "venta" ? "compra" : job.operation || "?"}</span>
+        ${jobPtype(job) ? `<span class="badge">${escapeHtml(jobPtype(job))}</span>` : ""}
+        ${jobZone(job) ? `<span class="badge">${zoneDot(job)}${escapeHtml(jobZone(job))}</span>` : ""}
         <span class="badge" title="Frecuencia con la que corre en el cron">${icon("timer", 13)} cada ${every} h</span>
         <span class="job-name">${escapeHtml(job.name || `job ${i + 1}`)}</span>
         <span class="summary-hint">detalles ${icon("chevron-down", 14)}</span>
       </summary>
       <div class="details-body">
-        <div class="meta">${escapeHtml(job.url || "")}</div>
-        <div class="meta">${escapeHtml(fmtFilters(job.filters))} · ${job.max_pages || 1} pág. · corre cada ${every} h</div>
+        <div class="meta"><strong>Filtros:</strong> ${escapeHtml(fmtFilters(job.filters))}</div>
+        <div class="meta">${job.max_pages || 1} ${job.max_pages === 1 ? "página" : "páginas"} por corrida</div>
         <div class="row">
           <button class="btn small" data-act="toggle" data-i="${i}" title="${enabled ? "Deja de ejecutarse en el cron (se guarda al instante)" : "Vuelve a la programación (se guarda al instante)"}">${enabled ? icon("stop") + " Detener" : icon("play") + " Activar"}</button>
           <button class="btn small" data-act="run" data-i="${i}" title="Ejecuta SOLO este job ahora mismo, aunque esté detenido">${icon("play")} Ejecutar ahora</button>
@@ -615,6 +660,7 @@ function openForm(index) {
   $("f-min-rooms").value = f.min_rooms ?? "";
   $("f-max-rooms").value = f.max_rooms ?? "";
   $("f-min-bedrooms").value = f.min_bedrooms ?? "";
+  $("f-min-bathrooms").value = f.min_bathrooms ?? "";
   $("f-min-surface").value = f.min_surface_m2 ?? "";
   $("f-require-price").value = String(!!f.require_price);
   $("f-kw-include").value = (f.keywords_include || []).join(", ");
@@ -663,7 +709,8 @@ $("job-form").addEventListener("submit", (e) => {
   for (const [key, id] of [
     ["min_price", "f-min-price"], ["max_price", "f-max-price"],
     ["min_rooms", "f-min-rooms"], ["max_rooms", "f-max-rooms"],
-    ["min_bedrooms", "f-min-bedrooms"], ["min_surface_m2", "f-min-surface"],
+    ["min_bedrooms", "f-min-bedrooms"], ["min_bathrooms", "f-min-bathrooms"],
+    ["min_surface_m2", "f-min-surface"],
   ]) {
     const v = numOrNull(id);
     if (v != null) filters[key] = v;
@@ -684,6 +731,17 @@ $("job-form").addEventListener("submit", (e) => {
     every_hours: Number($("f-every").value) || 1,
     filters,
   };
+  // Tipo y zona para mostrar en la tarjeta. En modo menú se toman de los
+  // selectores; al editar (modo URL) se conservan los que ya tenía el job.
+  const prev = editingIndex != null ? jobsDoc.searches[editingIndex] : {};
+  if (isMenuMode()) {
+    job.ptype = $("f-ptype").value;
+    const zone = $("f-zone").value.trim();
+    if (zone) job.zone = zone;
+  } else {
+    if (prev.ptype) job.ptype = prev.ptype;
+    if (prev.zone) job.zone = prev.zone;
+  }
   const isNew = editingIndex == null;
   if (isNew) jobsDoc.searches.push(job);
   else jobsDoc.searches[editingIndex] = job;
@@ -805,6 +863,7 @@ function applySearch() {
   const rooms = numVal("s-min-rooms");
   const roomsMax = numVal("s-max-rooms");
   const beds = numVal("s-min-bedrooms");
+  const baths = numVal("s-min-bathrooms");
   const surf = numVal("s-min-surface");
   const surfMax = numVal("s-max-surface");
   const withPhoto = $("s-with-photo").value === "yes";
@@ -826,6 +885,7 @@ function applySearch() {
     if (rooms != null && !(l.rooms != null && l.rooms >= rooms)) return false;
     if (roomsMax != null && l.rooms != null && l.rooms > roomsMax) return false;
     if (beds != null && !(l.bedrooms != null && l.bedrooms >= beds)) return false;
+    if (baths != null && !(l.bathrooms != null && l.bathrooms >= baths)) return false;
     if (surf != null && !(l.surface_m2 != null && l.surface_m2 >= surf)) return false;
     if (surfMax != null && l.surface_m2 != null && l.surface_m2 > surfMax) return false;
     if (withPhoto && !l.image) return false;
@@ -1551,7 +1611,7 @@ $("reload-results").addEventListener("click", loadResults);
 
 const SEARCH_TEXT_FIELDS = [
   "s-text", "s-text-exclude", "s-min-price", "s-max-price",
-  "s-min-rooms", "s-max-rooms", "s-min-bedrooms",
+  "s-min-rooms", "s-max-rooms", "s-min-bedrooms", "s-min-bathrooms",
   "s-min-surface", "s-max-surface", "s-since",
 ];
 const SEARCH_SELECT_FIELDS = [
