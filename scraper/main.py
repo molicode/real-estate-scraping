@@ -172,7 +172,8 @@ def main() -> int:
         all_new.extend(add_new(stored, matching))
 
     # Señales de riesgo: se recalculan sobre TODO el almacén (la antigüedad
-    # y las medianas cambian en cada corrida).
+    # y las medianas cambian en cada corrida). Incluye villa + delito oficial
+    # por comuna (data/crime.json, mantenido por el workflow de delitos).
     risk.compute_all(stored, config.get("risk"))
     for listing in all_new:
         listing.flags = stored.get(listing.id, {}).get("flags", [])
