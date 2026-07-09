@@ -79,6 +79,9 @@ const ICONS = {
   alert: '<path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>',
   "arrow-right": '<line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>',
   image: '<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>',
+  shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+  "map-pin": '<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>',
+  info: '<circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>',
 };
 
 function icon(name, size = 16) {
@@ -274,6 +277,7 @@ document.querySelectorAll(".tab").forEach((btn) => {
     if (btn.dataset.tab === "results" && !$("results-list").innerHTML) loadResults();
     if (btn.dataset.tab === "top" && !$("top-rent").innerHTML) loadResults();
     if (btn.dataset.tab === "fav" && !$("fav-list").innerHTML) loadFavorites().then(renderFavorites);
+    if (btn.dataset.tab === "risk" && !$("zones-list").innerHTML) loadRiskData().then(renderZones);
     if (btn.dataset.tab === "runs" && !$("runs-list").innerHTML) loadRuns();
   });
 });
@@ -752,6 +756,7 @@ async function loadResults() {
     }
     allListings = Object.values(await resp.json());
     if (!favLoaded) await loadFavorites();
+    if (!riskLoaded) await loadRiskData();
     populateSearchSelects();
     applySearch();
     renderTop();
@@ -800,6 +805,7 @@ function applySearch() {
   const surfMax = numVal("s-max-surface");
   const withPhoto = $("s-with-photo").value === "yes";
   const onlyFav = $("s-only-fav").value === "yes";
+  const risk = $("s-risk").value;
   const since = $("s-since").value; // yyyy-mm-dd, comparable con first_seen ISO
 
   const out = allListings.filter((l) => {
@@ -821,11 +827,18 @@ function applySearch() {
     if (withPhoto && !l.image) return false;
     if (onlyFav && !isFav(l.id)) return false;
     if (since && (l.first_seen || "") < since) return false;
+    if (risk) {
+      const rank = riskLevelRank(l);
+      if (risk === "flagged" && rank === 0) return false;
+      if (risk === "hide-high" && rank === 3) return false;
+      if (risk === "only-high" && rank !== 3) return false;
+    }
     return true;
   });
 
   const sorters = {
     recent: (a, b) => (b.first_seen || "").localeCompare(a.first_seen || ""),
+    oldest: (a, b) => (a.first_seen || "").localeCompare(b.first_seen || ""),
     price_asc: (a, b) => (a.price_amount ?? Infinity) - (b.price_amount ?? Infinity),
     price_desc: (a, b) => (b.price_amount ?? -1) - (a.price_amount ?? -1),
     ppm2_asc: (a, b) => (pricePerM2(a) ?? Infinity) - (pricePerM2(b) ?? Infinity),
@@ -958,6 +971,7 @@ function favCardHtml(l) {
         <div class="top-meta">${escapeHtml(meta)}</div>
         <div class="top-meta">${escapeHtml(l.address || "")}</div>
         <div class="top-meta"><span class="badge">${escapeHtml(l.site)}</span> ${escapeHtml((l.saved_at || "").slice(0, 10))}</div>
+        ${flagChipsHtml(l)}
       </div>
     </div>`;
 }
@@ -973,6 +987,93 @@ function renderFavorites() {
 }
 
 $("reload-fav").addEventListener("click", () => loadFavorites().then(renderFavorites));
+
+/* ---------- Señales de riesgo (auto del scraper + zonas y notas del usuario) ---------- */
+
+let zones = {};
+let zonesSha = null;
+let userNotes = {};
+let notesSha = null;
+let riskLoaded = false;
+let riskQueue = Promise.resolve();
+
+function safeParse(s, dflt) {
+  try { return JSON.parse(s); } catch { return dflt; }
+}
+
+async function loadRiskData() {
+  try {
+    const z = await fetchFile("data/zones.json");
+    zonesSha = z.sha;
+    zones = z.content ? safeParse(z.content, {}) : {};
+    const n = await fetchFile("data/notes.json");
+    notesSha = n.sha;
+    userNotes = n.content ? safeParse(n.content, {}) : {};
+  } catch {
+    zones = {}; userNotes = {};
+  }
+  riskLoaded = true;
+}
+
+function normZone(s) {
+  return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+}
+
+function zoneFlag(l) {
+  const hay = normZone(`${l.address} ${l.search_name} ${l.url}`);
+  for (const [name, level] of Object.entries(zones)) {
+    if (name && hay.includes(normZone(name))) {
+      if (level === "alta") return { level: "high", label: `Zona marcada como inseguridad alta (${name})` };
+      if (level === "media") return { level: "med", label: `Zona marcada como inseguridad media (${name})` };
+      return { level: "low", label: `Zona marcada como tranquila (${name})` };
+    }
+  }
+  return null;
+}
+
+function noteFlags(l) {
+  const n = userNotes[l.id];
+  if (!n) return [];
+  if (n.level) return [{ level: n.level, label: n.note ? `Tu nota: ${n.note}` : "Marcada por vos" }];
+  if (n.note) return [{ level: "low", label: `Tu nota: ${n.note}` }];
+  return [];
+}
+
+// Combina las señales automáticas del scraper con la zona y las notas propias
+function displayFlags(l) {
+  const flags = [...(l.flags || [])];
+  const z = zoneFlag(l);
+  if (z) flags.push(z);
+  flags.push(...noteFlags(l));
+  return flags;
+}
+
+function riskLevelRank(l) {
+  const levels = displayFlags(l).map((f) => f.level);
+  if (levels.includes("high")) return 3;
+  if (levels.includes("med")) return 2;
+  if (levels.length) return 1;
+  return 0;
+}
+
+function shortFlag(s) {
+  return s.length > 46 ? s.slice(0, 44) + "…" : s;
+}
+
+function flagChipsHtml(l) {
+  const flags = displayFlags(l);
+  if (!flags.length) return "";
+  const cls = { high: "flag-high", med: "flag-med", low: "flag-low", info: "flag-low" };
+  return `<div class="flags-wrap">${flags.map((f) => {
+    const ic = f.level === "high" || f.level === "med" ? "alert" : "info";
+    return `<span class="flag ${cls[f.level] || "flag-low"}" title="${escapeHtml(f.label)}">${icon(ic, 12)} ${escapeHtml(shortFlag(f.label))}</span>`;
+  }).join("")}</div>`;
+}
+
+function noteBtnHtml(l) {
+  const has = Boolean(userNotes[l.id]);
+  return `<button class="note-btn${has ? " has-note" : ""}" data-note="${escapeHtml(l.id)}" title="${has ? "Editar tu nota" : "Agregar una nota / marca"}">${icon("pencil", 15)}</button>`;
+}
 
 function thumbHtml(l) {
   const imgs = (l.images && l.images.length ? l.images : [l.image]).filter(Boolean);
@@ -994,18 +1095,19 @@ function renderResults(listings) {
   const rows = listings.map((l) => `
     <tr>
       <td>${thumbHtml(l)}</td>
-      <td>${escapeHtml((l.first_seen || "").slice(0, 16).replace("T", " "))}</td>
+      <td class="tabnum">${escapeHtml((l.first_seen || "").slice(0, 16).replace("T", " "))}</td>
       <td><span class="badge">${escapeHtml(l.site)}</span></td>
       <td><a href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.title || l.address || "ver aviso")}</a><br>
-          <small>${escapeHtml(l.address || "")}</small></td>
+          <small>${escapeHtml(l.address || "")}</small>
+          ${flagChipsHtml(l)}</td>
       <td>${fmtPrice(l)}</td>
       <td>${l.rooms ?? "-"} amb / ${l.surface_m2 ? l.surface_m2 + " m²" : "-"}</td>
       <td><small>${escapeHtml(l.search_name || "")}</small></td>
-      <td>${heartHtml(l)}</td>
+      <td><div class="row" style="gap:2px;margin:0">${noteBtnHtml(l)}${heartHtml(l)}</div></td>
     </tr>`).join("");
   $("results-list").innerHTML = `
     <table>
-      <thead><tr><th>Foto</th><th>Visto</th><th>Portal</th><th>Aviso</th><th>Precio</th><th>Amb/m²</th><th>Job</th><th></th></tr></thead>
+      <thead><tr><th>Foto</th><th>Visto</th><th>Portal</th><th>Aviso y señales</th><th>Precio</th><th>Amb/m²</th><th>Job</th><th></th></tr></thead>
       <tbody>${rows}</tbody>
     </table>`;
 }
@@ -1182,6 +1284,7 @@ function topCardHtml({ l, detail }, rank) {
         <div class="top-meta">${escapeHtml(meta)}</div>
         <div class="top-meta">${escapeHtml(l.address || "")}</div>
         <div class="top-meta"><span class="badge">${escapeHtml(l.site)}</span> ${escapeHtml(l.search_name || "")}</div>
+        ${flagChipsHtml(l)}
       </div>
     </div>`;
 }
@@ -1310,7 +1413,7 @@ const SEARCH_TEXT_FIELDS = [
 ];
 const SEARCH_SELECT_FIELDS = [
   "s-site", "s-job", "s-operation", "s-currency",
-  "s-require-price", "s-with-photo", "s-only-fav", "s-sort",
+  "s-require-price", "s-with-photo", "s-only-fav", "s-risk", "s-sort",
 ];
 SEARCH_TEXT_FIELDS.forEach((id) => $(id).addEventListener("input", applySearch));
 SEARCH_SELECT_FIELDS.forEach((id) => $(id).addEventListener("change", applySearch));
@@ -1505,6 +1608,122 @@ $("runs-list").addEventListener("click", async (e) => {
   } finally {
     btn.disabled = false;
   }
+});
+
+/* ---------- Editor de zonas (mapa de seguridad del usuario) ---------- */
+
+const ZONE_LABELS = {
+  alta: { txt: "Inseguridad alta", cls: "flag-high" },
+  media: { txt: "Inseguridad media", cls: "flag-med" },
+  baja: { txt: "Tranquila", cls: "flag-low" },
+};
+
+function renderZones() {
+  const entries = Object.entries(zones);
+  $("zones-list").innerHTML = entries.length
+    ? entries.map(([name, level]) => {
+        const m = ZONE_LABELS[level] || ZONE_LABELS.media;
+        return `<div class="zone-row">
+          <span class="zone-name">${escapeHtml(name)}</span>
+          <span class="flag ${m.cls}">${m.txt}</span>
+          <button class="btn small danger" data-zone-del="${escapeHtml(name)}">${icon("trash")} Quitar</button>
+        </div>`;
+      }).join("")
+    : '<p class="status">Todavía no cargaste zonas. Agregá los barrios que conocés con su nivel de inseguridad.</p>';
+}
+
+async function persistZones(msg) {
+  setStatus($("zones-status"), "Guardando zonas...");
+  try {
+    zonesSha = await putFile("data/zones.json", JSON.stringify(zones, null, 2) + "\n", zonesSha, "chore: actualizar mapa de zonas desde la web");
+    renderZones();
+    if (allListings.length) { applySearch(); renderTop(); }
+    setStatus($("zones-status"), msg || "Guardado", "ok");
+  } catch (err) {
+    try {
+      const { sha } = await fetchFile("data/zones.json");
+      zonesSha = await putFile("data/zones.json", JSON.stringify(zones, null, 2) + "\n", sha, "chore: actualizar mapa de zonas desde la web");
+      renderZones();
+      setStatus($("zones-status"), msg || "Guardado", "ok");
+    } catch (err2) {
+      setStatus($("zones-status"), "No se pudo guardar: " + err2.message, "error");
+    }
+  }
+}
+
+$("zone-add").addEventListener("click", () => {
+  const name = $("zone-name").value.trim().toLowerCase();
+  if (!name) { setStatus($("zones-status"), "Escribí un barrio o zona", "error"); return; }
+  zones[name] = $("zone-level").value;
+  $("zone-name").value = "";
+  persistZones(`Zona "${name}" guardada`);
+});
+
+$("zones-list").addEventListener("click", (e) => {
+  const btn = e.target.closest("button[data-zone-del]");
+  if (!btn) return;
+  delete zones[btn.dataset.zoneDel];
+  persistZones("Zona quitada");
+});
+
+/* ---------- Notas por propiedad (reseñas propias) ---------- */
+
+let noteEditingId = null;
+
+function openNoteModal(id) {
+  const listing = allListings.find((l) => l.id === id) || Object.values(favorites).find((l) => l.id === id);
+  noteEditingId = id;
+  const existing = userNotes[id] || {};
+  $("note-target").textContent = listing ? (listing.title || listing.address || id) : id;
+  $("note-level").value = existing.level || "";
+  $("note-text").value = existing.note || "";
+  setStatus($("note-status"), "");
+  $("note-delete").classList.toggle("hidden", !userNotes[id]);
+  $("note-modal").classList.remove("hidden");
+  $("note-text").focus();
+}
+
+function closeNoteModal() {
+  $("note-modal").classList.add("hidden");
+  noteEditingId = null;
+}
+
+async function persistNotes() {
+  try {
+    notesSha = await putFile("data/notes.json", JSON.stringify(userNotes, null, 2) + "\n", notesSha, "chore: actualizar notas de propiedades desde la web");
+  } catch (err) {
+    const { sha } = await fetchFile("data/notes.json");
+    notesSha = await putFile("data/notes.json", JSON.stringify(userNotes, null, 2) + "\n", sha, "chore: actualizar notas de propiedades desde la web");
+  }
+}
+
+document.body.addEventListener("click", (e) => {
+  const btn = e.target.closest("button[data-note]");
+  if (btn) { e.preventDefault(); openNoteModal(btn.dataset.note); }
+});
+
+$("note-cancel").addEventListener("click", closeNoteModal);
+$("note-modal").addEventListener("click", (e) => { if (e.target === $("note-modal")) closeNoteModal(); });
+
+$("note-save").addEventListener("click", async () => {
+  if (!noteEditingId) return;
+  const note = $("note-text").value.trim();
+  const level = $("note-level").value;
+  if (!note && !level) { closeNoteModal(); return; }
+  userNotes[noteEditingId] = { note, level };
+  const id = noteEditingId;
+  closeNoteModal();
+  applySearch(); renderTop(); renderFavorites();
+  riskQueue = riskQueue.then(persistNotes).catch(() => {});
+  setStatus($("results-status"), "Nota guardada", "ok");
+});
+
+$("note-delete").addEventListener("click", async () => {
+  if (!noteEditingId || !userNotes[noteEditingId]) { closeNoteModal(); return; }
+  delete userNotes[noteEditingId];
+  closeNoteModal();
+  applySearch(); renderTop(); renderFavorites();
+  riskQueue = riskQueue.then(persistNotes).catch(() => {});
 });
 
 /* ---------- Init ---------- */

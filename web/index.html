@@ -64,6 +64,7 @@
   <button class="tab" data-tab="top"><span data-icon="star"></span> Top 5</button>
   <button class="tab" data-tab="results"><span data-icon="search"></span> Buscar</button>
   <button class="tab" data-tab="fav"><span data-icon="heart"></span> Me gustan</button>
+  <button class="tab" data-tab="risk"><span data-icon="shield"></span> Riesgo</button>
   <button class="tab" data-tab="runs"><span data-icon="clock"></span> Corridas</button>
 </nav>
 
@@ -410,6 +411,15 @@
             <option value="yes">Sí</option>
           </select>
         </label>
+        <label>Señales de riesgo
+          <span class="info" tabindex="0" data-tip="Filtrá por las advertencias automáticas y las tuyas. 'Ocultar riesgo alto' esconde los avisos con alguna señal roja (precio anzuelo, publicación eterna, frase de alerta, zona de inseguridad alta)."></span>
+          <select id="s-risk">
+            <option value="">Mostrar todo</option>
+            <option value="flagged">Solo con señales</option>
+            <option value="hide-high">Ocultar riesgo alto</option>
+            <option value="only-high">Solo riesgo alto</option>
+          </select>
+        </label>
         <label>Ordenar por
           <select id="s-sort">
             <option value="recent">Más recientes primero</option>
@@ -417,6 +427,7 @@
             <option value="price_desc">Precio: mayor a menor</option>
             <option value="ppm2_asc">Precio por m²: menor a mayor</option>
             <option value="surface_desc">Superficie: mayor a menor</option>
+            <option value="oldest">Más tiempo publicadas primero</option>
           </select>
         </label>
       </div>
@@ -440,6 +451,60 @@
   </div>
   <div id="fav-list"></div>
 </section>
+
+<section id="tab-risk" class="tab-panel hidden">
+  <div class="card">
+    <h3><span class="ic-h" data-icon="shield"></span> Señales de riesgo</h3>
+    <p class="status">Las advertencias son ayudas para mirar con cuidado, no veredictos. Unas se calculan solas con los datos del aviso; otras dependen de tu criterio.</p>
+    <div class="risk-legend">
+      <div><span class="flag flag-high"><span data-icon="alert"></span> Riesgo alto</span> precio anzuelo, publicación eterna, frase de alerta, o zona de inseguridad alta.</div>
+      <div><span class="flag flag-med"><span data-icon="alert"></span> Atención</span> publicada hace bastante, o zona de inseguridad media.</div>
+      <div><span class="flag flag-low"><span data-icon="info"></span> Menor</span> una sola foto, sin precio, o una nota tuya.</div>
+    </div>
+  </div>
+
+  <div class="card form-section sec-feat">
+    <h3><span class="ic-h" data-icon="map-pin"></span> Mapa de seguridad por zona (lo mantenés vos)
+      <span class="info" tabindex="0" data-tip="No existe una fuente pública y confiable de inseguridad por barrio, así que este mapa lo armás vos según lo que conocés. La app marca cada aviso cuya dirección o barrio coincida con una zona cargada acá. Se guarda en data/zones.json del repo."></span>
+    </h3>
+    <div class="row">
+      <input type="text" id="zone-name" placeholder="barrio o zona (ej: constitución)" style="flex:2">
+      <select id="zone-level" style="flex:1">
+        <option value="alta">Inseguridad alta</option>
+        <option value="media">Inseguridad media</option>
+        <option value="baja">Inseguridad baja (tranquila)</option>
+      </select>
+      <button id="zone-add" class="btn primary"><span data-icon="plus"></span> Agregar zona</button>
+    </div>
+    <div id="zones-list"></div>
+    <p id="zones-status" class="status"></p>
+  </div>
+</section>
+
+<!-- Modal de nota por propiedad -->
+<div id="note-modal" class="modal-back hidden">
+  <div class="card modal-card">
+    <h3><span class="ic-h" data-icon="pencil"></span> Tu nota sobre esta propiedad</h3>
+    <p class="status" id="note-target"></p>
+    <label>Nivel que le ponés vos
+      <select id="note-level">
+        <option value="">Sin nivel (solo nota)</option>
+        <option value="high">Riesgo alto</option>
+        <option value="med">Atención</option>
+        <option value="low">Menor</option>
+      </select>
+    </label>
+    <label>Nota (ej: "no contestan", "reseñas malas del edificio", "sobre avenida ruidosa")
+      <textarea id="note-text" rows="3"></textarea>
+    </label>
+    <div class="row">
+      <button id="note-save" class="btn primary">Guardar nota</button>
+      <button id="note-delete" class="btn danger">Quitar</button>
+      <button id="note-cancel" class="btn">Cancelar</button>
+      <span id="note-status" class="status"></span>
+    </div>
+  </div>
+</div>
 
 <section id="tab-runs" class="tab-panel hidden">
   <div class="toolbar">
