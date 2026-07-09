@@ -33,20 +33,6 @@
         "min_rooms": 2
       },
       "operation": "alquiler"
-    },
-    {
-      "name": "Ejemplo: Venta deptos Caballito (MercadoLibre)",
-      "url": "https://inmuebles.mercadolibre.com.ar/departamentos/venta/capital-federal/caballito/",
-      "site": "mercadolibre",
-      "enabled": false,
-      "max_pages": 2,
-      "filters": {
-        "currency": "USD",
-        "max_price": 150000,
-        "min_bedrooms": 2,
-        "min_surface_m2": 50
-      },
-      "operation": "venta"
     }
   ]
 }
