@@ -47,6 +47,12 @@ def test_rooms_y_superficie():
     assert not matches(make_listing(surface_m2=30.0), {"min_surface_m2": 40})
 
 
+def test_min_bathrooms():
+    assert matches(make_listing(bathrooms=2), {"min_bathrooms": 2})
+    assert not matches(make_listing(bathrooms=1), {"min_bathrooms": 2})
+    assert matches(make_listing(bathrooms=None), {"min_bathrooms": 2})  # desconocido pasa
+
+
 def test_keywords():
     assert matches(make_listing(), {"keywords_include": ["palermo"]})
     assert not matches(make_listing(), {"keywords_exclude": ["palermo"]})

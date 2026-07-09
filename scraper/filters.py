@@ -47,6 +47,10 @@ def matches(listing: Listing, filters: dict[str, Any]) -> bool:
     if min_bedrooms is not None and listing.bedrooms is not None and listing.bedrooms < min_bedrooms:
         return False
 
+    min_bathrooms = filters.get("min_bathrooms")
+    if min_bathrooms is not None and listing.bathrooms is not None and listing.bathrooms < min_bathrooms:
+        return False
+
     min_surface = filters.get("min_surface_m2")
     if min_surface is not None and listing.surface_m2 is not None and listing.surface_m2 < min_surface:
         return False
