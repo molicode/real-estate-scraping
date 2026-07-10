@@ -38,6 +38,8 @@ const $ = (id) => document.getElementById(id);
 
 const ICONS = {
   home: '<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>',
+  "external-link": '<path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/>',
+  pause: '<rect x="14" y="4" width="4" height="16" rx="1"/><rect x="6" y="4" width="4" height="16" rx="1"/>',
   moon: '<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>',
   sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
   "log-out": '<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/>',
@@ -247,6 +249,8 @@ async function connect() {
     $("tabs").classList.remove("hidden");
     $("main").classList.remove("hidden");
     await loadJobs();
+    // Estado del proxy (créditos de ScraperAPI) para marcar jobs en pausa.
+    loadProxyStatus().then(() => { if (jobsDoc) renderJobs(); });
     // Cargar la base de delitos en segundo plano para los puntos de
     // seguridad en las tarjetas de jobs y el label del formulario.
     loadCrimeData().then(() => { if (jobsDoc) renderJobs(); });
@@ -364,6 +368,29 @@ function zoneDot(job) {
   return `<span class="dot ${dot}" title="${txt}"></span>`;
 }
 
+/* Estado del proxy de scraping (ScraperAPI): lo escribe el scraper en cada
+ * corrida. Si el cupo mensual del plan gratis se agotó, los portales que
+ * dependen del proxy (Zonaprop/MercadoLibre) quedan en pausa hasta la recarga. */
+let proxyStatus = null;
+const PROXY_SITES = new Set(["zonaprop", "mercadolibre"]);
+
+async function loadProxyStatus() {
+  try {
+    const c = await fetchFile("data/proxy_status.json");
+    proxyStatus = c.content ? safeParse(c.content, null) : null;
+  } catch { proxyStatus = null; }
+}
+
+function jobPausedByProxy(job) {
+  return Boolean(proxyStatus && proxyStatus.exhausted && PROXY_SITES.has(job.site));
+}
+
+function proxyPauseBadge(job) {
+  if (!jobPausedByProxy(job)) return "";
+  const d = (proxyStatus.resets_at || "").slice(0, 10);
+  return `<span class="badge pause-badge" title="Se agotaron los créditos del proxy ScraperAPI, que Zonaprop y MercadoLibre necesitan para no ser bloqueados. Este job vuelve solo cuando se recarga el cupo mensual.">${icon("pause", 12)} en pausa: sin créditos ScraperAPI${d ? ` · vuelve ${d}` : ""}</span>`;
+}
+
 function renderJobs() {
   const wrap = $("jobs-list");
   // conservar qué desplegables estaban abiertos al re-renderizar
@@ -378,14 +405,16 @@ function renderJobs() {
   }
   jobsDoc.searches.forEach((job, i) => {
     const enabled = job.enabled !== false;
+    const paused = jobPausedByProxy(job);
     const det = document.createElement("details");
-    det.className = "job-card" + (enabled ? "" : " disabled");
+    det.className = "job-card" + (enabled ? "" : " disabled") + (paused ? " proxy-paused" : "");
     det.open = openIdx.has(i);
     const every = Math.max(1, Number(job.every_hours) || 1);
     det.innerHTML = `
       <summary>
         <span class="dot ${enabled ? "green live-dot" : "muted"}" title="${enabled ? "Activo (se ejecuta según su frecuencia)" : "Detenido"}"></span>
         <span class="job-live" id="job-live-${i}"></span>
+        ${proxyPauseBadge(job)}
         <span class="badge">${job.site || "?"}</span>
         <span class="badge">${job.operation === "venta" ? "compra" : job.operation || "?"}</span>
         ${jobPtype(job) ? `<span class="badge">${escapeHtml(jobPtype(job))}</span>` : ""}
@@ -512,10 +541,11 @@ function updateLiveChip(jobIndex, idx, finished = false, ok = false) {
   }
 }
 
-function watchRun(container, title, dispatchedAt, jobIndex = null) {
+function watchRun(container, title, dispatchedAt, jobIndices = []) {
+  const idxs = Array.isArray(jobIndices) ? jobIndices : [jobIndices];
   const flow = (idx, finished = false, res = "", ok = false) => {
     renderFlow(container, title, idx, finished, res);
-    updateLiveChip(jobIndex, idx, finished, ok);
+    idxs.forEach((ji) => updateLiveChip(ji, idx, finished, ok));
   };
   flow(0);
   let runId = null;
@@ -877,7 +907,13 @@ async function persistJobs(okMessage) {
 }
 
 $("run-now").addEventListener("click", async () => {
-  const active = (jobsDoc?.searches || []).filter((s) => s.enabled !== false).length;
+  // Índices de los jobs que van a correr (activos y no pausados por proxy):
+  // a esos les mostramos el chip de estado en vivo en su tarjeta.
+  const runIndices = (jobsDoc?.searches || [])
+    .map((s, idx) => ({ s, idx }))
+    .filter(({ s }) => s.enabled !== false && !jobPausedByProxy(s))
+    .map(({ idx }) => idx);
+  const active = runIndices.length;
   if (active === 0 && !confirm("Tenés 0 jobs activos: la corrida no va a scrapear nada. ¿Ejecutar igual?")) return;
   setStatus($("jobs-status"), "Disparando workflow...");
   try {
@@ -888,7 +924,7 @@ $("run-now").addEventListener("click", async () => {
     });
     if (resp.status !== 204) throw new Error(`status ${resp.status}`);
     setStatus($("jobs-status"), `Scraper disparado (${active} jobs activos).`, "ok");
-    watchRun($("run-flow"), `Ejecutando ${active} jobs activos`, dispatchedAt);
+    watchRun($("run-flow"), `Ejecutando ${active} jobs activos`, dispatchedAt, runIndices);
   } catch (err) {
     setStatus($("jobs-status"), "" + err.message, "error");
   }
@@ -1225,7 +1261,7 @@ function flagChipsHtml(l) {
   const cls = { high: "flag-high", med: "flag-med", low: "flag-low", info: "flag-low" };
   return `<div class="flags-wrap">${flags.map((f) => {
     const ic = f.level === "high" || f.level === "med" ? "alert" : "info";
-    return `<span class="flag ${cls[f.level] || "flag-low"}" title="${escapeHtml(f.label)}">${icon(ic, 12)} ${escapeHtml(shortFlag(f.label))}</span>`;
+    return `<span class="flag ${cls[f.level] || "flag-low"}" title="${escapeHtml(f.label)}">${icon(ic, 12)}<span class="flag-txt">${escapeHtml(shortFlag(f.label))}</span></span>`;
   }).join("")}</div>`;
 }
 
@@ -1505,11 +1541,14 @@ function renderResults(listings) {
       <td>${fmtPrice(l)}</td>
       <td>${l.rooms ?? "-"} amb / ${l.surface_m2 ? l.surface_m2 + " m²" : "-"}</td>
       <td><small>${escapeHtml(l.search_name || "")}</small></td>
-      <td><div class="row" style="gap:2px;margin:0">${noteBtnHtml(l)}${heartHtml(l)}</div></td>
+      <td><div class="row" style="gap:4px;margin:0">
+        ${l.url ? `<a class="btn small ver-aviso" href="${escapeHtml(l.url)}" target="_blank" rel="noopener" title="Abrir el aviso en ${escapeHtml(l.site)}">${icon("external-link", 13)} Ver aviso</a>` : ""}
+        ${noteBtnHtml(l)}${heartHtml(l)}
+      </div></td>
     </tr>`).join("");
   $("results-list").innerHTML = `
     <table>
-      <thead><tr><th>Foto</th><th>Visto</th><th>Portal</th><th>Aviso y señales</th><th>Precio</th><th>Amb/m²</th><th>Job</th><th></th></tr></thead>
+      <thead><tr><th>Foto</th><th>Visto</th><th>Portal</th><th>Aviso y señales</th><th>Precio</th><th>Amb/m²</th><th>Job</th><th>Abrir</th></tr></thead>
       <tbody>${rows}</tbody>
     </table>`;
 }
@@ -1754,6 +1793,7 @@ function topCardHtml({ l, detail }, rank) {
         <div class="top-meta">${escapeHtml(l.address || "")}</div>
         <div class="top-meta"><span class="badge">${escapeHtml(l.site)}</span> ${escapeHtml(l.search_name || "")}</div>
         ${flagChipsHtml(l)}
+        ${l.url ? `<a class="btn small ver-aviso top-ver" href="${escapeHtml(l.url)}" target="_blank" rel="noopener" title="Abrir el aviso en ${escapeHtml(l.site)}">${icon("external-link", 14)} Ver aviso en ${escapeHtml(l.site)}</a>` : ""}
       </div>
     </div>`;
 }

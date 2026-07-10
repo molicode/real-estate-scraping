@@ -1,5 +1,7 @@
+from datetime import datetime, timezone
 from unittest.mock import Mock
 
+from scraper import proxy as proxy_mod
 from scraper.sites.mercadolibre import MercadoLibreScraper
 from scraper.sites.zonaprop import ZonapropScraper
 
@@ -91,3 +93,42 @@ def test_fetch_directo_ok_no_usa_proxy(monkeypatch):
     scraper.session.get.return_value = make_response()
     assert scraper.fetch("https://inmuebles.mercadolibre.com.ar/x") == "<html>ok</html>"
     assert scraper.session.get.call_count == 1
+
+
+NOW = datetime(2026, 7, 10, 12, 0, tzinfo=timezone.utc)
+
+
+def test_proxy_status_sin_key():
+    st = proxy_mod.build_status("", now=NOW)
+    assert st["key_present"] is False
+    assert st["exhausted"] is False
+
+
+def test_proxy_status_con_creditos(monkeypatch):
+    monkeypatch.setattr(proxy_mod, "scraperapi_account",
+                        lambda key, timeout=20: {"requestCount": 20, "requestLimit": 5000})
+    st = proxy_mod.build_status("k", now=NOW)
+    assert st["exhausted"] is False
+    assert st["remaining"] == 4980
+    assert st["resets_at"] == "2026-08-01T00:00:00Z"  # primer día del mes siguiente
+
+
+def test_proxy_status_agotado(monkeypatch):
+    monkeypatch.setattr(proxy_mod, "scraperapi_account",
+                        lambda key, timeout=20: {"requestCount": 5000, "requestLimit": 5000})
+    st = proxy_mod.build_status("k", now=NOW)
+    assert st["exhausted"] is True
+    assert st["remaining"] == 0
+
+
+def test_proxy_status_cuenta_no_disponible_no_bloquea(monkeypatch):
+    # Si no se puede consultar la cuenta, NO se pausa nada (fail-open).
+    monkeypatch.setattr(proxy_mod, "scraperapi_account", lambda key, timeout=20: None)
+    st = proxy_mod.build_status("k", now=NOW)
+    assert st["exhausted"] is False
+    assert st.get("account_unavailable") is True
+
+
+def test_reset_diciembre_pasa_a_enero():
+    dic = datetime(2026, 12, 20, tzinfo=timezone.utc)
+    assert proxy_mod._first_of_next_month(dic).strftime("%Y-%m-%d") == "2027-01-01"
