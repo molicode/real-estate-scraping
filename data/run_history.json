@@ -453,5 +453,16 @@
   "new": 0,
   "total_stored": 0,
   "errors": []
+ },
+ {
+  "finished_at": "2026-07-10T02:56:23Z",
+  "only_job": "remax_alquiler_ph_nunez",
+  "jobs": {
+   "remax_alquiler_ph_nunez": 0
+  },
+  "found": 0,
+  "new": 0,
+  "total_stored": 0,
+  "errors": []
  }
 ]
