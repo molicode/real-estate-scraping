@@ -5,6 +5,18 @@
     "bedrooms": null,
     "expenses": null,
     "first_seen": "2026-07-02T03:03:32Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Comuna 14: inseguridad alta según datos oficiales (16.693 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
     "id": "argenprop:11458972",
     "image": "https://www.argenprop.com/static-content/27985411/c655a40d-feef-41ff-a411-7a1ff5418c94_u_small.jpg",
     "price_amount": 500000.0,
@@ -22,6 +34,18 @@
     "bedrooms": 1,
     "expenses": null,
     "first_seen": "2026-07-02T03:03:32Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Comuna 14: inseguridad alta según datos oficiales (16.693 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
     "id": "argenprop:17197392",
     "image": "https://www.argenprop.com/static-content/29379171/60a16236-666d-46c4-8a8a-ea43543cfe40_u_small.jpg",
     "price_amount": 850000.0,
@@ -39,6 +63,13 @@
     "bedrooms": 1,
     "expenses": null,
     "first_seen": "2026-07-04T06:17:12Z",
+    "flags": [
+      {
+        "label": "Comuna 14: inseguridad alta según datos oficiales (16.693 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
     "id": "argenprop:18519156",
     "image": "https://www.argenprop.com/static-content/65191581/dfa683dd-c114-4f46-bb51-faea4ebf16a7_u_small.jpg",
     "images": [
@@ -64,6 +95,18 @@
     "bedrooms": null,
     "expenses": null,
     "first_seen": "2026-07-02T03:03:32Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Comuna 14: inseguridad alta según datos oficiales (16.693 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
     "id": "argenprop:19120155",
     "image": "https://www.argenprop.com/static-content/55102191/4b70bee8-94f2-43fe-b489-a7751d022948_u_small.jpg",
     "price_amount": 799000.0,
@@ -81,6 +124,18 @@
     "bedrooms": 1,
     "expenses": null,
     "first_seen": "2026-07-02T03:03:32Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Comuna 14: inseguridad alta según datos oficiales (16.693 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
     "id": "argenprop:19437649",
     "image": "https://www.argenprop.com/static-content/94673491/b3d4ce69-7580-4f5f-b1e3-427a94c0cd21_u_small.jpg",
     "price_amount": 800000.0,
@@ -98,6 +153,18 @@
     "bedrooms": 1,
     "expenses": null,
     "first_seen": "2026-07-02T03:03:32Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Comuna 14: inseguridad alta según datos oficiales (16.693 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
     "id": "argenprop:19539429",
     "image": "https://www.argenprop.com/static-content/92493591/d39394d5-1bfa-47c4-8b80-bf4b14554230_u_small.jpg",
     "price_amount": 600000.0,
@@ -115,6 +182,18 @@
     "bedrooms": null,
     "expenses": null,
     "first_seen": "2026-07-02T03:03:32Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Comuna 14: inseguridad alta según datos oficiales (16.693 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
     "id": "argenprop:19576331",
     "image": "https://www.argenprop.com/static-content/13367591/3ad8782c-105b-4a0c-9069-333084b5b374_u_small.jpg",
     "price_amount": 650000.0,
@@ -132,6 +211,18 @@
     "bedrooms": 1,
     "expenses": null,
     "first_seen": "2026-07-02T03:03:32Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Comuna 14: inseguridad alta según datos oficiales (16.693 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
     "id": "argenprop:19762627",
     "image": "https://www.argenprop.com/static-content/72626791/107cdcd2-e646-4899-8f41-dcea146832fe_u_small.jpg",
     "price_amount": 750000.0,
@@ -149,6 +240,13 @@
     "bedrooms": 1,
     "expenses": null,
     "first_seen": "2026-07-04T06:17:12Z",
+    "flags": [
+      {
+        "label": "Comuna 14: inseguridad alta según datos oficiales (16.693 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
     "id": "argenprop:19819086",
     "image": "https://www.argenprop.com/static-content/68091891/091616a8-e983-459e-a0a8-688e0bdba749_u_small.jpg",
     "images": [
@@ -174,6 +272,18 @@
     "bedrooms": null,
     "expenses": null,
     "first_seen": "2026-07-02T03:03:32Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Comuna 14: inseguridad alta según datos oficiales (16.693 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
     "id": "argenprop:19840027",
     "image": "https://www.argenprop.com/static-content/72004891/05884d9b-fedc-4f44-93fa-a18ca28b8eab_u_small.jpg",
     "price_amount": 600000.0,
@@ -191,6 +301,18 @@
     "bedrooms": 1,
     "expenses": null,
     "first_seen": "2026-07-03T00:10:15Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Comuna 14: inseguridad alta según datos oficiales (16.693 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
     "id": "argenprop:19861921",
     "image": "https://www.argenprop.com/static-content/12916891/e4af9295-90a3-423f-b967-555674186d57_u_small.jpg",
     "images": [],
@@ -210,6 +332,18 @@
     "bedrooms": 1,
     "expenses": null,
     "first_seen": "2026-07-02T03:03:32Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Comuna 14: inseguridad alta según datos oficiales (16.693 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
     "id": "argenprop:19899767",
     "image": "https://www.argenprop.com/static-content/76799891/7dcbda33-0cd0-4084-82d7-6bc267d256b9_u_small.jpg",
     "price_amount": 870000.0,
@@ -227,6 +361,18 @@
     "bedrooms": null,
     "expenses": null,
     "first_seen": "2026-07-02T03:03:32Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Comuna 14: inseguridad alta según datos oficiales (16.693 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
     "id": "argenprop:19904071",
     "image": "https://www.argenprop.com/static-content/17040991/58e847c4-58c9-4948-a216-77634a3d4e4f_u_small.jpg",
     "price_amount": 750000.0,
@@ -244,6 +390,18 @@
     "bedrooms": 1,
     "expenses": null,
     "first_seen": "2026-07-02T03:03:32Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Comuna 14: inseguridad alta según datos oficiales (16.693 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
     "id": "argenprop:19907239",
     "image": "https://www.argenprop.com/static-content/93270991/ae30d0ae-c5b6-4927-a308-b533ffe6b45e_u_small.jpg",
     "price_amount": 650000.0,
@@ -261,6 +419,18 @@
     "bedrooms": null,
     "expenses": null,
     "first_seen": "2026-07-02T03:03:32Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Comuna 14: inseguridad alta según datos oficiales (16.693 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
     "id": "argenprop:19923554",
     "image": "https://www.argenprop.com/static-content/45532991/1a2c6b99-2c8a-4f0a-a2fb-4109b3f6dcf5_u_small.jpg",
     "price_amount": 680000.0,
@@ -278,6 +448,18 @@
     "bedrooms": null,
     "expenses": null,
     "first_seen": "2026-07-02T03:03:32Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Comuna 14: inseguridad alta según datos oficiales (16.693 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
     "id": "argenprop:19924578",
     "image": "https://www.argenprop.com/static-content/87542991/4da9e42d-3e94-497d-8674-374b66d1e113_u_small.jpg",
     "price_amount": 850000.0,
@@ -295,6 +477,18 @@
     "bedrooms": 1,
     "expenses": null,
     "first_seen": "2026-07-02T03:03:32Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Comuna 14: inseguridad alta según datos oficiales (16.693 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
     "id": "argenprop:19935680",
     "image": "https://www.argenprop.com/static-content/08653991/9026e0bd-80ba-4b24-ab50-002fd295c8f6_u_small.jpg",
     "price_amount": 620000.0,
@@ -312,6 +506,18 @@
     "bedrooms": null,
     "expenses": null,
     "first_seen": "2026-07-02T03:03:32Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Comuna 14: inseguridad alta según datos oficiales (16.693 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
     "id": "argenprop:19940320",
     "image": "https://www.argenprop.com/static-content/02304991/1d790e6b-6a02-4e29-a0f7-08b9073a9125_u_small.jpg",
     "price_amount": 800000.0,
@@ -329,6 +535,18 @@
     "bedrooms": null,
     "expenses": null,
     "first_seen": "2026-07-02T03:03:32Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Comuna 14: inseguridad alta según datos oficiales (16.693 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
     "id": "argenprop:2387815",
     "image": "https://www.argenprop.com/static-content/5187832/d773b66d-b79c-4f53-acdd-75d7f3f2e064_u_small.jpg",
     "price_amount": 700000.0,
@@ -346,6 +564,18 @@
     "bedrooms": 1,
     "expenses": null,
     "first_seen": "2026-07-02T03:03:32Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Comuna 14: inseguridad alta según datos oficiales (16.693 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
     "id": "argenprop:7997294",
     "image": "https://www.argenprop.com/static-content/4927997/cbcfdfec-efe4-4a37-82ab-4ae10819c780_u_small.jpg",
     "price_amount": 600000.0,
@@ -363,6 +593,18 @@
     "bedrooms": null,
     "expenses": null,
     "first_seen": "2026-07-02T03:03:32Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Comuna 14: inseguridad alta según datos oficiales (16.693 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
     "id": "argenprop:9171478",
     "image": "https://www.argenprop.com/static-content/8741719/9a35f775-139d-418c-bc7c-c7e7cb913c73_u_small.jpg",
     "price_amount": 570000.0,

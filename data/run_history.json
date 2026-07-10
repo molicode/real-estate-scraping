@@ -394,5 +394,18 @@
   "errors": [
    "PH finding (argenprop): 0 avisos — posible bloqueo o cambio de HTML"
   ]
+ },
+ {
+  "finished_at": "2026-07-10T00:02:21Z",
+  "only_job": null,
+  "jobs": {
+   "csdfsdfsdf": 0
+  },
+  "found": 0,
+  "new": 0,
+  "total_stored": 21,
+  "errors": [
+   "csdfsdfsdf (argenprop): 0 avisos — posible bloqueo o cambio de HTML"
+  ]
  }
 ]
