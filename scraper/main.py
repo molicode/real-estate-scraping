@@ -81,6 +81,7 @@ def build_searches(config: dict[str, Any], only_job: str | None = None) -> list[
                 operation=(raw.get("operation") or "").strip().lower(),
                 max_pages=int(raw.get("max_pages", defaults.get("max_pages", 1))),
                 every_hours=max(1, int(raw.get("every_hours", defaults.get("every_hours", 1)))),
+                offset_hours=(int(raw["offset_hours"]) % 24 if raw.get("offset_hours") not in (None, "") else None),
                 filters=merged_filters,
             )
         )
@@ -106,7 +107,16 @@ def filter_due(searches: list[Search], history: list[dict], now: datetime) -> li
     for search in searches:
         last = last_run.get(search.name)
         if last is None:
-            due.append(search)
+            # Primer arranque: si tiene desfase, espera a esa hora UTC para
+            # escalonar (así no arrancan todos juntos). Una vez que corre, la
+            # cadencia de every_hours mantiene el carril.
+            if search.offset_hours is not None and now.hour != search.offset_hours % 24:
+                logger.info(
+                    "Job '%s' espera su hora de inicio (%02d:00 UTC) para escalonar",
+                    search.name, search.offset_hours % 24,
+                )
+            else:
+                due.append(search)
             continue
         elapsed = (now - last).total_seconds()
         if elapsed >= search.every_hours * 3600 - 600:

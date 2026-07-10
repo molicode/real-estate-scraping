@@ -50,6 +50,10 @@ class Search:
     operation: str = ""  # alquiler | venta (informativo, la URL manda)
     max_pages: int = 1
     every_hours: int = 1  # frecuencia mínima entre corridas del cron
+    # Desfase opcional (0-23, hora UTC): en el primer arranque el job espera a
+    # esa hora para escalonar varios jobs y no correrlos todos juntos. Después
+    # la cadencia de every_hours mantiene el carril. None = arranca enseguida.
+    offset_hours: Optional[int] = None
     filters: dict[str, Any] = field(default_factory=dict)
 
 
