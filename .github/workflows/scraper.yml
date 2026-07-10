@@ -65,11 +65,23 @@ jobs:
           git add data/
           if git diff --staged --quiet; then
             echo "Sin cambios en los datos"
-          else
-            git commit -m "chore: actualizar avisos scrapeados [skip ci]"
-            # Reintenta el push por si otra corrida commiteó en el medio
-            for i in 1 2 3; do
-              git push && break
-              git pull --rebase
-            done
+            exit 0
           fi
+          git commit -m "chore: actualizar avisos scrapeados [skip ci]"
+          # Push robusto ante carreras: si el remoto avanzó (otra corrida o un
+          # merge), rebaseamos resolviendo los conflictos de datos a favor de lo
+          # recién scrapeado (-X theirs durante el rebase). Nunca dejamos el
+          # rebase a medias ni fallamos el job por una carrera de push: lo que
+          # no llegue a entrar se vuelve a scrapear en la próxima corrida.
+          pushed=0
+          for i in 1 2 3 4 5; do
+            if git push; then pushed=1; break; fi
+            echo "push rechazado (intento $i): traigo el remoto y rebaseo"
+            git fetch origin main || true
+            git rebase -X theirs origin/main || git rebase --abort || true
+            sleep $((i * 2))
+          done
+          if [ "$pushed" != 1 ]; then
+            echo "::warning::No se pudo pushear los datos tras varios intentos; se reintenta en la próxima corrida"
+          fi
+          exit 0

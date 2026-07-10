@@ -862,9 +862,23 @@ img.zoomable { cursor: zoom-in; }
 .flag-med { background: var(--warn-container); color: var(--warn); }
 .flag-low { background: var(--surface-soft); color: var(--text-soft); }
 .flag-na { background: var(--surface-soft); color: var(--text-faint); }
-.flags-wrap { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+.flags-wrap { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; min-width: 0; }
 .top-flags { padding: 0 14px 12px; }
 td .flags-wrap { margin-top: 4px; }
+
+/* El texto largo de una señal se trunca con "…" (el completo va en el title),
+   así el chip nunca se sale de la tarjeta. */
+.flag { max-width: 100%; min-width: 0; }
+.flag .ic { flex-shrink: 0; }
+.flag-txt { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+
+/* Botón "Ver aviso" (abre el aviso en el portal) */
+.ver-aviso { text-decoration: none; white-space: nowrap; }
+.top-ver { margin-top: 10px; width: 100%; justify-content: center; }
+
+/* Badge de pausa por falta de créditos del proxy ScraperAPI */
+.pause-badge { background: var(--warn-container); color: var(--warn); }
+.job-card.proxy-paused > summary { opacity: 0.75; }
 
 .risk-legend { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; font-size: 14px; color: var(--text-soft); }
 .risk-legend .flag { margin-right: 6px; }

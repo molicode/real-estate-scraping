@@ -12,6 +12,7 @@ from typing import Any
 import yaml
 
 from . import filters as listing_filters
+from . import proxy as proxy_mod
 from . import risk
 from .models import Search
 from .notify import send_telegram, write_github_summary
@@ -152,9 +153,32 @@ def main() -> int:
     errors: list[str] = []
     all_new = []
 
+    # Estado del proxy de scraping (créditos de ScraperAPI). Si el cupo del
+    # plan gratis se agotó, las búsquedas que dependen del proxy se pausan
+    # hasta la recarga mensual (la web lo muestra con su motivo).
+    proxy_status = proxy_mod.build_status(os.environ.get("SCRAPERAPI_KEY", "").strip())
+    proxy_mod.save_status(proxy_status)
+    proxy_exhausted = bool(proxy_status.get("exhausted"))
+    resets_at = proxy_status.get("resets_at", "el mes próximo")
+    if proxy_exhausted:
+        logger.warning(
+            "ScraperAPI sin créditos (%s/%s): se pausan las búsquedas por proxy hasta %s",
+            proxy_status.get("request_count"), proxy_status.get("request_limit"), resets_at,
+        )
+
     for search in searches:
         try:
             scraper = get_scraper(search.site)
+            # Portales que bloquean el acceso directo dependen del proxy: si no
+            # hay créditos, se pausan (no se gastan intentos ni se marcan como error).
+            if proxy_exhausted and getattr(scraper, "proxy_fallback", False):
+                logger.info("'%s' en pausa: sin créditos de ScraperAPI", search.name)
+                errors.append(
+                    f"{search.name} ({search.site}): en pausa — sin créditos de ScraperAPI, "
+                    f"se reactiva el {resets_at[:10]}"
+                )
+                stats[search.name] = 0
+                continue
             found = scraper.search(search)
         except Exception as exc:  # una búsqueda rota no frena las demás
             logger.exception("Falló la búsqueda '%s'", search.name)
