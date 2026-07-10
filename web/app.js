@@ -1374,6 +1374,9 @@ function extraZoneFlag(l) {
 // Combina las señales automáticas del scraper con la zona y las notas propias
 function displayFlags(l) {
   const flags = [...(l.flags || [])];
+  if (looksNonResidential(l)) {
+    flags.push({ level: "med", label: "Parece uso comercial / estudio / eventos, no vivienda" });
+  }
   const z = zoneFlag(l);
   if (z) flags.push(z);
   else { const ez = extraZoneFlag(l); if (ez) flags.push(ez); }
@@ -1905,6 +1908,14 @@ function hasOutdoor(l) {
   return /\bpatio\b|jard[ií]n|parrilla|quincho|\bfondo\b|terraza/.test((l.title || "").toLowerCase());
 }
 
+// Avisos que NO son para vivir: estudios de foto, salones de eventos, locales
+// de uso comercial, etc. Se detectan por el título/dirección y se dejan fuera
+// del Top 5 (y se marcan con una señal en el resto de la app).
+const NON_RESIDENTIAL_RX = /(estudio|studio)\s+de\s+fotograf|fotograf[ií]a|productora|sal[oó]n\s+de\s+(eventos|fiestas)|\beventos\b|coworking|fondo de comercio|gastron[oó]mic|dep[oó]sito|galp[oó]n|consultorio|apto\s+profesional|uso\s+comercial/i;
+function looksNonResidential(l) {
+  return NON_RESIDENTIAL_RX.test(`${l.title || ""} ${l.address || ""}`);
+}
+
 // Seguridad de la zona: MULTIPLICADOR del puntaje (no un sumando), porque
 // "zona segura / barrio seguro" es un requisito, no un lindo-de-tener. Una
 // villa o una comuna/barrio rojo hunden el puntaje por más lindo que sea.
@@ -1954,6 +1965,9 @@ function computeTop(operation, count = 5) {
 
   const group = allListings.filter((l) => {
     if (listingOperation(l) !== operation) return false;
+    // Fuera del Top 5 lo que no es vivienda (estudios de foto, salones de
+    // eventos, locales comerciales): no es lo que se busca "para vivir".
+    if (looksNonResidential(l)) return false;
     if (l.price_amount == null && criteria !== "recent") return false;
     if (curFilter && l.price_currency !== curFilter) return false;
     if (maxPrice != null && !(l.price_amount != null && l.price_amount <= maxPrice)) return false;
