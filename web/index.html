@@ -169,6 +169,19 @@
             </select>
             <input type="number" id="f-every-custom" class="hidden" min="1" max="720" placeholder="cada cuántas horas" style="margin-top:6px">
           </label>
+          <label id="f-weekday-wrap" class="hidden">Día de la semana
+            <span class="info" tabindex="0" data-tip="Solo para jobs semanales: el día en que corre (hora UTC). Ej: 'lunes' hace que el job corra únicamente los lunes, a la hora del desfase si la definiste."></span>
+            <select id="f-weekday">
+              <option value="">Cualquier día (el que toque)</option>
+              <option value="0">Lunes</option>
+              <option value="1">Martes</option>
+              <option value="2">Miércoles</option>
+              <option value="3">Jueves</option>
+              <option value="4">Viernes</option>
+              <option value="5">Sábado</option>
+              <option value="6">Domingo</option>
+            </select>
+          </label>
           <label>Desfase de inicio (opcional)
             <span class="info" tabindex="0" data-tip="Para escalonar varios jobs y que no corran todos a la vez: cada uno arranca en una hora distinta (0–23, hora UTC). Ej: con jobs cada 24 h y desfases 0, 1, 2… corren de a uno por hora. Solo afecta el arranque en el cron; 'Ejecutar ahora' corre igual. Vacío = arranca enseguida."></span>
             <input type="number" id="f-offset" min="0" max="23" placeholder="0–23 (vacío = ya)">

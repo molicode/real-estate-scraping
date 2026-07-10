@@ -126,6 +126,26 @@ def test_filter_due_escalona_con_offset():
     assert due == ["lane-14", "sin-offset"]
 
 
+def test_filter_due_weekly_solo_el_dia():
+    from datetime import datetime, timezone
+    from scraper.main import filter_due
+    from scraper.models import Search
+
+    # Job semanal anclado al lunes 09:00 UTC. Solo corre el lunes a esa hora.
+    s = [Search(name="lunes", url="u", every_hours=168, weekday=0, offset_hours=9)]
+    lunes_9 = datetime(2026, 7, 6, 9, 0, tzinfo=timezone.utc)   # 2026-07-06 es lunes
+    lunes_10 = datetime(2026, 7, 6, 10, 0, tzinfo=timezone.utc)
+    martes_9 = datetime(2026, 7, 7, 9, 0, tzinfo=timezone.utc)
+    assert [x.name for x in filter_due(s, [], lunes_9)] == ["lunes"]
+    assert filter_due(s, [], lunes_10) == []   # lunes pero otra hora
+    assert filter_due(s, [], martes_9) == []   # hora correcta pero otro día
+    # ya corrió este lunes -> no se repite; recién el lunes siguiente
+    hist = [{"finished_at": "2026-07-06T09:02:00Z", "jobs": {"lunes": 5}}]
+    prox_lunes = datetime(2026, 7, 13, 9, 0, tzinfo=timezone.utc)
+    assert filter_due(s, hist, lunes_9) == []
+    assert [x.name for x in filter_due(s, hist, prox_lunes)] == ["lunes"]
+
+
 def test_build_searches_lee_offset_hours():
     config = {"searches": [
         {"name": "a", "url": "https://www.argenprop.com/x", "site": "argenprop", "offset_hours": 27},
