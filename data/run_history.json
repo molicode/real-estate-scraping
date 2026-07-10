@@ -407,5 +407,18 @@
   "errors": [
    "csdfsdfsdf (argenprop): 0 avisos — posible bloqueo o cambio de HTML"
   ]
+ },
+ {
+  "finished_at": "2026-07-10T00:47:14Z",
+  "only_job": null,
+  "jobs": {
+   "ARGENPROP_ALQUILER_PH_CABALLITO": 0
+  },
+  "found": 0,
+  "new": 0,
+  "total_stored": 21,
+  "errors": [
+   "ARGENPROP_ALQUILER_PH_CABALLITO (argenprop): 0 avisos — posible bloqueo o cambio de HTML"
+  ]
  }
 ]
