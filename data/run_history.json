@@ -801,5 +801,16 @@
    "mercadolibre_alquiler_casa_Saavedra (mercadolibre): 0 avisos — posible bloqueo o cambio de HTML",
    "mercadolibre_venta_casa_Saavedra (mercadolibre): 0 avisos — posible bloqueo o cambio de HTML"
   ]
+ },
+ {
+  "finished_at": "2026-07-10T15:42:13Z",
+  "only_job": "zonaprop_venta_casa_Saavedra",
+  "jobs": {
+   "zonaprop_venta_casa_Saavedra": 0
+  },
+  "found": 0,
+  "new": 0,
+  "total_stored": 87,
+  "errors": []
  }
 ]
