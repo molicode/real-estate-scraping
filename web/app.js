@@ -82,6 +82,7 @@ const ICONS = {
   shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
   "map-pin": '<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>',
   info: '<circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>',
+  copy: '<rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>',
 };
 
 function icon(name, size = 16) {
@@ -398,6 +399,7 @@ function renderJobs() {
           <button class="btn small" data-act="toggle" data-i="${i}" title="${enabled ? "Deja de ejecutarse en el cron (se guarda al instante)" : "Vuelve a la programación (se guarda al instante)"}">${enabled ? icon("stop") + " Detener" : icon("play") + " Activar"}</button>
           <button class="btn small" data-act="run" data-i="${i}" title="Ejecuta SOLO este job ahora mismo, aunque esté detenido">${icon("play")} Ejecutar ahora</button>
           <button class="btn small" data-act="edit" data-i="${i}">${icon("pencil")} Editar</button>
+          <button class="btn small" data-act="clone" data-i="${i}" title="Crear un job nuevo copiando este (filtros, tipo, zona, frecuencia). Después cambiás lo que quieras, ej. el portal.">${icon("copy")} Clonar</button>
           <button class="btn small danger" data-act="del" data-i="${i}">${icon("trash")} Eliminar</button>
         </div>
         <div class="job-flow" id="job-flow-${i}"></div>
@@ -427,6 +429,8 @@ $("jobs-list").addEventListener("click", async (e) => {
     );
   } else if (act === "run") {
     runSingleJob(jobsDoc.searches[i], i);
+  } else if (act === "clone") {
+    openForm(null, JSON.parse(JSON.stringify(jobsDoc.searches[i])));
   } else if (act === "del") {
     const name = jobsDoc.searches[i].name;
     if (confirm(`¿Eliminar el job "${name}"? Se guarda al instante.`)) {
@@ -615,6 +619,7 @@ function syncBuilder() {
   }
   updateHint();
   updateZoneSecurity();
+  updateAutoName();
 }
 
 ["f-mode", "f-site", "f-operation", "f-ptype"].forEach((id) =>
@@ -637,19 +642,55 @@ $("f-url").addEventListener("input", () => {
   }
 });
 
-function openForm(index) {
+/* ---------- Nombre automático PORTAL___OPERACION___TIPO___ZONA ---------- */
+
+let autoNameOn = true;
+
+function ptypeFromUrl(u) {
+  u = (u || "").toLowerCase();
+  if (/departamento|deptos?/.test(u)) return "departamento";
+  if (/casas?/.test(u)) return "casa";
+  if (/\bph\b/.test(u)) return "ph";
+  if (/local/.test(u)) return "local";
+  if (/oficina/.test(u)) return "oficina";
+  if (/terreno/.test(u)) return "terreno";
+  return null;
+}
+function slugPart(s) { return normZone(s || "").replace(/\s+/g, "-"); }
+
+function formAutoName() {
+  const site = $("f-site").value;
+  const op = $("f-operation").value;
+  let ptype, zone;
+  if (isMenuMode()) { ptype = $("f-ptype").value; zone = $("f-zone").value.trim(); }
+  else { ptype = ptypeFromUrl($("f-url").value); zone = jobZone({ url: $("f-url").value }); }
+  return [site, op, ptype || "propiedad", slugPart(zone) || "todos"].join("___");
+}
+function jobAutoName(job) {
+  const ptype = job.ptype || ptypeFromUrl(job.url) || "propiedad";
+  const zone = job.zone || jobZone(job) || "todos";
+  return [job.site, job.operation || "alquiler", ptype, slugPart(zone) || "todos"].join("___");
+}
+function updateAutoName() {
+  if (autoNameOn) $("f-name").value = formAutoName();
+}
+
+function openForm(index, prefill) {
   editingIndex = index;
-  const job = index != null ? jobsDoc.searches[index] : null;
-  $("job-form-title").textContent = job ? `Editar: ${job.name}` : "Nuevo job";
+  const job = prefill || (index != null ? jobsDoc.searches[index] : null);
+  const cloning = Boolean(prefill);
+  $("job-form-title").textContent = cloning ? "Clonar job" : job ? `Editar: ${job.name}` : "Nuevo job";
   const f = job?.filters || {};
+  // Nombre: automático salvo que el job existente tenga uno propio (no-auto)
+  autoNameOn = !job || cloning || job.name === jobAutoName(job);
   $("f-name").value = job?.name || "";
   $("f-site").value = job?.site || "argenprop";
   $("f-operation").value = job?.operation === "venta" ? "venta" : "alquiler";
-  // Jobs existentes conservan su URL tal cual (modo URL); los nuevos
-  // arrancan con el armador de menús y valores limpios.
-  $("f-mode").value = job ? "url" : "menu";
-  $("f-ptype").value = "departamento";
-  $("f-zone").value = "";
+  // Modo: nuevo -> menú; editar -> URL; clonar -> menú si el original se
+  // armó con menús (así cambiar el portal regenera la URL), si no URL.
+  $("f-mode").value = index != null ? "url" : cloning ? (job.ptype ? "menu" : "url") : "menu";
+  $("f-ptype").value = job?.ptype || "departamento";
+  $("f-zone").value = job?.zone || "";
   $("f-url").value = job?.url || "";
   $("f-max-pages").value = job?.max_pages ?? jobsDoc.defaults?.max_pages ?? 2;
   $("f-every").value = String(Math.max(1, Number(job?.every_hours) || 1));
@@ -666,9 +707,13 @@ function openForm(index) {
   $("f-kw-include").value = (f.keywords_include || []).join(", ");
   $("f-kw-exclude").value = (f.keywords_exclude || []).join(", ");
   syncBuilder();
+  updateAutoName();
   $("job-form-wrap").classList.remove("hidden");
   $("f-name").focus();
 }
+
+// Si el usuario escribe un nombre, deja de autogenerarse
+$("f-name").addEventListener("input", () => { autoNameOn = false; });
 
 $("new-job").addEventListener("click", () => openForm(null));
 $("job-cancel").addEventListener("click", () => $("job-form-wrap").classList.add("hidden"));
@@ -722,7 +767,7 @@ $("job-form").addEventListener("submit", (e) => {
   if (exc.length) filters.keywords_exclude = exc;
 
   const job = {
-    name: $("f-name").value.trim(),
+    name: $("f-name").value.trim() || formAutoName(),
     url,
     site,
     operation: $("f-operation").value,
