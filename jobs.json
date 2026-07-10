@@ -610,6 +610,38 @@
       "mode": "menu",
       "ptype": "ph",
       "zone": "Saavedra"
+    },
+    {
+      "name": "zonaprop_alquiler_ph_saavedra",
+      "url": "https://www.zonaprop.com.ar/ph-alquiler-saavedra.html",
+      "site": "zonaprop",
+      "operation": "alquiler",
+      "enabled": true,
+      "max_pages": 10,
+      "every_hours": 24,
+      "filters": {
+        "currency": "ARS",
+        "min_rooms": 4,
+        "min_bedrooms": 3,
+        "min_bathrooms": 2,
+        "require_price": true,
+        "keywords_exclude": [
+          "temporario",
+          "temporal",
+          "pozo",
+          "en construcción",
+          "oficina",
+          "local",
+          "compartido",
+          "cochera",
+          "apto comercial",
+          "galpón",
+          "cochera fija"
+        ]
+      },
+      "mode": "menu",
+      "ptype": "ph",
+      "zone": "Saavedra"
     }
   ]
 }
