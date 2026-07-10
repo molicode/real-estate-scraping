@@ -74,6 +74,8 @@ El scraper usa estos niveles para la señal `crime` (el barrio, más específico
       "site": "argenprop",
       "enabled": true,
       "max_pages": 2,
+      "every_hours": 72,
+      "offset_hours": 5,
       "filters": {
         "currency": "ARS",
         "max_price": 900000,
@@ -86,6 +88,16 @@ El scraper usa estos niveles para la señal `crime` (el barrio, más específico
 ```
 
 La `url` se copia del portal con sus filtros nativos aplicados; el `site` se detecta solo por el dominio. Filtros disponibles: `currency`, `min_price`, `max_price`, `require_price`, `min_rooms`, `max_rooms`, `min_bedrooms`, `min_bathrooms`, `min_surface_m2`, `keywords_include`, `keywords_exclude`. Los campos que el aviso no publica (ej. sin precio) no se descartan salvo que uses `require_price: true`. `retention_days` controla cuántos días se recuerdan los avisos ya vistos para que `data/listings.json` no crezca indefinidamente.
+
+### Programación de cada job
+
+El cron pasa cada hora y ejecuta solo los jobs **vencidos** según estos campos (todos opcionales; se editan desde la web o a mano):
+
+- **`every_hours`**: cada cuántas horas corre el job (ej. `72` = cada 3 días). Por defecto `1`.
+- **`offset_hours`** (0–23, hora UTC): **desfase de arranque** para escalonar varios jobs y que no corran todos a la vez. En el primer arranque el job espera a esa hora; después la cadencia de `every_hours` mantiene el carril. Vacío = arranca enseguida.
+- **`weekday`** (0=lunes … 6=domingo, hora UTC): ancla el job a **un día de la semana**. Si está definido, el job corre **solo ese día** (a la hora de `offset_hours` si la pusiste). Pensado para jobs semanales, ej. *"todos los lunes"* → `{ "every_hours": 168, "weekday": 0, "offset_hours": 9 }`. En la web aparece un selector de día cuando elegís frecuencia *"Una vez por semana"*.
+
+`Ejecutar ahora` (o `ONLY_JOB`) ignora la programación y corre el job al instante aunque esté detenido.
 
 ## Notificaciones por Telegram (opcional)
 

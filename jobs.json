@@ -11,7 +11,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -44,7 +44,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -77,7 +77,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -110,7 +110,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -143,7 +143,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -176,7 +176,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -209,7 +209,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -242,7 +242,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -275,7 +275,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -308,7 +308,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -341,7 +341,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -374,7 +374,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -407,7 +407,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -440,7 +440,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -473,7 +473,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -506,7 +506,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -539,7 +539,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -572,7 +572,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -605,7 +605,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -638,7 +638,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -671,7 +671,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -695,7 +695,8 @@
       "mode": "menu",
       "ptype": "ph",
       "zone": "caballito",
-      "offset_hours": 20
+      "offset_hours": 0,
+      "weekday": 0
     },
     {
       "name": "argenprop_alquiler_casa_caballito",
@@ -704,7 +705,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -728,7 +729,7 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "caballito",
-      "offset_hours": 21
+      "offset_hours": 20
     },
     {
       "name": "argenprop_venta_casa_caballito",
@@ -737,7 +738,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -761,7 +762,8 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "caballito",
-      "offset_hours": 22
+      "offset_hours": 1,
+      "weekday": 0
     },
     {
       "name": "mercadolibre_venta_ph_caballito",
@@ -770,7 +772,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -794,7 +796,8 @@
       "mode": "menu",
       "ptype": "ph",
       "zone": "caballito",
-      "offset_hours": 23
+      "offset_hours": 2,
+      "weekday": 0
     },
     {
       "name": "mercadolibre_alquiler_casa_caballito",
@@ -803,7 +806,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -827,7 +830,7 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "caballito",
-      "offset_hours": 0
+      "offset_hours": 21
     },
     {
       "name": "mercadolibre_venta_casa_caballito",
@@ -836,7 +839,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -860,7 +863,8 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "caballito",
-      "offset_hours": 1
+      "offset_hours": 3,
+      "weekday": 0
     },
     {
       "name": "remax_venta_ph_caballito",
@@ -869,7 +873,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -893,7 +897,8 @@
       "mode": "menu",
       "ptype": "ph",
       "zone": "caballito",
-      "offset_hours": 2
+      "offset_hours": 4,
+      "weekday": 0
     },
     {
       "name": "remax_alquiler_casa_caballito",
@@ -902,7 +907,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -926,7 +931,7 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "caballito",
-      "offset_hours": 3
+      "offset_hours": 22
     },
     {
       "name": "remax_venta_casa_caballito",
@@ -935,7 +940,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -959,7 +964,8 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "caballito",
-      "offset_hours": 4
+      "offset_hours": 5,
+      "weekday": 0
     },
     {
       "name": "zonaprop_venta_ph_caballito",
@@ -968,7 +974,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -992,7 +998,8 @@
       "mode": "menu",
       "ptype": "ph",
       "zone": "caballito",
-      "offset_hours": 5
+      "offset_hours": 6,
+      "weekday": 0
     },
     {
       "name": "zonaprop_alquiler_casa_caballito",
@@ -1001,7 +1008,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1025,7 +1032,7 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "caballito",
-      "offset_hours": 6
+      "offset_hours": 23
     },
     {
       "name": "zonaprop_venta_casa_caballito",
@@ -1034,7 +1041,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1058,7 +1065,8 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "caballito",
-      "offset_hours": 7
+      "offset_hours": 7,
+      "weekday": 0
     },
     {
       "name": "zonaprop_venta_ph_villa-crespo",
@@ -1067,7 +1075,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1091,7 +1099,8 @@
       "mode": "menu",
       "ptype": "ph",
       "zone": "villa-crespo",
-      "offset_hours": 8
+      "offset_hours": 8,
+      "weekday": 0
     },
     {
       "name": "zonaprop_alquiler_casa_villa-crespo",
@@ -1100,7 +1109,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1124,7 +1133,7 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "villa-crespo",
-      "offset_hours": 9
+      "offset_hours": 0
     },
     {
       "name": "zonaprop_venta_casa_villa-crespo",
@@ -1133,7 +1142,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1157,7 +1166,8 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "villa-crespo",
-      "offset_hours": 10
+      "offset_hours": 9,
+      "weekday": 0
     },
     {
       "name": "argenprop_venta_ph_villa-crespo",
@@ -1166,7 +1176,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1190,7 +1200,8 @@
       "mode": "menu",
       "ptype": "ph",
       "zone": "villa-crespo",
-      "offset_hours": 11
+      "offset_hours": 10,
+      "weekday": 0
     },
     {
       "name": "argenprop_alquiler_casa_villa-crespo",
@@ -1199,7 +1210,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1223,7 +1234,7 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "villa-crespo",
-      "offset_hours": 12
+      "offset_hours": 1
     },
     {
       "name": "argenprop_venta_casa_villa-crespo",
@@ -1232,7 +1243,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1256,7 +1267,8 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "villa-crespo",
-      "offset_hours": 13
+      "offset_hours": 11,
+      "weekday": 0
     },
     {
       "name": "remax_venta_ph_villa-crespo",
@@ -1265,7 +1277,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1289,7 +1301,8 @@
       "mode": "menu",
       "ptype": "ph",
       "zone": "villa-crespo",
-      "offset_hours": 14
+      "offset_hours": 12,
+      "weekday": 0
     },
     {
       "name": "remax_alquiler_casa_villa-crespo",
@@ -1298,7 +1311,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1322,7 +1335,7 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "villa-crespo",
-      "offset_hours": 15
+      "offset_hours": 2
     },
     {
       "name": "remax_venta_casa_villa-crespo",
@@ -1331,7 +1344,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1355,7 +1368,8 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "villa-crespo",
-      "offset_hours": 16
+      "offset_hours": 13,
+      "weekday": 0
     },
     {
       "name": "mercadolibre_venta_ph_villa-crespo",
@@ -1364,7 +1378,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1388,7 +1402,8 @@
       "mode": "menu",
       "ptype": "ph",
       "zone": "villa-crespo",
-      "offset_hours": 17
+      "offset_hours": 14,
+      "weekday": 0
     },
     {
       "name": "mercadolibre_alquiler_casa_villa-crespo",
@@ -1397,7 +1412,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1421,7 +1436,7 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "villa-crespo",
-      "offset_hours": 18
+      "offset_hours": 3
     },
     {
       "name": "mercadolibre_venta_casa_villa-crespo",
@@ -1430,7 +1445,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1454,7 +1469,8 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "villa-crespo",
-      "offset_hours": 19
+      "offset_hours": 15,
+      "weekday": 0
     },
     {
       "name": "argenprop_venta_ph_nunez",
@@ -1463,7 +1479,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1487,7 +1503,8 @@
       "mode": "menu",
       "ptype": "ph",
       "zone": "nunez",
-      "offset_hours": 20
+      "offset_hours": 16,
+      "weekday": 0
     },
     {
       "name": "argenprop_alquiler_casa_nunez",
@@ -1496,238 +1513,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
-      "filters": {
-        "currency": "ARS",
-        "min_rooms": 4,
-        "min_bedrooms": 3,
-        "min_bathrooms": 2,
-        "require_price": true,
-        "keywords_exclude": [
-          "temporario",
-          "temporal",
-          "pozo",
-          "en construcción",
-          "oficina",
-          "local",
-          "compartido",
-          "cochera",
-          "apto comercial",
-          "galpón",
-          "cochera fija"
-        ]
-      },
-      "mode": "menu",
-      "ptype": "casa",
-      "zone": "nunez",
-      "offset_hours": 21
-    },
-    {
-      "name": "argenprop_venta_casa_nunez",
-      "url": "https://www.argenprop.com/casas/venta/nunez",
-      "site": "argenprop",
-      "operation": "venta",
-      "enabled": true,
-      "max_pages": 10,
-      "every_hours": 24,
-      "filters": {
-        "currency": "ARS",
-        "min_rooms": 4,
-        "min_bedrooms": 3,
-        "min_bathrooms": 2,
-        "require_price": true,
-        "keywords_exclude": [
-          "temporario",
-          "temporal",
-          "pozo",
-          "en construcción",
-          "oficina",
-          "local",
-          "compartido",
-          "cochera",
-          "apto comercial",
-          "galpón",
-          "cochera fija"
-        ]
-      },
-      "mode": "menu",
-      "ptype": "casa",
-      "zone": "nunez",
-      "offset_hours": 22
-    },
-    {
-      "name": "mercadolibre_venta_ph_nunez",
-      "url": "https://inmuebles.mercadolibre.com.ar/ph/venta/nunez/",
-      "site": "mercadolibre",
-      "operation": "venta",
-      "enabled": true,
-      "max_pages": 10,
-      "every_hours": 24,
-      "filters": {
-        "currency": "ARS",
-        "min_rooms": 4,
-        "min_bedrooms": 3,
-        "min_bathrooms": 2,
-        "require_price": true,
-        "keywords_exclude": [
-          "temporario",
-          "temporal",
-          "pozo",
-          "en construcción",
-          "oficina",
-          "local",
-          "compartido",
-          "cochera",
-          "apto comercial",
-          "galpón",
-          "cochera fija"
-        ]
-      },
-      "mode": "menu",
-      "ptype": "ph",
-      "zone": "nunez",
-      "offset_hours": 23
-    },
-    {
-      "name": "mercadolibre_alquiler_casa_nunez",
-      "url": "https://inmuebles.mercadolibre.com.ar/casas/alquiler/nunez/",
-      "site": "mercadolibre",
-      "operation": "alquiler",
-      "enabled": true,
-      "max_pages": 10,
-      "every_hours": 24,
-      "filters": {
-        "currency": "ARS",
-        "min_rooms": 4,
-        "min_bedrooms": 3,
-        "min_bathrooms": 2,
-        "require_price": true,
-        "keywords_exclude": [
-          "temporario",
-          "temporal",
-          "pozo",
-          "en construcción",
-          "oficina",
-          "local",
-          "compartido",
-          "cochera",
-          "apto comercial",
-          "galpón",
-          "cochera fija"
-        ]
-      },
-      "mode": "menu",
-      "ptype": "casa",
-      "zone": "nunez",
-      "offset_hours": 0
-    },
-    {
-      "name": "mercadolibre_venta_casa_nunez",
-      "url": "https://inmuebles.mercadolibre.com.ar/casas/venta/nunez/",
-      "site": "mercadolibre",
-      "operation": "venta",
-      "enabled": true,
-      "max_pages": 10,
-      "every_hours": 24,
-      "filters": {
-        "currency": "ARS",
-        "min_rooms": 4,
-        "min_bedrooms": 3,
-        "min_bathrooms": 2,
-        "require_price": true,
-        "keywords_exclude": [
-          "temporario",
-          "temporal",
-          "pozo",
-          "en construcción",
-          "oficina",
-          "local",
-          "compartido",
-          "cochera",
-          "apto comercial",
-          "galpón",
-          "cochera fija"
-        ]
-      },
-      "mode": "menu",
-      "ptype": "casa",
-      "zone": "nunez",
-      "offset_hours": 1
-    },
-    {
-      "name": "remax_venta_ph_nunez",
-      "url": "https://www.remax.com.ar/listings/buy?page=0&pageSize=24&sort=-createdAt&in:operationId=1",
-      "site": "remax",
-      "operation": "venta",
-      "enabled": true,
-      "max_pages": 10,
-      "every_hours": 24,
-      "filters": {
-        "currency": "ARS",
-        "min_rooms": 4,
-        "min_bedrooms": 3,
-        "min_bathrooms": 2,
-        "require_price": true,
-        "keywords_exclude": [
-          "temporario",
-          "temporal",
-          "pozo",
-          "en construcción",
-          "oficina",
-          "local",
-          "compartido",
-          "cochera",
-          "apto comercial",
-          "galpón",
-          "cochera fija"
-        ]
-      },
-      "mode": "menu",
-      "ptype": "ph",
-      "zone": "nunez",
-      "offset_hours": 2
-    },
-    {
-      "name": "remax_alquiler_casa_nunez",
-      "url": "https://www.remax.com.ar/listings/rent?page=0&pageSize=24&sort=-createdAt&in:operationId=2",
-      "site": "remax",
-      "operation": "alquiler",
-      "enabled": true,
-      "max_pages": 10,
-      "every_hours": 24,
-      "filters": {
-        "currency": "ARS",
-        "min_rooms": 4,
-        "min_bedrooms": 3,
-        "min_bathrooms": 2,
-        "require_price": true,
-        "keywords_exclude": [
-          "temporario",
-          "temporal",
-          "pozo",
-          "en construcción",
-          "oficina",
-          "local",
-          "compartido",
-          "cochera",
-          "apto comercial",
-          "galpón",
-          "cochera fija"
-        ]
-      },
-      "mode": "menu",
-      "ptype": "casa",
-      "zone": "nunez",
-      "offset_hours": 3
-    },
-    {
-      "name": "remax_venta_casa_nunez",
-      "url": "https://www.remax.com.ar/listings/buy?page=0&pageSize=24&sort=-createdAt&in:operationId=1",
-      "site": "remax",
-      "operation": "venta",
-      "enabled": true,
-      "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1754,13 +1540,47 @@
       "offset_hours": 4
     },
     {
-      "name": "zonaprop_venta_ph_nunez",
-      "url": "https://www.zonaprop.com.ar/ph-venta-nunez.html",
-      "site": "zonaprop",
+      "name": "argenprop_venta_casa_nunez",
+      "url": "https://www.argenprop.com/casas/venta/nunez",
+      "site": "argenprop",
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
+      "filters": {
+        "currency": "ARS",
+        "min_rooms": 4,
+        "min_bedrooms": 3,
+        "min_bathrooms": 2,
+        "require_price": true,
+        "keywords_exclude": [
+          "temporario",
+          "temporal",
+          "pozo",
+          "en construcción",
+          "oficina",
+          "local",
+          "compartido",
+          "cochera",
+          "apto comercial",
+          "galpón",
+          "cochera fija"
+        ]
+      },
+      "mode": "menu",
+      "ptype": "casa",
+      "zone": "nunez",
+      "offset_hours": 17,
+      "weekday": 0
+    },
+    {
+      "name": "mercadolibre_venta_ph_nunez",
+      "url": "https://inmuebles.mercadolibre.com.ar/ph/venta/nunez/",
+      "site": "mercadolibre",
+      "operation": "venta",
+      "enabled": true,
+      "max_pages": 10,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1784,16 +1604,118 @@
       "mode": "menu",
       "ptype": "ph",
       "zone": "nunez",
-      "offset_hours": 5
+      "offset_hours": 18,
+      "weekday": 0
     },
     {
-      "name": "zonaprop_alquiler_casa_nunez",
-      "url": "https://www.zonaprop.com.ar/casas-alquiler-nunez.html",
-      "site": "zonaprop",
+      "name": "mercadolibre_alquiler_casa_nunez",
+      "url": "https://inmuebles.mercadolibre.com.ar/casas/alquiler/nunez/",
+      "site": "mercadolibre",
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
+      "filters": {
+        "currency": "ARS",
+        "min_rooms": 4,
+        "min_bedrooms": 3,
+        "min_bathrooms": 2,
+        "require_price": true,
+        "keywords_exclude": [
+          "temporario",
+          "temporal",
+          "pozo",
+          "en construcción",
+          "oficina",
+          "local",
+          "compartido",
+          "cochera",
+          "apto comercial",
+          "galpón",
+          "cochera fija"
+        ]
+      },
+      "mode": "menu",
+      "ptype": "casa",
+      "zone": "nunez",
+      "offset_hours": 5
+    },
+    {
+      "name": "mercadolibre_venta_casa_nunez",
+      "url": "https://inmuebles.mercadolibre.com.ar/casas/venta/nunez/",
+      "site": "mercadolibre",
+      "operation": "venta",
+      "enabled": true,
+      "max_pages": 10,
+      "every_hours": 168,
+      "filters": {
+        "currency": "ARS",
+        "min_rooms": 4,
+        "min_bedrooms": 3,
+        "min_bathrooms": 2,
+        "require_price": true,
+        "keywords_exclude": [
+          "temporario",
+          "temporal",
+          "pozo",
+          "en construcción",
+          "oficina",
+          "local",
+          "compartido",
+          "cochera",
+          "apto comercial",
+          "galpón",
+          "cochera fija"
+        ]
+      },
+      "mode": "menu",
+      "ptype": "casa",
+      "zone": "nunez",
+      "offset_hours": 19,
+      "weekday": 0
+    },
+    {
+      "name": "remax_venta_ph_nunez",
+      "url": "https://www.remax.com.ar/listings/buy?page=0&pageSize=24&sort=-createdAt&in:operationId=1",
+      "site": "remax",
+      "operation": "venta",
+      "enabled": true,
+      "max_pages": 10,
+      "every_hours": 168,
+      "filters": {
+        "currency": "ARS",
+        "min_rooms": 4,
+        "min_bedrooms": 3,
+        "min_bathrooms": 2,
+        "require_price": true,
+        "keywords_exclude": [
+          "temporario",
+          "temporal",
+          "pozo",
+          "en construcción",
+          "oficina",
+          "local",
+          "compartido",
+          "cochera",
+          "apto comercial",
+          "galpón",
+          "cochera fija"
+        ]
+      },
+      "mode": "menu",
+      "ptype": "ph",
+      "zone": "nunez",
+      "offset_hours": 20,
+      "weekday": 0
+    },
+    {
+      "name": "remax_alquiler_casa_nunez",
+      "url": "https://www.remax.com.ar/listings/rent?page=0&pageSize=24&sort=-createdAt&in:operationId=2",
+      "site": "remax",
+      "operation": "alquiler",
+      "enabled": true,
+      "max_pages": 10,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1820,13 +1742,81 @@
       "offset_hours": 6
     },
     {
-      "name": "zonaprop_venta_casa_nunez",
-      "url": "https://www.zonaprop.com.ar/casas-venta-nunez.html",
+      "name": "remax_venta_casa_nunez",
+      "url": "https://www.remax.com.ar/listings/buy?page=0&pageSize=24&sort=-createdAt&in:operationId=1",
+      "site": "remax",
+      "operation": "venta",
+      "enabled": true,
+      "max_pages": 10,
+      "every_hours": 168,
+      "filters": {
+        "currency": "ARS",
+        "min_rooms": 4,
+        "min_bedrooms": 3,
+        "min_bathrooms": 2,
+        "require_price": true,
+        "keywords_exclude": [
+          "temporario",
+          "temporal",
+          "pozo",
+          "en construcción",
+          "oficina",
+          "local",
+          "compartido",
+          "cochera",
+          "apto comercial",
+          "galpón",
+          "cochera fija"
+        ]
+      },
+      "mode": "menu",
+      "ptype": "casa",
+      "zone": "nunez",
+      "offset_hours": 21,
+      "weekday": 0
+    },
+    {
+      "name": "zonaprop_venta_ph_nunez",
+      "url": "https://www.zonaprop.com.ar/ph-venta-nunez.html",
       "site": "zonaprop",
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
+      "filters": {
+        "currency": "ARS",
+        "min_rooms": 4,
+        "min_bedrooms": 3,
+        "min_bathrooms": 2,
+        "require_price": true,
+        "keywords_exclude": [
+          "temporario",
+          "temporal",
+          "pozo",
+          "en construcción",
+          "oficina",
+          "local",
+          "compartido",
+          "cochera",
+          "apto comercial",
+          "galpón",
+          "cochera fija"
+        ]
+      },
+      "mode": "menu",
+      "ptype": "ph",
+      "zone": "nunez",
+      "offset_hours": 22,
+      "weekday": 0
+    },
+    {
+      "name": "zonaprop_alquiler_casa_nunez",
+      "url": "https://www.zonaprop.com.ar/casas-alquiler-nunez.html",
+      "site": "zonaprop",
+      "operation": "alquiler",
+      "enabled": true,
+      "max_pages": 10,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1853,13 +1843,47 @@
       "offset_hours": 7
     },
     {
+      "name": "zonaprop_venta_casa_nunez",
+      "url": "https://www.zonaprop.com.ar/casas-venta-nunez.html",
+      "site": "zonaprop",
+      "operation": "venta",
+      "enabled": true,
+      "max_pages": 10,
+      "every_hours": 168,
+      "filters": {
+        "currency": "ARS",
+        "min_rooms": 4,
+        "min_bedrooms": 3,
+        "min_bathrooms": 2,
+        "require_price": true,
+        "keywords_exclude": [
+          "temporario",
+          "temporal",
+          "pozo",
+          "en construcción",
+          "oficina",
+          "local",
+          "compartido",
+          "cochera",
+          "apto comercial",
+          "galpón",
+          "cochera fija"
+        ]
+      },
+      "mode": "menu",
+      "ptype": "casa",
+      "zone": "nunez",
+      "offset_hours": 23,
+      "weekday": 0
+    },
+    {
       "name": "argenprop_venta_ph_almagro",
       "url": "https://www.argenprop.com/ph/venta/almagro",
       "site": "argenprop",
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1883,7 +1907,8 @@
       "mode": "menu",
       "ptype": "ph",
       "zone": "almagro",
-      "offset_hours": 8
+      "offset_hours": 0,
+      "weekday": 0
     },
     {
       "name": "argenprop_alquiler_casa_almagro",
@@ -1892,7 +1917,108 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
+      "filters": {
+        "currency": "ARS",
+        "min_rooms": 4,
+        "min_bedrooms": 3,
+        "min_bathrooms": 2,
+        "require_price": true,
+        "keywords_exclude": [
+          "temporario",
+          "temporal",
+          "pozo",
+          "en construcción",
+          "oficina",
+          "local",
+          "compartido",
+          "cochera",
+          "apto comercial",
+          "galpón",
+          "cochera fija"
+        ]
+      },
+      "mode": "menu",
+      "ptype": "casa",
+      "zone": "almagro",
+      "offset_hours": 8
+    },
+    {
+      "name": "argenprop_venta_casa_almagro",
+      "url": "https://www.argenprop.com/casas/venta/almagro",
+      "site": "argenprop",
+      "operation": "venta",
+      "enabled": true,
+      "max_pages": 10,
+      "every_hours": 168,
+      "filters": {
+        "currency": "ARS",
+        "min_rooms": 4,
+        "min_bedrooms": 3,
+        "min_bathrooms": 2,
+        "require_price": true,
+        "keywords_exclude": [
+          "temporario",
+          "temporal",
+          "pozo",
+          "en construcción",
+          "oficina",
+          "local",
+          "compartido",
+          "cochera",
+          "apto comercial",
+          "galpón",
+          "cochera fija"
+        ]
+      },
+      "mode": "menu",
+      "ptype": "casa",
+      "zone": "almagro",
+      "offset_hours": 1,
+      "weekday": 0
+    },
+    {
+      "name": "mercadolibre_venta_ph_almagro",
+      "url": "https://inmuebles.mercadolibre.com.ar/ph/venta/almagro/",
+      "site": "mercadolibre",
+      "operation": "venta",
+      "enabled": true,
+      "max_pages": 10,
+      "every_hours": 168,
+      "filters": {
+        "currency": "ARS",
+        "min_rooms": 4,
+        "min_bedrooms": 3,
+        "min_bathrooms": 2,
+        "require_price": true,
+        "keywords_exclude": [
+          "temporario",
+          "temporal",
+          "pozo",
+          "en construcción",
+          "oficina",
+          "local",
+          "compartido",
+          "cochera",
+          "apto comercial",
+          "galpón",
+          "cochera fija"
+        ]
+      },
+      "mode": "menu",
+      "ptype": "ph",
+      "zone": "almagro",
+      "offset_hours": 2,
+      "weekday": 0
+    },
+    {
+      "name": "mercadolibre_alquiler_casa_almagro",
+      "url": "https://inmuebles.mercadolibre.com.ar/casas/alquiler/almagro/",
+      "site": "mercadolibre",
+      "operation": "alquiler",
+      "enabled": true,
+      "max_pages": 10,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1919,13 +2045,81 @@
       "offset_hours": 9
     },
     {
-      "name": "argenprop_venta_casa_almagro",
-      "url": "https://www.argenprop.com/casas/venta/almagro",
-      "site": "argenprop",
+      "name": "mercadolibre_venta_casa_almagro",
+      "url": "https://inmuebles.mercadolibre.com.ar/casas/venta/almagro/",
+      "site": "mercadolibre",
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
+      "filters": {
+        "currency": "ARS",
+        "min_rooms": 4,
+        "min_bedrooms": 3,
+        "min_bathrooms": 2,
+        "require_price": true,
+        "keywords_exclude": [
+          "temporario",
+          "temporal",
+          "pozo",
+          "en construcción",
+          "oficina",
+          "local",
+          "compartido",
+          "cochera",
+          "apto comercial",
+          "galpón",
+          "cochera fija"
+        ]
+      },
+      "mode": "menu",
+      "ptype": "casa",
+      "zone": "almagro",
+      "offset_hours": 3,
+      "weekday": 0
+    },
+    {
+      "name": "remax_venta_ph_almagro",
+      "url": "https://www.remax.com.ar/listings/buy?page=0&pageSize=24&sort=-createdAt&in:operationId=1",
+      "site": "remax",
+      "operation": "venta",
+      "enabled": true,
+      "max_pages": 10,
+      "every_hours": 168,
+      "filters": {
+        "currency": "ARS",
+        "min_rooms": 4,
+        "min_bedrooms": 3,
+        "min_bathrooms": 2,
+        "require_price": true,
+        "keywords_exclude": [
+          "temporario",
+          "temporal",
+          "pozo",
+          "en construcción",
+          "oficina",
+          "local",
+          "compartido",
+          "cochera",
+          "apto comercial",
+          "galpón",
+          "cochera fija"
+        ]
+      },
+      "mode": "menu",
+      "ptype": "ph",
+      "zone": "almagro",
+      "offset_hours": 4,
+      "weekday": 0
+    },
+    {
+      "name": "remax_alquiler_casa_almagro",
+      "url": "https://www.remax.com.ar/listings/rent?page=0&pageSize=24&sort=-createdAt&in:operationId=2",
+      "site": "remax",
+      "operation": "alquiler",
+      "enabled": true,
+      "max_pages": 10,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -1952,178 +2146,13 @@
       "offset_hours": 10
     },
     {
-      "name": "mercadolibre_venta_ph_almagro",
-      "url": "https://inmuebles.mercadolibre.com.ar/ph/venta/almagro/",
-      "site": "mercadolibre",
-      "operation": "venta",
-      "enabled": true,
-      "max_pages": 10,
-      "every_hours": 24,
-      "filters": {
-        "currency": "ARS",
-        "min_rooms": 4,
-        "min_bedrooms": 3,
-        "min_bathrooms": 2,
-        "require_price": true,
-        "keywords_exclude": [
-          "temporario",
-          "temporal",
-          "pozo",
-          "en construcción",
-          "oficina",
-          "local",
-          "compartido",
-          "cochera",
-          "apto comercial",
-          "galpón",
-          "cochera fija"
-        ]
-      },
-      "mode": "menu",
-      "ptype": "ph",
-      "zone": "almagro",
-      "offset_hours": 11
-    },
-    {
-      "name": "mercadolibre_alquiler_casa_almagro",
-      "url": "https://inmuebles.mercadolibre.com.ar/casas/alquiler/almagro/",
-      "site": "mercadolibre",
-      "operation": "alquiler",
-      "enabled": true,
-      "max_pages": 10,
-      "every_hours": 24,
-      "filters": {
-        "currency": "ARS",
-        "min_rooms": 4,
-        "min_bedrooms": 3,
-        "min_bathrooms": 2,
-        "require_price": true,
-        "keywords_exclude": [
-          "temporario",
-          "temporal",
-          "pozo",
-          "en construcción",
-          "oficina",
-          "local",
-          "compartido",
-          "cochera",
-          "apto comercial",
-          "galpón",
-          "cochera fija"
-        ]
-      },
-      "mode": "menu",
-      "ptype": "casa",
-      "zone": "almagro",
-      "offset_hours": 12
-    },
-    {
-      "name": "mercadolibre_venta_casa_almagro",
-      "url": "https://inmuebles.mercadolibre.com.ar/casas/venta/almagro/",
-      "site": "mercadolibre",
-      "operation": "venta",
-      "enabled": true,
-      "max_pages": 10,
-      "every_hours": 24,
-      "filters": {
-        "currency": "ARS",
-        "min_rooms": 4,
-        "min_bedrooms": 3,
-        "min_bathrooms": 2,
-        "require_price": true,
-        "keywords_exclude": [
-          "temporario",
-          "temporal",
-          "pozo",
-          "en construcción",
-          "oficina",
-          "local",
-          "compartido",
-          "cochera",
-          "apto comercial",
-          "galpón",
-          "cochera fija"
-        ]
-      },
-      "mode": "menu",
-      "ptype": "casa",
-      "zone": "almagro",
-      "offset_hours": 13
-    },
-    {
-      "name": "remax_venta_ph_almagro",
-      "url": "https://www.remax.com.ar/listings/buy?page=0&pageSize=24&sort=-createdAt&in:operationId=1",
-      "site": "remax",
-      "operation": "venta",
-      "enabled": true,
-      "max_pages": 10,
-      "every_hours": 24,
-      "filters": {
-        "currency": "ARS",
-        "min_rooms": 4,
-        "min_bedrooms": 3,
-        "min_bathrooms": 2,
-        "require_price": true,
-        "keywords_exclude": [
-          "temporario",
-          "temporal",
-          "pozo",
-          "en construcción",
-          "oficina",
-          "local",
-          "compartido",
-          "cochera",
-          "apto comercial",
-          "galpón",
-          "cochera fija"
-        ]
-      },
-      "mode": "menu",
-      "ptype": "ph",
-      "zone": "almagro",
-      "offset_hours": 14
-    },
-    {
-      "name": "remax_alquiler_casa_almagro",
-      "url": "https://www.remax.com.ar/listings/rent?page=0&pageSize=24&sort=-createdAt&in:operationId=2",
-      "site": "remax",
-      "operation": "alquiler",
-      "enabled": true,
-      "max_pages": 10,
-      "every_hours": 24,
-      "filters": {
-        "currency": "ARS",
-        "min_rooms": 4,
-        "min_bedrooms": 3,
-        "min_bathrooms": 2,
-        "require_price": true,
-        "keywords_exclude": [
-          "temporario",
-          "temporal",
-          "pozo",
-          "en construcción",
-          "oficina",
-          "local",
-          "compartido",
-          "cochera",
-          "apto comercial",
-          "galpón",
-          "cochera fija"
-        ]
-      },
-      "mode": "menu",
-      "ptype": "casa",
-      "zone": "almagro",
-      "offset_hours": 15
-    },
-    {
       "name": "remax_venta_casa_almagro",
       "url": "https://www.remax.com.ar/listings/buy?page=0&pageSize=24&sort=-createdAt&in:operationId=1",
       "site": "remax",
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -2147,7 +2176,8 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "almagro",
-      "offset_hours": 16
+      "offset_hours": 5,
+      "weekday": 0
     },
     {
       "name": "zonaprop_venta_ph_almagro",
@@ -2156,7 +2186,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -2180,7 +2210,8 @@
       "mode": "menu",
       "ptype": "ph",
       "zone": "almagro",
-      "offset_hours": 17
+      "offset_hours": 6,
+      "weekday": 0
     },
     {
       "name": "zonaprop_alquiler_casa_almagro",
@@ -2189,7 +2220,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -2213,7 +2244,7 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "almagro",
-      "offset_hours": 18
+      "offset_hours": 11
     },
     {
       "name": "zonaprop_venta_casa_almagro",
@@ -2222,7 +2253,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -2246,7 +2277,8 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "almagro",
-      "offset_hours": 19
+      "offset_hours": 7,
+      "weekday": 0
     },
     {
       "name": "argenprop_venta_ph_Saavedra",
@@ -2255,7 +2287,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -2279,7 +2311,8 @@
       "mode": "menu",
       "ptype": "ph",
       "zone": "Saavedra",
-      "offset_hours": 20
+      "offset_hours": 8,
+      "weekday": 0
     },
     {
       "name": "argenprop_alquiler_casa_Saavedra",
@@ -2288,7 +2321,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -2312,7 +2345,7 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "Saavedra",
-      "offset_hours": 21
+      "offset_hours": 12
     },
     {
       "name": "argenprop_venta_casa_Saavedra",
@@ -2321,7 +2354,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -2345,7 +2378,8 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "Saavedra",
-      "offset_hours": 22
+      "offset_hours": 9,
+      "weekday": 0
     },
     {
       "name": "mercadolibre_venta_ph_Saavedra",
@@ -2354,7 +2388,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -2378,7 +2412,8 @@
       "mode": "menu",
       "ptype": "ph",
       "zone": "Saavedra",
-      "offset_hours": 23
+      "offset_hours": 10,
+      "weekday": 0
     },
     {
       "name": "mercadolibre_alquiler_casa_Saavedra",
@@ -2387,7 +2422,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -2411,7 +2446,7 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "Saavedra",
-      "offset_hours": 0
+      "offset_hours": 13
     },
     {
       "name": "mercadolibre_venta_casa_Saavedra",
@@ -2420,7 +2455,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -2444,7 +2479,8 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "Saavedra",
-      "offset_hours": 1
+      "offset_hours": 11,
+      "weekday": 0
     },
     {
       "name": "remax_venta_ph_Saavedra",
@@ -2453,7 +2489,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -2477,7 +2513,8 @@
       "mode": "menu",
       "ptype": "ph",
       "zone": "Saavedra",
-      "offset_hours": 2
+      "offset_hours": 12,
+      "weekday": 0
     },
     {
       "name": "remax_alquiler_casa_Saavedra",
@@ -2486,7 +2523,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -2510,7 +2547,7 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "Saavedra",
-      "offset_hours": 3
+      "offset_hours": 14
     },
     {
       "name": "remax_venta_casa_Saavedra",
@@ -2519,7 +2556,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -2543,7 +2580,8 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "Saavedra",
-      "offset_hours": 4
+      "offset_hours": 13,
+      "weekday": 0
     },
     {
       "name": "zonaprop_venta_ph_Saavedra",
@@ -2552,7 +2590,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -2576,7 +2614,8 @@
       "mode": "menu",
       "ptype": "ph",
       "zone": "Saavedra",
-      "offset_hours": 5
+      "offset_hours": 14,
+      "weekday": 0
     },
     {
       "name": "zonaprop_alquiler_casa_Saavedra",
@@ -2585,7 +2624,7 @@
       "operation": "alquiler",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 72,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -2609,7 +2648,7 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "Saavedra",
-      "offset_hours": 6
+      "offset_hours": 15
     },
     {
       "name": "zonaprop_venta_casa_Saavedra",
@@ -2618,7 +2657,7 @@
       "operation": "venta",
       "enabled": true,
       "max_pages": 10,
-      "every_hours": 24,
+      "every_hours": 168,
       "filters": {
         "currency": "ARS",
         "min_rooms": 4,
@@ -2642,7 +2681,8 @@
       "mode": "menu",
       "ptype": "casa",
       "zone": "Saavedra",
-      "offset_hours": 7
+      "offset_hours": 15,
+      "weekday": 0
     }
   ]
 }

@@ -410,7 +410,8 @@ function renderJobs() {
     det.className = "job-card" + (enabled ? "" : " disabled") + (paused ? " proxy-paused" : "");
     det.open = openIdx.has(i);
     const every = Math.max(1, Number(job.every_hours) || 1);
-    const freqTxt = every === 24 ? "1×día" : every === 168 ? "1×sem" : every % 24 === 0 ? `cada ${every / 24}d` : `cada ${every} h`;
+    const hasWd = job.weekday != null && job.weekday !== "";
+    const freqTxt = hasWd ? `1×sem · ${WEEKDAYS[job.weekday % 7]}` : every === 24 ? "1×día" : every === 168 ? "1×sem" : every % 24 === 0 ? `cada ${every / 24}d` : `cada ${every} h`;
     const offTxt = (job.offset_hours != null) ? ` · ${String(job.offset_hours).padStart(2, "0")}:00 UTC` : "";
     det.innerHTML = `
       <summary>
@@ -756,6 +757,14 @@ function updateAutoName() {
 
 /* ---------- Frecuencia: presets + personalizada ---------- */
 const FREQ_PRESETS = new Set([1, 2, 3, 4, 6, 8, 12, 24, 48, 72, 168]);
+const WEEKDAYS = ["lun", "mar", "mié", "jue", "vie", "sáb", "dom"];
+
+// El selector de día solo tiene sentido para jobs semanales (168 h).
+function syncWeekdayVisibility() {
+  const weekly = readFrequency() === 168;
+  $("f-weekday-wrap").classList.toggle("hidden", !weekly);
+  if (!weekly) $("f-weekday").value = "";
+}
 
 function setFrequencyFields(hours) {
   if (FREQ_PRESETS.has(hours)) {
@@ -778,7 +787,9 @@ $("f-every").addEventListener("change", () => {
   const custom = $("f-every").value === "custom";
   $("f-every-custom").classList.toggle("hidden", !custom);
   if (custom) $("f-every-custom").focus();
+  syncWeekdayVisibility();
 });
+$("f-every-custom").addEventListener("input", syncWeekdayVisibility);
 
 function openForm(index, prefill) {
   editingIndex = index;
@@ -800,6 +811,8 @@ function openForm(index, prefill) {
   $("f-url").value = job?.url || "";
   $("f-max-pages").value = job?.max_pages ?? jobsDoc.defaults?.max_pages ?? 2;
   setFrequencyFields(Math.max(1, Number(job?.every_hours) || 1));
+  $("f-weekday").value = (job?.weekday != null && job?.weekday !== "") ? String(job.weekday % 7) : "";
+  syncWeekdayVisibility();
   $("f-offset").value = job?.offset_hours ?? "";
   $("f-enabled").value = String(job ? job.enabled !== false : true);
   $("f-currency").value = f.currency || "";
@@ -885,6 +898,9 @@ $("job-form").addEventListener("submit", (e) => {
   };
   const offRaw = $("f-offset").value.trim();
   if (offRaw !== "") job.offset_hours = Math.max(0, Math.min(23, Number(offRaw) || 0));
+  // Día de la semana solo para jobs semanales; se guarda solo si se eligió uno.
+  const wdRaw = $("f-weekday").value;
+  if (job.every_hours === 168 && wdRaw !== "") job.weekday = Math.max(0, Math.min(6, Number(wdRaw) || 0));
   // Tipo y zona para mostrar en la tarjeta. En modo menú se toman de los
   // selectores; al editar (modo URL) se conservan los que ya tenía el job.
   const prev = editingIndex != null ? jobsDoc.searches[editingIndex] : {};
