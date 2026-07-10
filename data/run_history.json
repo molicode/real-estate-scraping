@@ -497,5 +497,18 @@
   "new": 0,
   "total_stored": 13,
   "errors": []
+ },
+ {
+  "finished_at": "2026-07-10T03:35:43Z",
+  "only_job": "argenprop_alquiler_ph_almagro",
+  "jobs": {
+   "argenprop_alquiler_ph_almagro": 0
+  },
+  "found": 0,
+  "new": 0,
+  "total_stored": 13,
+  "errors": [
+   "argenprop_alquiler_ph_almagro (argenprop): 0 avisos — posible bloqueo o cambio de HTML"
+  ]
  }
 ]
