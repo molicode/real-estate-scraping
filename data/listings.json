@@ -71,7 +71,7 @@
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
       {
-        "label": "Precio 75% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 78% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -192,7 +192,7 @@
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
       {
-        "label": "Precio 50% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 55% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -229,7 +229,7 @@
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
       {
-        "label": "Precio 68% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 71% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -289,6 +289,37 @@
     "surface_m2": 95.0,
     "title": "PH ANTIGUO ENTRADA INDEPENDIENTE 6 HABITACIONES 2 BAÑOS TERRAZA SIN EXPENSAS SOLO COMERCIAL PROFESIONAL",
     "url": "https://www.argenprop.com/ph-en-alquiler-en-caballito-sur-7-ambientes--7819473"
+  },
+  "mercadolibre:MLA1806522443": {
+    "address": "Avellaneda Al 1300, Caballito, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:03:21Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA1806522443",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_778133-MLA112380636439_052026-E.webp",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 3500000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "mercadolibre_alquiler_casa_caballito",
+    "site": "mercadolibre",
+    "surface_m2": 139.0,
+    "title": "Casa En Caballito",
+    "url": "https://casa.mercadolibre.com.ar/MLA-1806522443-casa-en-caballito-_JM"
   },
   "mercadolibre:MLA1807320357": {
     "address": "Yatay 382, ADF, Almagro, Capital Federal",
@@ -359,6 +390,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:53:25Z",
     "flags": [
+      {
+        "label": "Precio 40% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      },
       {
         "label": "Una sola foto o sin fotos",
         "level": "low",
@@ -445,6 +481,37 @@
     "title": "Duplex Sin Expensas, A 1 Cuadra Y Media De Plaza Irlanda",
     "url": "https://inmueble.mercadolibre.com.ar/MLA-1852308055-duplex-sin-expensas-a-1-cuadra-y-media-de-plaza-irlanda-_JM"
   },
+  "mercadolibre:MLA1853128359": {
+    "address": "Centenera Al 400, Caballito, Capital Federal",
+    "bathrooms": 3,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:03:21Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA1853128359",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_978221-MLA113707882281_062026-E.webp",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 5000000.0,
+    "price_currency": "ARS",
+    "rooms": 6,
+    "search_name": "mercadolibre_alquiler_casa_caballito",
+    "site": "mercadolibre",
+    "surface_m2": 254.0,
+    "title": "Casa En Alquiler Comercial/gastronomico - Lote Propio - Exc. Estado",
+    "url": "https://casa.mercadolibre.com.ar/MLA-1853128359-casa-en-alquiler-comercialgastronomico-lote-propio-exc-estado-_JM"
+  },
   "mercadolibre:MLA1868877057": {
     "address": "Avenida Medrano Al 600, Almagro, Capital Federal",
     "bathrooms": 2,
@@ -452,6 +519,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:53:25Z",
     "flags": [
+      {
+        "label": "Precio 41% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      },
       {
         "label": "Una sola foto o sin fotos",
         "level": "low",
@@ -507,6 +579,37 @@
     "title": "Alquiler-ph-4 Amb- Terraza- Parrilla- Almagro",
     "url": "https://inmueble.mercadolibre.com.ar/MLA-1871447295-alquiler-ph-4-amb-terraza-parrilla-almagro-_JM"
   },
+  "mercadolibre:MLA3375174048": {
+    "address": "Ibera Al 2300, Núñez, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:07:41Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Nunez: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA3375174048",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_986013-MLA112289819301_052026-E.webp",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 3500000.0,
+    "price_currency": "ARS",
+    "rooms": 6,
+    "search_name": "mercadolibre_alquiler_casa_nunez",
+    "site": "mercadolibre",
+    "surface_m2": 160.0,
+    "title": "Alquiler Casa De Estilo 5 Ambientes Con Terraza Y Quincho - Solo Comercial",
+    "url": "https://casa.mercadolibre.com.ar/MLA-3375174048-alquiler-casa-de-estilo-5-ambientes-con-terraza-y-quincho-solo-comercial-_JM"
+  },
   "mercadolibre:MLA3458528894": {
     "address": "Riglos Al 600, Caballito, Capital Federal",
     "bathrooms": 2,
@@ -514,6 +617,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:51:42Z",
     "flags": [
+      {
+        "label": "Precio 40% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      },
       {
         "label": "Una sola foto o sin fotos",
         "level": "low",
@@ -537,6 +645,135 @@
     "surface_m2": 120.0,
     "title": "Riglos 600 - Ph 4 Ambientes - Entrada Independiente",
     "url": "https://inmueble.mercadolibre.com.ar/MLA-3458528894-riglos-600-ph-4-ambientes-entrada-independiente-_JM"
+  },
+  "mercadolibre:MLA3479035442": {
+    "address": "Vidal Al 2900, Núñez, Capital Federal",
+    "bathrooms": 10,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:07:41Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Nunez: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA3479035442",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_769054-MLA113433994781_062026-E.webp",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 5400000.0,
+    "price_currency": "ARS",
+    "rooms": 7,
+    "search_name": "mercadolibre_alquiler_casa_nunez",
+    "site": "mercadolibre",
+    "surface_m2": 531.0,
+    "title": "Casa - Nuñez",
+    "url": "https://casa.mercadolibre.com.ar/MLA-3479035442-casa-nunez-_JM"
+  },
+  "mercadolibre:MLA3539134342": {
+    "address": "Yapeyu 300, Almagro, Capital Federal",
+    "bathrooms": null,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:09:29Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Almagro: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA3539134342",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_657220-MLA112763395698_062026-E.webp",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 3600000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "mercadolibre_alquiler_casa_almagro",
+    "site": "mercadolibre",
+    "surface_m2": 240.0,
+    "title": "Depósito En Alquiler En Almagro, Capital Federal, Buenos Aires",
+    "url": "https://casa.mercadolibre.com.ar/MLA-3539134342-deposito-en-alquiler-en-almagro-capital-federal-buenos-aires-_JM"
+  },
+  "mercadolibre:MLA3553379494": {
+    "address": "Venezuela 3600 - 3900, Almagro, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:09:29Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Almagro: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA3553379494",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_987320-MLA112864971300_072026-E.webp",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 1800000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "mercadolibre_alquiler_casa_almagro",
+    "site": "mercadolibre",
+    "surface_m2": 150.0,
+    "title": "Dueño Alquila Casa Uso Comercial",
+    "url": "https://casa.mercadolibre.com.ar/MLA-3553379494-dueno-alquila-casa-uso-comercial-_JM"
+  },
+  "mercadolibre:MLA3567192108": {
+    "address": "Almagro, Almagro, Capital Federal",
+    "bathrooms": 5,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:09:29Z",
+    "flags": [
+      {
+        "label": "Precio 96% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      },
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Almagro: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA3567192108",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_824694-MLA114212655663_072026-E.webp",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 100000.0,
+    "price_currency": "ARS",
+    "rooms": 5,
+    "search_name": "mercadolibre_alquiler_casa_almagro",
+    "site": "mercadolibre",
+    "surface_m2": 350.0,
+    "title": "Casona Estilo Francés/ Studio De Fotografía Y Eventos",
+    "url": "https://casa.mercadolibre.com.ar/MLA-3567192108-casona-estilo-frances-studio-de-fotografia-y-eventos-_JM"
   },
   "mercadolibre:MLA3567485808": {
     "address": "Nuñez 2306, Núñez, Capital Federal",
@@ -568,6 +805,37 @@
     "surface_m2": 120.0,
     "title": "Ph En Nuñez",
     "url": "https://inmueble.mercadolibre.com.ar/MLA-3567485808-ph-en-nunez-_JM"
+  },
+  "mercadolibre:MLA3574966658": {
+    "address": "Pringles Al 500, Almagro, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:09:29Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Almagro: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA3574966658",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_644187-MLA114268747143_072026-E.webp",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 6000000.0,
+    "price_currency": "ARS",
+    "rooms": 5,
+    "search_name": "mercadolibre_alquiler_casa_almagro",
+    "site": "mercadolibre",
+    "surface_m2": 198.0,
+    "title": "Pringles 500 Casa Destino Comercial Almagro",
+    "url": "https://casa.mercadolibre.com.ar/MLA-3574966658-pringles-500-casa-destino-comercial-almagro-_JM"
   },
   "mercadolibre:MLA3584547646": {
     "address": "Colombres 100, Almagro, Capital Federal",
@@ -640,7 +908,7 @@
     "first_seen": "2026-07-10T03:52:05Z",
     "flags": [
       {
-        "label": "Precio 55% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 57% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -787,6 +1055,192 @@
     "title": "$ 2.000.000",
     "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-beauchef-y-valle-ph-entrada-propia-3-dorm.-49762338.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=13"
   },
+  "zonaprop:55173172": {
+    "address": "Caballito, Capital Federal",
+    "bathrooms": 3,
+    "bedrooms": 7,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:05:11Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:55173172",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/55/17/31/72/360x266/1949936824.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 2900000.0,
+    "price_currency": "ARS",
+    "rooms": 8,
+    "search_name": "zonaprop_alquiler_casa_caballito",
+    "site": "zonaprop",
+    "surface_m2": 200.0,
+    "title": "$ 2.900.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casas-casa-caballito-capital-federal-55173172.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=6"
+  },
+  "zonaprop:57789937": {
+    "address": "Caballito, Capital Federal",
+    "bathrooms": null,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:05:33Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:57789937",
+    "image": "",
+    "images": [],
+    "operation": "venta",
+    "price_amount": 500002.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "zonaprop_venta_casa_caballito",
+    "site": "zonaprop",
+    "surface_m2": null,
+    "title": "$ 500.002",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/veclcain-casa-caballito-57789937.html?n_src=Listado&n_pg=7&n_pos=8"
+  },
+  "zonaprop:57869284": {
+    "address": "Villa Crespo, Capital Federal",
+    "bathrooms": 3,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:06:02Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Villa Crespo: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:57869284",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/57/86/92/84/360x266/2020387131.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 4500000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "zonaprop_alquiler_casa_villa-crespo",
+    "site": "zonaprop",
+    "surface_m2": 392.0,
+    "title": "$ 4.500.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-excelente-casa-coch-y-terraz-216-m-cubiertos-darwin-57869284.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=5"
+  },
+  "zonaprop:57938823": {
+    "address": "Núñez, Capital Federal",
+    "bathrooms": 10,
+    "bedrooms": 4,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:09:07Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Nunez: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:57938823",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/57/93/88/23/360x266/2021012004.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 5400000.0,
+    "price_currency": "ARS",
+    "rooms": 7,
+    "search_name": "zonaprop_alquiler_casa_nunez",
+    "site": "zonaprop",
+    "surface_m2": 580.0,
+    "title": "$ 5.400.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-nunez-57938823.html?n_src=Listado&n_pills=Permite+mascotas&n_pg=1&n_pos=10"
+  },
+  "zonaprop:58012524": {
+    "address": "Almagro, Capital Federal",
+    "bathrooms": 6,
+    "bedrooms": 11,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:05:11Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Almagro: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:58012524",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/01/25/24/360x266/2023052565.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 5000000.0,
+    "price_currency": "ARS",
+    "rooms": 12,
+    "search_name": "zonaprop_alquiler_casa_caballito",
+    "site": "zonaprop",
+    "surface_m2": 700.0,
+    "title": "$ 5.000.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-comercial-de-casa-12-ambientes-en-almagro-58012524.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=1"
+  },
+  "zonaprop:58208157": {
+    "address": "Saavedra, Capital Federal",
+    "bathrooms": 4,
+    "bedrooms": 9,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:13:22Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Saavedra: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:58208157",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/20/81/57/360x266/2058838469.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 2400000.0,
+    "price_currency": "ARS",
+    "rooms": 10,
+    "search_name": "zonaprop_alquiler_casa_Saavedra",
+    "site": "zonaprop",
+    "surface_m2": 260.0,
+    "title": "$ 2.400.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-en-alquiler-10-ambientes-saavedra-58208157.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=4"
+  },
   "zonaprop:58419223": {
     "address": "La Paternal, Capital Federal",
     "bathrooms": 3,
@@ -817,6 +1271,68 @@
     "surface_m2": 240.0,
     "title": "$ 2.500.000",
     "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph-comercial-en-alquiler-6-ambientes-entrada-58419223.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=3"
+  },
+  "zonaprop:58609822": {
+    "address": "Caballito, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": 7,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:05:11Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:58609822",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/60/98/22/360x266/2039681148.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 2900000.0,
+    "price_currency": "ARS",
+    "rooms": 8,
+    "search_name": "zonaprop_alquiler_casa_caballito",
+    "site": "zonaprop",
+    "surface_m2": 202.0,
+    "title": "$ 2.900.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casas-casa-caballito-capital-federal-58609822.html?n_src=Listado&n_pg=1&n_pos=7"
+  },
+  "zonaprop:58639012": {
+    "address": "Caballito Sur, Caballito",
+    "bathrooms": null,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:05:11Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:58639012",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/63/90/12/360x266/2040459724.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 3000000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "zonaprop_alquiler_casa_caballito",
+    "site": "zonaprop",
+    "surface_m2": 222.0,
+    "title": "$ 3.000.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-comercial-casa-en-caballito-excelente-58639012.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=16"
   },
   "zonaprop:58805290": {
     "address": "Palermo, Capital Federal",
@@ -849,6 +1365,32 @@
     "title": "$ 3.200.000",
     "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-terreno-en-palermo-58805290.html?n_src=Listado&n_pg=1&n_pos=5"
   },
+  "zonaprop:58817913": {
+    "address": "Florida, Vicente López",
+    "bathrooms": 2,
+    "bedrooms": 4,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:13:22Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      }
+    ],
+    "id": "zonaprop:58817913",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/81/79/13/360x266/2055247449.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 3500000.0,
+    "price_currency": "ARS",
+    "rooms": 5,
+    "search_name": "zonaprop_alquiler_casa_Saavedra",
+    "site": "zonaprop",
+    "surface_m2": 469.0,
+    "title": "$ 3.500.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-comercial-casa-de-469-m-sup2--refaccionada-58817913.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=19"
+  },
   "zonaprop:58837784": {
     "address": "Villa Crespo, Capital Federal",
     "bathrooms": 3,
@@ -879,6 +1421,192 @@
     "surface_m2": 280.0,
     "title": "$ 4.200.000",
     "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph-planta-alta-10-ambientes-villa-crespo-58837784.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=11"
+  },
+  "zonaprop:58899962": {
+    "address": "Almagro, Capital Federal",
+    "bathrooms": null,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:11:14Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Almagro: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:58899962",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/89/99/62/360x266/2062223162.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 3600000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "zonaprop_alquiler_casa_almagro",
+    "site": "zonaprop",
+    "surface_m2": 340.0,
+    "title": "$ 3.600.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-deposito-en-alquiler-en-almagro-capital-federal-58899962.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=5"
+  },
+  "zonaprop:58958720": {
+    "address": "Belgrano R, Belgrano",
+    "bathrooms": 4,
+    "bedrooms": 4,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:09:07Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Belgrano: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:58958720",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/95/87/20/360x266/2062000603.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 6000000.0,
+    "price_currency": "ARS",
+    "rooms": 5,
+    "search_name": "zonaprop_alquiler_casa_nunez",
+    "site": "zonaprop",
+    "surface_m2": 470.0,
+    "title": "$ 6.000.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-en-alquiler-en-belgrano-r-estilo-antiguo-2-58958720.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=1"
+  },
+  "zonaprop:58969728": {
+    "address": "Boedo, Capital Federal",
+    "bathrooms": 6,
+    "bedrooms": 9,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:05:11Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Boedo: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:58969728",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/96/97/28/360x266/2049149920.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 4300000.0,
+    "price_currency": "ARS",
+    "rooms": 11,
+    "search_name": "zonaprop_alquiler_casa_caballito",
+    "site": "zonaprop",
+    "surface_m2": 500.0,
+    "title": "$ 4.300.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-en-alquiler-uso-comercial-zona-boedo-58969728.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=7"
+  },
+  "zonaprop:58981496": {
+    "address": "Saavedra, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": 5,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:13:22Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Saavedra: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:58981496",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/98/14/96/360x266/2049428629.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 2700000.0,
+    "price_currency": "ARS",
+    "rooms": 7,
+    "search_name": "zonaprop_alquiler_casa_Saavedra",
+    "site": "zonaprop",
+    "surface_m2": 303.0,
+    "title": "$ 2.700.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-hermosa-casa-5-ambientes-gran-patio-terraza-exc.-58981496.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=11"
+  },
+  "zonaprop:58993205": {
+    "address": "Almagro, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:05:11Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Almagro: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:58993205",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/99/32/05/360x266/2061265607.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 6000000.0,
+    "price_currency": "ARS",
+    "rooms": 5,
+    "search_name": "zonaprop_alquiler_casa_caballito",
+    "site": "zonaprop",
+    "surface_m2": 198.0,
+    "title": "$ 6.000.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-pringles-500-casa-destino-comercial-almagro-58993205.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=4"
+  },
+  "zonaprop:58993861": {
+    "address": "Boedo, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:11:14Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Boedo: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:58993861",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/99/38/61/360x266/2055602056.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 1200000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "zonaprop_alquiler_casa_almagro",
+    "site": "zonaprop",
+    "surface_m2": 110.0,
+    "title": "$ 1.200.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-en-boedo-58993861.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=22"
   },
   "zonaprop:59093574": {
     "address": "Villa Crespo, Capital Federal",
@@ -942,6 +1670,99 @@
     "title": "$ 1.400.000",
     "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph-almagro-al-frente-59102685.html?n_src=Listado&n_pills=Parrilla&n_pg=1&n_pos=20"
   },
+  "zonaprop:59147521": {
+    "address": "Palermo, Capital Federal",
+    "bathrooms": 14,
+    "bedrooms": 14,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:06:02Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Palermo: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59147521",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/14/75/21/360x266/2064352169.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 9000000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "zonaprop_alquiler_casa_villa-crespo",
+    "site": "zonaprop",
+    "surface_m2": 740.0,
+    "title": "$ 9.000.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-edificio-en-block-750-m-sup2-.-palermo-59147521.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=17"
+  },
+  "zonaprop:59149695": {
+    "address": "La Paternal, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": 4,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:06:02Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Comuna 15: inseguridad alta según datos oficiales (19.135 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59149695",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/14/96/95/360x266/2058862913.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 2250000.0,
+    "price_currency": "ARS",
+    "rooms": 5,
+    "search_name": "zonaprop_alquiler_casa_villa-crespo",
+    "site": "zonaprop",
+    "surface_m2": 233.0,
+    "title": "$ 2.250.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-en-alquiler-4-dorm.-3-banos-paternal-59149695.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=18"
+  },
+  "zonaprop:59155437": {
+    "address": "Caballito, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:05:11Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59155437",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/15/54/37/360x266/2060361961.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 2200000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "zonaprop_alquiler_casa_caballito",
+    "site": "zonaprop",
+    "surface_m2": 164.0,
+    "title": "$ 2.200.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-duplex-en-alquiler-en-caballito-capital-federal-59155437.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=15"
+  },
   "zonaprop:59177593": {
     "address": "Caballito, Capital Federal",
     "bathrooms": null,
@@ -1003,6 +1824,37 @@
     "surface_m2": 190.0,
     "title": "$ 3.000.000",
     "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-espectacular-ph-en-alquiler-en-el-barrio-de-almagro-59222202.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=6"
+  },
+  "zonaprop:59230426": {
+    "address": "Caballito, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:05:11Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59230426",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/23/04/26/360x266/2055852831.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 3500000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "zonaprop_alquiler_casa_caballito",
+    "site": "zonaprop",
+    "surface_m2": 139.0,
+    "title": "$ 3.500.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-en-caballito-59230426.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=9"
   },
   "zonaprop:59282800": {
     "address": "Almagro, Capital Federal",
@@ -1097,6 +1949,68 @@
     "title": "$ 3.900.000",
     "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph-en-alquiler-6-banos-330-m-caballito-59341943.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=3"
   },
+  "zonaprop:59356414": {
+    "address": "Caballito Norte, Caballito",
+    "bathrooms": 4,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:05:33Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59356414",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/35/64/14/360x266/2063733624.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "venta",
+    "price_amount": 359000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "zonaprop_venta_casa_caballito",
+    "site": "zonaprop",
+    "surface_m2": 388.0,
+    "title": "$ 359.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/veclcapa-amplio-duplex-de-388-m-en-excelente-ubicacion-a-m-de-59356414.html?n_src=Listado&n_pills=Quincho&n_pg=7&n_pos=7"
+  },
+  "zonaprop:59360125": {
+    "address": "Saavedra, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:13:22Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Saavedra: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59360125",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/36/01/25/360x266/2059276625.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 4000000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "zonaprop_alquiler_casa_Saavedra",
+    "site": "zonaprop",
+    "surface_m2": 201.0,
+    "title": "$ 4.000.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-casa-uso-comercial-59360125.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=8"
+  },
   "zonaprop:59367939": {
     "address": "Caballito, Capital Federal",
     "bathrooms": 2,
@@ -1104,6 +2018,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:18:56Z",
     "flags": [
+      {
+        "label": "Precio 40% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      },
       {
         "label": "Una sola foto o sin fotos",
         "level": "low",
@@ -1190,6 +2109,68 @@
     "title": "$ 2.400.000",
     "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph-en-alquiler-en-villa-crespo-con-terraza-caba-59405086.html?n_src=Listado&n_pills=Aire+acondicionado&n_pg=1&n_pos=4"
   },
+  "zonaprop:59426317": {
+    "address": "Villa Pueyrredón, Capital Federal",
+    "bathrooms": 3,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:13:22Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Villa Pueyrredon: inseguridad baja según datos oficiales",
+        "level": "low",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59426317",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/42/63/17/360x266/2060926523.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 2700000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "zonaprop_alquiler_casa_Saavedra",
+    "site": "zonaprop",
+    "surface_m2": 220.0,
+    "title": "$ 2.700.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-casa-4-ambientes-playroom-terraza-y-cochera-59426317.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=16"
+  },
+  "zonaprop:59450132": {
+    "address": "Flores, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": 4,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:05:11Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Flores: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59450132",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/45/01/32/360x266/2061508535.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 2500000.0,
+    "price_currency": "ARS",
+    "rooms": 5,
+    "search_name": "zonaprop_alquiler_casa_caballito",
+    "site": "zonaprop",
+    "surface_m2": 280.0,
+    "title": "$ 2.500.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-casa-5-ambientes-flores-idea-fabrica-taller-59450132.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=3"
+  },
   "zonaprop:59452788": {
     "address": "Villa Urquiza, Capital Federal",
     "bathrooms": 2,
@@ -1221,6 +2202,99 @@
     "title": "$ 2.999.999",
     "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph-en-alquiler-4-dorm.-2-banos-villa-urquiza-59452788.html?n_src=Listado&n_pills=Parrilla&n_pg=1&n_pos=5"
   },
+  "zonaprop:59453764": {
+    "address": "Chacarita, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:06:02Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Chacarita: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59453764",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/45/37/64/360x266/2061596936.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 3900000.0,
+    "price_currency": "ARS",
+    "rooms": 6,
+    "search_name": "zonaprop_alquiler_casa_villa-crespo",
+    "site": "zonaprop",
+    "surface_m2": 322.0,
+    "title": "$ 3.900.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-casa-con-jardin-y-terraza-en-chacarita.-59453764.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=14"
+  },
+  "zonaprop:59455030": {
+    "address": "Caballito, Capital Federal",
+    "bathrooms": 3,
+    "bedrooms": 5,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:05:11Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59455030",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/45/50/30/360x266/2061630114.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 5000000.0,
+    "price_currency": "ARS",
+    "rooms": 6,
+    "search_name": "zonaprop_alquiler_casa_caballito",
+    "site": "zonaprop",
+    "surface_m2": 310.0,
+    "title": "$ 5.000.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-en-alquiler-comercial-gastronomico-lote-propio-59455030.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=10"
+  },
+  "zonaprop:59479573": {
+    "address": "Núñez, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:09:07Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Nunez: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59479573",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/47/95/73/360x266/2062228730.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 3500000.0,
+    "price_currency": "ARS",
+    "rooms": 6,
+    "search_name": "zonaprop_alquiler_casa_nunez",
+    "site": "zonaprop",
+    "surface_m2": 210.0,
+    "title": "$ 3.500.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-casa-de-estilo-5-ambientes-con-terraza-y-59479573.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=4"
+  },
   "zonaprop:59489248": {
     "address": "Almagro, Capital Federal",
     "bathrooms": 7,
@@ -1251,6 +2325,37 @@
     "surface_m2": 600.0,
     "title": "$ 3.500.000",
     "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph-almagro-11-ambientes-alquiler-comercial-59489248.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=14"
+  },
+  "zonaprop:59492352": {
+    "address": "Caballito Norte, Caballito",
+    "bathrooms": 2,
+    "bedrooms": 5,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:05:11Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59492352",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/49/23/52/360x266/2062537760.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 3200000.0,
+    "price_currency": "ARS",
+    "rooms": 6,
+    "search_name": "zonaprop_alquiler_casa_caballito",
+    "site": "zonaprop",
+    "surface_m2": 300.0,
+    "title": "$ 3.200.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcapa-super-luminosa-casa-con-patio-y-terraza-59492352.html?n_src=Listado&n_pills=Permite+mascotas&n_pg=1&n_pos=21"
   },
   "zonaprop:59496998": {
     "address": "Saavedra, Capital Federal",
@@ -1322,7 +2427,7 @@
     "first_seen": "2026-07-10T03:54:22Z",
     "flags": [
       {
-        "label": "Precio 42% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 48% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -1388,6 +2493,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:36:04Z",
     "flags": [
+      {
+        "label": "Precio 41% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      },
       {
         "label": "Una sola foto o sin fotos",
         "level": "low",
@@ -1535,5 +2645,67 @@
     "surface_m2": 309.0,
     "title": "$ 5.500.000",
     "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph-uso-comercial-palermo-alquiler-59566891.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=6"
+  },
+  "zonaprop:59573268": {
+    "address": "Villa Crespo, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:06:02Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Villa Crespo: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59573268",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/57/32/68/360x266/2064482430.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 4500000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "zonaprop_alquiler_casa_villa-crespo",
+    "site": "zonaprop",
+    "surface_m2": 400.0,
+    "title": "$ 4.500.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-doble-frente.-destino-comercial.-garage-terraza-59573268.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=6"
+  },
+  "zonaprop:59574149": {
+    "address": "Saavedra, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": 4,
+    "expenses": null,
+    "first_seen": "2026-07-10T04:09:07Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Saavedra: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59574149",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/57/41/49/360x266/2064505733.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 2500000.0,
+    "price_currency": "ARS",
+    "rooms": 5,
+    "search_name": "zonaprop_alquiler_casa_nunez",
+    "site": "zonaprop",
+    "surface_m2": 230.0,
+    "title": "$ 2.500.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-de-casa-5-amb-en-el-barrio-de-saavedra.-59574149.html?n_src=Listado&n_pills=Parrilla&n_pg=1&n_pos=18"
   }
 }
