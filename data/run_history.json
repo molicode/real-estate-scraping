@@ -534,14 +534,39 @@
   "errors": []
  },
  {
-  "finished_at": "2026-07-10T03:51:19Z",
-  "only_job": "zonaprop_alquiler_ph_saavedra",
+  "finished_at": "2026-07-10T03:54:22Z",
+  "only_job": null,
   "jobs": {
+   "ARGENPROP_ALQUILER_PH_CABALLITO": 7,
+   "mercadolibre_alquiler_ph_caballito": 2,
+   "remax_alquiler_ph_caballito": 4,
+   "zonaprop_alquiler_ph_caballito": 7,
+   "zonaprop_alquiler_ph_villa-crespo": 7,
+   "argenprop_alquiler_ph_villa-crespo": 2,
+   "remax_alquiler_ph_villa-crespo": 4,
+   "mercadolibre_alquiler_ph_villa-crespo": 0,
+   "argenprop_alquiler_ph_nunez": 0,
+   "mercadolibre_alquiler_ph_nunez": 1,
+   "remax_alquiler_ph_nunez": 4,
+   "zonaprop_alquiler_ph_nunez": 4,
+   "argenprop_alquiler_ph_almagro": 0,
+   "mercadolibre_alquiler_ph_almagro": 7,
+   "remax_alquiler_ph_almagro": 4,
+   "zonaprop_alquiler_ph_almagro": 8,
+   "argenprop_alquiler_ph_saavedra": 0,
+   "mercadolibre_alquiler_ph_saavedra": 0,
+   "remax_alquiler_ph_saavedra": 4,
    "zonaprop_alquiler_ph_saavedra": 4
   },
-  "found": 4,
-  "new": 4,
-  "total_stored": 24,
-  "errors": []
+  "found": 69,
+  "new": 29,
+  "total_stored": 49,
+  "errors": [
+   "mercadolibre_alquiler_ph_villa-crespo (mercadolibre): 0 avisos — posible bloqueo o cambio de HTML",
+   "argenprop_alquiler_ph_nunez (argenprop): 0 avisos — posible bloqueo o cambio de HTML",
+   "argenprop_alquiler_ph_almagro (argenprop): 0 avisos — posible bloqueo o cambio de HTML",
+   "argenprop_alquiler_ph_saavedra (argenprop): 0 avisos — posible bloqueo o cambio de HTML",
+   "mercadolibre_alquiler_ph_saavedra (mercadolibre): 0 avisos — posible bloqueo o cambio de HTML"
+  ]
  }
 ]

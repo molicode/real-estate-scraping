@@ -71,7 +71,7 @@
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
       {
-        "label": "Precio 65% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 75% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -99,6 +99,32 @@
     "surface_m2": 24.0,
     "title": "MONOAMBIENTE A LA CALLE EN PLANTA BAJA APTO PROFESIONAL",
     "url": "https://www.argenprop.com/ph-en-alquiler-en-caballito--19673147"
+  },
+  "argenprop:19829535": {
+    "address": "Estado de Israel al 4300",
+    "bathrooms": null,
+    "bedrooms": 4,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:52:21Z",
+    "flags": [],
+    "id": "argenprop:19829535",
+    "image": "https://www.argenprop.com/static-content/53592891/cbf2b070-575b-4a4d-b716-3647381a78a0_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/53592891/cbf2b070-575b-4a4d-b716-3647381a78a0_u_small.jpg",
+      "https://www.argenprop.com/static-content/53592891/d4041443-6d18-488e-88e1-cd676f4ef5bf_u_small.jpg",
+      "https://www.argenprop.com/static-content/53592891/b9818732-3218-4413-b75b-fee0f1d0d0a6_u_small.jpg",
+      "https://www.argenprop.com/static-content/53592891/39bb2b15-eab9-4527-8af7-4ee647237e7f_u_small.jpg",
+      "https://www.argenprop.com/static-content/53592891/07ca5e44-6d55-49d0-9859-782eb241c1c0_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 3800000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_ph_villa-crespo",
+    "site": "argenprop",
+    "surface_m2": 160.0,
+    "title": "Casa en Villa Crespo",
+    "url": "https://www.argenprop.com/ph-en-alquiler-en-villa-crespo-7-ambientes--19829535"
   },
   "argenprop:19831090": {
     "address": "Avenida Rivadavia e/ Victor Martinez y Emilio Mitre",
@@ -132,6 +158,32 @@
     "title": "PH en Alquiler - 6 Baños - 330mts - Caballito",
     "url": "https://www.argenprop.com/ph-en-alquiler-en-caballito-1-ambiente--19831090"
   },
+  "argenprop:19875552": {
+    "address": "Vera 800",
+    "bathrooms": null,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:52:21Z",
+    "flags": [],
+    "id": "argenprop:19875552",
+    "image": "https://www.argenprop.com/static-content/25557891/03effdb1-bcbf-42ac-8234-4601aab9884e_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/25557891/03effdb1-bcbf-42ac-8234-4601aab9884e_u_small.jpg",
+      "https://www.argenprop.com/static-content/25557891/8cd08dfd-ee16-43dd-af11-d80086d7b7c9_u_small.jpg",
+      "https://www.argenprop.com/static-content/25557891/ef072e17-45b6-4a88-903e-dccc5ef1d9f3_u_small.jpg",
+      "https://www.argenprop.com/static-content/25557891/9fc25c6e-3f62-4056-b69c-f4f3bf77579a_u_small.jpg",
+      "https://www.argenprop.com/static-content/25557891/ac2045f9-8b8c-4404-ad0f-80671d4c3449_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2400000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_ph_villa-crespo",
+    "site": "argenprop",
+    "surface_m2": 150.0,
+    "title": "PH EN ALQUILER EN VILLA CRESPO CON TERRAZA, CABA",
+    "url": "https://www.argenprop.com/ph-en-alquiler-en-villa-crespo-4-ambientes--19875552"
+  },
   "argenprop:19963154": {
     "address": "Jose Maria Moreno 100, Piso 0",
     "bathrooms": null,
@@ -139,6 +191,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
+      {
+        "label": "Precio 50% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      },
       {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
@@ -172,7 +229,7 @@
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
       {
-        "label": "Precio 55% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 68% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -232,6 +289,441 @@
     "surface_m2": 95.0,
     "title": "PH ANTIGUO ENTRADA INDEPENDIENTE 6 HABITACIONES 2 BAÑOS TERRAZA SIN EXPENSAS SOLO COMERCIAL PROFESIONAL",
     "url": "https://www.argenprop.com/ph-en-alquiler-en-caballito-sur-7-ambientes--7819473"
+  },
+  "mercadolibre:MLA1807320357": {
+    "address": "Yatay 382, ADF, Almagro, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:53:25Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Almagro: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA1807320357",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_837728-MLA111344726196_052026-E.webp",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 1600000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "mercadolibre_alquiler_ph_almagro",
+    "site": "mercadolibre",
+    "surface_m2": 93.0,
+    "title": "Ph 5 Ambientes Al Frente Profesional Y/0 Comercial",
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-1807320357-ph-5-ambientes-al-frente-profesional-y0-comercial-_JM"
+  },
+  "mercadolibre:MLA1833116013": {
+    "address": "Avenida Belgrano 3300, Almagro, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:53:25Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Belgrano: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA1833116013",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_832817-MLA112273178665_052026-E.webp",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 1500000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "mercadolibre_alquiler_ph_almagro",
+    "site": "mercadolibre",
+    "surface_m2": 200.0,
+    "title": "Almagro, Ph 4 Amb. Sin Expensas. 200 M2 Cub. 200 M2 Terraza",
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-1833116013-almagro-ph-4-amb-sin-expensas-200-m2-cub-200-m2-terraza-_JM"
+  },
+  "mercadolibre:MLA1838096889": {
+    "address": "Castro Barros 266, Almagro, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:53:25Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Almagro: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA1838096889",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_718156-MLA110418418657_042026-E.webp",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 2000000.0,
+    "price_currency": "ARS",
+    "rooms": 6,
+    "search_name": "mercadolibre_alquiler_ph_almagro",
+    "site": "mercadolibre",
+    "surface_m2": 140.0,
+    "title": "Ph En Planta Baja Sobre Av. Castro Barros Apto Profesional Sin Expensas",
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-1838096889-ph-en-planta-baja-sobre-av-castro-barros-apto-profesional-sin-expensas-_JM"
+  },
+  "mercadolibre:MLA1845637867": {
+    "address": "Gascon 600, Almagro, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:53:25Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Almagro: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA1845637867",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_768502-MLA113811240361_062026-E.webp",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 1600000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "mercadolibre_alquiler_ph_almagro",
+    "site": "mercadolibre",
+    "surface_m2": 79.0,
+    "title": "Ph Almagro Al Frente",
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-1845637867-ph-almagro-al-frente-_JM"
+  },
+  "mercadolibre:MLA1852308055": {
+    "address": "Caballito, Caballito, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:51:42Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA1852308055",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_708455-MLA111331598817_052026-E.webp",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 1500000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "mercadolibre_alquiler_ph_caballito",
+    "site": "mercadolibre",
+    "surface_m2": 130.0,
+    "title": "Duplex Sin Expensas, A 1 Cuadra Y Media De Plaza Irlanda",
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-1852308055-duplex-sin-expensas-a-1-cuadra-y-media-de-plaza-irlanda-_JM"
+  },
+  "mercadolibre:MLA1868877057": {
+    "address": "Avenida Medrano Al 600, Almagro, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:53:25Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Almagro: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA1868877057",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_917625-MLA112810987298_072026-E.webp",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 1990000.0,
+    "price_currency": "ARS",
+    "rooms": 6,
+    "search_name": "mercadolibre_alquiler_ph_almagro",
+    "site": "mercadolibre",
+    "surface_m2": 175.0,
+    "title": "Av Medrano 600, Ph 6 Ambientes Para Uso Comercial De 175m2 En Almagro, A Mts Del Subte B",
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-1868877057-av-medrano-600-ph-6-ambientes-para-uso-comercial-de-175m2-en-almagro-a-mts-del-subte-b-_JM"
+  },
+  "mercadolibre:MLA1871447295": {
+    "address": "Querandies Al 4300, Almagro, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:53:25Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Almagro: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA1871447295",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_988424-MLA114058379881_072026-E.webp",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 2700000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "mercadolibre_alquiler_ph_almagro",
+    "site": "mercadolibre",
+    "surface_m2": 170.0,
+    "title": "Alquiler-ph-4 Amb- Terraza- Parrilla- Almagro",
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-1871447295-alquiler-ph-4-amb-terraza-parrilla-almagro-_JM"
+  },
+  "mercadolibre:MLA3458528894": {
+    "address": "Riglos Al 600, Caballito, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:51:42Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA3458528894",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_804493-MLA112018308432_062026-E.webp",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 2000000.0,
+    "price_currency": "ARS",
+    "rooms": 6,
+    "search_name": "mercadolibre_alquiler_ph_caballito",
+    "site": "mercadolibre",
+    "surface_m2": 120.0,
+    "title": "Riglos 600 - Ph 4 Ambientes - Entrada Independiente",
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-3458528894-riglos-600-ph-4-ambientes-entrada-independiente-_JM"
+  },
+  "mercadolibre:MLA3567485808": {
+    "address": "Nuñez 2306, Núñez, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:52:51Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Nunez: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA3567485808",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_611730-MLA114211537867_072026-E.webp",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 2000000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "mercadolibre_alquiler_ph_nunez",
+    "site": "mercadolibre",
+    "surface_m2": 120.0,
+    "title": "Ph En Nuñez",
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-3567485808-ph-en-nunez-_JM"
+  },
+  "mercadolibre:MLA3584547646": {
+    "address": "Colombres 100, Almagro, Capital Federal",
+    "bathrooms": 7,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:53:25Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Almagro: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA3584547646",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_789507-MLA114345540981_072026-E.webp",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 3500000.0,
+    "price_currency": "ARS",
+    "rooms": 11,
+    "search_name": "mercadolibre_alquiler_ph_almagro",
+    "site": "mercadolibre",
+    "surface_m2": 395.0,
+    "title": "Ph Almagro 11 Ambientes Alquiler Comercial",
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-3584547646-ph-almagro-11-ambientes-alquiler-comercial-_JM"
+  },
+  "remax:311bb778-e238-4f02-8533-89f6555ba24e": {
+    "address": "Geronimo Rejon Entre 190 y 192 S/N",
+    "bathrooms": null,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:52:05Z",
+    "flags": [
+      {
+        "label": "Precio 99% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:311bb778-e238-4f02-8533-89f6555ba24e",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/2d76bb4a-b5e4-4684-80f1-88f54a05f75c.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/2d76bb4a-b5e4-4684-80f1-88f54a05f75c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/59db648f-50ad-4162-a896-4ce51d75fb16.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/d364fc5c-e318-4cd3-ad93-463d1d9a376b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/c310bda2-8549-42d9-96de-086390c53897.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/90c98519-fdf5-431b-be57-77c6526d99fb.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 26500.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "remax_alquiler_ph_caballito",
+    "site": "remax",
+    "surface_m2": null,
+    "title": "VENTA LOTE REJON E/190 Y 192 UNICO TODOS SERVICIOS",
+    "url": "https://www.remax.com.ar/listings/venta-lote-rejon-e-190-y-192-unico-todos-servicios"
+  },
+  "remax:37ea2c2f-0e0f-4062-80f8-0c35aeea9c98": {
+    "address": "Avenida Remedios de Escalada de San Martín 3200",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:52:05Z",
+    "flags": [
+      {
+        "label": "Precio 55% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:37ea2c2f-0e0f-4062-80f8-0c35aeea9c98",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/37ea2c2f-0e0f-4062-80f8-0c35aeea9c98/d9288770-85ea-495f-ab13-0e5410c8d2fd.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/37ea2c2f-0e0f-4062-80f8-0c35aeea9c98/d9288770-85ea-495f-ab13-0e5410c8d2fd.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/37ea2c2f-0e0f-4062-80f8-0c35aeea9c98/d2e69cd0-83f4-423a-a988-f7c8b167f72e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/37ea2c2f-0e0f-4062-80f8-0c35aeea9c98/c6efaf84-4f4a-4a99-ab3b-586975adbfc8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/37ea2c2f-0e0f-4062-80f8-0c35aeea9c98/cf08cbb7-5fb5-4761-8c0c-e8969109daeb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/37ea2c2f-0e0f-4062-80f8-0c35aeea9c98/6b368149-0e6a-485f-9ce2-3ab09a58e3f6.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 850000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "remax_alquiler_ph_caballito",
+    "site": "remax",
+    "surface_m2": 127.0,
+    "title": "Alquiler en 5 ambientes Valentina Alsina",
+    "url": "https://www.remax.com.ar/listings/alquiler-en-5-ambientes-valentina-alsina"
+  },
+  "remax:cbc8fb98-b75c-422b-bef8-7ebbc8208fcd": {
+    "address": "San Luis 2400",
+    "bathrooms": null,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:52:05Z",
+    "flags": [
+      {
+        "label": "Balvanera: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "remax:cbc8fb98-b75c-422b-bef8-7ebbc8208fcd",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/cbc8fb98-b75c-422b-bef8-7ebbc8208fcd/74464c03-3ada-4ecd-be07-9e94490b068e.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/cbc8fb98-b75c-422b-bef8-7ebbc8208fcd/74464c03-3ada-4ecd-be07-9e94490b068e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/cbc8fb98-b75c-422b-bef8-7ebbc8208fcd/a21d7716-90b8-47fd-af54-618026e7f585.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 9000000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "remax_alquiler_ph_caballito",
+    "site": "remax",
+    "surface_m2": 133.0,
+    "title": "ALQUILER EDIFICIO EN BLOCK BALVANERA",
+    "url": "https://www.remax.com.ar/listings/alquiler-edificio-en-block-balvanera"
+  },
+  "remax:e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93": {
+    "address": "Los Cedros y Las Encinas S/N",
+    "bathrooms": null,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:52:05Z",
+    "flags": [
+      {
+        "label": "Precio 99% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93/2b008761-ce25-491f-9afd-6f23e3dcfe33.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93/2b008761-ce25-491f-9afd-6f23e3dcfe33.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93/1b20b992-5b60-4405-9c86-580a95d1820c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93/2b475405-99aa-4d2c-a4d3-7f902ed5c001.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93/ee1009af-a779-456b-8005-90547049012d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93/9d35dbf9-4795-4ba2-981e-2e963cc7f41d.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 19000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "remax_alquiler_ph_caballito",
+    "site": "remax",
+    "surface_m2": null,
+    "title": "VENTA LOTE B. SOSIEGO LOS CEDROSY LAS ENCINAS N14",
+    "url": "https://www.remax.com.ar/listings/venta-lote-b-sosiego-los-cedrosy-las-encinas-n14"
   },
   "zonaprop:47178798": {
     "address": "Almagro, Capital Federal",
@@ -294,6 +786,99 @@
     "surface_m2": 240.0,
     "title": "$ 2.000.000",
     "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-beauchef-y-valle-ph-entrada-propia-3-dorm.-49762338.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=13"
+  },
+  "zonaprop:58419223": {
+    "address": "La Paternal, Capital Federal",
+    "bathrooms": 3,
+    "bedrooms": 6,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:52:19Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Comuna 15: inseguridad alta según datos oficiales (19.135 delitos/100k hab)",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:58419223",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/41/92/23/360x266/2034371962.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 2500000.0,
+    "price_currency": "ARS",
+    "rooms": 6,
+    "search_name": "zonaprop_alquiler_ph_villa-crespo",
+    "site": "zonaprop",
+    "surface_m2": 240.0,
+    "title": "$ 2.500.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph-comercial-en-alquiler-6-ambientes-entrada-58419223.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=3"
+  },
+  "zonaprop:58805290": {
+    "address": "Palermo, Capital Federal",
+    "bathrooms": null,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:52:19Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Palermo: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:58805290",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/80/52/90/360x266/2044886318.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 3200000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "zonaprop_alquiler_ph_villa-crespo",
+    "site": "zonaprop",
+    "surface_m2": 210.0,
+    "title": "$ 3.200.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-terreno-en-palermo-58805290.html?n_src=Listado&n_pg=1&n_pos=5"
+  },
+  "zonaprop:58837784": {
+    "address": "Villa Crespo, Capital Federal",
+    "bathrooms": 3,
+    "bedrooms": 8,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:52:19Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Villa Crespo: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:58837784",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/83/77/84/360x266/2045730067.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 4200000.0,
+    "price_currency": "ARS",
+    "rooms": 10,
+    "search_name": "zonaprop_alquiler_ph_villa-crespo",
+    "site": "zonaprop",
+    "surface_m2": 280.0,
+    "title": "$ 4.200.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph-planta-alta-10-ambientes-villa-crespo-58837784.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=11"
   },
   "zonaprop:59093574": {
     "address": "Villa Crespo, Capital Federal",
@@ -450,6 +1035,37 @@
     "title": "$ 2.100.000",
     "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph-en-alquiler-con-entrada-independiente-ideal-59282800.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=25"
   },
+  "zonaprop:59340298": {
+    "address": "Villa Crespo, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": 4,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:52:19Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Villa Crespo: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59340298",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/34/02/98/360x266/2058486524.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 3800000.0,
+    "price_currency": "ARS",
+    "rooms": 7,
+    "search_name": "zonaprop_alquiler_ph_villa-crespo",
+    "site": "zonaprop",
+    "surface_m2": 390.0,
+    "title": "$ 3.800.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-casa-en-villa-crespo-59340298.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=7"
+  },
   "zonaprop:59341943": {
     "address": "Caballito, Capital Federal",
     "bathrooms": 6,
@@ -512,12 +1128,74 @@
     "title": "$ 2.000.000",
     "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-riglos-600-ph-4-ambientes-entrada-independiente-59367939.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=2"
   },
+  "zonaprop:59386605": {
+    "address": "Belgrano R, Belgrano",
+    "bathrooms": 4,
+    "bedrooms": 4,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:53:21Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Belgrano: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59386605",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/38/66/05/360x266/2059931177.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 3700000.0,
+    "price_currency": "ARS",
+    "rooms": 6,
+    "search_name": "zonaprop_alquiler_ph_nunez",
+    "site": "zonaprop",
+    "surface_m2": 280.0,
+    "title": "$ 3.700.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph-con-terraza-en-belgrano-r-alquiler-comercial-59386605.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=3"
+  },
+  "zonaprop:59405086": {
+    "address": "Villa Crespo, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:52:19Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Villa Crespo: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59405086",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/40/50/86/360x266/2060405221.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 2400000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "zonaprop_alquiler_ph_villa-crespo",
+    "site": "zonaprop",
+    "surface_m2": 200.0,
+    "title": "$ 2.400.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph-en-alquiler-en-villa-crespo-con-terraza-caba-59405086.html?n_src=Listado&n_pills=Aire+acondicionado&n_pg=1&n_pos=4"
+  },
   "zonaprop:59452788": {
     "address": "Villa Urquiza, Capital Federal",
     "bathrooms": 2,
     "bedrooms": 4,
     "expenses": null,
-    "first_seen": "2026-07-10T03:51:19Z",
+    "first_seen": "2026-07-10T03:54:22Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -579,7 +1257,7 @@
     "bathrooms": 2,
     "bedrooms": 3,
     "expenses": null,
-    "first_seen": "2026-07-10T03:51:19Z",
+    "first_seen": "2026-07-10T03:53:21Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -599,19 +1277,55 @@
     "price_amount": 3000000.0,
     "price_currency": "ARS",
     "rooms": 4,
-    "search_name": "zonaprop_alquiler_ph_saavedra",
+    "search_name": "zonaprop_alquiler_ph_nunez",
     "site": "zonaprop",
     "surface_m2": 190.0,
     "title": "$ 3.000.000",
-    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-casa-4-amb.-3-dorm.-1-en-suite-terraza-cochera-59496998.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=4"
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-casa-4-amb.-3-dorm.-1-en-suite-terraza-cochera-59496998.html?n_src=Listado&n_pills=Aire+acondicionado&n_pg=1&n_pos=11"
+  },
+  "zonaprop:59501429": {
+    "address": "Belgrano C, Belgrano",
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "expenses": 170000.0,
+    "first_seen": "2026-07-10T03:53:21Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Belgrano: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59501429",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/50/14/29/360x266/2062758753.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 2000000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "zonaprop_alquiler_ph_nunez",
+    "site": "zonaprop",
+    "surface_m2": 105.0,
+    "title": "$ 2.000.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph-en-belgrano-r-59501429.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=1"
   },
   "zonaprop:59502664": {
     "address": "Saavedra, Capital Federal",
     "bathrooms": null,
     "bedrooms": null,
     "expenses": null,
-    "first_seen": "2026-07-10T03:51:19Z",
+    "first_seen": "2026-07-10T03:54:22Z",
     "flags": [
+      {
+        "label": "Precio 42% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      },
       {
         "label": "Una sola foto o sin fotos",
         "level": "low",
@@ -641,7 +1355,7 @@
     "bathrooms": 2,
     "bedrooms": 3,
     "expenses": null,
-    "first_seen": "2026-07-10T03:51:19Z",
+    "first_seen": "2026-07-10T03:54:22Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -729,6 +1443,37 @@
     "title": "$ 2.700.000",
     "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-alquiler-ph-4-amb-terraza-parrilla-almagro-59530409.html?n_src=Listado&n_pills=Aire+acondicionado&n_pg=1&n_pos=1"
   },
+  "zonaprop:59555075": {
+    "address": "Núñez, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": 4,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:53:21Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Nunez: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59555075",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/55/50/75/360x266/2064062554.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 2000000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "zonaprop_alquiler_ph_nunez",
+    "site": "zonaprop",
+    "surface_m2": 140.0,
+    "title": "$ 2.000.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph-en-nunez-59555075.html?n_src=Listado&n_pills=Parrilla&n_pg=1&n_pos=8"
+  },
   "zonaprop:59555407": {
     "address": "Almagro, Capital Federal",
     "bathrooms": 2,
@@ -759,5 +1504,36 @@
     "surface_m2": 150.0,
     "title": "$ 1.900.000",
     "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph-en-alquiler-3-dorm.-2-banos-150-m-almagro-59555407.html?n_src=Listado&n_pills=Aire+acondicionado&n_pg=1&n_pos=11"
+  },
+  "zonaprop:59566891": {
+    "address": "Palermo, Capital Federal",
+    "bathrooms": 6,
+    "bedrooms": 5,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:52:19Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Palermo: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59566891",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/56/68/91/360x266/2064317311.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 5500000.0,
+    "price_currency": "ARS",
+    "rooms": 6,
+    "search_name": "zonaprop_alquiler_ph_villa-crespo",
+    "site": "zonaprop",
+    "surface_m2": 309.0,
+    "title": "$ 5.500.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph-uso-comercial-palermo-alquiler-59566891.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=6"
   }
 }
