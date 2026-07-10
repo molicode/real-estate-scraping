@@ -569,9 +569,19 @@
 <section id="tab-runs" class="tab-panel hidden">
   <div class="toolbar">
     <button id="reload-runs" class="btn"><span data-icon="refresh"></span> Recargar</button>
+    <button id="select-runs" class="btn"><span data-icon="copy"></span> Seleccionar</button>
     <span id="runs-status" class="status"></span>
   </div>
+  <div id="runs-bulk" class="bulk-bar hidden">
+    <label class="bulk-all"><input type="checkbox" id="runs-check-all"> Todas</label>
+    <span id="runs-sel-count" class="status">0 seleccionadas</span>
+    <span class="bulk-spacer"></span>
+    <button id="bulk-del-data" class="btn small danger" disabled><span data-icon="trash"></span> Borrar datos</button>
+    <button id="bulk-del-runs" class="btn small" disabled><span data-icon="list-x"></span> Borrar corridas</button>
+    <button id="bulk-cancel" class="btn small">Cancelar</button>
+  </div>
   <div id="runs-list"></div>
+  <div class="row"><button id="runs-more" class="btn hidden"><span data-icon="chevron-down"></span> Cargar más corridas</button></div>
 </section>
 
 </main>
