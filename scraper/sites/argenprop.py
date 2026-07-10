@@ -21,6 +21,10 @@ BASE = "https://www.argenprop.com"
 
 class ArgenpropScraper(BaseScraper):
     site = "argenprop"
+    # Argenprop empezó a bloquear las IPs de los runners de GitHub (HTTP 403).
+    # Con muchos jobs es total, así que reintentamos vía ScraperAPI cuando hay
+    # key (igual que Zonaprop/MercadoLibre). Sin key, sigue intentando directo.
+    proxy_fallback = True
 
     def page_url(self, base_url: str, page: int) -> str:
         if page <= 1:

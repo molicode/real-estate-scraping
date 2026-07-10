@@ -6,7 +6,7 @@ Scraper de portales inmobiliarios argentinos que corre **cada 1 hora, todos los 
 
 | Portal | Sitio | Notas |
 |---|---|---|
-| Argenprop | `argenprop.com` | HTML server-side, funciona directo desde GitHub Actions |
+| Argenprop | `argenprop.com` | HTML server-side. Funcionaba directo, pero empezó a bloquear los runners (HTTP 403); reintenta vía `SCRAPERAPI_KEY` si está configurado |
 | Zonaprop | `zonaprop.com.ar` | Cloudflare bloquea a los runners de GitHub: requiere el secret `SCRAPERAPI_KEY` |
 | MercadoLibre Inmuebles | `inmuebles.mercadolibre.com.ar` | Bloquea IPs de datacenter (redirige a verificación): requiere el secret `SCRAPERAPI_KEY` |
 | Remax | `remax.com.ar` | Se consume la API JSON pública del sitio (SPA sin HTML server-side) |
