@@ -143,6 +143,23 @@ def filter_due(searches: list[Search], history: list[dict], now: datetime) -> li
     return due
 
 
+def refresh_media(stored: dict, found: list) -> None:
+    """Completa fotos/verificado de avisos que YA estaban en el almacén pero se
+    re-scrapearon con más info (típicamente la galería completa que antes no
+    parseábamos). No cuesta nada extra: usa lo que ya vino en la corrida."""
+    for listing in found:
+        entry = stored.get(listing.id)
+        if entry is None:
+            continue
+        imgs = getattr(listing, "images", None) or []
+        if len(imgs) > len(entry.get("images") or []):
+            entry["images"] = imgs
+            if not entry.get("image"):
+                entry["image"] = imgs[0]
+        if getattr(listing, "verified", False) and not entry.get("verified"):
+            entry["verified"] = True
+
+
 def enrich_details(
     new_listings: list, stored: dict, cap: int, proxy_exhausted: bool
 ) -> None:
@@ -266,6 +283,10 @@ def main() -> int:
         matching = [l for l in found if listing_filters.matches(l, search.filters)]
         stats[search.name] = len(matching)
         all_new.extend(add_new(stored, matching))
+        # Avisos que ya estaban pero ahora traen más fotos (ej. galería
+        # completa que antes no parseábamos): actualizamos su ficha. Es gratis,
+        # usa lo que ya vino en la página de resultados.
+        refresh_media(stored, matching)
 
     # Enriquecimiento de detalle (galería completa + identidad verificada):
     # solo para avisos NUEVOS y acotado por costo, porque cada uno es un fetch
