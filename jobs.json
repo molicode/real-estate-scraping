@@ -482,6 +482,38 @@
       "mode": "menu",
       "ptype": "ph",
       "zone": "almagro"
+    },
+    {
+      "name": "zonaprop_alquiler_ph_almagro",
+      "url": "https://www.zonaprop.com.ar/ph-alquiler-almagro.html",
+      "site": "zonaprop",
+      "operation": "alquiler",
+      "enabled": true,
+      "max_pages": 10,
+      "every_hours": 24,
+      "filters": {
+        "currency": "ARS",
+        "min_rooms": 4,
+        "min_bedrooms": 3,
+        "min_bathrooms": 2,
+        "require_price": true,
+        "keywords_exclude": [
+          "temporario",
+          "temporal",
+          "pozo",
+          "en construcción",
+          "oficina",
+          "local",
+          "compartido",
+          "cochera",
+          "apto comercial",
+          "galpón",
+          "cochera fija"
+        ]
+      },
+      "mode": "menu",
+      "ptype": "ph",
+      "zone": "almagro"
     }
   ]
 }
