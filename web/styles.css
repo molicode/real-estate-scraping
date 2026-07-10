@@ -534,6 +534,46 @@ tr.result-row.op-buy > td:first-child { box-shadow: inset 3px 0 0 var(--op-line)
 .vt-btn:hover { color: var(--text-soft); }
 .vt-btn.on { background: var(--accent-soft); color: var(--accent-strong); }
 
+/* Separador vertical fino entre grupos de botones de una barra. */
+.tb-sep {
+  width: 1px;
+  align-self: stretch;
+  min-height: 22px;
+  background: var(--border);
+  margin: 0 4px;
+}
+
+/* Control "Ordenar": combo compacto y prolijo (flecha propia, píldora). */
+.sort-ctl {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: var(--text-soft);
+}
+.sort-ctl select {
+  font-family: inherit;
+  font-size: 13.5px;
+  color: var(--text);
+  padding: 8px 32px 8px 13px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-pill);
+  background-color: var(--card);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238A8577' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 11px center;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  max-width: 240px;
+  transition: border-color var(--dur) var(--ease);
+}
+.sort-ctl select:hover { border-color: var(--text-faint); }
+.sort-ctl select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+:root[data-theme="dark"] .sort-ctl select {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23ABA492' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+}
+
 .chip-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 16px; }
 .chip {
   padding: 4px 13px;
