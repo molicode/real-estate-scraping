@@ -828,6 +828,7 @@ img.zoomable { cursor: zoom-in; }
 .flag-high { background: var(--danger-container); color: var(--danger); }
 .flag-med { background: var(--warn-container); color: var(--warn); }
 .flag-low { background: var(--surface-soft); color: var(--text-soft); }
+.flag-na { background: var(--surface-soft); color: var(--text-faint); }
 .flags-wrap { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
 .top-flags { padding: 0 14px 12px; }
 td .flags-wrap { margin-top: 4px; }
@@ -870,9 +871,32 @@ td .flags-wrap { margin-top: 4px; }
 .cm-label { fill: #fff; font-size: 11px; font-weight: 500; text-anchor: middle; dominant-baseline: middle; pointer-events: none; }
 .map-legend { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
 
+/* Toggle Comuna / Barrio */
+.map-controls { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 4px; }
+.seg { display: inline-flex; background: var(--surface-soft); border: 1px solid var(--border); border-radius: var(--r-pill); padding: 2px; }
+.seg-btn {
+  border: none; background: transparent; color: var(--text-soft);
+  font: inherit; font-size: 13px; padding: 5px 14px; border-radius: var(--r-pill);
+  cursor: pointer; transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.seg-btn.active { background: var(--card); color: var(--accent); font-weight: 500; }
+
 .comuna-detail { flex: 1 1 260px; min-width: 240px; }
 .cd-head { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.cd-sub { font-size: 12px; color: var(--text-soft); font-weight: 500; margin-bottom: 6px; }
 .cd-stat { font-size: 13px; color: var(--text-soft); margin: 8px 0 12px; }
+
+/* Evolución por año + proyección */
+.trend { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); }
+.trend-svg { width: 100%; max-width: 320px; height: auto; display: block; }
+.tc-line { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.tc-dot { fill: var(--accent); }
+.tc-proj-line { fill: none; stroke: var(--accent); stroke-width: 2; stroke-dasharray: 3 3; opacity: 0.7; }
+.tc-proj-dot { fill: none; stroke: var(--accent); stroke-width: 2; }
+.tc-x { fill: var(--text-faint); font-size: 9px; text-anchor: middle; font-variant-numeric: tabular-nums; }
+.tc-proj-x { fill: var(--accent); }
+.tc-note { font-size: 12px; color: var(--text-soft); margin-top: 6px; }
+.tc-star { color: var(--text-faint); }
 .ctypes { display: flex; flex-direction: column; gap: 5px; }
 .ctype { display: grid; grid-template-columns: 92px 1fr 62px; gap: 8px; align-items: center; font-size: 12px; }
 .ctype-name { color: var(--text-soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
