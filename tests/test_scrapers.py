@@ -49,6 +49,13 @@ def test_zonaprop_parse():
     assert first.price_amount == 820000.0
     assert first.price_currency == "ARS"
     assert first.rooms == 2
+    # Junta toda la galería del carrusel (sin el logo de la inmobiliaria).
+    assert first.images == [
+        "https://imgar.zonapropcdn.com/foto1.jpg",
+        "https://imgar.zonapropcdn.com/foto2.jpg",
+        "https://imgar.zonapropcdn.com/foto3.jpg",
+    ]
+    assert first.image == "https://imgar.zonapropcdn.com/foto1.jpg"
     assert listings[1].price_currency == "USD"
     assert listings[1].bedrooms == 2
 

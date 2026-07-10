@@ -1,8 +1,34 @@
 """Enriquecimiento de detalle: galería completa + identidad verificada."""
 
-from scraper.main import enrich_details
+from scraper.main import enrich_details, refresh_media
 from scraper.models import Listing
 from scraper.sites.mercadolibre import MercadoLibreScraper
+
+
+def test_refresh_media_completa_fotos_de_avisos_existentes():
+    # Un aviso ya guardado con una sola foto; se re-scrapea con la galería
+    # completa (gratis, desde la página de resultados) -> se actualiza.
+    stored = {
+        "zonaprop:1": Listing(
+            id="zonaprop:1", site="zonaprop", url="u", image="a.jpg", images=["a.jpg"]
+        ).to_dict()
+    }
+    fresh = Listing(
+        id="zonaprop:1", site="zonaprop", url="u",
+        image="a.jpg", images=["a.jpg", "b.jpg", "c.jpg"], verified=True,
+    )
+    refresh_media(stored, [fresh])
+    assert stored["zonaprop:1"]["images"] == ["a.jpg", "b.jpg", "c.jpg"]
+    assert stored["zonaprop:1"]["verified"] is True
+
+    # Si no trae MÁS fotos que las guardadas, no pisa nada.
+    fresh_menos = Listing(id="zonaprop:1", site="zonaprop", url="u", images=["a.jpg"])
+    refresh_media(stored, [fresh_menos])
+    assert stored["zonaprop:1"]["images"] == ["a.jpg", "b.jpg", "c.jpg"]
+
+    # Un aviso que no está en el almacén se ignora sin romper.
+    refresh_media(stored, [Listing(id="zonaprop:9", site="zonaprop", url="u")])
+    assert "zonaprop:9" not in stored
 
 
 def test_parse_detail_lee_galeria_y_verificado():

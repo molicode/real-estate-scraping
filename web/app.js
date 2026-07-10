@@ -394,24 +394,47 @@ function proxyPauseBadge(job) {
   return `<span class="badge pause-badge" title="Se agotaron los créditos del proxy ScraperAPI, que Zonaprop y MercadoLibre necesitan para no ser bloqueados. Este job vuelve solo cuando se recarga el cupo mensual.">${icon("pause", 12)} en pausa: sin créditos ScraperAPI${d ? ` · vuelve ${d}` : ""}</span>`;
 }
 
+// Orden de la lista de jobs (solo para mostrar; no cambia el orden guardado).
+let jobSort = localStorage.getItem("resc_job_sort") || "default";
+
+function sortedJobEntries() {
+  // Cada entrada conserva su índice original (i) para que los botones de
+  // acción (editar/borrar/correr) sigan apuntando al job correcto.
+  const entries = jobsDoc.searches.map((job, i) => ({ job, i }));
+  if (jobSort === "default") return entries;
+  const keyOf = ({ job }) => {
+    if (jobSort === "portal") return job.site || "~";
+    if (jobSort === "operacion") return job.operation === "venta" ? "1-compra" : "0-alquiler";
+    if (jobSort === "zona") return jobZone(job) || "~";  // sin zona al final
+    if (jobSort === "estado") return job.enabled === false ? "1" : "0";  // activos primero
+    return "";
+  };
+  return entries
+    .map((e, idx) => ({ e, k: keyOf(e), idx }))
+    .sort((a, b) => a.k.localeCompare(b.k, "es") || a.idx - b.idx)
+    .map((x) => x.e);
+}
+
 function renderJobs() {
   const wrap = $("jobs-list");
-  // conservar qué desplegables estaban abiertos al re-renderizar
+  // conservar qué desplegables estaban abiertos al re-renderizar (por índice
+  // original del job, no por posición: el orden de la lista puede cambiar)
   const openIdx = new Set(
     [...wrap.querySelectorAll("details.job-card")]
-      .map((d, i) => (d.open ? i : -1))
-      .filter((i) => i >= 0)
+      .filter((d) => d.open && d.dataset.jobIdx != null)
+      .map((d) => Number(d.dataset.jobIdx))
   );
   wrap.innerHTML = "";
   if (!jobsDoc.searches.length) {
     wrap.innerHTML = '<p class="status">No hay jobs todavía. Creá el primero con "Nuevo job".</p>';
   }
-  jobsDoc.searches.forEach((job, i) => {
+  sortedJobEntries().forEach(({ job, i }) => {
     const enabled = job.enabled !== false;
     const paused = jobPausedByProxy(job);
     const det = document.createElement("details");
     const opCls = opClass(job.operation);
     det.className = "job-card" + (enabled ? "" : " disabled") + (paused ? " proxy-paused" : "") + (opCls ? " " + opCls : "");
+    det.dataset.jobIdx = i;
     det.open = openIdx.has(i);
     const every = Math.max(1, Number(job.every_hours) || 1);
     const hasWd = job.weekday != null && job.weekday !== "";
@@ -841,6 +864,18 @@ $("f-name").addEventListener("input", () => { autoNameOn = false; });
 
 $("new-job").addEventListener("click", () => openForm(null));
 $("job-cancel").addEventListener("click", () => $("job-form-wrap").classList.add("hidden"));
+
+// Ordenar la lista de jobs (portal / operación / zona / estado).
+(() => {
+  const sel = $("job-sort");
+  if (!sel) return;
+  sel.value = jobSort;
+  sel.addEventListener("change", () => {
+    jobSort = sel.value;
+    localStorage.setItem("resc_job_sort", jobSort);
+    renderJobs();
+  });
+})();
 
 // Chips de palabras clave sugeridas: agregan al input sin duplicar
 document.querySelectorAll(".chip-row").forEach((row) => {

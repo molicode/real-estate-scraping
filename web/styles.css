@@ -56,6 +56,9 @@
   --op-buy-ink: #5E4F8E;
   --op-buy-line: #D3CAEA;
 
+  /* --- Elevación al pasar el mouse (sutil, tinte cálido de acento) --- */
+  --card-lift-shadow: 0 12px 26px -14px rgba(74, 62, 122, 0.30);
+
   /* --- Radios / espaciado / movimiento --- */
   --r-sm: 8px;
   --r-md: 12px;
@@ -111,6 +114,8 @@
   --op-buy-bg: #312B47;
   --op-buy-ink: #C3B7E8;
   --op-buy-line: #463D63;
+
+  --card-lift-shadow: 0 14px 30px -14px rgba(0, 0, 0, 0.60);
 
   color-scheme: dark;
 }
@@ -432,9 +437,8 @@ nav#tabs {
   border-radius: var(--r-lg);
   margin-bottom: 10px;
   overflow: hidden;
-  transition: border-color var(--dur) var(--ease);
+  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
 }
-.job-card:hover { border-color: var(--border-strong); }
 .job-card.disabled { opacity: 0.62; }
 .job-card summary {
   display: flex;
@@ -504,10 +508,12 @@ tr.result-row.op-buy > td:first-child { box-shadow: inset 3px 0 0 var(--op-line)
 .row-rank { font-weight: 600; color: var(--accent); margin-right: 2px; }
 .detail-badges { display: flex; flex-wrap: wrap; gap: 4px; margin: 4px 0 2px; }
 
-/* Toggle de vista lista/cards: control segmentado compacto. */
+/* Toggle de vista lista/cards: control segmentado, alineado con los botones
+   de la barra (misma altura y radio de píldora). */
 .view-toggle {
   display: inline-flex;
-  border: 1px solid var(--border);
+  align-self: center;
+  border: 1px solid var(--border-strong);
   border-radius: var(--r-pill);
   overflow: hidden;
   background: var(--card);
@@ -516,14 +522,14 @@ tr.result-row.op-buy > td:first-child { box-shadow: inset 3px 0 0 var(--op-line)
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 12px;
+  padding: 9px 13px;
   border: none;
   background: transparent;
   color: var(--text-faint);
   cursor: pointer;
   transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
 }
-.vt-btn + .vt-btn { border-left: 1px solid var(--border); }
+.vt-btn + .vt-btn { border-left: 1px solid var(--border-strong); }
 .vt-btn .ic { width: 17px; height: 17px; }
 .vt-btn:hover { color: var(--text-soft); }
 .vt-btn.on { background: var(--accent-soft); color: var(--accent-strong); }
@@ -789,10 +795,20 @@ img.zoomable { cursor: zoom-in; }
   border-radius: var(--r-lg);
   overflow: hidden;
   cursor: pointer;
-  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
 }
-.top-card:hover { border-color: var(--border-strong); transform: translateY(-3px); }
-@media (prefers-reduced-motion: reduce) { .top-card:hover { transform: none; } }
+/* Efecto al pasar el mouse: la card se eleva con una sombra suave. Unificado
+   para las tarjetas de contenido (avisos, jobs, corridas). */
+.top-card:hover,
+.job-card:hover,
+.run-card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-4px);
+  box-shadow: var(--card-lift-shadow);
+}
+@media (prefers-reduced-motion: reduce) {
+  .top-card:hover, .job-card:hover, .run-card:hover { transform: none; }
+}
 tr.result-row { cursor: pointer; transition: background var(--dur) var(--ease); }
 tr.result-row:hover { background: var(--surface-soft); }
 .top-thumb { position: relative; height: 140px; background: var(--surface-soft); }
@@ -890,9 +906,8 @@ tr.result-row:hover { background: var(--surface-soft); }
   border-radius: var(--r-lg);
   margin-bottom: 8px;
   overflow: hidden;
-  transition: border-color var(--dur) var(--ease);
+  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
 }
-.run-card:hover { border-color: var(--border-strong); }
 .run-card summary {
   display: flex;
   align-items: center;

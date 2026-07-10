@@ -107,7 +107,7 @@ class RemaxScraper(BaseScraper):
             images: list[str] = []
             photos = item.get("photos")
             if isinstance(photos, list):
-                for photo_item in photos[:5]:
+                for photo_item in photos[:30]:
                     value = (
                         photo_item.get("value")
                         if isinstance(photo_item, dict)

@@ -83,12 +83,22 @@ class ZonapropScraper(BaseScraper):
             features_el = card.select_one("[data-qa='POSTING_CARD_FEATURES']")
             features = parse_features(features_el.get_text(" · ") if features_el else "")
 
-            img_el = card.select_one("img[data-flickity-lazyload], img[src]")
-            image = (
-                (img_el.get("data-flickity-lazyload") or img_el.get("src") or "")
-                if img_el
-                else ""
-            )
+            # La tarjeta trae toda la galería en el carrusel (flickity), con
+            # cada foto en data-flickity-lazyload. Las juntamos todas (gratis,
+            # sin bajar el detalle) y filtramos por el CDN para evitar logos.
+            gallery = card.select_one(
+                "[data-qa='POSTING_CARD_GALLERY'], .flickity-slider, .postingCardGallery"
+            ) or card
+            images: list[str] = []
+            seen: set[str] = set()
+            for im in gallery.select("img[data-flickity-lazyload], img[src]"):
+                src = im.get("data-flickity-lazyload") or im.get("src") or ""
+                if src.startswith("http") and "zonapropcdn" in src and src not in seen:
+                    seen.add(src)
+                    images.append(src)
+                if len(images) >= 30:
+                    break
+            image = images[0] if images else ""
 
             yield Listing(
                 id=make_listing_id(self.site, url),
@@ -100,5 +110,6 @@ class ZonapropScraper(BaseScraper):
                 expenses=expenses,
                 address=clean_text(location_el.get_text(" ") if location_el else ""),
                 image=image,
+                images=images,
                 **features,
             )
