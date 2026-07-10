@@ -442,5 +442,16 @@
    "zonaprop_alquiler_ph_villa-crespo (zonaprop): 0 avisos — posible bloqueo o cambio de HTML",
    "mercadolibre_alquiler_ph_villa-crespo (mercadolibre): 0 avisos — posible bloqueo o cambio de HTML"
   ]
+ },
+ {
+  "finished_at": "2026-07-10T02:55:34Z",
+  "only_job": "ARGENPROP_ALQUILER_PH_CABALLITO",
+  "jobs": {
+   "ARGENPROP_ALQUILER_PH_CABALLITO": 0
+  },
+  "found": 0,
+  "new": 0,
+  "total_stored": 0,
+  "errors": []
  }
 ]
