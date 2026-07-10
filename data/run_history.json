@@ -532,5 +532,16 @@
   "new": 0,
   "total_stored": 20,
   "errors": []
+ },
+ {
+  "finished_at": "2026-07-10T03:51:19Z",
+  "only_job": "zonaprop_alquiler_ph_saavedra",
+  "jobs": {
+   "zonaprop_alquiler_ph_saavedra": 4
+  },
+  "found": 4,
+  "new": 4,
+  "total_stored": 24,
+  "errors": []
  }
 ]

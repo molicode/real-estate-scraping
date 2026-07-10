@@ -71,7 +71,7 @@
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
       {
-        "label": "Precio 71% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 65% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -140,11 +140,6 @@
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
       {
-        "label": "Precio 42% por debajo del promedio del tipo — verificá que no sea un anzuelo",
-        "level": "high",
-        "type": "price_low"
-      },
-      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -177,7 +172,7 @@
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
       {
-        "label": "Precio 62% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 55% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -517,6 +512,37 @@
     "title": "$ 2.000.000",
     "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-riglos-600-ph-4-ambientes-entrada-independiente-59367939.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=2"
   },
+  "zonaprop:59452788": {
+    "address": "Villa Urquiza, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": 4,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:51:19Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Villa Urquiza: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59452788",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/45/27/88/360x266/2061573316.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 2999999.0,
+    "price_currency": "ARS",
+    "rooms": 5,
+    "search_name": "zonaprop_alquiler_ph_saavedra",
+    "site": "zonaprop",
+    "surface_m2": 320.0,
+    "title": "$ 2.999.999",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph-en-alquiler-4-dorm.-2-banos-villa-urquiza-59452788.html?n_src=Listado&n_pills=Parrilla&n_pg=1&n_pos=5"
+  },
   "zonaprop:59489248": {
     "address": "Almagro, Capital Federal",
     "bathrooms": 7,
@@ -547,6 +573,99 @@
     "surface_m2": 600.0,
     "title": "$ 3.500.000",
     "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph-almagro-11-ambientes-alquiler-comercial-59489248.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=14"
+  },
+  "zonaprop:59496998": {
+    "address": "Saavedra, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:51:19Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Saavedra: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59496998",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/49/69/98/360x266/2062641601.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 3000000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "zonaprop_alquiler_ph_saavedra",
+    "site": "zonaprop",
+    "surface_m2": 190.0,
+    "title": "$ 3.000.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-casa-4-amb.-3-dorm.-1-en-suite-terraza-cochera-59496998.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=4"
+  },
+  "zonaprop:59502664": {
+    "address": "Saavedra, Capital Federal",
+    "bathrooms": null,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:51:19Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Saavedra: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59502664",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/50/26/64/360x266/2062794907.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 1050000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "zonaprop_alquiler_ph_saavedra",
+    "site": "zonaprop",
+    "surface_m2": 75.0,
+    "title": "$ 1.050.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphpa-ph-refaccionado-electrico-a-nuevo.-59502664.html?n_src=Listado&n_pills=Permite+mascotas&n_pg=1&n_pos=8"
+  },
+  "zonaprop:59512726": {
+    "address": "Villa Urquiza, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:51:19Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Villa Urquiza: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59512726",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/51/27/26/360x266/2063024260.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 1200000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "zonaprop_alquiler_ph_saavedra",
+    "site": "zonaprop",
+    "surface_m2": 80.0,
+    "title": "$ 1.200.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-piso-unico-4-amb.-dep.-serv.-tza.-falta-pintura-59512726.html?n_src=Listado&n_pills=Parrilla&n_pg=1&n_pos=13"
   },
   "zonaprop:59518338": {
     "address": "Almagro, Capital Federal",
