@@ -721,9 +721,13 @@ img.zoomable { cursor: zoom-in; }
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
   overflow: hidden;
-  transition: border-color var(--dur) var(--ease);
+  cursor: pointer;
+  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
 }
-.top-card:hover { border-color: var(--border-strong); }
+.top-card:hover { border-color: var(--border-strong); transform: translateY(-3px); }
+@media (prefers-reduced-motion: reduce) { .top-card:hover { transform: none; } }
+tr.result-row { cursor: pointer; transition: background var(--dur) var(--ease); }
+tr.result-row:hover { background: var(--surface-soft); }
 .top-thumb { position: relative; height: 140px; background: var(--surface-soft); }
 .top-thumb .pcar, .top-thumb .noimg { width: 100%; height: 140px; }
 .top-rank {
@@ -1049,6 +1053,37 @@ td .flags-wrap { margin-top: 4px; }
 }
 .modal-card { width: min(480px, 100%); margin: 0; max-height: 88vh; overflow-y: auto; }
 .modal-card label { margin-top: 12px; }
+
+/* Popup de detalle de la propiedad */
+.detail-card { width: min(560px, 100%); padding: 0; position: relative; }
+.detail-x {
+  position: absolute; top: 10px; right: 10px; z-index: 3;
+  width: 34px; height: 34px; border-radius: 50%;
+  border: none; cursor: pointer;
+  background: color-mix(in srgb, var(--card) 82%, transparent);
+  color: var(--text); display: inline-flex; align-items: center; justify-content: center;
+}
+.detail-x:hover { background: var(--surface-soft); }
+.detail-photo { height: 300px; background: var(--surface-soft); }
+.detail-photo .pcar, .detail-photo .noimg { width: 100%; height: 300px; }
+.detail-photo .pcar-img { width: 100%; height: 300px; object-fit: cover; }
+.detail-body { padding: 16px 20px 20px; }
+.detail-price { font-size: 24px; font-weight: 500; color: var(--text); }
+.detail-title { font-size: 15px; margin-top: 2px; color: var(--text-soft); }
+.detail-addr { font-size: 13px; color: var(--text-soft); margin-top: 6px; display: inline-flex; align-items: center; gap: 5px; }
+.detail-specs {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 8px; margin: 14px 0;
+}
+.ds-item {
+  background: var(--surface-soft); border-radius: var(--r-md);
+  padding: 8px 10px; display: flex; flex-direction: column; gap: 2px;
+}
+.ds-k { font-size: 11px; color: var(--text-faint); }
+.ds-v { font-size: 14px; color: var(--text); font-variant-numeric: tabular-nums; }
+.detail-src { font-size: 12px; color: var(--text-soft); margin-top: 10px; display: flex; align-items: center; gap: 6px; }
+.detail-actions { display: flex; align-items: center; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+.detail-actions .btn { text-decoration: none; }
 
 /* ============================================================
    Responsive + accesibilidad
