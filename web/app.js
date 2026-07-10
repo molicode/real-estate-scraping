@@ -1299,9 +1299,15 @@ function favCardHtml(l) {
 
 function renderFavorites() {
   syncViewToggle("fav");
-  const items = Object.values(favorites).sort((a, b) =>
-    (b.saved_at || "").localeCompare(a.saved_at || "")
-  );
+  // Si el aviso guardado ya está en el histórico scrapeado, mostramos esos
+  // datos (más completos: precio, fotos, señales) conservando cuándo se guardó.
+  // Así un favorito agregado "a mano" se completa solo cuando el scraper lo trae.
+  const items = Object.values(favorites)
+    .map((fav) => {
+      const live = allListings.find((l) => l.id === fav.id);
+      return live ? { ...live, saved_at: fav.saved_at } : fav;
+    })
+    .sort((a, b) => (b.saved_at || "").localeCompare(a.saved_at || ""));
   if (!items.length) {
     $("fav-list").innerHTML =
       '<p class="status">Todavía no guardaste ningún aviso. Tocá el corazón en la pestaña Buscar o en el Top 5.</p>';

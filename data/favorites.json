@@ -1,1 +1,45 @@
-{}
+{
+  "mercadolibre:MLA3403676844": {
+    "id": "mercadolibre:MLA3403676844",
+    "site": "mercadolibre",
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-3403676844-departamento-ph-en-alquiler-en-olivos-vicente-lopez-gba-zona-norte-_JM",
+    "title": "PH/Depto en alquiler — Olivos, Vicente López (GBA Zona Norte)",
+    "operation": "alquiler",
+    "address": "Olivos, Vicente López, GBA Zona Norte",
+    "price_amount": null,
+    "price_currency": null,
+    "image": "",
+    "images": [],
+    "search_name": "favorito manual",
+    "saved_at": "2026-07-10T19:30:00Z"
+  },
+  "mercadolibre:MLA1878390187": {
+    "id": "mercadolibre:MLA1878390187",
+    "site": "mercadolibre",
+    "url": "https://casa.mercadolibre.com.ar/MLA-1878390187-ph-en-alquiler-en-nunez-3-ambientes-terraza-_JM",
+    "title": "PH en alquiler — Núñez, 3 ambientes, terraza",
+    "operation": "alquiler",
+    "address": "Núñez, Capital Federal",
+    "rooms": 3,
+    "price_amount": null,
+    "price_currency": null,
+    "image": "",
+    "images": [],
+    "search_name": "favorito manual",
+    "saved_at": "2026-07-10T19:30:00Z"
+  },
+  "mercadolibre:MLA1856653351": {
+    "id": "mercadolibre:MLA1856653351",
+    "site": "mercadolibre",
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-1856653351-ph-en-villa-urquiza-venta-_JM",
+    "title": "PH en venta — Villa Urquiza",
+    "operation": "venta",
+    "address": "Villa Urquiza, Capital Federal",
+    "price_amount": null,
+    "price_currency": null,
+    "image": "",
+    "images": [],
+    "search_name": "favorito manual",
+    "saved_at": "2026-07-10T19:30:00Z"
+  }
+}

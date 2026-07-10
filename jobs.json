@@ -2683,6 +2683,96 @@
       "zone": "Saavedra",
       "offset_hours": 15,
       "weekday": 0
+    },
+    {
+      "name": "mercadolibre_alquiler_ph_olivos",
+      "url": "https://inmuebles.mercadolibre.com.ar/ph/alquiler/bsas-gba-norte/vicente-lopez/olivos/",
+      "site": "mercadolibre",
+      "operation": "alquiler",
+      "enabled": true,
+      "max_pages": 5,
+      "every_hours": 72,
+      "filters": {
+        "currency": "ARS",
+        "require_price": true,
+        "keywords_exclude": [
+          "temporario",
+          "temporal",
+          "pozo",
+          "construcción",
+          "oficina",
+          "local",
+          "compartido",
+          "cochera",
+          "comercial",
+          "galpón",
+          "cochera fija"
+        ]
+      },
+      "mode": "menu",
+      "ptype": "ph",
+      "zone": "olivos",
+      "offset_hours": 10
+    },
+    {
+      "name": "mercadolibre_alquiler_ph_nunez_amplio",
+      "url": "https://inmuebles.mercadolibre.com.ar/ph/alquiler/nunez/",
+      "site": "mercadolibre",
+      "operation": "alquiler",
+      "enabled": true,
+      "max_pages": 5,
+      "every_hours": 72,
+      "filters": {
+        "currency": "ARS",
+        "require_price": true,
+        "keywords_exclude": [
+          "temporario",
+          "temporal",
+          "pozo",
+          "construcción",
+          "oficina",
+          "local",
+          "compartido",
+          "cochera",
+          "comercial",
+          "galpón",
+          "cochera fija"
+        ]
+      },
+      "mode": "menu",
+      "ptype": "ph",
+      "zone": "nunez",
+      "offset_hours": 11
+    },
+    {
+      "name": "mercadolibre_venta_ph_villa-urquiza",
+      "url": "https://inmuebles.mercadolibre.com.ar/ph/venta/villa-urquiza/",
+      "site": "mercadolibre",
+      "operation": "venta",
+      "enabled": true,
+      "max_pages": 5,
+      "every_hours": 168,
+      "weekday": 0,
+      "filters": {
+        "require_price": true,
+        "keywords_exclude": [
+          "temporario",
+          "temporal",
+          "pozo",
+          "construcción",
+          "oficina",
+          "local",
+          "compartido",
+          "cochera",
+          "comercial",
+          "galpón",
+          "cochera fija"
+        ]
+      },
+      "mode": "menu",
+      "ptype": "ph",
+      "zone": "villa-urquiza",
+      "offset_hours": 12
     }
   ]
 }
