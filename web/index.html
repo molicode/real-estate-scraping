@@ -528,8 +528,12 @@
         <button class="seg-btn active" data-map-mode="comuna">Por comuna</button>
         <button class="seg-btn" data-map-mode="barrio">Por barrio</button>
       </div>
-      <p class="status" id="crime-meta"></p>
+      <button id="crime-refresh" class="btn small"><span data-icon="refresh"></span> Actualizar datos</button>
+      <span id="crime-updated" class="status"></span>
     </div>
+    <p class="status" id="crime-meta"></p>
+    <p class="status" id="crime-status"></p>
+    <div class="job-flow" id="crime-flow"></div>
     <div class="crime-map-wrap">
       <div id="crime-map"></div>
       <div id="comuna-detail" class="comuna-detail"></div>
