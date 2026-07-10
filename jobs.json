@@ -362,6 +362,42 @@
       "mode": "menu",
       "ptype": "ph",
       "zone": "nunez"
+    },
+    {
+      "name": "remax_alquiler_ph_nunez",
+      "url": "https://www.remax.com.ar/listings/rent?page=0&pageSize=24&sort=-createdAt&in:operationId=2",
+      "site": "remax",
+      "operation": "alquiler",
+      "enabled": true,
+      "max_pages": 10,
+      "every_hours": 24,
+      "filters": {
+        "currency": "ARS",
+        "min_rooms": 4,
+        "min_bedrooms": 3,
+        "min_bathrooms": 2,
+        "require_price": true,
+        "keywords_include": [
+          "baño completo",
+          "toilette"
+        ],
+        "keywords_exclude": [
+          "temporario",
+          "temporal",
+          "pozo",
+          "en construcción",
+          "oficina",
+          "local",
+          "compartido",
+          "cochera",
+          "apto comercial",
+          "galpón",
+          "cochera fija"
+        ]
+      },
+      "mode": "menu",
+      "ptype": "ph",
+      "zone": "nunez"
     }
   ]
 }
