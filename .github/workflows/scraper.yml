@@ -27,7 +27,10 @@ concurrency:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    # Con muchos jobs activos una corrida global recorre todos en secuencia y
+    # puede tardar bastante (Zonaprop/ML reintentan por proxy). El cron horario,
+    # si escalonás los jobs con 'desfase', corre de a pocos y termina rápido.
+    timeout-minutes: 35
     steps:
       - name: Checkout
         uses: actions/checkout@v5

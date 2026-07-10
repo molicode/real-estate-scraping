@@ -108,6 +108,34 @@ def test_filter_due_respeta_frecuencia():
     assert "nunca-corrio" in due
 
 
+def test_filter_due_escalona_con_offset():
+    from datetime import datetime, timezone
+    from scraper.main import filter_due
+    from scraper.models import Search
+
+    # 3 jobs diarios sin historial, con desfases distintos. A las 14 UTC solo
+    # debería arrancar el que tiene offset 14; los otros esperan su hora.
+    now = datetime(2026, 7, 3, 14, 0, tzinfo=timezone.utc)
+    searches = [
+        Search(name="lane-0", url="u", every_hours=24, offset_hours=0),
+        Search(name="lane-14", url="u", every_hours=24, offset_hours=14),
+        Search(name="lane-15", url="u", every_hours=24, offset_hours=15),
+        Search(name="sin-offset", url="u", every_hours=24),  # arranca enseguida
+    ]
+    due = [s.name for s in filter_due(searches, [], now)]
+    assert due == ["lane-14", "sin-offset"]
+
+
+def test_build_searches_lee_offset_hours():
+    config = {"searches": [
+        {"name": "a", "url": "https://www.argenprop.com/x", "site": "argenprop", "offset_hours": 27},
+        {"name": "b", "url": "https://www.argenprop.com/y", "site": "argenprop"},
+    ]}
+    s = {x.name: x for x in build_searches(config)}
+    assert s["a"].offset_hours == 3   # 27 % 24
+    assert s["b"].offset_hours is None
+
+
 def test_run_history_se_appendea_y_se_recorta(tmp_path):
     from scraper import storage
 

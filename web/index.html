@@ -157,10 +157,21 @@
               <option value="1">Cada 1 hora</option>
               <option value="2">Cada 2 horas</option>
               <option value="3">Cada 3 horas</option>
+              <option value="4">Cada 4 horas</option>
               <option value="6">Cada 6 horas</option>
+              <option value="8">Cada 8 horas</option>
               <option value="12">Cada 12 horas</option>
-              <option value="24">Una vez por día</option>
+              <option value="24">Una vez por día (24 h)</option>
+              <option value="48">Cada 2 días (48 h)</option>
+              <option value="72">Cada 3 días (72 h)</option>
+              <option value="168">Una vez por semana</option>
+              <option value="custom">Personalizada…</option>
             </select>
+            <input type="number" id="f-every-custom" class="hidden" min="1" max="720" placeholder="cada cuántas horas" style="margin-top:6px">
+          </label>
+          <label>Desfase de inicio (opcional)
+            <span class="info" tabindex="0" data-tip="Para escalonar varios jobs y que no corran todos a la vez: cada uno arranca en una hora distinta (0–23, hora UTC). Ej: con jobs cada 24 h y desfases 0, 1, 2… corren de a uno por hora. Solo afecta el arranque en el cron; 'Ejecutar ahora' corre igual. Vacío = arranca enseguida."></span>
+            <input type="number" id="f-offset" min="0" max="23" placeholder="0–23 (vacío = ya)">
           </label>
           <label>Activo
             <span class="info" tabindex="0" data-tip="Los jobs detenidos quedan guardados pero no corren en el cron. Igual podés ejecutarlos puntualmente con su botón 'Ejecutar ahora'."></span>
@@ -363,7 +374,6 @@
 <section id="tab-results" class="tab-panel hidden">
   <div class="card search-card">
     <h3><span class="ic-h" data-icon="search"></span> Buscar en los avisos guardados</h3>
-    <p class="status">Todo lo que el scraper encuentra queda guardado en el repo (hasta 1 año). Los filtros se aplican al instante. Click en una foto para verla grande con todas las imágenes.</p>
 
     <details class="form-section filter-sec" open>
       <summary><h3><span class="ic-h" data-icon="search"></span> Texto y origen</h3><span class="summary-hint"><span data-icon="chevron-down"></span></span></summary>

@@ -410,6 +410,8 @@ function renderJobs() {
     det.className = "job-card" + (enabled ? "" : " disabled") + (paused ? " proxy-paused" : "");
     det.open = openIdx.has(i);
     const every = Math.max(1, Number(job.every_hours) || 1);
+    const freqTxt = every === 24 ? "1×día" : every === 168 ? "1×sem" : every % 24 === 0 ? `cada ${every / 24}d` : `cada ${every} h`;
+    const offTxt = (job.offset_hours != null) ? ` · ${String(job.offset_hours).padStart(2, "0")}:00 UTC` : "";
     det.innerHTML = `
       <summary>
         <span class="dot ${enabled ? "green live-dot" : "muted"}" title="${enabled ? "Activo (se ejecuta según su frecuencia)" : "Detenido"}"></span>
@@ -419,7 +421,7 @@ function renderJobs() {
         <span class="badge">${job.operation === "venta" ? "compra" : job.operation || "?"}</span>
         ${jobPtype(job) ? `<span class="badge">${escapeHtml(jobPtype(job))}</span>` : ""}
         ${jobZone(job) ? `<span class="badge">${zoneDot(job)}${escapeHtml(jobZone(job))}</span>` : ""}
-        <span class="badge" title="Frecuencia con la que corre en el cron">${icon("timer", 13)} cada ${every} h</span>
+        <span class="badge" title="Frecuencia con la que corre en el cron${job.offset_hours != null ? ` (arranca ${String(job.offset_hours).padStart(2, "0")}:00 UTC para escalonar)` : ""}">${icon("timer", 13)} ${freqTxt}${offTxt}</span>
         <span class="job-name">${escapeHtml(job.name || `job ${i + 1}`)}</span>
         <span class="summary-hint">detalles ${icon("chevron-down", 14)}</span>
       </summary>
@@ -752,6 +754,32 @@ function updateAutoName() {
   if (autoNameOn) $("f-name").value = formAutoName();
 }
 
+/* ---------- Frecuencia: presets + personalizada ---------- */
+const FREQ_PRESETS = new Set([1, 2, 3, 4, 6, 8, 12, 24, 48, 72, 168]);
+
+function setFrequencyFields(hours) {
+  if (FREQ_PRESETS.has(hours)) {
+    $("f-every").value = String(hours);
+    $("f-every-custom").classList.add("hidden");
+    $("f-every-custom").value = "";
+  } else {
+    $("f-every").value = "custom";
+    $("f-every-custom").classList.remove("hidden");
+    $("f-every-custom").value = String(hours);
+  }
+}
+
+function readFrequency() {
+  if ($("f-every").value === "custom") return Math.max(1, Number($("f-every-custom").value) || 1);
+  return Number($("f-every").value) || 1;
+}
+
+$("f-every").addEventListener("change", () => {
+  const custom = $("f-every").value === "custom";
+  $("f-every-custom").classList.toggle("hidden", !custom);
+  if (custom) $("f-every-custom").focus();
+});
+
 function openForm(index, prefill) {
   editingIndex = index;
   const job = prefill || (index != null ? jobsDoc.searches[index] : null);
@@ -771,7 +799,8 @@ function openForm(index, prefill) {
   $("f-zone").value = job?.zone || "";
   $("f-url").value = job?.url || "";
   $("f-max-pages").value = job?.max_pages ?? jobsDoc.defaults?.max_pages ?? 2;
-  $("f-every").value = String(Math.max(1, Number(job?.every_hours) || 1));
+  setFrequencyFields(Math.max(1, Number(job?.every_hours) || 1));
+  $("f-offset").value = job?.offset_hours ?? "";
   $("f-enabled").value = String(job ? job.enabled !== false : true);
   $("f-currency").value = f.currency || "";
   $("f-min-price").value = f.min_price ?? "";
@@ -851,9 +880,11 @@ $("job-form").addEventListener("submit", (e) => {
     operation: $("f-operation").value,
     enabled: $("f-enabled").value === "true",
     max_pages: numOrNull("f-max-pages") || 1,
-    every_hours: Number($("f-every").value) || 1,
+    every_hours: readFrequency(),
     filters,
   };
+  const offRaw = $("f-offset").value.trim();
+  if (offRaw !== "") job.offset_hours = Math.max(0, Math.min(23, Number(offRaw) || 0));
   // Tipo y zona para mostrar en la tarjeta. En modo menú se toman de los
   // selectores; al editar (modo URL) se conservan los que ya tenía el job.
   const prev = editingIndex != null ? jobsDoc.searches[editingIndex] : {};
