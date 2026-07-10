@@ -1,4 +1,658 @@
 {
+  "argenprop:15597825": {
+    "address": "CONFIDENCIAL 400, Piso P.B.",
+    "bathrooms": null,
+    "bedrooms": 7,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:17:55Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:15597825",
+    "image": "https://www.argenprop.com/static-content/52879551/f55083d0-10e2-4a69-b3b1-0fa174d7fe32_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/52879551/f55083d0-10e2-4a69-b3b1-0fa174d7fe32_u_small.jpg",
+      "https://www.argenprop.com/static-content/52879551/a90281dd-b532-46c9-bcb6-12c8db191e02_u_small.jpg",
+      "https://www.argenprop.com/static-content/52879551/17803852-1402-4805-8f24-0d6202b55682_u_small.jpg",
+      "https://www.argenprop.com/static-content/52879551/3216189d-81c5-4d2a-a1eb-22f7195d0f6d_u_small.jpg",
+      "https://www.argenprop.com/static-content/52879551/865faf74-dce2-47fa-b344-be0125cfc98c_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_caballito",
+    "site": "argenprop",
+    "surface_m2": 200.0,
+    "title": "CASAS - CASA - CABALLITO, CAPITAL FEDERAL",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-caballito--15597825",
+    "verified": false
+  },
+  "argenprop:15598344": {
+    "address": "CONFIDENCIAL 400, Piso P.B.",
+    "bathrooms": null,
+    "bedrooms": 7,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:17:55Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:15598344",
+    "image": "https://www.argenprop.com/static-content/44389551/97e9d11f-d744-46a6-bd99-2722655dc3f2_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/44389551/97e9d11f-d744-46a6-bd99-2722655dc3f2_u_small.jpg",
+      "https://www.argenprop.com/static-content/44389551/6a51e0e2-97eb-4f50-b439-b30fcec9619b_u_small.jpg",
+      "https://www.argenprop.com/static-content/44389551/5a4bd564-b0f2-4098-ad7e-e32a385a959b_u_small.jpg",
+      "https://www.argenprop.com/static-content/44389551/e374c145-d776-41fc-ba02-e69179e6fbd7_u_small.jpg",
+      "https://www.argenprop.com/static-content/44389551/c4ff7e05-24b5-4bb3-95f9-d8c75dde9da9_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_caballito",
+    "site": "argenprop",
+    "surface_m2": 200.0,
+    "title": "CASAS - CASA - CABALLITO, CAPITAL FEDERAL",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-caballito--15598344",
+    "verified": false
+  },
+  "argenprop:15619135": {
+    "address": "MUÑIZ 400, Piso P.B.",
+    "bathrooms": null,
+    "bedrooms": 7,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:27:52Z",
+    "flags": [
+      {
+        "label": "Almagro: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:15619135",
+    "image": "https://www.argenprop.com/static-content/53191651/2a57be9c-01c0-4abc-8e86-8aa3c45a56e3_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/53191651/2a57be9c-01c0-4abc-8e86-8aa3c45a56e3_u_small.jpg",
+      "https://www.argenprop.com/static-content/53191651/30a2c0d8-7a27-47c1-aeb0-76862a5039e2_u_small.jpg",
+      "https://www.argenprop.com/static-content/53191651/e9f7e155-bdfc-4b15-83ce-9768300c14c4_u_small.jpg",
+      "https://www.argenprop.com/static-content/53191651/5b318c2b-ee65-4dcb-827b-5ed6dad4dcd1_u_small.jpg",
+      "https://www.argenprop.com/static-content/53191651/d7f7fc67-405e-4351-8a6f-d0404e3b2bbf_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_almagro",
+    "site": "argenprop",
+    "surface_m2": 200.0,
+    "title": "CASAS - CASA - ALMAGRO, CAPITAL FEDERAL",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-almagro--15619135",
+    "verified": false
+  },
+  "argenprop:15760903": {
+    "address": "MUÑIZ 400",
+    "bathrooms": 3,
+    "bedrooms": 7,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:27:52Z",
+    "flags": [
+      {
+        "label": "Almagro: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:15760903",
+    "image": "https://www.argenprop.com/static-content/30906751/d2084cb5-b669-4963-9263-adc227f94fc6_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/30906751/d2084cb5-b669-4963-9263-adc227f94fc6_u_small.jpg",
+      "https://www.argenprop.com/static-content/30906751/a2451fc0-3b84-41a9-b758-378caa4b9d36_u_small.jpg",
+      "https://www.argenprop.com/static-content/30906751/b3449c33-1415-4b7a-9f6f-fb6e12c2b8af_u_small.jpg",
+      "https://www.argenprop.com/static-content/30906751/a0e372c6-a370-4e10-9409-3b0844b2ab56_u_small.jpg",
+      "https://www.argenprop.com/static-content/30906751/347b6c0f-f63c-41d6-ae59-35a6ebf96b58_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_almagro",
+    "site": "argenprop",
+    "surface_m2": 200.0,
+    "title": "CASAS - CASA - ALMAGRO, CAPITAL FEDERAL",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-almagro--15760903",
+    "verified": false
+  },
+  "argenprop:16192831": {
+    "address": "CONFIDENCIAL 400, Piso P.B.",
+    "bathrooms": null,
+    "bedrooms": 7,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:17:55Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:16192831",
+    "image": "https://www.argenprop.com/static-content/13829161/6a5574e8-f493-43fd-8c1c-56eb6db320c5_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/13829161/6a5574e8-f493-43fd-8c1c-56eb6db320c5_u_small.jpg",
+      "https://www.argenprop.com/static-content/13829161/d6aa59af-30c6-4b2c-a23a-dabcd627c3b4_u_small.jpg",
+      "https://www.argenprop.com/static-content/13829161/7306e463-44a0-4c97-945d-817abfd8de8e_u_small.jpg",
+      "https://www.argenprop.com/static-content/13829161/c3da1be6-1162-46fc-a1f2-96b0aaaf49ec_u_small.jpg",
+      "https://www.argenprop.com/static-content/13829161/d814f492-eb54-4660-8a26-e8b1c09c5c0a_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_caballito",
+    "site": "argenprop",
+    "surface_m2": 200.0,
+    "title": "CASAS - CASA - CABALLITO, CAPITAL FEDERAL",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-caballito--16192831",
+    "verified": false
+  },
+  "argenprop:16205093": {
+    "address": "VENEZUELA 4400, Piso P.B.",
+    "bathrooms": null,
+    "bedrooms": 7,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:17:55Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:16205093",
+    "image": "https://www.argenprop.com/static-content/39050261/a27228b7-8161-4403-985b-4987df9fb0d8_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/39050261/a27228b7-8161-4403-985b-4987df9fb0d8_u_small.jpg",
+      "https://www.argenprop.com/static-content/39050261/1aa76cbd-a88a-4fe0-b71e-0595884b0376_u_small.jpg",
+      "https://www.argenprop.com/static-content/39050261/e6d2f663-1dfb-4597-9b4e-04ae680f8a72_u_small.jpg",
+      "https://www.argenprop.com/static-content/39050261/5f686510-d9b5-4e92-815b-ce6908416adb_u_small.jpg",
+      "https://www.argenprop.com/static-content/39050261/a1c91673-ad38-4066-8d47-b5a7cc79d0b7_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_caballito",
+    "site": "argenprop",
+    "surface_m2": 201.0,
+    "title": "CASAS - CASA - CABALLITO, CAPITAL FEDERAL",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-caballito--16205093",
+    "verified": false
+  },
+  "argenprop:16656747": {
+    "address": "CONFIDENCIAL 400, Piso P.B.",
+    "bathrooms": null,
+    "bedrooms": 7,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:17:55Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:16656747",
+    "image": "https://www.argenprop.com/static-content/74765661/cf9ddfa1-b199-40c8-b6a3-8327a1cc6dc2_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/74765661/cf9ddfa1-b199-40c8-b6a3-8327a1cc6dc2_u_small.jpg",
+      "https://www.argenprop.com/static-content/74765661/abc3b3c3-acc2-422c-811a-cefbd5f4f6ca_u_small.jpg",
+      "https://www.argenprop.com/static-content/74765661/0bff8297-75b7-41d8-8d7a-402ddb8aea55_u_small.jpg",
+      "https://www.argenprop.com/static-content/74765661/e1df1d6c-be2b-4feb-850d-26e0f5f673fd_u_small.jpg",
+      "https://www.argenprop.com/static-content/74765661/707bf9e5-c2f2-48f7-b4ef-b9cb8e97995a_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_caballito",
+    "site": "argenprop",
+    "surface_m2": 200.0,
+    "title": "CASAS - CASA - CABALLITO, CAPITAL FEDERAL",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-caballito--16656747",
+    "verified": false
+  },
+  "argenprop:16702738": {
+    "address": "VENEZUELA 4400, Piso P.B.",
+    "bathrooms": null,
+    "bedrooms": 7,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:17:55Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:16702738",
+    "image": "https://www.argenprop.com/static-content/83720761/996f6f6c-3b6a-46dd-a640-d4fd156847d4_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/83720761/996f6f6c-3b6a-46dd-a640-d4fd156847d4_u_small.jpg",
+      "https://www.argenprop.com/static-content/83720761/784a2952-c4f5-4a59-a08e-6bf68c3a13e3_u_small.jpg",
+      "https://www.argenprop.com/static-content/83720761/457e5cb7-0ad1-4947-9898-b3d146e6a29e_u_small.jpg",
+      "https://www.argenprop.com/static-content/83720761/078d836e-40c9-4fa7-b056-a917ffd31ee3_u_small.jpg",
+      "https://www.argenprop.com/static-content/83720761/ac0655d7-bdaf-4887-9cae-6a7a4f1bd8a7_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_caballito",
+    "site": "argenprop",
+    "surface_m2": 200.0,
+    "title": "CASAS - CASA - CABALLITO, CAPITAL FEDERAL",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-caballito--16702738",
+    "verified": false
+  },
+  "argenprop:16729451": {
+    "address": "CONFIDENCIAL 400, Piso P.B.",
+    "bathrooms": null,
+    "bedrooms": 7,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:17:55Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:16729451",
+    "image": "https://www.argenprop.com/static-content/15492761/2fc5eb5f-f917-4df4-b4a1-1b35b8a5f140_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/15492761/2fc5eb5f-f917-4df4-b4a1-1b35b8a5f140_u_small.jpg",
+      "https://www.argenprop.com/static-content/15492761/ec9c26f6-d7f2-4eb7-b2ef-ecd12ce6ebc0_u_small.jpg",
+      "https://www.argenprop.com/static-content/15492761/677e671c-57d7-4ced-9cd1-5636f961c4df_u_small.jpg",
+      "https://www.argenprop.com/static-content/15492761/d077fa8d-c4b9-49d7-b51c-fe462a09e2f2_u_small.jpg",
+      "https://www.argenprop.com/static-content/15492761/d8b758d1-41fe-4b06-92e0-b55ed18c31ab_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_caballito",
+    "site": "argenprop",
+    "surface_m2": 201.0,
+    "title": "CASAS - CASA - CABALLITO, CAPITAL FEDERAL",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-caballito--16729451",
+    "verified": false
+  },
+  "argenprop:16729562": {
+    "address": "CONFIDENCIAL 400, Piso P.B.",
+    "bathrooms": null,
+    "bedrooms": 7,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:17:55Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:16729562",
+    "image": "https://www.argenprop.com/static-content/26592761/1184fc60-2157-4f37-9cf0-81790af1713b_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/26592761/1184fc60-2157-4f37-9cf0-81790af1713b_u_small.jpg",
+      "https://www.argenprop.com/static-content/26592761/299adbd7-9a68-4278-a82a-9e3d5cc06899_u_small.jpg",
+      "https://www.argenprop.com/static-content/26592761/5c7bbabe-1740-4f32-9e15-586d9c18814d_u_small.jpg",
+      "https://www.argenprop.com/static-content/26592761/1aabb82a-3bb2-482d-8acd-6f0fbc52e8c9_u_small.jpg",
+      "https://www.argenprop.com/static-content/26592761/207af21b-adb7-4a77-9345-095b6aac23b6_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_caballito",
+    "site": "argenprop",
+    "surface_m2": 201.0,
+    "title": "CASAS - CASA - CABALLITO, CAPITAL FEDERAL",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-caballito--16729562",
+    "verified": false
+  },
+  "argenprop:16826271": {
+    "address": "VENEZUELA 4400, Piso P.B.",
+    "bathrooms": null,
+    "bedrooms": 7,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:17:55Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:16826271",
+    "image": "https://www.argenprop.com/static-content/17262861/f5525788-341d-4422-aa5b-e6c79b9ad89d_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/17262861/f5525788-341d-4422-aa5b-e6c79b9ad89d_u_small.jpg",
+      "https://www.argenprop.com/static-content/17262861/76c36ec4-286e-4a8d-ad3d-e89ae95489cd_u_small.jpg",
+      "https://www.argenprop.com/static-content/17262861/dbbdf3fb-6d1f-414d-ab52-19684ce8c949_u_small.jpg",
+      "https://www.argenprop.com/static-content/17262861/f62cd21f-7a01-4eb6-92a0-82e40b417ce8_u_small.jpg",
+      "https://www.argenprop.com/static-content/17262861/35982ecd-44fd-46d9-83cd-82679c2aabd9_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_caballito",
+    "site": "argenprop",
+    "surface_m2": 201.0,
+    "title": "CASAS - CASA - CABALLITO, CAPITAL FEDERAL",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-caballito--16826271",
+    "verified": false
+  },
+  "argenprop:16908318": {
+    "address": "CONFIDENCIAL 400, Piso P.B.",
+    "bathrooms": null,
+    "bedrooms": 7,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:17:55Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:16908318",
+    "image": "https://www.argenprop.com/static-content/81380961/c665350a-0caf-4156-9b46-1e0c56baf774_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/81380961/c665350a-0caf-4156-9b46-1e0c56baf774_u_small.jpg",
+      "https://www.argenprop.com/static-content/81380961/58a8bba3-d6fd-4111-b762-50672bb09060_u_small.jpg",
+      "https://www.argenprop.com/static-content/81380961/c61c6d87-0bd8-4431-bf24-67232971e1ec_u_small.jpg",
+      "https://www.argenprop.com/static-content/81380961/948a25a0-84d7-48ed-ab2f-63346bed7dcf_u_small.jpg",
+      "https://www.argenprop.com/static-content/81380961/75935f03-b07a-4da2-bd66-7d759d0129fc_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_caballito",
+    "site": "argenprop",
+    "surface_m2": 201.0,
+    "title": "CASAS - CASA - CABALLITO, CAPITAL FEDERAL",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-caballito--16908318",
+    "verified": false
+  },
+  "argenprop:16954578": {
+    "address": "CONFIDENCIAL 400, Piso P.B.",
+    "bathrooms": null,
+    "bedrooms": 7,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:17:55Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:16954578",
+    "image": "https://www.argenprop.com/static-content/87545961/73458361-92c2-4ab3-bd49-fbfcaedd49c8_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/87545961/73458361-92c2-4ab3-bd49-fbfcaedd49c8_u_small.jpg",
+      "https://www.argenprop.com/static-content/87545961/99575731-d5e9-410b-bf39-d089efcf2ba8_u_small.jpg",
+      "https://www.argenprop.com/static-content/87545961/094e6889-2163-4765-89ec-b7493f27cd5b_u_small.jpg",
+      "https://www.argenprop.com/static-content/87545961/c6dec20c-73ba-458d-b524-612c0c9cda7b_u_small.jpg",
+      "https://www.argenprop.com/static-content/87545961/a2fde08e-5b72-48fe-9e07-c52803993f81_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_caballito",
+    "site": "argenprop",
+    "surface_m2": 201.0,
+    "title": "CASAS - CASA - CABALLITO, CAPITAL FEDERAL",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-caballito--16954578",
+    "verified": false
+  },
+  "argenprop:16954579": {
+    "address": "CONFIDENCIAL 400, Piso P.B.",
+    "bathrooms": null,
+    "bedrooms": 7,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:17:55Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:16954579",
+    "image": "https://www.argenprop.com/static-content/97545961/1a53e5c8-1a85-4e4c-a542-5d090d124291_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/97545961/1a53e5c8-1a85-4e4c-a542-5d090d124291_u_small.jpg",
+      "https://www.argenprop.com/static-content/97545961/d06f0d37-59b5-4627-8144-d0a46870688f_u_small.jpg",
+      "https://www.argenprop.com/static-content/97545961/cf73d1cb-c144-4dfa-bffe-f46bc104fdc5_u_small.jpg",
+      "https://www.argenprop.com/static-content/97545961/beb2e863-ca0c-4244-b011-76807b29e428_u_small.jpg",
+      "https://www.argenprop.com/static-content/97545961/a895a9f1-130b-42d2-ba06-77251331b759_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_caballito",
+    "site": "argenprop",
+    "surface_m2": 201.0,
+    "title": "CASAS - CASA - CABALLITO, CAPITAL FEDERAL",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-caballito--16954579",
+    "verified": false
+  },
+  "argenprop:17025834": {
+    "address": "CONFIDENCIAL 400, Piso P.B.",
+    "bathrooms": null,
+    "bedrooms": 7,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:17:55Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:17025834",
+    "image": "https://www.argenprop.com/static-content/43852071/71abf006-64a8-4e61-a46e-076426dd2b82_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/43852071/71abf006-64a8-4e61-a46e-076426dd2b82_u_small.jpg",
+      "https://www.argenprop.com/static-content/43852071/0487ddd0-73e3-4d43-bffa-4364b583b608_u_small.jpg",
+      "https://www.argenprop.com/static-content/43852071/7d18a019-24aa-4c2c-b86d-d43730c9dfab_u_small.jpg",
+      "https://www.argenprop.com/static-content/43852071/67fec1bc-f136-47eb-b978-d5d264254c01_u_small.jpg",
+      "https://www.argenprop.com/static-content/43852071/f6f768aa-bb35-45ce-a7dc-0bc36739bdb4_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_caballito",
+    "site": "argenprop",
+    "surface_m2": 201.0,
+    "title": "CASAS - CASA - CABALLITO, CAPITAL FEDERAL",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-caballito--17025834",
+    "verified": false
+  },
+  "argenprop:17059831": {
+    "address": "CONFIDENCIAL 400, Piso P.B.",
+    "bathrooms": null,
+    "bedrooms": 7,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:17:55Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:17059831",
+    "image": "https://www.argenprop.com/static-content/13895071/d4c8d19a-f6a7-4513-9afa-963d440a2b6e_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/13895071/d4c8d19a-f6a7-4513-9afa-963d440a2b6e_u_small.jpg",
+      "https://www.argenprop.com/static-content/13895071/85e49f13-8ca7-4f52-b32d-c82f55941232_u_small.jpg",
+      "https://www.argenprop.com/static-content/13895071/50c2d051-e54c-437f-b764-dbafa1085db7_u_small.jpg",
+      "https://www.argenprop.com/static-content/13895071/ada51946-b6aa-4954-bb1e-4e2d7392e724_u_small.jpg",
+      "https://www.argenprop.com/static-content/13895071/67024987-643f-4994-a664-188abfac1a03_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_caballito",
+    "site": "argenprop",
+    "surface_m2": 201.0,
+    "title": "CASAS - CASA - CABALLITO, CAPITAL FEDERAL",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-caballito--17059831",
+    "verified": false
+  },
+  "argenprop:17059835": {
+    "address": "CONFIDENCIAL 400, Piso P.B.",
+    "bathrooms": null,
+    "bedrooms": 6,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:17:55Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:17059835",
+    "image": "https://www.argenprop.com/static-content/53895071/6dbbbb48-9a69-4b66-b862-0ed97a260359_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/53895071/6dbbbb48-9a69-4b66-b862-0ed97a260359_u_small.jpg",
+      "https://www.argenprop.com/static-content/53895071/66d11046-b11f-4eae-ab46-4adbd8f0c250_u_small.jpg",
+      "https://www.argenprop.com/static-content/53895071/d1ceff90-ab9b-496c-9fd8-a68c8059f460_u_small.jpg",
+      "https://www.argenprop.com/static-content/53895071/c9787d50-bdae-4756-8d8a-4e24b2b513f9_u_small.jpg",
+      "https://www.argenprop.com/static-content/53895071/0d49e9c8-cc75-4645-ab65-7cd17312f807_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_caballito",
+    "site": "argenprop",
+    "surface_m2": 210.0,
+    "title": "CASAS - PETIT HOTEL - CABALLITO, CAPITAL FEDERAL",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-caballito--17059835",
+    "verified": false
+  },
+  "argenprop:17271644": {
+    "address": "HUMBOLDT 1100",
+    "bathrooms": null,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:22:25Z",
+    "flags": [
+      {
+        "label": "Precio 66% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "argenprop:17271644",
+    "image": "https://www.argenprop.com/static-content/44617271/e7570157-6045-47c5-9633-71eb00bfb505_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/44617271/e7570157-6045-47c5-9633-71eb00bfb505_u_small.jpg",
+      "https://www.argenprop.com/static-content/44617271/ef2e91de-114d-4f1f-87b0-ef11f0376ffd_u_small.jpg",
+      "https://www.argenprop.com/static-content/44617271/66ce8f1b-100a-4a7f-8d11-4e0c43da8229_u_small.jpg",
+      "https://www.argenprop.com/static-content/44617271/246a1eb2-fb03-4507-82ee-6a046556a36a_u_small.jpg",
+      "https://www.argenprop.com/static-content/44617271/acc5ebfe-5744-402f-bfce-7a371976789e_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 1000000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_villa-crespo",
+    "site": "argenprop",
+    "surface_m2": 186.0,
+    "title": "Casa de 4 ambientes en Alquiler en Villa crespo",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-villa-crespo-4-ambientes--17271644",
+    "verified": false
+  },
+  "argenprop:17447560": {
+    "address": "CONFIDENCIAL 400, Piso P.B.",
+    "bathrooms": null,
+    "bedrooms": 7,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:17:55Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:17447560",
+    "image": "https://www.argenprop.com/static-content/06574471/12e160a5-da2d-4217-9d85-777b2266ffe9_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/06574471/12e160a5-da2d-4217-9d85-777b2266ffe9_u_small.jpg",
+      "https://www.argenprop.com/static-content/06574471/fd7e11c8-c664-4351-bffe-c8018db5c329_u_small.jpg",
+      "https://www.argenprop.com/static-content/06574471/32de9cb6-1040-4bda-b3c5-acf7c2b0bd52_u_small.jpg",
+      "https://www.argenprop.com/static-content/06574471/35f05eb9-75ec-4454-8810-ed8e29dc1bf2_u_small.jpg",
+      "https://www.argenprop.com/static-content/06574471/575a8612-9152-48c9-a435-c9eaf9f47122_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_caballito",
+    "site": "argenprop",
+    "surface_m2": 201.0,
+    "title": "CASAS - CASA - CABALLITO, CAPITAL FEDERAL",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-caballito--17447560",
+    "verified": false
+  },
+  "argenprop:18668077": {
+    "address": "Darwin 500",
+    "bathrooms": null,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:22:25Z",
+    "flags": [],
+    "id": "argenprop:18668077",
+    "image": "https://www.argenprop.com/static-content/77086681/78f6fdd1-b9bc-4511-a0f9-12bbc97d00d2_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/77086681/78f6fdd1-b9bc-4511-a0f9-12bbc97d00d2_u_small.jpg",
+      "https://www.argenprop.com/static-content/77086681/331ee3a6-bfe7-4186-9686-f350e86b4aad_u_small.jpg",
+      "https://www.argenprop.com/static-content/77086681/d419a624-4fac-4437-ba25-1c87a4425dc5_u_small.jpg",
+      "https://www.argenprop.com/static-content/77086681/788c4691-63d3-44ba-8067-310bdafc98c0_u_small.jpg",
+      "https://www.argenprop.com/static-content/77086681/9589e07c-8735-484f-b9a5-f056d54eca36_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 4500000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_villa-crespo",
+    "site": "argenprop",
+    "surface_m2": 216.0,
+    "title": "Excelente Casa, Coch y terraz, 216m cubiertos, Darwin 500",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-villa-crespo-4-ambientes--18668077",
+    "verified": false
+  },
   "argenprop:18706844": {
     "address": "CARLOS GUIDO Y SPANO 1100",
     "bathrooms": null,
@@ -30,6 +684,138 @@
     "surface_m2": 70.0,
     "title": "CABALLITO PH ENTRADA INDEPENDIENTE",
     "url": "https://www.argenprop.com/ph-en-alquiler-en-caballito-norte-5-ambientes--18706844"
+  },
+  "argenprop:18717392": {
+    "address": "Vidal al 2900",
+    "bathrooms": null,
+    "bedrooms": 4,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:24:35Z",
+    "flags": [
+      {
+        "label": "Nunez: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:18717392",
+    "image": "https://www.argenprop.com/static-content/29371781/3e36c5da-e508-4f69-90c9-630b6f325335_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/29371781/3e36c5da-e508-4f69-90c9-630b6f325335_u_small.jpg",
+      "https://www.argenprop.com/static-content/29371781/da1ba1ef-4b83-460d-ae37-44f9d9aa3751_u_small.jpg",
+      "https://www.argenprop.com/static-content/29371781/f7f791dd-81ec-4081-8650-dac3c5dbbdbb_u_small.jpg",
+      "https://www.argenprop.com/static-content/29371781/956752b2-67ad-4c6d-af78-d4542660592a_u_small.jpg",
+      "https://www.argenprop.com/static-content/29371781/7be3e68d-2bdc-4f63-b921-1cc17910e2c7_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 5400000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_nunez",
+    "site": "argenprop",
+    "surface_m2": 531.0,
+    "title": "Casa - Nuñez",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-nunez-7-ambientes--18717392",
+    "verified": false
+  },
+  "argenprop:18926875": {
+    "address": "Arias e/ Roque Pérez y Superi",
+    "bathrooms": null,
+    "bedrooms": 9,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:30:54Z",
+    "flags": [
+      {
+        "label": "Saavedra: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:18926875",
+    "image": "https://www.argenprop.com/static-content/57862981/eb8e78cc-0e57-49f0-a652-f9a1ec0685ed_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/57862981/eb8e78cc-0e57-49f0-a652-f9a1ec0685ed_u_small.jpg",
+      "https://www.argenprop.com/static-content/57862981/eef58ea0-5707-4043-9702-52f6bf971828_u_small.jpg",
+      "https://www.argenprop.com/static-content/57862981/6316511e-02be-43af-a4e2-e1b18f447331_u_small.jpg",
+      "https://www.argenprop.com/static-content/57862981/bc46bc84-935f-477d-9563-97afee40a4e0_u_small.jpg",
+      "https://www.argenprop.com/static-content/57862981/3bf39e83-650f-4b5e-a3e5-7b2344c11f80_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2400000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_Saavedra",
+    "site": "argenprop",
+    "surface_m2": 230.0,
+    "title": "Casa en alquiler - 10 Ambientes - Saavedra",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-saavedra-10-ambientes--18926875",
+    "verified": false
+  },
+  "argenprop:19239896": {
+    "address": "CONFIDENCIAL 400, Piso P.B.",
+    "bathrooms": null,
+    "bedrooms": 7,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:17:55Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:19239896",
+    "image": "https://www.argenprop.com/static-content/69893291/4c470ba5-6d02-4e6c-bce1-7dad4700d725_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/69893291/4c470ba5-6d02-4e6c-bce1-7dad4700d725_u_small.jpg",
+      "https://www.argenprop.com/static-content/69893291/114dfc75-2f1e-48f9-957f-d37fd4e17227_u_small.jpg",
+      "https://www.argenprop.com/static-content/69893291/1289c70c-5e5d-48bf-af70-ee9318cd00ec_u_small.jpg",
+      "https://www.argenprop.com/static-content/69893291/25c8adb6-fb24-4dbb-91fb-6424a0ea4052_u_small.jpg",
+      "https://www.argenprop.com/static-content/69893291/067c8e1f-2ae1-4d28-b564-1689ab8b03a5_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_caballito",
+    "site": "argenprop",
+    "surface_m2": 201.0,
+    "title": "CASAS - CASA - CABALLITO, CAPITAL FEDERAL",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-caballito--19239896",
+    "verified": false
+  },
+  "argenprop:19343348": {
+    "address": "PH ALQUILER AMUEBLADO Plaza al 4600",
+    "bathrooms": null,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:16:46Z",
+    "flags": [
+      {
+        "label": "Saavedra: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:19343348",
+    "image": "https://www.argenprop.com/static-content/84334391/43675f17-a62e-4a94-9a5e-379b51805dd3_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/84334391/43675f17-a62e-4a94-9a5e-379b51805dd3_u_small.jpg",
+      "https://www.argenprop.com/static-content/84334391/5ef8d4ff-edde-4802-80e3-22a3068979fd_u_small.jpg",
+      "https://www.argenprop.com/static-content/84334391/48fb61ad-82c5-4695-a57a-fc0416d11cd9_u_small.jpg",
+      "https://www.argenprop.com/static-content/84334391/49945e32-4410-4efc-af58-b93c2be2cffc_u_small.jpg",
+      "https://www.argenprop.com/static-content/84334391/31557558-2524-4770-90a8-7c53b729643e_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2800000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_ph_saavedra",
+    "site": "argenprop",
+    "surface_m2": 70.0,
+    "title": "ALQUILER PH AMUEBLADO IMPERDIBLE !",
+    "url": "https://www.argenprop.com/ph-en-alquiler-en-saavedra-4-ambientes--19343348",
+    "verified": false
   },
   "argenprop:19453085": {
     "address": "Riglos al 600",
@@ -63,6 +849,105 @@
     "title": "Riglos 600 - PH 4 ambientes - entrada independiente",
     "url": "https://www.argenprop.com/ph-en-alquiler-en-caballito-6-ambientes--19453085"
   },
+  "argenprop:19486478": {
+    "address": "Aranguren 1700",
+    "bathrooms": null,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:17:55Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:19486478",
+    "image": "https://www.argenprop.com/static-content/87468491/cb17179a-3051-4715-b406-882d069ecb30_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/87468491/cb17179a-3051-4715-b406-882d069ecb30_u_small.jpg",
+      "https://www.argenprop.com/static-content/87468491/33dc2933-c599-4467-bb2b-3cd187f818de_u_small.jpg",
+      "https://www.argenprop.com/static-content/87468491/c0a0f58f-d56f-4b32-bfb2-1a6ab9b8d872_u_small.jpg",
+      "https://www.argenprop.com/static-content/87468491/6c61085e-0abf-4c27-ac29-234cc5f0a25a_u_small.jpg",
+      "https://www.argenprop.com/static-content/87468491/f3945f81-d212-4a20-9a5f-07ab66dfe2d4_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2200000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_caballito",
+    "site": "argenprop",
+    "surface_m2": 120.0,
+    "title": "Casa Dúplex en Alquiler en Caballito, Capital Federal, Buenos Aires",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-caballito-4-ambientes--19486478",
+    "verified": false
+  },
+  "argenprop:19550456": {
+    "address": "PAROISSIEN 4000",
+    "bathrooms": null,
+    "bedrooms": 5,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:30:54Z",
+    "flags": [
+      {
+        "label": "Saavedra: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:19550456",
+    "image": "https://www.argenprop.com/static-content/65405591/2a22b470-19b1-4e56-b91d-d1a10792475b_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/65405591/2a22b470-19b1-4e56-b91d-d1a10792475b_u_small.jpg",
+      "https://www.argenprop.com/static-content/65405591/350d9ef5-71e9-4537-b227-a79162d34567_u_small.jpg",
+      "https://www.argenprop.com/static-content/65405591/60df0856-8854-4227-afee-345db4b37d7e_u_small.jpg",
+      "https://www.argenprop.com/static-content/65405591/7b76ef87-5ef2-4746-814b-4bd9654b141c_u_small.jpg",
+      "https://www.argenprop.com/static-content/65405591/aefb0bde-7192-4d14-8ca2-e3cbe3a928ff_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2700000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_Saavedra",
+    "site": "argenprop",
+    "surface_m2": 163.0,
+    "title": "HERMOSA CASA 5 AMBIENTES - GRAN PATIO - TERRAZA - EXC. ESTAD",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-saavedra-7-ambientes--19550456",
+    "verified": false
+  },
+  "argenprop:19614056": {
+    "address": "Avellaneda al 1300",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:17:55Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:19614056",
+    "image": "https://www.argenprop.com/static-content/65041691/3b54c852-c744-410c-b3f9-b3ef5d93147a_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/65041691/3b54c852-c744-410c-b3f9-b3ef5d93147a_u_small.jpg",
+      "https://www.argenprop.com/static-content/65041691/99c7e45d-c299-40fb-9291-6e2f814088ed_u_small.jpg",
+      "https://www.argenprop.com/static-content/65041691/9559ea0b-91b3-4c53-9fcc-3ffc6db6f7c6_u_small.jpg",
+      "https://www.argenprop.com/static-content/65041691/c9f71946-e003-46c2-9d87-f465db95c18d_u_small.jpg",
+      "https://www.argenprop.com/static-content/65041691/5f54adbb-a13e-409f-a7f6-c97f4a082a2a_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 3500000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_caballito",
+    "site": "argenprop",
+    "surface_m2": 139.0,
+    "title": "Casa en Caballito",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-caballito-1-ambiente--19614056",
+    "verified": false
+  },
   "argenprop:19673147": {
     "address": "Yerbal 100, Piso Pb",
     "bathrooms": null,
@@ -71,7 +956,7 @@
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
       {
-        "label": "Precio 78% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 84% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -184,6 +1069,66 @@
     "title": "PH EN ALQUILER EN VILLA CRESPO CON TERRAZA, CABA",
     "url": "https://www.argenprop.com/ph-en-alquiler-en-villa-crespo-4-ambientes--19875552"
   },
+  "argenprop:19941889": {
+    "address": "Lerma 100",
+    "bathrooms": null,
+    "bedrooms": 4,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:22:25Z",
+    "flags": [],
+    "id": "argenprop:19941889",
+    "image": "https://www.argenprop.com/static-content/98814991/07afc723-3377-40d5-b44c-757115301780_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/98814991/07afc723-3377-40d5-b44c-757115301780_u_small.jpg",
+      "https://www.argenprop.com/static-content/98814991/a8d607eb-0226-464e-b5f0-0cba66c01a68_u_small.jpg",
+      "https://www.argenprop.com/static-content/98814991/ca73df1a-2c8c-4615-a4b3-74712f271fe0_u_small.jpg",
+      "https://www.argenprop.com/static-content/98814991/dec13bf1-b373-4bf2-af94-20013f5fcda9_u_small.jpg",
+      "https://www.argenprop.com/static-content/98814991/c23a7854-9353-4c7a-8f69-ac3b98fce59f_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2600000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_villa-crespo",
+    "site": "argenprop",
+    "surface_m2": 352.0,
+    "title": "ALQUILER CASA 4 DORMITORIOS MUY AMPLIA LUMINOSA",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-villa-crespo-6-ambientes--19941889",
+    "verified": false
+  },
+  "argenprop:19946388": {
+    "address": "Yapeyú 300",
+    "bathrooms": null,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:27:52Z",
+    "flags": [
+      {
+        "label": "Almagro: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:19946388",
+    "image": "https://www.argenprop.com/static-content/88364991/22215d1d-f48b-4b03-9b20-42eb418f3a93_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/88364991/22215d1d-f48b-4b03-9b20-42eb418f3a93_u_small.jpg",
+      "https://www.argenprop.com/static-content/88364991/b19a71d2-0816-4678-9c47-84839e0c4014_u_small.jpg",
+      "https://www.argenprop.com/static-content/88364991/4ee03b2b-1fb3-47ba-9b69-a1dc20141af1_u_small.jpg",
+      "https://www.argenprop.com/static-content/88364991/5cb03207-1278-42a7-bb8b-bd8c519e098b_u_small.jpg",
+      "https://www.argenprop.com/static-content/88364991/0691326a-c13f-4993-9f89-119ef7c44c32_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 3600000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_almagro",
+    "site": "argenprop",
+    "surface_m2": 240.0,
+    "title": "Depósito en Alquiler en Almagro, Capital Federal, Buenos Aires",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-almagro-1-ambiente--19946388",
+    "verified": false
+  },
   "argenprop:19963154": {
     "address": "Jose Maria Moreno 100, Piso 0",
     "bathrooms": null,
@@ -192,7 +1137,7 @@
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
       {
-        "label": "Precio 55% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 69% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -221,6 +1166,39 @@
     "title": "ALQUILER PH 2 AMBIENTES CON PATIO Y TERRAZA CABALLITO",
     "url": "https://www.argenprop.com/ph-en-alquiler-en-caballito--19963154"
   },
+  "argenprop:19963702": {
+    "address": "Querandies al 4300",
+    "bathrooms": null,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:15:56Z",
+    "flags": [
+      {
+        "label": "Almagro: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:19963702",
+    "image": "https://www.argenprop.com/static-content/20736991/682ef27e-80d6-4ff9-bbcb-44ad6f81b4ba_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/20736991/682ef27e-80d6-4ff9-bbcb-44ad6f81b4ba_u_small.jpg",
+      "https://www.argenprop.com/static-content/20736991/d7322283-dc54-4322-8963-27e01196dc09_u_small.jpg",
+      "https://www.argenprop.com/static-content/20736991/2727c67e-79a9-48d1-8d2c-3749ecfeafc8_u_small.jpg",
+      "https://www.argenprop.com/static-content/20736991/f4b308b1-925e-4e5b-97b3-e3b35dac2f91_u_small.jpg",
+      "https://www.argenprop.com/static-content/20736991/7f9d79b4-cd09-482b-9e64-6dc9d6bb3239_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2700000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_ph_almagro",
+    "site": "argenprop",
+    "surface_m2": 170.0,
+    "title": "ALQUILER-PH-4 AMB- TERRAZA- PARRILLA- ALMAGRO",
+    "url": "https://www.argenprop.com/ph-en-alquiler-en-almagro-4-ambientes--19963702",
+    "verified": false
+  },
   "argenprop:19980224": {
     "address": "Yerbal 100, Piso Pb",
     "bathrooms": null,
@@ -229,7 +1207,7 @@
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
       {
-        "label": "Precio 71% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 80% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -257,6 +1235,105 @@
     "surface_m2": 24.0,
     "title": "MONOAMBIENTE A LA CALLE EN PLANTA BAJA APTO PROFESIONAL",
     "url": "https://www.argenprop.com/ph-en-alquiler-en-caballito--19980224"
+  },
+  "argenprop:19982122": {
+    "address": "Nuñez 2306",
+    "bathrooms": null,
+    "bedrooms": 4,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:15:17Z",
+    "flags": [
+      {
+        "label": "Nunez: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:19982122",
+    "image": "https://www.argenprop.com/static-content/22128991/04bb8054-fe28-491c-846d-288fdaa67f7c_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/22128991/04bb8054-fe28-491c-846d-288fdaa67f7c_u_small.jpg",
+      "https://www.argenprop.com/static-content/22128991/a15ba8e5-e56b-4f6e-a833-e1426097a3b4_u_small.jpg",
+      "https://www.argenprop.com/static-content/22128991/c460d4af-e81e-4b09-b2a7-3e79865cfb31_u_small.jpg",
+      "https://www.argenprop.com/static-content/22128991/31b2f9c5-f69d-40d0-af8d-f6e29bcc0ae4_u_small.jpg",
+      "https://www.argenprop.com/static-content/22128991/c9d04b54-e103-4332-b641-82b7f5b42f92_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2000000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_ph_nunez",
+    "site": "argenprop",
+    "surface_m2": 120.0,
+    "title": "PH en Nuñez",
+    "url": "https://www.argenprop.com/ph-en-alquiler-en-nunez-4-ambientes--19982122",
+    "verified": false
+  },
+  "argenprop:19982323": {
+    "address": "Venezuela e/ Castro y Castro Barro",
+    "bathrooms": null,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:15:56Z",
+    "flags": [
+      {
+        "label": "Almagro: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:19982323",
+    "image": "https://www.argenprop.com/static-content/32328991/c2c9fc00-4453-46a5-b021-91c8051fa6bd_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/32328991/c2c9fc00-4453-46a5-b021-91c8051fa6bd_u_small.jpg",
+      "https://www.argenprop.com/static-content/32328991/3875327e-e463-4aad-b5a8-698e96daddf5_u_small.jpg",
+      "https://www.argenprop.com/static-content/32328991/4d7276e8-28d9-4cfc-a54e-3f968cb6e022_u_small.jpg",
+      "https://www.argenprop.com/static-content/32328991/1d9f3457-8836-4961-a175-9e6d09b0bb58_u_small.jpg",
+      "https://www.argenprop.com/static-content/32328991/baef0d3d-ad85-4161-9ece-4c7c6668f6c5_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 1900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_ph_almagro",
+    "site": "argenprop",
+    "surface_m2": 145.0,
+    "title": "PH en Alquiler - 3 Dormitorios 2 Baños - 150mts - Almagro",
+    "url": "https://www.argenprop.com/ph-en-alquiler-en-almagro-4-ambientes--19982323",
+    "verified": false
+  },
+  "argenprop:19994431": {
+    "address": "Pico 4200",
+    "bathrooms": null,
+    "bedrooms": 4,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:30:54Z",
+    "flags": [
+      {
+        "label": "Saavedra: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:19994431",
+    "image": "https://www.argenprop.com/static-content/13449991/c6a4417c-c3a1-444d-b6b2-31111b8989a4_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/13449991/c6a4417c-c3a1-444d-b6b2-31111b8989a4_u_small.jpg",
+      "https://www.argenprop.com/static-content/13449991/2bdf3e84-6201-4cd3-976a-1c4d272ff036_u_small.jpg",
+      "https://www.argenprop.com/static-content/13449991/812c4fbc-c688-4e4c-9f6a-8bb94b9f357e_u_small.jpg",
+      "https://www.argenprop.com/static-content/13449991/a486f935-19c6-4383-9dc7-81d9ccbff848_u_small.jpg",
+      "https://www.argenprop.com/static-content/13449991/4a06e9de-e42d-4df1-84d1-e7cb01964622_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2500000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_casa_Saavedra",
+    "site": "argenprop",
+    "surface_m2": 200.0,
+    "title": "Alquiler de Casa 5 amb en el barrio de Saavedra.",
+    "url": "https://www.argenprop.com/casa-en-alquiler-en-saavedra-5-ambientes--19994431",
+    "verified": false
   },
   "argenprop:7819473": {
     "address": "Cnel R L Falcon 1400, Piso 1",
@@ -289,6 +1366,44 @@
     "surface_m2": 95.0,
     "title": "PH ANTIGUO ENTRADA INDEPENDIENTE 6 HABITACIONES 2 BAÑOS TERRAZA SIN EXPENSAS SOLO COMERCIAL PROFESIONAL",
     "url": "https://www.argenprop.com/ph-en-alquiler-en-caballito-sur-7-ambientes--7819473"
+  },
+  "argenprop:9070987": {
+    "address": "Avenida Belgrano 3300 , Piso 1",
+    "bathrooms": null,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:15:56Z",
+    "flags": [
+      {
+        "label": "Precio 48% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      },
+      {
+        "label": "Belgrano: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:9070987",
+    "image": "https://www.argenprop.com/static-content/7890709/1952c997-2690-4288-96b9-8930f394f498_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/7890709/1952c997-2690-4288-96b9-8930f394f498_u_small.jpg",
+      "https://www.argenprop.com/static-content/7890709/37a0e3bd-e70c-41ad-9d8f-8ff975e4dcc8_u_small.jpg",
+      "https://www.argenprop.com/static-content/7890709/30a81a3f-bfa3-4e86-97fe-f96d6b978eab_u_small.jpg",
+      "https://www.argenprop.com/static-content/7890709/d5c48a8b-e053-4554-a2be-f2f1fb95275f_u_small.jpg",
+      "https://www.argenprop.com/static-content/7890709/a103c47f-58f5-4f86-a195-c344a10bbfb6_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 1500000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "argenprop_alquiler_ph_almagro",
+    "site": "argenprop",
+    "surface_m2": 200.0,
+    "title": "Almagro, PH 4 amb. SIN EXPENSAS. 200 m2 cub. 200 m2 terraza",
+    "url": "https://www.argenprop.com/ph-en-alquiler-en-almagro-4-ambientes--9070987",
+    "verified": false
   },
   "mercadolibre:MLA1806522443": {
     "address": "Avellaneda Al 1300, Caballito, Capital Federal",
@@ -888,7 +2003,18 @@
       "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/59db648f-50ad-4162-a896-4ce51d75fb16.jpg",
       "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/d364fc5c-e318-4cd3-ad93-463d1d9a376b.jpg",
       "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/c310bda2-8549-42d9-96de-086390c53897.jpg",
-      "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/90c98519-fdf5-431b-be57-77c6526d99fb.jpg"
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/90c98519-fdf5-431b-be57-77c6526d99fb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/62c33301-e4c5-406c-85e3-83fff14b0258.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/0c00c8e9-9c54-4c3d-8cda-fdda5f9a1391.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/79c9bc40-fc28-432b-8dd5-c9f111b2668f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/e95ab0a0-015f-4997-807d-e8db3b8d1585.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/89e721a2-ae6e-4a3d-9971-096938763aab.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/9eb0ab09-4e51-49f2-be94-ef238f5d2296.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/e3d17983-c741-4d53-9d30-6969971c5f81.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/d39eb6a0-a37a-482d-8e98-0086723dcde8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/77726068-1cc5-400c-8ebd-4209885af08f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/1ba64092-0fb2-417b-9109-48d3bd38714e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/311bb778-e238-4f02-8533-89f6555ba24e/ff3dd126-3fc2-4f87-9c9f-b275bb9327ba.jpg"
     ],
     "operation": "alquiler",
     "price_amount": 26500.0,
@@ -931,6 +2057,43 @@
     "surface_m2": 127.0,
     "title": "Alquiler en 5 ambientes Valentina Alsina",
     "url": "https://www.remax.com.ar/listings/alquiler-en-5-ambientes-valentina-alsina"
+  },
+  "remax:56e2ab39-c1f3-4c1e-b28c-bba419bb346b": {
+    "address": "Avenida España 900",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": 156000.0,
+    "first_seen": "2026-07-10T16:14:12Z",
+    "flags": [
+      {
+        "label": "Precio 60% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:56e2ab39-c1f3-4c1e-b28c-bba419bb346b",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/56e2ab39-c1f3-4c1e-b28c-bba419bb346b/c93f907e-60b8-433e-9dd1-fae07456d660.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/56e2ab39-c1f3-4c1e-b28c-bba419bb346b/c93f907e-60b8-433e-9dd1-fae07456d660.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/56e2ab39-c1f3-4c1e-b28c-bba419bb346b/4e740bbc-1699-4595-8ca0-bca5195006d2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/56e2ab39-c1f3-4c1e-b28c-bba419bb346b/af263a8c-2b9a-40c9-bacd-bc310ea55f7e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/56e2ab39-c1f3-4c1e-b28c-bba419bb346b/1143c6f2-b367-4f9c-8755-a490d46e181c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/56e2ab39-c1f3-4c1e-b28c-bba419bb346b/bca9d6c5-cf15-4d5a-8ff0-bba4917ef042.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/56e2ab39-c1f3-4c1e-b28c-bba419bb346b/506fdcc3-52fb-4f19-af3b-227b756e0abe.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/56e2ab39-c1f3-4c1e-b28c-bba419bb346b/23765189-c23e-4389-9d7e-2def6d612ed5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/56e2ab39-c1f3-4c1e-b28c-bba419bb346b/210a95e1-87a0-4ed7-8d97-e081dcb49b34.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/56e2ab39-c1f3-4c1e-b28c-bba419bb346b/1bd9b570-ff08-481a-ae91-2ccb2552c336.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 800000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "remax_alquiler_ph_caballito",
+    "site": "remax",
+    "surface_m2": 79.0,
+    "title": "ALQUILER DPTO 2 DORMITORIOS CUIDAD MZA \"AMOBLADO\"",
+    "url": "https://www.remax.com.ar/listings/alquiler-dpto-2-dormitorios-cuidad-mza-amoblado",
+    "verified": false
   },
   "remax:cbc8fb98-b75c-422b-bef8-7ebbc8208fcd": {
     "address": "San Luis 2400",
@@ -981,7 +2144,17 @@
       "https://d1acdg20u0pmxj.cloudfront.net/listings/e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93/1b20b992-5b60-4405-9c86-580a95d1820c.jpg",
       "https://d1acdg20u0pmxj.cloudfront.net/listings/e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93/2b475405-99aa-4d2c-a4d3-7f902ed5c001.jpg",
       "https://d1acdg20u0pmxj.cloudfront.net/listings/e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93/ee1009af-a779-456b-8005-90547049012d.jpg",
-      "https://d1acdg20u0pmxj.cloudfront.net/listings/e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93/9d35dbf9-4795-4ba2-981e-2e963cc7f41d.jpg"
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93/9d35dbf9-4795-4ba2-981e-2e963cc7f41d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93/09d1dbe0-1bc9-4627-89f6-2ea20ea747d6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93/19ce2298-9461-41bc-8fed-3c1f2d3c08fe.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93/6852df95-d57a-45a3-b00b-4233fa3b9158.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93/4028b0ff-c2ca-40d8-bc48-b1a1eb0ffd25.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93/6d0079f4-fb89-4626-8c05-28ca0d474c33.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93/99b45a9c-fe41-446c-8e2f-86ab8f844b2b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93/09e2c5cc-a887-4de9-94fc-b7a4e719b3bb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93/33479b8b-4d8c-4642-b5fd-c4f75b51b2e1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93/bfdef290-8406-4ef9-877d-736b9c796adf.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e0c0d64a-20f6-4f6e-ab50-cf5ae9b23e93/e6781cc0-393d-4470-b555-08f24566a158.jpg"
     ],
     "operation": "alquiler",
     "price_amount": 19000.0,
@@ -1013,7 +2186,9 @@
     ],
     "id": "zonaprop:47178798",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/47/17/87/98/360x266/1949752330.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/47/17/87/98/360x266/1949752330.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 1600000.0,
     "price_currency": "ARS",
@@ -1044,7 +2219,9 @@
     ],
     "id": "zonaprop:49762338",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/49/76/23/38/360x266/1811819927.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/49/76/23/38/360x266/1811819927.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 2000000.0,
     "price_currency": "ARS",
@@ -1075,7 +2252,9 @@
     ],
     "id": "zonaprop:55173172",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/55/17/31/72/360x266/1949936824.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/55/17/31/72/360x266/1949936824.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 2900000.0,
     "price_currency": "ARS",
@@ -1137,7 +2316,9 @@
     ],
     "id": "zonaprop:57869284",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/57/86/92/84/360x266/2020387131.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/57/86/92/84/360x266/2020387131.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 4500000.0,
     "price_currency": "ARS",
@@ -1168,7 +2349,9 @@
     ],
     "id": "zonaprop:57938823",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/57/93/88/23/360x266/2021012004.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/57/93/88/23/360x266/2021012004.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 5400000.0,
     "price_currency": "ARS",
@@ -1199,7 +2382,9 @@
     ],
     "id": "zonaprop:58012524",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/01/25/24/360x266/2023052565.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/01/25/24/360x266/2023052565.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 5000000.0,
     "price_currency": "ARS",
@@ -1230,7 +2415,9 @@
     ],
     "id": "zonaprop:58208157",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/20/81/57/360x266/2058838469.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/20/81/57/360x266/2058838469.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 2400000.0,
     "price_currency": "ARS",
@@ -1261,7 +2448,9 @@
     ],
     "id": "zonaprop:58419223",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/41/92/23/360x266/2034371962.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/41/92/23/360x266/2034371962.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 2500000.0,
     "price_currency": "ARS",
@@ -1271,6 +2460,40 @@
     "surface_m2": 240.0,
     "title": "$ 2.500.000",
     "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph-comercial-en-alquiler-6-ambientes-entrada-58419223.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=3"
+  },
+  "zonaprop:58458509": {
+    "address": "Belgrano, Capital Federal",
+    "bathrooms": 6,
+    "bedrooms": 8,
+    "expenses": null,
+    "first_seen": "2026-07-10T16:26:33Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Belgrano: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:58458509",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/45/85/09/360x266/2035466318.jpg?isFirstImage=true",
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/45/85/09/360x266/2035466318.jpg?isFirstImage=true"
+    ],
+    "operation": "alquiler",
+    "price_amount": 12900000.0,
+    "price_currency": "ARS",
+    "rooms": 9,
+    "search_name": "zonaprop_alquiler_casa_nunez",
+    "site": "zonaprop",
+    "surface_m2": 705.0,
+    "title": "$ 12.900.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-9-ambientes.-lacroze-federico-av-al-2000-58458509.html?n_src=Listado&n_pg=1&n_pos=18",
+    "verified": false
   },
   "zonaprop:58609822": {
     "address": "Caballito, Capital Federal",
@@ -1292,7 +2515,9 @@
     ],
     "id": "zonaprop:58609822",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/60/98/22/360x266/2039681148.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/60/98/22/360x266/2039681148.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 2900000.0,
     "price_currency": "ARS",
@@ -1323,7 +2548,9 @@
     ],
     "id": "zonaprop:58639012",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/63/90/12/360x266/2040459724.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/63/90/12/360x266/2040459724.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 3000000.0,
     "price_currency": "ARS",
@@ -1354,7 +2581,9 @@
     ],
     "id": "zonaprop:58805290",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/80/52/90/360x266/2044886318.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/80/52/90/360x266/2044886318.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 3200000.0,
     "price_currency": "ARS",
@@ -1380,7 +2609,9 @@
     ],
     "id": "zonaprop:58817913",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/81/79/13/360x266/2055247449.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/81/79/13/360x266/2055247449.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 3500000.0,
     "price_currency": "ARS",
@@ -1411,7 +2642,9 @@
     ],
     "id": "zonaprop:58837784",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/83/77/84/360x266/2045730067.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/83/77/84/360x266/2045730067.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 4200000.0,
     "price_currency": "ARS",
@@ -1442,7 +2675,9 @@
     ],
     "id": "zonaprop:58899962",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/89/99/62/360x266/2062223162.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/89/99/62/360x266/2062223162.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 3600000.0,
     "price_currency": "ARS",
@@ -1473,7 +2708,9 @@
     ],
     "id": "zonaprop:58958720",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/95/87/20/360x266/2062000603.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/95/87/20/360x266/2062000603.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 6000000.0,
     "price_currency": "ARS",
@@ -1504,7 +2741,9 @@
     ],
     "id": "zonaprop:58969728",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/96/97/28/360x266/2049149920.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/96/97/28/360x266/2049149920.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 4300000.0,
     "price_currency": "ARS",
@@ -1535,7 +2774,9 @@
     ],
     "id": "zonaprop:58981496",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/98/14/96/360x266/2049428629.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/98/14/96/360x266/2049428629.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 2700000.0,
     "price_currency": "ARS",
@@ -1566,7 +2807,9 @@
     ],
     "id": "zonaprop:58993205",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/99/32/05/360x266/2061265607.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/99/32/05/360x266/2061265607.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 6000000.0,
     "price_currency": "ARS",
@@ -1597,7 +2840,9 @@
     ],
     "id": "zonaprop:58993861",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/99/38/61/360x266/2055602056.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/99/38/61/360x266/2055602056.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 1200000.0,
     "price_currency": "ARS",
@@ -1628,7 +2873,9 @@
     ],
     "id": "zonaprop:59093574",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/09/35/74/360x266/2052418903.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/09/35/74/360x266/2052418903.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 4200000.0,
     "price_currency": "ARS",
@@ -1659,7 +2906,9 @@
     ],
     "id": "zonaprop:59102685",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/10/26/85/360x266/2062151136.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/10/26/85/360x266/2062151136.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 1400000.0,
     "price_currency": "ARS",
@@ -1690,7 +2939,9 @@
     ],
     "id": "zonaprop:59147521",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/14/75/21/360x266/2064352169.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/14/75/21/360x266/2064352169.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 9000000.0,
     "price_currency": "ARS",
@@ -1721,7 +2972,9 @@
     ],
     "id": "zonaprop:59149695",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/14/96/95/360x266/2058862913.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/14/96/95/360x266/2058862913.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 2250000.0,
     "price_currency": "ARS",
@@ -1752,7 +3005,9 @@
     ],
     "id": "zonaprop:59155437",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/15/54/37/360x266/2060361961.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/15/54/37/360x266/2060361961.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 2200000.0,
     "price_currency": "ARS",
@@ -1771,6 +3026,11 @@
     "first_seen": "2026-07-10T03:18:56Z",
     "flags": [
       {
+        "label": "Precio 56% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      },
+      {
         "label": "Una sola foto o sin fotos",
         "level": "low",
         "type": "few_photos"
@@ -1783,7 +3043,9 @@
     ],
     "id": "zonaprop:59177593",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/17/75/93/360x266/2054545007.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/17/75/93/360x266/2054545007.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 1290000.0,
     "price_currency": "ARS",
@@ -1814,7 +3076,9 @@
     ],
     "id": "zonaprop:59222202",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/22/22/02/360x266/2055654917.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/22/22/02/360x266/2055654917.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 3000000.0,
     "price_currency": "ARS",
@@ -1845,7 +3109,9 @@
     ],
     "id": "zonaprop:59230426",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/23/04/26/360x266/2055852831.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/23/04/26/360x266/2055852831.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 3500000.0,
     "price_currency": "ARS",
@@ -1876,7 +3142,9 @@
     ],
     "id": "zonaprop:59282800",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/28/28/00/360x266/2057081470.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/28/28/00/360x266/2057081470.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 2100000.0,
     "price_currency": "ARS",
@@ -1907,7 +3175,9 @@
     ],
     "id": "zonaprop:59340298",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/34/02/98/360x266/2058486524.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/34/02/98/360x266/2058486524.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 3800000.0,
     "price_currency": "ARS",
@@ -1938,7 +3208,9 @@
     ],
     "id": "zonaprop:59341943",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/34/19/43/360x266/2058904033.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/34/19/43/360x266/2058904033.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 3900000.0,
     "price_currency": "ARS",
@@ -1969,7 +3241,9 @@
     ],
     "id": "zonaprop:59356414",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/35/64/14/360x266/2063733624.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/35/64/14/360x266/2063733624.jpg?isFirstImage=true"
+    ],
     "operation": "venta",
     "price_amount": 359000.0,
     "price_currency": "ARS",
@@ -2000,7 +3274,9 @@
     ],
     "id": "zonaprop:59360125",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/36/01/25/360x266/2059276625.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/36/01/25/360x266/2059276625.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 4000000.0,
     "price_currency": "ARS",
@@ -2036,7 +3312,9 @@
     ],
     "id": "zonaprop:59367939",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/36/79/39/360x266/2059476850.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/36/79/39/360x266/2059476850.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 2000000.0,
     "price_currency": "ARS",
@@ -2067,7 +3345,9 @@
     ],
     "id": "zonaprop:59386605",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/38/66/05/360x266/2059931177.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/38/66/05/360x266/2059931177.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 3700000.0,
     "price_currency": "ARS",
@@ -2098,7 +3378,9 @@
     ],
     "id": "zonaprop:59405086",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/40/50/86/360x266/2060405221.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/40/50/86/360x266/2060405221.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 2400000.0,
     "price_currency": "ARS",
@@ -2129,7 +3411,9 @@
     ],
     "id": "zonaprop:59426317",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/42/63/17/360x266/2060926523.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/42/63/17/360x266/2060926523.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 2700000.0,
     "price_currency": "ARS",
@@ -2160,7 +3444,9 @@
     ],
     "id": "zonaprop:59450132",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/45/01/32/360x266/2061508535.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/01/32/360x266/2061508535.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 2500000.0,
     "price_currency": "ARS",
@@ -2191,7 +3477,9 @@
     ],
     "id": "zonaprop:59452788",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/45/27/88/360x266/2061573316.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/27/88/360x266/2061573316.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 2999999.0,
     "price_currency": "ARS",
@@ -2222,7 +3510,9 @@
     ],
     "id": "zonaprop:59453764",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/45/37/64/360x266/2061596936.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/37/64/360x266/2061596936.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 3900000.0,
     "price_currency": "ARS",
@@ -2253,7 +3543,9 @@
     ],
     "id": "zonaprop:59455030",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/45/50/30/360x266/2061630114.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/50/30/360x266/2061630114.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 5000000.0,
     "price_currency": "ARS",
@@ -2284,7 +3576,9 @@
     ],
     "id": "zonaprop:59479573",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/47/95/73/360x266/2062228730.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/47/95/73/360x266/2062228730.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 3500000.0,
     "price_currency": "ARS",
@@ -2315,7 +3609,9 @@
     ],
     "id": "zonaprop:59489248",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/48/92/48/360x266/2062480777.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/48/92/48/360x266/2062480777.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 3500000.0,
     "price_currency": "ARS",
@@ -2346,7 +3642,9 @@
     ],
     "id": "zonaprop:59492352",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/49/23/52/360x266/2062537760.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/49/23/52/360x266/2062537760.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 3200000.0,
     "price_currency": "ARS",
@@ -2377,7 +3675,9 @@
     ],
     "id": "zonaprop:59496998",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/49/69/98/360x266/2062641601.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/49/69/98/360x266/2062641601.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 3000000.0,
     "price_currency": "ARS",
@@ -2408,7 +3708,9 @@
     ],
     "id": "zonaprop:59501429",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/50/14/29/360x266/2062758753.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/50/14/29/360x266/2062758753.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 2000000.0,
     "price_currency": "ARS",
@@ -2427,7 +3729,7 @@
     "first_seen": "2026-07-10T03:54:22Z",
     "flags": [
       {
-        "label": "Precio 48% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 64% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -2444,7 +3746,9 @@
     ],
     "id": "zonaprop:59502664",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/50/26/64/360x266/2062794907.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/50/26/64/360x266/2062794907.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 1050000.0,
     "price_currency": "ARS",
@@ -2475,7 +3779,9 @@
     ],
     "id": "zonaprop:59512726",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/51/27/26/360x266/2063024260.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/51/27/26/360x266/2063024260.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 1200000.0,
     "price_currency": "ARS",
@@ -2511,7 +3817,9 @@
     ],
     "id": "zonaprop:59518338",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/51/83/38/360x266/2063164619.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/51/83/38/360x266/2063164619.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 1990000.0,
     "price_currency": "ARS",
@@ -2542,7 +3850,9 @@
     ],
     "id": "zonaprop:59530409",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/53/04/09/360x266/2063459591.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/53/04/09/360x266/2063459591.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 2700000.0,
     "price_currency": "ARS",
@@ -2573,7 +3883,9 @@
     ],
     "id": "zonaprop:59555075",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/55/50/75/360x266/2064062554.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/55/50/75/360x266/2064062554.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 2000000.0,
     "price_currency": "ARS",
@@ -2604,7 +3916,9 @@
     ],
     "id": "zonaprop:59555407",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/55/54/07/360x266/2064070851.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/55/54/07/360x266/2064070851.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 1900000.0,
     "price_currency": "ARS",
@@ -2666,7 +3980,9 @@
     ],
     "id": "zonaprop:59573268",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/57/32/68/360x266/2064482430.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/57/32/68/360x266/2064482430.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 4500000.0,
     "price_currency": "ARS",
@@ -2697,7 +4013,9 @@
     ],
     "id": "zonaprop:59574149",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/57/41/49/360x266/2064505733.jpg?isFirstImage=true",
-    "images": [],
+    "images": [
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/57/41/49/360x266/2064505733.jpg?isFirstImage=true"
+    ],
     "operation": "alquiler",
     "price_amount": 2500000.0,
     "price_currency": "ARS",
