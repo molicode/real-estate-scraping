@@ -475,5 +475,16 @@
   "new": 7,
   "total_stored": 7,
   "errors": []
+ },
+ {
+  "finished_at": "2026-07-10T03:18:56Z",
+  "only_job": "zonaprop_alquiler_ph_caballito",
+  "jobs": {
+   "zonaprop_alquiler_ph_caballito": 6
+  },
+  "found": 6,
+  "new": 6,
+  "total_stored": 13,
+  "errors": []
  }
 ]

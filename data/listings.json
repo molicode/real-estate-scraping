@@ -71,7 +71,7 @@
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
       {
-        "label": "Precio 75% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 71% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -140,7 +140,7 @@
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
       {
-        "label": "Precio 50% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 42% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -177,7 +177,7 @@
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
       {
-        "label": "Precio 68% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 62% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -237,5 +237,191 @@
     "surface_m2": 95.0,
     "title": "PH ANTIGUO ENTRADA INDEPENDIENTE 6 HABITACIONES 2 BAÑOS TERRAZA SIN EXPENSAS SOLO COMERCIAL PROFESIONAL",
     "url": "https://www.argenprop.com/ph-en-alquiler-en-caballito-sur-7-ambientes--7819473"
+  },
+  "zonaprop:49762338": {
+    "address": "Caballito, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:18:56Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:49762338",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/49/76/23/38/360x266/1811819927.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 2000000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "zonaprop_alquiler_ph_caballito",
+    "site": "zonaprop",
+    "surface_m2": 240.0,
+    "title": "$ 2.000.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-beauchef-y-valle-ph-entrada-propia-3-dorm.-49762338.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=13"
+  },
+  "zonaprop:59093574": {
+    "address": "Villa Crespo, Capital Federal",
+    "bathrooms": 4,
+    "bedrooms": 9,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:18:56Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Villa Crespo: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59093574",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/09/35/74/360x266/2052418903.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 4200000.0,
+    "price_currency": "ARS",
+    "rooms": 10,
+    "search_name": "zonaprop_alquiler_ph_caballito",
+    "site": "zonaprop",
+    "surface_m2": 300.0,
+    "title": "$ 4.200.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph.-ideal-vivienda-familiar-u-oficina-comercial-apto-59093574.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=4"
+  },
+  "zonaprop:59177593": {
+    "address": "Caballito, Capital Federal",
+    "bathrooms": null,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:18:56Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59177593",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/17/75/93/360x266/2054545007.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 1290000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "zonaprop_alquiler_ph_caballito",
+    "site": "zonaprop",
+    "surface_m2": 110.0,
+    "title": "$ 1.290.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphpa-ph-tipo-casa-con-gran-terraza-privada-y-sin-expensas-59177593.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=20"
+  },
+  "zonaprop:59341943": {
+    "address": "Caballito, Capital Federal",
+    "bathrooms": 6,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:18:56Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59341943",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/34/19/43/360x266/2058904033.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 3900000.0,
+    "price_currency": "ARS",
+    "rooms": 6,
+    "search_name": "zonaprop_alquiler_ph_caballito",
+    "site": "zonaprop",
+    "surface_m2": 330.0,
+    "title": "$ 3.900.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-ph-en-alquiler-6-banos-330-m-caballito-59341943.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=3"
+  },
+  "zonaprop:59367939": {
+    "address": "Caballito, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:18:56Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59367939",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/36/79/39/360x266/2059476850.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 2000000.0,
+    "price_currency": "ARS",
+    "rooms": 6,
+    "search_name": "zonaprop_alquiler_ph_caballito",
+    "site": "zonaprop",
+    "surface_m2": 158.0,
+    "title": "$ 2.000.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-riglos-600-ph-4-ambientes-entrada-independiente-59367939.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=2"
+  },
+  "zonaprop:59530409": {
+    "address": "Almagro, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:18:56Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Almagro: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "zonaprop:59530409",
+    "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/53/04/09/360x266/2063459591.jpg?isFirstImage=true",
+    "images": [],
+    "operation": "alquiler",
+    "price_amount": 2700000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "zonaprop_alquiler_ph_caballito",
+    "site": "zonaprop",
+    "surface_m2": 270.0,
+    "title": "$ 2.700.000",
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclphin-alquiler-ph-4-amb-terraza-parrilla-almagro-59530409.html?n_src=Listado&n_pills=Aire+acondicionado&n_pg=1&n_pos=1"
   }
 }
