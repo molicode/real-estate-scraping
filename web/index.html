@@ -128,7 +128,7 @@
             </select>
           </label>
           <label id="wrap-zone">Zona
-            <span class="info" tabindex="0" data-tip="Barrio o ciudad, en minúsculas y con guiones (ej: palermo, villa-urquiza, capital-federal). Elegí una del menú o escribí otra. En Remax la zona se elige en el sitio: usá el modo 'Pegar URL'."></span>
+            <span class="info" tabindex="0" data-tip="Barrio o ciudad, en minúsculas y con guiones (ej: palermo, villa-urquiza, olivos, la-lucila). Elegí una del menú o escribí otra. Para zonas del GBA (Vicente López: Olivos, La Lucila, Florida…) algunos portales piden la URL exacta: si el menú no trae resultados, usá 'Pegar URL'. En Remax la zona se elige en el sitio."></span>
             <input type="text" id="f-zone" placeholder="palermo" list="dl-zones">
             <div id="zone-security" class="zone-sec"></div>
           </label>
@@ -143,7 +143,11 @@
           <option value="recoleta"><option value="caballito"><option value="villa-urquiza">
           <option value="almagro"><option value="nunez"><option value="colegiales">
           <option value="villa-crespo"><option value="flores"><option value="san-telmo">
-          <option value="puerto-madero"><option value="zona-norte"><option value="vicente-lopez">
+          <option value="puerto-madero"><option value="zona-norte">
+          <!-- Vicente López (GBA norte): casas/PH a mejor precio que CABA -->
+          <option value="vicente-lopez"><option value="olivos"><option value="la-lucila">
+          <option value="florida"><option value="florida-oeste"><option value="munro">
+          <option value="carapachay"><option value="villa-martelli"><option value="villa-adelina">
           <option value="san-isidro"><option value="la-plata"><option value="cordoba"><option value="rosario">
         </datalist>
         <div class="grid">
@@ -375,6 +379,10 @@
     <div class="row">
       <button id="reload-top" class="btn"><span data-icon="refresh"></span> Recargar datos</button>
       <button id="top-clear" class="btn"><span data-icon="x"></span> Limpiar filtros</button>
+      <div class="view-toggle" id="view-top" data-section="top" role="group" aria-label="Cambiar vista">
+        <button type="button" class="vt-btn" data-view="cards" title="Ver en tarjetas"><span data-icon="grid"></span></button>
+        <button type="button" class="vt-btn" data-view="list" title="Ver en lista"><span data-icon="list"></span></button>
+      </div>
       <span id="top-status" class="status"></span>
     </div>
   </div>
@@ -506,6 +514,10 @@
       <button id="search-clear" class="btn"><span data-icon="x"></span> Limpiar filtros</button>
       <button id="reload-results" class="btn"><span data-icon="refresh"></span> Recargar datos</button>
       <button id="clear-history" class="btn danger"><span data-icon="trash"></span> Vaciar histórico</button>
+      <div class="view-toggle" id="view-search" data-section="search" role="group" aria-label="Cambiar vista">
+        <button type="button" class="vt-btn" data-view="cards" title="Ver en tarjetas"><span data-icon="grid"></span></button>
+        <button type="button" class="vt-btn" data-view="list" title="Ver en lista"><span data-icon="list"></span></button>
+      </div>
       <span id="results-status" class="status"></span>
     </div>
   </div>
@@ -516,6 +528,10 @@
   <div class="toolbar">
     <button id="reload-fav" class="btn"><span data-icon="refresh"></span> Recargar</button>
     <span class="info" tabindex="0" data-tip="Tus avisos guardados con el corazón (desde Buscar o Top 5). Se commitean a data/favorites.json del repo, así no se pierden aunque cambies de navegador o el aviso desaparezca del histórico."></span>
+    <div class="view-toggle" id="view-fav" data-section="fav" role="group" aria-label="Cambiar vista">
+      <button type="button" class="vt-btn" data-view="cards" title="Ver en tarjetas"><span data-icon="grid"></span></button>
+      <button type="button" class="vt-btn" data-view="list" title="Ver en lista"><span data-icon="list"></span></button>
+    </div>
     <span id="fav-status" class="status"></span>
   </div>
   <div id="fav-list"></div>

@@ -28,6 +28,7 @@ class Listing:
     images: list[str] = field(default_factory=list)  # fotos extra si el portal las da
     search_name: str = ""
     operation: str = ""  # alquiler | venta (heredado del job)
+    verified: bool = False  # identidad del anunciante verificada por el portal
     flags: list = field(default_factory=list)  # señales de riesgo automáticas
     first_seen: str = ""
 

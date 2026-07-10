@@ -78,6 +78,8 @@ const ICONS = {
   loader: '<line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.9" y1="4.9" x2="7.8" y2="7.8"/><line x1="16.2" y1="16.2" x2="19.1" y2="19.1"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.9" y1="19.1" x2="7.8" y2="16.2"/><line x1="16.2" y1="7.8" x2="19.1" y2="4.9"/>',
   sparkles: '<path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/>',
   list: '<line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/>',
+  grid: '<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',
+  "shield-check": '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>',
   alert: '<path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>',
   "arrow-right": '<line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>',
   image: '<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>',
@@ -359,12 +361,13 @@ function jobZone(job) {
 // Punto de color con el nivel de inseguridad de la zona (si hay datos)
 function zoneDot(job) {
   // Siempre devuelve un puntito (consistente para todas las zonas): con color
-  // si conocemos el nivel de delito de su comuna, gris si no hay dato.
-  const comuna = comunaFromZone(job.zone || job.url || "");
-  const info = comuna && crimeData && crimeData.comunas[String(comuna)];
-  const lvl = info && LEVEL_INFO[info.level];
+  // si conocemos el nivel (comuna oficial o estimación GBA), gris si no hay dato.
+  const sec = zoneSecurity(job.zone || job.url || "");
+  const lvl = sec && LEVEL_INFO[sec.level];
   const dot = lvl ? lvl.dot : "muted";
-  const txt = lvl ? `Seguridad: ${lvl.txt}` : "Seguridad: sin dato";
+  const txt = lvl
+    ? `Seguridad: ${lvl.txt}${sec.official ? "" : " (estimado)"}`
+    : "Seguridad: sin dato";
   return `<span class="dot ${dot}" title="${txt}"></span>`;
 }
 
@@ -407,7 +410,8 @@ function renderJobs() {
     const enabled = job.enabled !== false;
     const paused = jobPausedByProxy(job);
     const det = document.createElement("details");
-    det.className = "job-card" + (enabled ? "" : " disabled") + (paused ? " proxy-paused" : "");
+    const opCls = opClass(job.operation);
+    det.className = "job-card" + (enabled ? "" : " disabled") + (paused ? " proxy-paused" : "") + (opCls ? " " + opCls : "");
     det.open = openIdx.has(i);
     const every = Math.max(1, Number(job.every_hours) || 1);
     const hasWd = job.weekday != null && job.weekday !== "";
@@ -419,7 +423,7 @@ function renderJobs() {
         <span class="job-live" id="job-live-${i}"></span>
         ${proxyPauseBadge(job)}
         <span class="badge">${job.site || "?"}</span>
-        <span class="badge">${job.operation === "venta" ? "compra" : job.operation || "?"}</span>
+        <span class="badge${opCls ? " " + opCls : ""}">${job.operation === "venta" ? "compra" : job.operation || "?"}</span>
         ${jobPtype(job) ? `<span class="badge">${escapeHtml(jobPtype(job))}</span>` : ""}
         ${jobZone(job) ? `<span class="badge">${zoneDot(job)}${escapeHtml(jobZone(job))}</span>` : ""}
         <span class="badge" title="Frecuencia con la que corre en el cron${job.offset_hours != null ? ` (arranca ${String(job.offset_hours).padStart(2, "0")}:00 UTC para escalonar)` : ""}">${icon("timer", 13)} ${freqTxt}${offTxt}</span>
@@ -1215,15 +1219,16 @@ function favCardHtml(l) {
     l.surface_m2 ? `${Math.round(l.surface_m2)} m²` : null,
   ].filter(Boolean).join(" · ");
   const extra = `<button class="fav-btn on thumb-fav" data-fav="${escapeHtml(l.id)}" title="Quitar de Me gustan">${icon("heart", 16)}</button>`;
+  const opCls = listingOpClass(l);
   return `
-    <div class="top-card" data-lid="${escapeHtml(l.id)}">
+    <div class="top-card${opCls ? " " + opCls : ""}" data-lid="${escapeHtml(l.id)}">
       <div class="top-thumb">${photoCarouselHtml(l, extra)}</div>
       <div class="top-body">
         <div class="top-price">${fmtPrice(l)}</div>
-        <div class="top-title">${escapeHtml(listingTitle(l))}</div>
+        <div class="top-title">${escapeHtml(listingTitle(l))} ${verifiedHtml(l)}</div>
         <div class="top-meta">${escapeHtml(meta)}</div>
         ${l.address && l.address !== listingTitle(l) ? `<div class="top-meta">${escapeHtml(l.address)}</div>` : ""}
-        <div class="top-meta"><span class="badge">${escapeHtml(l.site)}</span> ${escapeHtml((l.saved_at || "").slice(0, 10))}</div>
+        <div class="top-meta">${opBadgeHtml(l)}<span class="badge">${escapeHtml(l.site)}</span> ${escapeHtml((l.saved_at || "").slice(0, 10))}</div>
         ${flagChipsHtml(l)}
         ${l.url ? `<a class="btn small ver-aviso top-ver" href="${escapeHtml(l.url)}" target="_blank" rel="noopener" title="Abrir el aviso en ${escapeHtml(l.site)}">${icon("external-link", 14)} Ver aviso en ${escapeHtml(l.site)}</a>` : ""}
       </div>
@@ -1231,16 +1236,36 @@ function favCardHtml(l) {
 }
 
 function renderFavorites() {
+  syncViewToggle("fav");
   const items = Object.values(favorites).sort((a, b) =>
     (b.saved_at || "").localeCompare(a.saved_at || "")
   );
-  $("fav-list").innerHTML = items.length
-    ? `<div class="fav-grid">${items.map(favCardHtml).join("")}</div>`
-    : '<p class="status">Todavía no guardaste ningún aviso. Tocá el corazón en la pestaña Buscar o en el Top 5.</p>';
+  if (!items.length) {
+    $("fav-list").innerHTML =
+      '<p class="status">Todavía no guardaste ningún aviso. Tocá el corazón en la pestaña Buscar o en el Top 5.</p>';
+  } else if (getView("fav") === "list") {
+    $("fav-list").innerHTML = listingsTableHtml(items.map((l) => listingRowHtml(l)).join(""));
+  } else {
+    $("fav-list").innerHTML = `<div class="fav-grid">${items.map(favCardHtml).join("")}</div>`;
+    startImageCycling();
+  }
   if (favLoaded) setStatus($("fav-status"), `${items.length} guardados`);
 }
 
 $("reload-fav").addEventListener("click", () => loadFavorites().then(renderFavorites));
+
+// Botón de vista lista/cards: cambia y re-renderiza solo esa sección.
+document.querySelectorAll(".view-toggle").forEach((wrap) => {
+  wrap.addEventListener("click", (e) => {
+    const btn = e.target.closest(".vt-btn");
+    if (!btn) return;
+    const section = wrap.dataset.section;
+    setView(section, btn.dataset.view);
+    if (section === "search") renderResults(lastResults);
+    else if (section === "top") renderTop();
+    else if (section === "fav") renderFavorites();
+  });
+});
 
 /* ---------- Señales de riesgo (auto del scraper + zonas y notas del usuario) ---------- */
 
@@ -1294,11 +1319,21 @@ function noteFlags(l) {
   return [];
 }
 
+// Señal estimada para zonas del GBA sin dato oficial (Vicente López, etc.).
+function extraZoneFlag(l) {
+  const lvl = extraZoneLevel(`${l.address} ${l.search_name} ${l.url}`);
+  if (!lvl) return null;
+  return lvl === "medio"
+    ? { level: "med", label: "Zona estimada: inseguridad media (sin dato oficial)" }
+    : { level: "low", label: "Zona estimada tranquila (GBA — sin dato oficial)" };
+}
+
 // Combina las señales automáticas del scraper con la zona y las notas propias
 function displayFlags(l) {
   const flags = [...(l.flags || [])];
   const z = zoneFlag(l);
   if (z) flags.push(z);
+  else { const ez = extraZoneFlag(l); if (ez) flags.push(ez); }
   flags.push(...noteFlags(l));
   return flags;
 }
@@ -1358,6 +1393,42 @@ const LEVEL_INFO = {
   bajo: { cls: "cm-bajo", dot: "green", txt: "Inseguridad baja", flag: "flag-low" },
 };
 
+// Zonas fuera de CABA (sin dato oficial del GCBA): estimación de seguridad.
+// Vicente López es uno de los partidos más tranquilos del GBA; se muestra
+// siempre como "estimado", nunca como dato oficial.
+const EXTRA_ZONE_SECURITY = {
+  "vicente lopez": "bajo",
+  "olivos": "bajo",
+  "la lucila": "bajo",
+  "florida oeste": "medio",
+  "florida": "bajo",
+  "villa adelina": "bajo",
+  "munro": "medio",
+  "carapachay": "medio",
+  "villa martelli": "medio",
+};
+
+function extraZoneLevel(text) {
+  const hay = normZone(text);
+  // más largas primero: "florida oeste" antes que "florida"
+  for (const name of Object.keys(EXTRA_ZONE_SECURITY).sort((a, z) => z.length - a.length)) {
+    if (hay.includes(name)) return EXTRA_ZONE_SECURITY[name];
+  }
+  return null;
+}
+
+// Nivel de seguridad de una zona: dato oficial por comuna (CABA) o, si no hay,
+// estimación para zonas conocidas del GBA. Devuelve null si no se sabe.
+function zoneSecurity(text) {
+  const comuna = comunaFromZone(text);
+  if (comuna != null && crimeData && crimeData.comunas[String(comuna)]) {
+    return { level: crimeData.comunas[String(comuna)].level, comuna, official: true };
+  }
+  const extra = extraZoneLevel(text);
+  if (extra) return { level: extra, comuna: null, official: false };
+  return null;
+}
+
 let crimeData = null;
 let comunasGeo = null;
 let barriosGeo = null;
@@ -1414,13 +1485,25 @@ function updateZoneSecurity() {
   const el = $("zone-security");
   if (!el) return;
   if (!isMenuMode()) { el.innerHTML = ""; return; }
-  const comuna = comunaFromZone($("f-zone").value);
-  if (comuna == null) { el.innerHTML = ""; return; }
-  if (!crimeData) { loadCrimeData().then(updateZoneSecurity); el.innerHTML = ""; return; }
-  const info = crimeData.comunas[String(comuna)];
-  el.innerHTML = info
-    ? securityBadge(info.level, comuna)
-    : `<span class="sec-badge">Comuna ${comuna} — sin datos de delito</span>`;
+  const zone = $("f-zone").value;
+  const comuna = comunaFromZone(zone);
+  // Zonas de CABA: usan el dato oficial por comuna (cargamos la data si falta).
+  if (comuna != null) {
+    if (!crimeData) { loadCrimeData().then(updateZoneSecurity); el.innerHTML = ""; return; }
+    const info = crimeData.comunas[String(comuna)];
+    el.innerHTML = info
+      ? securityBadge(info.level, comuna)
+      : `<span class="sec-badge">Comuna ${comuna} — sin datos de delito</span>`;
+    return;
+  }
+  // Zonas del GBA (Vicente López, etc.): estimación, sin dato oficial.
+  const extra = extraZoneLevel(zone);
+  if (extra) {
+    const m = LEVEL_INFO[extra] || LEVEL_INFO.medio;
+    el.innerHTML = `<span class="sec-badge"><span class="dot ${m.dot}"></span> Seguridad de la zona: ${m.txt} — estimado (sin dato oficial de CABA)</span>`;
+    return;
+  }
+  el.innerHTML = "";
 }
 
 // Proyección simple lon/lat -> plano (CABA es chica; corrijo la latitud).
@@ -1602,33 +1685,22 @@ function thumbHtml(l) {
     </div>`;
 }
 
+let lastResults = [];
+
 function renderResults(listings) {
+  lastResults = listings;
+  syncViewToggle("search");
   if (!listings.length) {
     $("results-list").innerHTML =
       '<p class="status">Ningún aviso coincide con los filtros. Probá aflojar alguno o tocá "Limpiar filtros".</p>';
     return;
   }
-  const rows = listings.map((l) => `
-    <tr data-lid="${escapeHtml(l.id)}" class="result-row">
-      <td>${thumbHtml(l)}</td>
-      <td class="tabnum">${escapeHtml((l.first_seen || "").slice(0, 16).replace("T", " "))}</td>
-      <td><span class="badge">${escapeHtml(l.site)}</span></td>
-      <td><a href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(listingTitle(l))}</a>
-          ${l.address && l.address !== listingTitle(l) ? `<br><small>${escapeHtml(l.address)}</small>` : ""}
-          ${flagChipsHtml(l)}</td>
-      <td>${fmtPrice(l)}</td>
-      <td>${l.rooms ?? "-"} amb / ${l.surface_m2 ? l.surface_m2 + " m²" : "-"}</td>
-      <td><small>${escapeHtml(l.search_name || "")}</small></td>
-      <td><div class="row" style="gap:4px;margin:0">
-        ${l.url ? `<a class="btn small ver-aviso" href="${escapeHtml(l.url)}" target="_blank" rel="noopener" title="Abrir el aviso en ${escapeHtml(l.site)}">${icon("external-link", 13)} Ver aviso</a>` : ""}
-        ${noteBtnHtml(l)}${heartHtml(l)}
-      </div></td>
-    </tr>`).join("");
-  $("results-list").innerHTML = `
-    <table>
-      <thead><tr><th>Foto</th><th>Visto</th><th>Portal</th><th>Aviso y señales</th><th>Precio</th><th>Amb/m²</th><th>Job</th><th>Abrir</th></tr></thead>
-      <tbody>${rows}</tbody>
-    </table>`;
+  if (getView("search") === "cards") {
+    $("results-list").innerHTML = `<div class="top-grid">${listings.map(searchCardHtml).join("")}</div>`;
+    startImageCycling();
+  } else {
+    $("results-list").innerHTML = listingsTableHtml(listings.map((l) => listingRowHtml(l)).join(""));
+  }
 }
 
 /* ---------- Top 5 por operación ---------- */
@@ -1649,6 +1721,106 @@ function inferOperation(l) {
 
 function listingOperation(l) {
   return l.operation || jobOperation(l.search_name) || inferOperation(l);
+}
+
+/* Clase de color por operación: alquiler = celeste, compra/venta = lavanda. */
+function opClass(operation) {
+  const op = (operation || "").toLowerCase();
+  if (op === "alquiler") return "op-rent";
+  if (op === "venta" || op === "compra") return "op-buy";
+  return "";
+}
+function listingOpClass(l) { return opClass(listingOperation(l)); }
+function opBadgeHtml(l) {
+  const op = (listingOperation(l) || "").toLowerCase();
+  const cls = opClass(op);
+  if (!cls) return "";
+  const label = (op === "venta" || op === "compra") ? "compra" : "alquiler";
+  return `<span class="badge ${cls}">${label}</span> `;
+}
+
+/* Sello de identidad verificada (lo trae el scraper de MercadoLibre). */
+function verifiedHtml(l) {
+  if (!l.verified) return "";
+  return `<span class="badge verified" title="El portal verificó la identidad del anunciante">${icon("shield-check", 12)} identidad verificada</span>`;
+}
+
+/* ---------- Vista lista/cards por sección (se recuerda por sección) ---------- */
+const VIEW_KEY = "resc_views";
+const VIEW_DEFAULT = { search: "list", top: "cards", fav: "cards" };
+
+function getView(section) {
+  try {
+    const v = JSON.parse(localStorage.getItem(VIEW_KEY) || "{}");
+    return v[section] || VIEW_DEFAULT[section];
+  } catch { return VIEW_DEFAULT[section]; }
+}
+function setView(section, view) {
+  let v = {};
+  try { v = JSON.parse(localStorage.getItem(VIEW_KEY) || "{}"); } catch { /* corrupto */ }
+  v[section] = view;
+  localStorage.setItem(VIEW_KEY, JSON.stringify(v));
+}
+function syncViewToggle(section) {
+  const wrap = $(`view-${section}`);
+  if (!wrap) return;
+  const cur = getView(section);
+  wrap.querySelectorAll(".vt-btn").forEach((b) => b.classList.toggle("on", b.dataset.view === cur));
+}
+
+/* Fila reutilizable para la vista en lista (misma tabla en Buscar, Top 5 y
+ * Me gustan). rank/detail son opcionales (los usa el Top 5). */
+function listingRowHtml(l, { rank, detail } = {}) {
+  const op = listingOpClass(l);
+  const when = (l.first_seen || l.saved_at || "").slice(0, 16).replace("T", " ");
+  return `
+    <tr data-lid="${escapeHtml(l.id)}" class="result-row${op ? " " + op : ""}">
+      <td>${thumbHtml(l)}</td>
+      <td class="tabnum">${escapeHtml(when)}</td>
+      <td><span class="badge">${escapeHtml(l.site)}</span></td>
+      <td>${rank ? `<span class="row-rank">#${rank}</span> ` : ""}${detail ? `<span class="badge">${escapeHtml(detail)}</span> ` : ""}<a href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(listingTitle(l))}</a>
+          ${verifiedHtml(l)}
+          ${l.address && l.address !== listingTitle(l) ? `<br><small>${escapeHtml(l.address)}</small>` : ""}
+          ${flagChipsHtml(l)}</td>
+      <td>${fmtPrice(l)}</td>
+      <td>${l.rooms ?? "-"} amb / ${l.surface_m2 ? Math.round(l.surface_m2) + " m²" : "-"}</td>
+      <td><small>${escapeHtml(l.search_name || "")}</small></td>
+      <td><div class="row" style="gap:4px;margin:0">
+        ${l.url ? `<a class="btn small ver-aviso" href="${escapeHtml(l.url)}" target="_blank" rel="noopener" title="Abrir el aviso en ${escapeHtml(l.site)}">${icon("external-link", 13)} Ver aviso</a>` : ""}
+        ${noteBtnHtml(l)}${heartHtml(l)}
+      </div></td>
+    </tr>`;
+}
+
+function listingsTableHtml(rowsHtml) {
+  return `
+    <table>
+      <thead><tr><th>Foto</th><th>Visto</th><th>Portal</th><th>Aviso y señales</th><th>Precio</th><th>Amb/m²</th><th>Job</th><th>Abrir</th></tr></thead>
+      <tbody>${rowsHtml}</tbody>
+    </table>`;
+}
+
+/* Card genérica para la vista en tarjetas de Buscar. */
+function searchCardHtml(l) {
+  const meta = [
+    l.rooms ? `${l.rooms} amb` : null,
+    l.surface_m2 ? `${Math.round(l.surface_m2)} m²` : null,
+  ].filter(Boolean).join(" · ");
+  const opCls = listingOpClass(l);
+  const extras = `<span class="thumb-fav">${heartHtml(l)}</span>`;
+  return `
+    <div class="top-card${opCls ? " " + opCls : ""}" data-lid="${escapeHtml(l.id)}">
+      <div class="top-thumb">${photoCarouselHtml(l, extras)}</div>
+      <div class="top-body">
+        <div class="top-price">${fmtPrice(l)}</div>
+        <div class="top-title">${escapeHtml(listingTitle(l))} ${verifiedHtml(l)}</div>
+        <div class="top-meta">${escapeHtml(meta)}</div>
+        ${l.address && l.address !== listingTitle(l) ? `<div class="top-meta">${escapeHtml(l.address)}</div>` : ""}
+        <div class="top-meta">${opBadgeHtml(l)}<span class="badge">${escapeHtml(l.site)}</span> ${escapeHtml((l.first_seen || "").slice(0, 10))}</div>
+        ${flagChipsHtml(l)}
+        ${l.url ? `<a class="btn small ver-aviso top-ver" href="${escapeHtml(l.url)}" target="_blank" rel="noopener" title="Abrir el aviso en ${escapeHtml(l.site)}">${icon("external-link", 14)} Ver aviso en ${escapeHtml(l.site)}</a>` : ""}
+      </div>
+    </div>`;
 }
 
 /* ---------- Criterios configurables del Top 5 ---------- */
@@ -1861,15 +2033,16 @@ function topCardHtml({ l, detail }, rank) {
     pricePerM2(l) ? `${Math.round(pricePerM2(l)).toLocaleString("es-AR")}/m²` : null,
   ].filter(Boolean).join(" · ");
   const thumbExtras = `<span class="top-rank">#${rank}</span><span class="thumb-fav">${heartHtml(l)}</span>`;
+  const opCls = listingOpClass(l);
   return `
-    <div class="top-card" data-lid="${escapeHtml(l.id)}">
+    <div class="top-card${opCls ? " " + opCls : ""}" data-lid="${escapeHtml(l.id)}">
       <div class="top-thumb">${photoCarouselHtml(l, thumbExtras)}</div>
       <div class="top-body">
         <div class="top-price">${fmtPrice(l)} <span class="badge">${escapeHtml(detail || "")}</span></div>
-        <div class="top-title">${escapeHtml(listingTitle(l))}</div>
+        <div class="top-title">${escapeHtml(listingTitle(l))} ${verifiedHtml(l)}</div>
         <div class="top-meta">${escapeHtml(meta)}</div>
         ${l.address && l.address !== listingTitle(l) ? `<div class="top-meta">${escapeHtml(l.address)}</div>` : ""}
-        <div class="top-meta"><span class="badge">${escapeHtml(l.site)}</span> ${escapeHtml(l.search_name || "")}</div>
+        <div class="top-meta">${opBadgeHtml(l)}<span class="badge">${escapeHtml(l.site)}</span> ${escapeHtml(l.search_name || "")}</div>
         ${flagChipsHtml(l)}
         ${l.url ? `<a class="btn small ver-aviso top-ver" href="${escapeHtml(l.url)}" target="_blank" rel="noopener" title="Abrir el aviso en ${escapeHtml(l.site)}">${icon("external-link", 14)} Ver aviso en ${escapeHtml(l.site)}</a>` : ""}
       </div>
@@ -1882,10 +2055,17 @@ function renderTopGroup(operation, container) {
     container.innerHTML = `<p class="status">No hay avisos de ${operation === "venta" ? "venta" : "alquiler"} que cumplan tus criterios. Ajustá los filtros de arriba o activá un job de esa operación.</p>`;
     return;
   }
-  container.innerHTML = `<div class="top-grid">${top.map((item, i) => topCardHtml(item, i + 1)).join("")}</div>`;
+  if (getView("top") === "list") {
+    container.innerHTML = listingsTableHtml(
+      top.map((item, i) => listingRowHtml(item.l, { rank: i + 1, detail: item.detail })).join("")
+    );
+  } else {
+    container.innerHTML = `<div class="top-grid">${top.map((item, i) => topCardHtml(item, i + 1)).join("")}</div>`;
+  }
 }
 
 function renderTop() {
+  syncViewToggle("top");
   renderTopGroup("alquiler", $("top-rent"));
   renderTopGroup("venta", $("top-buy"));
   setStatus($("top-status"), `${allListings.length} avisos analizados`);
@@ -2038,6 +2218,7 @@ function openDetailModal(l) {
       <div class="detail-body">
         <div class="detail-price">${fmtPrice(l)}</div>
         <div class="detail-title">${escapeHtml(listingTitle(l))}</div>
+        <div class="detail-badges">${opBadgeHtml(l)}${verifiedHtml(l)}</div>
         ${l.address ? `<div class="detail-addr">${icon("map-pin", 14)} ${escapeHtml(l.address)}</div>` : ""}
         <div class="detail-specs">${detailSpecs(l)}</div>
         ${flagChipsHtml(l)}
@@ -2166,9 +2347,11 @@ function runRowHtml(r) {
     : h ? `Borra del histórico los ${h.new} avisos que guardó esta corrida`
         : "Borra del histórico los avisos que guardó esta corrida";
   const jobName = h?.only_job || (r.event === "schedule" ? "programada" : r.event === "workflow_dispatch" ? "manual" : r.event || "");
+  // Corrida de un solo job: se tiñe según su operación (alquiler/compra).
+  const opCls = h?.only_job ? opClass(jobOperation(h.only_job)) : "";
   // Modo selección: fila plana con checkbox (el foco es elegir para borrar).
   if (selectMode) {
-    return `<div class="run-row select-row" data-row-run="${r.id}">
+    return `<div class="run-row select-row${opCls ? " " + opCls : ""}" data-row-run="${r.id}">
       <label class="run-check"><input type="checkbox" data-sel="${r.id}" ${selectedRuns.has(String(r.id)) ? "checked" : ""}></label>
       ${runIconHtml(r)} <strong class="tabnum">#${r.run_number}</strong>
       <span class="run-when tabnum">${when}</span>
@@ -2177,7 +2360,7 @@ function runRowHtml(r) {
     </div>`;
   }
   // Modo normal: desplegable con lo importante arriba y las acciones (iconos) adentro.
-  return `<details class="run-card" data-row-run="${r.id}">
+  return `<details class="run-card${opCls ? " " + opCls : ""}" data-row-run="${r.id}">
     <summary>
       ${runIconHtml(r)}
       <strong class="tabnum run-num">#${r.run_number}</strong>

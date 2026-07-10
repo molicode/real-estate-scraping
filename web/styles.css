@@ -47,6 +47,15 @@
   --map-bajo: #4E9E76;
   --map-na: #D8D2C4;
 
+  /* --- Operación: alquiler = celeste sereno, compra = lavanda sublime.
+     Colores calmos, de poco ruido, que solo tiñen borde y chip. --- */
+  --op-rent-bg: #E6F0F7;
+  --op-rent-ink: #3D6789;
+  --op-rent-line: #B9D5E7;
+  --op-buy-bg: #EEEAF6;
+  --op-buy-ink: #5E4F8E;
+  --op-buy-line: #D3CAEA;
+
   /* --- Radios / espaciado / movimiento --- */
   --r-sm: 8px;
   --r-md: 12px;
@@ -95,6 +104,13 @@
   --map-medio: #D8A05C;
   --map-bajo: #56A67E;
   --map-na: #3E382F;
+
+  --op-rent-bg: #28323B;
+  --op-rent-ink: #9FC4DD;
+  --op-rent-line: #3C5061;
+  --op-buy-bg: #312B47;
+  --op-buy-ink: #C3B7E8;
+  --op-buy-line: #463D63;
 
   color-scheme: dark;
 }
@@ -460,6 +476,57 @@ nav#tabs {
 .badge.run-ok { background: var(--success-container); border-color: transparent; color: var(--success); }
 .badge.run-warn { background: var(--warn-container); border-color: transparent; color: var(--warn); cursor: help; }
 .badge.run-bad { background: var(--danger-container); border-color: transparent; color: var(--danger); }
+
+/* Chip de operación: tiñe alquiler (celeste) y compra (lavanda). */
+.badge.op-rent { background: var(--op-rent-bg); border-color: var(--op-rent-line); color: var(--op-rent-ink); }
+.badge.op-buy { background: var(--op-buy-bg); border-color: var(--op-buy-line); color: var(--op-buy-ink); }
+
+/* Acento por operación en tarjetas/filas: barra izquierda serena. Se aplica
+   a cualquier contenedor con .op-rent / .op-buy (jobs, top 5, favoritos,
+   resultados y corridas de un solo job). */
+.op-rent { --op-line: var(--op-rent-line); --op-bg: var(--op-rent-bg); }
+.op-buy { --op-line: var(--op-buy-line); --op-bg: var(--op-buy-bg); }
+.job-card.op-rent, .job-card.op-buy,
+.top-card.op-rent, .top-card.op-buy,
+.run-card.op-rent, .run-card.op-buy,
+.run-row.op-rent, .run-row.op-buy { border-left: 3px solid var(--op-line); }
+tr.result-row.op-rent > td:first-child,
+tr.result-row.op-buy > td:first-child { box-shadow: inset 3px 0 0 var(--op-line); }
+
+/* Sello de identidad verificada (MercadoLibre). */
+.badge.verified {
+  background: var(--op-rent-bg);
+  border-color: var(--op-rent-line);
+  color: var(--op-rent-ink);
+}
+
+/* Rank en la vista lista del Top 5. */
+.row-rank { font-weight: 600; color: var(--accent); margin-right: 2px; }
+.detail-badges { display: flex; flex-wrap: wrap; gap: 4px; margin: 4px 0 2px; }
+
+/* Toggle de vista lista/cards: control segmentado compacto. */
+.view-toggle {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: var(--r-pill);
+  overflow: hidden;
+  background: var(--card);
+}
+.vt-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border: none;
+  background: transparent;
+  color: var(--text-faint);
+  cursor: pointer;
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.vt-btn + .vt-btn { border-left: 1px solid var(--border); }
+.vt-btn .ic { width: 17px; height: 17px; }
+.vt-btn:hover { color: var(--text-soft); }
+.vt-btn.on { background: var(--accent-soft); color: var(--accent-strong); }
 
 .chip-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 16px; }
 .chip {

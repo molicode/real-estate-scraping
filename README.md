@@ -28,11 +28,14 @@ La carpeta [`web/`](web/) se despliega a GitHub Pages con [`pages.yml`](.github/
 
 - **Acceso con usuario y clave**: la web está detrás de un gate; recién ahí pedís conectar con GitHub. La conexión se muestra como un semáforo (verde = conectado) desplegable.
 - **Tema claro y oscuro** (arranca en claro; se recuerda tu elección).
-- **Jobs** (pestaña *Jobs*): crear / editar / **pausar** / **detener** / **ejecutar ahora** / eliminar / **clonar**. El formulario está seccionado por color, con ayuda `(i)` en cada campo y combos que también aceptan texto libre. Los nombres se autogeneran como `portal_operacion_tipo_zona`. Al elegir una zona ves su **nivel de seguridad** (🔴 alto / 🟠 medio / 🟢 bajo) según datos oficiales.
+- **Color por operación**: alquiler se muestra en celeste sereno y compra en lavanda, de forma consistente en Jobs, Top 5, Me gustan y Corridas (un chip y un borde suave).
+- **Jobs** (pestaña *Jobs*): crear / editar / **pausar** / **detener** / **ejecutar ahora** / eliminar / **clonar**. El formulario está seccionado por color, con ayuda `(i)` en cada campo y combos que también aceptan texto libre. Los nombres se autogeneran como `portal_operacion_tipo_zona`. Al elegir una zona ves su **nivel de seguridad** (🔴 alto / 🟠 medio / 🟢 bajo) según datos oficiales; para zonas del **GBA norte (Vicente López: Olivos, La Lucila, Florida…)** se muestra una estimación aclarada como tal.
 - **Filtros**: precio, moneda, ambientes, dormitorios, **baños** (por tipo: toilette, en suite, etc.), superficie y keywords para incluir/excluir (con chips frecuentes a mano, como `cochera`).
+- **Vista lista o tarjetas**: en Top 5, Buscar y Me gustan podés alternar con un botón entre **tarjetas** y **lista** (tabla); la preferencia se recuerda por sección.
 - **Top 5** (pestaña *Top 5*): un ranking automático de 5 para alquilar y 5 para comprar, cada uno con un carrusel de todas sus fotos. Los criterios de ranking son configurables.
 - **Me gustan** (pestaña *Me gustan*): tus avisos guardados como favoritos.
 - **Buscar** (pestaña *Buscar*): filtros sobre todo el histórico guardado, miniaturas que rotan las fotos y un visor (lightbox) con zoom y anterior/siguiente.
+- **Detalle enriquecido de MercadoLibre**: para avisos nuevos se baja la **galería completa** de fotos (no solo la portada) y, si el anunciante tiene **identidad verificada**, se muestra el sello. Es acotado por corrida (`detail_enrich_max`) para no gastar créditos de proxy de más.
 - **Riesgo** (pestaña *Riesgo*): señales automáticas por aviso + un **mapa de inseguridad** por comuna y por barrio, coloreado por nivel, con detalle de delitos por tipo y **tendencia 2022–2025 con proyección**. Incluye un editor de zonas y notas propias.
 - **Corridas** (pestaña *Corridas*): historial de ejecuciones con cuánta información trajo cada una, **paginación** ("Cargar más corridas") y **selección múltiple** para borrar varias corridas o borrar sus datos del histórico de una sola vez.
 
@@ -87,7 +90,7 @@ El scraper usa estos niveles para la señal `crime` (el barrio, más específico
 }
 ```
 
-La `url` se copia del portal con sus filtros nativos aplicados; el `site` se detecta solo por el dominio. Filtros disponibles: `currency`, `min_price`, `max_price`, `require_price`, `min_rooms`, `max_rooms`, `min_bedrooms`, `min_bathrooms`, `min_surface_m2`, `keywords_include`, `keywords_exclude`. Los campos que el aviso no publica (ej. sin precio) no se descartan salvo que uses `require_price: true`. `retention_days` controla cuántos días se recuerdan los avisos ya vistos para que `data/listings.json` no crezca indefinidamente.
+La `url` se copia del portal con sus filtros nativos aplicados; el `site` se detecta solo por el dominio. Filtros disponibles: `currency`, `min_price`, `max_price`, `require_price`, `min_rooms`, `max_rooms`, `min_bedrooms`, `min_bathrooms`, `min_surface_m2`, `keywords_include`, `keywords_exclude`. Los campos que el aviso no publica (ej. sin precio) no se descartan salvo que uses `require_price: true`. `retention_days` controla cuántos días se recuerdan los avisos ya vistos para que `data/listings.json` no crezca indefinidamente. `detail_enrich_max` (default 40) limita cuántos avisos **nuevos** por corrida se enriquecen con su galería completa e identidad verificada (cada uno es un fetch extra; en MercadoLibre va por proxy).
 
 ### Programación de cada job
 

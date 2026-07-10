@@ -10,8 +10,9 @@ Paginación por offset: se agrega `_Desde_49`, `_Desde_97`, ... al path
 
 from __future__ import annotations
 
+import json
 import re
-from typing import Iterable
+from typing import Iterable, Optional
 from urllib.parse import urlsplit, urlunsplit
 
 from bs4 import BeautifulSoup
@@ -23,11 +24,72 @@ from .base import BaseScraper
 PAGE_SIZE = 48
 
 
+def _extract_json_array(text: str, key: str) -> Optional[str]:
+    """Devuelve el texto del primer array JSON asociado a `"key":` en `text`,
+    respetando corchetes anidados. Sirve para leer el estado precargado de la
+    página sin depender del HTML renderizado por JS."""
+    i = text.find(f'"{key}"')
+    if i < 0:
+        return None
+    j = text.find("[", i)
+    if j < 0:
+        return None
+    depth = 0
+    for k in range(j, len(text)):
+        c = text[k]
+        if c == "[":
+            depth += 1
+        elif c == "]":
+            depth -= 1
+            if depth == 0:
+                return text[j : k + 1]
+    return None
+
+
 class MercadoLibreScraper(BaseScraper):
     site = "mercadolibre"
     # MercadoLibre redirige a las IPs de datacenter (como los runners de
     # GitHub) a una página de "verificación de cuenta": hace falta proxy.
     proxy_fallback = True
+    # Soporta enriquecer el aviso desde su página de detalle (galería completa
+    # e identidad verificada del anunciante).
+    detail_supported = True
+
+    def parse_detail(self, html: str) -> dict:
+        """Extrae del detalle del aviso la galería completa de fotos y si el
+        anunciante tiene identidad verificada. La galería vive en el estado
+        precargado (`"pictures":[...]`); si no está, cae al HTML de la galería."""
+        images: list[str] = []
+        seen: set[str] = set()
+
+        arr_txt = _extract_json_array(html, "pictures")
+        if arr_txt:
+            try:
+                for pic in json.loads(arr_txt):
+                    if not isinstance(pic, dict):
+                        continue
+                    url = (pic.get("url") or pic.get("src") or "").split("?")[0]
+                    pid = pic.get("id") or url
+                    if url and "mlstatic.com" in url and pid not in seen:
+                        seen.add(pid)
+                        images.append(url)
+            except (ValueError, TypeError):
+                pass
+
+        if not images:
+            soup = BeautifulSoup(html, "lxml")
+            for img in soup.select(
+                "figure.ui-pdp-gallery__figure img, .ui-pdp-gallery img, .ui-pdp-image"
+            ):
+                url = (img.get("data-zoom") or img.get("data-src") or img.get("src") or "").split("?")[0]
+                if url and "mlstatic.com" in url and url not in seen:
+                    seen.add(url)
+                    images.append(url)
+
+        # MercadoLibre rotula "Identidad verificada" junto a los datos del
+        # anunciante cuando validó su identidad.
+        verified = "identidad verificada" in html.lower()
+        return {"images": images[:40], "verified": verified}
 
     def is_blocked(self, resp) -> bool:
         return (
