@@ -1348,17 +1348,35 @@ let barriosGeo = null;
 let crimeLoaded = false;
 let mapMode = "comuna";
 
-async function loadCrimeData() {
-  if (crimeLoaded) return;
+// Los geojson pesan cientos de KB: la Contents API los devuelve en base64 y
+// eso falla/limita con archivos grandes. Se bajan por el media type "raw"
+// (aguanta hasta 100 MB), que además nos da el JSON ya parseado.
+async function fetchRaw(path) {
   try {
-    const c = await fetchFile("data/crime.json");
-    crimeData = c.content ? safeParse(c.content, null) : null;
-    const g = await fetchFile("data/comunas.geojson");
-    comunasGeo = g.content ? safeParse(g.content, null) : null;
-    const b = await fetchFile("data/barrios.geojson");
-    barriosGeo = b.content ? safeParse(b.content, null) : null;
-  } catch { crimeData = null; comunasGeo = null; barriosGeo = null; }
+    const resp = await gh(`/contents/${path}?ref=${BRANCH}`, {
+      headers: { Accept: "application/vnd.github.raw+json" },
+    });
+    if (resp.status === 404) return null;
+    return await resp.json();
+  } catch { return null; }
+}
+
+async function loadCrimeData(force = false) {
+  if (crimeLoaded && !force) return;
+  crimeData = await fetchRaw("data/crime.json");
+  comunasGeo = await fetchRaw("data/comunas.geojson");
+  barriosGeo = await fetchRaw("data/barrios.geojson");
   crimeLoaded = true;
+  updateCrimeUpdatedLabel();
+}
+
+function updateCrimeUpdatedLabel() {
+  const el = $("crime-updated");
+  if (!el) return;
+  const gen = crimeData?.generated_at;
+  if (!gen) { el.textContent = ""; return; }
+  const d = new Date(gen);
+  el.textContent = `Última actualización: ${d.toLocaleDateString("es-AR")} ${d.toLocaleTimeString("es-AR", { hour: "2-digit", minute: "2-digit" })}`;
 }
 
 function comunaFromZone(text) {
@@ -2202,9 +2220,29 @@ async function loadRuns(page = 1, append = false) {
       .sort((a, b) => (b.created_at || "").localeCompare(a.created_at || ""));
     renderRuns();
     $("runs-more").classList.toggle("hidden", batch.length < RUNS_PER_PAGE);
+    if (page === 1) renderRunsSummary();
   } catch (err) {
     setStatus($("runs-status"), "" + err.message, "error");
   }
+}
+
+// Resumen arriba de Corridas: avisos de hoy, de días anteriores y total.
+async function renderRunsSummary() {
+  const el = $("runs-summary");
+  if (!el) return;
+  const listings = (await fetchRaw("data/listings.json")) || {};
+  const ids = Object.keys(listings);
+  const total = ids.length;
+  const today = new Date().toISOString().slice(0, 10);
+  const todayCount = ids.filter((k) => (listings[k].first_seen || "").slice(0, 10) === today).length;
+  const prev = total - todayCount;
+  const activeJobs = (jobsDoc?.searches || []).filter((s) => s.enabled !== false).length;
+  const n = (v) => v.toLocaleString("es-AR");
+  el.innerHTML = `
+    <div class="rs-tile"><span class="rs-num tabnum">${n(todayCount)}</span><span class="rs-lbl">${icon("sparkles", 13)} encontrados hoy${activeJobs ? ` · ${activeJobs} jobs activos` : ""}</span></div>
+    <div class="rs-tile"><span class="rs-num tabnum">${n(prev)}</span><span class="rs-lbl">${icon("clock", 13)} de días anteriores</span></div>
+    <div class="rs-tile rs-total"><span class="rs-num tabnum">${n(total)}</span><span class="rs-lbl">${icon("list", 13)} avisos guardados en total</span></div>`;
+  hydrateIcons(el);
 }
 
 $("reload-runs").addEventListener("click", () => { selectedRuns.clear(); loadRuns(1, false); });
@@ -2549,6 +2587,68 @@ if ($("map-mode")) {
       b.classList.toggle("active", b === btn));
     renderCrimeMap();
   });
+}
+
+/* Botón "Actualizar datos": dispara el workflow de delitos, sigue su progreso
+ * y recarga el mapa cuando termina. Los datos quedan guardados en el repo
+ * (data/crime.json + geojson), así el mapa está siempre disponible. */
+if ($("crime-refresh")) {
+  $("crime-refresh").addEventListener("click", async () => {
+    if (!confirm("¿Actualizar la base de delitos? Descarga los datos oficiales del GCBA y puede tardar unos minutos.")) return;
+    $("crime-refresh").disabled = true;
+    setStatus($("crime-status"), "Disparando la actualización...");
+    try {
+      const dispatchedAt = new Date().toISOString();
+      const resp = await gh(`/actions/workflows/crime-data.yml/dispatches`, {
+        method: "POST",
+        body: JSON.stringify({ ref: BRANCH }),
+      });
+      if (resp.status !== 204) throw new Error(`status ${resp.status}`);
+      setStatus($("crime-status"), "Actualizando la base (tarda unos minutos)...", "ok");
+      watchCrimeUpdate(dispatchedAt);
+    } catch (err) {
+      setStatus($("crime-status"), "" + err.message, "error");
+      $("crime-refresh").disabled = false;
+    }
+  });
+}
+
+function watchCrimeUpdate(dispatchedAt) {
+  renderFlow($("crime-flow"), "Actualizando base de delitos", 0);
+  let runId = null, ticks = 0;
+  const timer = setInterval(async () => {
+    if (++ticks > 120) { // ~10 min de vigilancia
+      clearInterval(timer);
+      renderFlow($("crime-flow"), "Actualizando base de delitos", FLOW_STEPS.length - 1, true, "Sigue en GitHub; recargá en un rato.");
+      $("crime-refresh").disabled = false;
+      return;
+    }
+    try {
+      if (!runId) {
+        const r = await gh(`/actions/workflows/crime-data.yml/runs?event=workflow_dispatch&per_page=5`);
+        const runs = ((await r.json()).workflow_runs || [])
+          .filter((x) => x.created_at >= dispatchedAt.slice(0, 19))
+          .sort((a, b) => (a.created_at || "").localeCompare(b.created_at || ""));
+        if (runs.length) { runId = runs[0].id; renderFlow($("crime-flow"), "Actualizando base de delitos", 2); }
+        return;
+      }
+      const r = await gh(`/actions/runs/${runId}`);
+      const run = await r.json();
+      if (run.status !== "completed") { renderFlow($("crime-flow"), "Actualizando base de delitos", 3); return; }
+      clearInterval(timer);
+      const ok = run.conclusion === "success";
+      if (ok) {
+        await loadCrimeData(true); // recarga forzada desde el repo actualizado
+        renderCrimeMap();
+        renderFlow($("crime-flow"), "Actualizando base de delitos", FLOW_STEPS.length - 1, true, `${icon("check-circle", 14)} Base actualizada`);
+        setStatus($("crime-status"), "Base de delitos actualizada", "ok");
+      } else {
+        renderFlow($("crime-flow"), "Actualizando base de delitos", FLOW_STEPS.length - 1, true, "La actualización falló — mirá la pestaña Corridas / Actions.");
+        setStatus($("crime-status"), "La actualización falló", "error");
+      }
+      $("crime-refresh").disabled = false;
+    } catch { /* reintenta */ }
+  }, 5000);
 }
 
 /* ---------- Init ---------- */
