@@ -32,6 +32,16 @@ jobs:
         with:
           enablement: true
 
+      # Cache-busting: cada deploy referencia app.js/styles.css con la versión
+      # del commit, así el navegador SIEMPRE baja la última (nunca queda pegado
+      # a un app.js viejo cacheado). Solo se toca la copia que se despliega.
+      - name: Versionar assets (cache-busting)
+        run: |
+          ver="${GITHUB_SHA::8}"
+          sed -i "s|src=\"app.js\"|src=\"app.js?v=$ver\"|; s|href=\"styles.css\"|href=\"styles.css?v=$ver\"|" web/index.html
+          echo "Assets versionados con v=$ver"
+          grep -E "app.js\?v=|styles.css\?v=" web/index.html || true
+
       - name: Subir sitio
         uses: actions/upload-pages-artifact@v3
         with:
