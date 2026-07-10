@@ -81,13 +81,16 @@ def load_crime(path: Path | None = None) -> dict[str, Any]:
     try:
         with (path).open(encoding="utf-8") as fh:
             data = json.load(fh)
-        return data.get("comunas", {}) if isinstance(data, dict) else {}
+        if not isinstance(data, dict):
+            return {}
+        return {"comunas": data.get("comunas", {}), "barrios": data.get("barrios", {})}
     except (OSError, json.JSONDecodeError):
         return {}
 
 
 def _location_flags(item: dict[str, Any], crime: dict[str, Any]) -> list[dict[str, str]]:
-    """Señales de ubicación: villa (heurística) y nivel de delito oficial."""
+    """Señales de ubicación: villa (heurística) y nivel de delito oficial
+    (por barrio si se puede, si no por comuna)."""
     text = f"{item.get('address', '')} {item.get('search_name', '')} {item.get('url', '')}"
     flags: list[dict[str, str]] = []
 
@@ -98,17 +101,29 @@ def _location_flags(item: dict[str, Any], crime: dict[str, Any]) -> list[dict[st
             "label": f"Zona de villa/asentamiento ({villa}) — inseguridad alta",
         })
 
+    comunas = (crime or {}).get("comunas", {})
+    barrios = (crime or {}).get("barrios", {})
+
+    barrio = geo.find_barrio(text)
+    binfo = barrios.get(barrio) if barrio else None
+    if binfo and binfo.get("level") in _CRIME_LEVEL_FLAG:
+        lvl, txt = _CRIME_LEVEL_FLAG[binfo["level"]]
+        flags.append({
+            "type": "crime", "level": lvl,
+            "label": f"{barrio.title()}: {txt} según datos oficiales",
+        })
+        return flags
+
     comuna = geo.find_comuna(text)
-    if comuna is not None and crime:
-        info = crime.get(str(comuna))
-        if info and info.get("level") in _CRIME_LEVEL_FLAG:
-            lvl, txt = _CRIME_LEVEL_FLAG[info["level"]]
-            per = info.get("per100k")
-            extra = f" ({round(per):,} delitos/100k hab)".replace(",", ".") if per else ""
-            flags.append({
-                "type": "crime", "level": lvl,
-                "label": f"Comuna {comuna}: {txt} según datos oficiales{extra}",
-            })
+    cinfo = comunas.get(str(comuna)) if comuna is not None else None
+    if cinfo and cinfo.get("level") in _CRIME_LEVEL_FLAG:
+        lvl, txt = _CRIME_LEVEL_FLAG[cinfo["level"]]
+        per = cinfo.get("per100k")
+        extra = f" ({round(per):,} delitos/100k hab)".replace(",", ".") if per else ""
+        flags.append({
+            "type": "crime", "level": lvl,
+            "label": f"Comuna {comuna}: {txt} según datos oficiales{extra}",
+        })
     return flags
 
 

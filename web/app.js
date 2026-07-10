@@ -664,12 +664,12 @@ function formAutoName() {
   let ptype, zone;
   if (isMenuMode()) { ptype = $("f-ptype").value; zone = $("f-zone").value.trim(); }
   else { ptype = ptypeFromUrl($("f-url").value); zone = jobZone({ url: $("f-url").value }); }
-  return [site, op, ptype || "propiedad", slugPart(zone) || "todos"].join("___");
+  return [site, op, ptype || "propiedad", slugPart(zone) || "todos"].join("_");
 }
 function jobAutoName(job) {
   const ptype = job.ptype || ptypeFromUrl(job.url) || "propiedad";
   const zone = job.zone || jobZone(job) || "todos";
-  return [job.site, job.operation || "alquiler", ptype, slugPart(zone) || "todos"].join("___");
+  return [job.site, job.operation || "alquiler", ptype, slugPart(zone) || "todos"].join("_");
 }
 function updateAutoName() {
   if (autoNameOn) $("f-name").value = formAutoName();
