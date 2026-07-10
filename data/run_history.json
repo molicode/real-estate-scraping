@@ -910,5 +910,16 @@
    "mercadolibre_alquiler_casa_Saavedra (mercadolibre): 0 avisos — posible bloqueo o cambio de HTML",
    "mercadolibre_venta_casa_Saavedra (mercadolibre): 0 avisos — posible bloqueo o cambio de HTML"
   ]
+ },
+ {
+  "finished_at": "2026-07-10T16:39:40Z",
+  "only_job": "zonaprop_alquiler_ph_caballito",
+  "jobs": {
+   "zonaprop_alquiler_ph_caballito": 7
+  },
+  "found": 7,
+  "new": 0,
+  "total_stored": 123,
+  "errors": []
  }
 ]
