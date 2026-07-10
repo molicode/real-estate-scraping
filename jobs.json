@@ -34,7 +34,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "caballito"
+      "zone": "caballito",
+      "offset_hours": 0
     },
     {
       "name": "mercadolibre_alquiler_ph_caballito",
@@ -66,7 +67,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "caballito"
+      "zone": "caballito",
+      "offset_hours": 1
     },
     {
       "name": "remax_alquiler_ph_caballito",
@@ -98,7 +100,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "caballito"
+      "zone": "caballito",
+      "offset_hours": 2
     },
     {
       "name": "zonaprop_alquiler_ph_caballito",
@@ -130,7 +133,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "caballito"
+      "zone": "caballito",
+      "offset_hours": 3
     },
     {
       "name": "zonaprop_alquiler_ph_villa-crespo",
@@ -162,7 +166,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "villa-crespo"
+      "zone": "villa-crespo",
+      "offset_hours": 4
     },
     {
       "name": "argenprop_alquiler_ph_villa-crespo",
@@ -194,7 +199,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "villa-crespo"
+      "zone": "villa-crespo",
+      "offset_hours": 5
     },
     {
       "name": "remax_alquiler_ph_villa-crespo",
@@ -226,7 +232,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "villa-crespo"
+      "zone": "villa-crespo",
+      "offset_hours": 6
     },
     {
       "name": "mercadolibre_alquiler_ph_villa-crespo",
@@ -258,7 +265,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "villa-crespo"
+      "zone": "villa-crespo",
+      "offset_hours": 7
     },
     {
       "name": "argenprop_alquiler_ph_nunez",
@@ -290,7 +298,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "nunez"
+      "zone": "nunez",
+      "offset_hours": 8
     },
     {
       "name": "mercadolibre_alquiler_ph_nunez",
@@ -322,7 +331,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "nunez"
+      "zone": "nunez",
+      "offset_hours": 9
     },
     {
       "name": "remax_alquiler_ph_nunez",
@@ -354,7 +364,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "nunez"
+      "zone": "nunez",
+      "offset_hours": 10
     },
     {
       "name": "zonaprop_alquiler_ph_nunez",
@@ -386,7 +397,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "nunez"
+      "zone": "nunez",
+      "offset_hours": 11
     },
     {
       "name": "argenprop_alquiler_ph_almagro",
@@ -418,7 +430,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "almagro"
+      "zone": "almagro",
+      "offset_hours": 12
     },
     {
       "name": "mercadolibre_alquiler_ph_almagro",
@@ -450,7 +463,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "almagro"
+      "zone": "almagro",
+      "offset_hours": 13
     },
     {
       "name": "remax_alquiler_ph_almagro",
@@ -482,7 +496,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "almagro"
+      "zone": "almagro",
+      "offset_hours": 14
     },
     {
       "name": "zonaprop_alquiler_ph_almagro",
@@ -514,7 +529,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "almagro"
+      "zone": "almagro",
+      "offset_hours": 15
     },
     {
       "name": "argenprop_alquiler_ph_saavedra",
@@ -546,7 +562,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "Saavedra"
+      "zone": "Saavedra",
+      "offset_hours": 16
     },
     {
       "name": "mercadolibre_alquiler_ph_saavedra",
@@ -578,7 +595,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "Saavedra"
+      "zone": "Saavedra",
+      "offset_hours": 17
     },
     {
       "name": "remax_alquiler_ph_saavedra",
@@ -610,7 +628,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "Saavedra"
+      "zone": "Saavedra",
+      "offset_hours": 18
     },
     {
       "name": "zonaprop_alquiler_ph_saavedra",
@@ -642,7 +661,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "Saavedra"
+      "zone": "Saavedra",
+      "offset_hours": 19
     },
     {
       "name": "argenprop_venta_ph_caballito",
@@ -674,7 +694,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "caballito"
+      "zone": "caballito",
+      "offset_hours": 20
     },
     {
       "name": "argenprop_alquiler_casa_caballito",
@@ -706,7 +727,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "caballito"
+      "zone": "caballito",
+      "offset_hours": 21
     },
     {
       "name": "argenprop_venta_casa_caballito",
@@ -738,7 +760,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "caballito"
+      "zone": "caballito",
+      "offset_hours": 22
     },
     {
       "name": "mercadolibre_venta_ph_caballito",
@@ -770,7 +793,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "caballito"
+      "zone": "caballito",
+      "offset_hours": 23
     },
     {
       "name": "mercadolibre_alquiler_casa_caballito",
@@ -802,7 +826,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "caballito"
+      "zone": "caballito",
+      "offset_hours": 0
     },
     {
       "name": "mercadolibre_venta_casa_caballito",
@@ -834,7 +859,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "caballito"
+      "zone": "caballito",
+      "offset_hours": 1
     },
     {
       "name": "remax_venta_ph_caballito",
@@ -866,7 +892,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "caballito"
+      "zone": "caballito",
+      "offset_hours": 2
     },
     {
       "name": "remax_alquiler_casa_caballito",
@@ -898,7 +925,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "caballito"
+      "zone": "caballito",
+      "offset_hours": 3
     },
     {
       "name": "remax_venta_casa_caballito",
@@ -930,7 +958,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "caballito"
+      "zone": "caballito",
+      "offset_hours": 4
     },
     {
       "name": "zonaprop_venta_ph_caballito",
@@ -962,7 +991,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "caballito"
+      "zone": "caballito",
+      "offset_hours": 5
     },
     {
       "name": "zonaprop_alquiler_casa_caballito",
@@ -994,7 +1024,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "caballito"
+      "zone": "caballito",
+      "offset_hours": 6
     },
     {
       "name": "zonaprop_venta_casa_caballito",
@@ -1026,7 +1057,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "caballito"
+      "zone": "caballito",
+      "offset_hours": 7
     },
     {
       "name": "zonaprop_venta_ph_villa-crespo",
@@ -1058,7 +1090,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "villa-crespo"
+      "zone": "villa-crespo",
+      "offset_hours": 8
     },
     {
       "name": "zonaprop_alquiler_casa_villa-crespo",
@@ -1090,7 +1123,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "villa-crespo"
+      "zone": "villa-crespo",
+      "offset_hours": 9
     },
     {
       "name": "zonaprop_venta_casa_villa-crespo",
@@ -1122,7 +1156,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "villa-crespo"
+      "zone": "villa-crespo",
+      "offset_hours": 10
     },
     {
       "name": "argenprop_venta_ph_villa-crespo",
@@ -1154,7 +1189,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "villa-crespo"
+      "zone": "villa-crespo",
+      "offset_hours": 11
     },
     {
       "name": "argenprop_alquiler_casa_villa-crespo",
@@ -1186,7 +1222,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "villa-crespo"
+      "zone": "villa-crespo",
+      "offset_hours": 12
     },
     {
       "name": "argenprop_venta_casa_villa-crespo",
@@ -1218,7 +1255,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "villa-crespo"
+      "zone": "villa-crespo",
+      "offset_hours": 13
     },
     {
       "name": "remax_venta_ph_villa-crespo",
@@ -1250,7 +1288,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "villa-crespo"
+      "zone": "villa-crespo",
+      "offset_hours": 14
     },
     {
       "name": "remax_alquiler_casa_villa-crespo",
@@ -1282,7 +1321,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "villa-crespo"
+      "zone": "villa-crespo",
+      "offset_hours": 15
     },
     {
       "name": "remax_venta_casa_villa-crespo",
@@ -1314,7 +1354,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "villa-crespo"
+      "zone": "villa-crespo",
+      "offset_hours": 16
     },
     {
       "name": "mercadolibre_venta_ph_villa-crespo",
@@ -1346,7 +1387,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "villa-crespo"
+      "zone": "villa-crespo",
+      "offset_hours": 17
     },
     {
       "name": "mercadolibre_alquiler_casa_villa-crespo",
@@ -1378,7 +1420,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "villa-crespo"
+      "zone": "villa-crespo",
+      "offset_hours": 18
     },
     {
       "name": "mercadolibre_venta_casa_villa-crespo",
@@ -1410,7 +1453,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "villa-crespo"
+      "zone": "villa-crespo",
+      "offset_hours": 19
     },
     {
       "name": "argenprop_venta_ph_nunez",
@@ -1442,7 +1486,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "nunez"
+      "zone": "nunez",
+      "offset_hours": 20
     },
     {
       "name": "argenprop_alquiler_casa_nunez",
@@ -1474,7 +1519,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "nunez"
+      "zone": "nunez",
+      "offset_hours": 21
     },
     {
       "name": "argenprop_venta_casa_nunez",
@@ -1506,7 +1552,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "nunez"
+      "zone": "nunez",
+      "offset_hours": 22
     },
     {
       "name": "mercadolibre_venta_ph_nunez",
@@ -1538,7 +1585,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "nunez"
+      "zone": "nunez",
+      "offset_hours": 23
     },
     {
       "name": "mercadolibre_alquiler_casa_nunez",
@@ -1570,7 +1618,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "nunez"
+      "zone": "nunez",
+      "offset_hours": 0
     },
     {
       "name": "mercadolibre_venta_casa_nunez",
@@ -1602,7 +1651,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "nunez"
+      "zone": "nunez",
+      "offset_hours": 1
     },
     {
       "name": "remax_venta_ph_nunez",
@@ -1634,7 +1684,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "nunez"
+      "zone": "nunez",
+      "offset_hours": 2
     },
     {
       "name": "remax_alquiler_casa_nunez",
@@ -1666,7 +1717,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "nunez"
+      "zone": "nunez",
+      "offset_hours": 3
     },
     {
       "name": "remax_venta_casa_nunez",
@@ -1698,7 +1750,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "nunez"
+      "zone": "nunez",
+      "offset_hours": 4
     },
     {
       "name": "zonaprop_venta_ph_nunez",
@@ -1730,7 +1783,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "nunez"
+      "zone": "nunez",
+      "offset_hours": 5
     },
     {
       "name": "zonaprop_alquiler_casa_nunez",
@@ -1762,7 +1816,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "nunez"
+      "zone": "nunez",
+      "offset_hours": 6
     },
     {
       "name": "zonaprop_venta_casa_nunez",
@@ -1794,7 +1849,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "nunez"
+      "zone": "nunez",
+      "offset_hours": 7
     },
     {
       "name": "argenprop_venta_ph_almagro",
@@ -1826,7 +1882,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "almagro"
+      "zone": "almagro",
+      "offset_hours": 8
     },
     {
       "name": "argenprop_alquiler_casa_almagro",
@@ -1858,7 +1915,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "almagro"
+      "zone": "almagro",
+      "offset_hours": 9
     },
     {
       "name": "argenprop_venta_casa_almagro",
@@ -1890,7 +1948,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "almagro"
+      "zone": "almagro",
+      "offset_hours": 10
     },
     {
       "name": "mercadolibre_venta_ph_almagro",
@@ -1922,7 +1981,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "almagro"
+      "zone": "almagro",
+      "offset_hours": 11
     },
     {
       "name": "mercadolibre_alquiler_casa_almagro",
@@ -1954,7 +2014,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "almagro"
+      "zone": "almagro",
+      "offset_hours": 12
     },
     {
       "name": "mercadolibre_venta_casa_almagro",
@@ -1986,7 +2047,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "almagro"
+      "zone": "almagro",
+      "offset_hours": 13
     },
     {
       "name": "remax_venta_ph_almagro",
@@ -2018,7 +2080,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "almagro"
+      "zone": "almagro",
+      "offset_hours": 14
     },
     {
       "name": "remax_alquiler_casa_almagro",
@@ -2050,7 +2113,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "almagro"
+      "zone": "almagro",
+      "offset_hours": 15
     },
     {
       "name": "remax_venta_casa_almagro",
@@ -2082,7 +2146,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "almagro"
+      "zone": "almagro",
+      "offset_hours": 16
     },
     {
       "name": "zonaprop_venta_ph_almagro",
@@ -2114,7 +2179,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "almagro"
+      "zone": "almagro",
+      "offset_hours": 17
     },
     {
       "name": "zonaprop_alquiler_casa_almagro",
@@ -2146,7 +2212,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "almagro"
+      "zone": "almagro",
+      "offset_hours": 18
     },
     {
       "name": "zonaprop_venta_casa_almagro",
@@ -2178,7 +2245,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "almagro"
+      "zone": "almagro",
+      "offset_hours": 19
     },
     {
       "name": "argenprop_venta_ph_Saavedra",
@@ -2210,7 +2278,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "Saavedra"
+      "zone": "Saavedra",
+      "offset_hours": 20
     },
     {
       "name": "argenprop_alquiler_casa_Saavedra",
@@ -2242,7 +2311,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "Saavedra"
+      "zone": "Saavedra",
+      "offset_hours": 21
     },
     {
       "name": "argenprop_venta_casa_Saavedra",
@@ -2274,7 +2344,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "Saavedra"
+      "zone": "Saavedra",
+      "offset_hours": 22
     },
     {
       "name": "mercadolibre_venta_ph_Saavedra",
@@ -2306,7 +2377,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "Saavedra"
+      "zone": "Saavedra",
+      "offset_hours": 23
     },
     {
       "name": "mercadolibre_alquiler_casa_Saavedra",
@@ -2338,7 +2410,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "Saavedra"
+      "zone": "Saavedra",
+      "offset_hours": 0
     },
     {
       "name": "mercadolibre_venta_casa_Saavedra",
@@ -2370,7 +2443,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "Saavedra"
+      "zone": "Saavedra",
+      "offset_hours": 1
     },
     {
       "name": "remax_venta_ph_Saavedra",
@@ -2402,7 +2476,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "Saavedra"
+      "zone": "Saavedra",
+      "offset_hours": 2
     },
     {
       "name": "remax_alquiler_casa_Saavedra",
@@ -2434,7 +2509,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "Saavedra"
+      "zone": "Saavedra",
+      "offset_hours": 3
     },
     {
       "name": "remax_venta_casa_Saavedra",
@@ -2466,7 +2542,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "Saavedra"
+      "zone": "Saavedra",
+      "offset_hours": 4
     },
     {
       "name": "zonaprop_venta_ph_Saavedra",
@@ -2498,7 +2575,8 @@
       },
       "mode": "menu",
       "ptype": "ph",
-      "zone": "Saavedra"
+      "zone": "Saavedra",
+      "offset_hours": 5
     },
     {
       "name": "zonaprop_alquiler_casa_Saavedra",
@@ -2530,7 +2608,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "Saavedra"
+      "zone": "Saavedra",
+      "offset_hours": 6
     },
     {
       "name": "zonaprop_venta_casa_Saavedra",
@@ -2562,7 +2641,8 @@
       },
       "mode": "menu",
       "ptype": "casa",
-      "zone": "Saavedra"
+      "zone": "Saavedra",
+      "offset_hours": 7
     }
   ]
 }
