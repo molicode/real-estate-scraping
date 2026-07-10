@@ -295,7 +295,7 @@
     "bathrooms": 2,
     "bedrooms": null,
     "expenses": null,
-    "first_seen": "2026-07-10T04:03:21Z",
+    "first_seen": "2026-07-10T04:17:03Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -486,7 +486,7 @@
     "bathrooms": 3,
     "bedrooms": null,
     "expenses": null,
-    "first_seen": "2026-07-10T04:03:21Z",
+    "first_seen": "2026-07-10T04:17:03Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -584,7 +584,7 @@
     "bathrooms": 2,
     "bedrooms": null,
     "expenses": null,
-    "first_seen": "2026-07-10T04:07:41Z",
+    "first_seen": "2026-07-10T04:21:47Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -651,7 +651,7 @@
     "bathrooms": 10,
     "bedrooms": null,
     "expenses": null,
-    "first_seen": "2026-07-10T04:07:41Z",
+    "first_seen": "2026-07-10T04:21:47Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -682,7 +682,7 @@
     "bathrooms": null,
     "bedrooms": null,
     "expenses": null,
-    "first_seen": "2026-07-10T04:09:29Z",
+    "first_seen": "2026-07-10T04:23:36Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -713,7 +713,7 @@
     "bathrooms": 2,
     "bedrooms": null,
     "expenses": null,
-    "first_seen": "2026-07-10T04:09:29Z",
+    "first_seen": "2026-07-10T04:23:36Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -744,7 +744,7 @@
     "bathrooms": 5,
     "bedrooms": null,
     "expenses": null,
-    "first_seen": "2026-07-10T04:09:29Z",
+    "first_seen": "2026-07-10T04:23:36Z",
     "flags": [
       {
         "label": "Precio 96% por debajo del promedio del tipo — verificá que no sea un anzuelo",
@@ -811,7 +811,7 @@
     "bathrooms": 2,
     "bedrooms": null,
     "expenses": null,
-    "first_seen": "2026-07-10T04:09:29Z",
+    "first_seen": "2026-07-10T04:23:36Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -1060,7 +1060,7 @@
     "bathrooms": 3,
     "bedrooms": 7,
     "expenses": null,
-    "first_seen": "2026-07-10T04:05:11Z",
+    "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -1091,7 +1091,7 @@
     "bathrooms": null,
     "bedrooms": null,
     "expenses": null,
-    "first_seen": "2026-07-10T04:05:33Z",
+    "first_seen": "2026-07-10T04:19:25Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -1122,7 +1122,7 @@
     "bathrooms": 3,
     "bedrooms": 3,
     "expenses": null,
-    "first_seen": "2026-07-10T04:06:02Z",
+    "first_seen": "2026-07-10T04:20:04Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -1146,14 +1146,14 @@
     "site": "zonaprop",
     "surface_m2": 392.0,
     "title": "$ 4.500.000",
-    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-excelente-casa-coch-y-terraz-216-m-cubiertos-darwin-57869284.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=5"
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-excelente-casa-coch-y-terraz-216-m-cubiertos-darwin-57869284.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=6"
   },
   "zonaprop:57938823": {
     "address": "Núñez, Capital Federal",
     "bathrooms": 10,
     "bedrooms": 4,
     "expenses": null,
-    "first_seen": "2026-07-10T04:09:07Z",
+    "first_seen": "2026-07-10T04:23:13Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -1177,14 +1177,14 @@
     "site": "zonaprop",
     "surface_m2": 580.0,
     "title": "$ 5.400.000",
-    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-nunez-57938823.html?n_src=Listado&n_pills=Permite+mascotas&n_pg=1&n_pos=10"
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-nunez-57938823.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=10"
   },
   "zonaprop:58012524": {
     "address": "Almagro, Capital Federal",
     "bathrooms": 6,
     "bedrooms": 11,
     "expenses": null,
-    "first_seen": "2026-07-10T04:05:11Z",
+    "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -1208,14 +1208,14 @@
     "site": "zonaprop",
     "surface_m2": 700.0,
     "title": "$ 5.000.000",
-    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-comercial-de-casa-12-ambientes-en-almagro-58012524.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=1"
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-comercial-de-casa-12-ambientes-en-almagro-58012524.html?n_src=Listado&n_pills=Parrilla&n_pg=1&n_pos=2"
   },
   "zonaprop:58208157": {
     "address": "Saavedra, Capital Federal",
     "bathrooms": 4,
     "bedrooms": 9,
     "expenses": null,
-    "first_seen": "2026-07-10T04:13:22Z",
+    "first_seen": "2026-07-10T04:27:36Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -1239,7 +1239,7 @@
     "site": "zonaprop",
     "surface_m2": 260.0,
     "title": "$ 2.400.000",
-    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-en-alquiler-10-ambientes-saavedra-58208157.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=4"
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-en-alquiler-10-ambientes-saavedra-58208157.html?n_src=Listado&n_pills=Permite+mascotas&n_pg=1&n_pos=4"
   },
   "zonaprop:58419223": {
     "address": "La Paternal, Capital Federal",
@@ -1277,7 +1277,7 @@
     "bathrooms": 2,
     "bedrooms": 7,
     "expenses": null,
-    "first_seen": "2026-07-10T04:05:11Z",
+    "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -1308,7 +1308,7 @@
     "bathrooms": null,
     "bedrooms": null,
     "expenses": null,
-    "first_seen": "2026-07-10T04:05:11Z",
+    "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -1332,7 +1332,7 @@
     "site": "zonaprop",
     "surface_m2": 222.0,
     "title": "$ 3.000.000",
-    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-comercial-casa-en-caballito-excelente-58639012.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=16"
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-comercial-casa-en-caballito-excelente-58639012.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=17"
   },
   "zonaprop:58805290": {
     "address": "Palermo, Capital Federal",
@@ -1370,7 +1370,7 @@
     "bathrooms": 2,
     "bedrooms": 4,
     "expenses": null,
-    "first_seen": "2026-07-10T04:13:22Z",
+    "first_seen": "2026-07-10T04:27:36Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -1389,7 +1389,7 @@
     "site": "zonaprop",
     "surface_m2": 469.0,
     "title": "$ 3.500.000",
-    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-comercial-casa-de-469-m-sup2--refaccionada-58817913.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=19"
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-comercial-casa-de-469-m-sup2--refaccionada-58817913.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=16"
   },
   "zonaprop:58837784": {
     "address": "Villa Crespo, Capital Federal",
@@ -1427,7 +1427,7 @@
     "bathrooms": null,
     "bedrooms": null,
     "expenses": null,
-    "first_seen": "2026-07-10T04:11:14Z",
+    "first_seen": "2026-07-10T04:25:32Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -1458,7 +1458,7 @@
     "bathrooms": 4,
     "bedrooms": 4,
     "expenses": null,
-    "first_seen": "2026-07-10T04:09:07Z",
+    "first_seen": "2026-07-10T04:23:13Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -1482,14 +1482,14 @@
     "site": "zonaprop",
     "surface_m2": 470.0,
     "title": "$ 6.000.000",
-    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-en-alquiler-en-belgrano-r-estilo-antiguo-2-58958720.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=1"
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-en-alquiler-en-belgrano-r-estilo-antiguo-2-58958720.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=2"
   },
   "zonaprop:58969728": {
     "address": "Boedo, Capital Federal",
     "bathrooms": 6,
     "bedrooms": 9,
     "expenses": null,
-    "first_seen": "2026-07-10T04:05:11Z",
+    "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -1513,14 +1513,14 @@
     "site": "zonaprop",
     "surface_m2": 500.0,
     "title": "$ 4.300.000",
-    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-en-alquiler-uso-comercial-zona-boedo-58969728.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=7"
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-en-alquiler-uso-comercial-zona-boedo-58969728.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=5"
   },
   "zonaprop:58981496": {
     "address": "Saavedra, Capital Federal",
     "bathrooms": 2,
     "bedrooms": 5,
     "expenses": null,
-    "first_seen": "2026-07-10T04:13:22Z",
+    "first_seen": "2026-07-10T04:27:36Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -1544,14 +1544,14 @@
     "site": "zonaprop",
     "surface_m2": 303.0,
     "title": "$ 2.700.000",
-    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-hermosa-casa-5-ambientes-gran-patio-terraza-exc.-58981496.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=11"
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-hermosa-casa-5-ambientes-gran-patio-terraza-exc.-58981496.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=10"
   },
   "zonaprop:58993205": {
     "address": "Almagro, Capital Federal",
     "bathrooms": 2,
     "bedrooms": null,
     "expenses": null,
-    "first_seen": "2026-07-10T04:05:11Z",
+    "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -1582,7 +1582,7 @@
     "bathrooms": 2,
     "bedrooms": 3,
     "expenses": null,
-    "first_seen": "2026-07-10T04:11:14Z",
+    "first_seen": "2026-07-10T04:25:32Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -1606,7 +1606,7 @@
     "site": "zonaprop",
     "surface_m2": 110.0,
     "title": "$ 1.200.000",
-    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-en-boedo-58993861.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=22"
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-en-boedo-58993861.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=23"
   },
   "zonaprop:59093574": {
     "address": "Villa Crespo, Capital Federal",
@@ -1675,7 +1675,7 @@
     "bathrooms": 14,
     "bedrooms": 14,
     "expenses": null,
-    "first_seen": "2026-07-10T04:06:02Z",
+    "first_seen": "2026-07-10T04:20:04Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -1699,14 +1699,14 @@
     "site": "zonaprop",
     "surface_m2": 740.0,
     "title": "$ 9.000.000",
-    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-edificio-en-block-750-m-sup2-.-palermo-59147521.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=17"
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-edificio-en-block-750-m-sup2-.-palermo-59147521.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=14"
   },
   "zonaprop:59149695": {
     "address": "La Paternal, Capital Federal",
     "bathrooms": 2,
     "bedrooms": 4,
     "expenses": null,
-    "first_seen": "2026-07-10T04:06:02Z",
+    "first_seen": "2026-07-10T04:20:04Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -1730,14 +1730,14 @@
     "site": "zonaprop",
     "surface_m2": 233.0,
     "title": "$ 2.250.000",
-    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-en-alquiler-4-dorm.-3-banos-paternal-59149695.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=18"
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-en-alquiler-4-dorm.-3-banos-paternal-59149695.html?n_src=Listado&n_pills=Permite+mascotas&n_pg=1&n_pos=18"
   },
   "zonaprop:59155437": {
     "address": "Caballito, Capital Federal",
     "bathrooms": 2,
     "bedrooms": 3,
     "expenses": null,
-    "first_seen": "2026-07-10T04:05:11Z",
+    "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -1830,7 +1830,7 @@
     "bathrooms": 2,
     "bedrooms": null,
     "expenses": null,
-    "first_seen": "2026-07-10T04:05:11Z",
+    "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -1954,7 +1954,7 @@
     "bathrooms": 4,
     "bedrooms": 3,
     "expenses": null,
-    "first_seen": "2026-07-10T04:05:33Z",
+    "first_seen": "2026-07-10T04:19:25Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -1978,14 +1978,14 @@
     "site": "zonaprop",
     "surface_m2": 388.0,
     "title": "$ 359.000",
-    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/veclcapa-amplio-duplex-de-388-m-en-excelente-ubicacion-a-m-de-59356414.html?n_src=Listado&n_pills=Quincho&n_pg=7&n_pos=7"
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/veclcapa-amplio-duplex-de-388-m-en-excelente-ubicacion-a-m-de-59356414.html?n_src=Listado&n_pills=Dormitorio+en+suite&n_pg=7&n_pos=7"
   },
   "zonaprop:59360125": {
     "address": "Saavedra, Capital Federal",
     "bathrooms": 2,
     "bedrooms": null,
     "expenses": null,
-    "first_seen": "2026-07-10T04:13:22Z",
+    "first_seen": "2026-07-10T04:27:36Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -2009,7 +2009,7 @@
     "site": "zonaprop",
     "surface_m2": 201.0,
     "title": "$ 4.000.000",
-    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-casa-uso-comercial-59360125.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=8"
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-casa-uso-comercial-59360125.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=11"
   },
   "zonaprop:59367939": {
     "address": "Caballito, Capital Federal",
@@ -2114,7 +2114,7 @@
     "bathrooms": 3,
     "bedrooms": 3,
     "expenses": null,
-    "first_seen": "2026-07-10T04:13:22Z",
+    "first_seen": "2026-07-10T04:27:36Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -2138,14 +2138,14 @@
     "site": "zonaprop",
     "surface_m2": 220.0,
     "title": "$ 2.700.000",
-    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-casa-4-ambientes-playroom-terraza-y-cochera-59426317.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=16"
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-casa-4-ambientes-playroom-terraza-y-cochera-59426317.html?n_src=Listado&n_pills=Aire+acondicionado&n_pg=1&n_pos=17"
   },
   "zonaprop:59450132": {
     "address": "Flores, Capital Federal",
     "bathrooms": 2,
     "bedrooms": 4,
     "expenses": null,
-    "first_seen": "2026-07-10T04:05:11Z",
+    "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -2207,7 +2207,7 @@
     "bathrooms": 2,
     "bedrooms": 3,
     "expenses": null,
-    "first_seen": "2026-07-10T04:06:02Z",
+    "first_seen": "2026-07-10T04:20:04Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -2231,14 +2231,14 @@
     "site": "zonaprop",
     "surface_m2": 322.0,
     "title": "$ 3.900.000",
-    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-casa-con-jardin-y-terraza-en-chacarita.-59453764.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=14"
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-casa-con-jardin-y-terraza-en-chacarita.-59453764.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=17"
   },
   "zonaprop:59455030": {
     "address": "Caballito, Capital Federal",
     "bathrooms": 3,
     "bedrooms": 5,
     "expenses": null,
-    "first_seen": "2026-07-10T04:05:11Z",
+    "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -2269,7 +2269,7 @@
     "bathrooms": 2,
     "bedrooms": 3,
     "expenses": null,
-    "first_seen": "2026-07-10T04:09:07Z",
+    "first_seen": "2026-07-10T04:23:13Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -2293,7 +2293,7 @@
     "site": "zonaprop",
     "surface_m2": 210.0,
     "title": "$ 3.500.000",
-    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-casa-de-estilo-5-ambientes-con-terraza-y-59479573.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=4"
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-casa-de-estilo-5-ambientes-con-terraza-y-59479573.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=4"
   },
   "zonaprop:59489248": {
     "address": "Almagro, Capital Federal",
@@ -2331,7 +2331,7 @@
     "bathrooms": 2,
     "bedrooms": 5,
     "expenses": null,
-    "first_seen": "2026-07-10T04:05:11Z",
+    "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -2355,7 +2355,7 @@
     "site": "zonaprop",
     "surface_m2": 300.0,
     "title": "$ 3.200.000",
-    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcapa-super-luminosa-casa-con-patio-y-terraza-59492352.html?n_src=Listado&n_pills=Permite+mascotas&n_pg=1&n_pos=21"
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcapa-super-luminosa-casa-con-patio-y-terraza-59492352.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=16"
   },
   "zonaprop:59496998": {
     "address": "Saavedra, Capital Federal",
@@ -2651,7 +2651,7 @@
     "bathrooms": 2,
     "bedrooms": 3,
     "expenses": null,
-    "first_seen": "2026-07-10T04:06:02Z",
+    "first_seen": "2026-07-10T04:20:04Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -2675,14 +2675,14 @@
     "site": "zonaprop",
     "surface_m2": 400.0,
     "title": "$ 4.500.000",
-    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-doble-frente.-destino-comercial.-garage-terraza-59573268.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=6"
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-casa-doble-frente.-destino-comercial.-garage-terraza-59573268.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=5"
   },
   "zonaprop:59574149": {
     "address": "Saavedra, Capital Federal",
     "bathrooms": 2,
     "bedrooms": 4,
     "expenses": null,
-    "first_seen": "2026-07-10T04:09:07Z",
+    "first_seen": "2026-07-10T04:23:13Z",
     "flags": [
       {
         "label": "Una sola foto o sin fotos",
@@ -2706,6 +2706,6 @@
     "site": "zonaprop",
     "surface_m2": 230.0,
     "title": "$ 2.500.000",
-    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-de-casa-5-amb-en-el-barrio-de-saavedra.-59574149.html?n_src=Listado&n_pills=Parrilla&n_pg=1&n_pos=18"
+    "url": "https://www.zonaprop.com.ar/propiedades/clasificado/alclcain-alquiler-de-casa-5-amb-en-el-barrio-de-saavedra.-59574149.html?n_src=Listado&n_pills=Parrilla&n_pg=1&n_pos=17"
   }
 }

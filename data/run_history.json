@@ -570,14 +570,14 @@
   ]
  },
  {
-  "finished_at": "2026-07-10T04:13:43Z",
+  "finished_at": "2026-07-10T04:27:52Z",
   "only_job": null,
   "jobs": {
    "argenprop_alquiler_ph_caballito": 7,
    "mercadolibre_alquiler_ph_caballito": 2,
    "remax_alquiler_ph_caballito": 4,
    "zonaprop_alquiler_ph_caballito": 7,
-   "zonaprop_alquiler_ph_villa-crespo": 7,
+   "zonaprop_alquiler_ph_villa-crespo": 8,
    "argenprop_alquiler_ph_villa-crespo": 2,
    "remax_alquiler_ph_villa-crespo": 4,
    "mercadolibre_alquiler_ph_villa-crespo": 0,
@@ -592,7 +592,7 @@
    "argenprop_alquiler_ph_saavedra": 0,
    "mercadolibre_alquiler_ph_saavedra": 0,
    "remax_alquiler_ph_saavedra": 4,
-   "zonaprop_alquiler_ph_saavedra": 4,
+   "zonaprop_alquiler_ph_saavedra": 3,
    "argenprop_venta_ph_caballito": 0,
    "argenprop_alquiler_casa_caballito": 0,
    "argenprop_venta_casa_caballito": 0,
@@ -677,6 +677,7 @@
    "argenprop_venta_ph_almagro (argenprop): 0 avisos — posible bloqueo o cambio de HTML",
    "argenprop_alquiler_casa_almagro (argenprop): 0 avisos — posible bloqueo o cambio de HTML",
    "argenprop_venta_casa_almagro (argenprop): 0 avisos — posible bloqueo o cambio de HTML",
+   "argenprop_venta_ph_Saavedra (argenprop): 0 avisos — posible bloqueo o cambio de HTML",
    "argenprop_alquiler_casa_Saavedra (argenprop): 0 avisos — posible bloqueo o cambio de HTML",
    "argenprop_venta_casa_Saavedra (argenprop): 0 avisos — posible bloqueo o cambio de HTML",
    "mercadolibre_alquiler_casa_Saavedra (mercadolibre): 0 avisos — posible bloqueo o cambio de HTML",
