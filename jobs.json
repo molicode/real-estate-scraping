@@ -182,6 +182,42 @@
       "mode": "menu",
       "ptype": "ph",
       "zone": "villa-crespo"
+    },
+    {
+      "name": "argenprop_alquiler_ph_villa-crespo",
+      "url": "https://www.argenprop.com/ph/alquiler/villa-crespo",
+      "site": "argenprop",
+      "operation": "alquiler",
+      "enabled": true,
+      "max_pages": 10,
+      "every_hours": 24,
+      "filters": {
+        "currency": "ARS",
+        "min_rooms": 4,
+        "min_bedrooms": 3,
+        "min_bathrooms": 2,
+        "require_price": true,
+        "keywords_include": [
+          "baño completo",
+          "toilette"
+        ],
+        "keywords_exclude": [
+          "temporario",
+          "temporal",
+          "pozo",
+          "en construcción",
+          "oficina",
+          "local",
+          "compartido",
+          "cochera",
+          "apto comercial",
+          "galpón",
+          "cochera fija"
+        ]
+      },
+      "mode": "menu",
+      "ptype": "ph",
+      "zone": "villa-crespo"
     }
   ]
 }
