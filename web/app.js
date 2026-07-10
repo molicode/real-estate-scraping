@@ -877,6 +877,25 @@ $("job-cancel").addEventListener("click", () => $("job-form-wrap").classList.add
   });
 })();
 
+// Activar / detener TODOS los jobs de una (útil para frenar el gasto de
+// créditos del proxy). Se guarda al instante, como el toggle individual.
+async function setAllJobsEnabled(enabled) {
+  const jobs = jobsDoc.searches || [];
+  if (!jobs.length) return;
+  const affected = jobs.filter((j) => (j.enabled !== false) !== enabled).length;
+  if (!affected) {
+    setStatus($("jobs-status"), `Todos los jobs ya estaban ${enabled ? "activos" : "detenidos"}`);
+    return;
+  }
+  const verbo = enabled ? "activar" : "detener";
+  if (!confirm(`¿${verbo[0].toUpperCase() + verbo.slice(1)} los ${affected} jobs ${enabled ? "detenidos" : "activos"}? Se guarda al instante.`)) return;
+  jobs.forEach((j) => { j.enabled = enabled; });
+  renderJobs();
+  await persistJobs(`${enabled ? "Activados" : "Detenidos"} ${affected} jobs`);
+}
+$("enable-all").addEventListener("click", () => setAllJobsEnabled(true));
+$("disable-all").addEventListener("click", () => setAllJobsEnabled(false));
+
 // Chips de palabras clave sugeridas: agregan al input sin duplicar
 document.querySelectorAll(".chip-row").forEach((row) => {
   row.addEventListener("click", (e) => {

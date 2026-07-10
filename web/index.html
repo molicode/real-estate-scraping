@@ -74,6 +74,9 @@
   <div class="toolbar">
     <button id="new-job" class="btn primary"><span data-icon="plus"></span> Nuevo job</button>
     <button id="run-now" class="btn"><span data-icon="play"></span> Ejecutar scraper ahora</button>
+    <span class="tb-sep" aria-hidden="true"></span>
+    <button id="enable-all" class="btn small"><span data-icon="play"></span> Activar todos</button>
+    <button id="disable-all" class="btn small"><span data-icon="stop"></span> Detener todos</button>
     <span class="info" tabindex="0" data-tip="Los cambios se guardan solos al crear, editar, detener o eliminar un job. El cron corre cada hora y ejecuta los jobs activos que ya hayan cumplido su frecuencia. Si disparás dos jobs a la vez, el segundo espera en cola (no corren en paralelo para no pisarse los datos)."></span>
     <label class="sort-ctl">Ordenar
       <select id="job-sort">
