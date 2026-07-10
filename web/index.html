@@ -508,10 +508,16 @@
   </div>
 
   <div class="card">
-    <h3><span class="ic-h" data-icon="map-pin"></span> Mapa de inseguridad por comuna
-      <span class="info" tabindex="0" data-tip="Las 15 comunas de CABA coloreadas por delitos cada 100.000 habitantes, según los datos abiertos del GCBA (Mapa del Delito). Tocá una comuna para ver el desglose de delitos. Se actualiza una vez por mes."></span>
+    <h3><span class="ic-h" data-icon="map-pin"></span> Mapa de inseguridad
+      <span class="info" tabindex="0" data-tip="CABA coloreada por delitos según los datos abiertos del GCBA (Mapa del Delito). Cambiá entre vista por comuna (delitos cada 100.000 habitantes) y por barrio (total de registros). Tocá una zona para ver el desglose de delitos y la evolución por año. Se actualiza una vez por mes."></span>
     </h3>
-    <p class="status" id="crime-meta"></p>
+    <div class="map-controls">
+      <div class="seg" id="map-mode">
+        <button class="seg-btn active" data-map-mode="comuna">Por comuna</button>
+        <button class="seg-btn" data-map-mode="barrio">Por barrio</button>
+      </div>
+      <p class="status" id="crime-meta"></p>
+    </div>
     <div class="crime-map-wrap">
       <div id="crime-map"></div>
       <div id="comuna-detail" class="comuna-detail"></div>
@@ -520,6 +526,7 @@
       <span class="flag flag-high">Inseguridad alta</span>
       <span class="flag flag-med">Media</span>
       <span class="flag flag-low">Baja</span>
+      <span class="flag flag-na">Sin datos</span>
     </div>
   </div>
 

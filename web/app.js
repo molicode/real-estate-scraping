@@ -627,6 +627,28 @@ function syncBuilder() {
 );
 $("f-zone").addEventListener("input", syncBuilder);
 
+// Los <datalist> nativos filtran las opciones por el texto actual del input:
+// si el campo ya trae "caballito", al enfocarlo el navegador solo ofrece esa
+// opción (parece que "no muestra nada" al querer cambiar la zona en un job
+// que se edita o clona). Para ver la lista completa al entrar, vaciamos el
+// valor al enfocar y lo restauramos al salir si no se eligió/escribió otro.
+(() => {
+  const zi = $("f-zone");
+  const reveal = () => {
+    if (zi.dataset.prev === undefined) zi.dataset.prev = zi.value;
+    if (zi.value !== "") zi.value = "";
+  };
+  zi.addEventListener("mousedown", reveal);
+  zi.addEventListener("focus", reveal);
+  zi.addEventListener("blur", () => {
+    if (zi.value.trim() === "" && zi.dataset.prev) {
+      zi.value = zi.dataset.prev;
+      syncBuilder();
+    }
+    delete zi.dataset.prev;
+  });
+})();
+
 function updateHint() {
   const hint = SITE_HINTS[$("f-site").value] || "";
   $("site-hint").innerHTML = hint.startsWith("<b")
@@ -1214,7 +1236,9 @@ const LEVEL_INFO = {
 
 let crimeData = null;
 let comunasGeo = null;
+let barriosGeo = null;
 let crimeLoaded = false;
+let mapMode = "comuna";
 
 async function loadCrimeData() {
   if (crimeLoaded) return;
@@ -1223,7 +1247,9 @@ async function loadCrimeData() {
     crimeData = c.content ? safeParse(c.content, null) : null;
     const g = await fetchFile("data/comunas.geojson");
     comunasGeo = g.content ? safeParse(g.content, null) : null;
-  } catch { crimeData = null; comunasGeo = null; }
+    const b = await fetchFile("data/barrios.geojson");
+    barriosGeo = b.content ? safeParse(b.content, null) : null;
+  } catch { crimeData = null; comunasGeo = null; barriosGeo = null; }
   crimeLoaded = true;
 }
 
@@ -1255,13 +1281,15 @@ function updateZoneSecurity() {
     : `<span class="sec-badge">Comuna ${comuna} — sin datos de delito</span>`;
 }
 
-// Proyección simple lon/lat -> plano (CABA es chica; corrijo la latitud)
-function buildMapSvg() {
+// Proyección simple lon/lat -> plano (CABA es chica; corrijo la latitud).
+// `mode` decide qué capa dibujar: comunas (por 100k) o barrios (por total).
+function buildMapSvg(mode) {
+  const geo = mode === "barrio" ? barriosGeo : comunasGeo;
   const cos = Math.cos((-34.61 * Math.PI) / 180);
   const proj = (lon, lat) => [lon * cos, -lat];
   const polysOf = (geom) => (geom.type === "MultiPolygon" ? geom.coordinates : [geom.coordinates]);
   let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
-  comunasGeo.features.forEach((f) =>
+  geo.features.forEach((f) =>
     polysOf(f.geometry).forEach((poly) => poly.forEach((ring) => ring.forEach(([lon, lat]) => {
       const [x, y] = proj(lon, lat);
       if (x < minX) minX = x; if (y < minY) minY = y; if (x > maxX) maxX = x; if (y > maxY) maxY = y;
@@ -1272,25 +1300,32 @@ function buildMapSvg() {
   const tx = (x) => (x - minX) * scale + pad;
   const ty = (y) => (y - minY) * scale + pad;
 
-  const paths = comunasGeo.features.map((f) => {
-    const n = f.properties.comuna;
-    const cls = (LEVEL_INFO[(crimeData.comunas[String(n)] || {}).level] || {}).cls || "cm-na";
+  const paths = geo.features.map((f) => {
     let d = "";
     polysOf(f.geometry).forEach((poly) => poly.forEach((ring) => {
       ring.forEach(([lon, lat], i) => { const [x, y] = proj(lon, lat); d += `${i ? "L" : "M"}${tx(x).toFixed(1)} ${ty(y).toFixed(1)} `; });
       d += "Z ";
     }));
+    if (mode === "barrio") {
+      const b = f.properties.barrio;
+      const info = (crimeData.barrios || {})[b];
+      const cls = (LEVEL_INFO[(info || {}).level] || {}).cls || "cm-na";
+      return `<path class="comuna ${cls}" data-barrio="${escapeHtml(b)}" d="${d.trim()}"><title>${escapeHtml(b.replace(/\b\w/g, (c) => c.toUpperCase()))}</title></path>`;
+    }
+    const n = f.properties.comuna;
+    const cls = (LEVEL_INFO[(crimeData.comunas[String(n)] || {}).level] || {}).cls || "cm-na";
     return `<path class="comuna ${cls}" data-comuna="${n}" d="${d.trim()}"><title>Comuna ${n}</title></path>`;
   }).join("");
 
-  const labels = comunasGeo.features.map((f) => {
+  // Etiquetas: número de comuna (legibles); en barrios el mapa es denso, sin texto.
+  const labels = mode === "barrio" ? "" : geo.features.map((f) => {
     const n = f.properties.comuna;
     let sx = 0, sy = 0, cnt = 0;
     polysOf(f.geometry).forEach((poly) => poly[0].forEach(([lon, lat]) => { const [x, y] = proj(lon, lat); sx += tx(x); sy += ty(y); cnt++; }));
     return `<text class="cm-label" x="${(sx / cnt).toFixed(0)}" y="${(sy / cnt).toFixed(0)}">${n}</text>`;
   }).join("");
 
-  return `<svg viewBox="0 0 ${W} ${H.toFixed(0)}" class="crime-svg" role="img" aria-label="Mapa de comunas por inseguridad">${paths}${labels}</svg>`;
+  return `<svg viewBox="0 0 ${W} ${H.toFixed(0)}" class="crime-svg" role="img" aria-label="Mapa de inseguridad de CABA">${paths}${labels}</svg>`;
 }
 
 function renderCrimeMap() {
@@ -1299,28 +1334,119 @@ function renderCrimeMap() {
     $("crime-map").innerHTML = '<p class="status">La base de delitos todavía no se generó. Corré el workflow "Actualizar base de delitos" en GitHub Actions.</p>';
     return;
   }
-  $("crime-meta").textContent = `Delitos por 100.000 habitantes · datos oficiales GCBA (Mapa del Delito) · años ${crimeData.years.join(", ")}`;
-  $("crime-map").innerHTML = buildMapSvg();
+  const barrioReady = mapMode === "barrio" && barriosGeo && crimeData.barrios;
+  const effMode = mapMode === "barrio" && !barrioReady ? "comuna" : mapMode;
+  $("crime-meta").textContent = effMode === "barrio"
+    ? `Total de delitos registrados por barrio (terciles) · datos oficiales GCBA · años ${crimeData.years.join(", ")}`
+    : `Delitos por 100.000 habitantes · datos oficiales GCBA (Mapa del Delito) · años ${crimeData.years.join(", ")}`;
+  $("crime-map").innerHTML = buildMapSvg(effMode);
   showComunaDetail(null);
 }
 
-function showComunaDetail(n) {
+// Regresión lineal simple sobre los años -> proyección del año siguiente.
+function projectNextYear(years, values) {
+  const n = years.length;
+  if (n < 2) return null;
+  const xs = years.map((_, i) => i);
+  const mx = xs.reduce((a, b) => a + b, 0) / n;
+  const my = values.reduce((a, b) => a + b, 0) / n;
+  let num = 0, den = 0;
+  xs.forEach((x, i) => { num += (x - mx) * (values[i] - my); den += (x - mx) ** 2; });
+  const slope = den ? num / den : 0;
+  const intercept = my - slope * mx;
+  const pred = Math.max(0, Math.round(slope * n + intercept));
+  return { year: years[n - 1] + 1, value: pred, slope };
+}
+
+// Mini-gráfico de líneas de la evolución por año + punto proyectado (punteado).
+function trendChartHtml(byYear, title) {
+  const years = Object.keys(byYear).map(Number).sort((a, b) => a - b);
+  if (years.length < 2) return "";
+  const values = years.map((y) => byYear[String(y)] || 0);
+  const proj = projectNextYear(years, values);
+  const allY = [...years, proj ? proj.year : years[years.length - 1]];
+  const allV = [...values, proj ? proj.value : values[values.length - 1]];
+  const W = 300, H = 110, padL = 6, padR = 6, padT = 14, padB = 20;
+  const maxV = Math.max(...allV), minV = Math.min(...allV);
+  const range = maxV - minV || 1;
+  const span = allY.length - 1;
+  const px = (i) => padL + (i * (W - padL - padR)) / span;
+  const py = (v) => padT + (1 - (v - minV) / range) * (H - padT - padB);
+
+  const realPts = values.map((v, i) => [px(i), py(v)]);
+  const line = realPts.map(([x, y], i) => `${i ? "L" : "M"}${x.toFixed(1)} ${y.toFixed(1)}`).join(" ");
+  const dots = realPts.map(([x, y]) => `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="2.5" class="tc-dot"/>`).join("");
+  const xlabels = years.map((y, i) => `<text class="tc-x" x="${px(i).toFixed(1)}" y="${H - 6}">${String(y).slice(2)}</text>`).join("");
+
+  let projSvg = "", projText = "";
+  if (proj) {
+    const [lx, ly] = realPts[realPts.length - 1];
+    const pxp = px(allY.length - 1), pyp = py(proj.value);
+    projSvg = `<path d="M${lx.toFixed(1)} ${ly.toFixed(1)} L${pxp.toFixed(1)} ${pyp.toFixed(1)}" class="tc-proj-line"/>` +
+      `<circle cx="${pxp.toFixed(1)}" cy="${pyp.toFixed(1)}" r="2.8" class="tc-proj-dot"/>` +
+      `<text class="tc-x tc-proj-x" x="${pxp.toFixed(1)}" y="${H - 6}">${String(proj.year).slice(2)}*</text>`;
+    const first = values[0], last = values[values.length - 1];
+    const pct = first ? Math.round((100 * (last - first)) / first) : 0;
+    const dir = pct > 3 ? `subió ${pct}%` : pct < -3 ? `bajó ${Math.abs(pct)}%` : "se mantuvo";
+    projText = `<p class="tc-note">${escapeHtml(dir)} entre ${years[0]} y ${years[years.length - 1]}. ` +
+      `Proyección ${proj.year}: <strong class="tabnum">~${proj.value.toLocaleString("es-AR")}</strong> ` +
+      `<span class="tc-star">(*estimado)</span></p>`;
+  }
+  return `<div class="trend">
+    <div class="cd-sub">${escapeHtml(title)}</div>
+    <svg viewBox="0 0 ${W} ${H}" class="trend-svg" role="img" aria-label="Evolución de delitos por año">
+      <path d="${line}" class="tc-line"/>${projSvg}${dots}${xlabels}
+    </svg>${projText}
+  </div>`;
+}
+
+function byTypeBarsHtml(byType) {
+  const maxV = Math.max(...Object.values(byType || {}), 1);
+  return Object.entries(byType || {}).map(([t, v]) =>
+    `<div class="ctype"><span class="ctype-name">${escapeHtml(t)}</span><span class="ctype-bar"><span style="width:${Math.round(100 * v / maxV)}%"></span></span><span class="ctype-val tabnum">${v.toLocaleString("es-AR")}</span></div>`
+  ).join("");
+}
+
+// Detalle de una comuna (n numérico) o de un barrio (string).
+function showComunaDetail(key) {
   const box = $("comuna-detail");
   if (!box) return;
-  if (n == null) { box.innerHTML = '<p class="status">Tocá una comuna en el mapa para ver el detalle de delitos.</p>'; return; }
+  if (key == null) {
+    box.innerHTML = `<p class="status">Tocá ${mapMode === "barrio" ? "un barrio" : "una comuna"} en el mapa para ver el detalle de delitos y su evolución por año.</p>`;
+    return;
+  }
+  if (typeof key === "string") { showBarrioDetail(key); return; }
+  const n = key;
   const info = crimeData.comunas[String(n)];
   if (!info) { box.innerHTML = ""; return; }
   const m = LEVEL_INFO[info.level] || LEVEL_INFO.medio;
   const barrios = (COMUNA_BARRIOS[n] || []).map((b) => b.replace(/\b\w/g, (c) => c.toUpperCase())).join(", ");
-  const maxV = Math.max(...Object.values(info.by_type || {}), 1);
-  const bars = Object.entries(info.by_type || {}).map(([t, v]) =>
-    `<div class="ctype"><span class="ctype-name">${escapeHtml(t)}</span><span class="ctype-bar"><span style="width:${Math.round(100 * v / maxV)}%"></span></span><span class="ctype-val tabnum">${v.toLocaleString("es-AR")}</span></div>`
-  ).join("");
   box.innerHTML = `
     <div class="cd-head"><span class="flag ${m.flag}">${m.txt}</span> <strong>Comuna ${n}</strong></div>
     <div class="top-meta">${escapeHtml(barrios)}</div>
     <div class="cd-stat"><span class="tabnum">${info.per100k.toLocaleString("es-AR")}</span> delitos / 100.000 hab · <span class="tabnum">${info.total.toLocaleString("es-AR")}</span> registrados</div>
-    <div class="ctypes">${bars}</div>`;
+    <div class="ctypes">${byTypeBarsHtml(info.by_type)}</div>
+    ${info.by_year ? trendChartHtml(info.by_year, "Evolución por año") : ""}`;
+}
+
+function showBarrioDetail(b) {
+  const box = $("comuna-detail");
+  const info = (crimeData.barrios || {})[b];
+  const nice = b.replace(/\b\w/g, (c) => c.toUpperCase());
+  if (!info) {
+    box.innerHTML = `<div class="cd-head"><span class="flag flag-na">Sin datos</span> <strong>${escapeHtml(nice)}</strong></div>
+      <p class="status">No hay registros de delito para este barrio en la base oficial.</p>`;
+    return;
+  }
+  const m = LEVEL_INFO[info.level] || LEVEL_INFO.medio;
+  const comuna = info.comuna;
+  const cinfo = comuna != null ? crimeData.comunas[String(comuna)] : null;
+  box.innerHTML = `
+    <div class="cd-head"><span class="flag ${m.flag}">${m.txt}</span> <strong>${escapeHtml(nice)}</strong></div>
+    <div class="top-meta">Comuna ${comuna}</div>
+    <div class="cd-stat"><span class="tabnum">${info.total.toLocaleString("es-AR")}</span> delitos registrados (${crimeData.years.join("–")})</div>
+    <div class="ctypes">${byTypeBarsHtml(info.by_type)}</div>
+    ${cinfo && cinfo.by_year ? trendChartHtml(cinfo.by_year, `Evolución de la Comuna ${comuna}`) : ""}`;
 }
 
 function thumbHtml(l) {
@@ -2089,14 +2215,27 @@ $("note-delete").addEventListener("click", async () => {
   riskQueue = riskQueue.then(persistNotes).catch(() => {});
 });
 
-/* Selección de comuna en el mapa */
+/* Selección de comuna/barrio en el mapa */
 document.body.addEventListener("click", (e) => {
   const path = e.target.closest("#crime-map .comuna");
   if (!path) return;
   document.querySelectorAll("#crime-map .comuna.sel").forEach((x) => x.classList.remove("sel"));
   path.classList.add("sel");
-  showComunaDetail(Number(path.dataset.comuna));
+  if (path.dataset.barrio !== undefined) showComunaDetail(path.dataset.barrio);
+  else showComunaDetail(Number(path.dataset.comuna));
 });
+
+/* Toggle Comuna / Barrio del mapa de inseguridad */
+if ($("map-mode")) {
+  $("map-mode").addEventListener("click", (e) => {
+    const btn = e.target.closest(".seg-btn");
+    if (!btn || btn.dataset.mapMode === mapMode) return;
+    mapMode = btn.dataset.mapMode;
+    $("map-mode").querySelectorAll(".seg-btn").forEach((b) =>
+      b.classList.toggle("active", b === btn));
+    renderCrimeMap();
+  });
+}
 
 /* ---------- Init ---------- */
 
