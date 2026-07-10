@@ -1,205 +1,862 @@
 {
- "generated_at": "2026-07-09T20:52:30Z",
+ "generated_at": "2026-07-10T00:56:19Z",
  "source": "GCBA datos abiertos — Mapa del Delito",
  "years": [
-  2024,
+  2022,
   2023,
-  2022
+  2024,
+  2025
  ],
  "comunas": {
   "1": {
-   "total": 59887,
-   "per100k": 24344,
+   "total": 78793,
+   "per100k": 32030,
    "level": "alto",
    "by_type": {
-    "Robo": 26372,
-    "Hurto": 23743,
-    "Lesiones": 3987,
-    "Amenazas": 2901,
-    "Vialidad": 2835,
-    "Homicidios": 49
+    "Robo": 34092,
+    "Hurto": 30710,
+    "Lesiones": 5512,
+    "Vialidad": 4287,
+    "Amenazas": 4129,
+    "Homicidios": 63
+   },
+   "by_year": {
+    "2022": 7694,
+    "2023": 8187,
+    "2024": 8463,
+    "2025": 7685
    }
   },
   "2": {
-   "total": 19978,
-   "per100k": 12725,
+   "total": 25399,
+   "per100k": 16178,
    "level": "medio",
    "by_type": {
-    "Hurto": 8700,
-    "Robo": 8492,
-    "Vialidad": 1004,
-    "Lesiones": 992,
-    "Amenazas": 786,
-    "Homicidios": 4
+    "Hurto": 10977,
+    "Robo": 10676,
+    "Vialidad": 1400,
+    "Lesiones": 1287,
+    "Amenazas": 1054,
+    "Homicidios": 5
+   },
+   "by_year": {
+    "2022": 4030,
+    "2023": 4434,
+    "2024": 4261,
+    "2025": 3453
    }
   },
   "3": {
-   "total": 36701,
-   "per100k": 21338,
+   "total": 46564,
+   "per100k": 27072,
    "level": "alto",
    "by_type": {
-    "Robo": 16413,
-    "Hurto": 14448,
-    "Vialidad": 2166,
-    "Lesiones": 2062,
-    "Amenazas": 1597,
-    "Homicidios": 15
+    "Robo": 20076,
+    "Hurto": 18231,
+    "Vialidad": 3035,
+    "Lesiones": 2895,
+    "Amenazas": 2308,
+    "Homicidios": 19
+   },
+   "by_year": {
+    "2022": 6869,
+    "2023": 7183,
+    "2024": 7286,
+    "2025": 5734
    }
   },
   "4": {
-   "total": 40182,
-   "per100k": 16742,
+   "total": 52463,
+   "per100k": 21860,
    "level": "alto",
    "by_type": {
-    "Robo": 19426,
-    "Hurto": 12445,
-    "Amenazas": 3259,
-    "Lesiones": 3253,
-    "Vialidad": 1738,
-    "Homicidios": 61
+    "Robo": 24550,
+    "Hurto": 16146,
+    "Amenazas": 4550,
+    "Lesiones": 4549,
+    "Vialidad": 2595,
+    "Homicidios": 73
+   },
+   "by_year": {
+    "2022": 5079,
+    "2023": 5730,
+    "2024": 5933,
+    "2025": 5117
    }
   },
   "5": {
-   "total": 23133,
-   "per100k": 12175,
+   "total": 29845,
+   "per100k": 15708,
    "level": "medio",
    "by_type": {
-    "Robo": 10740,
-    "Hurto": 9143,
-    "Lesiones": 1110,
-    "Amenazas": 1099,
-    "Vialidad": 1033,
-    "Homicidios": 8
+    "Robo": 13488,
+    "Hurto": 11556,
+    "Vialidad": 1699,
+    "Lesiones": 1555,
+    "Amenazas": 1538,
+    "Homicidios": 9
+   },
+   "by_year": {
+    "2022": 3811,
+    "2023": 4139,
+    "2024": 4226,
+    "2025": 3533
    }
   },
   "6": {
-   "total": 19409,
-   "per100k": 11028,
+   "total": 25362,
+   "per100k": 14410,
    "level": "bajo",
    "by_type": {
-    "Hurto": 8240,
-    "Robo": 8032,
-    "Vialidad": 1350,
-    "Lesiones": 931,
-    "Amenazas": 851,
-    "Homicidios": 5
+    "Hurto": 10583,
+    "Robo": 10413,
+    "Vialidad": 1876,
+    "Lesiones": 1269,
+    "Amenazas": 1214,
+    "Homicidios": 7
+   },
+   "by_year": {
+    "2022": 3427,
+    "2023": 3701,
+    "2024": 3899,
+    "2025": 3382
    }
   },
   "7": {
-   "total": 34735,
-   "per100k": 14178,
+   "total": 44945,
+   "per100k": 18345,
    "level": "medio",
    "by_type": {
-    "Robo": 16896,
-    "Hurto": 12278,
-    "Vialidad": 1998,
-    "Lesiones": 1890,
-    "Amenazas": 1635,
-    "Homicidios": 38
+    "Robo": 21529,
+    "Hurto": 15373,
+    "Vialidad": 2827,
+    "Lesiones": 2798,
+    "Amenazas": 2368,
+    "Homicidios": 50
+   },
+   "by_year": {
+    "2022": 4458,
+    "2023": 4620,
+    "2024": 5100,
+    "2025": 4167
    }
   },
   "8": {
-   "total": 29450,
-   "per100k": 13266,
+   "total": 37849,
+   "per100k": 17049,
    "level": "medio",
    "by_type": {
-    "Robo": 13247,
-    "Hurto": 9142,
-    "Amenazas": 2865,
-    "Lesiones": 2788,
-    "Vialidad": 1373,
-    "Homicidios": 35
+    "Robo": 16618,
+    "Hurto": 11461,
+    "Amenazas": 3889,
+    "Lesiones": 3853,
+    "Vialidad": 1987,
+    "Homicidios": 41
+   },
+   "by_year": {
+    "2022": 4140,
+    "2023": 4618,
+    "2024": 4508,
+    "2025": 3783
    }
   },
   "9": {
-   "total": 25741,
-   "per100k": 14709,
+   "total": 33096,
+   "per100k": 18912,
    "level": "medio",
    "by_type": {
-    "Hurto": 10868,
-    "Robo": 9742,
-    "Vialidad": 1982,
-    "Lesiones": 1574,
-    "Amenazas": 1568,
-    "Homicidios": 7
+    "Hurto": 13593,
+    "Robo": 12412,
+    "Vialidad": 2781,
+    "Lesiones": 2184,
+    "Amenazas": 2116,
+    "Homicidios": 10
+   },
+   "by_year": {
+    "2022": 4605,
+    "2023": 5288,
+    "2024": 4816,
+    "2025": 4203
    }
   },
   "10": {
-   "total": 21093,
-   "per100k": 12122,
+   "total": 27279,
+   "per100k": 15678,
    "level": "bajo",
    "by_type": {
-    "Hurto": 9793,
-    "Robo": 6958,
-    "Vialidad": 1851,
-    "Amenazas": 1328,
-    "Lesiones": 1162,
-    "Homicidios": 1
+    "Hurto": 12448,
+    "Robo": 8917,
+    "Vialidad": 2514,
+    "Amenazas": 1762,
+    "Lesiones": 1634,
+    "Homicidios": 4
+   },
+   "by_year": {
+    "2022": 3722,
+    "2023": 4166,
+    "2024": 4234,
+    "2025": 3555
    }
   },
   "11": {
-   "total": 21561,
-   "per100k": 11057,
+   "total": 27638,
+   "per100k": 14173,
    "level": "bajo",
    "by_type": {
-    "Hurto": 10269,
-    "Robo": 7545,
-    "Vialidad": 1641,
-    "Amenazas": 1144,
-    "Lesiones": 958,
+    "Hurto": 12957,
+    "Robo": 9573,
+    "Vialidad": 2165,
+    "Amenazas": 1624,
+    "Lesiones": 1315,
     "Homicidios": 4
+   },
+   "by_year": {
+    "2022": 3240,
+    "2023": 3894,
+    "2024": 3923,
+    "2025": 3116
    }
   },
   "12": {
-   "total": 22162,
-   "per100k": 10308,
+   "total": 28862,
+   "per100k": 13424,
    "level": "bajo",
    "by_type": {
-    "Hurto": 9441,
-    "Robo": 7956,
-    "Vialidad": 2276,
-    "Amenazas": 1287,
-    "Lesiones": 1195,
-    "Homicidios": 7
+    "Hurto": 12315,
+    "Robo": 10214,
+    "Vialidad": 2962,
+    "Amenazas": 1748,
+    "Lesiones": 1611,
+    "Homicidios": 12
+   },
+   "by_year": {
+    "2022": 3232,
+    "2023": 3462,
+    "2024": 3613,
+    "2025": 3116
    }
   },
   "13": {
-   "total": 26165,
-   "per100k": 10680,
+   "total": 34197,
+   "per100k": 13958,
    "level": "bajo",
    "by_type": {
-    "Hurto": 11682,
-    "Robo": 10457,
-    "Vialidad": 1944,
-    "Lesiones": 1105,
-    "Amenazas": 973,
-    "Homicidios": 4
+    "Hurto": 15338,
+    "Robo": 13171,
+    "Vialidad": 2705,
+    "Lesiones": 1581,
+    "Amenazas": 1395,
+    "Homicidios": 7
+   },
+   "by_year": {
+    "2022": 3255,
+    "2023": 3680,
+    "2024": 3745,
+    "2025": 3278
    }
   },
   "14": {
-   "total": 37726,
-   "per100k": 16693,
+   "total": 48333,
+   "per100k": 21386,
    "level": "alto",
    "by_type": {
-    "Hurto": 17474,
-    "Robo": 15510,
-    "Vialidad": 2086,
-    "Lesiones": 1564,
-    "Amenazas": 1085,
-    "Homicidios": 7
+    "Hurto": 22311,
+    "Robo": 19389,
+    "Vialidad": 2889,
+    "Lesiones": 2135,
+    "Amenazas": 1599,
+    "Homicidios": 10
+   },
+   "by_year": {
+    "2022": 5259,
+    "2023": 5773,
+    "2024": 5661,
+    "2025": 4693
    }
   },
   "15": {
-   "total": 28257,
-   "per100k": 15030,
+   "total": 35973,
+   "per100k": 19135,
    "level": "alto",
    "by_type": {
-    "Hurto": 11489,
-    "Robo": 11445,
-    "Vialidad": 2438,
-    "Lesiones": 1445,
-    "Amenazas": 1429,
-    "Homicidios": 11
+    "Hurto": 14663,
+    "Robo": 14051,
+    "Vialidad": 3339,
+    "Lesiones": 1971,
+    "Amenazas": 1929,
+    "Homicidios": 20
+   },
+   "by_year": {
+    "2022": 4373,
+    "2023": 5308,
+    "2024": 5349,
+    "2025": 4104
+   }
+  }
+ },
+ "barrios": {
+  "agronomia": {
+   "comuna": 15,
+   "total": 1934,
+   "level": "bajo",
+   "by_type": {
+    "Hurto": 851,
+    "Robo": 623,
+    "Vialidad": 252,
+    "Amenazas": 109,
+    "Lesiones": 97,
+    "Homicidios": 2
+   }
+  },
+  "almagro": {
+   "comuna": 5,
+   "total": 22126,
+   "level": "alto",
+   "by_type": {
+    "Robo": 10547,
+    "Hurto": 8293,
+    "Lesiones": 1116,
+    "Vialidad": 1091,
+    "Amenazas": 1074,
+    "Homicidios": 5
+   }
+  },
+  "balvanera": {
+   "comuna": 3,
+   "total": 37133,
+   "level": "alto",
+   "by_type": {
+    "Robo": 16034,
+    "Hurto": 14979,
+    "Vialidad": 2219,
+    "Lesiones": 2198,
+    "Amenazas": 1687,
+    "Homicidios": 16
+   }
+  },
+  "barracas": {
+   "comuna": 4,
+   "total": 20032,
+   "level": "alto",
+   "by_type": {
+    "Robo": 9816,
+    "Hurto": 5683,
+    "Amenazas": 1898,
+    "Lesiones": 1742,
+    "Vialidad": 846,
+    "Homicidios": 47
+   }
+  },
+  "belgrano": {
+   "comuna": 13,
+   "total": 18731,
+   "level": "alto",
+   "by_type": {
+    "Hurto": 8837,
+    "Robo": 6756,
+    "Vialidad": 1508,
+    "Lesiones": 864,
+    "Amenazas": 762,
+    "Homicidios": 4
+   }
+  },
+  "boedo": {
+   "comuna": 5,
+   "total": 7719,
+   "level": "medio",
+   "by_type": {
+    "Hurto": 3263,
+    "Robo": 2941,
+    "Vialidad": 608,
+    "Amenazas": 464,
+    "Lesiones": 439,
+    "Homicidios": 4
+   }
+  },
+  "caballito": {
+   "comuna": 6,
+   "total": 25362,
+   "level": "alto",
+   "by_type": {
+    "Hurto": 10583,
+    "Robo": 10413,
+    "Vialidad": 1876,
+    "Lesiones": 1269,
+    "Amenazas": 1214,
+    "Homicidios": 7
+   }
+  },
+  "chacarita": {
+   "comuna": 15,
+   "total": 8122,
+   "level": "medio",
+   "by_type": {
+    "Robo": 3481,
+    "Hurto": 2954,
+    "Vialidad": 742,
+    "Lesiones": 538,
+    "Amenazas": 405,
+    "Homicidios": 2
+   }
+  },
+  "coghlan": {
+   "comuna": 12,
+   "total": 2220,
+   "level": "bajo",
+   "by_type": {
+    "Hurto": 905,
+    "Robo": 890,
+    "Vialidad": 171,
+    "Lesiones": 144,
+    "Amenazas": 110
+   }
+  },
+  "colegiales": {
+   "comuna": 13,
+   "total": 7170,
+   "level": "medio",
+   "by_type": {
+    "Robo": 3131,
+    "Hurto": 3074,
+    "Vialidad": 396,
+    "Lesiones": 316,
+    "Amenazas": 253
+   }
+  },
+  "constitucion": {
+   "comuna": 1,
+   "total": 16677,
+   "level": "alto",
+   "by_type": {
+    "Robo": 7965,
+    "Hurto": 4490,
+    "Lesiones": 1828,
+    "Amenazas": 1362,
+    "Vialidad": 1017,
+    "Homicidios": 15
+   }
+  },
+  "flores": {
+   "comuna": 7,
+   "total": 31692,
+   "level": "alto",
+   "by_type": {
+    "Robo": 14470,
+    "Hurto": 11083,
+    "Lesiones": 2264,
+    "Vialidad": 2014,
+    "Amenazas": 1820,
+    "Homicidios": 41
+   }
+  },
+  "floresta": {
+   "comuna": 10,
+   "total": 7109,
+   "level": "medio",
+   "by_type": {
+    "Hurto": 3183,
+    "Robo": 2476,
+    "Vialidad": 586,
+    "Lesiones": 485,
+    "Amenazas": 379
+   }
+  },
+  "liniers": {
+   "comuna": 9,
+   "total": 10886,
+   "level": "medio",
+   "by_type": {
+    "Hurto": 4599,
+    "Robo": 4144,
+    "Vialidad": 929,
+    "Lesiones": 676,
+    "Amenazas": 535,
+    "Homicidios": 3
+   }
+  },
+  "mataderos": {
+   "comuna": 9,
+   "total": 13300,
+   "level": "alto",
+   "by_type": {
+    "Hurto": 5789,
+    "Robo": 4802,
+    "Vialidad": 1080,
+    "Amenazas": 879,
+    "Lesiones": 746,
+    "Homicidios": 4
+   }
+  },
+  "monte castro": {
+   "comuna": 10,
+   "total": 4604,
+   "level": "bajo",
+   "by_type": {
+    "Hurto": 2376,
+    "Robo": 1280,
+    "Vialidad": 362,
+    "Amenazas": 345,
+    "Lesiones": 240,
+    "Homicidios": 1
+   }
+  },
+  "nueva pompeya": {
+   "comuna": 4,
+   "total": 12990,
+   "level": "medio",
+   "by_type": {
+    "Robo": 6323,
+    "Hurto": 4162,
+    "Lesiones": 904,
+    "Amenazas": 815,
+    "Vialidad": 774,
+    "Homicidios": 12
+   }
+  },
+  "nunez": {
+   "comuna": 13,
+   "total": 8296,
+   "level": "medio",
+   "by_type": {
+    "Hurto": 3427,
+    "Robo": 3284,
+    "Vialidad": 801,
+    "Lesiones": 401,
+    "Amenazas": 380,
+    "Homicidios": 3
+   }
+  },
+  "palermo": {
+   "comuna": 14,
+   "total": 48333,
+   "level": "alto",
+   "by_type": {
+    "Hurto": 22311,
+    "Robo": 19389,
+    "Vialidad": 2889,
+    "Lesiones": 2135,
+    "Amenazas": 1599,
+    "Homicidios": 10
+   }
+  },
+  "parque avellaneda": {
+   "comuna": 9,
+   "total": 8910,
+   "level": "medio",
+   "by_type": {
+    "Robo": 3466,
+    "Hurto": 3205,
+    "Vialidad": 772,
+    "Lesiones": 762,
+    "Amenazas": 702,
+    "Homicidios": 3
+   }
+  },
+  "parque chacabuco": {
+   "comuna": 7,
+   "total": 13253,
+   "level": "alto",
+   "by_type": {
+    "Robo": 7059,
+    "Hurto": 4290,
+    "Vialidad": 813,
+    "Amenazas": 548,
+    "Lesiones": 534,
+    "Homicidios": 9
+   }
+  },
+  "parque chas": {
+   "comuna": 15,
+   "total": 2326,
+   "level": "bajo",
+   "by_type": {
+    "Hurto": 1167,
+    "Robo": 666,
+    "Vialidad": 221,
+    "Lesiones": 141,
+    "Amenazas": 129,
+    "Homicidios": 2
+   }
+  },
+  "parque patricios": {
+   "comuna": 4,
+   "total": 9488,
+   "level": "medio",
+   "by_type": {
+    "Robo": 3823,
+    "Hurto": 3637,
+    "Lesiones": 763,
+    "Amenazas": 689,
+    "Vialidad": 572,
+    "Homicidios": 4
+   }
+  },
+  "puerto madero": {
+   "comuna": 1,
+   "total": 2671,
+   "level": "bajo",
+   "by_type": {
+    "Hurto": 1181,
+    "Robo": 954,
+    "Vialidad": 233,
+    "Amenazas": 169,
+    "Lesiones": 133,
+    "Homicidios": 1
+   }
+  },
+  "recoleta": {
+   "comuna": 2,
+   "total": 25399,
+   "level": "alto",
+   "by_type": {
+    "Hurto": 10977,
+    "Robo": 10676,
+    "Vialidad": 1400,
+    "Lesiones": 1287,
+    "Amenazas": 1054,
+    "Homicidios": 5
+   }
+  },
+  "retiro": {
+   "comuna": 1,
+   "total": 15549,
+   "level": "alto",
+   "by_type": {
+    "Robo": 7886,
+    "Hurto": 4812,
+    "Lesiones": 1178,
+    "Vialidad": 843,
+    "Amenazas": 800,
+    "Homicidios": 30
+   }
+  },
+  "saavedra": {
+   "comuna": 12,
+   "total": 9478,
+   "level": "medio",
+   "by_type": {
+    "Hurto": 3626,
+    "Robo": 3430,
+    "Vialidad": 1323,
+    "Amenazas": 556,
+    "Lesiones": 539,
+    "Homicidios": 4
+   }
+  },
+  "san cristobal": {
+   "comuna": 3,
+   "total": 9431,
+   "level": "medio",
+   "by_type": {
+    "Robo": 4042,
+    "Hurto": 3252,
+    "Vialidad": 816,
+    "Lesiones": 697,
+    "Amenazas": 621,
+    "Homicidios": 3
+   }
+  },
+  "san nicolas": {
+   "comuna": 1,
+   "total": 21045,
+   "level": "alto",
+   "by_type": {
+    "Hurto": 10777,
+    "Robo": 7712,
+    "Lesiones": 930,
+    "Vialidad": 873,
+    "Amenazas": 748,
+    "Homicidios": 5
+   }
+  },
+  "san telmo": {
+   "comuna": 1,
+   "total": 8396,
+   "level": "medio",
+   "by_type": {
+    "Robo": 3774,
+    "Hurto": 3290,
+    "Lesiones": 523,
+    "Amenazas": 413,
+    "Vialidad": 394,
+    "Homicidios": 2
+   }
+  },
+  "velez sarsfield": {
+   "comuna": 10,
+   "total": 5107,
+   "level": "bajo",
+   "by_type": {
+    "Hurto": 2298,
+    "Robo": 1648,
+    "Vialidad": 451,
+    "Amenazas": 406,
+    "Lesiones": 302,
+    "Homicidios": 2
+   }
+  },
+  "versalles": {
+   "comuna": 10,
+   "total": 2692,
+   "level": "bajo",
+   "by_type": {
+    "Hurto": 1114,
+    "Robo": 970,
+    "Vialidad": 282,
+    "Lesiones": 164,
+    "Amenazas": 161,
+    "Homicidios": 1
+   }
+  },
+  "villa crespo": {
+   "comuna": 15,
+   "total": 16741,
+   "level": "alto",
+   "by_type": {
+    "Hurto": 7075,
+    "Robo": 6690,
+    "Vialidad": 1494,
+    "Amenazas": 771,
+    "Lesiones": 701,
+    "Homicidios": 10
+   }
+  },
+  "villa del parque": {
+   "comuna": 11,
+   "total": 6701,
+   "level": "bajo",
+   "by_type": {
+    "Hurto": 3226,
+    "Robo": 2431,
+    "Vialidad": 418,
+    "Amenazas": 382,
+    "Lesiones": 244
+   }
+  },
+  "villa devoto": {
+   "comuna": 11,
+   "total": 11155,
+   "level": "medio",
+   "by_type": {
+    "Hurto": 5357,
+    "Robo": 3631,
+    "Vialidad": 936,
+    "Amenazas": 622,
+    "Lesiones": 606,
+    "Homicidios": 3
+   }
+  },
+  "villa lugano": {
+   "comuna": 8,
+   "total": 22339,
+   "level": "alto",
+   "by_type": {
+    "Robo": 9540,
+    "Hurto": 6668,
+    "Lesiones": 2519,
+    "Amenazas": 2494,
+    "Vialidad": 1086,
+    "Homicidios": 32
+   }
+  },
+  "villa luro": {
+   "comuna": 10,
+   "total": 5189,
+   "level": "bajo",
+   "by_type": {
+    "Hurto": 2470,
+    "Robo": 1610,
+    "Vialidad": 474,
+    "Amenazas": 343,
+    "Lesiones": 292
+   }
+  },
+  "villa ortuzar": {
+   "comuna": 15,
+   "total": 3035,
+   "level": "bajo",
+   "by_type": {
+    "Hurto": 1230,
+    "Robo": 1127,
+    "Vialidad": 272,
+    "Amenazas": 213,
+    "Lesiones": 193
+   }
+  },
+  "villa pueyrredon": {
+   "comuna": 12,
+   "total": 5564,
+   "level": "bajo",
+   "by_type": {
+    "Hurto": 2542,
+    "Robo": 1900,
+    "Vialidad": 510,
+    "Amenazas": 332,
+    "Lesiones": 276,
+    "Homicidios": 4
+   }
+  },
+  "villa real": {
+   "comuna": 10,
+   "total": 2578,
+   "level": "bajo",
+   "by_type": {
+    "Hurto": 1007,
+    "Robo": 933,
+    "Vialidad": 359,
+    "Lesiones": 151,
+    "Amenazas": 128
+   }
+  },
+  "villa riachuelo": {
+   "comuna": 8,
+   "total": 2972,
+   "level": "bajo",
+   "by_type": {
+    "Hurto": 1347,
+    "Robo": 868,
+    "Vialidad": 325,
+    "Amenazas": 247,
+    "Lesiones": 183,
+    "Homicidios": 2
+   }
+  },
+  "villa santa rita": {
+   "comuna": 11,
+   "total": 4628,
+   "level": "bajo",
+   "by_type": {
+    "Hurto": 2173,
+    "Robo": 1600,
+    "Vialidad": 371,
+    "Amenazas": 297,
+    "Lesiones": 187
+   }
+  },
+  "villa soldati": {
+   "comuna": 8,
+   "total": 12538,
+   "level": "medio",
+   "by_type": {
+    "Robo": 6210,
+    "Hurto": 3446,
+    "Lesiones": 1151,
+    "Amenazas": 1148,
+    "Vialidad": 576,
+    "Homicidios": 7
+   }
+  },
+  "villa urquiza": {
+   "comuna": 12,
+   "total": 11600,
+   "level": "medio",
+   "by_type": {
+    "Hurto": 5242,
+    "Robo": 3994,
+    "Vialidad": 958,
+    "Amenazas": 750,
+    "Lesiones": 652,
+    "Homicidios": 4
    }
   }
  }
