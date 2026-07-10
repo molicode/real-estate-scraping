@@ -420,5 +420,27 @@
   "errors": [
    "ARGENPROP_ALQUILER_PH_CABALLITO (argenprop): 0 avisos — posible bloqueo o cambio de HTML"
   ]
+ },
+ {
+  "finished_at": "2026-07-10T02:45:37Z",
+  "only_job": null,
+  "jobs": {
+   "ARGENPROP_ALQUILER_PH_CABALLITO": 0,
+   "mercadolibre_alquiler_ph_caballito": 0,
+   "remax_alquiler_ph_caballito": 0,
+   "zonaprop_alquiler_ph_caballito": 0,
+   "zonaprop_alquiler_ph_villa-crespo": 0,
+   "argenprop_alquiler_ph_villa-crespo": 0,
+   "remax_alquiler_ph_villa-crespo": 0,
+   "mercadolibre_alquiler_ph_villa-crespo": 0
+  },
+  "found": 0,
+  "new": 0,
+  "total_stored": 0,
+  "errors": [
+   "zonaprop_alquiler_ph_caballito (zonaprop): 0 avisos — posible bloqueo o cambio de HTML",
+   "zonaprop_alquiler_ph_villa-crespo (zonaprop): 0 avisos — posible bloqueo o cambio de HTML",
+   "mercadolibre_alquiler_ph_villa-crespo (mercadolibre): 0 avisos — posible bloqueo o cambio de HTML"
+  ]
  }
 ]
