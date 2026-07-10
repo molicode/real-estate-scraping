@@ -2220,9 +2220,29 @@ async function loadRuns(page = 1, append = false) {
       .sort((a, b) => (b.created_at || "").localeCompare(a.created_at || ""));
     renderRuns();
     $("runs-more").classList.toggle("hidden", batch.length < RUNS_PER_PAGE);
+    if (page === 1) renderRunsSummary();
   } catch (err) {
     setStatus($("runs-status"), "" + err.message, "error");
   }
+}
+
+// Resumen arriba de Corridas: avisos de hoy, de días anteriores y total.
+async function renderRunsSummary() {
+  const el = $("runs-summary");
+  if (!el) return;
+  const listings = (await fetchRaw("data/listings.json")) || {};
+  const ids = Object.keys(listings);
+  const total = ids.length;
+  const today = new Date().toISOString().slice(0, 10);
+  const todayCount = ids.filter((k) => (listings[k].first_seen || "").slice(0, 10) === today).length;
+  const prev = total - todayCount;
+  const activeJobs = (jobsDoc?.searches || []).filter((s) => s.enabled !== false).length;
+  const n = (v) => v.toLocaleString("es-AR");
+  el.innerHTML = `
+    <div class="rs-tile"><span class="rs-num tabnum">${n(todayCount)}</span><span class="rs-lbl">${icon("sparkles", 13)} encontrados hoy${activeJobs ? ` · ${activeJobs} jobs activos` : ""}</span></div>
+    <div class="rs-tile"><span class="rs-num tabnum">${n(prev)}</span><span class="rs-lbl">${icon("clock", 13)} de días anteriores</span></div>
+    <div class="rs-tile rs-total"><span class="rs-num tabnum">${n(total)}</span><span class="rs-lbl">${icon("list", 13)} avisos guardados en total</span></div>`;
+  hydrateIcons(el);
 }
 
 $("reload-runs").addEventListener("click", () => { selectedRuns.clear(); loadRuns(1, false); });
