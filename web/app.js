@@ -1200,15 +1200,16 @@ function favCardHtml(l) {
   ].filter(Boolean).join(" · ");
   const extra = `<button class="fav-btn on thumb-fav" data-fav="${escapeHtml(l.id)}" title="Quitar de Me gustan">${icon("heart", 16)}</button>`;
   return `
-    <div class="top-card">
+    <div class="top-card" data-lid="${escapeHtml(l.id)}">
       <div class="top-thumb">${photoCarouselHtml(l, extra)}</div>
       <div class="top-body">
         <div class="top-price">${fmtPrice(l)}</div>
-        <a class="top-title" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(listingTitle(l))}</a>
+        <div class="top-title">${escapeHtml(listingTitle(l))}</div>
         <div class="top-meta">${escapeHtml(meta)}</div>
         ${l.address && l.address !== listingTitle(l) ? `<div class="top-meta">${escapeHtml(l.address)}</div>` : ""}
         <div class="top-meta"><span class="badge">${escapeHtml(l.site)}</span> ${escapeHtml((l.saved_at || "").slice(0, 10))}</div>
         ${flagChipsHtml(l)}
+        ${l.url ? `<a class="btn small ver-aviso top-ver" href="${escapeHtml(l.url)}" target="_blank" rel="noopener" title="Abrir el aviso en ${escapeHtml(l.site)}">${icon("external-link", 14)} Ver aviso en ${escapeHtml(l.site)}</a>` : ""}
       </div>
     </div>`;
 }
@@ -1574,7 +1575,7 @@ function renderResults(listings) {
     return;
   }
   const rows = listings.map((l) => `
-    <tr>
+    <tr data-lid="${escapeHtml(l.id)}" class="result-row">
       <td>${thumbHtml(l)}</td>
       <td class="tabnum">${escapeHtml((l.first_seen || "").slice(0, 16).replace("T", " "))}</td>
       <td><span class="badge">${escapeHtml(l.site)}</span></td>
@@ -1827,11 +1828,11 @@ function topCardHtml({ l, detail }, rank) {
   ].filter(Boolean).join(" · ");
   const thumbExtras = `<span class="top-rank">#${rank}</span><span class="thumb-fav">${heartHtml(l)}</span>`;
   return `
-    <div class="top-card">
+    <div class="top-card" data-lid="${escapeHtml(l.id)}">
       <div class="top-thumb">${photoCarouselHtml(l, thumbExtras)}</div>
       <div class="top-body">
         <div class="top-price">${fmtPrice(l)} <span class="badge">${escapeHtml(detail || "")}</span></div>
-        <a class="top-title" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(listingTitle(l))}</a>
+        <div class="top-title">${escapeHtml(listingTitle(l))}</div>
         <div class="top-meta">${escapeHtml(meta)}</div>
         ${l.address && l.address !== listingTitle(l) ? `<div class="top-meta">${escapeHtml(l.address)}</div>` : ""}
         <div class="top-meta"><span class="badge">${escapeHtml(l.site)}</span> ${escapeHtml(l.search_name || "")}</div>
@@ -1966,6 +1967,75 @@ document.body.addEventListener("click", (e) => {
     } catch { /* usa la imagen sola */ }
   }
   openLightbox(images, idx);
+});
+
+/* ---------- Popup de detalle de la propiedad ---------- */
+const detailModal = document.createElement("div");
+detailModal.id = "detail-modal";
+detailModal.className = "modal-back hidden";
+document.body.appendChild(detailModal);
+
+function findListing(id) {
+  return allListings.find((l) => l.id === id) || favorites[id] || null;
+}
+
+function detailSpecs(l) {
+  const rows = [
+    ["Operación", l.operation ? (l.operation === "venta" ? "compra / venta" : l.operation) : null],
+    ["Tipo", PTYPE_LABEL[guessPropertyType(l)] || null],
+    ["Ambientes", l.rooms ?? null],
+    ["Dormitorios", l.bedrooms ?? null],
+    ["Baños", l.bathrooms ?? null],
+    ["Superficie", l.surface_m2 ? `${Math.round(l.surface_m2)} m²` : null],
+    ["Precio / m²", pricePerM2(l) ? Math.round(pricePerM2(l)).toLocaleString("es-AR") : null],
+    ["Expensas", l.expenses ? `$ ${Number(l.expenses).toLocaleString("es-AR")}` : null],
+  ].filter(([, v]) => v != null && v !== "");
+  return rows.map(([k, v]) =>
+    `<div class="ds-item"><span class="ds-k">${k}</span><span class="ds-v">${escapeHtml(String(v))}</span></div>`
+  ).join("");
+}
+
+function openDetailModal(l) {
+  const imgs = (l.images && l.images.length ? l.images : [l.image]).filter(Boolean);
+  detailModal.innerHTML = `
+    <div class="card modal-card detail-card">
+      <button class="detail-x" id="detail-x" title="Cerrar (Esc)">${icon("x", 20)}</button>
+      ${imgs.length ? `<div class="detail-photo">${photoCarouselHtml(l)}</div>` : ""}
+      <div class="detail-body">
+        <div class="detail-price">${fmtPrice(l)}</div>
+        <div class="detail-title">${escapeHtml(listingTitle(l))}</div>
+        ${l.address ? `<div class="detail-addr">${icon("map-pin", 14)} ${escapeHtml(l.address)}</div>` : ""}
+        <div class="detail-specs">${detailSpecs(l)}</div>
+        ${flagChipsHtml(l)}
+        <div class="detail-src"><span class="badge">${escapeHtml(l.site || "")}</span> ${escapeHtml(l.search_name || "")}</div>
+        <div class="detail-actions">
+          ${l.url ? `<a class="btn primary" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${icon("external-link", 15)} Ver aviso en ${escapeHtml(l.site || "el portal")}</a>` : ""}
+          ${heartHtml(l)}
+          ${noteBtnHtml(l)}
+        </div>
+      </div>
+    </div>`;
+  hydrateIcons(detailModal);
+  detailModal.classList.remove("hidden");
+  startImageCycling(); // que el carrusel del popup también rote
+}
+
+function closeDetailModal() { detailModal.classList.add("hidden"); }
+detailModal.addEventListener("click", (e) => {
+  if (e.target === detailModal || e.target.closest("#detail-x")) closeDetailModal();
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !detailModal.classList.contains("hidden") && !lightbox.classList.contains("show")) closeDetailModal();
+});
+
+// Click en una tarjeta / fila abre el detalle. Se excluyen fotos (abren la
+// galería), links, botones, corazón y lo que ya está dentro de un popup.
+document.body.addEventListener("click", (e) => {
+  if (e.target.closest(".pcar, a, button, .fav-btn, .note-btn, #lightbox, #detail-modal")) return;
+  const el = e.target.closest(".top-card[data-lid], tr.result-row[data-lid]");
+  if (!el) return;
+  const l = findListing(el.dataset.lid);
+  if (l) openDetailModal(l);
 });
 
 $("reload-results").addEventListener("click", loadResults);
