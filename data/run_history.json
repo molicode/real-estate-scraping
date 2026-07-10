@@ -510,5 +510,16 @@
   "errors": [
    "argenprop_alquiler_ph_almagro (argenprop): 0 avisos — posible bloqueo o cambio de HTML"
   ]
+ },
+ {
+  "finished_at": "2026-07-10T03:36:04Z",
+  "only_job": "zonaprop_alquiler_ph_almagro",
+  "jobs": {
+   "zonaprop_alquiler_ph_almagro": 8
+  },
+  "found": 8,
+  "new": 7,
+  "total_stored": 20,
+  "errors": []
  }
 ]
