@@ -1072,6 +1072,18 @@ function fmtPrice(l) {
   return `${cur} ${Number(l.price_amount).toLocaleString("es-AR")}`;
 }
 
+// Algunos portales (Zonaprop) no traen título y el parser deja el precio ahí:
+// para no mostrar el precio dos veces, si el "título" es sólo un precio usamos
+// la dirección (o un texto genérico) como encabezado clickeable.
+function isPriceLikeTitle(l) {
+  const t = (l.title || "").trim();
+  if (!t) return true;
+  return /^(usd|us\$|u\$s|\$|ars)?\s*[\d.,]+(\s*(usd|ars|pesos|d[oó]lares))?$/i.test(t);
+}
+function listingTitle(l) {
+  return isPriceLikeTitle(l) ? (l.address || "Ver publicación") : l.title;
+}
+
 /* ---------- Favoritos (Me gustan) ---------- */
 
 let favorites = {};
@@ -1161,9 +1173,9 @@ function favCardHtml(l) {
       <div class="top-thumb">${photoCarouselHtml(l, extra)}</div>
       <div class="top-body">
         <div class="top-price">${fmtPrice(l)}</div>
-        <a class="top-title" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.title || l.address || "ver aviso")}</a>
+        <a class="top-title" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(listingTitle(l))}</a>
         <div class="top-meta">${escapeHtml(meta)}</div>
-        <div class="top-meta">${escapeHtml(l.address || "")}</div>
+        ${l.address && l.address !== listingTitle(l) ? `<div class="top-meta">${escapeHtml(l.address)}</div>` : ""}
         <div class="top-meta"><span class="badge">${escapeHtml(l.site)}</span> ${escapeHtml((l.saved_at || "").slice(0, 10))}</div>
         ${flagChipsHtml(l)}
       </div>
@@ -1535,8 +1547,8 @@ function renderResults(listings) {
       <td>${thumbHtml(l)}</td>
       <td class="tabnum">${escapeHtml((l.first_seen || "").slice(0, 16).replace("T", " "))}</td>
       <td><span class="badge">${escapeHtml(l.site)}</span></td>
-      <td><a href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.title || l.address || "ver aviso")}</a><br>
-          <small>${escapeHtml(l.address || "")}</small>
+      <td><a href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(listingTitle(l))}</a>
+          ${l.address && l.address !== listingTitle(l) ? `<br><small>${escapeHtml(l.address)}</small>` : ""}
           ${flagChipsHtml(l)}</td>
       <td>${fmtPrice(l)}</td>
       <td>${l.rooms ?? "-"} amb / ${l.surface_m2 ? l.surface_m2 + " m²" : "-"}</td>
@@ -1788,9 +1800,9 @@ function topCardHtml({ l, detail }, rank) {
       <div class="top-thumb">${photoCarouselHtml(l, thumbExtras)}</div>
       <div class="top-body">
         <div class="top-price">${fmtPrice(l)} <span class="badge">${escapeHtml(detail || "")}</span></div>
-        <a class="top-title" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.title || l.address || "ver aviso")}</a>
+        <a class="top-title" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(listingTitle(l))}</a>
         <div class="top-meta">${escapeHtml(meta)}</div>
-        <div class="top-meta">${escapeHtml(l.address || "")}</div>
+        ${l.address && l.address !== listingTitle(l) ? `<div class="top-meta">${escapeHtml(l.address)}</div>` : ""}
         <div class="top-meta"><span class="badge">${escapeHtml(l.site)}</span> ${escapeHtml(l.search_name || "")}</div>
         ${flagChipsHtml(l)}
         ${l.url ? `<a class="btn small ver-aviso top-ver" href="${escapeHtml(l.url)}" target="_blank" rel="noopener" title="Abrir el aviso en ${escapeHtml(l.site)}">${icon("external-link", 14)} Ver aviso en ${escapeHtml(l.site)}</a>` : ""}
