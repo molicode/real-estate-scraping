@@ -1531,6 +1531,59 @@ document.querySelectorAll("#t-max-price, #t-min-rooms, #t-min-surface").forEach(
 
 /* Ranking según los criterios del usuario. El precio solo se compara
  * entre avisos de la misma moneda. */
+// El tipo no se guarda como campo: se infiere del título y la URL del aviso.
+function guessPropertyType(l) {
+  const hay = `${l.title || ""} ${l.url || ""}`.toLowerCase();
+  if (/\bph\b|\/ph[-/]/.test(hay)) return "ph";
+  if (/\bcasas?\b|chalet/.test(hay)) return "casa";
+  if (/monoambiente|departamento|\bdepto\b|\bdto\b|\/departamento/.test(hay)) return "departamento";
+  return null;
+}
+
+// Patio/jardín/parrilla en el título (única fuente que tenemos del aviso).
+function hasOutdoor(l) {
+  return /\bpatio\b|jard[ií]n|parrilla|quincho|\bfondo\b|terraza/.test((l.title || "").toLowerCase());
+}
+
+// Seguridad de la zona: MULTIPLICADOR del puntaje (no un sumando), porque
+// "zona segura / barrio seguro" es un requisito, no un lindo-de-tener. Una
+// villa o una comuna/barrio rojo hunden el puntaje por más lindo que sea.
+function safetyMultiplier(l) {
+  const flags = l.flags || [];
+  if (flags.some((f) => f.type === "villa")) return 0.08;
+  const c = flags.find((f) => f.type === "crime");
+  if (c) return c.level === "high" ? 0.25 : c.level === "med" ? 0.7 : 1;
+  return 0.9; // zona sin dato de delito: casi neutral
+}
+
+// Dormitorios: 3 es lo ideal. Una casa banca 2; PH y depto piden 3 sí o sí.
+function bedroomsScore(l, type) {
+  const b = l.bedrooms;
+  if (b == null) return 0.4; // desconocido: ni premia ni castiga fuerte
+  if (b >= 3) return 1;
+  if (b === 2) return type === "casa" ? 0.75 : 0.25;
+  return 0.1;
+}
+
+// Puntaje "para vivir" (0..1) según el criterio del usuario, por tipo de propiedad.
+function livabilityParts(l, priceRanges, norm) {
+  const type = guessPropertyType(l);
+  const bed = bedroomsScore(l, type);
+  const amb = l.rooms == null ? 0.4 : l.rooms >= 4 ? 1 : l.rooms === 3 ? 0.7 : l.rooms === 2 ? 0.4 : 0.15;
+  const depto = type === "departamento";
+  const outdoor = hasOutdoor(l) ? 1 : 0.4;
+  const pr = priceRanges[l.price_currency || "?"];
+  const priceScore = pr && l.price_amount != null ? 1 - norm(l.price_amount, pr[0], pr[1]) : 0.5;
+  // Calidad del inmueble: dormitorios manda, después ambientes; patio solo casa/PH.
+  const w = depto
+    ? { bed: 0.48, amb: 0.32, out: 0, price: 0.20 }
+    : { bed: 0.40, amb: 0.25, out: 0.15, price: 0.20 };
+  const quality = w.bed * bed + w.amb * amb + w.out * outdoor + w.price * priceScore;
+  // La seguridad multiplica: una zona insegura hunde el puntaje entero.
+  const score = quality * safetyMultiplier(l);
+  return { type, score };
+}
+
 function computeTop(operation, count = 5) {
   const criteria = $("t-criteria").value;
   const curFilter = $("t-currency").value;
@@ -1571,6 +1624,17 @@ function computeTop(operation, count = 5) {
   } else if (criteria === "recent") {
     scored = group.map((l) => ({ l, score: null, detail: (l.first_seen || "").slice(0, 10) }));
     scored.sort((a, b) => (b.l.first_seen || "").localeCompare(a.l.first_seen || ""));
+  } else if (criteria === "livable") {
+    // "Para vivir": dormitorios (3, casa banca 2), 4+ ambientes, patio en
+    // casa/PH, y zona/barrio seguros. Ver livabilityParts().
+    const byCurrency = {};
+    for (const l of group) if (l.price_amount != null) (byCurrency[l.price_currency || "?"] ||= []).push(l.price_amount);
+    const priceRanges = Object.fromEntries(Object.entries(byCurrency).map(([c, v]) => [c, range(v)]));
+    scored = group.map((l) => {
+      const { score } = livabilityParts(l, priceRanges, norm);
+      return { l, score, detail: `ideal ${Math.round(score * 100)}%` };
+    });
+    scored.sort((a, b) => b.score - a.score || (b.l.first_seen || "").localeCompare(a.l.first_seen || ""));
   } else {
     // balanceado
     const byCurrency = {};
@@ -1644,7 +1708,10 @@ function startImageCycling() {
 
 function topCardHtml({ l, detail }, rank) {
   const meta = [
+    PTYPE_LABEL[guessPropertyType(l)] || null,
+    l.bedrooms != null ? `${l.bedrooms} dorm` : null,
     l.rooms ? `${l.rooms} amb` : null,
+    hasOutdoor(l) ? "patio/jardín" : null,
     l.surface_m2 ? `${Math.round(l.surface_m2)} m²` : null,
     pricePerM2(l) ? `${Math.round(pricePerM2(l)).toLocaleString("es-AR")}/m²` : null,
   ].filter(Boolean).join(" · ");
@@ -1965,9 +2032,10 @@ $("runs-check-all").addEventListener("change", (e) => {
 $("bulk-del-runs").addEventListener("click", async () => {
   const ids = [...selectedRuns];
   if (!ids.length || !confirm(`¿Eliminar ${ids.length} corridas de la lista? Los avisos guardados NO se tocan.`)) return;
-  setStatus($("runs-status"), `Borrando ${ids.length} corridas...`);
-  let ok = 0;
-  for (const id of ids) {
+  let ok = 0, lastErr = null;
+  for (let i = 0; i < ids.length; i++) {
+    const id = ids[i];
+    setStatus($("runs-status"), `Borrando corridas... ${i + 1}/${ids.length}`);
     try {
       const resp = await gh(`/actions/runs/${id}`, { method: "DELETE" });
       if (resp.status === 204) {
@@ -1975,12 +2043,35 @@ $("bulk-del-runs").addEventListener("click", async () => {
         document.querySelector(`.run-row[data-row-run="${id}"]`)?.remove();
         runsCache = runsCache.filter((r) => String(r.id) !== id);
         selectedRuns.delete(id);
+      } else {
+        lastErr = `status ${resp.status}`;
       }
-    } catch { /* sigue con las demás */ }
+    } catch (err) {
+      lastErr = err.message;
+      // 403 = falta de permiso o rate limit; no tiene sentido seguir martillando
+      if (/\b403\b/.test(err.message)) break;
+    }
+    // pausita para no gatillar el secondary rate limit de GitHub
+    if (i < ids.length - 1) await new Promise((r) => setTimeout(r, 120));
   }
   updateSelCount();
-  setStatus($("runs-status"), `${ok} corridas eliminadas`, "ok");
+  if (!lastErr) {
+    setStatus($("runs-status"), `${ok} corridas eliminadas`, "ok");
+  } else {
+    setStatus($("runs-status"), deleteErrorHint(ok, ids.length, lastErr), "error");
+  }
 });
+
+// Mensaje claro cuando el borrado de corridas falla (distingue permiso vs rate limit).
+function deleteErrorHint(ok, total, err) {
+  let hint = "";
+  if (/\b403\b/.test(err)) {
+    hint = /rate limit|secondary/i.test(err)
+      ? " — GitHub frenó por rate limit; esperá un minuto y reintentá con menos corridas."
+      : " — al token le falta el permiso 'Actions: Read and write'. Regeneralo en GitHub con ese permiso y volvé a conectar.";
+  }
+  return `${ok}/${total} corridas eliminadas. Error: ${err}${hint}`;
+}
 
 $("bulk-del-data").addEventListener("click", async () => {
   const runs = [...selectedRuns].map((id) => runsCache.find((r) => String(r.id) === id)).filter(Boolean);
