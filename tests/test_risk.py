@@ -73,10 +73,10 @@ def test_villa_flag():
 
 
 def test_crime_flag_por_comuna():
-    crime = {
+    crime = {"comunas": {
         "14": {"level": "bajo", "per100k": 1200},
         "1": {"level": "alto", "per100k": 5400},
-    }
+    }, "barrios": {}}
     palermo = make("p", address="Thames 800, Palermo")
     centro = make("c", address="Lima 100, Constitución")
     store = {"p": palermo, "c": centro}
@@ -86,6 +86,19 @@ def test_crime_flag_por_comuna():
     assert cp["level"] == "low"
     assert cc["level"] == "high"
     assert "Comuna 1" in cc["label"]
+
+
+def test_crime_flag_por_barrio_gana_a_comuna():
+    # Barrio con nivel propio: prevalece sobre el de la comuna
+    crime = {
+        "comunas": {"14": {"level": "bajo", "per100k": 1000}},
+        "barrios": {"palermo": {"level": "alto", "comuna": 14, "total": 9000}},
+    }
+    palermo = make("p", address="Thames 800, Palermo")
+    risk.compute_all({"p": palermo}, now=NOW, crime=crime)
+    cf = next(f for f in palermo["flags"] if f["type"] == "crime")
+    assert cf["level"] == "high"
+    assert "Palermo" in cf["label"]
 
 
 def test_sin_crime_no_rompe():
