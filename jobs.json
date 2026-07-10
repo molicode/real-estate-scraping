@@ -5,14 +5,39 @@
   },
   "searches": [
     {
-      "name": "csdfsdfsdf",
-      "url": "https://www.argenprop.com/departamentos/alquiler/capital-federal",
+      "name": "ARGENPROP___ALQUILER___PH_CABALLITO",
+      "url": "https://www.argenprop.com/ph/alquiler/caballito",
       "site": "argenprop",
       "operation": "alquiler",
       "enabled": true,
-      "max_pages": 2,
-      "every_hours": 1,
-      "filters": {}
+      "max_pages": 10,
+      "every_hours": 24,
+      "filters": {
+        "currency": "ARS",
+        "min_rooms": 4,
+        "min_bedrooms": 3,
+        "min_bathrooms": 2,
+        "require_price": true,
+        "keywords_include": [
+          "baño completo",
+          "toilette"
+        ],
+        "keywords_exclude": [
+          "temporario",
+          "temporal",
+          "pozo",
+          "en construcción",
+          "oficina",
+          "local",
+          "compartido",
+          "cochera",
+          "apto comercial",
+          "galpón",
+          "cochera fija"
+        ]
+      },
+      "ptype": "ph",
+      "zone": "caballito"
     }
   ]
 }
