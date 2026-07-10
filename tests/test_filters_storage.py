@@ -69,6 +69,27 @@ def test_keywords_include_es_cualquiera():
     assert not matches(l, {"keywords_include": ["toilette", "pileta"]})  # ninguna aparece
 
 
+def test_keywords_exclude_por_palabra_corta_y_sin_acento():
+    # "comercial" atrapa "apto comercial", "local comercial", etc.
+    for titulo in ["Apto comercial", "Local comercial 50m", "Depto comercial"]:
+        assert not matches(make_listing(title=titulo), {"keywords_exclude": ["comercial"]})
+    # Y NO descarta un depto común (no dice "comercial").
+    assert matches(make_listing(title="Depto 3 amb luminoso"), {"keywords_exclude": ["comercial"]})
+
+    # El match ignora acentos en ambos sentidos: "construcción" atrapa
+    # "construccion" y viceversa.
+    assert not matches(
+        make_listing(title="Vendo en construccion, entrega 2027"),
+        {"keywords_exclude": ["construcción"]},
+    )
+    assert not matches(
+        make_listing(title="En construcción, apto pozo"),
+        {"keywords_exclude": ["construccion"]},
+    )
+    # Y el include también ignora acentos.
+    assert matches(make_listing(title="Cochera con baulera"), {"keywords_include": ["baulera"]})
+
+
 def test_add_new_dedup():
     stored = {}
     first_batch = [make_listing(id="a:1"), make_listing(id="a:2")]

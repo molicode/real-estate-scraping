@@ -1117,10 +1117,18 @@ $("clear-history").addEventListener("click", async () => {
   }
 });
 
+// El peso argentino y el dólar comparten el símbolo "$", así que mostramos
+// la moneda explícita con banderita: 🇦🇷 $ARS para pesos, 🇺🇸 $US para dólares.
+// Devuelve texto plano (sirve tanto en innerHTML como dentro de escapeHtml).
 function fmtPrice(l) {
   if (l.price_amount == null) return "consultar";
-  const cur = l.price_currency === "USD" ? "USD" : "$";
-  return `${cur} ${Number(l.price_amount).toLocaleString("es-AR")}`;
+  const n = Number(l.price_amount).toLocaleString("es-AR");
+  const cur = l.price_currency === "USD"
+    ? "🇺🇸 $US"
+    : l.price_currency === "ARS"
+      ? "🇦🇷 $ARS"
+      : "$"; // moneda no detectada: símbolo neutro
+  return `${cur} ${n}`;
 }
 
 // Algunos portales (Zonaprop) no traen título y el parser deja el precio ahí:

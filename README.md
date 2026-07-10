@@ -29,6 +29,7 @@ La carpeta [`web/`](web/) se despliega a GitHub Pages con [`pages.yml`](.github/
 - **Acceso con usuario y clave**: la web está detrás de un gate; recién ahí pedís conectar con GitHub. La conexión se muestra como un semáforo (verde = conectado) desplegable.
 - **Tema claro y oscuro** (arranca en claro; se recuerda tu elección).
 - **Color por operación**: alquiler se muestra en celeste sereno y compra en lavanda, de forma consistente en Jobs, Top 5, Me gustan y Corridas (un chip y un borde suave).
+- **Moneda explícita**: como el peso y el dólar comparten el símbolo `$`, los montos se muestran como **🇦🇷 $ARS** (pesos) o **🇺🇸 $US** (dólares) en toda la app.
 - **Jobs** (pestaña *Jobs*): crear / editar / **pausar** / **detener** / **ejecutar ahora** / eliminar / **clonar**. El formulario está seccionado por color, con ayuda `(i)` en cada campo y combos que también aceptan texto libre. Los nombres se autogeneran como `portal_operacion_tipo_zona`. Al elegir una zona ves su **nivel de seguridad** (🔴 alto / 🟠 medio / 🟢 bajo) según datos oficiales; para zonas del **GBA norte (Vicente López: Olivos, La Lucila, Florida…)** se muestra una estimación aclarada como tal.
 - **Filtros**: precio, moneda, ambientes, dormitorios, **baños** (por tipo: toilette, en suite, etc.), superficie y keywords para incluir/excluir (con chips frecuentes a mano, como `cochera`).
 - **Vista lista o tarjetas**: en Top 5, Buscar y Me gustan podés alternar con un botón entre **tarjetas** y **lista** (tabla); la preferencia se recuerda por sección.
