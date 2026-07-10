@@ -5,7 +5,7 @@
   },
   "searches": [
     {
-      "name": "ARGENPROP_ALQUILER_PH_CABALLITO",
+      "name": "argenprop_alquiler_ph_caballito",
       "url": "https://www.argenprop.com/ph/alquiler/caballito",
       "site": "argenprop",
       "operation": "alquiler",
@@ -32,6 +32,7 @@
           "cochera fija"
         ]
       },
+      "mode": "menu",
       "ptype": "ph",
       "zone": "caballito"
     },
