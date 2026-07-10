@@ -464,5 +464,16 @@
   "new": 0,
   "total_stored": 0,
   "errors": []
+ },
+ {
+  "finished_at": "2026-07-10T03:08:28Z",
+  "only_job": "ARGENPROP_ALQUILER_PH_CABALLITO",
+  "jobs": {
+   "ARGENPROP_ALQUILER_PH_CABALLITO": 7
+  },
+  "found": 7,
+  "new": 7,
+  "total_stored": 7,
+  "errors": []
  }
 ]

@@ -1,1 +1,241 @@
-{}
+{
+  "argenprop:18706844": {
+    "address": "CARLOS GUIDO Y SPANO 1100",
+    "bathrooms": null,
+    "bedrooms": 4,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:08:28Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:18706844",
+    "image": "https://www.argenprop.com/static-content/44860781/f7fe6bb7-efdf-4cab-ab0f-91947e1608b3_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/44860781/f7fe6bb7-efdf-4cab-ab0f-91947e1608b3_u_small.jpg",
+      "https://www.argenprop.com/static-content/44860781/2d90fa5a-d504-4c6e-806b-d8c18bba1920_u_small.jpg",
+      "https://www.argenprop.com/static-content/44860781/d14732d6-f7b5-4939-9383-866a04212406_u_small.jpg",
+      "https://www.argenprop.com/static-content/44860781/83316ac6-764b-4c99-b1b5-3e0ec65c8a6a_u_small.jpg",
+      "https://www.argenprop.com/static-content/44860781/c59fea7d-0f7d-4a51-9b84-b662c257a1b6_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 1800000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "ARGENPROP_ALQUILER_PH_CABALLITO",
+    "site": "argenprop",
+    "surface_m2": 70.0,
+    "title": "CABALLITO PH ENTRADA INDEPENDIENTE",
+    "url": "https://www.argenprop.com/ph-en-alquiler-en-caballito-norte-5-ambientes--18706844"
+  },
+  "argenprop:19453085": {
+    "address": "Riglos al 600",
+    "bathrooms": null,
+    "bedrooms": 3,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:08:28Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:19453085",
+    "image": "https://www.argenprop.com/static-content/58035491/effbe848-67c0-470a-8362-d9b345a9e6e5_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/58035491/effbe848-67c0-470a-8362-d9b345a9e6e5_u_small.jpg",
+      "https://www.argenprop.com/static-content/58035491/d2a37182-e81f-4284-8094-bdd32e6d71f6_u_small.jpg",
+      "https://www.argenprop.com/static-content/58035491/9be84696-29d4-44ab-a00d-1c91a8eec05b_u_small.jpg",
+      "https://www.argenprop.com/static-content/58035491/1c16919d-1086-41a3-a8a0-d2b759d617f5_u_small.jpg",
+      "https://www.argenprop.com/static-content/58035491/280f3f85-07c5-486c-aae1-f7b08f82c5d6_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 2000000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "ARGENPROP_ALQUILER_PH_CABALLITO",
+    "site": "argenprop",
+    "surface_m2": 120.0,
+    "title": "Riglos 600 - PH 4 ambientes - entrada independiente",
+    "url": "https://www.argenprop.com/ph-en-alquiler-en-caballito-6-ambientes--19453085"
+  },
+  "argenprop:19673147": {
+    "address": "Yerbal 100, Piso Pb",
+    "bathrooms": null,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:08:28Z",
+    "flags": [
+      {
+        "label": "Precio 75% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      },
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:19673147",
+    "image": "https://www.argenprop.com/static-content/35172551/0949c397-8e48-41a3-b0e5-23be3f5f6761_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/35172551/0949c397-8e48-41a3-b0e5-23be3f5f6761_u_small.jpg",
+      "https://www.argenprop.com/static-content/35172551/76e6d32f-09cf-485b-86e1-1fef48652e38_u_small.jpg",
+      "https://www.argenprop.com/static-content/35172551/f30f0ee6-598d-47e6-971e-62b8d021f5f0_u_small.jpg",
+      "https://www.argenprop.com/static-content/35172551/dddb5218-65c3-4dc3-a53f-c15d559edab8_u_small.jpg",
+      "https://www.argenprop.com/static-content/35172551/78e1b66f-03ff-44f5-834e-ab6317987784_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 450000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "ARGENPROP_ALQUILER_PH_CABALLITO",
+    "site": "argenprop",
+    "surface_m2": 24.0,
+    "title": "MONOAMBIENTE A LA CALLE EN PLANTA BAJA APTO PROFESIONAL",
+    "url": "https://www.argenprop.com/ph-en-alquiler-en-caballito--19673147"
+  },
+  "argenprop:19831090": {
+    "address": "Avenida Rivadavia e/ Victor Martinez y Emilio Mitre",
+    "bathrooms": 6,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:08:28Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:19831090",
+    "image": "https://www.argenprop.com/static-content/09013891/3a89ff1e-102a-4281-b794-7cf4c0d56060_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/09013891/3a89ff1e-102a-4281-b794-7cf4c0d56060_u_small.jpg",
+      "https://www.argenprop.com/static-content/09013891/a57a8c3a-7768-4558-b625-ed2c33d56cb2_u_small.jpg",
+      "https://www.argenprop.com/static-content/09013891/132bcddb-411e-403b-a961-39a4107ef477_u_small.jpg",
+      "https://www.argenprop.com/static-content/09013891/cb287c39-076f-4ede-91b6-129b625c3a47_u_small.jpg",
+      "https://www.argenprop.com/static-content/09013891/78d99a93-5dc6-4f0e-9100-072636b9c1cf_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 3900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "ARGENPROP_ALQUILER_PH_CABALLITO",
+    "site": "argenprop",
+    "surface_m2": 220.0,
+    "title": "PH en Alquiler - 6 Baños - 330mts - Caballito",
+    "url": "https://www.argenprop.com/ph-en-alquiler-en-caballito-1-ambiente--19831090"
+  },
+  "argenprop:19963154": {
+    "address": "Jose Maria Moreno 100, Piso 0",
+    "bathrooms": null,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:08:28Z",
+    "flags": [
+      {
+        "label": "Precio 50% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      },
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:19963154",
+    "image": "https://www.argenprop.com/static-content/45136991/86abb6d8-8371-4b58-ad48-5057f10ee6d9_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/45136991/86abb6d8-8371-4b58-ad48-5057f10ee6d9_u_small.jpg",
+      "https://www.argenprop.com/static-content/45136991/41e3e6ad-61e2-474d-98c0-a5bfddf5b59b_u_small.jpg",
+      "https://www.argenprop.com/static-content/45136991/2bd8126c-daf9-4faa-9ec4-adcd850a5d67_u_small.jpg",
+      "https://www.argenprop.com/static-content/45136991/6022b280-aea5-4d0f-802d-7d61f7614f57_u_small.jpg",
+      "https://www.argenprop.com/static-content/45136991/9b970df1-7dd3-439a-b9d1-43f9d791e8d8_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 900000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "ARGENPROP_ALQUILER_PH_CABALLITO",
+    "site": "argenprop",
+    "surface_m2": null,
+    "title": "ALQUILER PH 2 AMBIENTES CON PATIO Y TERRAZA CABALLITO",
+    "url": "https://www.argenprop.com/ph-en-alquiler-en-caballito--19963154"
+  },
+  "argenprop:19980224": {
+    "address": "Yerbal 100, Piso Pb",
+    "bathrooms": null,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:08:28Z",
+    "flags": [
+      {
+        "label": "Precio 68% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      },
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:19980224",
+    "image": "https://www.argenprop.com/static-content/35172551/0949c397-8e48-41a3-b0e5-23be3f5f6761_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/35172551/0949c397-8e48-41a3-b0e5-23be3f5f6761_u_small.jpg",
+      "https://www.argenprop.com/static-content/35172551/76e6d32f-09cf-485b-86e1-1fef48652e38_u_small.jpg",
+      "https://www.argenprop.com/static-content/35172551/f30f0ee6-598d-47e6-971e-62b8d021f5f0_u_small.jpg",
+      "https://www.argenprop.com/static-content/35172551/dddb5218-65c3-4dc3-a53f-c15d559edab8_u_small.jpg",
+      "https://www.argenprop.com/static-content/35172551/78e1b66f-03ff-44f5-834e-ab6317987784_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 580000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "ARGENPROP_ALQUILER_PH_CABALLITO",
+    "site": "argenprop",
+    "surface_m2": 24.0,
+    "title": "MONOAMBIENTE A LA CALLE EN PLANTA BAJA APTO PROFESIONAL",
+    "url": "https://www.argenprop.com/ph-en-alquiler-en-caballito--19980224"
+  },
+  "argenprop:7819473": {
+    "address": "Cnel R L Falcon 1400, Piso 1",
+    "bathrooms": null,
+    "bedrooms": 6,
+    "expenses": null,
+    "first_seen": "2026-07-10T03:08:28Z",
+    "flags": [
+      {
+        "label": "Caballito: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "argenprop:7819473",
+    "image": "https://www.argenprop.com/static-content/3749187/77374121-1a53-44ea-8d82-adf55ecc638f_u_small.jpg",
+    "images": [
+      "https://www.argenprop.com/static-content/3749187/77374121-1a53-44ea-8d82-adf55ecc638f_u_small.jpg",
+      "https://www.argenprop.com/static-content/3749187/9d524d3a-6852-468b-b6eb-e1814def1035_u_small.jpg",
+      "https://www.argenprop.com/static-content/3749187/88c6209d-490e-4fd7-857a-b9fe4c52c021_u_small.jpg",
+      "https://www.argenprop.com/static-content/3749187/519dcce3-ea81-45fb-9229-420855763249_u_small.jpg",
+      "https://www.argenprop.com/static-content/3749187/445fb954-4e1b-40ac-8ef7-16c7216d8e1e_u_small.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 1800000.0,
+    "price_currency": "ARS",
+    "rooms": null,
+    "search_name": "ARGENPROP_ALQUILER_PH_CABALLITO",
+    "site": "argenprop",
+    "surface_m2": 95.0,
+    "title": "PH ANTIGUO ENTRADA INDEPENDIENTE 6 HABITACIONES 2 BAÑOS TERRAZA SIN EXPENSAS SOLO COMERCIAL PROFESIONAL",
+    "url": "https://www.argenprop.com/ph-en-alquiler-en-caballito-sur-7-ambientes--7819473"
+  }
+}
