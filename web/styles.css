@@ -506,17 +506,25 @@ nav#tabs {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 14px 18px;
+  padding: 11px 16px;
   cursor: pointer;
   list-style: none;
   user-select: none;
 }
 .filter-sec > summary::-webkit-details-marker { display: none; }
-.filter-sec > summary > h3 { margin: 0; }
+.filter-sec > summary::marker { content: ""; }
+.filter-sec > summary > h3 {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 500;
+}
 .filter-sec > summary .summary-hint { margin-left: auto; }
 .filter-sec[open] > summary { border-bottom: 1px solid var(--border); }
 .filter-sec[open] > summary .summary-hint .ic { transform: rotate(180deg); }
-.filter-sec .grid { padding: 12px 18px 16px; }
+.filter-sec .grid { padding: 12px 16px 16px; }
 
 /* ============================================================
    Tooltip (i)
