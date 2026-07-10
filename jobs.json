@@ -18,10 +18,6 @@
         "min_bedrooms": 3,
         "min_bathrooms": 2,
         "require_price": true,
-        "keywords_include": [
-          "baño completo",
-          "toilette"
-        ],
         "keywords_exclude": [
           "temporario",
           "temporal",
@@ -53,10 +49,6 @@
         "min_bedrooms": 3,
         "min_bathrooms": 2,
         "require_price": true,
-        "keywords_include": [
-          "baño completo",
-          "toilette"
-        ],
         "keywords_exclude": [
           "temporario",
           "temporal",
@@ -89,10 +81,6 @@
         "min_bedrooms": 3,
         "min_bathrooms": 2,
         "require_price": true,
-        "keywords_include": [
-          "baño completo",
-          "toilette"
-        ],
         "keywords_exclude": [
           "temporario",
           "temporal",
@@ -125,10 +113,6 @@
         "min_bedrooms": 3,
         "min_bathrooms": 2,
         "require_price": true,
-        "keywords_include": [
-          "baño completo",
-          "toilette"
-        ],
         "keywords_exclude": [
           "temporario",
           "temporal",
@@ -161,10 +145,6 @@
         "min_bedrooms": 3,
         "min_bathrooms": 2,
         "require_price": true,
-        "keywords_include": [
-          "baño completo",
-          "toilette"
-        ],
         "keywords_exclude": [
           "temporario",
           "temporal",
@@ -197,10 +177,6 @@
         "min_bedrooms": 3,
         "min_bathrooms": 2,
         "require_price": true,
-        "keywords_include": [
-          "baño completo",
-          "toilette"
-        ],
         "keywords_exclude": [
           "temporario",
           "temporal",
@@ -233,10 +209,6 @@
         "min_bedrooms": 3,
         "min_bathrooms": 2,
         "require_price": true,
-        "keywords_include": [
-          "baño completo",
-          "toilette"
-        ],
         "keywords_exclude": [
           "temporario",
           "temporal",
@@ -269,10 +241,6 @@
         "min_bedrooms": 3,
         "min_bathrooms": 2,
         "require_price": true,
-        "keywords_include": [
-          "baño completo",
-          "toilette"
-        ],
         "keywords_exclude": [
           "temporario",
           "temporal",
@@ -305,10 +273,6 @@
         "min_bedrooms": 3,
         "min_bathrooms": 2,
         "require_price": true,
-        "keywords_include": [
-          "baño completo",
-          "toilette"
-        ],
         "keywords_exclude": [
           "temporario",
           "temporal",
@@ -341,10 +305,6 @@
         "min_bedrooms": 3,
         "min_bathrooms": 2,
         "require_price": true,
-        "keywords_include": [
-          "baño completo",
-          "toilette"
-        ],
         "keywords_exclude": [
           "temporario",
           "temporal",
@@ -377,10 +337,6 @@
         "min_bedrooms": 3,
         "min_bathrooms": 2,
         "require_price": true,
-        "keywords_include": [
-          "baño completo",
-          "toilette"
-        ],
         "keywords_exclude": [
           "temporario",
           "temporal",
@@ -413,10 +369,6 @@
         "min_bedrooms": 3,
         "min_bathrooms": 2,
         "require_price": true,
-        "keywords_include": [
-          "baño completo",
-          "toilette"
-        ],
         "keywords_exclude": [
           "temporario",
           "temporal",
