@@ -56,9 +56,14 @@ def matches(listing: Listing, filters: dict[str, Any]) -> bool:
         return False
 
     haystack = f"{listing.title} {listing.address}".lower()
-    for kw in filters.get("keywords_include", []) or []:
-        if kw.lower() not in haystack:
-            return False
+    # "Incluir": el aviso pasa si contiene AL MENOS UNA de las palabras (OR).
+    # Exigir todas (AND) sobre un texto corto como el título hacía que dos
+    # palabras específicas dejaran casi todo en cero. Ojo: solo se busca en
+    # título + dirección, no en la descripción (el scraper no la baja), así
+    # que términos que solo salen en la descripción no sirven acá.
+    include = [kw.lower() for kw in (filters.get("keywords_include") or []) if kw.strip()]
+    if include and not any(kw in haystack for kw in include):
+        return False
     for kw in filters.get("keywords_exclude", []) or []:
         if kw.lower() in haystack:
             return False

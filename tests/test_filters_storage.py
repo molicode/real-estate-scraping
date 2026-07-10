@@ -61,6 +61,14 @@ def test_keywords():
     )
 
 
+def test_keywords_include_es_cualquiera():
+    # Alcanza con que aparezca UNA de las palabras (OR), no todas.
+    l = make_listing(title="PH 4 ambientes con patio", address="Caballito, CABA")
+    assert matches(l, {"keywords_include": ["patio", "toilette"]})   # tiene "patio"
+    assert matches(l, {"keywords_include": ["caballito"]})           # en la dirección
+    assert not matches(l, {"keywords_include": ["toilette", "pileta"]})  # ninguna aparece
+
+
 def test_add_new_dedup():
     stored = {}
     first_batch = [make_listing(id="a:1"), make_listing(id="a:2")]
