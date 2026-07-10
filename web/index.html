@@ -365,8 +365,8 @@
     <h3><span class="ic-h" data-icon="search"></span> Buscar en los avisos guardados</h3>
     <p class="status">Todo lo que el scraper encuentra queda guardado en el repo (hasta 1 año). Los filtros se aplican al instante. Click en una foto para verla grande con todas las imágenes.</p>
 
-    <div class="form-section sec-basic">
-      <h3><span class="ic-h" data-icon="search"></span> Texto y origen</h3>
+    <details class="form-section filter-sec" open>
+      <summary><h3><span class="ic-h" data-icon="search"></span> Texto y origen</h3><span class="summary-hint"><span data-icon="chevron-down"></span></span></summary>
       <div class="grid">
         <label>Contiene el texto
           <input type="text" id="s-text" placeholder="palermo, balcón, nombre de calle...">
@@ -388,10 +388,10 @@
           </select>
         </label>
       </div>
-    </div>
+    </details>
 
-    <div class="form-section sec-price">
-      <h3><span class="ic-h" data-icon="banknote"></span> Precio</h3>
+    <details class="form-section filter-sec">
+      <summary><h3><span class="ic-h" data-icon="banknote"></span> Precio</h3><span class="summary-hint"><span data-icon="chevron-down"></span></span></summary>
       <div class="grid">
         <label>Moneda
           <select id="s-currency">
@@ -413,10 +413,10 @@
           </select>
         </label>
       </div>
-    </div>
+    </details>
 
-    <div class="form-section sec-feat">
-      <h3><span class="ic-h" data-icon="ruler"></span> Características</h3>
+    <details class="form-section filter-sec">
+      <summary><h3><span class="ic-h" data-icon="ruler"></span> Características</h3><span class="summary-hint"><span data-icon="chevron-down"></span></span></summary>
       <div class="grid">
         <label>Ambientes mín.
           <input type="number" id="s-min-rooms" min="1" list="dl-rooms">
@@ -443,10 +443,10 @@
           </select>
         </label>
       </div>
-    </div>
+    </details>
 
-    <div class="form-section sec-kw">
-      <h3><span class="ic-h" data-icon="calendar"></span> Fecha y orden</h3>
+    <details class="form-section filter-sec">
+      <summary><h3><span class="ic-h" data-icon="calendar"></span> Fecha y orden</h3><span class="summary-hint"><span data-icon="chevron-down"></span></span></summary>
       <div class="grid">
         <label>Visto desde
           <input type="date" id="s-since">
@@ -477,7 +477,7 @@
           </select>
         </label>
       </div>
-    </div>
+    </details>
 
     <div class="row">
       <button id="search-clear" class="btn"><span data-icon="x"></span> Limpiar filtros</button>

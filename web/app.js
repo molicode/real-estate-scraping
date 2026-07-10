@@ -1072,6 +1072,18 @@ function fmtPrice(l) {
   return `${cur} ${Number(l.price_amount).toLocaleString("es-AR")}`;
 }
 
+// Algunos portales (Zonaprop) no traen título y el parser deja el precio ahí:
+// para no mostrar el precio dos veces, si el "título" es sólo un precio usamos
+// la dirección (o un texto genérico) como encabezado clickeable.
+function isPriceLikeTitle(l) {
+  const t = (l.title || "").trim();
+  if (!t) return true;
+  return /^(usd|us\$|u\$s|\$|ars)?\s*[\d.,]+(\s*(usd|ars|pesos|d[oó]lares))?$/i.test(t);
+}
+function listingTitle(l) {
+  return isPriceLikeTitle(l) ? (l.address || "Ver publicación") : l.title;
+}
+
 /* ---------- Favoritos (Me gustan) ---------- */
 
 let favorites = {};
@@ -1161,9 +1173,9 @@ function favCardHtml(l) {
       <div class="top-thumb">${photoCarouselHtml(l, extra)}</div>
       <div class="top-body">
         <div class="top-price">${fmtPrice(l)}</div>
-        <a class="top-title" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.title || l.address || "ver aviso")}</a>
+        <a class="top-title" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(listingTitle(l))}</a>
         <div class="top-meta">${escapeHtml(meta)}</div>
-        <div class="top-meta">${escapeHtml(l.address || "")}</div>
+        ${l.address && l.address !== listingTitle(l) ? `<div class="top-meta">${escapeHtml(l.address)}</div>` : ""}
         <div class="top-meta"><span class="badge">${escapeHtml(l.site)}</span> ${escapeHtml((l.saved_at || "").slice(0, 10))}</div>
         ${flagChipsHtml(l)}
       </div>
@@ -1535,8 +1547,8 @@ function renderResults(listings) {
       <td>${thumbHtml(l)}</td>
       <td class="tabnum">${escapeHtml((l.first_seen || "").slice(0, 16).replace("T", " "))}</td>
       <td><span class="badge">${escapeHtml(l.site)}</span></td>
-      <td><a href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.title || l.address || "ver aviso")}</a><br>
-          <small>${escapeHtml(l.address || "")}</small>
+      <td><a href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(listingTitle(l))}</a>
+          ${l.address && l.address !== listingTitle(l) ? `<br><small>${escapeHtml(l.address)}</small>` : ""}
           ${flagChipsHtml(l)}</td>
       <td>${fmtPrice(l)}</td>
       <td>${l.rooms ?? "-"} amb / ${l.surface_m2 ? l.surface_m2 + " m²" : "-"}</td>
@@ -1788,9 +1800,9 @@ function topCardHtml({ l, detail }, rank) {
       <div class="top-thumb">${photoCarouselHtml(l, thumbExtras)}</div>
       <div class="top-body">
         <div class="top-price">${fmtPrice(l)} <span class="badge">${escapeHtml(detail || "")}</span></div>
-        <a class="top-title" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.title || l.address || "ver aviso")}</a>
+        <a class="top-title" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(listingTitle(l))}</a>
         <div class="top-meta">${escapeHtml(meta)}</div>
-        <div class="top-meta">${escapeHtml(l.address || "")}</div>
+        ${l.address && l.address !== listingTitle(l) ? `<div class="top-meta">${escapeHtml(l.address)}</div>` : ""}
         <div class="top-meta"><span class="badge">${escapeHtml(l.site)}</span> ${escapeHtml(l.search_name || "")}</div>
         ${flagChipsHtml(l)}
         ${l.url ? `<a class="btn small ver-aviso top-ver" href="${escapeHtml(l.url)}" target="_blank" rel="noopener" title="Abrir el aviso en ${escapeHtml(l.site)}">${icon("external-link", 14)} Ver aviso en ${escapeHtml(l.site)}</a>` : ""}
@@ -2018,19 +2030,49 @@ function runRowHtml(r) {
     ? "Esta corrida no guardó avisos nuevos: no hay datos para borrar"
     : h ? `Borra del histórico los ${h.new} avisos que guardó esta corrida`
         : "Borra del histórico los avisos que guardó esta corrida";
-  const check = selectMode
-    ? `<label class="run-check"><input type="checkbox" data-sel="${r.id}" ${selectedRuns.has(String(r.id)) ? "checked" : ""}></label>`
-    : "";
-  return `<div class="run-row" data-row-run="${r.id}">
-      <span class="run-main">${check}${runIconHtml(r)} <strong class="tabnum">#${r.run_number}</strong> · ${escapeHtml(r.event)} · <span class="tabnum">${when}</span><br>
-        <span class="run-stats">${runStatsHtml(r, runsHistory)}</span>
-      </span>
-      <span class="row">
-        <a href="${r.html_url}" target="_blank" rel="noopener">ver log ${icon("arrow-right", 13)}</a>
-        <button class="btn small danger" data-run="${r.id}" ${knownEmpty ? "disabled" : ""} title="${escapeHtml(delTitle)}">${icon("trash")} Borrar datos</button>
-        <button class="btn small" data-del-run="${r.id}" title="Elimina esta corrida de la lista (no toca los avisos guardados)">${icon("list-x")} Borrar corrida</button>
-      </span>
+  const jobName = h?.only_job || (r.event === "schedule" ? "programada" : r.event === "workflow_dispatch" ? "manual" : r.event || "");
+  // Modo selección: fila plana con checkbox (el foco es elegir para borrar).
+  if (selectMode) {
+    return `<div class="run-row select-row" data-row-run="${r.id}">
+      <label class="run-check"><input type="checkbox" data-sel="${r.id}" ${selectedRuns.has(String(r.id)) ? "checked" : ""}></label>
+      ${runIconHtml(r)} <strong class="tabnum">#${r.run_number}</strong>
+      <span class="run-when tabnum">${when}</span>
+      <span class="run-sum">${runSummary(r, h)}</span>
+      <span class="run-job" title="${escapeHtml(jobName)}">${escapeHtml(jobName)}</span>
     </div>`;
+  }
+  // Modo normal: desplegable con lo importante arriba y las acciones (iconos) adentro.
+  return `<details class="run-card" data-row-run="${r.id}">
+    <summary>
+      ${runIconHtml(r)}
+      <strong class="tabnum run-num">#${r.run_number}</strong>
+      <span class="run-when tabnum">${when}</span>
+      <span class="run-sum">${runSummary(r, h)}</span>
+      <span class="run-job" title="${escapeHtml(jobName)}">${escapeHtml(jobName)}</span>
+      <span class="summary-hint">${icon("chevron-down", 14)}</span>
+    </summary>
+    <div class="details-body">
+      <div class="run-stats">${runStatsHtml(r, runsHistory)}</div>
+      <div class="row run-actions">
+        <a class="btn small icon-btn" href="${r.html_url}" target="_blank" rel="noopener" title="Ver el log completo en GitHub">${icon("external-link", 15)}</a>
+        <button class="btn small danger icon-btn" data-run="${r.id}" ${knownEmpty ? "disabled" : ""} title="${escapeHtml(delTitle)}">${icon("trash", 15)}</button>
+        <button class="btn small icon-btn" data-del-run="${r.id}" title="Eliminar esta corrida de la lista (no toca los avisos guardados)">${icon("list-x", 15)}</button>
+      </div>
+    </div>
+  </details>`;
+}
+
+// Resumen compacto para el encabezado de la corrida (nuevos / encontrados).
+function runSummary(r, h) {
+  const st = r.conclusion || r.status;
+  if (st === "failure") return `<span class="run-badge bad">${icon("alert", 12)} falló</span>`;
+  if (!h) return `<span class="run-badge muted">sin actividad</span>`;
+  const parts = [
+    `<span class="run-badge ok">${icon("sparkles", 12)} ${h.new} nuevos</span>`,
+    `<span class="run-badge">${icon("list", 12)} ${h.found} encontrados</span>`,
+  ];
+  if (h.errors && h.errors.length) parts.push(`<span class="run-badge warn">${icon("alert", 12)} ${h.errors.length}</span>`);
+  return parts.join("");
 }
 
 function renderRuns() {
@@ -2120,7 +2162,7 @@ $("bulk-del-runs").addEventListener("click", async () => {
       const resp = await gh(`/actions/runs/${id}`, { method: "DELETE" });
       if (resp.status === 204) {
         ok++;
-        document.querySelector(`.run-row[data-row-run="${id}"]`)?.remove();
+        document.querySelector(`[data-row-run="${id}"]`)?.remove();
         runsCache = runsCache.filter((r) => String(r.id) !== id);
         selectedRuns.delete(id);
       } else {
@@ -2188,7 +2230,7 @@ $("bulk-del-data").addEventListener("click", async () => {
  * los avisos vistos por primera vez entre el inicio y el fin del run
  * (+2 minutos de margen). */
 function setRowStats(runId, html) {
-  const row = document.querySelector(`.run-row[data-row-run="${runId}"] .run-stats`);
+  const row = document.querySelector(`[data-row-run="${runId}"] .run-stats`);
   if (row) row.innerHTML = html;
 }
 
@@ -2202,7 +2244,7 @@ async function deleteRunRecord(run) {
   try {
     const resp = await gh(`/actions/runs/${run.id}`, { method: "DELETE" });
     if (resp.status !== 204) throw new Error(`status ${resp.status}`);
-    document.querySelector(`.run-row[data-row-run="${run.id}"]`)?.remove();
+    document.querySelector(`[data-row-run="${run.id}"]`)?.remove();
     setStatus($("runs-status"), `Corrida #${run.run_number} eliminada de la lista`, "ok");
   } catch (err) {
     setStatus($("runs-status"), "" + err.message, "error");
