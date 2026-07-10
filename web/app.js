@@ -354,12 +354,14 @@ function jobZone(job) {
 
 // Punto de color con el nivel de inseguridad de la zona (si hay datos)
 function zoneDot(job) {
-  if (!crimeData) return "";
+  // Siempre devuelve un puntito (consistente para todas las zonas): con color
+  // si conocemos el nivel de delito de su comuna, gris si no hay dato.
   const comuna = comunaFromZone(job.zone || job.url || "");
-  const info = comuna && crimeData.comunas[String(comuna)];
-  if (!info) return "";
-  const dot = (LEVEL_INFO[info.level] || {}).dot || "";
-  return `<span class="dot ${dot}" title="Seguridad: ${(LEVEL_INFO[info.level] || {}).txt}"></span>`;
+  const info = comuna && crimeData && crimeData.comunas[String(comuna)];
+  const lvl = info && LEVEL_INFO[info.level];
+  const dot = lvl ? lvl.dot : "muted";
+  const txt = lvl ? `Seguridad: ${lvl.txt}` : "Seguridad: sin dato";
+  return `<span class="dot ${dot}" title="${txt}"></span>`;
 }
 
 function renderJobs() {
@@ -382,8 +384,8 @@ function renderJobs() {
     const every = Math.max(1, Number(job.every_hours) || 1);
     det.innerHTML = `
       <summary>
-        <span class="dot ${enabled ? "green" : "yellow"}" title="${enabled ? "Activo" : "Detenido"}"></span>
-        <span class="badge ${enabled ? "on" : "off"}">${enabled ? "ACTIVO" : "DETENIDO"}</span>
+        <span class="dot ${enabled ? "green live-dot" : "muted"}" title="${enabled ? "Activo (se ejecuta según su frecuencia)" : "Detenido"}"></span>
+        <span class="job-live" id="job-live-${i}"></span>
         <span class="badge">${job.site || "?"}</span>
         <span class="badge">${job.operation === "venta" ? "compra" : job.operation || "?"}</span>
         ${jobPtype(job) ? `<span class="badge">${escapeHtml(jobPtype(job))}</span>` : ""}
@@ -456,7 +458,7 @@ async function runSingleJob(job, index) {
     // El flujo se muestra dentro del propio job (abrimos su desplegable)
     const card = document.querySelectorAll("#jobs-list details.job-card")[index];
     if (card) card.open = true;
-    watchRun($(`job-flow-${index}`), `Ejecutando "${job.name}"`, dispatchedAt);
+    watchRun($(`job-flow-${index}`), `Ejecutando "${job.name}"`, dispatchedAt, index);
   } catch (err) {
     setStatus($("jobs-status"), "" + err.message, "error");
   }
@@ -491,14 +493,37 @@ function renderFlow(container, title, activeIdx, finished = false, resultHtml = 
     ${resultHtml ? `<div class="flow-result">${resultHtml}</div>` : ""}`;
 }
 
-function watchRun(container, title, dispatchedAt) {
-  renderFlow(container, title, 0);
+// Chip compacto de estado en vivo en el encabezado del job (visible aunque el
+// desplegable esté cerrado): en cola / corriendo / listo.
+function updateLiveChip(jobIndex, idx, finished = false, ok = false) {
+  if (jobIndex == null) return;
+  const el = document.getElementById(`job-live-${jobIndex}`);
+  if (!el) return;
+  if (finished) {
+    el.className = `job-live ${ok ? "done" : "failed"}`;
+    el.innerHTML = ok ? `${icon("check-circle", 13)} listo` : `${icon("alert", 13)} falló`;
+    setTimeout(() => { if (el.isConnected) { el.className = "job-live"; el.innerHTML = ""; } }, 8000);
+  } else if (idx <= 1) {
+    el.className = "job-live queued";
+    el.innerHTML = `${icon("hourglass", 13)} en cola`;
+  } else {
+    el.className = "job-live running";
+    el.innerHTML = `${icon("loader", 13)} corriendo`;
+  }
+}
+
+function watchRun(container, title, dispatchedAt, jobIndex = null) {
+  const flow = (idx, finished = false, res = "", ok = false) => {
+    renderFlow(container, title, idx, finished, res);
+    updateLiveChip(jobIndex, idx, finished, ok);
+  };
+  flow(0);
   let runId = null;
   let ticks = 0;
   const timer = setInterval(async () => {
     if (++ticks > 90) { // ~7 minutos de vigilancia máxima
       clearInterval(timer);
-      renderFlow(container, title, FLOW_STEPS.length - 1, true, "La corrida sigue en GitHub; mirá la pestaña Corridas.");
+      flow(FLOW_STEPS.length - 1, true, "La corrida sigue en GitHub; mirá la pestaña Corridas.", true);
       return;
     }
     try {
@@ -510,22 +535,22 @@ function watchRun(container, title, dispatchedAt) {
         if (runs.length) {
           runId = runs[0].id;
           claimedRuns.add(runId);
-          renderFlow(container, title, 1);
+          flow(1);
         }
         return;
       }
       const resp = await gh(`/actions/runs/${runId}/jobs`);
       const job = (await resp.json()).jobs?.[0];
-      if (!job || job.status === "queued") { renderFlow(container, title, 1); return; }
+      if (!job || job.status === "queued") { flow(1); return; }
       if (job.status === "in_progress") {
         const steps = job.steps || [];
         const running = (name) =>
           steps.some((s) => s.name.includes(name) && s.status === "in_progress");
         const doneStep = (name) =>
           steps.some((s) => s.name.includes(name) && s.status === "completed");
-        if (running("Commitear") || doneStep("Ejecutar scraper")) renderFlow(container, title, 4);
-        else if (running("Ejecutar scraper")) renderFlow(container, title, 3);
-        else renderFlow(container, title, 2);
+        if (running("Commitear") || doneStep("Ejecutar scraper")) flow(4);
+        else if (running("Ejecutar scraper")) flow(3);
+        else flow(2);
         return;
       }
       if (job.status === "completed") {
@@ -541,7 +566,7 @@ function watchRun(container, title, dispatchedAt) {
             : "Completado (sin actividad registrada).";
           loadResults(); // refresca Buscar y Top con lo nuevo
         }
-        renderFlow(container, title, FLOW_STEPS.length - 1, ok, result);
+        flow(FLOW_STEPS.length - 1, ok, result, ok);
       }
     } catch { /* reintenta en el próximo tick */ }
   }, 5000);
@@ -1149,7 +1174,8 @@ async function loadRiskData() {
 }
 
 function normZone(s) {
-  return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+  // guiones/guiones bajos -> espacio: así "villa-crespo" matchea "villa crespo"
+  return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[-_]+/g, " ");
 }
 
 function zoneFlag(l) {

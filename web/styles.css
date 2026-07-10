@@ -329,6 +329,39 @@ input[readonly] { background: var(--surface-soft); color: var(--text-soft); }
 .dot.green { background: var(--success); }
 .dot.yellow { background: var(--warn); }
 .dot.red { background: var(--danger); }
+.dot.muted { background: var(--text-faint); }
+
+/* Puntito "encendido": halo suave que late para saber que el job está activo */
+.live-dot {
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--success) 55%, transparent);
+  animation: live-glow 2.4s ease-out infinite;
+}
+@keyframes live-glow {
+  0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--success) 55%, transparent); }
+  70%  { box-shadow: 0 0 0 6px color-mix(in srgb, var(--success) 0%, transparent); }
+  100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--success) 0%, transparent); }
+}
+@media (prefers-reduced-motion: reduce) { .live-dot { animation: none; } }
+
+/* Chip de estado EN VIVO de la corrida del job (en cola / corriendo / listo) */
+.job-live:empty { display: none; }
+.job-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  padding: 1px 8px;
+  border-radius: var(--r-pill);
+  font-weight: 500;
+}
+.job-live .ic { width: 0.9em; height: 0.9em; }
+.job-live.queued { background: var(--warn-container); color: var(--warn); }
+.job-live.running { background: var(--success-container); color: var(--success); }
+.job-live.done { background: var(--success-container); color: var(--success); }
+.job-live.failed { background: var(--danger-container); color: var(--danger); }
+.job-live.running .ic { animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .job-live.running .ic { animation: none; } }
 
 /* ============================================================
    Tabs
