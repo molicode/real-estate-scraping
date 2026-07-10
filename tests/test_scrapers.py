@@ -49,13 +49,14 @@ def test_zonaprop_parse():
     assert first.price_amount == 820000.0
     assert first.price_currency == "ARS"
     assert first.rooms == 2
-    # Junta toda la galería del carrusel (sin el logo de la inmobiliaria).
+    # Junta toda la galería del carrusel (sin el logo .svg de la inmobiliaria),
+    # sin importar el dominio del CDN (Zonaprop usa naventcdn, no zonapropcdn).
     assert first.images == [
-        "https://imgar.zonapropcdn.com/foto1.jpg",
-        "https://imgar.zonapropcdn.com/foto2.jpg",
-        "https://imgar.zonapropcdn.com/foto3.jpg",
+        "https://img10.naventcdn.com/avisos/foto1.jpg",
+        "https://img10.naventcdn.com/avisos/foto2.jpg",
+        "https://img10.naventcdn.com/avisos/foto3.jpg",
     ]
-    assert first.image == "https://imgar.zonapropcdn.com/foto1.jpg"
+    assert first.image == "https://img10.naventcdn.com/avisos/foto1.jpg"
     assert listings[1].price_currency == "USD"
     assert listings[1].bedrooms == 2
 

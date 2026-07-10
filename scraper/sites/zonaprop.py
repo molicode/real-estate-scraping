@@ -83,20 +83,27 @@ class ZonapropScraper(BaseScraper):
             features_el = card.select_one("[data-qa='POSTING_CARD_FEATURES']")
             features = parse_features(features_el.get_text(" · ") if features_el else "")
 
-            # La tarjeta trae toda la galería en el carrusel (flickity), con
-            # cada foto en data-flickity-lazyload. Las juntamos todas (gratis,
-            # sin bajar el detalle) y filtramos por el CDN para evitar logos.
+            # La tarjeta trae toda la galería del carrusel (flickity): cada foto
+            # queda en data-flickity-lazyload (o data-src/src). Las juntamos
+            # todas (gratis, sin bajar el detalle). No filtramos por CDN porque
+            # Zonaprop sirve las fotos desde naventcdn/otros dominios; en cambio
+            # descartamos logos, íconos y placeholders.
             gallery = card.select_one(
                 "[data-qa='POSTING_CARD_GALLERY'], .flickity-slider, .postingCardGallery"
             ) or card
             images: list[str] = []
             seen: set[str] = set()
-            for im in gallery.select("img[data-flickity-lazyload], img[src]"):
-                src = im.get("data-flickity-lazyload") or im.get("src") or ""
-                if src.startswith("http") and "zonapropcdn" in src and src not in seen:
+            for im in gallery.select("img"):
+                src = im.get("data-flickity-lazyload") or im.get("data-src") or im.get("src") or ""
+                if not src.startswith("http"):
+                    continue
+                low = src.lower()
+                if any(bad in low for bad in ("placeholder", "logo", ".svg", "sprite", "/icon")):
+                    continue
+                if src not in seen:
                     seen.add(src)
                     images.append(src)
-                if len(images) >= 30:
+                if len(images) >= 20:
                     break
             image = images[0] if images else ""
 
