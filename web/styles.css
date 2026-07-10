@@ -740,6 +740,32 @@ img.zoomable { cursor: zoom-in; }
 .run-ic-bad { color: var(--danger); }
 .run-ic-muted { color: var(--text-faint); }
 
+/* Selección múltiple de corridas */
+.bulk-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+}
+.bulk-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.bulk-spacer { flex: 1; }
+.run-main { display: inline-flex; align-items: baseline; gap: 8px; min-width: 0; }
+.run-check { display: inline-flex; align-items: center; cursor: pointer; }
+.run-check input { cursor: pointer; }
+.runs-list.selecting .run-row,
+#runs-list.selecting .run-row { border-color: color-mix(in srgb, var(--accent) 35%, var(--border)); }
+
 /* ============================================================
    Flujo animado de la corrida
    ============================================================ */
