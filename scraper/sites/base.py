@@ -39,6 +39,7 @@ class BaseScraper:
     proxy_timeout = 70  # ScraperAPI recomienda timeouts largos
     delay_range = (1.0, 3.0)  # pausa entre páginas para no golpear al sitio
     proxy_fallback = False  # sitios que bloquean IPs de datacenter
+    detail_supported = False  # si sabe enriquecer un aviso desde su detalle
 
     def __init__(self, session: Optional[requests.Session] = None):
         self.session = session or self._build_session()
@@ -84,6 +85,11 @@ class BaseScraper:
 
     def parse(self, html: str) -> Iterable[Listing]:
         raise NotImplementedError
+
+    def parse_detail(self, html: str) -> dict:
+        """Extrae datos extra de la página de detalle de un aviso (galería
+        completa, identidad verificada, etc.). Por defecto no hace nada."""
+        return {}
 
     def search(self, search: Search) -> list[Listing]:
         """Recorre las páginas de la búsqueda y devuelve los avisos parseados."""

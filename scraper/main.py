@@ -143,6 +143,54 @@ def filter_due(searches: list[Search], history: list[dict], now: datetime) -> li
     return due
 
 
+def enrich_details(
+    new_listings: list, stored: dict, cap: int, proxy_exhausted: bool
+) -> None:
+    """Completa la galería de fotos y la identidad verificada de los avisos
+    NUEVOS, bajando su página de detalle. Acotado por `cap` porque cada aviso
+    es un fetch extra (y vía proxy consume créditos)."""
+    if cap <= 0 or not new_listings:
+        return
+    scrapers: dict[str, Any] = {}
+    done = 0
+    for listing in new_listings:
+        if done >= cap:
+            break
+        scraper = scrapers.get(listing.site)
+        if scraper is None:
+            scraper = scrapers[listing.site] = get_scraper(listing.site)
+        if not getattr(scraper, "detail_supported", False):
+            continue
+        # Sin créditos de proxy no vale la pena intentar en sitios bloqueados.
+        if proxy_exhausted and getattr(scraper, "proxy_fallback", False):
+            continue
+        try:
+            html = scraper.fetch(listing.url)
+            if not html:
+                continue
+            data = scraper.parse_detail(html)
+        except Exception:  # el detalle roto no frena la corrida
+            logger.warning("No pude enriquecer el detalle de %s", listing.url)
+            continue
+
+        images = data.get("images") or []
+        if images:
+            listing.images = images
+            if not listing.image:
+                listing.image = images[0]
+        if data.get("verified"):
+            listing.verified = True
+        # add_new ya volcó el aviso al almacén: reflejamos lo enriquecido.
+        entry = stored.get(listing.id)
+        if entry is not None:
+            entry["images"] = listing.images
+            entry["image"] = listing.image
+            entry["verified"] = listing.verified
+        done += 1
+    if done:
+        logger.info("Detalle enriquecido para %d avisos nuevos", done)
+
+
 def main() -> int:
     config_path = Path(sys.argv[1]) if len(sys.argv) > 1 else default_config_path()
     config = load_config(config_path)
@@ -218,6 +266,12 @@ def main() -> int:
         matching = [l for l in found if listing_filters.matches(l, search.filters)]
         stats[search.name] = len(matching)
         all_new.extend(add_new(stored, matching))
+
+    # Enriquecimiento de detalle (galería completa + identidad verificada):
+    # solo para avisos NUEVOS y acotado por costo, porque cada uno es un fetch
+    # extra (vía proxy en sitios bloqueados = créditos de ScraperAPI).
+    enrich_max = int(config.get("detail_enrich_max", 40))
+    enrich_details(all_new, stored, enrich_max, proxy_exhausted)
 
     # Señales de riesgo: se recalculan sobre TODO el almacén (la antigüedad
     # y las medianas cambian en cada corrida). Incluye villa + delito oficial

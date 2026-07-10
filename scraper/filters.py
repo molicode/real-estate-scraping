@@ -7,9 +7,17 @@ o que queremos garantizar aunque el portal cambie.
 
 from __future__ import annotations
 
+import unicodedata
 from typing import Any
 
 from .models import Listing
+
+
+def _norm(text: str) -> str:
+    """Minúsculas y sin acentos, para que 'construcción' matchee 'construccion'
+    y viceversa (los avisos escriben los acentos de forma inconsistente)."""
+    decomposed = unicodedata.normalize("NFD", (text or "").lower())
+    return "".join(c for c in decomposed if unicodedata.category(c) != "Mn")
 
 
 def matches(listing: Listing, filters: dict[str, Any]) -> bool:
@@ -55,17 +63,19 @@ def matches(listing: Listing, filters: dict[str, Any]) -> bool:
     if min_surface is not None and listing.surface_m2 is not None and listing.surface_m2 < min_surface:
         return False
 
-    haystack = f"{listing.title} {listing.address}".lower()
+    haystack = _norm(f"{listing.title} {listing.address}")
     # "Incluir": el aviso pasa si contiene AL MENOS UNA de las palabras (OR).
     # Exigir todas (AND) sobre un texto corto como el título hacía que dos
     # palabras específicas dejaran casi todo en cero. Ojo: solo se busca en
     # título + dirección, no en la descripción (el scraper no la baja), así
     # que términos que solo salen en la descripción no sirven acá.
-    include = [kw.lower() for kw in (filters.get("keywords_include") or []) if kw.strip()]
+    # El match es por substring, así que conviene la palabra corta: "comercial"
+    # atrapa "apto comercial", "local comercial", etc.
+    include = [_norm(kw) for kw in (filters.get("keywords_include") or []) if kw.strip()]
     if include and not any(kw in haystack for kw in include):
         return False
     for kw in filters.get("keywords_exclude", []) or []:
-        if kw.lower() in haystack:
+        if kw.strip() and _norm(kw) in haystack:
             return False
 
     return True
