@@ -708,9 +708,10 @@ function openForm(index, prefill) {
   $("f-name").value = job?.name || "";
   $("f-site").value = job?.site || "argenprop";
   $("f-operation").value = job?.operation === "venta" ? "venta" : "alquiler";
-  // Modo: nuevo -> menú; editar -> URL; clonar -> menú si el original se
-  // armó con menús (así cambiar el portal regenera la URL), si no URL.
-  $("f-mode").value = index != null ? "url" : cloning ? (job.ptype ? "menu" : "url") : "menu";
+  // Modo de la búsqueda: se respeta el que tenía el job. Nuevo -> menú.
+  // Editar/clonar -> el guardado (job.mode); para jobs viejos sin ese campo
+  // se deduce: si tiene ptype fue armado con menús, si no, con URL pegada.
+  $("f-mode").value = !job ? "menu" : (job.mode || (job.ptype ? "menu" : "url"));
   $("f-ptype").value = job?.ptype || "departamento";
   $("f-zone").value = job?.zone || "";
   $("f-url").value = job?.url || "";
@@ -801,6 +802,7 @@ $("job-form").addEventListener("submit", (e) => {
   // Tipo y zona para mostrar en la tarjeta. En modo menú se toman de los
   // selectores; al editar (modo URL) se conservan los que ya tenía el job.
   const prev = editingIndex != null ? jobsDoc.searches[editingIndex] : {};
+  job.mode = isMenuMode() ? "menu" : "url";  // se recuerda para reabrir el editor igual
   if (isMenuMode()) {
     job.ptype = $("f-ptype").value;
     const zone = $("f-zone").value.trim();
@@ -1747,6 +1749,18 @@ function renderTop() {
 }
 
 $("reload-top").addEventListener("click", loadResults);
+
+// Limpiar filtros del Top 5: vuelve al criterio "Para vivir" y saca topes.
+$("top-clear").addEventListener("click", () => {
+  $("t-criteria").value = "livable";
+  $("t-currency").value = "";
+  $("t-max-price").value = "";
+  $("t-min-rooms").value = "";
+  $("t-min-surface").value = "";
+  $("t-with-photo").value = "";
+  saveTopPrefs();
+  renderTop();
+});
 
 /* ---------- Preview al pasar el mouse + Lightbox al hacer click ---------- */
 
