@@ -934,14 +934,16 @@
   "errors": []
  },
  {
-  "finished_at": "2026-07-11T12:08:17Z",
-  "only_job": "mercadolibre_alquiler_ph_olivos",
+  "finished_at": "2026-07-11T12:08:32Z",
+  "only_job": "mercadolibre_venta_ph_villa-urquiza",
   "jobs": {
-   "mercadolibre_alquiler_ph_olivos": 11
+   "mercadolibre_venta_ph_villa-urquiza": 0
   },
-  "found": 11,
-  "new": 11,
-  "total_stored": 137,
-  "errors": []
+  "found": 0,
+  "new": 0,
+  "total_stored": 126,
+  "errors": [
+   "mercadolibre_venta_ph_villa-urquiza (mercadolibre): 0 avisos — posible bloqueo o cambio de HTML"
+  ]
  }
 ]
