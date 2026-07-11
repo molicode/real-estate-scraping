@@ -1735,6 +1735,51 @@
     "title": "Casa En Alquiler Comercial/gastronomico - Lote Propio - Exc. Estado",
     "url": "https://casa.mercadolibre.com.ar/MLA-1853128359-casa-en-alquiler-comercialgastronomico-lote-propio-exc-estado-_JM"
   },
+  "mercadolibre:MLA1856653351": {
+    "address": "Villa Urquiza, Capital Federal",
+    "first_seen": "2026-07-11T12:20:53Z",
+    "flags": [
+      {
+        "label": "Villa Urquiza: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA1856653351",
+    "image": "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+    "images": [
+      "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+      "https://http2.mlstatic.com/D_Q_NP_900869-MLA112593522042_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_900869-MLA112593522042_062026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_799477-MLA112593522040_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_799477-MLA112593522040_062026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_884193-MLA112593522044_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_884193-MLA112593522044_062026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_738597-MLA112593522046_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_738597-MLA112593522046_062026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_890215-MLA112593522030_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_890215-MLA112593522030_062026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_637244-MLA112593522036_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_637244-MLA112593522036_062026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_843757-MLA112593522032_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_843757-MLA112593522032_062026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_674661-MLA112593522028_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_674661-MLA112593522028_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_641817-MLA112593522024_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_761130-MLA112593522022_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_628396-MLA112593522034_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_655249-MLA112593522038_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_838575-MLA112593522026_062026-F.webp"
+    ],
+    "operation": "venta",
+    "price_amount": 1300000.0,
+    "price_currency": "ARS",
+    "search_name": "favorito manual",
+    "site": "mercadolibre",
+    "title": "Ph En Villa Urquiza Venta",
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-1856653351-ph-en-villa-urquiza-venta-_JM",
+    "verified": true
+  },
   "mercadolibre:MLA1859607403": {
     "address": "Fray Justo Sta. María De Oro 3900 - 4200, B1636DHQ Olivos, Provincia De Buenos Aires, Argentina, Olivos, Vicente López, Bs.As. G.B.A. Norte",
     "bathrooms": 1,
@@ -1878,6 +1923,32 @@
     "surface_m2": 30.0,
     "title": "Casa - Olivos-roche",
     "url": "https://inmueble.mercadolibre.com.ar/MLA-1876241381-casa-olivos-roche-_JM",
+    "verified": true
+  },
+  "mercadolibre:MLA1878390187": {
+    "address": "Núñez, Capital Federal",
+    "first_seen": "2026-07-11T12:20:52Z",
+    "flags": [
+      {
+        "label": "Nunez: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA1878390187",
+    "image": "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+    "images": [
+      "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/parking_lots.svg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 1600.0,
+    "price_currency": "USD",
+    "rooms": 3,
+    "search_name": "favorito manual",
+    "site": "mercadolibre",
+    "title": "Ph En Alquiler En Nuñez 3 Ambientes Terraza",
+    "url": "https://casa.mercadolibre.com.ar/MLA-1878390187-ph-en-alquiler-en-nunez-3-ambientes-terraza-_JM",
     "verified": true
   },
   "mercadolibre:MLA1887380215": {

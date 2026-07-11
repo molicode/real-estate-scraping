@@ -969,5 +969,16 @@
   "errors": [
    "mercadolibre_venta_ph_villa-urquiza (mercadolibre): 0 avisos — posible bloqueo o cambio de HTML"
   ]
+ },
+ {
+  "finished_at": "2026-07-11T12:20:53Z",
+  "only_job": "mercadolibre_alquiler_ph_nunez_amplio",
+  "jobs": {
+   "mercadolibre_alquiler_ph_nunez_amplio": 4
+  },
+  "found": 4,
+  "new": 0,
+  "total_stored": 139,
+  "errors": []
  }
 ]
