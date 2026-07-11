@@ -208,6 +208,79 @@ def enrich_details(
         logger.info("Detalle enriquecido para %d avisos nuevos", done)
 
 
+FAVORITES_FILE = ROOT / "data" / "favorites.json"
+
+
+def load_favorites() -> dict:
+    try:
+        with FAVORITES_FILE.open(encoding="utf-8") as fh:
+            data = yaml.safe_load(fh) or {}
+        return data if isinstance(data, dict) else {}
+    except (OSError, ValueError):
+        return {}
+
+
+def enrich_favorites(stored: dict, cap: int, proxy_exhausted: bool) -> None:
+    """Completa los favoritos (data/favorites.json) bajando la página de cada
+    aviso. Sirve para avisos puntuales que el usuario guardó a mano y que la
+    búsqueda no trae (ej. mal categorizados o bloqueados). Se hace una sola vez
+    por aviso (los que ya tienen precio+fotos se saltean) y está acotado."""
+    if cap <= 0:
+        return
+    favorites = load_favorites()
+    if not favorites:
+        return
+    scrapers: dict[str, Any] = {}
+    done = 0
+    for fid, fav in favorites.items():
+        if done >= cap:
+            break
+        if not isinstance(fav, dict):
+            continue
+        entry = stored.get(fid)
+        # Ya está completo (precio y al menos una foto): nada que hacer.
+        if entry and entry.get("price_amount") is not None and (entry.get("images") or entry.get("image")):
+            continue
+        site = fav.get("site")
+        url = fav.get("url")
+        if not site or not url:
+            continue
+        scraper = scrapers.get(site)
+        if scraper is None:
+            scraper = scrapers[site] = get_scraper(site)
+        if not getattr(scraper, "detail_supported", False):
+            continue
+        if proxy_exhausted and getattr(scraper, "proxy_fallback", False):
+            continue
+        try:
+            html = scraper.fetch(url)
+            if not html:
+                continue
+            detail = scraper.parse_detail(html)
+        except Exception:
+            logger.warning("No pude enriquecer el favorito %s", url)
+            continue
+
+        base = {k: v for k, v in fav.items() if k != "saved_at"}
+        if detail.get("title"):
+            base["title"] = detail["title"]
+        if detail.get("price_amount") is not None:
+            base["price_amount"] = detail["price_amount"]
+        if detail.get("price_currency"):
+            base["price_currency"] = detail["price_currency"]
+        if detail.get("images"):
+            base["images"] = detail["images"]
+            base["image"] = detail["images"][0]
+        if detail.get("verified"):
+            base["verified"] = True
+        merged = {**(entry or {}), **base}
+        merged.setdefault("first_seen", utcnow_iso())
+        stored[fid] = merged
+        done += 1
+    if done:
+        logger.info("Favoritos enriquecidos desde su detalle: %d", done)
+
+
 def main() -> int:
     config_path = Path(sys.argv[1]) if len(sys.argv) > 1 else default_config_path()
     config = load_config(config_path)
@@ -293,6 +366,9 @@ def main() -> int:
     # extra (vía proxy en sitios bloqueados = créditos de ScraperAPI).
     enrich_max = int(config.get("detail_enrich_max", 40))
     enrich_details(all_new, stored, enrich_max, proxy_exhausted)
+    # Favoritos guardados a mano que la búsqueda no trae: se completan bajando
+    # su propia página (acotado; los ya completos se saltean).
+    enrich_favorites(stored, int(config.get("fav_enrich_max", 20)), proxy_exhausted)
 
     # Señales de riesgo: se recalculan sobre TODO el almacén (la antigüedad
     # y las medianas cambian en cada corrida). Incluye villa + delito oficial

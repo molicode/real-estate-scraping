@@ -1,8 +1,81 @@
 """Enriquecimiento de detalle: galería completa + identidad verificada."""
 
-from scraper.main import enrich_details, refresh_media
+from scraper.main import enrich_details, enrich_favorites, refresh_media
 from scraper.models import Listing
 from scraper.sites.mercadolibre import MercadoLibreScraper
+
+
+def test_parse_detail_lee_jsonld_precio_y_titulo():
+    s = MercadoLibreScraper()
+    html = (
+        '<script type="application/ld+json">'
+        '{"@type":"Product","name":"PH en alquiler en Nunez 3 amb",'
+        '"image":["https://http2.mlstatic.com/D_a.webp"],'
+        '"offers":{"price":"850000","priceCurrency":"ARS"}}</script>'
+    )
+    d = s.parse_detail(html)
+    assert d["title"] == "PH en alquiler en Nunez 3 amb"
+    assert d["price_amount"] == 850000.0
+    assert d["price_currency"] == "ARS"
+    assert d["images"] == ["https://http2.mlstatic.com/D_a.webp"]
+
+
+def test_enrich_favorites_completa_desde_el_detalle(monkeypatch, tmp_path):
+    import scraper.main as main
+
+    class _Fake:
+        site = "mercadolibre"
+        detail_supported = True
+        proxy_fallback = True
+        def __init__(self):
+            self.calls = 0
+        def fetch(self, url):
+            self.calls += 1
+            return "<html>ok</html>"
+        def parse_detail(self, html):
+            return {"title": "PH lindo", "price_amount": 999.0,
+                    "price_currency": "ARS", "images": ["i1", "i2"], "verified": True}
+
+    fake = _Fake()
+    monkeypatch.setattr(main, "get_scraper", lambda site: fake)
+    # favoritos: uno sin datos (se enriquece) y uno ya completo (se saltea)
+    monkeypatch.setattr(main, "load_favorites", lambda: {
+        "mercadolibre:MLA1": {"id": "mercadolibre:MLA1", "site": "mercadolibre",
+                              "url": "https://x/1", "operation": "alquiler", "saved_at": "t"},
+        "mercadolibre:MLA2": {"id": "mercadolibre:MLA2", "site": "mercadolibre",
+                              "url": "https://x/2", "saved_at": "t"},
+    })
+    stored = {
+        "mercadolibre:MLA2": {"id": "mercadolibre:MLA2", "site": "mercadolibre",
+                              "price_amount": 100.0, "images": ["ya"]},
+    }
+    enrich_favorites(stored, cap=20, proxy_exhausted=False)
+
+    assert fake.calls == 1  # solo el incompleto
+    e = stored["mercadolibre:MLA1"]
+    assert e["price_amount"] == 999.0 and e["price_currency"] == "ARS"
+    assert e["images"] == ["i1", "i2"] and e["image"] == "i1"
+    assert e["title"] == "PH lindo" and e["verified"] is True
+    assert e["operation"] == "alquiler"  # dato base del favorito conservado
+    assert e.get("first_seen")            # se le pone fecha
+    # el ya-completo no se tocó
+    assert stored["mercadolibre:MLA2"]["images"] == ["ya"]
+
+
+def test_enrich_favorites_salta_sin_creditos(monkeypatch):
+    import scraper.main as main
+    called = {"n": 0}
+    class _F:
+        site = "mercadolibre"; detail_supported = True; proxy_fallback = True
+        def fetch(self, url): called["n"] += 1; return "x"
+        def parse_detail(self, html): return {}
+    monkeypatch.setattr(main, "get_scraper", lambda site: _F())
+    monkeypatch.setattr(main, "load_favorites", lambda: {
+        "mercadolibre:MLA1": {"id": "mercadolibre:MLA1", "site": "mercadolibre", "url": "u"},
+    })
+    stored = {}
+    enrich_favorites(stored, cap=20, proxy_exhausted=True)
+    assert called["n"] == 0 and not stored
 
 
 def test_refresh_media_completa_fotos_de_avisos_existentes():

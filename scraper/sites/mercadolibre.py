@@ -89,7 +89,38 @@ class MercadoLibreScraper(BaseScraper):
         # MercadoLibre rotula "Identidad verificada" junto a los datos del
         # anunciante cuando validó su identidad.
         verified = "identidad verificada" in html.lower()
-        return {"images": images[:40], "verified": verified}
+        data: dict = {"images": images[:40], "verified": verified}
+
+        # Datos estructurados (JSON-LD): título, precio y moneda. Sirve para
+        # enriquecer un aviso puntual (favorito) sin depender de la búsqueda.
+        for m in re.finditer(
+            r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+            html, re.DOTALL | re.IGNORECASE,
+        ):
+            try:
+                obj = json.loads(m.group(1).strip())
+            except ValueError:
+                continue
+            for o in (obj if isinstance(obj, list) else [obj]):
+                if not isinstance(o, dict):
+                    continue
+                offers = o.get("offers")
+                if isinstance(offers, list):
+                    offers = offers[0] if offers else {}
+                if isinstance(offers, dict) and offers.get("price") not in (None, ""):
+                    try:
+                        data["price_amount"] = float(offers["price"])
+                    except (TypeError, ValueError):
+                        pass
+                    cur = offers.get("priceCurrency")
+                    if cur:
+                        data["price_currency"] = "USD" if "US" in str(cur).upper() else "ARS"
+                if o.get("name") and "title" not in data:
+                    data["title"] = clean_text(str(o["name"]))
+                if not data["images"] and o.get("image"):
+                    imgs = o["image"] if isinstance(o["image"], list) else [o["image"]]
+                    data["images"] = [u for u in imgs if isinstance(u, str)][:40]
+        return data
 
     def is_blocked(self, resp) -> bool:
         return (
