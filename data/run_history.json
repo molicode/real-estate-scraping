@@ -921,5 +921,16 @@
   "new": 0,
   "total_stored": 123,
   "errors": []
+ },
+ {
+  "finished_at": "2026-07-11T11:02:48Z",
+  "only_job": null,
+  "jobs": {
+   "mercadolibre_alquiler_ph_nunez_amplio": 4
+  },
+  "found": 4,
+  "new": 3,
+  "total_stored": 126,
+  "errors": []
  }
 ]
