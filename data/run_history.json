@@ -956,5 +956,18 @@
   "new": 0,
   "total_stored": 137,
   "errors": []
+ },
+ {
+  "finished_at": "2026-07-11T12:14:15Z",
+  "only_job": "mercadolibre_venta_ph_villa-urquiza",
+  "jobs": {
+   "mercadolibre_venta_ph_villa-urquiza": 0
+  },
+  "found": 0,
+  "new": 0,
+  "total_stored": 137,
+  "errors": [
+   "mercadolibre_venta_ph_villa-urquiza (mercadolibre): 0 avisos — posible bloqueo o cambio de HTML"
+  ]
  }
 ]
