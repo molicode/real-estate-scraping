@@ -980,5 +980,16 @@
   "new": 0,
   "total_stored": 139,
   "errors": []
+ },
+ {
+  "finished_at": "2026-07-12T10:25:18Z",
+  "only_job": null,
+  "jobs": {
+   "mercadolibre_alquiler_ph_olivos": 11
+  },
+  "found": 11,
+  "new": 0,
+  "total_stored": 139,
+  "errors": []
  }
 ]
