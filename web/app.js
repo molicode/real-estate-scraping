@@ -1400,7 +1400,7 @@ function extraZoneFlag(l) {
 function displayFlags(l) {
   const flags = [...(l.flags || [])];
   if (looksNonResidential(l)) {
-    flags.push({ level: "med", label: "Parece uso comercial / estudio / eventos, no vivienda" });
+    flags.push({ level: "med", label: "No parece vivienda (lote/terreno, uso comercial, estudio o eventos)" });
   }
   const z = zoneFlag(l);
   if (z) flags.push(z);
@@ -1791,6 +1791,15 @@ function inferOperation(l) {
 }
 
 function listingOperation(l) {
+  // El título manda cuando es inequívoco: algunos portales (ej. Remax, que
+  // arma la búsqueda por operación) devuelven avisos de VENTA dentro de un job
+  // de alquiler. Si el título dice claramente "venta" o "alquiler", ganamos eso;
+  // así no se cuela una venta en el Top 5 de alquiler.
+  const t = (l.title || "").toLowerCase();
+  const venta = /\bventa\b|\bvende\b|en venta/.test(t);
+  const alquiler = /\balquiler\b|\balquila\b|en alquiler/.test(t);
+  if (venta && !alquiler) return "venta";
+  if (alquiler && !venta) return "alquiler";
   return l.operation || jobOperation(l.search_name) || inferOperation(l);
 }
 
@@ -1936,7 +1945,7 @@ function hasOutdoor(l) {
 // Avisos que NO son para vivir: estudios de foto, salones de eventos, locales
 // de uso comercial, etc. Se detectan por el título/dirección y se dejan fuera
 // del Top 5 (y se marcan con una señal en el resto de la app).
-const NON_RESIDENTIAL_RX = /(estudio|studio)\s+de\s+fotograf|fotograf[ií]a|productora|sal[oó]n\s+de\s+(eventos|fiestas)|\beventos\b|coworking|fondo de comercio|gastron[oó]mic|dep[oó]sito|galp[oó]n|consultorio|apto\s+profesional|uso\s+comercial/i;
+const NON_RESIDENTIAL_RX = /(estudio|studio)\s+de\s+fotograf|fotograf[ií]a|productora|sal[oó]n\s+de\s+(eventos|fiestas)|\beventos\b|coworking|fondo de comercio|gastron[oó]mic|dep[oó]sito|galp[oó]n|consultorio|apto\s+profesional|uso\s+comercial|\blotes?\b|\bterrenos?\b|loteo/i;
 function looksNonResidential(l) {
   return NON_RESIDENTIAL_RX.test(`${l.title || ""} ${l.address || ""}`);
 }
