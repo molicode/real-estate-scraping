@@ -163,23 +163,35 @@ def refresh_media(stored: dict, found: list) -> None:
 def enrich_details(
     new_listings: list, stored: dict, cap: int, proxy_exhausted: bool
 ) -> None:
-    """Completa la galería de fotos y la identidad verificada de los avisos
-    NUEVOS, bajando su página de detalle. Acotado por `cap` porque cada aviso
-    es un fetch extra (y vía proxy consume créditos)."""
-    if cap <= 0 or not new_listings:
+    """Completa la galería de fotos y la identidad verificada bajando la página
+    de detalle. Primero los avisos NUEVOS y, con lo que quede del cupo, un
+    backfill de los avisos ya guardados que todavía tienen una sola foto (así
+    los viejos también se completan de a poco). Acotado por `cap` porque cada
+    aviso es un fetch extra (vía proxy consume créditos de ScraperAPI)."""
+    if cap <= 0:
         return
     scrapers: dict[str, Any] = {}
+
+    def scraper_for(site: str):
+        s = scrapers.get(site)
+        if s is None:
+            s = scrapers[site] = get_scraper(site)
+        return s
+
+    def usable(scraper) -> bool:
+        if not getattr(scraper, "detail_supported", False):
+            return False
+        # Sin créditos de proxy no vale la pena intentar en sitios bloqueados.
+        return not (proxy_exhausted and getattr(scraper, "proxy_fallback", False))
+
     done = 0
-    for listing in new_listings:
+
+    # 1) Avisos nuevos: galería + identidad verificada (+ lo que traiga detalle).
+    for listing in new_listings or []:
         if done >= cap:
             break
-        scraper = scrapers.get(listing.site)
-        if scraper is None:
-            scraper = scrapers[listing.site] = get_scraper(listing.site)
-        if not getattr(scraper, "detail_supported", False):
-            continue
-        # Sin créditos de proxy no vale la pena intentar en sitios bloqueados.
-        if proxy_exhausted and getattr(scraper, "proxy_fallback", False):
+        scraper = scraper_for(listing.site)
+        if not usable(scraper):
             continue
         try:
             html = scraper.fetch(listing.url)
@@ -189,7 +201,6 @@ def enrich_details(
         except Exception:  # el detalle roto no frena la corrida
             logger.warning("No pude enriquecer el detalle de %s", listing.url)
             continue
-
         images = data.get("images") or []
         if images:
             listing.images = images
@@ -197,15 +208,48 @@ def enrich_details(
                 listing.image = images[0]
         if data.get("verified"):
             listing.verified = True
-        # add_new ya volcó el aviso al almacén: reflejamos lo enriquecido.
         entry = stored.get(listing.id)
         if entry is not None:
             entry["images"] = listing.images
             entry["image"] = listing.image
             entry["verified"] = listing.verified
         done += 1
+    new_done = done
+
+    # 2) Backfill de avisos ya guardados con una sola foto (una vez por aviso:
+    #    cuando ya tienen galería, se saltean). Solo sitios con detalle soportado.
+    for entry in stored.values():
+        if done >= cap:
+            break
+        if len(entry.get("images") or []) > 1:
+            continue
+        site, url = entry.get("site"), entry.get("url")
+        if not site or not url:
+            continue
+        scraper = scraper_for(site)
+        if not usable(scraper):
+            continue
+        try:
+            html = scraper.fetch(url)
+            if not html:
+                continue
+            data = scraper.parse_detail(html)
+        except Exception:
+            continue
+        images = data.get("images") or []
+        if images:
+            entry["images"] = images
+            if not entry.get("image"):
+                entry["image"] = images[0]
+        if data.get("verified"):
+            entry["verified"] = True
+        if images or data.get("verified"):
+            done += 1
+
     if done:
-        logger.info("Detalle enriquecido para %d avisos nuevos", done)
+        logger.info(
+            "Detalle enriquecido: %d avisos nuevos + %d de backfill", new_done, done - new_done
+        )
 
 
 FAVORITES_FILE = ROOT / "data" / "favorites.json"

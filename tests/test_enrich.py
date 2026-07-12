@@ -175,6 +175,41 @@ def test_enrich_details_respeta_cap_y_actualiza_almacen(monkeypatch):
     assert new[2].verified is False
 
 
+def test_enrich_details_backfill_avisos_viejos_con_una_foto(monkeypatch):
+    import scraper.main as main
+
+    class _Fake:
+        site = "zonaprop"
+        detail_supported = True
+        proxy_fallback = True
+        def __init__(self):
+            self.calls = 0
+        def fetch(self, url):
+            self.calls += 1
+            return "<html>ok</html>"
+        def parse_detail(self, html):
+            return {"images": ["g1", "g2", "g3"]}
+
+    class _NoDetail:
+        detail_supported = False
+
+    fake = _Fake()
+    monkeypatch.setattr(main, "get_scraper", lambda site: fake if site == "zonaprop" else _NoDetail())
+    stored = {
+        # una sola foto -> se backfillea
+        "zonaprop:1": {"id": "zonaprop:1", "site": "zonaprop", "url": "https://z/1", "images": ["a"], "image": "a"},
+        # ya tiene galería -> se saltea
+        "zonaprop:2": {"id": "zonaprop:2", "site": "zonaprop", "url": "https://z/2", "images": ["a", "b", "c"]},
+        # remax no soporta detalle -> se saltea aunque tenga 1 foto
+        "remax:3": {"id": "remax:3", "site": "remax", "url": "https://r/3", "images": ["a"]},
+    }
+    main.enrich_details([], stored, cap=40, proxy_exhausted=False)
+    assert fake.calls == 1  # solo el zonaprop con 1 foto
+    assert stored["zonaprop:1"]["images"] == ["g1", "g2", "g3"]
+    assert stored["zonaprop:2"]["images"] == ["a", "b", "c"]  # intacto
+    assert stored["remax:3"]["images"] == ["a"]  # intacto
+
+
 def test_enrich_details_salta_si_proxy_agotado(monkeypatch):
     import scraper.main as main
 
