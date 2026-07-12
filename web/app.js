@@ -1464,6 +1464,79 @@ const LEVEL_INFO = {
   bajo: { cls: "cm-bajo", dot: "green", txt: "Inseguridad baja", flag: "flag-low" },
 };
 
+// Población por barrio (Censo 2010, aprox.) para colorear el mapa de barrios
+// POR HABITANTE y no por total: un barrio grande y poblado como Caballito tiene
+// muchos delitos absolutos pero baja tasa per cápita. Nombres canónicos (los de
+// COMUNA_BARRIOS).
+const BARRIO_POBLACION = {
+  "agronomia": 13912, "almagro": 131699, "balvanera": 138926, "barracas": 89452,
+  "belgrano": 126267, "boedo": 45517, "caballito": 176076, "chacarita": 26897,
+  "coghlan": 18021, "colegiales": 52783, "constitucion": 43679, "flores": 149958,
+  "floresta": 37559, "la boca": 45076, "liniers": 42129, "mataderos": 63407,
+  "monte castro": 36001, "montserrat": 42844, "nueva pompeya": 39245, "nunez": 51858,
+  "palermo": 225970, "parque avellaneda": 51402, "parque chacabuco": 55301,
+  "parque chas": 12888, "parque patricios": 40985, "la paternal": 24373,
+  "puerto madero": 6726, "recoleta": 165494, "retiro": 65283, "saavedra": 47171,
+  "san cristobal": 46494, "san nicolas": 32919, "san telmo": 25969,
+  "velez sarsfield": 34317, "versalles": 14919, "villa crespo": 87400,
+  "villa del parque": 57087, "villa devoto": 68669, "villa general mitre": 30313,
+  "villa lugano": 111520, "villa luro": 32153, "villa ortuzar": 22968,
+  "villa pueyrredon": 40325, "villa real": 14968, "villa riachuelo": 13612,
+  "villa santa rita": 33646, "villa soldati": 43190, "villa urquiza": 84633,
+};
+
+// El GCBA usa nombres distintos en el CSV de delitos, en el geojson y en la
+// división oficial. Se llevan todos a la forma canónica de COMUNA_BARRIOS.
+const BARRIO_ALIAS = {
+  "monserrat": "montserrat", "boca": "la boca", "paternal": "la paternal",
+  "villa gral. mitre": "villa general mitre", "villa gral mitre": "villa general mitre",
+};
+function canonBarrio(name) {
+  const n = normZone(name).replace(/\./g, "").replace(/\s+/g, " ").trim();
+  return BARRIO_ALIAS[n] || (BARRIO_ALIAS[normZone(name)] || n);
+}
+
+// Nivel por barrio calculado por tasa per cápita (terciles), no por total.
+let barrioLevels = null;
+function computeBarrioLevels() {
+  barrioLevels = {};
+  if (!crimeData || !crimeData.barrios) return;
+  const per = {};
+  for (const [name, info] of Object.entries(crimeData.barrios)) {
+    const canon = canonBarrio(name);
+    const pop = BARRIO_POBLACION[canon];
+    if (pop && info && info.total) per[canon] = (info.total / pop) * 100000;
+  }
+  const vals = Object.values(per).sort((a, b) => a - b);
+  if (!vals.length) return;
+  const lo = vals[Math.floor(vals.length / 3)];
+  const hi = vals[Math.floor((2 * vals.length) / 3)];
+  for (const [canon, v] of Object.entries(per)) {
+    barrioLevels[canon] = { level: v <= lo ? "bajo" : v >= hi ? "alto" : "medio", per100k: Math.round(v) };
+  }
+}
+
+// Info de seguridad de un barrio: per cápita si hay dato+población; si el
+// barrio no está en la base (ej. La Boca), cae al nivel de su comuna (así no
+// queda gris). Devuelve null solo si no se sabe nada.
+function barrioInfo(geoName) {
+  const canon = canonBarrio(geoName);
+  const raw = (crimeData.barrios || {})[canon] || (crimeData.barrios || {})[normZone(geoName)];
+  const bl = barrioLevels && barrioLevels[canon];
+  if (raw && bl) {
+    return { name: canon, level: bl.level, per100k: bl.per100k, total: raw.total,
+             by_type: raw.by_type, comuna: raw.comuna ?? BARRIO_COMUNA[canon], source: "barrio" };
+  }
+  if (raw) {
+    return { name: canon, level: raw.level, total: raw.total, by_type: raw.by_type,
+             comuna: raw.comuna ?? BARRIO_COMUNA[canon], source: "barrio" };
+  }
+  const comuna = BARRIO_COMUNA[canon];
+  const cinfo = comuna != null ? crimeData.comunas[String(comuna)] : null;
+  if (cinfo) return { name: canon, level: cinfo.level, comuna, source: "comuna" };
+  return null;
+}
+
 // Zonas fuera de CABA (sin dato oficial del GCBA): estimación de seguridad.
 // Vicente López es uno de los partidos más tranquilos del GBA; se muestra
 // siempre como "estimado", nunca como dato oficial.
@@ -1524,6 +1597,7 @@ async function loadCrimeData(force = false) {
   crimeData = await fetchRaw("data/crime.json");
   comunasGeo = await fetchRaw("data/comunas.geojson");
   barriosGeo = await fetchRaw("data/barrios.geojson");
+  computeBarrioLevels();
   crimeLoaded = true;
   updateCrimeUpdatedLabel();
 }
@@ -1604,7 +1678,7 @@ function buildMapSvg(mode) {
     }));
     if (mode === "barrio") {
       const b = f.properties.barrio;
-      const info = (crimeData.barrios || {})[b];
+      const info = barrioInfo(b);
       const cls = (LEVEL_INFO[(info || {}).level] || {}).cls || "cm-na";
       return `<path class="comuna ${cls}" data-barrio="${escapeHtml(b)}" d="${d.trim()}"><title>${escapeHtml(b.replace(/\b\w/g, (c) => c.toUpperCase()))}</title></path>`;
     }
@@ -1633,7 +1707,7 @@ function renderCrimeMap() {
   const barrioReady = mapMode === "barrio" && barriosGeo && crimeData.barrios;
   const effMode = mapMode === "barrio" && !barrioReady ? "comuna" : mapMode;
   $("crime-meta").textContent = effMode === "barrio"
-    ? `Total de delitos registrados por barrio (terciles) · datos oficiales GCBA · años ${crimeData.years.join(", ")}`
+    ? `Delitos por 100.000 habitantes del barrio (terciles) · GCBA + población Censo 2010 · años ${crimeData.years.join(", ")}`
     : `Delitos por 100.000 habitantes · datos oficiales GCBA (Mapa del Delito) · años ${crimeData.years.join(", ")}`;
   $("crime-map").innerHTML = buildMapSvg(effMode);
   showComunaDetail(null);
@@ -1727,7 +1801,7 @@ function showComunaDetail(key) {
 
 function showBarrioDetail(b) {
   const box = $("comuna-detail");
-  const info = (crimeData.barrios || {})[b];
+  const info = barrioInfo(b);
   const nice = b.replace(/\b\w/g, (c) => c.toUpperCase());
   if (!info) {
     box.innerHTML = `<div class="cd-head"><span class="flag flag-na">Sin datos</span> <strong>${escapeHtml(nice)}</strong></div>
@@ -1737,10 +1811,20 @@ function showBarrioDetail(b) {
   const m = LEVEL_INFO[info.level] || LEVEL_INFO.medio;
   const comuna = info.comuna;
   const cinfo = comuna != null ? crimeData.comunas[String(comuna)] : null;
+  // El barrio no está en la base de delitos: se muestra el nivel de su comuna.
+  if (info.source === "comuna") {
+    box.innerHTML = `
+      <div class="cd-head"><span class="flag ${m.flag}">${m.txt}</span> <strong>${escapeHtml(nice)}</strong></div>
+      <div class="top-meta">Comuna ${comuna} · estimado por comuna (el barrio no figura en la base de delitos)</div>
+      ${cinfo ? `<div class="cd-stat"><span class="tabnum">${cinfo.per100k.toLocaleString("es-AR")}</span> delitos por 100.000 hab. (Comuna ${comuna})</div>` : ""}
+      ${cinfo && cinfo.by_year ? trendChartHtml(cinfo.by_year, `Evolución de la Comuna ${comuna}`) : ""}`;
+    return;
+  }
   box.innerHTML = `
     <div class="cd-head"><span class="flag ${m.flag}">${m.txt}</span> <strong>${escapeHtml(nice)}</strong></div>
     <div class="top-meta">Comuna ${comuna}</div>
-    <div class="cd-stat"><span class="tabnum">${info.total.toLocaleString("es-AR")}</span> delitos registrados (${crimeData.years.join("–")})</div>
+    ${info.per100k != null ? `<div class="cd-stat"><span class="tabnum">${info.per100k.toLocaleString("es-AR")}</span> delitos por 100.000 hab. · ${info.total.toLocaleString("es-AR")} en total (${crimeData.years.join("–")})</div>`
+      : `<div class="cd-stat"><span class="tabnum">${info.total.toLocaleString("es-AR")}</span> delitos registrados (${crimeData.years.join("–")})</div>`}
     <div class="ctypes">${byTypeBarsHtml(info.by_type)}</div>
     ${cinfo && cinfo.by_year ? trendChartHtml(cinfo.by_year, `Evolución de la Comuna ${comuna}`) : ""}`;
 }
