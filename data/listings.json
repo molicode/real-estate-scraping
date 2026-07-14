@@ -1413,11 +1413,6 @@
     "first_seen": "2026-07-10T04:17:03Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -1425,7 +1420,12 @@
     ],
     "id": "mercadolibre:MLA1806522443",
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_778133-MLA112380636439_052026-E.webp",
-    "images": [],
+    "images": [
+      "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/furnished.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/is_suitable_for_pets.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/parking_lots.svg"
+    ],
     "operation": "alquiler",
     "price_amount": 3500000.0,
     "price_currency": "ARS",
@@ -1444,11 +1444,6 @@
     "first_seen": "2026-07-10T03:53:25Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -1456,7 +1451,31 @@
     ],
     "id": "mercadolibre:MLA1807320357",
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_837728-MLA111344726196_052026-E.webp",
-    "images": [],
+    "images": [
+      "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+      "https://http2.mlstatic.com/D_Q_NP_837728-MLA111344726196_052026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_837728-MLA111344726196_052026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_641623-MLA112384525257_052026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_641623-MLA112384525257_052026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_737844-MLA112384525259_052026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_737844-MLA112384525259_052026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_628715-MLA112383871557_052026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_628715-MLA112383871557_052026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_828051-MLA112384018917_052026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_828051-MLA112384018917_052026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_874426-MLA112384197387_052026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_874426-MLA112384197387_052026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_705678-MLA112384167595_052026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_705678-MLA112384167595_052026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_960834-MLA112383427009_052026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_960834-MLA112383427009_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_672218-MLA112384525275_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_914979-MLA111344726206_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_909929-MLA112384107689_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_774987-MLA112384197401_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_660173-MLA112384018931_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_622506-MLA112384107691_052026-F.webp"
+    ],
     "operation": "alquiler",
     "price_amount": 1600000.0,
     "price_currency": "ARS",
@@ -1465,7 +1484,8 @@
     "site": "mercadolibre",
     "surface_m2": 93.0,
     "title": "Ph 5 Ambientes Al Frente Profesional Y/0 Comercial",
-    "url": "https://inmueble.mercadolibre.com.ar/MLA-1807320357-ph-5-ambientes-al-frente-profesional-y0-comercial-_JM"
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-1807320357-ph-5-ambientes-al-frente-profesional-y0-comercial-_JM",
+    "verified": true
   },
   "mercadolibre:MLA1814513549": {
     "address": "General Pacheco Al 3500, Olivos, Vicente López, Bs.As. G.B.A. Norte",
@@ -1526,11 +1546,6 @@
     "first_seen": "2026-07-10T03:53:25Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Belgrano: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -1538,7 +1553,38 @@
     ],
     "id": "mercadolibre:MLA1833116013",
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_832817-MLA112273178665_052026-E.webp",
-    "images": [],
+    "images": [
+      "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+      "https://http2.mlstatic.com/D_Q_NP_832817-MLA112273178665_052026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_832817-MLA112273178665_052026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_843165-MLA112273178635_052026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_843165-MLA112273178635_052026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_791730-MLA112273178673_052026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_791730-MLA112273178673_052026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_729349-MLA112273178659_052026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_729349-MLA112273178659_052026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_933343-MLA112273178649_052026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_933343-MLA112273178649_052026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_699943-MLA112273178637_052026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_699943-MLA112273178637_052026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_909490-MLA112273178663_052026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_909490-MLA112273178663_052026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_749894-MLA112273178641_052026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_749894-MLA112273178641_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_777053-MLA112273178645_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_893977-MLA112273178669_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_639131-MLA112273178667_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_875136-MLA112273178639_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_727406-MLA112273178671_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_737455-MLA112273178651_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_617975-MLA112273178653_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_627917-MLA112273178655_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_626862-MLA112273178633_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_934346-MLA112273178657_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_765046-MLA112273178661_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_682457-MLA112273178647_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_673940-MLA112273178643_052026-F.webp"
+    ],
     "operation": "alquiler",
     "price_amount": 1500000.0,
     "price_currency": "ARS",
@@ -1547,7 +1593,8 @@
     "site": "mercadolibre",
     "surface_m2": 200.0,
     "title": "Almagro, Ph 4 Amb. Sin Expensas. 200 M2 Cub. 200 M2 Terraza",
-    "url": "https://inmueble.mercadolibre.com.ar/MLA-1833116013-almagro-ph-4-amb-sin-expensas-200-m2-cub-200-m2-terraza-_JM"
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-1833116013-almagro-ph-4-amb-sin-expensas-200-m2-cub-200-m2-terraza-_JM",
+    "verified": true
   },
   "mercadolibre:MLA1838096889": {
     "address": "Castro Barros 266, Almagro, Capital Federal",
@@ -1562,11 +1609,6 @@
         "type": "price_low"
       },
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -1574,7 +1616,41 @@
     ],
     "id": "mercadolibre:MLA1838096889",
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_718156-MLA110418418657_042026-E.webp",
-    "images": [],
+    "images": [
+      "https://http2.mlstatic.com/D_Q_NP_718156-MLA110418418657_042026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_718156-MLA110418418657_042026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_998264-MLA109544393680_042026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_998264-MLA109544393680_042026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_800122-MLA109543213258_042026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_800122-MLA109543213258_042026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_916868-MLA109543947924_042026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_916868-MLA109543947924_042026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_868631-MLA109543947926_042026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_868631-MLA109543947926_042026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_765029-MLA109543213262_042026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_765029-MLA109543213262_042026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_608756-MLA110417854805_042026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_608756-MLA110417854805_042026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_966534-MLA109543242378_042026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_966534-MLA109543242378_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_891163-MLA110418093949_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_722305-MLA110418388793_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_733262-MLA110418625573_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_733342-MLA109543213270_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_767225-MLA109543947946_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_822928-MLA110418418649_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_747062-MLA109543242388_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_697681-MLA110417854819_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_616316-MLA110417824811_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_773419-MLA110418093961_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_751197-MLA109543947948_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_905172-MLA109544393694_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_780574-MLA110418359063_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_880633-MLA110418388811_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_674820-MLA110418625591_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_941523-MLA110417824815_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_773768-MLA109544363724_042026-F.webp"
+    ],
     "operation": "alquiler",
     "price_amount": 2000000.0,
     "price_currency": "ARS",
@@ -1583,7 +1659,8 @@
     "site": "mercadolibre",
     "surface_m2": 140.0,
     "title": "Ph En Planta Baja Sobre Av. Castro Barros Apto Profesional Sin Expensas",
-    "url": "https://inmueble.mercadolibre.com.ar/MLA-1838096889-ph-en-planta-baja-sobre-av-castro-barros-apto-profesional-sin-expensas-_JM"
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-1838096889-ph-en-planta-baja-sobre-av-castro-barros-apto-profesional-sin-expensas-_JM",
+    "verified": true
   },
   "mercadolibre:MLA1843733619": {
     "address": "Arribeños 3182, Núñez, Capital Federal",
@@ -1681,11 +1758,6 @@
     "first_seen": "2026-07-10T03:51:42Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -1693,7 +1765,17 @@
     ],
     "id": "mercadolibre:MLA1852308055",
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_708455-MLA111331598817_052026-E.webp",
-    "images": [],
+    "images": [
+      "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+      "https://http2.mlstatic.com/D_Q_NP_708455-MLA111331598817_052026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_708455-MLA111331598817_052026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_614195-MLA111330435363_052026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_614195-MLA111330435363_052026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_653736-MLA110397226134_052026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_653736-MLA110397226134_052026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_958050-MLA111332463489_052026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_958050-MLA111332463489_052026-F.webp"
+    ],
     "operation": "alquiler",
     "price_amount": 1500000.0,
     "price_currency": "ARS",
@@ -1702,7 +1784,8 @@
     "site": "mercadolibre",
     "surface_m2": 130.0,
     "title": "Duplex Sin Expensas, A 1 Cuadra Y Media De Plaza Irlanda",
-    "url": "https://inmueble.mercadolibre.com.ar/MLA-1852308055-duplex-sin-expensas-a-1-cuadra-y-media-de-plaza-irlanda-_JM"
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-1852308055-duplex-sin-expensas-a-1-cuadra-y-media-de-plaza-irlanda-_JM",
+    "verified": true
   },
   "mercadolibre:MLA1853128359": {
     "address": "Centenera Al 400, Caballito, Capital Federal",
@@ -1712,11 +1795,6 @@
     "first_seen": "2026-07-10T04:17:03Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -1724,7 +1802,13 @@
     ],
     "id": "mercadolibre:MLA1853128359",
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_978221-MLA113707882281_062026-E.webp",
-    "images": [],
+    "images": [
+      "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/furnished.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/parking_lots.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/has_garden.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/is_suitable_for_pets.svg"
+    ],
     "operation": "alquiler",
     "price_amount": 5000000.0,
     "price_currency": "ARS",
@@ -1733,7 +1817,8 @@
     "site": "mercadolibre",
     "surface_m2": 254.0,
     "title": "Casa En Alquiler Comercial/gastronomico - Lote Propio - Exc. Estado",
-    "url": "https://casa.mercadolibre.com.ar/MLA-1853128359-casa-en-alquiler-comercialgastronomico-lote-propio-exc-estado-_JM"
+    "url": "https://casa.mercadolibre.com.ar/MLA-1853128359-casa-en-alquiler-comercialgastronomico-lote-propio-exc-estado-_JM",
+    "verified": true
   },
   "mercadolibre:MLA1856653351": {
     "address": "Villa Urquiza, Capital Federal",
@@ -1836,11 +1921,6 @@
         "type": "price_low"
       },
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -1848,7 +1928,47 @@
     ],
     "id": "mercadolibre:MLA1868877057",
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_917625-MLA112810987298_072026-E.webp",
-    "images": [],
+    "images": [
+      "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+      "https://http2.mlstatic.com/D_Q_NP_917625-MLA112810987298_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_917625-MLA112810987298_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_773970-MLA112810987334_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_773970-MLA112810987334_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_676922-MLA112810987324_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_676922-MLA112810987324_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_848242-MLA112810987328_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_848242-MLA112810987328_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_655570-MLA112810987300_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_655570-MLA112810987300_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_768687-MLA112810987284_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_768687-MLA112810987284_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_881403-MLA112810987294_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_881403-MLA112810987294_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_896129-MLA112810987322_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_896129-MLA112810987322_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_689879-MLA112810987292_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_734245-MLA112810987340_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_759626-MLA112810987288_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_615921-MLA112810987314_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_885028-MLA112810987336_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_696465-MLA112810987330_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_722065-MLA112810987302_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_603429-MLA112810987310_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_767951-MLA112810987320_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_910161-MLA112810987316_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_873007-MLA112810987332_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_946506-MLA112810987290_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_807068-MLA112810987318_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_771916-MLA112810987342_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_707274-MLA112810987306_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_938216-MLA112810987326_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_839431-MLA112810987338_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_814094-MLA112810987304_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_728975-MLA112810987312_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_601336-MLA112810987286_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_656582-MLA112810987296_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_812345-MLA112810987308_072026-F.webp"
+    ],
     "operation": "alquiler",
     "price_amount": 1990000.0,
     "price_currency": "ARS",
@@ -1857,7 +1977,8 @@
     "site": "mercadolibre",
     "surface_m2": 175.0,
     "title": "Av Medrano 600, Ph 6 Ambientes Para Uso Comercial De 175m2 En Almagro, A Mts Del Subte B",
-    "url": "https://inmueble.mercadolibre.com.ar/MLA-1868877057-av-medrano-600-ph-6-ambientes-para-uso-comercial-de-175m2-en-almagro-a-mts-del-subte-b-_JM"
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-1868877057-av-medrano-600-ph-6-ambientes-para-uso-comercial-de-175m2-en-almagro-a-mts-del-subte-b-_JM",
+    "verified": true
   },
   "mercadolibre:MLA1871447295": {
     "address": "Querandies Al 4300, Almagro, Capital Federal",
@@ -1867,11 +1988,6 @@
     "first_seen": "2026-07-10T03:53:25Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -1879,7 +1995,38 @@
     ],
     "id": "mercadolibre:MLA1871447295",
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_988424-MLA114058379881_072026-E.webp",
-    "images": [],
+    "images": [
+      "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+      "https://http2.mlstatic.com/D_Q_NP_988424-MLA114058379881_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_988424-MLA114058379881_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_613598-MLA114058379861_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_613598-MLA114058379861_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_743386-MLA114058379893_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_743386-MLA114058379893_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_998385-MLA114058379853_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_998385-MLA114058379853_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_999125-MLA114058379875_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_999125-MLA114058379875_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_980145-MLA114058379855_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_980145-MLA114058379855_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_737319-MLA114058379857_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_737319-MLA114058379857_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_671822-MLA114058379885_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_671822-MLA114058379885_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_763457-MLA114058379873_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_877469-MLA114058379865_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_669228-MLA114058379871_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_877095-MLA114058379891_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_821893-MLA114058379867_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_823715-MLA114058379877_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_994249-MLA114058379887_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_645356-MLA114058379879_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_996336-MLA114058379863_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_746612-MLA114058379889_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_812606-MLA114058379859_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_909049-MLA114058379869_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_901355-MLA114058379883_072026-F.webp"
+    ],
     "operation": "alquiler",
     "price_amount": 2700000.0,
     "price_currency": "ARS",
@@ -1888,7 +2035,8 @@
     "site": "mercadolibre",
     "surface_m2": 170.0,
     "title": "Alquiler-ph-4 Amb- Terraza- Parrilla- Almagro",
-    "url": "https://inmueble.mercadolibre.com.ar/MLA-1871447295-alquiler-ph-4-amb-terraza-parrilla-almagro-_JM"
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-1871447295-alquiler-ph-4-amb-terraza-parrilla-almagro-_JM",
+    "verified": true
   },
   "mercadolibre:MLA1876241381": {
     "address": "Olaguer Y Feliu Al 2900, Olivos, Vicente López, Bs.As. G.B.A. Norte",
@@ -2143,11 +2291,6 @@
     "first_seen": "2026-07-10T04:21:47Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Nunez: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -2155,7 +2298,14 @@
     ],
     "id": "mercadolibre:MLA3375174048",
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_986013-MLA112289819301_052026-E.webp",
-    "images": [],
+    "images": [
+      "https://http2.mlstatic.com/storage/vis-accounts/468368785_vip-495d45f3-9896-4f7d-a42a-05585b7b5893.jpg",
+      "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/furnished.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/parking_lots.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/has_barbecue_area.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/is_suitable_for_pets.svg"
+    ],
     "operation": "alquiler",
     "price_amount": 3500000.0,
     "price_currency": "ARS",
@@ -2234,11 +2384,6 @@
         "type": "price_low"
       },
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -2246,7 +2391,41 @@
     ],
     "id": "mercadolibre:MLA3458528894",
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_804493-MLA112018308432_062026-E.webp",
-    "images": [],
+    "images": [
+      "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+      "https://http2.mlstatic.com/D_Q_NP_804493-MLA112018308432_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_804493-MLA112018308432_062026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_975565-MLA112018308438_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_975565-MLA112018308438_062026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_652678-MLA112018308464_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_652678-MLA112018308464_062026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_826443-MLA112018308472_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_826443-MLA112018308472_062026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_716421-MLA112018308468_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_716421-MLA112018308468_062026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_792842-MLA112018308448_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_792842-MLA112018308448_062026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_856945-MLA112018308446_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_856945-MLA112018308446_062026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_885596-MLA112018308470_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_885596-MLA112018308470_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_826227-MLA112018308474_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_753569-MLA112018308460_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_873470-MLA112018308476_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_949054-MLA112018308466_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_824212-MLA112018308454_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_617672-MLA112018308450_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_778845-MLA112018308440_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_884443-MLA112018308458_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_668994-MLA112018308434_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_724060-MLA112018308452_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_681072-MLA112018308444_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_697308-MLA112018308430_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_885215-MLA112018308462_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_941513-MLA112018308436_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_686757-MLA112018308442_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_669027-MLA112018308456_062026-F.webp"
+    ],
     "operation": "alquiler",
     "price_amount": 2000000.0,
     "price_currency": "ARS",
@@ -2255,7 +2434,8 @@
     "site": "mercadolibre",
     "surface_m2": 120.0,
     "title": "Riglos 600 - Ph 4 Ambientes - Entrada Independiente",
-    "url": "https://inmueble.mercadolibre.com.ar/MLA-3458528894-riglos-600-ph-4-ambientes-entrada-independiente-_JM"
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-3458528894-riglos-600-ph-4-ambientes-entrada-independiente-_JM",
+    "verified": true
   },
   "mercadolibre:MLA3471137106": {
     "address": "Iberá 3053, C1429 Cdad. Autónoma De Buenos Aires, Argentina, Núñez, Capital Federal",
@@ -2357,11 +2537,6 @@
     "first_seen": "2026-07-10T04:21:47Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Nunez: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -2369,7 +2544,13 @@
     ],
     "id": "mercadolibre:MLA3479035442",
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_769054-MLA113433994781_062026-E.webp",
-    "images": [],
+    "images": [
+      "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/furnished.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/parking_lots.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/has_garden.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/is_suitable_for_pets.svg"
+    ],
     "operation": "alquiler",
     "price_amount": 5400000.0,
     "price_currency": "ARS",
@@ -2378,7 +2559,8 @@
     "site": "mercadolibre",
     "surface_m2": 531.0,
     "title": "Casa - Nuñez",
-    "url": "https://casa.mercadolibre.com.ar/MLA-3479035442-casa-nunez-_JM"
+    "url": "https://casa.mercadolibre.com.ar/MLA-3479035442-casa-nunez-_JM",
+    "verified": true
   },
   "mercadolibre:MLA3539134342": {
     "address": "Yapeyu 300, Almagro, Capital Federal",
@@ -2388,11 +2570,6 @@
     "first_seen": "2026-07-10T04:23:36Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -2400,7 +2577,13 @@
     ],
     "id": "mercadolibre:MLA3539134342",
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_657220-MLA112763395698_062026-E.webp",
-    "images": [],
+    "images": [
+      "https://http2.mlstatic.com/storage/vis-accounts/280419499_vip-fbf46175-be96-4252-9e40-165a2b92ce13.jpg",
+      "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/furnished.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/is_suitable_for_pets.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/parking_lots.svg"
+    ],
     "operation": "alquiler",
     "price_amount": 3600000.0,
     "price_currency": "ARS",
@@ -2465,11 +2648,6 @@
     "first_seen": "2026-07-10T04:23:36Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -2477,7 +2655,10 @@
     ],
     "id": "mercadolibre:MLA3553379494",
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_987320-MLA112864971300_072026-E.webp",
-    "images": [],
+    "images": [
+      "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/parking_lots.svg"
+    ],
     "operation": "alquiler",
     "price_amount": 1800000.0,
     "price_currency": "ARS",
@@ -2486,7 +2667,8 @@
     "site": "mercadolibre",
     "surface_m2": 150.0,
     "title": "Dueño Alquila Casa Uso Comercial",
-    "url": "https://casa.mercadolibre.com.ar/MLA-3553379494-dueno-alquila-casa-uso-comercial-_JM"
+    "url": "https://casa.mercadolibre.com.ar/MLA-3553379494-dueno-alquila-casa-uso-comercial-_JM",
+    "verified": true
   },
   "mercadolibre:MLA3558613326": {
     "address": "Caseros Al 3700, Olivos, Vicente López, Bs.As. G.B.A. Norte",
@@ -2554,11 +2736,6 @@
         "type": "price_low"
       },
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -2566,7 +2743,13 @@
     ],
     "id": "mercadolibre:MLA3567192108",
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_824694-MLA114212655663_072026-E.webp",
-    "images": [],
+    "images": [
+      "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/furnished.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/parking_lots.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/has_barbecue_area.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/is_suitable_for_pets.svg"
+    ],
     "operation": "alquiler",
     "price_amount": 100000.0,
     "price_currency": "ARS",
@@ -2575,7 +2758,8 @@
     "site": "mercadolibre",
     "surface_m2": 350.0,
     "title": "Casona Estilo Francés/ Studio De Fotografía Y Eventos",
-    "url": "https://casa.mercadolibre.com.ar/MLA-3567192108-casona-estilo-frances-studio-de-fotografia-y-eventos-_JM"
+    "url": "https://casa.mercadolibre.com.ar/MLA-3567192108-casona-estilo-frances-studio-de-fotografia-y-eventos-_JM",
+    "verified": true
   },
   "mercadolibre:MLA3567485808": {
     "address": "Nuñez 2306, Núñez, Capital Federal",
@@ -2585,11 +2769,6 @@
     "first_seen": "2026-07-10T03:52:51Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Nunez: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -2597,7 +2776,47 @@
     ],
     "id": "mercadolibre:MLA3567485808",
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_611730-MLA114211537867_072026-E.webp",
-    "images": [],
+    "images": [
+      "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+      "https://http2.mlstatic.com/D_Q_NP_611730-MLA114211537867_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_611730-MLA114211537867_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_890920-MLA114211537869_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_890920-MLA114211537869_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_749891-MLA114211537871_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_749891-MLA114211537871_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_757258-MLA114211537873_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_757258-MLA114211537873_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_996164-MLA114211537875_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_996164-MLA114211537875_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_751931-MLA114211537877_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_751931-MLA114211537877_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_622896-MLA114211537879_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_622896-MLA114211537879_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_941051-MLA114211537881_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_941051-MLA114211537881_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_684268-MLA114211537883_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_670595-MLA114211537885_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_897670-MLA114211537887_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_774442-MLA114211537889_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_727366-MLA114211537891_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_609870-MLA114211537893_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_753308-MLA114211537895_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_720946-MLA114211537897_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_944078-MLA114211537899_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_905014-MLA114211537901_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_909895-MLA114211537903_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_731195-MLA114211537905_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_637390-MLA114211537907_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_822815-MLA114211537909_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_961828-MLA114211537911_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_954745-MLA114211537913_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_850133-MLA114211537915_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_959630-MLA114211537917_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_731025-MLA114211537919_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_791180-MLA114211537921_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_748391-MLA114211537923_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_653720-MLA114211537925_072026-F.webp"
+    ],
     "operation": "alquiler",
     "price_amount": 2000000.0,
     "price_currency": "ARS",
@@ -2606,7 +2825,8 @@
     "site": "mercadolibre",
     "surface_m2": 120.0,
     "title": "Ph En Nuñez",
-    "url": "https://inmueble.mercadolibre.com.ar/MLA-3567485808-ph-en-nunez-_JM"
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-3567485808-ph-en-nunez-_JM",
+    "verified": true
   },
   "mercadolibre:MLA3574966658": {
     "address": "Pringles Al 500, Almagro, Capital Federal",
@@ -2616,11 +2836,6 @@
     "first_seen": "2026-07-10T04:23:36Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -2628,7 +2843,13 @@
     ],
     "id": "mercadolibre:MLA3574966658",
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_644187-MLA114268747143_072026-E.webp",
-    "images": [],
+    "images": [
+      "https://http2.mlstatic.com/storage/vis-accounts/1090340064_vip-6d2f8fef-ed9b-4a16-9a91-8940bdadbe53.png",
+      "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/furnished.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/is_suitable_for_pets.svg",
+      "https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/parking_lots.svg"
+    ],
     "operation": "alquiler",
     "price_amount": 6000000.0,
     "price_currency": "ARS",
@@ -2637,7 +2858,8 @@
     "site": "mercadolibre",
     "surface_m2": 198.0,
     "title": "Pringles 500 Casa Destino Comercial Almagro",
-    "url": "https://casa.mercadolibre.com.ar/MLA-3574966658-pringles-500-casa-destino-comercial-almagro-_JM"
+    "url": "https://casa.mercadolibre.com.ar/MLA-3574966658-pringles-500-casa-destino-comercial-almagro-_JM",
+    "verified": true
   },
   "mercadolibre:MLA3578433782": {
     "address": "Juan Carlos Cruz 2300, Olivos, Vicente López, Bs.As. G.B.A. Norte",
@@ -2701,11 +2923,6 @@
     "first_seen": "2026-07-10T03:53:25Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -2713,7 +2930,47 @@
     ],
     "id": "mercadolibre:MLA3584547646",
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_789507-MLA114345540981_072026-E.webp",
-    "images": [],
+    "images": [
+      "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+      "https://http2.mlstatic.com/D_Q_NP_860550-MLA114345540991_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_860550-MLA114345540991_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_789507-MLA114345540981_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_789507-MLA114345540981_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_979465-MLA114345540983_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_979465-MLA114345540983_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_911059-MLA114345540985_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_911059-MLA114345540985_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_929843-MLA114345540987_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_929843-MLA114345540987_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_880707-MLA114345540989_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_880707-MLA114345540989_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_606711-MLA114345540993_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_606711-MLA114345540993_072026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_735454-MLA114345540995_072026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_735454-MLA114345540995_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_905890-MLA114345540997_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_966109-MLA114345540999_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_729612-MLA114345541001_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_678240-MLA114345541003_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_974951-MLA114345541005_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_840863-MLA114345541007_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_772783-MLA114345541009_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_661062-MLA114345541011_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_986230-MLA114345541013_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_657764-MLA114345541015_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_658477-MLA114345541017_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_999922-MLA114345541019_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_685852-MLA114345541021_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_682065-MLA114345541023_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_665333-MLA114345541025_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_934318-MLA114345541027_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_761354-MLA114345541029_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_650075-MLA114345541031_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_779451-MLA114345541033_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_693083-MLA114345541035_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_917490-MLA114345541037_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_934389-MLA114345541039_072026-F.webp"
+    ],
     "operation": "alquiler",
     "price_amount": 3500000.0,
     "price_currency": "ARS",
@@ -2722,7 +2979,8 @@
     "site": "mercadolibre",
     "surface_m2": 395.0,
     "title": "Ph Almagro 11 Ambientes Alquiler Comercial",
-    "url": "https://inmueble.mercadolibre.com.ar/MLA-3584547646-ph-almagro-11-ambientes-alquiler-comercial-_JM"
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-3584547646-ph-almagro-11-ambientes-alquiler-comercial-_JM",
+    "verified": true
   },
   "remax:311bb778-e238-4f02-8533-89f6555ba24e": {
     "address": "Geronimo Rejon Entre 190 y 192 S/N",
@@ -3007,11 +3265,6 @@
     "first_seen": "2026-07-10T03:36:04Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -3020,7 +3273,13 @@
     "id": "zonaprop:47178798",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/47/17/87/98/360x266/1949752330.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/47/17/87/98/360x266/1949752330.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/47/17/87/98/1200x1200/1949752330.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/47/17/87/98/360x266/1949752340.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/47/17/87/98/360x266/1949752338.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/47/17/87/98/360x266/1949752326.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/47/17/87/98/360x266/1949752331.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 1600000.0,
@@ -3040,11 +3299,6 @@
     "first_seen": "2026-07-10T03:18:56Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -3053,7 +3307,13 @@
     "id": "zonaprop:49762338",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/49/76/23/38/360x266/1811819927.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/49/76/23/38/360x266/1811819927.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/49/76/23/38/1200x1200/1811819927.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/49/76/23/38/360x266/1882171948.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/49/76/23/38/360x266/2063864188.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/49/76/23/38/360x266/2063864187.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/49/76/23/38/360x266/2063864186.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 2000000.0,
@@ -3073,11 +3333,6 @@
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -3086,7 +3341,10 @@
     "id": "zonaprop:55173172",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/55/17/31/72/360x266/1949936824.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/55/17/31/72/360x266/1949936824.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/55/17/31/72/720x532/1949936824.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/55/17/31/72/1200x1200/1949936824.jpg?isFirstImage=true",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 2900000.0,
@@ -3106,11 +3364,6 @@
     "first_seen": "2026-07-13T16:35:53Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Nunez: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -3119,7 +3372,14 @@
     "id": "zonaprop:55708538",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/55/70/85/38/360x266/1962901381.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/55/70/85/38/360x266/1962901381.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/55/70/85/38/720x532/1962901381.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/55/70/85/38/1200x1200/1962901381.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/55/70/85/38/360x266/1962901372.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/55/70/85/38/360x266/1962901380.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/55/70/85/38/360x266/1962901365.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/55/70/85/38/360x266/1962901362.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 3500000.0,
@@ -3140,19 +3400,17 @@
     "first_seen": "2026-07-10T04:19:25Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
       }
     ],
     "id": "zonaprop:57789937",
-    "image": "",
-    "images": [],
+    "image": "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+    "images": [
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
+    ],
     "operation": "venta",
     "price_amount": 500002.0,
     "price_currency": "ARS",
@@ -3171,11 +3429,6 @@
     "first_seen": "2026-07-10T04:20:04Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Villa Crespo: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -3184,7 +3437,14 @@
     "id": "zonaprop:57869284",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/57/86/92/84/360x266/2020387131.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/57/86/92/84/360x266/2020387131.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/57/86/92/84/720x532/2020387131.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/57/86/92/84/1200x1200/2020387131.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/57/86/92/84/360x266/2020387127.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/57/86/92/84/360x266/2020387133.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/57/86/92/84/360x266/2019163848.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/57/86/92/84/360x266/2019163843.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 4500000.0,
@@ -3204,11 +3464,6 @@
     "first_seen": "2026-07-10T04:23:13Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Nunez: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -3217,7 +3472,14 @@
     "id": "zonaprop:57938823",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/57/93/88/23/360x266/2021012004.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/57/93/88/23/360x266/2021012004.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/57/93/88/23/720x532/2021012004.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/57/93/88/23/1200x1200/2021012004.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/57/93/88/23/360x266/2021011994.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/57/93/88/23/360x266/2021011978.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/57/93/88/23/360x266/2021012016.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/57/93/88/23/360x266/2021012006.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 5400000.0,
@@ -3237,11 +3499,6 @@
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -3250,7 +3507,14 @@
     "id": "zonaprop:58012524",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/01/25/24/360x266/2023052565.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/58/01/25/24/360x266/2023052565.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/01/25/24/720x532/2023052565.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/58/01/25/24/1200x1200/2023052565.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/01/25/24/360x266/2023052558.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/01/25/24/360x266/2023052561.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/01/25/24/360x266/2023052550.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/01/25/24/360x266/2023052554.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 5000000.0,
@@ -3270,11 +3534,6 @@
     "first_seen": "2026-07-10T04:27:36Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Saavedra: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -3283,7 +3542,14 @@
     "id": "zonaprop:58208157",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/20/81/57/360x266/2058838469.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/58/20/81/57/360x266/2058838469.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/20/81/57/720x532/2058838469.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/58/20/81/57/1200x1200/2058838469.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/20/81/57/360x266/2058838292.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/20/81/57/360x266/2058838438.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/20/81/57/360x266/2058838548.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/20/81/57/360x266/2058838314.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 2400000.0,
@@ -3303,11 +3569,6 @@
     "first_seen": "2026-07-10T03:52:19Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Comuna 15: inseguridad alta según datos oficiales (19.135 delitos/100k hab)",
         "level": "high",
         "type": "crime"
@@ -3316,7 +3577,13 @@
     "id": "zonaprop:58419223",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/41/92/23/360x266/2034371962.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/58/41/92/23/360x266/2034371962.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/58/41/92/23/1200x1200/2034371962.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/41/92/23/360x266/2034371961.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/41/92/23/360x266/2034371957.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/41/92/23/360x266/2034371966.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/41/92/23/360x266/2034371967.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 2500000.0,
@@ -3336,11 +3603,6 @@
     "first_seen": "2026-07-10T16:26:33Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Belgrano: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -3349,7 +3611,14 @@
     "id": "zonaprop:58458509",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/45/85/09/360x266/2035466318.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/58/45/85/09/360x266/2035466318.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/45/85/09/720x532/2035466318.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/58/45/85/09/1200x1200/2035466318.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/45/85/09/360x266/2035466332.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/45/85/09/360x266/2035466324.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/45/85/09/360x266/2035466305.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/45/85/09/360x266/2040151413.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 12900000.0,
@@ -3370,11 +3639,6 @@
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -3383,7 +3647,14 @@
     "id": "zonaprop:58609822",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/60/98/22/360x266/2039681148.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/58/60/98/22/360x266/2039681148.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/60/98/22/720x532/2039681148.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/58/60/98/22/1200x1200/2039681148.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/60/98/22/360x266/2039681112.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/60/98/22/360x266/2039681084.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/60/98/22/360x266/2039681115.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/60/98/22/360x266/2039681109.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 2900000.0,
@@ -3403,11 +3674,6 @@
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -3416,7 +3682,14 @@
     "id": "zonaprop:58639012",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/63/90/12/360x266/2040459724.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/58/63/90/12/360x266/2040459724.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/63/90/12/720x532/2040459724.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/58/63/90/12/1200x1200/2040459724.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/63/90/12/360x266/2040459710.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/63/90/12/360x266/2040459722.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/63/90/12/360x266/2040459718.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/63/90/12/360x266/2040459721.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 3000000.0,
@@ -3436,11 +3709,6 @@
     "first_seen": "2026-07-10T03:52:19Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Palermo: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -3449,7 +3717,13 @@
     "id": "zonaprop:58805290",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/80/52/90/360x266/2044886318.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/58/80/52/90/360x266/2044886318.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/58/80/52/90/1200x1200/2044886318.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/80/52/90/360x266/2044886327.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/80/52/90/360x266/2044886317.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/80/52/90/360x266/2044886329.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/80/52/90/360x266/2044886338.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 3200000.0,
@@ -3467,17 +3741,18 @@
     "bedrooms": 4,
     "expenses": null,
     "first_seen": "2026-07-10T04:27:36Z",
-    "flags": [
-      {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      }
-    ],
+    "flags": [],
     "id": "zonaprop:58817913",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/81/79/13/360x266/2055247449.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/58/81/79/13/360x266/2055247449.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/81/79/13/720x532/2055247449.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/58/81/79/13/1200x1200/2055247449.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/81/79/13/360x266/2055247450.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/81/79/13/360x266/2045220267.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/81/79/13/360x266/2045220309.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/81/79/13/360x266/2045220293.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 3500000.0,
@@ -3497,11 +3772,6 @@
     "first_seen": "2026-07-10T03:52:19Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Villa Crespo: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -3510,7 +3780,13 @@
     "id": "zonaprop:58837784",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/83/77/84/360x266/2045730067.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/58/83/77/84/360x266/2045730067.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/58/83/77/84/1200x1200/2045730067.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/83/77/84/360x266/2045730070.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/83/77/84/360x266/2047268670.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/83/77/84/360x266/2047268671.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/83/77/84/360x266/2047268663.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 4200000.0,
@@ -3530,11 +3806,6 @@
     "first_seen": "2026-07-10T04:25:32Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -3543,7 +3814,14 @@
     "id": "zonaprop:58899962",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/89/99/62/360x266/2062223162.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/58/89/99/62/360x266/2062223162.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/89/99/62/720x532/2062223162.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/58/89/99/62/1200x1200/2062223162.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/89/99/62/360x266/2062223153.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/89/99/62/360x266/2062223186.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/89/99/62/360x266/2062223108.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/89/99/62/360x266/2062222830.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 3600000.0,
@@ -3563,11 +3841,6 @@
     "first_seen": "2026-07-10T04:23:13Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Belgrano: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -3576,7 +3849,14 @@
     "id": "zonaprop:58958720",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/95/87/20/360x266/2062000603.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/58/95/87/20/360x266/2062000603.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/95/87/20/720x532/2062000603.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/58/95/87/20/1200x1200/2062000603.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/95/87/20/360x266/2061650727.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/95/87/20/360x266/2061650716.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/95/87/20/360x266/2061651283.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/95/87/20/360x266/2061651279.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 6000000.0,
@@ -3596,11 +3876,6 @@
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Boedo: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -3609,7 +3884,14 @@
     "id": "zonaprop:58969728",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/96/97/28/360x266/2049149920.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/58/96/97/28/360x266/2049149920.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/96/97/28/720x532/2049149920.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/58/96/97/28/1200x1200/2049149920.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/96/97/28/360x266/2049149918.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/96/97/28/360x266/2049149922.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/96/97/28/360x266/2049149919.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/96/97/28/360x266/2049149917.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 4300000.0,
@@ -3629,11 +3911,6 @@
     "first_seen": "2026-07-10T04:27:36Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Saavedra: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -3642,7 +3919,14 @@
     "id": "zonaprop:58981496",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/98/14/96/360x266/2049428629.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/58/98/14/96/360x266/2049428629.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/98/14/96/720x532/2049428629.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/58/98/14/96/1200x1200/2049428629.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/98/14/96/360x266/2049428612.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/98/14/96/360x266/2049428621.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/98/14/96/360x266/2049428623.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/98/14/96/360x266/2049428626.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 2700000.0,
@@ -3662,11 +3946,6 @@
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -3675,7 +3954,14 @@
     "id": "zonaprop:58993205",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/99/32/05/360x266/2061265607.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/58/99/32/05/360x266/2061265607.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/99/32/05/720x532/2061265607.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/58/99/32/05/1200x1200/2061265607.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/99/32/05/360x266/2061265559.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/99/32/05/360x266/2061265390.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/99/32/05/360x266/2061265374.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/99/32/05/360x266/2061265383.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 6000000.0,
@@ -3695,11 +3981,6 @@
     "first_seen": "2026-07-10T04:25:32Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Boedo: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -3708,7 +3989,14 @@
     "id": "zonaprop:58993861",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/99/38/61/360x266/2055602056.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/58/99/38/61/360x266/2055602056.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/99/38/61/720x532/2055602056.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/58/99/38/61/1200x1200/2055602056.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/99/38/61/360x266/2049729909.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/99/38/61/360x266/2049729768.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/99/38/61/360x266/2049729761.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/58/99/38/61/360x266/2049729751.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 1200000.0,
@@ -3728,11 +4016,6 @@
     "first_seen": "2026-07-10T03:18:56Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Villa Crespo: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -3741,7 +4024,13 @@
     "id": "zonaprop:59093574",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/09/35/74/360x266/2052418903.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/09/35/74/360x266/2052418903.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/09/35/74/1200x1200/2052418903.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/09/35/74/360x266/2052418897.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/09/35/74/360x266/2052418876.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/09/35/74/360x266/2052418888.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/09/35/74/360x266/2052418879.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 4200000.0,

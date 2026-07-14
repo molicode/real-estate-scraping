@@ -1,9 +1,9 @@
 {
   "key_present": true,
-  "checked_at": "2026-07-13T16:30:45Z",
+  "checked_at": "2026-07-14T14:47:35Z",
   "exhausted": false,
-  "request_count": 2878,
+  "request_count": 3021,
   "request_limit": 5000,
-  "remaining": 2122,
+  "remaining": 1979,
   "resets_at": "2026-08-01T00:00:00Z"
 }

@@ -1046,5 +1046,16 @@
    "mercadolibre_alquiler_casa_villa-crespo (mercadolibre): 0 avisos — posible bloqueo o cambio de HTML",
    "mercadolibre_alquiler_casa_Saavedra (mercadolibre): 0 avisos — posible bloqueo o cambio de HTML"
   ]
+ },
+ {
+  "finished_at": "2026-07-14T14:48:05Z",
+  "only_job": null,
+  "jobs": {
+   "mercadolibre_alquiler_ph_nunez_amplio": 3
+  },
+  "found": 3,
+  "new": 0,
+  "total_stored": 142,
+  "errors": []
  }
 ]
