@@ -574,6 +574,14 @@ tr.result-row.op-buy > td:first-child { box-shadow: inset 3px 0 0 var(--op-line)
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23ABA492' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
 }
 
+/* Modo lectura (sin token): se oculta lo que escribe; se puede ver todo. */
+body.read-only #new-job,
+body.read-only #run-now,
+body.read-only #enable-all,
+body.read-only #disable-all,
+body.read-only #clear-history,
+body.read-only #crime-refresh { display: none; }
+
 .chip-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 16px; }
 .chip {
   padding: 4px 13px;
