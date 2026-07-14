@@ -5,6 +5,9 @@ const OWNER = "molicode";
 const REPO = "real-estate-scraping";
 const BRANCH = "main";
 const API = `https://api.github.com/repos/${OWNER}/${REPO}`;
+// El repo es público: los datos se pueden LEER sin token vía raw. Se usa para
+// el "modo lectura" (ver todo sin poder editar/ejecutar).
+const RAW_BASE = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}`;
 const TOKEN_KEY = "resc_token";
 const GATE_KEY = "resc_gate";
 const THEME_KEY = "resc_theme";
@@ -28,6 +31,7 @@ const SITE_HINTS = {
 };
 
 let token = localStorage.getItem(TOKEN_KEY) || "";
+let readOnly = false; // sin token válido: se puede ver, no editar/ejecutar
 let jobsDoc = null; // contenido de jobs.json
 let jobsSha = null; // sha del archivo para poder commitear
 let editingIndex = null; // null = nuevo
@@ -119,15 +123,20 @@ window.imgFail = function (img) {
 /* ---------- API helpers ---------- */
 
 async function gh(path, opts = {}) {
-  const resp = await fetch(`${API}${path}`, {
-    ...opts,
-    headers: {
-      Authorization: `Bearer ${token}`,
-      Accept: "application/vnd.github+json",
-      "X-GitHub-Api-Version": "2022-11-28",
-      ...(opts.headers || {}),
-    },
-  });
+  // Sin token no se puede escribir (crear/editar/ejecutar): backstop por si
+  // alguna acción se cuela sin pasar por requireWrite().
+  const method = (opts.method || "GET").toUpperCase();
+  if (!token && method !== "GET") {
+    throw new Error("Modo lectura: conectá un token de GitHub para editar o ejecutar.");
+  }
+  const headers = {
+    Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
+    ...(opts.headers || {}),
+  };
+  // Sin token: pedidos anónimos (solo lectura de repo público, con rate limit).
+  if (token) headers.Authorization = `Bearer ${token}`;
+  const resp = await fetch(`${API}${path}`, { ...opts, headers });
   if (!resp.ok && resp.status !== 404) {
     const body = await resp.text().catch(() => "");
     throw new Error(`GitHub API ${resp.status}: ${body.slice(0, 200)}`);
@@ -149,6 +158,14 @@ function b64EncodeUtf8(str) {
 }
 
 async function fetchFile(path) {
+  // Sin token: leemos el archivo crudo (público, sin rate limit de la API).
+  // sha=null => no se puede commitear (modo lectura).
+  if (!token) {
+    const resp = await fetch(`${RAW_BASE}/${path}`);
+    if (resp.status === 404) return { content: null, sha: null };
+    if (!resp.ok) throw new Error(`No pude leer ${path} (${resp.status})`);
+    return { content: await resp.text(), sha: null };
+  }
   const resp = await gh(`/contents/${path}?ref=${BRANCH}`);
   if (resp.status === 404) return { content: null, sha: null };
   const data = await resp.json();
@@ -178,8 +195,9 @@ function unlockApp() {
   $("login-section").classList.add("hidden");
   $("app").classList.remove("hidden");
   $("gate-logout").classList.remove("hidden");
-  if (token) connect();
-  else $("auth-details").open = true;
+  // Con o sin token: connect() decide (token válido = edición; si no, modo
+  // lectura mostrando igual todos los datos del repo público).
+  connect();
 }
 
 function showLogin() {
@@ -234,13 +252,51 @@ function setConnState(state, text) {
   $("auth-summary-text").textContent = text;
 }
 
+// Carga los datos y muestra la app. Igual para modo con token y modo lectura.
+function showAppData() {
+  $("tabs").classList.remove("hidden");
+  $("main").classList.remove("hidden");
+  loadJobs();
+  loadProxyStatus().then(() => { if (jobsDoc) renderJobs(); });
+  loadCrimeData().then(() => { if (jobsDoc) renderJobs(); });
+}
+
+// Modo lectura: el repo es público, así que se puede VER todo sin token.
+// Solo se bloquean las acciones que escriben (crear/editar/ejecutar jobs,
+// guardar favoritos). El usuario puede conectar un token cuando quiera.
+function enterReadOnly(reason) {
+  readOnly = true;
+  token = ""; // por las dudas: si había un token inválido, leemos anónimo
+  document.body.classList.add("read-only");
+  setConnState("yellow", "Modo lectura — sin token");
+  setStatus(
+    $("auth-status"),
+    (reason ? reason + " " : "") + "Estás en modo lectura: podés ver todo, pero para editar/ejecutar conectá un token.",
+  );
+  $("token-save").classList.remove("hidden");
+  $("token-clear").classList.add("hidden");
+  showAppData();
+}
+
+// ¿Se puede escribir? (crear/editar/ejecutar/guardar). Si no, avisa y frena.
+function requireWrite() {
+  if (token && !readOnly) return true;
+  alert(
+    "Estás en modo lectura (sin token de GitHub).\n\nPodés ver todo, pero para crear/editar/ejecutar jobs o guardar favoritos necesitás conectar un token arriba, en “detalles” de la barra de conexión.",
+  );
+  return false;
+}
+
 async function connect() {
-  if (!token) return;
+  if (!token) { enterReadOnly(); return; }
+  readOnly = false;
+  document.body.classList.remove("read-only");
   setConnState("yellow", "Verificando conexión...");
   setStatus($("auth-status"), "Verificando acceso al repo...");
   try {
     const resp = await gh("");
     if (resp.status === 404) throw new Error("El token no ve el repositorio (¿le diste acceso a este repo?)");
+    if (resp.status === 401) throw new Error("El token no es válido o venció.");
     const repo = await resp.json();
     setConnState("green", `Conectado a ${repo.full_name}`);
     setStatus($("auth-status"), `Conectado a ${repo.full_name}`, "ok");
@@ -248,17 +304,11 @@ async function connect() {
     $("token-save").classList.add("hidden");
     $("token-clear").classList.remove("hidden");
     $("auth-details").open = false; // colapsar: el semáforo ya informa
-    $("tabs").classList.remove("hidden");
-    $("main").classList.remove("hidden");
-    await loadJobs();
-    // Estado del proxy (créditos de ScraperAPI) para marcar jobs en pausa.
-    loadProxyStatus().then(() => { if (jobsDoc) renderJobs(); });
-    // Cargar la base de delitos en segundo plano para los puntos de
-    // seguridad en las tarjetas de jobs y el label del formulario.
-    loadCrimeData().then(() => { if (jobsDoc) renderJobs(); });
+    showAppData();
   } catch (err) {
-    setConnState("red", "Error de conexión con GitHub");
-    setStatus($("auth-status"), "" + err.message, "error");
+    // En vez de dejar la pantalla vacía, entramos en modo lectura para que
+    // igual se pueda ver todo (el repo es público).
+    enterReadOnly("El token no funcionó (" + err.message + ").");
     $("auth-details").open = true;
   }
 }
@@ -480,6 +530,8 @@ $("jobs-list").addEventListener("click", async (e) => {
   if (!btn) return;
   const i = Number(btn.dataset.i);
   const act = btn.dataset.act;
+  // Editar/clonar solo abren el formulario (se puede mirar); el resto escribe.
+  if (act !== "edit" && act !== "clone" && !requireWrite()) return;
   if (act === "toggle") {
     // Detener/Activar tiene efecto inmediato: se guarda solo
     const job = jobsDoc.searches[i];
@@ -880,6 +932,7 @@ $("job-cancel").addEventListener("click", () => $("job-form-wrap").classList.add
 // Activar / detener TODOS los jobs de una (útil para frenar el gasto de
 // créditos del proxy). Se guarda al instante, como el toggle individual.
 async function setAllJobsEnabled(enabled) {
+  if (!requireWrite()) return;
   const jobs = jobsDoc.searches || [];
   if (!jobs.length) return;
   const affected = jobs.filter((j) => (j.enabled !== false) !== enabled).length;
@@ -921,6 +974,7 @@ function csv(id) {
 
 $("job-form").addEventListener("submit", (e) => {
   e.preventDefault();
+  if (!requireWrite()) return;
   const url = $("f-url").value.trim();
   const site = detectSite(url);
   if (!site) {
@@ -1012,6 +1066,7 @@ async function persistJobs(okMessage) {
 }
 
 $("run-now").addEventListener("click", async () => {
+  if (!requireWrite()) return;
   // Índices de los jobs que van a correr (activos y no pausados por proxy):
   // a esos les mostramos el chip de estado en vivo en su tarjeta.
   const runIndices = (jobsDoc?.searches || [])
@@ -1042,16 +1097,14 @@ let allListings = [];
 async function loadResults() {
   setStatus($("results-status"), "Cargando resultados...");
   try {
-    const resp = await gh(`/contents/data/listings.json?ref=${BRANCH}`, {
-      headers: { Accept: "application/vnd.github.raw+json" },
-    });
-    if (resp.status === 404) {
+    const data = await fetchRaw("data/listings.json");
+    if (!data) {
       allListings = [];
       $("results-list").innerHTML = '<p class="status">Todavía no hay resultados (data/listings.json no existe).</p>';
       setStatus($("results-status"), "");
       return;
     }
-    allListings = Object.values(await resp.json());
+    allListings = Object.values(data);
     if (!favLoaded) await loadFavorites();
     if (!riskLoaded) await loadRiskData();
     populateSearchSelects();
@@ -1234,6 +1287,7 @@ function refreshHearts() {
 }
 
 function toggleFavorite(id) {
+  if (!requireWrite()) return;
   if (isFav(id)) {
     delete favorites[id];
   } else {
@@ -1400,7 +1454,7 @@ function extraZoneFlag(l) {
 function displayFlags(l) {
   const flags = [...(l.flags || [])];
   if (looksNonResidential(l)) {
-    flags.push({ level: "med", label: "Parece uso comercial / estudio / eventos, no vivienda" });
+    flags.push({ level: "med", label: "No parece vivienda (lote/terreno, uso comercial, estudio o eventos)" });
   }
   const z = zoneFlag(l);
   if (z) flags.push(z);
@@ -1464,6 +1518,79 @@ const LEVEL_INFO = {
   bajo: { cls: "cm-bajo", dot: "green", txt: "Inseguridad baja", flag: "flag-low" },
 };
 
+// Población por barrio (Censo 2010, aprox.) para colorear el mapa de barrios
+// POR HABITANTE y no por total: un barrio grande y poblado como Caballito tiene
+// muchos delitos absolutos pero baja tasa per cápita. Nombres canónicos (los de
+// COMUNA_BARRIOS).
+const BARRIO_POBLACION = {
+  "agronomia": 13912, "almagro": 131699, "balvanera": 138926, "barracas": 89452,
+  "belgrano": 126267, "boedo": 45517, "caballito": 176076, "chacarita": 26897,
+  "coghlan": 18021, "colegiales": 52783, "constitucion": 43679, "flores": 149958,
+  "floresta": 37559, "la boca": 45076, "liniers": 42129, "mataderos": 63407,
+  "monte castro": 36001, "montserrat": 42844, "nueva pompeya": 39245, "nunez": 51858,
+  "palermo": 225970, "parque avellaneda": 51402, "parque chacabuco": 55301,
+  "parque chas": 12888, "parque patricios": 40985, "la paternal": 24373,
+  "puerto madero": 6726, "recoleta": 165494, "retiro": 65283, "saavedra": 47171,
+  "san cristobal": 46494, "san nicolas": 32919, "san telmo": 25969,
+  "velez sarsfield": 34317, "versalles": 14919, "villa crespo": 87400,
+  "villa del parque": 57087, "villa devoto": 68669, "villa general mitre": 30313,
+  "villa lugano": 111520, "villa luro": 32153, "villa ortuzar": 22968,
+  "villa pueyrredon": 40325, "villa real": 14968, "villa riachuelo": 13612,
+  "villa santa rita": 33646, "villa soldati": 43190, "villa urquiza": 84633,
+};
+
+// El GCBA usa nombres distintos en el CSV de delitos, en el geojson y en la
+// división oficial. Se llevan todos a la forma canónica de COMUNA_BARRIOS.
+const BARRIO_ALIAS = {
+  "monserrat": "montserrat", "boca": "la boca", "paternal": "la paternal",
+  "villa gral. mitre": "villa general mitre", "villa gral mitre": "villa general mitre",
+};
+function canonBarrio(name) {
+  const n = normZone(name).replace(/\./g, "").replace(/\s+/g, " ").trim();
+  return BARRIO_ALIAS[n] || (BARRIO_ALIAS[normZone(name)] || n);
+}
+
+// Nivel por barrio calculado por tasa per cápita (terciles), no por total.
+let barrioLevels = null;
+function computeBarrioLevels() {
+  barrioLevels = {};
+  if (!crimeData || !crimeData.barrios) return;
+  const per = {};
+  for (const [name, info] of Object.entries(crimeData.barrios)) {
+    const canon = canonBarrio(name);
+    const pop = BARRIO_POBLACION[canon];
+    if (pop && info && info.total) per[canon] = (info.total / pop) * 100000;
+  }
+  const vals = Object.values(per).sort((a, b) => a - b);
+  if (!vals.length) return;
+  const lo = vals[Math.floor(vals.length / 3)];
+  const hi = vals[Math.floor((2 * vals.length) / 3)];
+  for (const [canon, v] of Object.entries(per)) {
+    barrioLevels[canon] = { level: v <= lo ? "bajo" : v >= hi ? "alto" : "medio", per100k: Math.round(v) };
+  }
+}
+
+// Info de seguridad de un barrio: per cápita si hay dato+población; si el
+// barrio no está en la base (ej. La Boca), cae al nivel de su comuna (así no
+// queda gris). Devuelve null solo si no se sabe nada.
+function barrioInfo(geoName) {
+  const canon = canonBarrio(geoName);
+  const raw = (crimeData.barrios || {})[canon] || (crimeData.barrios || {})[normZone(geoName)];
+  const bl = barrioLevels && barrioLevels[canon];
+  if (raw && bl) {
+    return { name: canon, level: bl.level, per100k: bl.per100k, total: raw.total,
+             by_type: raw.by_type, comuna: raw.comuna ?? BARRIO_COMUNA[canon], source: "barrio" };
+  }
+  if (raw) {
+    return { name: canon, level: raw.level, total: raw.total, by_type: raw.by_type,
+             comuna: raw.comuna ?? BARRIO_COMUNA[canon], source: "barrio" };
+  }
+  const comuna = BARRIO_COMUNA[canon];
+  const cinfo = comuna != null ? crimeData.comunas[String(comuna)] : null;
+  if (cinfo) return { name: canon, level: cinfo.level, comuna, source: "comuna" };
+  return null;
+}
+
 // Zonas fuera de CABA (sin dato oficial del GCBA): estimación de seguridad.
 // Vicente López es uno de los partidos más tranquilos del GBA; se muestra
 // siempre como "estimado", nunca como dato oficial.
@@ -1511,6 +1638,12 @@ let mapMode = "comuna";
 // (aguanta hasta 100 MB), que además nos da el JSON ya parseado.
 async function fetchRaw(path) {
   try {
+    // Sin token: archivo crudo público (sin gastar el rate limit de la API).
+    if (!token) {
+      const resp = await fetch(`${RAW_BASE}/${path}`);
+      if (!resp.ok) return null;
+      return await resp.json();
+    }
     const resp = await gh(`/contents/${path}?ref=${BRANCH}`, {
       headers: { Accept: "application/vnd.github.raw+json" },
     });
@@ -1524,6 +1657,7 @@ async function loadCrimeData(force = false) {
   crimeData = await fetchRaw("data/crime.json");
   comunasGeo = await fetchRaw("data/comunas.geojson");
   barriosGeo = await fetchRaw("data/barrios.geojson");
+  computeBarrioLevels();
   crimeLoaded = true;
   updateCrimeUpdatedLabel();
 }
@@ -1604,7 +1738,7 @@ function buildMapSvg(mode) {
     }));
     if (mode === "barrio") {
       const b = f.properties.barrio;
-      const info = (crimeData.barrios || {})[b];
+      const info = barrioInfo(b);
       const cls = (LEVEL_INFO[(info || {}).level] || {}).cls || "cm-na";
       return `<path class="comuna ${cls}" data-barrio="${escapeHtml(b)}" d="${d.trim()}"><title>${escapeHtml(b.replace(/\b\w/g, (c) => c.toUpperCase()))}</title></path>`;
     }
@@ -1633,7 +1767,7 @@ function renderCrimeMap() {
   const barrioReady = mapMode === "barrio" && barriosGeo && crimeData.barrios;
   const effMode = mapMode === "barrio" && !barrioReady ? "comuna" : mapMode;
   $("crime-meta").textContent = effMode === "barrio"
-    ? `Total de delitos registrados por barrio (terciles) · datos oficiales GCBA · años ${crimeData.years.join(", ")}`
+    ? `Delitos por 100.000 habitantes del barrio (terciles) · GCBA + población Censo 2010 · años ${crimeData.years.join(", ")}`
     : `Delitos por 100.000 habitantes · datos oficiales GCBA (Mapa del Delito) · años ${crimeData.years.join(", ")}`;
   $("crime-map").innerHTML = buildMapSvg(effMode);
   showComunaDetail(null);
@@ -1727,7 +1861,7 @@ function showComunaDetail(key) {
 
 function showBarrioDetail(b) {
   const box = $("comuna-detail");
-  const info = (crimeData.barrios || {})[b];
+  const info = barrioInfo(b);
   const nice = b.replace(/\b\w/g, (c) => c.toUpperCase());
   if (!info) {
     box.innerHTML = `<div class="cd-head"><span class="flag flag-na">Sin datos</span> <strong>${escapeHtml(nice)}</strong></div>
@@ -1737,10 +1871,20 @@ function showBarrioDetail(b) {
   const m = LEVEL_INFO[info.level] || LEVEL_INFO.medio;
   const comuna = info.comuna;
   const cinfo = comuna != null ? crimeData.comunas[String(comuna)] : null;
+  // El barrio no está en la base de delitos: se muestra el nivel de su comuna.
+  if (info.source === "comuna") {
+    box.innerHTML = `
+      <div class="cd-head"><span class="flag ${m.flag}">${m.txt}</span> <strong>${escapeHtml(nice)}</strong></div>
+      <div class="top-meta">Comuna ${comuna} · estimado por comuna (el barrio no figura en la base de delitos)</div>
+      ${cinfo ? `<div class="cd-stat"><span class="tabnum">${cinfo.per100k.toLocaleString("es-AR")}</span> delitos por 100.000 hab. (Comuna ${comuna})</div>` : ""}
+      ${cinfo && cinfo.by_year ? trendChartHtml(cinfo.by_year, `Evolución de la Comuna ${comuna}`) : ""}`;
+    return;
+  }
   box.innerHTML = `
     <div class="cd-head"><span class="flag ${m.flag}">${m.txt}</span> <strong>${escapeHtml(nice)}</strong></div>
     <div class="top-meta">Comuna ${comuna}</div>
-    <div class="cd-stat"><span class="tabnum">${info.total.toLocaleString("es-AR")}</span> delitos registrados (${crimeData.years.join("–")})</div>
+    ${info.per100k != null ? `<div class="cd-stat"><span class="tabnum">${info.per100k.toLocaleString("es-AR")}</span> delitos por 100.000 hab. · ${info.total.toLocaleString("es-AR")} en total (${crimeData.years.join("–")})</div>`
+      : `<div class="cd-stat"><span class="tabnum">${info.total.toLocaleString("es-AR")}</span> delitos registrados (${crimeData.years.join("–")})</div>`}
     <div class="ctypes">${byTypeBarsHtml(info.by_type)}</div>
     ${cinfo && cinfo.by_year ? trendChartHtml(cinfo.by_year, `Evolución de la Comuna ${comuna}`) : ""}`;
 }
@@ -1791,6 +1935,15 @@ function inferOperation(l) {
 }
 
 function listingOperation(l) {
+  // El título manda cuando es inequívoco: algunos portales (ej. Remax, que
+  // arma la búsqueda por operación) devuelven avisos de VENTA dentro de un job
+  // de alquiler. Si el título dice claramente "venta" o "alquiler", ganamos eso;
+  // así no se cuela una venta en el Top 5 de alquiler.
+  const t = (l.title || "").toLowerCase();
+  const venta = /\bventa\b|\bvende\b|en venta/.test(t);
+  const alquiler = /\balquiler\b|\balquila\b|en alquiler/.test(t);
+  if (venta && !alquiler) return "venta";
+  if (alquiler && !venta) return "alquiler";
   return l.operation || jobOperation(l.search_name) || inferOperation(l);
 }
 
@@ -1936,7 +2089,7 @@ function hasOutdoor(l) {
 // Avisos que NO son para vivir: estudios de foto, salones de eventos, locales
 // de uso comercial, etc. Se detectan por el título/dirección y se dejan fuera
 // del Top 5 (y se marcan con una señal en el resto de la app).
-const NON_RESIDENTIAL_RX = /(estudio|studio)\s+de\s+fotograf|fotograf[ií]a|productora|sal[oó]n\s+de\s+(eventos|fiestas)|\beventos\b|coworking|fondo de comercio|gastron[oó]mic|dep[oó]sito|galp[oó]n|consultorio|apto\s+profesional|uso\s+comercial/i;
+const NON_RESIDENTIAL_RX = /(estudio|studio)\s+de\s+fotograf|fotograf[ií]a|productora|sal[oó]n\s+de\s+(eventos|fiestas)|\beventos\b|coworking|fondo de comercio|gastron[oó]mic|dep[oó]sito|galp[oó]n|consultorio|apto\s+profesional|uso\s+comercial|\blotes?\b|\bterrenos?\b|loteo/i;
 function looksNonResidential(l) {
   return NON_RESIDENTIAL_RX.test(`${l.title || ""} ${l.address || ""}`);
 }
@@ -2875,6 +3028,7 @@ if ($("map-mode")) {
  * (data/crime.json + geojson), así el mapa está siempre disponible. */
 if ($("crime-refresh")) {
   $("crime-refresh").addEventListener("click", async () => {
+    if (!requireWrite()) return;
     if (!confirm("¿Actualizar la base de delitos? Descarga los datos oficiales del GCBA y puede tardar unos minutos.")) return;
     $("crime-refresh").disabled = true;
     setStatus($("crime-status"), "Disparando la actualización...");

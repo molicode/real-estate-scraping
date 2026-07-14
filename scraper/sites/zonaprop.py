@@ -16,7 +16,9 @@ Paginación: 'lista.html' -> 'lista-pagina-2.html'.
 
 from __future__ import annotations
 
+import json
 import logging
+import re
 from typing import Iterable
 from urllib.parse import urljoin
 
@@ -36,6 +38,44 @@ class ZonapropScraper(BaseScraper):
     # Cloudflare suele devolver 403 a los runners de GitHub: con el secret
     # SCRAPERAPI_KEY configurado se reintenta vía proxy.
     proxy_fallback = True
+    # La grilla de resultados solo trae 1 foto por aviso; la galería completa
+    # está en la página de detalle (se enriquece acotado, como MercadoLibre).
+    detail_supported = True
+
+    def parse_detail(self, html: str) -> dict:
+        """Galería completa desde el detalle del aviso: primero los datos
+        estructurados (JSON-LD `image`), si no las <img> del CDN de fotos."""
+        images: list[str] = []
+        seen: set[str] = set()
+        for m in re.finditer(
+            r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+            html, re.DOTALL | re.IGNORECASE,
+        ):
+            try:
+                obj = json.loads(m.group(1).strip())
+            except ValueError:
+                continue
+            for o in (obj if isinstance(obj, list) else [obj]):
+                if not isinstance(o, dict) or not o.get("image"):
+                    continue
+                imgs = o["image"] if isinstance(o["image"], list) else [o["image"]]
+                for u in imgs:
+                    if isinstance(u, str) and u.startswith("http") and u not in seen:
+                        seen.add(u)
+                        images.append(u)
+        if len(images) <= 1:
+            soup = BeautifulSoup(html, "lxml")
+            for im in soup.select("img"):
+                src = im.get("data-src") or im.get("src") or ""
+                low = src.lower()
+                if not src.startswith("http") or ("naventcdn" not in low and "zonapropcdn" not in low):
+                    continue
+                if any(bad in low for bad in ("logo", ".svg", "sprite", "/icon")):
+                    continue
+                if src not in seen:
+                    seen.add(src)
+                    images.append(src)
+        return {"images": images[:40]}
 
     def _build_session(self):
         try:

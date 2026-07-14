@@ -140,3 +140,15 @@ def test_mercadolibre_pagination():
         scraper.page_url(url, 2)
         == "https://inmuebles.mercadolibre.com.ar/departamentos/venta/caballito_Desde_49"
     )
+
+
+def test_mercadolibre_alt_url_capital_federal():
+    # ML a veces no resuelve /ph/alquiler/villa-crespo/ pero sí con capital-federal.
+    s = MercadoLibreScraper()
+    assert (
+        s._alt_url("https://inmuebles.mercadolibre.com.ar/ph/alquiler/villa-crespo/")
+        == "https://inmuebles.mercadolibre.com.ar/ph/alquiler/capital-federal/villa-crespo/"
+    )
+    # Ya trae región (capital-federal o GBA): no hay alternativa.
+    assert s._alt_url("https://inmuebles.mercadolibre.com.ar/ph/alquiler/capital-federal/palermo/") is None
+    assert s._alt_url("https://inmuebles.mercadolibre.com.ar/ph/alquiler/bsas-gba-norte/vicente-lopez/olivos/") is None

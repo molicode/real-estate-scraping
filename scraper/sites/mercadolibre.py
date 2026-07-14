@@ -11,13 +11,17 @@ Paginación por offset: se agrega `_Desde_49`, `_Desde_97`, ... al path
 from __future__ import annotations
 
 import json
+import logging
 import re
+from dataclasses import replace
 from typing import Iterable, Optional
 from urllib.parse import urlsplit, urlunsplit
 
 from bs4 import BeautifulSoup
 
-from ..models import Listing, make_listing_id
+from ..models import Listing, Search, make_listing_id
+
+logger = logging.getLogger(__name__)
 from ..parsing import clean_text, parse_features, parse_price
 from .base import BaseScraper
 
@@ -127,6 +131,29 @@ class MercadoLibreScraper(BaseScraper):
             "/gz/account-verification" in (resp.url or "")
             or "suspicious_traffic" in resp.text
         )
+
+    def _alt_url(self, url: str) -> Optional[str]:
+        """URL alternativa canónica de CABA: MercadoLibre a veces no resuelve
+        `/ph/alquiler/villa-crespo/` pero sí `/ph/alquiler/capital-federal/villa-crespo/`.
+        Devuelve None si no aplica (ya tiene región, o es GBA)."""
+        parts = urlsplit(url)
+        segs = [s for s in parts.path.split("/") if s]
+        # Forma sin región: [tipo, operación, zona]. Si ya trae 'capital-federal'
+        # o una región del GBA (bsas-...), no hay alternativa que agregar.
+        if len(segs) == 3 and segs[2] != "capital-federal" and not segs[2].startswith("bsas"):
+            new_path = f"/{segs[0]}/{segs[1]}/capital-federal/{segs[2]}/"
+            return urlunsplit((parts.scheme, parts.netloc, new_path, parts.query, ""))
+        return None
+
+    def search(self, search: Search) -> list[Listing]:
+        results = super().search(search)
+        if results:
+            return results
+        alt = self._alt_url(search.url)
+        if alt and alt != search.url:
+            logger.info("%s: 0 avisos en '%s'; reintento con %s", self.site, search.url, alt)
+            return super().search(replace(search, url=alt))
+        return results
 
     def page_url(self, base_url: str, page: int) -> str:
         if page <= 1:
