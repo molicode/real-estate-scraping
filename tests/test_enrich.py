@@ -136,6 +136,7 @@ class _FakeScraper:
     site = "mercadolibre"
     detail_supported = True
     proxy_fallback = True
+    browser_engine = True  # ML enriquece por navegador (gratis)
 
     def __init__(self, html):
         self._html = html
