@@ -1068,5 +1068,16 @@
   "new": 2,
   "total_stored": 144,
   "errors": []
+ },
+ {
+  "finished_at": "2026-07-15T14:43:21Z",
+  "only_job": "mercadolibre_alquiler_ph_caballito",
+  "jobs": {
+   "mercadolibre_alquiler_ph_caballito": 0
+  },
+  "found": 0,
+  "new": 0,
+  "total_stored": 144,
+  "errors": []
  }
 ]

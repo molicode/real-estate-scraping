@@ -1727,11 +1727,6 @@
     "first_seen": "2026-07-10T03:53:25Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -1739,7 +1734,31 @@
     ],
     "id": "mercadolibre:MLA1845637867",
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_768502-MLA113811240361_062026-E.webp",
-    "images": [],
+    "images": [
+      "https://http2.mlstatic.com/storage/vis-accounts/1697152350_vip-5659d52b-2778-4154-a759-6a4efe2c0305.png",
+      "https://http2.mlstatic.com/D_Q_NP_768502-MLA113811240361_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_768502-MLA113811240361_062026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_603049-MLA113811240373_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_603049-MLA113811240373_062026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_717879-MLA113811240379_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_717879-MLA113811240379_062026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_765633-MLA113811240383_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_765633-MLA113811240383_062026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_896479-MLA113811240369_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_896479-MLA113811240369_062026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_680849-MLA113811240363_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_680849-MLA113811240363_062026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_869670-MLA113811240367_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_869670-MLA113811240367_062026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_743809-MLA113811240365_062026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_743809-MLA113811240365_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_712862-MLA113811240371_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_784707-MLA113811240359_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_956962-MLA113811240381_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_898013-MLA113811240357_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_926320-MLA113811240377_062026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_835896-MLA113811240375_062026-F.webp"
+    ],
     "operation": "alquiler",
     "price_amount": 1600000.0,
     "price_currency": "ARS",
@@ -1748,7 +1767,8 @@
     "site": "mercadolibre",
     "surface_m2": 79.0,
     "title": "Ph Almagro Al Frente",
-    "url": "https://inmueble.mercadolibre.com.ar/MLA-1845637867-ph-almagro-al-frente-_JM"
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-1845637867-ph-almagro-al-frente-_JM",
+    "verified": true
   },
   "mercadolibre:MLA1852308055": {
     "address": "Caballito, Caballito, Capital Federal",
