@@ -175,13 +175,17 @@ def test_enrich_details_respeta_cap_y_actualiza_almacen(monkeypatch):
     assert new[2].verified is False
 
 
-def test_enrich_details_backfill_avisos_viejos_con_una_foto(monkeypatch):
+def test_enrich_details_backfill_solo_motor_gratis(monkeypatch):
+    """El backfill de galería solo usa motor gratis (navegador para ML). Un
+    sitio que dependería del proxy (Zonaprop) NO se backfillea, para no gastar
+    créditos en cada corrida diaria."""
     import scraper.main as main
 
-    class _Fake:
-        site = "zonaprop"
+    class _MlBrowser:  # MercadoLibre: navegador (gratis) -> sí backfillea
+        site = "mercadolibre"
         detail_supported = True
         proxy_fallback = True
+        browser_engine = True
         def __init__(self):
             self.calls = 0
         def fetch(self, url):
@@ -190,24 +194,30 @@ def test_enrich_details_backfill_avisos_viejos_con_una_foto(monkeypatch):
         def parse_detail(self, html):
             return {"images": ["g1", "g2", "g3"]}
 
-    class _NoDetail:
-        detail_supported = False
+    class _ZpProxy:  # Zonaprop: dependería del proxy -> se saltea
+        site = "zonaprop"
+        detail_supported = True
+        proxy_fallback = True
+        browser_engine = False
+        def __init__(self):
+            self.calls = 0
+        def fetch(self, url):
+            self.calls += 1
+            return "<html>ok</html>"
+        def parse_detail(self, html):
+            return {"images": ["z1", "z2"]}
 
-    fake = _Fake()
-    monkeypatch.setattr(main, "get_scraper", lambda site: fake if site == "zonaprop" else _NoDetail())
+    ml, zp = _MlBrowser(), _ZpProxy()
+    monkeypatch.setattr(main, "get_scraper", lambda site: ml if site == "mercadolibre" else zp)
     stored = {
-        # una sola foto -> se backfillea
+        "mercadolibre:1": {"id": "mercadolibre:1", "site": "mercadolibre", "url": "https://m/1", "images": ["a"], "image": "a"},
         "zonaprop:1": {"id": "zonaprop:1", "site": "zonaprop", "url": "https://z/1", "images": ["a"], "image": "a"},
-        # ya tiene galería -> se saltea
-        "zonaprop:2": {"id": "zonaprop:2", "site": "zonaprop", "url": "https://z/2", "images": ["a", "b", "c"]},
-        # remax no soporta detalle -> se saltea aunque tenga 1 foto
-        "remax:3": {"id": "remax:3", "site": "remax", "url": "https://r/3", "images": ["a"]},
     }
     main.enrich_details([], stored, cap=40, proxy_exhausted=False)
-    assert fake.calls == 1  # solo el zonaprop con 1 foto
-    assert stored["zonaprop:1"]["images"] == ["g1", "g2", "g3"]
-    assert stored["zonaprop:2"]["images"] == ["a", "b", "c"]  # intacto
-    assert stored["remax:3"]["images"] == ["a"]  # intacto
+    assert ml.calls == 1  # ML (navegador) se backfillea
+    assert zp.calls == 0  # Zonaprop (proxy) NO se toca
+    assert stored["mercadolibre:1"]["images"] == ["g1", "g2", "g3"]
+    assert stored["zonaprop:1"]["images"] == ["a"]  # intacto (no gastó proxy)
 
 
 def test_enrich_details_salta_si_proxy_agotado(monkeypatch):

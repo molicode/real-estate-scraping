@@ -192,7 +192,13 @@ def enrich_details(
     def usable(scraper) -> bool:
         if not getattr(scraper, "detail_supported", False):
             return False
-        # Sin créditos de proxy no vale la pena intentar en sitios bloqueados.
+        # Solo enriquecemos galería con motor GRATIS: navegador (MercadoLibre) o
+        # requests. NO gastamos proxy en galerías — Zonaprop se limita a la
+        # búsqueda de lunes y viernes; no queremos que el backfill diario le
+        # pegue por ScraperAPI. (Los favoritos sí se enriquecen aparte, acotado.)
+        needs_proxy = getattr(scraper, "proxy_fallback", False) and not getattr(scraper, "browser_engine", False)
+        if needs_proxy:
+            return False
         return not (proxy_exhausted and getattr(scraper, "proxy_fallback", False))
 
     done = 0
