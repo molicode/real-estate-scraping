@@ -20,6 +20,10 @@ logger = logging.getLogger(__name__)
 # acceso directo, para no gastar créditos de más.
 SCRAPERAPI_ENDPOINT = "https://api.scraperapi.com/"
 
+# Motor de navegador real (Playwright) como alternativa al proxy. Se activa con
+# USE_PLAYWRIGHT=1 (pensado para correr desde una IP residencial, sin ScraperAPI).
+USE_PLAYWRIGHT = os.environ.get("USE_PLAYWRIGHT", "").strip().lower() in ("1", "true", "yes")
+
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
@@ -40,6 +44,7 @@ class BaseScraper:
     delay_range = (1.0, 3.0)  # pausa entre páginas para no golpear al sitio
     proxy_fallback = False  # sitios que bloquean IPs de datacenter
     detail_supported = False  # si sabe enriquecer un aviso desde su detalle
+    use_browser = True  # si USE_PLAYWRIGHT, bajar el HTML con navegador real
 
     def __init__(self, session: Optional[requests.Session] = None):
         self.session = session or self._build_session()
@@ -73,7 +78,32 @@ class BaseScraper:
             logger.warning("Error de red en %s (%s): %s", self.site, url, exc)
             return None
 
+    def _browser_get(self, url: str) -> Optional[str]:
+        """Baja el HTML con un navegador real (Playwright). Reutiliza is_blocked
+        pasándole un objeto con los mismos atributos que una Response."""
+        from .. import browser as browser_engine  # import perezoso
+
+        result = browser_engine.fetch_html(url, timeout=self.proxy_timeout)
+        if not result:
+            return None
+        html, final_url = result
+
+        class _Resp:  # shim para reusar la lógica de bloqueo de cada sitio
+            pass
+
+        resp = _Resp()
+        resp.url = final_url
+        resp.text = html
+        resp.status_code = 200
+        if self.is_blocked(resp):
+            logger.warning("%s: el navegador también fue bloqueado en %s", self.site, url)
+            return None
+        return html
+
     def fetch(self, url: str) -> Optional[str]:
+        # Modo navegador (sin ScraperAPI): renderiza con Chromium real.
+        if USE_PLAYWRIGHT and self.use_browser:
+            return self._browser_get(url)
         text = self._get(url)
         if text is None and self.proxy_fallback and self.proxy_key:
             logger.info("%s: reintentando vía proxy de scraping", self.site)

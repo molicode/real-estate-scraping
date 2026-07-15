@@ -1,0 +1,37 @@
+name: Test Playwright (sin ScraperAPI)
+
+# Corre solo en esta rama de experimentación (con cada push) y a mano.
+# NO toca la producción ni commitea datos: es un diagnóstico.
+on:
+  push:
+    branches: [playwright_test]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Configurar Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar dependencias + Playwright
+        run: |
+          pip install -r requirements.txt
+          pip install playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Scrapear con Playwright, SIN ScraperAPI
+        env:
+          USE_PLAYWRIGHT: "1"
+          SCRAPERAPI_KEY: ""
+        run: python scripts/test_playwright.py
