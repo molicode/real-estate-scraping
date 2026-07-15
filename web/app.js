@@ -425,7 +425,8 @@ function zoneDot(job) {
  * corrida. Si el cupo mensual del plan gratis se agotó, los portales que
  * dependen del proxy (Zonaprop/MercadoLibre) quedan en pausa hasta la recarga. */
 let proxyStatus = null;
-const PROXY_SITES = new Set(["zonaprop", "mercadolibre"]);
+// Portales que dependen de ScraperAPI (MercadoLibre pasó a Playwright, no gasta).
+const PROXY_SITES = new Set(["zonaprop", "argenprop"]);
 
 async function loadProxyStatus() {
   try {
@@ -487,8 +488,11 @@ function renderJobs() {
     det.dataset.jobIdx = i;
     det.open = openIdx.has(i);
     const every = Math.max(1, Number(job.every_hours) || 1);
-    const hasWd = job.weekday != null && job.weekday !== "";
-    const freqTxt = hasWd ? `1×sem · ${WEEKDAYS[job.weekday % 7]}` : every === 24 ? "1×día" : every === 168 ? "1×sem" : every % 24 === 0 ? `cada ${every / 24}d` : `cada ${every} h`;
+    const wd = Array.isArray(job.weekday) ? job.weekday
+      : (job.weekday != null && job.weekday !== "" ? [job.weekday] : []);
+    const freqTxt = wd.length
+      ? wd.map((d) => WEEKDAYS[((d % 7) + 7) % 7]).join("+")
+      : every === 24 ? "1×día" : every === 168 ? "1×sem" : every % 24 === 0 ? `cada ${every / 24}d` : `cada ${every} h`;
     const offTxt = (job.offset_hours != null) ? ` · ${String(job.offset_hours).padStart(2, "0")}:00 UTC` : "";
     det.innerHTML = `
       <summary>
@@ -890,7 +894,10 @@ function openForm(index, prefill) {
   $("f-url").value = job?.url || "";
   $("f-max-pages").value = job?.max_pages ?? jobsDoc.defaults?.max_pages ?? 2;
   setFrequencyFields(Math.max(1, Number(job?.every_hours) || 1));
-  $("f-weekday").value = (job?.weekday != null && job?.weekday !== "") ? String(job.weekday % 7) : "";
+  // El selector del form es de un día; si el job tiene varios (ej. lun+vie),
+  // muestra el primero (la agenda multi-día se administra desde jobs.json).
+  const wd0 = Array.isArray(job?.weekday) ? job.weekday[0] : job?.weekday;
+  $("f-weekday").value = (wd0 != null && wd0 !== "") ? String(((wd0 % 7) + 7) % 7) : "";
   syncWeekdayVisibility();
   $("f-offset").value = job?.offset_hours ?? "";
   $("f-enabled").value = String(job ? job.enabled !== false : true);

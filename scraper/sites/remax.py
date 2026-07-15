@@ -54,7 +54,6 @@ def _as_int(value) -> Optional[int]:
 
 class RemaxScraper(BaseScraper):
     site = "remax"
-    use_browser = False  # es una API JSON: no hace falta navegador
 
     def _build_session(self):
         session = super()._build_session()

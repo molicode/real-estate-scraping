@@ -44,7 +44,12 @@ class BaseScraper:
     delay_range = (1.0, 3.0)  # pausa entre páginas para no golpear al sitio
     proxy_fallback = False  # sitios que bloquean IPs de datacenter
     detail_supported = False  # si sabe enriquecer un aviso desde su detalle
-    use_browser = True  # si USE_PLAYWRIGHT, bajar el HTML con navegador real
+    # Motor por portal: solo los que lo declaran usan el navegador (Playwright)
+    # cuando USE_PLAYWRIGHT está activo. El resto sigue con requests(+proxy).
+    # Empíricamente: MercadoLibre pasa su anti-bot con navegador real desde la
+    # IP de GitHub (sin ScraperAPI); Zonaprop no (DataDome), así que ese queda
+    # con proxy; Argenprop/Remax andan con requests.
+    browser_engine = False
 
     def __init__(self, session: Optional[requests.Session] = None):
         self.session = session or self._build_session()
@@ -101,8 +106,9 @@ class BaseScraper:
         return html
 
     def fetch(self, url: str) -> Optional[str]:
-        # Modo navegador (sin ScraperAPI): renderiza con Chromium real.
-        if USE_PLAYWRIGHT and self.use_browser:
+        # Portales que rinden con navegador real (ej. MercadoLibre): Playwright
+        # en vez de proxy, así no gastan créditos de ScraperAPI.
+        if USE_PLAYWRIGHT and self.browser_engine:
             return self._browser_get(url)
         text = self._get(url)
         if text is None and self.proxy_fallback and self.proxy_key:

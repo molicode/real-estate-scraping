@@ -55,9 +55,10 @@ class Search:
     # esa hora para escalonar varios jobs y no correrlos todos juntos. Después
     # la cadencia de every_hours mantiene el carril. None = arranca enseguida.
     offset_hours: Optional[int] = None
-    # Día de la semana para jobs semanales (0=lunes ... 6=domingo, hora UTC).
-    # Si se define, el job SOLO corre ese día (a la hora de offset_hours si hay).
-    weekday: Optional[int] = None
+    # Día(s) de la semana para jobs semanales (0=lunes ... 6=domingo, hora UTC).
+    # Lista de días; si se define, el job SOLO corre esos días (a la hora de
+    # offset_hours si hay). Ej: [0, 4] = lunes y viernes.
+    weekday: Optional[list[int]] = None
     filters: dict[str, Any] = field(default_factory=dict)
 
 

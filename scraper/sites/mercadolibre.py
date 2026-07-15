@@ -53,7 +53,10 @@ def _extract_json_array(text: str, key: str) -> Optional[str]:
 class MercadoLibreScraper(BaseScraper):
     site = "mercadolibre"
     # MercadoLibre redirige a las IPs de datacenter (como los runners de
-    # GitHub) a una página de "verificación de cuenta": hace falta proxy.
+    # GitHub) a una página de "verificación de cuenta". Con navegador real
+    # (Playwright) pasa el anti-bot sin proxy, así que preferimos ese motor; el
+    # proxy queda como red de seguridad si Playwright no está disponible.
+    browser_engine = True
     proxy_fallback = True
     # Soporta enriquecer el aviso desde su página de detalle (galería completa
     # e identidad verificada del anunciante).

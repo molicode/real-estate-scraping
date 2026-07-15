@@ -146,6 +146,35 @@ def test_filter_due_weekly_solo_el_dia():
     assert [x.name for x in filter_due(s, hist, prox_lunes)] == ["lunes"]
 
 
+def test_filter_due_dos_dias_lunes_y_viernes():
+    from datetime import datetime, timezone
+    from scraper.main import filter_due
+    from scraper.models import Search
+
+    # Job atado a lunes(0) y viernes(4) a las 23 UTC (Zonaprop/Argenprop).
+    s = [Search(name="lunvie", url="u", every_hours=24, weekday=[0, 4], offset_hours=23)]
+    lunes_23 = datetime(2026, 7, 6, 23, 0, tzinfo=timezone.utc)     # lunes
+    martes_23 = datetime(2026, 7, 7, 23, 0, tzinfo=timezone.utc)    # martes
+    viernes_23 = datetime(2026, 7, 10, 23, 0, tzinfo=timezone.utc)  # viernes
+    viernes_12 = datetime(2026, 7, 10, 12, 0, tzinfo=timezone.utc)  # viernes, otra hora
+    assert [x.name for x in filter_due(s, [], lunes_23)] == ["lunvie"]
+    assert [x.name for x in filter_due(s, [], viernes_23)] == ["lunvie"]
+    assert filter_due(s, [], martes_23) == []   # martes no
+    assert filter_due(s, [], viernes_12) == []  # viernes pero otra hora
+
+
+def test_build_searches_lee_weekday_lista():
+    config = {"searches": [
+        {"name": "a", "url": "https://www.zonaprop.com.ar/x", "site": "zonaprop", "weekday": [0, 4]},
+        {"name": "b", "url": "https://www.zonaprop.com.ar/y", "site": "zonaprop", "weekday": 0},
+        {"name": "c", "url": "https://www.zonaprop.com.ar/z", "site": "zonaprop"},
+    ]}
+    s = {x.name: x for x in build_searches(config)}
+    assert s["a"].weekday == [0, 4]
+    assert s["b"].weekday == [0]   # entero -> lista
+    assert s["c"].weekday is None
+
+
 def test_build_searches_lee_offset_hours():
     config = {"searches": [
         {"name": "a", "url": "https://www.argenprop.com/x", "site": "argenprop", "offset_hours": 27},
