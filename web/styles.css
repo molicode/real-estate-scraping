@@ -606,6 +606,8 @@ body.read-only #crime-refresh { display: none; }
 .usage-big { font-size: 26px; font-weight: 600; color: var(--text); margin-right: 4px; }
 .usage-of { color: var(--text-faint); }
 .usage-sub { font-size: 12.5px; color: var(--text-faint); line-height: 1.5; }
+.usage-stamp { margin-top: 6px; display: flex; align-items: flex-start; gap: 5px; }
+.usage-stamp svg { flex: 0 0 auto; margin-top: 2px; }
 .usage-svg { width: 100%; max-width: 340px; height: auto; margin-top: 2px; }
 .usage-svg .ubar { fill: var(--accent); opacity: 0.85; }
 .usage-svg .ubar:hover { opacity: 1; }

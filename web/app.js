@@ -353,6 +353,17 @@ document.querySelectorAll(".tab").forEach((btn) => {
 
 function fmtNum(n) { return Number(n).toLocaleString("es-AR"); }
 
+// "medido el 15/07 14:42" (hora local), o "hace 20 min" si es reciente.
+function fmtMeasuredAt(iso) {
+  if (!iso) return "";
+  const d = new Date(iso);
+  if (isNaN(d)) return "";
+  const mins = Math.round((Date.now() - d.getTime()) / 60000);
+  if (mins < 60 && mins >= 0) return mins <= 1 ? "recién" : `hace ${mins} min`;
+  const p = (x) => String(x).padStart(2, "0");
+  return `el ${p(d.getDate())}/${p(d.getMonth() + 1)} ${p(d.getHours())}:${p(d.getMinutes())}`;
+}
+
 function usageBarHtml(pct, tone) {
   const p = Math.max(0, Math.min(100, Math.round(pct)));
   return `<div class="usage-bar"><div class="usage-fill ${tone}" style="width:${p}%"></div></div>`;
@@ -371,13 +382,15 @@ function renderScraperUsage() {
   const pct = limit ? (used / limit) * 100 : 0;
   const tone = pct >= 90 ? "bad" : pct >= 70 ? "warn" : "ok";
   const resets = (s.resets_at || "").slice(0, 10).split("-").reverse().join("/");
+  const measured = fmtMeasuredAt(s.checked_at);
   el.innerHTML = `
     ${usageBarHtml(pct, tone)}
     <div class="usage-nums">
       <span class="usage-big tabnum">${fmtNum(remaining)}</span> créditos disponibles
       <span class="usage-of">· usados ${fmtNum(used)} de ${fmtNum(limit)} (${Math.round(pct)}%)</span>
     </div>
-    <div class="usage-sub">Se recarga el ${resets || "primero del mes"}. Solo lo usan Zonaprop y Argenprop (lunes y viernes).</div>`;
+    <div class="usage-sub">Se recarga el ${resets || "primero del mes"}. Solo lo usan Zonaprop y Argenprop (lunes y viernes).</div>
+    <div class="usage-sub usage-stamp">${icon("clock", 12)} Consumo real de ScraperAPI${measured ? `, medido ${measured}` : ""}. Se refresca solo cada pocas horas — si mirás el dashboard justo después de una corrida, puede diferir por unos pocos requests.</div>`;
 }
 
 // Mini gráfico de barras: minutos de Actions por día (últimos 14 días).

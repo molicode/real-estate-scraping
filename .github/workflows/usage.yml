@@ -1,0 +1,64 @@
+name: Consumo ScraperAPI
+
+# Mantiene data/proxy_status.json al día con el consumo REAL de ScraperAPI.
+# El endpoint /account NO gasta créditos, así que lo consultamos seguido para
+# que el número de la web coincida con el dashboard de ScraperAPI. Es gratis:
+# Actions es ilimitado en repos públicos y este job dura pocos segundos.
+
+on:
+  schedule:
+    # Cada 3 horas. Es solo una llamada HTTP + commit si cambió: barato.
+    - cron: "0 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: usage
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Configurar Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Refrescar consumo de ScraperAPI (no gasta créditos)
+        env:
+          SCRAPERAPI_KEY: ${{ secrets.SCRAPERAPI_KEY }}
+        run: python scripts/refresh_usage.py
+
+      - name: Commitear el estado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/proxy_status.json
+          if git diff --staged --quiet; then
+            echo "Sin cambios en el consumo"
+            exit 0
+          fi
+          git commit -m "chore: refrescar consumo de ScraperAPI [skip ci]"
+          pushed=0
+          for i in 1 2 3 4 5; do
+            if git push; then pushed=1; break; fi
+            echo "push rechazado (intento $i): traigo el remoto y rebaseo"
+            git fetch origin main || true
+            git rebase -X theirs origin/main || git rebase --abort || true
+            sleep $((i * 2))
+          done
+          if [ "$pushed" != 1 ]; then
+            echo "::warning::No se pudo pushear el consumo; se reintenta en la próxima corrida"
+          fi
+          exit 0
