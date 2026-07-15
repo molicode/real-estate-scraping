@@ -82,11 +82,21 @@ def build_searches(config: dict[str, Any], only_job: str | None = None) -> list[
                 max_pages=int(raw.get("max_pages", defaults.get("max_pages", 1))),
                 every_hours=max(1, int(raw.get("every_hours", defaults.get("every_hours", 1)))),
                 offset_hours=(int(raw["offset_hours"]) % 24 if raw.get("offset_hours") not in (None, "") else None),
-                weekday=(int(raw["weekday"]) % 7 if raw.get("weekday") not in (None, "") else None),
+                weekday=_norm_weekday(raw.get("weekday")),
                 filters=merged_filters,
             )
         )
     return searches
+
+
+def _norm_weekday(raw) -> Optional[list[int]]:
+    """Normaliza 'weekday' a una lista de días (0=lunes … 6=domingo) o None.
+    Acepta un entero (un día) o una lista (varios, ej. lunes y viernes)."""
+    if raw in (None, ""):
+        return None
+    values = raw if isinstance(raw, (list, tuple)) else [raw]
+    days = sorted({int(v) % 7 for v in values if v not in (None, "")})
+    return days or None
 
 
 def filter_due(searches: list[Search], history: list[dict], now: datetime) -> list[Search]:
@@ -109,11 +119,12 @@ def filter_due(searches: list[Search], history: list[dict], now: datetime) -> li
         last = last_run.get(search.name)
         elapsed = (now - last).total_seconds() if last is not None else None
 
-        # Jobs anclados a un día de la semana (ej. "todos los lunes"): solo
-        # corren ese día (y a la hora de offset si la definieron). El chequeo
+        # Jobs anclados a día(s) de la semana (ej. "lunes y viernes"): solo
+        # corren esos días (y a la hora de offset si la definieron). El chequeo
         # de elapsed evita re-correrlo dos veces el mismo día.
         if search.weekday is not None:
-            if now.weekday() != search.weekday % 7:
+            days = search.weekday if isinstance(search.weekday, (list, tuple)) else [search.weekday]
+            if now.weekday() not in days:
                 continue
             if search.offset_hours is not None and now.hour != search.offset_hours % 24:
                 continue

@@ -582,6 +582,35 @@ body.read-only #disable-all,
 body.read-only #clear-history,
 body.read-only #crime-refresh { display: none; }
 
+/* ---------- Consumo (pestaña Conexión) ---------- */
+.usage-card { display: flex; flex-direction: column; gap: 20px; }
+.usage-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.usage-head h3 { margin: 0; }
+.usage-block { display: flex; flex-direction: column; gap: 8px; }
+.usage-title {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 13px; font-weight: 500; color: var(--text-soft);
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+.usage-title .ic { width: 15px; height: 15px; color: var(--accent); }
+.usage-bar {
+  height: 12px; border-radius: var(--r-pill);
+  background: var(--surface-soft); border: 1px solid var(--border);
+  overflow: hidden;
+}
+.usage-fill { height: 100%; border-radius: var(--r-pill); transition: width var(--dur) var(--ease); }
+.usage-fill.ok { background: var(--success); }
+.usage-fill.warn { background: var(--warn); }
+.usage-fill.bad { background: var(--danger); }
+.usage-nums { font-size: 14px; color: var(--text-soft); }
+.usage-big { font-size: 26px; font-weight: 600; color: var(--text); margin-right: 4px; }
+.usage-of { color: var(--text-faint); }
+.usage-sub { font-size: 12.5px; color: var(--text-faint); line-height: 1.5; }
+.usage-svg { width: 100%; max-width: 340px; height: auto; margin-top: 2px; }
+.usage-svg .ubar { fill: var(--accent); opacity: 0.85; }
+.usage-svg .ubar:hover { opacity: 1; }
+.usage-svg .ubar-lbl { fill: var(--text-faint); font-size: 8px; text-anchor: middle; }
+
 .chip-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 16px; }
 .chip {
   padding: 4px 13px;

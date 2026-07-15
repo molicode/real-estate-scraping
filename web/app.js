@@ -83,6 +83,9 @@ const ICONS = {
   sparkles: '<path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/>',
   list: '<line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/>',
   grid: '<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',
+  plug: '<path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v3a6 6 0 0 1-12 0V8z"/>',
+  gauge: '<path d="M12 14l4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/>',
+  zap: '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>',
   "shield-check": '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>',
   alert: '<path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>',
   "arrow-right": '<line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>',
@@ -271,7 +274,7 @@ function enterReadOnly(reason) {
   setConnState("yellow", "Modo lectura — sin token");
   setStatus(
     $("auth-status"),
-    (reason ? reason + " " : "") + "Estás en modo lectura: podés ver todo, pero para editar/ejecutar conectá un token.",
+    (reason ? reason + " " : "") + "Estás en modo lectura: podés ver todo, pero para editar/ejecutar conectá un token en la pestaña “Conexión”.",
   );
   $("token-save").classList.remove("hidden");
   $("token-clear").classList.add("hidden");
@@ -282,7 +285,7 @@ function enterReadOnly(reason) {
 function requireWrite() {
   if (token && !readOnly) return true;
   alert(
-    "Estás en modo lectura (sin token de GitHub).\n\nPodés ver todo, pero para crear/editar/ejecutar jobs o guardar favoritos necesitás conectar un token arriba, en “detalles” de la barra de conexión.",
+    "Estás en modo lectura (sin token de GitHub).\n\nPodés ver todo, pero para crear/editar/ejecutar jobs o guardar favoritos necesitás conectar un token en la pestaña “Conexión”.",
   );
   return false;
 }
@@ -342,8 +345,103 @@ document.querySelectorAll(".tab").forEach((btn) => {
       loadCrimeData().then(renderCrimeMap);
     }
     if (btn.dataset.tab === "runs" && !$("runs-list").innerHTML) loadRuns();
+    if (btn.dataset.tab === "conexion") loadUsage();
   });
 });
+
+/* ---------- Consumo (ScraperAPI + GitHub Actions) ---------- */
+
+function fmtNum(n) { return Number(n).toLocaleString("es-AR"); }
+
+function usageBarHtml(pct, tone) {
+  const p = Math.max(0, Math.min(100, Math.round(pct)));
+  return `<div class="usage-bar"><div class="usage-fill ${tone}" style="width:${p}%"></div></div>`;
+}
+
+function renderScraperUsage() {
+  const el = $("usage-scraper");
+  const s = proxyStatus;
+  if (!s || !s.key_present) {
+    el.innerHTML = '<p class="status">Sin ScraperAPI configurado (o sin datos todavía). MercadoLibre ya no lo usa: va por Playwright.</p>';
+    return;
+  }
+  const used = Number(s.request_count) || 0;
+  const limit = Number(s.request_limit) || 0;
+  const remaining = s.remaining != null ? Number(s.remaining) : Math.max(0, limit - used);
+  const pct = limit ? (used / limit) * 100 : 0;
+  const tone = pct >= 90 ? "bad" : pct >= 70 ? "warn" : "ok";
+  const resets = (s.resets_at || "").slice(0, 10).split("-").reverse().join("/");
+  el.innerHTML = `
+    ${usageBarHtml(pct, tone)}
+    <div class="usage-nums">
+      <span class="usage-big tabnum">${fmtNum(remaining)}</span> créditos disponibles
+      <span class="usage-of">· usados ${fmtNum(used)} de ${fmtNum(limit)} (${Math.round(pct)}%)</span>
+    </div>
+    <div class="usage-sub">Se recarga el ${resets || "primero del mes"}. Solo lo usan Zonaprop y Argenprop (lunes y viernes).</div>`;
+}
+
+// Mini gráfico de barras: minutos de Actions por día (últimos 14 días).
+function usageBarsSvg(days) {
+  const W = 320, H = 70, pad = 4, n = days.length;
+  const max = Math.max(1, ...days.map((d) => d.min));
+  const bw = (W - pad * 2) / n;
+  const bars = days.map((d, i) => {
+    const h = Math.round((d.min / max) * (H - 18));
+    const x = pad + i * bw;
+    const y = H - 14 - h;
+    return `<rect class="ubar" x="${x + 1}" y="${y}" width="${bw - 2}" height="${Math.max(1, h)}" rx="1.5"><title>${d.label}: ${d.min} min</title></rect>` +
+           (i % 2 === 0 ? `<text class="ubar-lbl" x="${x + bw / 2}" y="${H - 3}">${d.day}</text>` : "");
+  }).join("");
+  return `<svg viewBox="0 0 ${W} ${H}" class="usage-svg" role="img" aria-label="Minutos de Actions por día">${bars}</svg>`;
+}
+
+function renderActionsUsage(runs) {
+  const el = $("usage-actions");
+  const now = new Date();
+  const monthKey = now.toISOString().slice(0, 7);
+  let monthMin = 0, monthRuns = 0;
+  const perDay = {};
+  for (let i = 13; i >= 0; i--) {
+    const d = new Date(now.getTime() - i * 86400000);
+    perDay[d.toISOString().slice(0, 10)] = 0;
+  }
+  for (const r of runs) {
+    const started = r.run_started_at || r.created_at;
+    const ended = r.updated_at || started;
+    if (!started) continue;
+    const mins = Math.max(1, Math.ceil((new Date(ended) - new Date(started)) / 60000));
+    const dayKey = started.slice(0, 10);
+    if (dayKey in perDay) perDay[dayKey] += mins;
+    if (started.slice(0, 7) === monthKey) { monthMin += mins; monthRuns++; }
+  }
+  const days = Object.entries(perDay).map(([k, min]) => {
+    const dt = new Date(k + "T12:00:00Z");
+    return { min, day: dt.getUTCDate(), label: k.split("-").reverse().join("/") };
+  });
+  el.innerHTML = `
+    <div class="usage-nums">
+      <span class="usage-big">∞</span> disponible
+      <span class="usage-of">· repo público, sin límite</span>
+    </div>
+    <div class="usage-sub" style="margin-bottom:6px">Usaste <strong>~${fmtNum(monthMin)} min</strong> este mes en ${monthRuns} corridas (aproximado, tiempo de reloj).</div>
+    ${usageBarsSvg(days)}
+    <div class="usage-sub"><span class="badge on">${icon("shield-check", 12)} GitHub Actions es gratis e ilimitado en repos públicos</span> — no se agota. (El cupo de 2.000 min/mes del plan gratis aplica solo a repos privados.)</div>`;
+}
+
+async function loadUsage() {
+  await loadProxyStatus();
+  renderScraperUsage();
+  $("usage-actions").innerHTML = '<p class="status">Cargando corridas…</p>';
+  try {
+    const resp = await gh("/actions/runs?per_page=100");
+    const data = await resp.json();
+    renderActionsUsage(data.workflow_runs || []);
+  } catch (err) {
+    $("usage-actions").innerHTML = `<p class="status">No pude leer las corridas de Actions: ${escapeHtml(err.message)}</p>`;
+  }
+}
+
+$("usage-refresh").addEventListener("click", loadUsage);
 
 /* ---------- Jobs ---------- */
 
@@ -425,7 +523,8 @@ function zoneDot(job) {
  * corrida. Si el cupo mensual del plan gratis se agotó, los portales que
  * dependen del proxy (Zonaprop/MercadoLibre) quedan en pausa hasta la recarga. */
 let proxyStatus = null;
-const PROXY_SITES = new Set(["zonaprop", "mercadolibre"]);
+// Portales que dependen de ScraperAPI (MercadoLibre pasó a Playwright, no gasta).
+const PROXY_SITES = new Set(["zonaprop", "argenprop"]);
 
 async function loadProxyStatus() {
   try {
@@ -487,8 +586,11 @@ function renderJobs() {
     det.dataset.jobIdx = i;
     det.open = openIdx.has(i);
     const every = Math.max(1, Number(job.every_hours) || 1);
-    const hasWd = job.weekday != null && job.weekday !== "";
-    const freqTxt = hasWd ? `1×sem · ${WEEKDAYS[job.weekday % 7]}` : every === 24 ? "1×día" : every === 168 ? "1×sem" : every % 24 === 0 ? `cada ${every / 24}d` : `cada ${every} h`;
+    const wd = Array.isArray(job.weekday) ? job.weekday
+      : (job.weekday != null && job.weekday !== "" ? [job.weekday] : []);
+    const freqTxt = wd.length
+      ? wd.map((d) => WEEKDAYS[((d % 7) + 7) % 7]).join("+")
+      : every === 24 ? "1×día" : every === 168 ? "1×sem" : every % 24 === 0 ? `cada ${every / 24}d` : `cada ${every} h`;
     const offTxt = (job.offset_hours != null) ? ` · ${String(job.offset_hours).padStart(2, "0")}:00 UTC` : "";
     det.innerHTML = `
       <summary>
@@ -890,7 +992,10 @@ function openForm(index, prefill) {
   $("f-url").value = job?.url || "";
   $("f-max-pages").value = job?.max_pages ?? jobsDoc.defaults?.max_pages ?? 2;
   setFrequencyFields(Math.max(1, Number(job?.every_hours) || 1));
-  $("f-weekday").value = (job?.weekday != null && job?.weekday !== "") ? String(job.weekday % 7) : "";
+  // El selector del form es de un día; si el job tiene varios (ej. lun+vie),
+  // muestra el primero (la agenda multi-día se administra desde jobs.json).
+  const wd0 = Array.isArray(job?.weekday) ? job.weekday[0] : job?.weekday;
+  $("f-weekday").value = (wd0 != null && wd0 !== "") ? String(((wd0 % 7) + 7) % 7) : "";
   syncWeekdayVisibility();
   $("f-offset").value = job?.offset_hours ?? "";
   $("f-enabled").value = String(job ? job.enabled !== false : true);

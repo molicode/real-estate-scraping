@@ -2,9 +2,11 @@ name: Scraper de propiedades
 
 on:
   schedule:
-    # Cada hora, todos los días (UTC). GitHub puede demorar el inicio
-    # algunos minutos en horas pico.
-    - cron: "0 * * * *"
+    # MercadoLibre + Remax (gratis: Playwright/JSON) -> todos los días 12:00 UTC.
+    - cron: "0 12 * * *"
+    # Zonaprop + Argenprop (usan ScraperAPI) -> solo lunes y viernes 23:00 UTC,
+    # para estirar los créditos del proxy. (En cron 1=lunes, 5=viernes.)
+    - cron: "0 23 * * 1,5"
   workflow_dispatch:
     inputs:
       telegram_test:
@@ -42,7 +44,20 @@ jobs:
           cache: pip
 
       - name: Instalar dependencias
-        run: pip install -r requirements.txt
+        run: |
+          pip install -r requirements.txt
+          pip install playwright
+
+      # El navegador de Playwright (~150MB) se cachea entre corridas para no
+      # bajarlo cada vez. MercadoLibre se scrapea con Chromium real (sin proxy).
+      - name: Cache del navegador Playwright
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-chromium-${{ runner.os }}
+
+      - name: Instalar Chromium (Playwright)
+        run: python -m playwright install --with-deps chromium
 
       - name: Prueba de Telegram
         if: github.event_name == 'workflow_dispatch' && inputs.telegram_test
@@ -58,6 +73,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           SCRAPERAPI_KEY: ${{ secrets.SCRAPERAPI_KEY }}
           ONLY_JOB: ${{ inputs.only_job }}
+          USE_PLAYWRIGHT: "1"
         run: python -m scraper.main
 
       - name: Commitear resultados
