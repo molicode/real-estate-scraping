@@ -45,23 +45,6 @@
 <!-- App (visible solo tras el login) -->
 <div id="app" class="hidden">
 
-<details id="auth-details" class="card auth-details">
-  <summary>
-    <span id="auth-dot" class="dot red"></span>
-    <span id="auth-summary-text">Sin conexión con GitHub</span>
-    <span class="summary-hint">detalles <span data-icon="chevron-down"></span></span>
-  </summary>
-  <div class="details-body">
-    <p>Necesitás un <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained personal access token</a> con acceso a <strong>este repositorio</strong> y permisos: <code>Contents: Read and write</code> y <code>Actions: Read and write</code>. Se guarda solo en tu navegador (localStorage).</p>
-    <div class="row">
-      <input type="password" id="token-input" placeholder="github_pat_...">
-      <button id="token-save" class="btn primary">Conectar</button>
-      <button id="token-clear" class="btn danger hidden">Desconectar</button>
-    </div>
-    <p id="auth-status" class="status"></p>
-  </div>
-</details>
-
 <nav id="tabs" class="hidden">
   <button class="tab active" data-tab="jobs"><span data-icon="settings"></span> Jobs</button>
   <button class="tab" data-tab="top"><span data-icon="star"></span> Top 5</button>
@@ -69,6 +52,7 @@
   <button class="tab" data-tab="fav"><span data-icon="heart"></span> Me gustan</button>
   <button class="tab" data-tab="risk"><span data-icon="shield"></span> Riesgo</button>
   <button class="tab" data-tab="runs"><span data-icon="clock"></span> Corridas</button>
+  <button class="tab" data-tab="conexion"><span data-icon="plug"></span> Conexión</button>
 </nav>
 
 <main class="hidden" id="main">
@@ -652,6 +636,42 @@
   </div>
   <div id="runs-list"></div>
   <div class="row"><button id="runs-more" class="btn hidden"><span data-icon="chevron-down"></span> Cargar más corridas</button></div>
+</section>
+
+<section id="tab-conexion" class="tab-panel hidden">
+  <details id="auth-details" class="card auth-details" open>
+    <summary>
+      <span id="auth-dot" class="dot red"></span>
+      <span id="auth-summary-text">Sin conexión con GitHub</span>
+      <span class="summary-hint">detalles <span data-icon="chevron-down"></span></span>
+    </summary>
+    <div class="details-body">
+      <p>Para <strong>ver</strong> los avisos no hace falta nada (el repo es público). Para <strong>editar/ejecutar</strong> jobs o guardar favoritos, conectá un <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained personal access token</a> con acceso a <strong>este repositorio</strong> y permisos <code>Contents: Read and write</code> y <code>Actions: Read and write</code>. Se guarda solo en tu navegador (localStorage).</p>
+      <div class="row">
+        <input type="password" id="token-input" placeholder="github_pat_...">
+        <button id="token-save" class="btn primary">Conectar</button>
+        <button id="token-clear" class="btn danger hidden">Desconectar</button>
+      </div>
+      <p id="auth-status" class="status"></p>
+    </div>
+  </details>
+
+  <div class="card usage-card">
+    <div class="usage-head">
+      <h3><span class="ic-h" data-icon="gauge"></span> Consumo</h3>
+      <button id="usage-refresh" class="btn small"><span data-icon="refresh"></span> Actualizar</button>
+    </div>
+
+    <div class="usage-block">
+      <div class="usage-title"><span data-icon="zap"></span> ScraperAPI · créditos del mes</div>
+      <div id="usage-scraper"><p class="status">Cargando…</p></div>
+    </div>
+
+    <div class="usage-block">
+      <div class="usage-title"><span data-icon="settings"></span> GitHub Actions · uso del scraper</div>
+      <div id="usage-actions"><p class="status">Cargando…</p></div>
+    </div>
+  </div>
 </section>
 
 </main>
