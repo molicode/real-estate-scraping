@@ -2193,6 +2193,48 @@
     "url": "https://inmueble.mercadolibre.com.ar/MLA-1887393139-ph-en-excelente-estado-tres-ambientes-patio-con-lavadero-en-alquiler-_JM",
     "verified": true
   },
+  "mercadolibre:MLA1891196933": {
+    "address": "Rosetti 3905, Olivos, Vicente López, Bs.As. G.B.A. Norte",
+    "bathrooms": 1,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-15T10:47:21Z",
+    "flags": [],
+    "id": "mercadolibre:MLA1891196933",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_703381-MLA87624246749_072025-E.webp",
+    "images": [
+      "https://http2.mlstatic.com/storage/vis-accounts/1675059710_vip-5c584ead-6e17-4ccd-b8ef-b7695d8010ca.png",
+      "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+      "https://http2.mlstatic.com/D_Q_NP_703381-MLA87624246749_072025-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_703381-MLA87624246749_072025-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_622611-MLA87295781726_072025-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_622611-MLA87295781726_072025-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_610150-MLA87295752188_072025-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_610150-MLA87295752188_072025-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_672723-MLA87295752216_072025-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_672723-MLA87295752216_072025-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_677382-MLA87623930429_072025-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_677382-MLA87623930429_072025-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_945782-MLA87624246743_072025-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_945782-MLA87624246743_072025-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_973144-MLA85889546741_062025-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_973144-MLA85889546741_062025-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_688096-MLA87296324980_072025-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_688096-MLA87296324980_072025-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_679614-MLA113225998886_072026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_716516-MLA113226205722_072026-F.webp"
+    ],
+    "operation": "alquiler",
+    "price_amount": 950000.0,
+    "price_currency": "ARS",
+    "rooms": 3,
+    "search_name": "mercadolibre_alquiler_ph_olivos",
+    "site": "mercadolibre",
+    "surface_m2": 50.0,
+    "title": "Ph P Alta Fte Olivos Unicenter 2 Dormitorios ( No Expensas )",
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-1891196933-ph-p-alta-fte-olivos-unicenter-2-dormitorios-no-expensas--_JM",
+    "verified": true
+  },
   "mercadolibre:MLA3065374952": {
     "address": "Doctor, Barreiro Aguirre 3913, Olivos, Olivos, Vicente López, Bs.As. G.B.A. Norte",
     "bathrooms": 1,
@@ -2980,6 +3022,60 @@
     "surface_m2": 395.0,
     "title": "Ph Almagro 11 Ambientes Alquiler Comercial",
     "url": "https://inmueble.mercadolibre.com.ar/MLA-3584547646-ph-almagro-11-ambientes-alquiler-comercial-_JM",
+    "verified": true
+  },
+  "mercadolibre:MLA3604488030": {
+    "address": "Dr Jose Ingenieros 2100, Olivos, Vicente López, Bs.As. G.B.A. Norte",
+    "bathrooms": 1,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-15T10:47:21Z",
+    "flags": [],
+    "id": "mercadolibre:MLA3604488030",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_628485-MLA110847058059_042026-E.webp",
+    "images": [
+      "https://http2.mlstatic.com/storage/vis-accounts/221317226_vip-eda25cf6-9fb8-4d72-b353-920b0404c411.jpg",
+      "https://http2.mlstatic.com/storage/vpp-backend/assets/webimages/mla-garantia-ya-v2.svg",
+      "https://http2.mlstatic.com/D_Q_NP_628485-MLA110847058059_042026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_628485-MLA110847058059_042026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_895973-MLA110847058031_042026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_895973-MLA110847058031_042026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_961452-MLA110847058041_042026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_961452-MLA110847058041_042026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_869635-MLA110847058023_042026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_869635-MLA110847058023_042026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_630050-MLA110847058027_042026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_630050-MLA110847058027_042026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_685801-MLA110847058035_042026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_685801-MLA110847058035_042026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_751057-MLA110847058043_042026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_751057-MLA110847058043_042026-F.webp",
+      "https://http2.mlstatic.com/D_Q_NP_773335-MLA110847058039_042026-R.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_773335-MLA110847058039_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_629410-MLA110847058047_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_676745-MLA110847058037_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_928436-MLA110847058053_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_795920-MLA110847058055_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_884675-MLA110847058049_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_840539-MLA110847058051_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_806278-MLA110847058025_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_979443-MLA110847058029_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_600148-MLA110847058033_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_859618-MLA110847058057_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_890799-MLA110847058061_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_611434-MLA110847058021_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_986328-MLA110847058045_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_911701-MLA110847058063_042026-F.webp"
+    ],
+    "operation": "alquiler",
+    "price_amount": 780000.0,
+    "price_currency": "ARS",
+    "rooms": 2,
+    "search_name": "mercadolibre_alquiler_ph_olivos",
+    "site": "mercadolibre",
+    "surface_m2": 50.0,
+    "title": "Ph 2 Ambientes Al Medio, Amplio Con Patio Sin Expensas",
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-3604488030-ph-2-ambientes-al-medio-amplio-con-patio-sin-expensas-_JM",
     "verified": true
   },
   "remax:311bb778-e238-4f02-8533-89f6555ba24e": {
@@ -4050,11 +4146,6 @@
     "first_seen": "2026-07-10T03:36:04Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -4063,7 +4154,13 @@
     "id": "zonaprop:59102685",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/10/26/85/360x266/2062151136.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/10/26/85/360x266/2062151136.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/10/26/85/1200x1200/2062151136.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/10/26/85/360x266/2062151135.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/10/26/85/360x266/2062151142.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/10/26/85/360x266/2062151123.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/10/26/85/360x266/2062151140.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 1400000.0,
@@ -4083,11 +4180,6 @@
     "first_seen": "2026-07-10T04:20:04Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Palermo: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -4096,7 +4188,14 @@
     "id": "zonaprop:59147521",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/14/75/21/360x266/2064352169.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/14/75/21/360x266/2064352169.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/14/75/21/720x532/2064352169.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/14/75/21/1200x1200/2064352169.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/14/75/21/360x266/2053777974.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/14/75/21/360x266/2053778167.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/14/75/21/360x266/2053777946.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/14/75/21/360x266/2053778173.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 9000000.0,
@@ -4116,11 +4215,6 @@
     "first_seen": "2026-07-10T04:20:04Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Comuna 15: inseguridad alta según datos oficiales (19.135 delitos/100k hab)",
         "level": "high",
         "type": "crime"
@@ -4129,7 +4223,14 @@
     "id": "zonaprop:59149695",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/14/96/95/360x266/2058862913.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/14/96/95/360x266/2058862913.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/14/96/95/720x532/2058862913.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/14/96/95/1200x1200/2058862913.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/14/96/95/360x266/2058862964.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/14/96/95/360x266/2058862500.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/14/96/95/360x266/2058862816.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/14/96/95/360x266/2058862615.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 2250000.0,
@@ -4149,11 +4250,6 @@
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -4162,7 +4258,14 @@
     "id": "zonaprop:59155437",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/15/54/37/360x266/2060361961.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/15/54/37/360x266/2060361961.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/15/54/37/720x532/2060361961.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/15/54/37/1200x1200/2060361961.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/15/54/37/360x266/2053983525.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/15/54/37/360x266/2053983531.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/15/54/37/360x266/2053983502.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/15/54/37/360x266/2053983538.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 2200000.0,
@@ -4187,11 +4290,6 @@
         "type": "price_low"
       },
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -4200,7 +4298,13 @@
     "id": "zonaprop:59177593",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/17/75/93/360x266/2054545007.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/17/75/93/360x266/2054545007.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/17/75/93/1200x1200/2054545007.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/17/75/93/360x266/2054545004.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/17/75/93/360x266/2054545005.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/17/75/93/360x266/2054545010.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/17/75/93/360x266/2054545006.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 1290000.0,
@@ -4220,11 +4324,6 @@
     "first_seen": "2026-07-10T03:36:04Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -4233,7 +4332,13 @@
     "id": "zonaprop:59222202",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/22/22/02/360x266/2055654917.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/22/22/02/360x266/2055654917.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/22/22/02/1200x1200/2055654917.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/22/22/02/360x266/2055654915.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/22/22/02/360x266/2055654907.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/22/22/02/360x266/2055654905.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/22/22/02/360x266/2055654916.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 3000000.0,
@@ -4253,11 +4358,6 @@
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -4266,7 +4366,14 @@
     "id": "zonaprop:59230426",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/23/04/26/360x266/2055852831.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/23/04/26/360x266/2055852831.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/23/04/26/720x532/2055852831.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/23/04/26/1200x1200/2055852831.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/23/04/26/360x266/2055852821.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/23/04/26/360x266/2055852849.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/23/04/26/360x266/2055852851.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/23/04/26/360x266/2055852826.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 3500000.0,
@@ -4286,11 +4393,6 @@
     "first_seen": "2026-07-10T03:36:04Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -4299,7 +4401,13 @@
     "id": "zonaprop:59282800",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/28/28/00/360x266/2057081470.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/28/28/00/360x266/2057081470.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/28/28/00/1200x1200/2057081470.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/28/28/00/360x266/2057081505.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/28/28/00/360x266/2057081434.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/28/28/00/360x266/2057081455.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/28/28/00/360x266/2057081453.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 2100000.0,
@@ -4319,11 +4427,6 @@
     "first_seen": "2026-07-10T03:52:19Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Villa Crespo: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -4332,7 +4435,13 @@
     "id": "zonaprop:59340298",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/34/02/98/360x266/2058486524.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/34/02/98/360x266/2058486524.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/34/02/98/1200x1200/2058486524.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/34/02/98/360x266/2058486542.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/34/02/98/360x266/2058486548.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/34/02/98/360x266/2058486545.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/34/02/98/360x266/2058486521.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 3800000.0,
@@ -4352,11 +4461,6 @@
     "first_seen": "2026-07-10T03:18:56Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -4365,7 +4469,13 @@
     "id": "zonaprop:59341943",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/34/19/43/360x266/2058904033.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/34/19/43/360x266/2058904033.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/34/19/43/1200x1200/2058904033.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/34/19/43/360x266/2060419154.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/34/19/43/360x266/2060419171.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/34/19/43/360x266/2060419176.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/34/19/43/360x266/2060419169.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 3900000.0,
@@ -4385,11 +4495,6 @@
     "first_seen": "2026-07-10T04:19:25Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -4398,7 +4503,14 @@
     "id": "zonaprop:59356414",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/35/64/14/360x266/2063733624.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/35/64/14/360x266/2063733624.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/35/64/14/720x532/2063733624.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/35/64/14/1200x1200/2063733624.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/35/64/14/360x266/2063733615.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/35/64/14/360x266/2063733644.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/35/64/14/360x266/2063733630.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/35/64/14/360x266/2063733627.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "venta",
     "price_amount": 359000.0,
@@ -4418,11 +4530,6 @@
     "first_seen": "2026-07-10T04:27:36Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Saavedra: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -4431,7 +4538,13 @@
     "id": "zonaprop:59360125",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/36/01/25/360x266/2059276625.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/36/01/25/360x266/2059276625.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/36/01/25/720x532/2059276625.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/36/01/25/1200x1200/2059276625.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/36/01/25/360x266/2059276632.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/36/01/25/360x266/2059276630.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/36/01/25/360x266/2059276636.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 4000000.0,
@@ -4489,11 +4602,6 @@
     "first_seen": "2026-07-10T03:53:21Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Belgrano: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -4502,7 +4610,13 @@
     "id": "zonaprop:59386605",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/38/66/05/360x266/2059931177.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/38/66/05/360x266/2059931177.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/38/66/05/1200x1200/2059931177.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/38/66/05/360x266/2059931377.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/38/66/05/360x266/2059931298.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/38/66/05/360x266/2059931425.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/38/66/05/360x266/2059931190.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 3700000.0,
@@ -4555,11 +4669,6 @@
     "first_seen": "2026-07-10T04:27:36Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Villa Pueyrredon: inseguridad baja según datos oficiales",
         "level": "low",
         "type": "crime"
@@ -4568,7 +4677,14 @@
     "id": "zonaprop:59426317",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/42/63/17/360x266/2060926523.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/42/63/17/360x266/2060926523.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/42/63/17/720x532/2060926523.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/42/63/17/1200x1200/2060926523.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/42/63/17/360x266/2060926535.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/42/63/17/360x266/2060926534.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/42/63/17/360x266/2060926532.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/42/63/17/360x266/2060926529.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 2700000.0,
@@ -4588,11 +4704,6 @@
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Flores: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -4601,7 +4712,14 @@
     "id": "zonaprop:59450132",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/45/01/32/360x266/2061508535.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/01/32/360x266/2061508535.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/01/32/720x532/2061508535.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/45/01/32/1200x1200/2061508535.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/01/32/360x266/2061508540.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/01/32/360x266/2061508532.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/01/32/360x266/2061508514.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/01/32/360x266/2061508526.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 2500000.0,
@@ -4621,11 +4739,6 @@
     "first_seen": "2026-07-10T03:54:22Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Villa Urquiza: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -4634,7 +4747,13 @@
     "id": "zonaprop:59452788",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/45/27/88/360x266/2061573316.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/27/88/360x266/2061573316.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/45/27/88/1200x1200/2061573316.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/27/88/360x266/2061573309.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/27/88/360x266/2061573244.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/27/88/360x266/2061573314.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/27/88/360x266/2061573289.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 2999999.0,
@@ -4654,11 +4773,6 @@
     "first_seen": "2026-07-10T04:20:04Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Chacarita: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -4667,7 +4781,14 @@
     "id": "zonaprop:59453764",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/45/37/64/360x266/2061596936.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/37/64/360x266/2061596936.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/37/64/720x532/2061596936.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/45/37/64/1200x1200/2061596936.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/37/64/360x266/2061596934.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/37/64/360x266/2061596927.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/37/64/360x266/2061596929.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/37/64/360x266/2061596928.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 3900000.0,
@@ -4687,11 +4808,6 @@
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -4700,7 +4816,14 @@
     "id": "zonaprop:59455030",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/45/50/30/360x266/2061630114.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/50/30/360x266/2061630114.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/50/30/720x532/2061630114.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/45/50/30/1200x1200/2061630114.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/50/30/360x266/2061630125.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/50/30/360x266/2061630144.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/50/30/360x266/2061630105.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/45/50/30/360x266/2061630139.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 5000000.0,
@@ -4720,11 +4843,6 @@
     "first_seen": "2026-07-10T04:23:13Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Nunez: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -4733,7 +4851,14 @@
     "id": "zonaprop:59479573",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/47/95/73/360x266/2062228730.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/47/95/73/360x266/2062228730.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/47/95/73/720x532/2062228730.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/47/95/73/1200x1200/2062228730.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/47/95/73/360x266/2062228699.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/47/95/73/360x266/2062228668.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/47/95/73/360x266/2062228684.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/47/95/73/360x266/2062228660.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 3500000.0,
@@ -4753,11 +4878,6 @@
     "first_seen": "2026-07-10T03:36:04Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -4766,7 +4886,13 @@
     "id": "zonaprop:59489248",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/48/92/48/360x266/2062480777.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/48/92/48/360x266/2062480777.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/48/92/48/1200x1200/2062480746.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/48/92/48/360x266/2062480777.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/48/92/48/360x266/2062480908.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/48/92/48/360x266/2062480877.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/48/92/48/360x266/2062480820.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 3500000.0,
@@ -4786,11 +4912,6 @@
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -4799,7 +4920,14 @@
     "id": "zonaprop:59492352",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/49/23/52/360x266/2062537760.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/49/23/52/360x266/2062537760.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/49/23/52/720x532/2062537760.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/49/23/52/1200x1200/2062537760.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/49/23/52/360x266/2062537759.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/49/23/52/360x266/2062537761.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/49/23/52/360x266/2063093131.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/49/23/52/360x266/2062537764.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 3200000.0,
@@ -4819,11 +4947,6 @@
     "first_seen": "2026-07-10T03:53:21Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Saavedra: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -4832,7 +4955,13 @@
     "id": "zonaprop:59496998",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/49/69/98/360x266/2062641601.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/49/69/98/360x266/2062641601.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/49/69/98/1200x1200/2062641601.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/49/69/98/360x266/2062641497.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/49/69/98/360x266/2062641381.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/49/69/98/360x266/2062641437.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/49/69/98/360x266/2062641468.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 3000000.0,
@@ -4852,11 +4981,6 @@
     "first_seen": "2026-07-10T03:53:21Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Belgrano: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -4865,7 +4989,13 @@
     "id": "zonaprop:59501429",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/50/14/29/360x266/2062758753.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/50/14/29/360x266/2062758753.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/50/14/29/1200x1200/2062758753.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/50/14/29/360x266/2062758744.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/50/14/29/360x266/2062758755.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/50/14/29/360x266/2062758785.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/50/14/29/360x266/2062758777.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 2000000.0,
@@ -4890,11 +5020,6 @@
         "type": "price_low"
       },
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Saavedra: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -4903,7 +5028,13 @@
     "id": "zonaprop:59502664",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/50/26/64/360x266/2062794907.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/50/26/64/360x266/2062794907.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/50/26/64/1200x1200/2062794907.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/50/26/64/360x266/2062794914.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/50/26/64/360x266/2062794912.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/50/26/64/360x266/2062794905.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/50/26/64/360x266/2062794910.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 1050000.0,
@@ -4923,11 +5054,6 @@
     "first_seen": "2026-07-10T03:54:22Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Villa Urquiza: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -4936,7 +5062,13 @@
     "id": "zonaprop:59512726",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/51/27/26/360x266/2063024260.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/51/27/26/360x266/2063024260.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/51/27/26/1200x1200/2063024260.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/51/27/26/360x266/2063024258.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/51/27/26/360x266/2063024256.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/51/27/26/360x266/2063024257.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/51/27/26/360x266/2063024266.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 1200000.0,
@@ -4961,11 +5093,6 @@
         "type": "price_low"
       },
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -4974,7 +5101,13 @@
     "id": "zonaprop:59518338",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/51/83/38/360x266/2063164619.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/51/83/38/360x266/2063164619.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/51/83/38/1200x1200/2063164619.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/51/83/38/360x266/2063164648.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/51/83/38/360x266/2063164511.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/51/83/38/360x266/2063164499.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/51/83/38/360x266/2063164633.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 1990000.0,
@@ -5027,11 +5160,6 @@
     "first_seen": "2026-07-10T03:53:21Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Nunez: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -5040,7 +5168,13 @@
     "id": "zonaprop:59555075",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/55/50/75/360x266/2064062554.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/55/50/75/360x266/2064062554.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/55/50/75/1200x1200/2064062554.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/55/50/75/360x266/2064062574.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/55/50/75/360x266/2064062541.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/55/50/75/360x266/2064062634.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/55/50/75/360x266/2064062453.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 2000000.0,
@@ -5060,11 +5194,6 @@
     "first_seen": "2026-07-10T03:36:04Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -5073,7 +5202,13 @@
     "id": "zonaprop:59555407",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/55/54/07/360x266/2064070851.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/55/54/07/360x266/2064070851.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/55/54/07/1200x1200/2064070851.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/55/54/07/360x266/2064619362.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/55/54/07/360x266/2064820912.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/55/54/07/360x266/2064820920.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/55/54/07/360x266/2064820906.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 1900000.0,
@@ -5093,11 +5228,6 @@
     "first_seen": "2026-07-10T03:52:19Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Palermo: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -5106,7 +5236,13 @@
     "id": "zonaprop:59566891",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/56/68/91/360x266/2064317311.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/56/68/91/360x266/2064317311.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/56/68/91/1200x1200/2064317311.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/56/68/91/360x266/2064317380.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/56/68/91/360x266/2064317245.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/56/68/91/360x266/2064317376.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/56/68/91/360x266/2064317397.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 5500000.0,
@@ -5126,11 +5262,6 @@
     "first_seen": "2026-07-10T04:20:04Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Villa Crespo: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -5139,7 +5270,14 @@
     "id": "zonaprop:59573268",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/57/32/68/360x266/2064482430.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/57/32/68/360x266/2064482430.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/57/32/68/720x532/2064482430.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/57/32/68/1200x1200/2064482430.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/57/32/68/360x266/2064482597.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/57/32/68/360x266/2064482480.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/57/32/68/360x266/2064482425.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/57/32/68/360x266/2064482450.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 4500000.0,
@@ -5159,11 +5297,6 @@
     "first_seen": "2026-07-10T04:23:13Z",
     "flags": [
       {
-        "label": "Una sola foto o sin fotos",
-        "level": "low",
-        "type": "few_photos"
-      },
-      {
         "label": "Saavedra: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -5172,7 +5305,14 @@
     "id": "zonaprop:59574149",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/59/57/41/49/360x266/2064505733.jpg?isFirstImage=true",
     "images": [
-      "https://imgar.zonapropcdn.com/avisos/1/00/59/57/41/49/360x266/2064505733.jpg?isFirstImage=true"
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/57/41/49/720x532/2064505733.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/resize/1/00/59/57/41/49/1200x1200/2064505733.jpg?isFirstImage=true",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/57/41/49/360x266/2064505462.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/57/41/49/360x266/2064505543.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/57/41/49/360x266/2064505417.jpg",
+      "https://imgar.zonapropcdn.com/avisos/1/00/59/57/41/49/360x266/2064505751.jpg",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/no-location-map.png",
+      "https://img10.naventcdn.com/ficha/RPFICv5.422.0-RC1/images/qr-registro.png"
     ],
     "operation": "alquiler",
     "price_amount": 2500000.0,
