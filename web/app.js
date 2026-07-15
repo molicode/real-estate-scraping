@@ -420,11 +420,12 @@ function renderActionsUsage(runs) {
   });
   el.innerHTML = `
     <div class="usage-nums">
-      <span class="usage-big tabnum">~${fmtNum(monthMin)}</span> min este mes
-      <span class="usage-of">· ${monthRuns} corridas</span>
+      <span class="usage-big">∞</span> disponible
+      <span class="usage-of">· repo público, sin límite</span>
     </div>
+    <div class="usage-sub" style="margin-bottom:6px">Usaste <strong>~${fmtNum(monthMin)} min</strong> este mes en ${monthRuns} corridas (aproximado, tiempo de reloj).</div>
     ${usageBarsSvg(days)}
-    <div class="usage-sub"><span class="badge on">${icon("shield-check", 12)} Repo público: los minutos de Actions son gratis e ilimitados</span> · el número es aproximado (tiempo de reloj).</div>`;
+    <div class="usage-sub"><span class="badge on">${icon("shield-check", 12)} GitHub Actions es gratis e ilimitado en repos públicos</span> — no se agota. (El cupo de 2.000 min/mes del plan gratis aplica solo a repos privados.)</div>`;
 }
 
 async function loadUsage() {
