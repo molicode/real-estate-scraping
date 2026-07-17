@@ -44,6 +44,21 @@ def default_config_path() -> Path:
     return JOBS_FILE if JOBS_FILE.exists() else LEGACY_CONFIG
 
 
+def depends_on_free_credits(scraper) -> bool:
+    """¿Este portal consume créditos gratis de ScraperAPI en esta corrida?
+
+    Solo si depende del proxy (proxy_fallback) y NO está yendo por navegador
+    (Playwright). Así, con USE_PLAYWRIGHT activo, MercadoLibre (browser_engine)
+    NO cuenta como consumidor de créditos; Zonaprop y Argenprop sí.
+    """
+    from .sites.base import USE_PLAYWRIGHT
+
+    if not getattr(scraper, "proxy_fallback", False):
+        return False
+    goes_by_browser = USE_PLAYWRIGHT and getattr(scraper, "browser_engine", False)
+    return not goes_by_browser
+
+
 def load_config(path: Path) -> dict[str, Any]:
     with path.open(encoding="utf-8") as fh:
         config = yaml.safe_load(fh) or {}
@@ -382,22 +397,32 @@ def main() -> int:
     proxy_status = proxy_mod.build_status(os.environ.get("SCRAPERAPI_KEY", "").strip())
     proxy_mod.save_status(proxy_status)
     proxy_exhausted = bool(proxy_status.get("exhausted"))
+    # Se pausan los portales por proxy si el cupo se agotó O si queda muy poco
+    # (<= reserva), para no gastar los últimos créditos ni quedar a medias.
+    proxy_paused = bool(proxy_status.get("proxy_paused"))
     resets_at = proxy_status.get("resets_at", "el mes próximo")
-    if proxy_exhausted:
+    if proxy_paused:
         logger.warning(
-            "ScraperAPI sin créditos (%s/%s): se pausan las búsquedas por proxy hasta %s",
-            proxy_status.get("request_count"), proxy_status.get("request_limit"), resets_at,
+            "ScraperAPI en reserva (%s/%s, quedan %s): se pausan los portales por "
+            "proxy (Zonaprop/Argenprop) hasta la recarga del %s",
+            proxy_status.get("request_count"), proxy_status.get("request_limit"),
+            proxy_status.get("remaining"), resets_at[:10],
         )
 
     for search in searches:
         try:
             scraper = get_scraper(search.site)
-            # Portales que bloquean el acceso directo dependen del proxy: si no
-            # hay créditos, se pausan (no se gastan intentos ni se marcan como error).
-            if proxy_exhausted and getattr(scraper, "proxy_fallback", False):
-                logger.info("'%s' en pausa: sin créditos de ScraperAPI", search.name)
+            # Los portales que consumen créditos gratis se pausan cuando el cupo
+            # se agotó o queda muy poco (no se gastan intentos ni se marcan como
+            # error). MercadoLibre va por navegador: no se ve afectado.
+            if proxy_paused and depends_on_free_credits(scraper):
+                motivo = (
+                    "sin créditos de ScraperAPI" if proxy_exhausted
+                    else f"quedan muy pocos créditos de ScraperAPI ({proxy_status.get('remaining')}), pausado preventivamente"
+                )
+                logger.info("'%s' en pausa: %s", search.name, motivo)
                 errors.append(
-                    f"{search.name} ({search.site}): en pausa — sin créditos de ScraperAPI, "
+                    f"{search.name} ({search.site}): en pausa — {motivo}; "
                     f"se reactiva el {resets_at[:10]}"
                 )
                 stats[search.name] = 0

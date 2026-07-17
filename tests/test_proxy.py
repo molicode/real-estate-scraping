@@ -110,6 +110,8 @@ def test_proxy_status_con_creditos(monkeypatch):
     st = proxy_mod.build_status("k", now=NOW)
     assert st["exhausted"] is False
     assert st["remaining"] == 4980
+    assert st["low"] is False
+    assert st["proxy_paused"] is False
     assert st["resets_at"] == "2026-08-01T00:00:00Z"  # primer día del mes siguiente
 
 
@@ -119,6 +121,50 @@ def test_proxy_status_agotado(monkeypatch):
     st = proxy_mod.build_status("k", now=NOW)
     assert st["exhausted"] is True
     assert st["remaining"] == 0
+    assert st["proxy_paused"] is True
+
+
+def test_proxy_status_bajo_reserva_pausa_preventivamente(monkeypatch):
+    # Quedan 50 créditos (<= reserva de 60): no está agotado, pero se pausa igual.
+    monkeypatch.delenv("SCRAPERAPI_RESERVE", raising=False)
+    monkeypatch.setattr(proxy_mod, "scraperapi_account",
+                        lambda key, timeout=20: {"requestCount": 4950, "requestLimit": 5000})
+    st = proxy_mod.build_status("k", now=NOW)
+    assert st["remaining"] == 50
+    assert st["exhausted"] is False      # todavía quedan
+    assert st["low"] is True             # pero muy poco
+    assert st["proxy_paused"] is True    # -> se pausa preventivamente
+    assert st["reserve"] == 60
+
+
+def test_proxy_status_reserva_configurable(monkeypatch):
+    # Con reserva 200, quedando 150 ya se pausa.
+    monkeypatch.setenv("SCRAPERAPI_RESERVE", "200")
+    monkeypatch.setattr(proxy_mod, "scraperapi_account",
+                        lambda key, timeout=20: {"requestCount": 4850, "requestLimit": 5000})
+    st = proxy_mod.build_status("k", now=NOW)
+    assert st["remaining"] == 150
+    assert st["reserve"] == 200
+    assert st["low"] is True and st["proxy_paused"] is True
+
+
+def test_depends_on_free_credits_segun_motor(monkeypatch):
+    from scraper.main import depends_on_free_credits
+    from scraper.sites.argenprop import ArgenpropScraper
+    from scraper.sites.remax import RemaxScraper
+
+    import scraper.sites.base as base
+    # Con navegador activo (producción): ML va por Playwright -> NO gasta créditos.
+    monkeypatch.setattr(base, "USE_PLAYWRIGHT", True)
+    assert depends_on_free_credits(MercadoLibreScraper()) is False
+    # Zonaprop/Argenprop siguen por proxy -> sí gastan créditos.
+    assert depends_on_free_credits(ZonapropScraper()) is True
+    assert depends_on_free_credits(ArgenpropScraper()) is True
+    # Remax es directo -> nunca gasta créditos.
+    assert depends_on_free_credits(RemaxScraper()) is False
+    # Sin navegador, ML caería al proxy -> ahí sí gastaría créditos.
+    monkeypatch.setattr(base, "USE_PLAYWRIGHT", False)
+    assert depends_on_free_credits(MercadoLibreScraper()) is True
 
 
 def test_proxy_status_cuenta_no_disponible_no_bloquea(monkeypatch):

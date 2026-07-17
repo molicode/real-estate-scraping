@@ -15,6 +15,7 @@ créditos) y deja el estado en data/proxy_status.json para que:
 from __future__ import annotations
 
 import json
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Optional
@@ -23,6 +24,19 @@ import requests
 
 ACCOUNT_ENDPOINT = "https://api.scraperapi.com/account"
 PROXY_STATUS_FILE = Path(__file__).resolve().parent.parent / "data" / "proxy_status.json"
+
+# Margen de reserva: cuando quedan estos créditos (o menos), pausamos
+# preventivamente los portales que dependen del proxy, ANTES de agotarlos del
+# todo. Así una última corrida no se queda a medias y no se pasa del cupo.
+# Configurable con SCRAPERAPI_RESERVE (default 60 ~ una corrida de proxy).
+DEFAULT_RESERVE = 60
+
+
+def _reserve() -> int:
+    raw = os.environ.get("SCRAPERAPI_RESERVE", "").strip()
+    if raw.isdigit():
+        return int(raw)
+    return DEFAULT_RESERVE
 
 
 def scraperapi_account(key: str, timeout: int = 20) -> Optional[dict[str, Any]]:
@@ -64,11 +78,18 @@ def build_status(key: str, now: Optional[datetime] = None) -> dict[str, Any]:
 
     count = acct.get("requestCount")
     limit = acct.get("requestLimit")
+    reserve = _reserve()
     status["request_count"] = count
     status["request_limit"] = limit
+    status["reserve"] = reserve
     if isinstance(count, (int, float)) and isinstance(limit, (int, float)) and limit > 0:
-        status["remaining"] = max(0, int(limit) - int(count))
+        remaining = max(0, int(limit) - int(count))
+        status["remaining"] = remaining
         status["exhausted"] = int(count) >= int(limit)
+        # "Muy muy poco": quedan <= reserva -> pausamos preventivamente.
+        status["low"] = remaining <= reserve
+    # Señal única para el scraper/web: ¿hay que pausar los portales por proxy?
+    status["proxy_paused"] = bool(status.get("exhausted") or status.get("low"))
     # El cupo del plan gratis se recarga por mes calendario.
     status["resets_at"] = _first_of_next_month(now).strftime("%Y-%m-%dT%H:%M:%SZ")
     return status

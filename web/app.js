@@ -380,15 +380,27 @@ function renderScraperUsage() {
   const limit = Number(s.request_limit) || 0;
   const remaining = s.remaining != null ? Number(s.remaining) : Math.max(0, limit - used);
   const pct = limit ? (used / limit) * 100 : 0;
-  const tone = pct >= 90 ? "bad" : pct >= 70 ? "warn" : "ok";
+  const paused = !!s.proxy_paused;
+  const tone = paused || pct >= 90 ? "bad" : pct >= 70 ? "warn" : "ok";
   const resets = (s.resets_at || "").slice(0, 10).split("-").reverse().join("/");
   const measured = fmtMeasuredAt(s.checked_at);
+  let banner = "";
+  if (paused) {
+    const motivo = s.exhausted
+      ? "Se agotaron los créditos de ScraperAPI"
+      : `Quedan muy pocos créditos (${fmtNum(remaining)}${s.reserve != null ? `, reserva ${fmtNum(s.reserve)}` : ""})`;
+    banner = `<div class="usage-alert">${icon("shield-check", 14)} <div>
+      <strong>Zonaprop y Argenprop están en pausa automática.</strong>
+      ${motivo}: se detienen para no gastar (ni pasarse del) cupo. MercadoLibre y Remax siguen andando (son gratis).
+      Se reactivan solos el ${resets || "primero del mes"} con la recarga mensual.</div></div>`;
+  }
   el.innerHTML = `
     ${usageBarHtml(pct, tone)}
     <div class="usage-nums">
       <span class="usage-big tabnum">${fmtNum(remaining)}</span> créditos disponibles
       <span class="usage-of">· usados ${fmtNum(used)} de ${fmtNum(limit)} (${Math.round(pct)}%)</span>
     </div>
+    ${banner}
     <div class="usage-sub">Se recarga el ${resets || "primero del mes"}. Solo lo usan Zonaprop y Argenprop (lunes y viernes).</div>
     <div class="usage-sub usage-stamp">${icon("clock", 12)} Consumo real de ScraperAPI${measured ? `, medido ${measured}` : ""}. Se refresca solo cada pocas horas — si mirás el dashboard justo después de una corrida, puede diferir por unos pocos requests.</div>`;
 }
