@@ -5,6 +5,7 @@ from __future__ import annotations
 import logging
 import os
 import random
+import re
 import time
 from typing import Iterable, Optional
 from urllib.parse import urlencode
@@ -14,6 +15,14 @@ import requests
 from ..models import Listing, Search
 
 logger = logging.getLogger(__name__)
+
+# Nunca dejamos que la API key del proxy llegue a un log. GitHub Actions ya
+# enmascara los secrets, pero esto también protege corridas locales.
+_API_KEY_RX = re.compile(r"(api_key=)[^&\s]+", re.IGNORECASE)
+
+
+def _redact(text: str) -> str:
+    return _API_KEY_RX.sub(r"\1***", text)
 
 # Proxy de scraping opcional (ScraperAPI): se activa definiendo el secret
 # SCRAPERAPI_KEY. Solo se usa como reintento cuando el sitio bloquea el
@@ -73,14 +82,14 @@ class BaseScraper:
         try:
             resp = self.session.get(url, timeout=timeout or self.request_timeout)
             if resp.status_code != 200:
-                logger.warning("%s devolvió HTTP %s para %s", self.site, resp.status_code, url)
+                logger.warning("%s devolvió HTTP %s para %s", self.site, resp.status_code, _redact(url))
                 return None
             if self.is_blocked(resp):
-                logger.warning("%s bloqueó el acceso directo (página anti-bots) para %s", self.site, url)
+                logger.warning("%s bloqueó el acceso directo (página anti-bots) para %s", self.site, _redact(url))
                 return None
             return resp.text
         except requests.RequestException as exc:
-            logger.warning("Error de red en %s (%s): %s", self.site, url, exc)
+            logger.warning("Error de red en %s (%s): %s", self.site, _redact(url), _redact(str(exc)))
             return None
 
     def _browser_get(self, url: str) -> Optional[str]:

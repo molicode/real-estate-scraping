@@ -175,6 +175,16 @@ def test_proxy_status_cuenta_no_disponible_no_bloquea(monkeypatch):
     assert st.get("account_unavailable") is True
 
 
+def test_redact_oculta_la_api_key_en_logs():
+    from scraper.sites.base import _redact
+    url = "https://api.scraperapi.com/?api_key=SUPERSECRETA&url=https://zonaprop.com.ar/x"
+    out = _redact(url)
+    assert "SUPERSECRETA" not in out
+    assert "api_key=***" in out
+    # URLs sin key no se tocan
+    assert _redact("https://www.zonaprop.com.ar/x.html") == "https://www.zonaprop.com.ar/x.html"
+
+
 def test_reset_diciembre_pasa_a_enero():
     dic = datetime(2026, 12, 20, tzinfo=timezone.utc)
     assert proxy_mod._first_of_next_month(dic).strftime("%Y-%m-%d") == "2027-01-01"
