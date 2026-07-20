@@ -7612,7 +7612,7 @@
     "first_seen": "2026-07-15T14:54:06Z",
     "flags": [
       {
-        "label": "Precio 48% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 46% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -19698,6 +19698,38 @@
     "url": "https://casa.mercadolibre.com.ar/MLA-1739456627-casa-10-ambientes-venta-nunez-_JM",
     "verified": false
   },
+  "mercadolibre:MLA1747118143": {
+    "address": "Jufré 400, Villa Crespo, Capital Federal",
+    "bathrooms": 3,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:51:36Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Villa Crespo: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA1747118143",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_618521-MLA107260315540_032026-E.webp",
+    "images": [],
+    "operation": "venta",
+    "price_amount": 248900.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "mercadolibre_venta_ph_villa-crespo",
+    "site": "mercadolibre",
+    "surface_m2": 120.0,
+    "title": "Ph Villa Crespo 4 Ambientes - Sin Expensas- Terraza Y Patio",
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-1747118143-ph-villa-crespo-4-ambientes-sin-expensas-terraza-y-patio-_JM",
+    "verified": false
+  },
   "mercadolibre:MLA1747133209": {
     "address": "Gurruchaga Al 400, Villa Crespo, Capital Federal",
     "bathrooms": 2,
@@ -23247,6 +23279,38 @@
     "surface_m2": 313.0,
     "title": "Casa - Almagro",
     "url": "https://casa.mercadolibre.com.ar/MLA-1902975031-casa-almagro-_JM",
+    "verified": false
+  },
+  "mercadolibre:MLA1906308061": {
+    "address": "Díaz Colodrero 2800, Villa Urquiza, Capital Federal",
+    "bathrooms": 1,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:57:54Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Villa Urquiza: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA1906308061",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_869136-MLA113549197862_072026-E.webp",
+    "images": [],
+    "operation": "venta",
+    "price_amount": 189999.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "mercadolibre_venta_ph_villa-urquiza",
+    "site": "mercadolibre",
+    "surface_m2": 87.0,
+    "title": "Ph 4 Ambientes Patio Apto Credito Villa Urquiza",
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-1906308061-ph-4-ambientes-patio-apto-credito-villa-urquiza-_JM",
     "verified": false
   },
   "mercadolibre:MLA2202497934": {
@@ -27032,7 +27096,7 @@
     "first_seen": "2026-07-15T15:16:26Z",
     "flags": [
       {
-        "label": "Precio 50% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 49% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -28815,6 +28879,90 @@
     "url": "https://casa.mercadolibre.com.ar/MLA-3627248816-vta-casa-premium-nunez-jardin-pileta-parrilla-gym-_JM",
     "verified": false
   },
+  "mercadolibre:MLA3630826594": {
+    "address": "Rawson 200, Almagro, Capital Federal",
+    "bathrooms": 4,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:54:18Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Almagro: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA3630826594",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_737246-MLA113531147176_072026-E.webp",
+    "images": [],
+    "operation": "venta",
+    "price_amount": 630000.0,
+    "price_currency": "USD",
+    "rooms": 5,
+    "search_name": "mercadolibre_venta_casa_almagro",
+    "site": "mercadolibre",
+    "surface_m2": 172.0,
+    "title": "Venta Casa 5 Ambientes Centro Almagro",
+    "url": "https://casa.mercadolibre.com.ar/MLA-3630826594-venta-casa-5-ambientes-centro-almagro-_JM",
+    "verified": false
+  },
+  "remax:021b250b-4ef8-4661-a574-caef6793d457": {
+    "address": "Juan Larrea 100",
+    "bathrooms": 3,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [],
+    "id": "remax:021b250b-4ef8-4661-a574-caef6793d457",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/5c5c1d06-af52-4a34-bc55-ccb155696903.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/5c5c1d06-af52-4a34-bc55-ccb155696903.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/ba70a446-478c-44fd-9c20-1de63e811137.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/3cb351f2-c87c-4f3e-8d95-793e1e4400dc.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/104cabf8-49e2-4cd7-9dda-ef981a3075d6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/c4f73b71-24d4-40fc-a9be-a1f9767412c9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/2445bcb5-b2b0-4960-8bb7-9abac8818c5b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/f8608359-cb44-4099-a423-6b4353febb95.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/06163edc-cb09-4d42-8bf8-288be282ab8c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/2f7175a2-2622-4cf0-ae92-47ab2ae45301.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/5ab580e9-134a-4174-9a47-610de08015ca.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/b225671c-d94f-4ebd-9493-a80aae58ee61.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/2bb9366c-0d5a-42a7-9706-38890795dc29.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/a195ebbd-bdcb-45ae-9802-b5e437ab309c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/c6c75a70-71b1-4e69-a65f-fe9dda8a1b76.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/abf27845-11f9-46f5-8673-41b8dacd2b6b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/bc03bad4-109e-4baa-b059-5ebc90a808cb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/54b11738-f683-4e99-a85b-14d6feb5c9b8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/cb79d0c6-3365-4e46-b446-006e114f6461.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/91d40d7e-215d-46e9-aed3-64698b2c9a43.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/bd2f445d-9f42-4adf-ae9f-686cdc764b85.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/ec8f6ae8-9d4b-458f-b15c-73cb653114b5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/9d26ee4d-c75a-4e30-b09a-341e4618f243.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/0762f62c-2904-4b9e-84ed-7383a6ae1b5b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/cf766166-0ec1-4a4f-82bd-9dcceaddea00.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/bd314155-46c0-4710-9fee-e2806829b337.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/eacd3d66-c661-4694-b02b-002f56079e8c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/0dffcaaf-3594-484b-858a-369b16cc9050.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/ef0255bf-bf19-4f09-970f-f5b971e6f343.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/460e7811-9b0e-46a3-bb98-8c06ea6fdb95.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/021b250b-4ef8-4661-a574-caef6793d457/dc365f63-dbb1-47f9-9aeb-aa4c9be8324d.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 350000.0,
+    "price_currency": "USD",
+    "rooms": 6,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 628.0,
+    "title": "VENTA CASA 6 AMB LOMAS DE ZAMORA - APTO CRÉDITO",
+    "url": "https://www.remax.com.ar/listings/venta-casa-6-amb-lomas-de-zamora-apto-credito",
+    "verified": false
+  },
   "remax:063cbd88-b745-41a5-b77d-01a8a4df3c46": {
     "address": "Pueyrredon 900",
     "bathrooms": 2,
@@ -29302,6 +29450,62 @@
     "url": "https://www.remax.com.ar/listings/casa-con-jardin-en-lanus-oeste",
     "verified": false
   },
+  "remax:17beaadf-a2c0-4842-b252-6e284039eee2": {
+    "address": "La Pasionaria 100",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [
+      {
+        "label": "Precio 64% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:17beaadf-a2c0-4842-b252-6e284039eee2",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/ae18d493-942e-47a0-bff0-166f9ff76873.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/ae18d493-942e-47a0-bff0-166f9ff76873.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/2a11ee55-2d38-4be8-8b9c-a67d254d30db.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/72796bd2-5ed2-4cd5-994f-7d965eda357a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/72b87990-add2-4669-bca1-139f96af7c68.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/e24487fb-214e-43bd-8758-2a37ba3c4abd.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/29d4d121-0fa3-4a8d-b932-f16c188886d6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/298ee4b9-26e2-4047-8c36-3ae78ddff65d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/053623ea-175f-4308-9865-53c6dc66c08b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/d96ebc70-4ae9-4231-ab34-97acd7ed6979.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/9c1d459e-9335-45e6-b054-24606946bc23.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/4a873914-1744-4c6f-8074-aeb83862b768.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/d3f76735-fd45-41d8-ab02-532108696918.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/35afd0fa-f506-4698-b47d-6dacd0932de4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/7de5fcf5-4101-48b0-b0f3-789e99ae35d7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/baa894c7-ee00-4262-8a7d-56916ada4017.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/395c73ee-7ccc-4802-9cb4-fd74f98dd334.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/5603e772-8eb4-41aa-8641-d93f25d17e25.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/de8ca44a-3d07-46df-81be-a494df718820.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/2f451812-6f1c-4af4-b762-99b9b027173c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/fac05cf5-a087-494b-82b4-6fd8f4948eb8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/f672f3a8-5937-4d1d-ae6d-a074a3652420.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/3d030c02-065b-4639-acbc-053962035bf3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/396215e4-85e9-416a-85ea-ed6e7496372d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/06758fbd-f359-4594-bd33-a94dbc88ba90.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/b3471e0d-5e0b-4938-bfc2-87fa1d66f886.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/fb305eab-1d9a-441a-99df-fe18b2919d2d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/7720ab71-6524-45e6-97ac-c39d313d207e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/17beaadf-a2c0-4842-b252-6e284039eee2/1f486777-14b3-4a1e-9b0a-e86398a0b6cf.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 125000.0,
+    "price_currency": "USD",
+    "rooms": 5,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 261.0,
+    "title": "OPORTUNIDAD CASA 4 DORM VISTA AL LAGO EN SIQUIMAN",
+    "url": "https://www.remax.com.ar/listings/oportunidad-casa-4-dorm-vista-al-lago-en-siquiman",
+    "verified": false
+  },
   "remax:18e53198-3939-4ce9-b412-0bc3c0ba1fcd": {
     "address": "510 E/ 139 y 140 0",
     "bathrooms": 2,
@@ -29442,6 +29646,64 @@
     "url": "https://www.remax.com.ar/listings/venta-chalet-2-dormitorios-y-pileta",
     "verified": false
   },
+  "remax:1e527651-898a-4807-9588-3478c99d1d8d": {
+    "address": "Berisso 2400",
+    "bathrooms": 3,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [
+      {
+        "label": "Precio 59% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:1e527651-898a-4807-9588-3478c99d1d8d",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/cbc56bda-10f8-4fb4-9a81-ffdc5ccf19cd.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/cbc56bda-10f8-4fb4-9a81-ffdc5ccf19cd.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/49efca30-3c07-44f6-bcaf-100a02062f52.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/c4c8bf4f-d51d-424d-99a6-f55332136aff.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/d9ac48a6-ec70-493b-a6a4-a7166551e14b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/aef73b03-2a7b-44fb-865e-0254f1c160c0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/5730aee3-57f7-4681-bc41-4e660ac94d6a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/2ae8dc6f-2168-4134-9ecd-a5793614cb76.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/8b10aa91-8318-4ece-8b3a-218ffde01472.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/9fb09264-0647-4325-8e02-3d3d53e7c6bb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/2d484edc-64ec-4925-9815-72e179c7f4f6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/b044403e-7c0e-4fa7-b51e-85413a8c4318.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/d03450d9-9855-4bff-a0ef-0be2979f4ae0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/bfd84496-a34e-4476-a086-e5e8fcc7fd32.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/e625192c-f436-4bdf-ac8d-c8dc79d6fbd9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/d9e0015b-44a4-4f53-a6c7-168b569b6bf1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/b660e485-cb1d-4b31-b753-c21ddd36ba96.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/eeb474a9-b07f-4b72-accb-40a7782f04e6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/9b44faeb-32ef-453b-a4cd-72dad52b4054.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/56e18cad-1e5d-4baf-b9f2-a912faf510d7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/05cee68b-e3de-4489-ab85-b84c6c826037.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/649e1f25-15a0-41ce-8bdc-990fd54b4bc6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/09adab93-361e-4677-8e10-b03e61e9df4c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/8c7f467c-1eba-4817-984f-9a1eecf5a3f0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/06bfdf39-eb6d-4ff9-aad8-48a18f897c52.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/a7114561-3fee-40d6-a211-a1a2b8294a80.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/b14010d1-6186-4811-80ed-66c3261b236f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/10fce5fe-47e9-4edf-a6a3-c877f4b1b6f9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/a5b8181c-3b25-43b1-8faf-171ce64402d6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/bf36f946-3e2c-42e0-b016-a4ad92b9f432.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1e527651-898a-4807-9588-3478c99d1d8d/c4c0c066-f35b-4e20-a945-7423d0407f01.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 145000.0,
+    "price_currency": "USD",
+    "rooms": 6,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 2576.0,
+    "title": "VENTA CASA QUINTA CON PILETA - PONTEVEDRA",
+    "url": "https://www.remax.com.ar/listings/venta-casa-quinta-con-pileta-pontevedra",
+    "verified": false
+  },
   "remax:1e5abb71-fe8b-440a-84b7-e0ce2b7f5081": {
     "address": "Ruta Provincial 28 0",
     "bathrooms": 2,
@@ -29560,7 +29822,7 @@
     "first_seen": "2026-07-19T12:53:59Z",
     "flags": [
       {
-        "label": "Precio 46% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 44% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -29716,7 +29978,7 @@
     "first_seen": "2026-07-17T13:04:10Z",
     "flags": [
       {
-        "label": "Precio 43% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 42% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -29878,6 +30140,44 @@
     "surface_m2": 312.0,
     "title": "venta casa san martin mendoza apta credito",
     "url": "https://www.remax.com.ar/listings/venta-casa-san-martin-mendoza-apta-credito",
+    "verified": false
+  },
+  "remax:2dd7e93a-20d3-458d-939d-19d813d1cac6": {
+    "address": "Cerro Fundicion 0",
+    "bathrooms": 5,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [],
+    "id": "remax:2dd7e93a-20d3-458d-939d-19d813d1cac6",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/2dd7e93a-20d3-458d-939d-19d813d1cac6/cd512ffb-ff45-4429-9c32-ac4359e693eb.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/2dd7e93a-20d3-458d-939d-19d813d1cac6/cd512ffb-ff45-4429-9c32-ac4359e693eb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/2dd7e93a-20d3-458d-939d-19d813d1cac6/baac3549-e11c-4bf1-b3fb-e2c37336b300.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/2dd7e93a-20d3-458d-939d-19d813d1cac6/5246708b-4d01-4bbc-8ec2-0f29187bcd69.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/2dd7e93a-20d3-458d-939d-19d813d1cac6/69093690-dde9-44ec-ba63-62c1dd22d764.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/2dd7e93a-20d3-458d-939d-19d813d1cac6/58cd5b5b-f439-4cf0-ba82-dd99476b4e14.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/2dd7e93a-20d3-458d-939d-19d813d1cac6/4d486f2d-e17e-4d01-b413-d187e672b125.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/2dd7e93a-20d3-458d-939d-19d813d1cac6/c22e9e13-e735-4788-81fe-58b7bd6e9de1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/2dd7e93a-20d3-458d-939d-19d813d1cac6/a287568e-996c-4600-9833-900132eded55.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/2dd7e93a-20d3-458d-939d-19d813d1cac6/7510da4e-cfff-4625-a1e9-6d3d75527727.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/2dd7e93a-20d3-458d-939d-19d813d1cac6/26d72b7b-f9ff-40eb-acda-af68ad0d9977.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/2dd7e93a-20d3-458d-939d-19d813d1cac6/c131ae65-b35f-442c-92af-7161f729e132.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/2dd7e93a-20d3-458d-939d-19d813d1cac6/d61ae2c6-cce7-4c3e-af33-7aff2dd9059c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/2dd7e93a-20d3-458d-939d-19d813d1cac6/5a712b94-5265-4cf0-9da7-513ef9ce9dc1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/2dd7e93a-20d3-458d-939d-19d813d1cac6/9c6d743b-be15-4795-96ff-6a24346af493.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/2dd7e93a-20d3-458d-939d-19d813d1cac6/6850b4d0-a27a-4558-8cb8-200fa77b16d5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/2dd7e93a-20d3-458d-939d-19d813d1cac6/e1e33cb3-9d7e-41ca-bbff-e94199155aea.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 495000.0,
+    "price_currency": "USD",
+    "rooms": 8,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 400.0,
+    "title": "CASA EN VENTA BARRIO PRIVADO DALVIAN",
+    "url": "https://www.remax.com.ar/listings/casa-en-venta-barrio-privado-dalvian",
     "verified": false
   },
   "remax:311bb778-e238-4f02-8533-89f6555ba24e": {
@@ -30073,6 +30373,64 @@
     "url": "https://www.remax.com.ar/listings/casa-9-amb-venta-en-pqe-patricios-con-terraza",
     "verified": false
   },
+  "remax:36502b7d-6be2-419e-a196-480f81c89f93": {
+    "address": "Colón 1300",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:46:11Z",
+    "flags": [
+      {
+        "label": "Precio 61% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:36502b7d-6be2-419e-a196-480f81c89f93",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/0911d70b-6ed2-4282-9bdf-a2430d693403.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/0911d70b-6ed2-4282-9bdf-a2430d693403.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/963c704d-ccce-421b-a1ac-367e163d543a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/779b2f36-2554-4149-9947-07977360ae54.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/6e3d1323-b50a-43ea-a11c-1d079c6c04dd.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/fcd5c09e-9fe4-44ee-9fc2-d8959e5c21fd.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/3c8cca37-624b-4e8d-aa5e-77741a35bd90.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/ddf928c7-f763-4923-b194-d6b52ac01199.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/23d43a03-78be-4f71-8607-13a1ed9b1681.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/9e34c679-7ba7-4d37-92e2-fb51e3a97234.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/05bbdf0f-aa96-4cfc-9422-424fe1a149d4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/5fffa39d-70f1-4447-b7a3-aec8a2e6ab92.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/794b9203-ed52-461f-9ef0-0ad9f8caa021.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/72a0f6d5-12bb-4ddb-8c17-fbeb33db38a6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/2fdd4f54-f530-444a-91a6-f96b46884b23.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/47f907cf-f7ae-4a60-89bc-1a566a0b84ea.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/61b001bd-78c2-4908-afd1-00948d164d3f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/d41df867-97c8-48da-a0e4-6114c3f48af4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/0f1e31a6-db2e-4a04-a831-cacec036064d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/31e77a82-f2c3-42c4-b4bb-dd796cb6e9e1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/fbb38062-5253-4299-87a9-a0e8847a5550.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/f44db517-4aab-45de-aab0-f6fd8b11b19f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/f51f119a-a57e-4701-9f75-93e4539322e7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/a9085c62-a87f-40da-aeba-8fc1443d00ed.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/5e1a8646-6977-4f13-bc56-3a30f715d2ae.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/e041d691-0741-47bd-a6a2-a217669c169b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/512b29a5-f1ca-4f5e-a92c-2def105c7719.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/948407ae-78d8-4952-8666-0850877045d5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/04c69dc7-dd56-457e-afa0-3715bb5c0642.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/f7541249-edb1-4756-865d-76ddc4551407.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/36502b7d-6be2-419e-a196-480f81c89f93/674c041c-8b40-4fa9-ab8b-6d38f6725088.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 700000.0,
+    "price_currency": "ARS",
+    "rooms": 4,
+    "search_name": "remax_alquiler_ph_caballito",
+    "site": "remax",
+    "surface_m2": 145.0,
+    "title": "SE ALQUILA CASA EN RECONQUISTA",
+    "url": "https://www.remax.com.ar/listings/se-alquila-casa-en-reconquista",
+    "verified": false
+  },
   "remax:37ea2c2f-0e0f-4062-80f8-0c35aeea9c98": {
     "address": "Avenida Remedios de Escalada de San Martín 3200",
     "bathrooms": 2,
@@ -30161,6 +30519,52 @@
     "surface_m2": 584.3,
     "title": "Venta casa 5 ambientes en Pl san carlos 4c del mar",
     "url": "https://www.remax.com.ar/listings/venta-casa-5-ambientes-en-pl-san-carlos-4c-del-mar",
+    "verified": false
+  },
+  "remax:391d6d85-47a3-496a-9772-c41cec58683b": {
+    "address": "Ituzaingó 7000",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [
+      {
+        "label": "Precio 90% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:391d6d85-47a3-496a-9772-c41cec58683b",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/391d6d85-47a3-496a-9772-c41cec58683b/884fb38d-52f9-46f1-bd87-9aa4ec54881f.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/391d6d85-47a3-496a-9772-c41cec58683b/884fb38d-52f9-46f1-bd87-9aa4ec54881f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/391d6d85-47a3-496a-9772-c41cec58683b/2b41b867-13a2-419a-8716-78903f0b67d5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/391d6d85-47a3-496a-9772-c41cec58683b/9bb987fb-d5b0-45e7-b881-46ffc4ec38b1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/391d6d85-47a3-496a-9772-c41cec58683b/15d7c6fc-41eb-4e50-bf41-0c4bb5f7f3eb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/391d6d85-47a3-496a-9772-c41cec58683b/9fc3addb-09e0-4a45-ae78-ae343a88f66e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/391d6d85-47a3-496a-9772-c41cec58683b/13ceae91-11a5-41ce-86c4-7a8d998ade3c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/391d6d85-47a3-496a-9772-c41cec58683b/6f4cd6b3-3ef3-413f-999a-034b90056ef5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/391d6d85-47a3-496a-9772-c41cec58683b/5004901b-5f66-4c1a-b3ee-f8f85ada9320.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/391d6d85-47a3-496a-9772-c41cec58683b/d393599b-a4e2-4616-b420-b495d7c54a7f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/391d6d85-47a3-496a-9772-c41cec58683b/1d3e015a-81a0-43eb-9bc0-bfecf0ef786c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/391d6d85-47a3-496a-9772-c41cec58683b/61cfe56f-372e-4283-9a94-d5a1a6372b35.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/391d6d85-47a3-496a-9772-c41cec58683b/7634c824-067f-4c6c-b9d7-9df485115e58.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/391d6d85-47a3-496a-9772-c41cec58683b/393a3fb4-eb87-480a-afd9-97f1c9447e3f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/391d6d85-47a3-496a-9772-c41cec58683b/d323e467-52f7-4b80-b6b0-b428fd74d66f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/391d6d85-47a3-496a-9772-c41cec58683b/5cc513d9-3b56-4f95-af69-615a1f7c17d8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/391d6d85-47a3-496a-9772-c41cec58683b/b3618bad-eed9-4a24-9120-d7ef543bdb47.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/391d6d85-47a3-496a-9772-c41cec58683b/a83a290d-3295-47a7-8185-6457f96606ac.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/391d6d85-47a3-496a-9772-c41cec58683b/9522ce7f-60f0-4189-b381-88e84b9cc609.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 35000.0,
+    "price_currency": "USD",
+    "rooms": 6,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 220.0,
+    "title": "Casa de pasillo con dos viviendas",
+    "url": "https://www.remax.com.ar/listings/casa-de-pasillo-con-dos-viviendas",
     "verified": false
   },
   "remax:3af15c38-06c1-4bb3-bddf-502877d3244c": {
@@ -30368,7 +30772,7 @@
     "first_seen": "2026-07-15T14:55:00Z",
     "flags": [
       {
-        "label": "Precio 56% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 55% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -30581,6 +30985,31 @@
     "url": "https://www.remax.com.ar/listings/salon-426-m2-en-el-centro-de-cutral-co",
     "verified": false
   },
+  "remax:47449365-25c5-41e3-bbc3-61fa3127f402": {
+    "address": "El Clarin 200",
+    "bathrooms": 3,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [],
+    "id": "remax:47449365-25c5-41e3-bbc3-61fa3127f402",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/47449365-25c5-41e3-bbc3-61fa3127f402/ca98628d-9f60-4917-be2e-64c4c9f5dc3b.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/47449365-25c5-41e3-bbc3-61fa3127f402/ca98628d-9f60-4917-be2e-64c4c9f5dc3b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/47449365-25c5-41e3-bbc3-61fa3127f402/299eca5c-a736-4842-a787-fe46be1471ad.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/47449365-25c5-41e3-bbc3-61fa3127f402/2c430c0a-9b89-448b-a7be-fc8bad86ddda.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 271000.0,
+    "price_currency": "USD",
+    "rooms": 11,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 320.0,
+    "title": "CASA 3 DORMITORIOS BARRIO ROCA APTA CREDITO",
+    "url": "https://www.remax.com.ar/listings/casa-3-dormitorios-barrio-roca-apta-credito",
+    "verified": false
+  },
   "remax:489ef4bf-894a-421b-80d5-a7345fc303ca": {
     "address": "Las Glicinas y los Jazmines 0",
     "bathrooms": 3,
@@ -30683,6 +31112,48 @@
     "surface_m2": 595.02,
     "title": "Casa en Venta en Barrio Exclusivo de Resistencia.-",
     "url": "https://www.remax.com.ar/listings/casa-en-venta-en-barrio-exclusivo-de-resistencia",
+    "verified": false
+  },
+  "remax:4f4ba815-7e72-4701-b045-17cfc2cf5187": {
+    "address": "Zeballos 500",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [
+      {
+        "label": "Precio 61% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:4f4ba815-7e72-4701-b045-17cfc2cf5187",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/4f4ba815-7e72-4701-b045-17cfc2cf5187/fc739506-0ca4-42c1-b489-41123358b75c.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/4f4ba815-7e72-4701-b045-17cfc2cf5187/fc739506-0ca4-42c1-b489-41123358b75c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/4f4ba815-7e72-4701-b045-17cfc2cf5187/6d29da1a-695d-471d-8876-e3b561e86e62.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/4f4ba815-7e72-4701-b045-17cfc2cf5187/099db605-fef9-4784-a8de-17eb6edcdb45.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/4f4ba815-7e72-4701-b045-17cfc2cf5187/171f7fbb-ed4b-4073-82f6-034fc9b698ee.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/4f4ba815-7e72-4701-b045-17cfc2cf5187/d3df2433-799c-40e6-b577-b03325d63b2f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/4f4ba815-7e72-4701-b045-17cfc2cf5187/2ba734e9-ca48-4f7e-ba62-f8c427d400e4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/4f4ba815-7e72-4701-b045-17cfc2cf5187/2e6c575b-bacc-49c2-9c03-2a4a5798673f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/4f4ba815-7e72-4701-b045-17cfc2cf5187/af4b0659-2014-4d49-8899-937f3523ea9a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/4f4ba815-7e72-4701-b045-17cfc2cf5187/b3cdc96f-0c30-4fbf-bc80-131407fdf79f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/4f4ba815-7e72-4701-b045-17cfc2cf5187/31127152-40c4-44c3-b5b3-a921769f9a13.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/4f4ba815-7e72-4701-b045-17cfc2cf5187/a5c3f4a7-470f-49f8-8b9f-dc8b5aef08e7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/4f4ba815-7e72-4701-b045-17cfc2cf5187/ab49bb38-bd77-4d99-a01e-77ea73e9003c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/4f4ba815-7e72-4701-b045-17cfc2cf5187/9abc84a5-37bc-4657-9ed6-b2de17cc97c9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/4f4ba815-7e72-4701-b045-17cfc2cf5187/17c52597-3524-43f9-a0b2-4fd1630f0937.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 135000.0,
+    "price_currency": "USD",
+    "rooms": 5,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 240.08,
+    "title": "CASA CORAZÓN DORREGO 3 HAB, GUAYMALLÉN, MZA.",
+    "url": "https://www.remax.com.ar/listings/casa-corazon-dorrego-3-hab-guaymallen-mza-1",
     "verified": false
   },
   "remax:4f8c3743-0044-4808-8e5b-bdfa636868c9": {
@@ -30847,6 +31318,43 @@
     "url": "https://www.remax.com.ar/listings/casa-4-ambientes-venta-gardin-garage-monte-grande",
     "verified": false
   },
+  "remax:53314ab1-f4b5-4ab0-b68f-0aa3950e7429": {
+    "address": "Juan Bulewski S/N",
+    "bathrooms": null,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [
+      {
+        "label": "Precio 70% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:53314ab1-f4b5-4ab0-b68f-0aa3950e7429",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/53314ab1-f4b5-4ab0-b68f-0aa3950e7429/153f4445-15ea-4c06-b371-d95a0f028fd4.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/53314ab1-f4b5-4ab0-b68f-0aa3950e7429/153f4445-15ea-4c06-b371-d95a0f028fd4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/53314ab1-f4b5-4ab0-b68f-0aa3950e7429/a24c23eb-0021-44da-bfff-02e3e27ad906.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/53314ab1-f4b5-4ab0-b68f-0aa3950e7429/1114f5fc-dd3c-4b95-8c0c-b84ce8edfbc1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/53314ab1-f4b5-4ab0-b68f-0aa3950e7429/aed56476-2cec-4112-b09b-356c728d9ff2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/53314ab1-f4b5-4ab0-b68f-0aa3950e7429/0b874976-0b68-45a4-aa34-32b8c7d1465c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/53314ab1-f4b5-4ab0-b68f-0aa3950e7429/9e0f7d80-717e-4450-9c6a-8b5ac775d1fe.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/53314ab1-f4b5-4ab0-b68f-0aa3950e7429/aaaa5a6b-b8b1-4782-ba00-af199e844967.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/53314ab1-f4b5-4ab0-b68f-0aa3950e7429/31bcf549-354a-4422-90c9-e5df68321d64.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/53314ab1-f4b5-4ab0-b68f-0aa3950e7429/855733fe-92d7-4634-85af-5c136aca7ded.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 85000.0,
+    "price_currency": "USD",
+    "rooms": null,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": null,
+    "title": "HECTAREAS EN VENTA CERRO LOS NOGALES TANDIL",
+    "url": "https://www.remax.com.ar/listings/hectareas-en-venta-cerro-los-nogales-tandil",
+    "verified": false
+  },
   "remax:548b758a-fc2c-4339-98fe-0c78c11bcdc5": {
     "address": "Camino Interno Country la Martona 900",
     "bathrooms": 3,
@@ -30957,6 +31465,64 @@
     "url": "https://www.remax.com.ar/listings/casa-venta-5-amb-moron-el-palomar-apto-credito",
     "verified": false
   },
+  "remax:561c9684-6f2e-4965-b1b7-6953fb77524b": {
+    "address": "Rawson 200",
+    "bathrooms": 4,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [
+      {
+        "label": "Almagro: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "remax:561c9684-6f2e-4965-b1b7-6953fb77524b",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/9e2cfdc8-f764-4ec1-9996-802faca9ac4b.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/9e2cfdc8-f764-4ec1-9996-802faca9ac4b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/8302e3c8-f636-4aef-bcf4-01ecefc799aa.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/89a01c21-18ef-431f-a854-3b461c848821.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/438c3919-7a4a-4928-b587-71c443d02183.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/daa7490e-a04b-471d-a21d-e06b72976730.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/82f78652-1258-4be0-beee-aed9712639b5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/593cecdd-a283-4e2f-823b-4fca35bd0ab2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/66e64821-0052-4dd6-bfdb-a79eaeb450af.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/05787b28-dcbf-4777-b109-d966bb838114.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/83a88ee9-5ce4-4fd1-84c1-3a8d17ce46ad.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/349dfd2e-1986-42d0-8ccd-33a521e590f7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/78c04d92-d2a3-4ee5-8e40-4f3ce56ce110.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/5e5ee9ca-2a47-4462-a97d-6258d06d8150.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/28ff868a-4d98-4ef3-92e8-e1ff9bf08a7f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/ed58d99b-fbd5-4c39-9e45-5d0228717852.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/3acfd703-eb10-424d-ad4e-127d71ccbed2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/882bd25e-a5bd-4beb-bda1-d3043e040d18.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/88ad3b92-1623-41dd-839b-c5e3435a5733.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/d8e27abb-7b6d-4cb2-be9c-33a6dd0007fe.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/3449ce5e-ff4f-4ed8-aa19-86d7a08cf7d0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/012728d8-40b5-44f0-9939-48f16f4b3d2c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/1f001e06-b8b6-4ff7-8be9-16f3f99e5faa.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/be5188de-447c-45e0-b22c-9068039db629.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/efdf6c0b-efe1-4d79-8258-c8e54dfd7209.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/11b0dc31-9180-42a4-98f0-6874548e0fc1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/8f5395b1-286b-4b43-b117-cf97a068709f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/2fb7ebed-afb5-47a4-a623-423960ea6d99.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/a80c3313-433c-4c62-a86e-ba23da662491.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/440e4c29-7c86-444d-9a27-ca075c54932f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/561c9684-6f2e-4965-b1b7-6953fb77524b/613a5ba1-25f0-4525-afcc-900011da317b.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 630000.0,
+    "price_currency": "USD",
+    "rooms": 5,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 278.0,
+    "title": "venta casa 5 ambientes centro almagro",
+    "url": "https://www.remax.com.ar/listings/venta-casa-5-ambientes-centro-almagro",
+    "verified": false
+  },
   "remax:56e2ab39-c1f3-4c1e-b28c-bba419bb346b": {
     "address": "Avenida España 900",
     "bathrooms": 2,
@@ -31032,6 +31598,58 @@
     "surface_m2": 137.0,
     "title": "SE ALQUILA AMPLIO DPTO MICROCENTRO 2 HABITACIONES",
     "url": "https://www.remax.com.ar/listings/se-alquila-amplio-dpto-microcentro-2-habitaciones-2",
+    "verified": false
+  },
+  "remax:5a5d1c28-f60b-4296-a51e-a5453771ec6a": {
+    "address": "Talcahuano 1200",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [],
+    "id": "remax:5a5d1c28-f60b-4296-a51e-a5453771ec6a",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/a562a204-b998-4fa1-9447-dcf3ad4ab485.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/a562a204-b998-4fa1-9447-dcf3ad4ab485.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/25aca00a-d002-4485-9d53-4b8edb3a0e20.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/83d50108-423d-4796-9791-9a67054c3475.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/31edaecb-c3a4-4914-8d95-51b6917b3c8d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/d0c313a8-1ef1-402e-9fbe-02862d1635a4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/e7d85129-9f83-42dd-9139-464463150089.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/77bc079a-7ff0-4ebb-b832-d9e9ac7e7bbe.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/367d8870-6ceb-4a21-8932-1e2b926409a9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/8e3710c0-dd25-4607-98bc-5db6263e1440.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/8d35c480-2160-4b9a-a5c5-d3e684d1fe75.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/d5614377-8617-4e2d-a89f-dc8f56d0b2c1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/564f4040-873d-4218-b793-0b883874350b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/0431cf01-8f44-45eb-8876-edb81e53f3b5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/60dda3fb-82b9-4a5b-85f6-259d6032cdbd.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/bc6aa126-a14f-46dd-9fc8-5d5074b934e9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/b8d2374e-ab40-4701-9a74-a7bc4b35f924.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/b12fb827-5031-49fe-bb8d-c643b694cac9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/c0073e15-218e-4a16-b3f5-c9eb87f6cd23.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/c484bb66-96de-4de6-9b2a-9d14db86201e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/ae12da3f-b5d5-400d-bd34-28506cd345f8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/8532a1b2-5640-42fc-9257-b5e08814b54c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/447c8c76-2615-4fe3-a5e9-369b79d1cce2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/b8d269b8-8640-4419-8f37-8591191cd97f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/f12dc58d-caad-4916-a1ee-9b25d3621742.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/c572b09f-5616-4331-af6f-bc61647d8bb7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/cfee74f7-2e9a-49d6-8084-8df54314ecb2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/379db1b6-5563-4e7d-b5e4-800c25ac4252.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/67b67766-9e6f-40a8-805d-0eff1a35f88c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/19be9090-3d0c-465e-8a1d-8088b268de26.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/5a5d1c28-f60b-4296-a51e-a5453771ec6a/0ea3fc3e-358a-485c-8b53-b034a89758c8.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 170000.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 318.0,
+    "title": "VENTA CASA 4 AMB C/PILETA -V. MADERO CREDIT PERMUT",
+    "url": "https://www.remax.com.ar/listings/venta-casa-4-amb-c-pileta-v-madero-credit-permut",
     "verified": false
   },
   "remax:5bec53fc-6495-4c40-bf43-5c4b61e93651": {
@@ -31184,6 +31802,58 @@
     "url": "https://www.remax.com.ar/listings/casa-4-amb-venta-patio-terraza-garaje-en-pompeya",
     "verified": false
   },
+  "remax:60144ef0-4172-4c97-93a5-80e38e7f892b": {
+    "address": "Ruta 34 Km 10,5 0",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": 500000.0,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [],
+    "id": "remax:60144ef0-4172-4c97-93a5-80e38e7f892b",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/b14a8e21-acc7-41cc-8c4c-635acfb70b17.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/b14a8e21-acc7-41cc-8c4c-635acfb70b17.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/00bcb8ba-06db-411c-bb6d-b4429d2943ca.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/d0daa079-fb1f-45fb-9584-00fcf6827158.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/13db73c0-fe00-4332-bad9-952d7a80708f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/058447ce-fc82-40b8-aace-eed9878ce8b6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/e38d77ca-8c27-40f0-927d-315925d04efb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/2d08d04c-2a2c-45bf-999d-0109f5fd378c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/06548ccc-afe1-4ebd-83ca-a1b65b996ff4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/091d1daa-74e8-4dbd-b044-42d0624d2269.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/aa3f5b05-13d1-499c-b628-1d6e441d5390.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/ba8a1b66-708a-4f71-98c5-f171ce2b0778.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/358f855d-af6d-4982-9838-ffe409443e33.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/52e8b957-175f-4bf6-8422-ab7e747b85df.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/a1aa972d-5562-4044-a631-db75ca844de1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/3d1abcfd-ddc8-4348-acca-b4bccfacd765.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/ae981231-598e-4555-8f90-4c2fd608f3c9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/341ea86e-d5b7-4e34-b266-b225c0188540.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/f9946337-d36d-4537-a916-19b36d27d154.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/cb08c51b-3c40-4c52-ae69-789b66044d27.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/b468953d-9aac-40ce-929d-bbf82d5faa1c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/fb2ed79c-3783-4937-bee1-b739c038f04e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/0f780ff9-8342-48bb-9885-fbdebcf62f60.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/6a94d365-2d6b-45be-b0f3-fa9b479d9a94.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/9f4358f8-abe4-4134-b818-8c7c725fbee9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/379c23db-48d4-423b-91ef-39e710dfd8eb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/3d60299b-0231-4fb9-839c-3ade1c1f4318.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/f1c12c31-9501-41a4-a70f-73d8228e7a2b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/69bb30f3-74c8-4deb-9516-f07670bb29f2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/ab2d74a6-24a0-482d-8000-e40063580471.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/60144ef0-4172-4c97-93a5-80e38e7f892b/693cc937-9418-4806-b811-0a8668e3cc9b.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 360000.0,
+    "price_currency": "USD",
+    "rooms": 5,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 234.0,
+    "title": "Venta/permuta casa 3 dormitorios en la Rinconada",
+    "url": "https://www.remax.com.ar/listings/venta-permuta-casa-3-dormitorios-en-la-rinconada",
+    "verified": false
+  },
   "remax:60328798-3af4-4269-9e6b-61051725e339": {
     "address": "General Urquiza 100",
     "bathrooms": 2,
@@ -31225,6 +31895,42 @@
     "surface_m2": 750.0,
     "title": "Venta Fondo De Comercio Restaurante En Colon",
     "url": "https://www.remax.com.ar/listings/venta-fondo-de-comercio-restaurante-en-colon",
+    "verified": false
+  },
+  "remax:633f5967-c9cd-40f3-8dd0-56317b46ea52": {
+    "address": "Juan Bulewski E/ Walcalde y Fuschini S/N",
+    "bathrooms": null,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [
+      {
+        "label": "Precio 71% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:633f5967-c9cd-40f3-8dd0-56317b46ea52",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/633f5967-c9cd-40f3-8dd0-56317b46ea52/eaaa0045-a9ac-43b5-895f-f1a9fbe51582.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/633f5967-c9cd-40f3-8dd0-56317b46ea52/eaaa0045-a9ac-43b5-895f-f1a9fbe51582.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/633f5967-c9cd-40f3-8dd0-56317b46ea52/1e96ebe7-bb23-428a-9983-c1b2542b5f0c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/633f5967-c9cd-40f3-8dd0-56317b46ea52/6670415d-b61e-4218-893a-b657d1c39467.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/633f5967-c9cd-40f3-8dd0-56317b46ea52/54bd2bde-ba04-4034-a878-8c13b80edbf7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/633f5967-c9cd-40f3-8dd0-56317b46ea52/9d3d2202-a93e-4a90-981d-6c43b804e76f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/633f5967-c9cd-40f3-8dd0-56317b46ea52/03587b6f-d790-45ad-90b2-8b5d3d40c40b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/633f5967-c9cd-40f3-8dd0-56317b46ea52/35dfbd01-b17b-4a82-a724-77343a782023.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/633f5967-c9cd-40f3-8dd0-56317b46ea52/3db24af6-ba20-4b92-9137-318e2fe541bc.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 80000.0,
+    "price_currency": "USD",
+    "rooms": null,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": null,
+    "title": "HECTAREAS EN VENTA EN TANDIL CON SIERRAS Y VISTAS",
+    "url": "https://www.remax.com.ar/listings/hectareas-en-venta-en-tandil-con-sierras-y-vistas",
     "verified": false
   },
   "remax:6450c205-dd75-44b8-8890-510b1812a840": {
@@ -31631,6 +32337,100 @@
     "url": "https://www.remax.com.ar/listings/alquiler-casa-4-ambientes-barrio-los-arces-pilar",
     "verified": false
   },
+  "remax:6aadabd2-a481-4cf1-a5fb-343df7e2183d": {
+    "address": "Las Heras 900",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:46:11Z",
+    "flags": [
+      {
+        "label": "Precio 42% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:6aadabd2-a481-4cf1-a5fb-343df7e2183d",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/9429fa4a-a1a9-4a6a-b04b-861dd10a190d.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/9429fa4a-a1a9-4a6a-b04b-861dd10a190d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/0051a80c-857e-439f-9938-02aeb5201d2f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/cd4383ca-6a24-4195-95b0-df2b1e41e7ba.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/e6adbc68-67fe-447e-8ab2-6b1f018cc80b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/6e7c1e68-1845-46be-ba6a-076588f1f0b2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/35d8dd70-2c4d-4bec-8f18-574000cc7e4f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/5cba8b5c-eb2c-49b5-abc4-0c41126fb924.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/fc3f9e97-116f-46e5-87d0-73ff7571191e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/88c2adc5-70de-4314-b41e-b00dfb113dc6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/89f1af3d-a61c-4c34-bd63-c71564d3067d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/71284bd0-aec7-4967-a09f-536c44f4ed70.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/b74423de-4e13-4c29-9706-231c31b9f8df.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/a93a9fdb-df43-4c3b-9a92-643fd8aa7aae.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/6de77307-76c7-4076-b463-7d428e9f84ac.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/2de000cb-8d43-4a23-9ff1-b21cf05ea92e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/22fa2fbb-ee97-4177-9361-b72ce9352337.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/2ebf4ff4-0fe8-41ae-9a64-562c00b8f764.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/94a161b8-00ef-4a36-8b4e-051846030a21.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/b672fe1d-8140-4152-a2bd-aaa29da45e7f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/d3d36be2-b6df-4aba-ad31-8b282a198b30.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/fb707849-2a41-4408-a21e-0059afc9794c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/05ec5da7-13ad-4df5-ba1d-e76ec6a32a19.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/5945c621-b298-454b-bb93-f3fdcc1252c9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/ddb2d80f-e82f-4bb0-8fef-953e33e82150.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/ab6c18d5-e046-409d-a715-bba472d836ad.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/84fc6754-90c2-4df6-a66a-dfdb8c7c7970.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/73f857c5-bc47-4e75-9727-97732e93ee42.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/bd47d23a-be6a-4c67-97ed-9560cc5c261d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/c186ff7b-4f40-447e-8200-cc7d9ca5a055.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6aadabd2-a481-4cf1-a5fb-343df7e2183d/3e83ad06-e621-4555-9ae3-d6c3bd7d2644.jpg"
+    ],
+    "operation": "alquiler",
+    "price_amount": 1800000.0,
+    "price_currency": "ARS",
+    "rooms": 6,
+    "search_name": "remax_alquiler_ph_caballito",
+    "site": "remax",
+    "surface_m2": 171.0,
+    "title": "ALQUILER CASA USO PROFESIONAL – ZONA SEMICENTRICA",
+    "url": "https://www.remax.com.ar/listings/alquiler-casa-uso-profesional-zona-semicentrica",
+    "verified": false
+  },
+  "remax:6b58b832-1213-4b9c-a15c-9951315fc1bb": {
+    "address": "Cerro Sosneado 800",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": 400000.0,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [],
+    "id": "remax:6b58b832-1213-4b9c-a15c-9951315fc1bb",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/6b58b832-1213-4b9c-a15c-9951315fc1bb/4ecbfd9d-704b-4b8e-9b45-64e422d83946.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6b58b832-1213-4b9c-a15c-9951315fc1bb/4ecbfd9d-704b-4b8e-9b45-64e422d83946.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6b58b832-1213-4b9c-a15c-9951315fc1bb/e0d9025b-3ece-417e-9b69-90160e717507.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6b58b832-1213-4b9c-a15c-9951315fc1bb/1def01a2-dbcf-4dee-bfec-12c49e88e11e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6b58b832-1213-4b9c-a15c-9951315fc1bb/bc26eb82-7a0c-4dcf-ad98-1d135e06021f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6b58b832-1213-4b9c-a15c-9951315fc1bb/20c56d7e-5a36-4272-9c5d-b009d80057a6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6b58b832-1213-4b9c-a15c-9951315fc1bb/02ccb0ce-c121-4c93-a0b1-d371254dbea2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6b58b832-1213-4b9c-a15c-9951315fc1bb/7e371e5d-2e4d-4906-ae39-c30b21373329.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6b58b832-1213-4b9c-a15c-9951315fc1bb/a09d885e-931a-458b-807e-1cfff698e744.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6b58b832-1213-4b9c-a15c-9951315fc1bb/7a2f7aa8-8aaf-4c87-beeb-05abd4ac5628.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6b58b832-1213-4b9c-a15c-9951315fc1bb/41dccf2f-93a9-4617-89f2-d84e448dfb3b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6b58b832-1213-4b9c-a15c-9951315fc1bb/11363919-9e5b-4f74-8f0c-d546d138ea14.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6b58b832-1213-4b9c-a15c-9951315fc1bb/d68dd32b-e615-46b2-8ac7-0d883e947c42.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6b58b832-1213-4b9c-a15c-9951315fc1bb/630407c2-24e8-4645-ac21-ecace1fa21eb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/6b58b832-1213-4b9c-a15c-9951315fc1bb/c0cbd5ee-2ffd-4551-98b3-4ab3622d8cb4.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 370000.0,
+    "price_currency": "USD",
+    "rooms": 7,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 250.0,
+    "title": "CASA VENDE",
+    "url": "https://www.remax.com.ar/listings/casa-vende",
+    "verified": false
+  },
   "remax:70b0815d-cb6d-48a1-9e62-bcfba99b385d": {
     "address": "Ramella 200",
     "bathrooms": 5,
@@ -31681,6 +32481,59 @@
     "surface_m2": 367.32,
     "title": "Casa en Bernal c/ pileta y quincho",
     "url": "https://www.remax.com.ar/listings/casa-en-bernal-c-pileta-y-quincho",
+    "verified": false
+  },
+  "remax:70c7c478-3ab7-4ccf-9128-a98fbb0f3266": {
+    "address": "Eugenio O Neill 200",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:53:49Z",
+    "flags": [
+      {
+        "label": "Precio 76% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:70c7c478-3ab7-4ccf-9128-a98fbb0f3266",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/10e8399e-57e9-4e01-b812-500a2df6b0fd.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/10e8399e-57e9-4e01-b812-500a2df6b0fd.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/d6316610-2ed6-49d7-93a6-1a29e62b12bb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/a99083a6-d23e-4356-ba72-7c6dd66dbfcc.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/3e008729-64a3-497b-99de-c48286f81135.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/98e969f7-c1a9-4803-9064-bb1bd782307c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/b0db684a-8797-428a-a537-25063d4e4662.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/c5740a27-e8ec-4e4f-8bd1-e892337462c2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/05337304-7a1b-45b4-9d2d-6657f2c48c29.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/86cb5ac0-2cd7-49d9-9f04-1703056506f0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/7af66a64-2d28-42c1-ac43-429887beafaf.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/ef750912-85ef-4519-869b-987dffdf1e81.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/61f13ec6-360d-410c-9e68-5321a420ec27.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/14da0a20-5a9b-4fb6-84ce-222ec7b99b96.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/12fad0c1-316d-44a2-977f-074ec425cb33.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/35bce534-e8b9-4775-9e2c-11b612b69fc3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/9ffa598c-d489-4486-876f-fca8bb543c8b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/7ebe9f56-7648-4532-9dd3-cad2464433d4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/b7057814-34e8-4f10-9493-b522abdd7f27.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/c0521318-a34b-4e1a-8d55-b762e07548cd.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/ca60efe0-d444-4217-a52f-3dd98de7aa3b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/50966238-3f6d-4860-aff5-f96eafc7df70.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/c28991d9-73ae-461c-bed7-9fa3f51309ec.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/6585bc70-8559-4c22-a424-e17a9049b2ed.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/0615878b-7120-41b7-bd53-95eb33970853.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/70c7c478-3ab7-4ccf-9128-a98fbb0f3266/4c4a8fbd-c05b-44cb-b6c3-d86762f96ee5.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 84900.0,
+    "price_currency": "USD",
+    "rooms": 5,
+    "search_name": "remax_venta_casa_nunez",
+    "site": "remax",
+    "surface_m2": 190.0,
+    "title": "CASA EN VENTA DE 4 AMB. BANFIELD EXCELENTE ESTADO",
+    "url": "https://www.remax.com.ar/listings/casa-en-venta-de-4-amb-banfield-excelente-estado",
     "verified": false
   },
   "remax:70fb72eb-2ab2-4d8c-a887-c1326861e8d5": {
@@ -31810,6 +32663,64 @@
     "url": "https://www.remax.com.ar/listings/hermosa-casa-esquina-en-venta-cc-vigil-maipu",
     "verified": false
   },
+  "remax:75012817-4028-4c68-bc0d-84e7ab52dc72": {
+    "address": "Guiraldes 800",
+    "bathrooms": 3,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [
+      {
+        "label": "Precio 61% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:75012817-4028-4c68-bc0d-84e7ab52dc72",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/5dd81cdf-a414-4454-8c99-027ea2c99cf5.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/5dd81cdf-a414-4454-8c99-027ea2c99cf5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/0b07392c-cab0-4bbb-85c1-f86bf01f6a15.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/d8d8a928-f70a-4794-8d2c-902c1a4b971f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/ab553461-8961-4a88-bdbf-e2f6c5fa16f9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/f5f757b3-53ec-42a5-9dde-5c7c8a666f00.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/67448e6a-63bf-4654-a3a3-758886c4a0cb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/ff4f7a84-05cf-47dc-84e9-9605fe0659ac.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/b3614c45-96ec-4f9d-a761-798aac0e5a7f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/f878ee1e-a9d8-4d18-aaa8-ef7b0daa49db.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/db6c423a-d675-40ec-849e-076ae2505869.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/c303afce-45ef-4020-b796-0a0c2865823e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/a5f98b4b-ea25-4987-bb7f-10771cf1d274.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/6db47138-3e2d-44e4-9c4b-bbe8b8c9316d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/8a201bd4-e0bf-4e16-8107-18170a1016db.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/e32c012e-1151-4a97-b471-2a7935b7252c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/036fb475-ccfc-4b7d-9956-105dccf91190.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/d1b0b2c9-f4ad-4f4b-9725-8e2a07144ba4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/0cf4a34c-97f7-49c7-a17c-96c877b70abc.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/ec4552ed-0a83-4880-9898-a3ff5fa799ef.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/7632e118-664e-450f-855c-fb038915eb6a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/9096f217-0031-407f-a0f6-8f5c6b86d3e6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/c2d8152d-e01c-4a0d-9ec2-aef8f56b7086.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/f772a8f2-622d-4a20-bc88-d4019ece040a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/fada5e2d-9106-4ff5-98cd-bc17d3c352bf.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/eaf84ae4-8ad8-4571-b1cd-607fa5516a9c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/4ef04981-69c6-47b4-b5c7-28e5a213300d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/960696f5-6c83-4537-90c7-0c33294bba12.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/fd11cae2-c802-4248-98d6-93425ef3346d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/a7822108-c05d-4c43-a417-17f86290a6dc.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/75012817-4028-4c68-bc0d-84e7ab52dc72/e4ceaea4-4695-42c7-9b9f-f8ab9bd4b9a9.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 138000.0,
+    "price_currency": "USD",
+    "rooms": 6,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 176.0,
+    "title": "Venta Chalet 5 Ambientes mas PH en Punta Mogotes",
+    "url": "https://www.remax.com.ar/listings/venta-chalet-5-ambientes-mas-ph-en-punta-mogotes",
+    "verified": false
+  },
   "remax:757f8204-ce82-4368-a3b1-c7183dabdfc7": {
     "address": "Sin Nombre, B6701 Luján S/N",
     "bathrooms": null,
@@ -31842,6 +32753,101 @@
     "surface_m2": null,
     "title": "63 Hectáreas para desrrollo en Luján",
     "url": "https://www.remax.com.ar/listings/63-hectareas-para-desrrollo-en-lujan",
+    "verified": false
+  },
+  "remax:77c68de8-bc25-4fff-ab7f-806eb04a3768": {
+    "address": "Avenida Santa María de Las Conchas 4200",
+    "bathrooms": 3,
+    "bedrooms": null,
+    "expenses": 675000.0,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [],
+    "id": "remax:77c68de8-bc25-4fff-ab7f-806eb04a3768",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/cb0a9367-32b8-47f0-b473-2a8befbe0cbc.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/cb0a9367-32b8-47f0-b473-2a8befbe0cbc.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/d2355e2c-ba72-402a-ac68-f55ba9bb5f28.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/42d6590b-6ca6-45b8-b468-70a52213ddf5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/387553b2-b00b-4351-8108-4e3491aaa6a9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/27f0d836-b855-4ed7-a141-e4c7857464fa.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/3bc32ab8-23dd-4cc1-a3d7-93fcdbf0f8ed.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/b7796127-ba2a-483e-b2fd-cceeb9ae733e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/4ff6f70c-cbd6-44fd-b5aa-d22fbf876834.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/941361da-1357-49d8-93ff-cf7d7472b155.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/986ea522-579a-4d52-87de-4eb0deeb0783.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/57af42eb-5229-4baa-a43b-d8ae42fdf05a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/715aa483-b6fd-4115-90e4-c10cf42684a7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/5e94f415-54c8-4481-b088-23ec59eca4cc.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/b590d56a-d29e-4c86-8b5b-615fd15bdb21.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/902231e3-167d-4de1-8a95-4c4bd65c825c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/e638f634-062f-4540-a9fa-85f393e2dceb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/a8bb511e-733e-4f45-9572-508e35361359.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/a0f0b5e3-439f-461c-95cb-88cdce0c1a05.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/2d9ea918-5c3d-40e3-9870-0a64922c64e9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/87c06598-8c0a-46d2-845a-d2048046c0eb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/77c68de8-bc25-4fff-ab7f-806eb04a3768/ce19a9a3-9109-4feb-af2c-f26bb927dbe8.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 399000.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 180.6,
+    "title": "Venta Depatamento Albanueva Tigre",
+    "url": "https://www.remax.com.ar/listings/venta-depatamento-albanueva-tigre",
+    "verified": false
+  },
+  "remax:7822b7d9-c59d-438e-8057-a1993b63c6b7": {
+    "address": "Amancio Alcorta 1100",
+    "bathrooms": 3,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:54:38Z",
+    "flags": [],
+    "id": "remax:7822b7d9-c59d-438e-8057-a1993b63c6b7",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/aa55ac1d-b96a-4aa6-9abf-829cb3641c05.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/aa55ac1d-b96a-4aa6-9abf-829cb3641c05.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/fba1c4ae-6c2c-4883-89d5-d8f8de6bada4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/cb275300-53b8-48be-881b-5a29680982cb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/18723c39-f712-4b20-9a2a-35963affa390.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/dfef57e9-191c-4393-9a27-6374fe8157c4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/3d0f996b-b7d8-4e7a-a7d1-096bb9fa95c9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/30cb7950-a2c5-4cff-8c1e-3df736a371cf.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/634f4ec6-a2ca-4dc6-9511-508f6ee92cdb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/39545095-e613-4e0a-bc1c-811bfe793bac.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/b9a4de46-502b-4f93-84f5-a7b95b2e47cb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/ab36941d-4413-4267-ae67-09a74900e98b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/4dcc8bda-4012-45e8-8a16-f340f7184d67.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/44a73f3d-e106-4b09-b546-4c6345caa29c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/3794e80e-d0c2-42fe-9952-08d372a4675d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/e51cb229-a200-4552-8a8f-8f35559affde.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/121df9a9-2cf7-47c2-b91d-93cac71dd1cd.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/29912f1d-730f-45d9-bfa0-88acd0e725fe.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/57c09c8c-f5cd-4bd4-99af-1c16c1970dd1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/40b48f9a-f6b8-4cee-b948-4de22649028f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/de803e10-f6a8-4b44-b3cd-d495aa8109aa.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/511beda7-1321-4f1f-a552-95e0e0bb7447.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/d0c34fe1-db53-4bfd-ba75-5690d7e993f2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/b619cf4e-f33c-4e24-b9a8-ef7dfae43a04.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/cd52935b-5b76-4f05-a720-8e9673dbc083.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/39f6ac8a-d7d4-45e0-8150-bc7adc0a34f6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/29b93ea3-e002-411f-bbea-11bbf9188c55.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/4fb0c624-cb57-405d-86c7-af1f3782a14f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/2ca290d6-b4f7-4cfd-acf1-aeda310567a5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/47911796-9620-4adb-9f16-6b567a41987f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7822b7d9-c59d-438e-8057-a1993b63c6b7/02e9c97e-315a-4cb2-8eda-ac6e03c1214e.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 265000.0,
+    "price_currency": "USD",
+    "rooms": 5,
+    "search_name": "remax_venta_ph_almagro",
+    "site": "remax",
+    "surface_m2": 922.5,
+    "title": "VENTA CASA PILAR DEL LAGO",
+    "url": "https://www.remax.com.ar/listings/venta-casa-pilar-del-lago",
     "verified": false
   },
   "remax:7b04bab6-bc99-49f6-8579-38155b3583d3": {
@@ -32011,6 +33017,51 @@
     "url": "https://www.remax.com.ar/listings/venta-casa-3-amb-departamento-3-amb-v-luzuriaga",
     "verified": false
   },
+  "remax:7f568793-8749-4736-8fee-f9422bc284ce": {
+    "address": "Arias 3100",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": 1100000.0,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [],
+    "id": "remax:7f568793-8749-4736-8fee-f9422bc284ce",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/ca5bd816-7184-4db9-9e98-7148a9b64435.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/ca5bd816-7184-4db9-9e98-7148a9b64435.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/75a5cb01-bec8-496e-af61-7f81d67db4b0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/56ec7d16-e562-4687-8097-1468193800b7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/b8dd033a-0b06-415d-a848-bf057e3bc6eb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/9cf40cc7-6377-490e-a384-6258fd7d62fb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/4fe3df2f-a98d-4bc8-8a0f-0a46b1c4ee72.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/e2ec7990-1039-4a1e-805e-00cf0e7eda63.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/2d502ace-2286-46c9-ada6-07c1758b90d8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/173d3d93-7504-4dff-96d0-0bc26b32e5d6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/0bb9cf85-f368-4aa4-b75a-c7c216f99c3b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/9c049933-294a-4a58-9af7-c530d4107d4b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/a0550ec6-b0d8-4d8f-a953-2cf240aab7b0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/f16295f0-fad6-4d97-bacd-62acfdab4cf7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/bd4f126c-6954-4dd9-bf6d-4c5525a811f6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/555504ad-fa63-4306-8417-509ff17be136.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/00359f91-a56b-4f10-be8b-bdbfa48914a6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/88172a57-f147-4268-ae34-b992d6334af3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/47b95b24-1841-481f-943d-f657f90a6d73.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/4be65dda-818d-4b8a-8a41-177bb57eda8a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/96f2e5ad-1a17-46a2-8d17-c982d6170b99.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/e6b3956a-19e1-40c3-ae53-0c705837e17c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/fed72688-2413-4cdd-ab43-2e01843461de.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/7f568793-8749-4736-8fee-f9422bc284ce/b35eb4c0-f9db-4024-ac17-5752acf3b6b2.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 450000.0,
+    "price_currency": "USD",
+    "rooms": 5,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 295.0,
+    "title": "VENTA DE DEPARTAMENTO / DUPLEX 5 AMB. PUNTA CHICA",
+    "url": "https://www.remax.com.ar/listings/venta-de-departamento-duplex-5-amb-punta-chica",
+    "verified": false
+  },
   "remax:8172db5f-0144-4eaf-b9a5-13e0aaa615cf": {
     "address": "Avenida Vernet 200",
     "bathrooms": 2,
@@ -32112,7 +33163,7 @@
     "first_seen": "2026-07-15T14:55:00Z",
     "flags": [
       {
-        "label": "Precio 44% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 42% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -32530,6 +33581,52 @@
     "surface_m2": 1021.0,
     "title": "CASA EN VENTA 7 AMBIENTES C/ DEPARTAMENTO EN LOMAS",
     "url": "https://www.remax.com.ar/listings/casa-en-venta-7-ambientes-c-departamento-en-lomas-1",
+    "verified": false
+  },
+  "remax:8f3f4067-07f4-4979-af0e-0410bce0cadf": {
+    "address": "Tinogasta 4500",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [],
+    "id": "remax:8f3f4067-07f4-4979-af0e-0410bce0cadf",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/584f2928-805c-4724-a1f1-d9c5a826801d.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/584f2928-805c-4724-a1f1-d9c5a826801d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/b3688e54-733a-42c9-95ac-df2f86b8d5d3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/650d0c79-c19f-4b64-97d3-192989f06ce6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/aa0024b1-59a1-4199-93d1-d69911cec9db.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/707d9562-7b29-4885-b278-9cf8eb7a66b6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/0749bb89-3d98-45b1-8531-739208e0cb25.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/c2129549-41dd-4b43-93c0-2fc50c6bea47.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/b02b4fcf-aa53-4aa5-a2b0-c0d735751ca9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/79b7652f-3012-4abd-be92-f02734ad9e2a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/4b35cc90-a4a3-40f4-a9f2-e3b808f4fe51.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/5d9ef495-6d04-47c6-8be9-a4f94e50d6e2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/444dc608-1ed7-4438-bbf4-c0dc35385693.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/8bbdc6b1-55bd-4c75-ab25-f4a81172ffd6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/848948bb-80d8-4af5-aac3-78f616c59fbe.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/87785f2c-0636-4815-a990-d509bbe82eed.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/a5d6b7d9-09f9-45ec-b014-34abef8d4b70.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/d10fd6b4-f30d-4c72-90de-db8c0367096b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/93c3d785-17a4-4ef3-a3b7-d73e9d46861f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/61fbea2d-1337-4d0e-a270-558601ab9bfa.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/db9affab-dcda-490f-bed0-43c1a9f4b43d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/894f8967-8fc7-41a4-b71e-521a05bf4f2b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/95c03845-0763-4535-ac1e-106e22bb3100.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/c1689b6c-084e-442d-9efd-c19cdc3ffc4b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/8f3f4067-07f4-4979-af0e-0410bce0cadf/e98ffb81-2bc3-4719-8157-d73cda847160.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 220000.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 134.0,
+    "title": "VENTA PH 4 AMBIENTES VILLA DEVOTO TERRAZA QUINCHO",
+    "url": "https://www.remax.com.ar/listings/venta-ph-4-ambientes-villa-devoto-terraza-quincho",
     "verified": false
   },
   "remax:8fcaa617-941f-4e15-89c6-c7486873eae3": {
@@ -33055,6 +34152,58 @@
     "url": "https://www.remax.com.ar/listings/venta-casa-en-pilar-las-brisas-country-club",
     "verified": false
   },
+  "remax:9cf9c8a0-9ea7-4130-adde-092f969ef1e4": {
+    "address": "John Lennon 100",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [],
+    "id": "remax:9cf9c8a0-9ea7-4130-adde-092f969ef1e4",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/9126ac31-69df-496b-8ce4-c5860c442667.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/9126ac31-69df-496b-8ce4-c5860c442667.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/55a074c7-abaa-4242-b2e8-f31cc9997dd1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/75635847-13c5-450c-975e-31ea6e993e89.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/6135101e-a679-46ad-976a-165634141ab1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/061a8f33-aaf7-4673-b193-c5ad184381a4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/d9403849-2c59-4c9e-9a01-d5f6bc783f65.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/4477687f-a66f-4ffe-ab23-627cc69f2b67.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/21bb64f5-9ef2-4a89-8f49-f7f818e61ad6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/ad1ffafe-6ce2-494a-80d3-02a546ed7f79.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/86976e5e-65ba-4786-a9a1-f6ea80360d45.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/c1d1bf4d-b13a-4196-bbd0-da601c0d00cf.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/a4c5fefb-8e27-4b87-9333-1c48d8837039.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/d87a2f5b-deca-4f65-b8e0-6df3ef019808.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/3ebda508-4a7f-4b7e-8103-51cb42aeb4f9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/05c0f206-5374-4d18-ac5b-afbb7407e75e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/8f171eca-e8ac-4153-8a7c-5fcc3bdd411c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/0c8e6499-df9f-4fd3-acd8-3898dd3fd064.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/e12daca1-b1c3-41c2-a609-615f4b8b32c8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/4ce78305-7f62-41a4-8a6f-0905bfc35de5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/2903f536-bfc1-47c9-bcb5-0eb532451a5d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/c462dc7e-66cf-4d8d-b574-5876322e1081.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/1b72ad66-3edf-430c-921d-a12b523eaa5b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/90ab743a-5376-4f7b-a1e1-5520d1251aad.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/3361770d-11a7-4788-98b7-7247eef8080c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/ff8c7677-d7fa-44a0-8583-4b3a9d48ad62.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/cafe252c-89d7-4b47-ba2f-0ee2a0dc4856.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/12caa7c8-76cc-4ef0-a4e6-9ae3e504e001.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/f7747d8f-35ed-49d7-bb3a-9d0108967a2f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/9491155e-9050-4656-b3fc-3474406a8e98.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/9cf9c8a0-9ea7-4130-adde-092f969ef1e4/dbfc0799-b621-477d-8430-b16fb7b8d497.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 200000.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 160.0,
+    "title": "Casa en Venta UNCAS con 3 Dormitorios",
+    "url": "https://www.remax.com.ar/listings/casa-en-venta-uncas-con-3-dormitorios",
+    "verified": false
+  },
   "remax:9dd9dea0-1eb7-41aa-8631-bb14a366eec9": {
     "address": "Alvarado 5500",
     "bathrooms": null,
@@ -33281,6 +34430,52 @@
     "url": "https://www.remax.com.ar/listings/casa-en-venta-la-plata-4-dormitorios-1",
     "verified": false
   },
+  "remax:a644f892-0e77-4812-920c-8c9be82450f2": {
+    "address": "Real 1300",
+    "bathrooms": 3,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [],
+    "id": "remax:a644f892-0e77-4812-920c-8c9be82450f2",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/0159ea6b-f99e-43bd-9b55-7919117b715e.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/0159ea6b-f99e-43bd-9b55-7919117b715e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/7fce1835-1c8a-427b-b9f9-75a9046f2afa.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/473df7f1-4247-4c3c-90c2-d1ca9e0ad852.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/0f376668-546b-466f-815d-661653150d04.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/933c984b-f16c-4b6c-9196-6c5c2d11fc85.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/1770d007-9d3b-452b-a35a-75b243b7fe0e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/3aeccc15-ff62-49ec-b4e3-780c35b54232.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/811ca6f7-6e1e-49c9-8d72-910c0b9cc4bc.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/71885370-6539-45e8-a1c9-c899efa523bb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/8a4d9349-14de-4eb2-a5ae-17713a3f2e76.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/51ed26fa-ba28-4750-9b30-a7396afada38.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/359d4d7e-6781-4ee8-903d-5a45ad66c66b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/5a6b48fe-f45d-4ce9-9c0b-137012dc7b24.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/a42595c0-e949-4a00-8b83-6a84f7f2dd33.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/a51bd77f-8999-4744-b4ac-e734def97b14.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/d721e7cd-4eb2-4bf2-8080-650c5c299284.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/b503548a-35e2-4e8b-bc90-52044e284450.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/408f592a-2a3d-4bfa-933c-59f3b2ae05aa.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/c6c9c690-5b78-46ff-a3eb-14a5b631da99.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/64146d0d-cb11-4904-aac9-6eec220d94bf.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/78f6911b-a8bc-4eab-9eb0-1594c17257f3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/45b56701-2b40-45be-b8a9-0dc6923bd401.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/4e9ed2cd-8a6b-4531-b4f9-9a45ed52d92b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a644f892-0e77-4812-920c-8c9be82450f2/83b23253-e3c0-479e-9bd0-b6e2c2a88d89.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 270000.0,
+    "price_currency": "USD",
+    "rooms": 6,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 1015.0,
+    "title": "CASA APTA CREDITO - TUPUNGATO",
+    "url": "https://www.remax.com.ar/listings/casa-apta-credito-tupungato",
+    "verified": false
+  },
   "remax:a8b8a4ee-4059-4571-812f-56ac80be75ed": {
     "address": "Avenida Las Perdices 500",
     "bathrooms": 3,
@@ -33331,6 +34526,87 @@
     "surface_m2": 871.6,
     "title": "CASA EN VENTA 4 AMB MONTE + 2 CABAÑAS ALPINAS 871M",
     "url": "https://www.remax.com.ar/listings/casa-en-venta-4-amb-monte-2-cabanas-alpinas-871m",
+    "verified": false
+  },
+  "remax:a8ce9c0e-757c-465d-bf58-cc5fb60ee23c": {
+    "address": "Elpidio González 3700",
+    "bathrooms": 3,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [
+      {
+        "label": "Precio 99% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:a8ce9c0e-757c-465d-bf58-cc5fb60ee23c",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/a8ce9c0e-757c-465d-bf58-cc5fb60ee23c/eee882d7-8e99-4a4f-b538-46ccf89489ee.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a8ce9c0e-757c-465d-bf58-cc5fb60ee23c/eee882d7-8e99-4a4f-b538-46ccf89489ee.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a8ce9c0e-757c-465d-bf58-cc5fb60ee23c/8e6c9788-16e5-4a0c-a4ba-5d8153b5d873.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a8ce9c0e-757c-465d-bf58-cc5fb60ee23c/ffcf86de-d50b-4729-aa52-cd98bf5bd0aa.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a8ce9c0e-757c-465d-bf58-cc5fb60ee23c/cbbb6f6e-16d0-41ef-9213-509f54ca728d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a8ce9c0e-757c-465d-bf58-cc5fb60ee23c/3f9be12d-d0e3-483a-b1c9-9a8ab60df9f6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a8ce9c0e-757c-465d-bf58-cc5fb60ee23c/0fcbfb72-f537-4e92-b6e1-b30d158c1727.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a8ce9c0e-757c-465d-bf58-cc5fb60ee23c/370baaab-718a-4432-b854-5a0bd2ee1167.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a8ce9c0e-757c-465d-bf58-cc5fb60ee23c/7babdb02-578b-4c5a-b9ca-238394f50c52.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a8ce9c0e-757c-465d-bf58-cc5fb60ee23c/18846288-9dde-4053-a780-1892a1595666.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a8ce9c0e-757c-465d-bf58-cc5fb60ee23c/8cdabeb3-ba28-4173-9745-a5b19ee2f66b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a8ce9c0e-757c-465d-bf58-cc5fb60ee23c/f32afab9-7477-4ce2-a4f0-db9ecc4fb48e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a8ce9c0e-757c-465d-bf58-cc5fb60ee23c/c9f6817f-ac59-4f01-99d4-223c18599e0c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a8ce9c0e-757c-465d-bf58-cc5fb60ee23c/e75662d7-ee32-42ff-8b2c-0bb62b9f81fb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a8ce9c0e-757c-465d-bf58-cc5fb60ee23c/af60f67a-bd38-42e6-a4f2-3f93c75d3985.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a8ce9c0e-757c-465d-bf58-cc5fb60ee23c/9743e13a-898b-4c06-b174-b3f8770786e1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a8ce9c0e-757c-465d-bf58-cc5fb60ee23c/b7c89954-192a-4184-9ffe-6faa4403659c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a8ce9c0e-757c-465d-bf58-cc5fb60ee23c/796491e5-a0ed-48ed-b1c6-e1ac7f181d56.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a8ce9c0e-757c-465d-bf58-cc5fb60ee23c/b8b9f192-5e4e-4135-8aca-3980bcf0f5ac.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 2600.0,
+    "price_currency": "USD",
+    "rooms": 8,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 285.92,
+    "title": "Alquiler casa Club de Campo. A partir de Octubre",
+    "url": "https://www.remax.com.ar/listings/alquiler-casa-club-de-campo-a-partir-de-octubre",
+    "verified": false
+  },
+  "remax:a9e428d8-14c5-4d1b-8c59-8224cdc59ee1": {
+    "address": "Roque Sáenz Peña 6000",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [
+      {
+        "label": "Precio 83% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:a9e428d8-14c5-4d1b-8c59-8224cdc59ee1",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/a9e428d8-14c5-4d1b-8c59-8224cdc59ee1/a0907e62-fe5a-4117-ac41-93ef7a78f806.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a9e428d8-14c5-4d1b-8c59-8224cdc59ee1/a0907e62-fe5a-4117-ac41-93ef7a78f806.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a9e428d8-14c5-4d1b-8c59-8224cdc59ee1/a2f4708f-658e-400a-8490-f63ceab085c9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a9e428d8-14c5-4d1b-8c59-8224cdc59ee1/e319e997-cabc-42b5-8d70-6dfd250a9a2b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a9e428d8-14c5-4d1b-8c59-8224cdc59ee1/c05010b3-72e7-4d07-b82f-ad36e1b948bf.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a9e428d8-14c5-4d1b-8c59-8224cdc59ee1/604587eb-193e-4bb7-ad43-10c0576194c8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a9e428d8-14c5-4d1b-8c59-8224cdc59ee1/76069a2a-339b-444e-9de3-cae4d10994b9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/a9e428d8-14c5-4d1b-8c59-8224cdc59ee1/6fec87f7-1d99-415e-a19b-c9ae3089ba7c.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 59000.0,
+    "price_currency": "USD",
+    "rooms": 5,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 297.0,
+    "title": "Venta de Casa en Barrio Santa Ana, Guaymallén",
+    "url": "https://www.remax.com.ar/listings/venta-de-casa-en-barrio-santa-ana-guaymallen",
     "verified": false
   },
   "remax:abb3d30f-9298-4fff-bcc1-42b37a69da21": {
@@ -33496,6 +34772,69 @@
     "url": "https://www.remax.com.ar/listings/venta-de-casa-semicentrica-tandil-1",
     "verified": false
   },
+  "remax:aefd743f-87a8-4742-9047-17ef1d7c332d": {
+    "address": "Mariano Boedo 1300",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [
+      {
+        "label": "Precio 48% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      },
+      {
+        "label": "Boedo: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "remax:aefd743f-87a8-4742-9047-17ef1d7c332d",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/6e63ee54-52b7-4cfc-a1fd-5e3a63cf9815.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/6e63ee54-52b7-4cfc-a1fd-5e3a63cf9815.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/16452422-dcf3-43d1-af2e-81e6a627c5e7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/00fe9e9c-efce-42f5-8806-4ec2d91e63ca.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/7f48d314-58e1-47e5-ad3f-d5bb981f9341.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/1f295203-6461-41cb-9517-25dc5fe0f974.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/05ee138e-e3ce-47ec-a57d-20d06c41ccef.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/d6d4e434-12e2-4621-93be-ddf663831d92.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/edc00978-c14d-42dd-9477-5fdf0877d404.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/10e84cb3-9229-4179-8780-e7c43d75581a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/4d774cc3-f613-443e-9326-6208f7b8182d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/aea123e7-1891-48a1-b078-67e8f56e9258.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/b7bb207e-0527-4478-adfb-fccf93c1bc15.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/b37caff5-cbb9-48d9-b02a-91f13952a2fc.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/b204ede4-30b8-4490-a87f-412fde238f12.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/5a3f1ade-06b3-45f8-9a81-0c14eb1df070.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/88dd6900-f958-4488-b9c3-47d1b2ca50f0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/eb20aa43-e25c-4c73-b627-41fa1108b382.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/b23124bb-8aeb-4248-b894-3bd7ee5e62dd.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/098ed2b7-a55e-4ae2-9ca5-0856ce94d103.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/9cbe15a3-3c90-4ce1-93e7-69d7fa9cb9ea.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/fc751208-3e3a-4e62-ba2f-a1c89652a1e3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/a54aa50b-309a-47dd-a624-94ddb9e638e8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/67950334-84fc-4e96-8583-2a83f9daeb10.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/ddeb2a01-59ba-4465-921e-45696fb8ff3a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/a7d58702-2d8a-47a1-89cd-96ff1f200030.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/d00be105-7ff9-4efd-b520-37003e18fbaa.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/4f79efcd-301b-46be-ba3c-1a93557552fc.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/d562f63c-b875-4bdc-bc88-b0a414244da9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/29b4a655-bc4d-460a-86c6-7b10b2681b0f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/aefd743f-87a8-4742-9047-17ef1d7c332d/800835ae-2e99-49d9-895d-c77575456a42.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 140000.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 183.0,
+    "title": "Casa 4 ambientes en venta, Lomas de Zamora, patio",
+    "url": "https://www.remax.com.ar/listings/casa-4-ambientes-en-venta-lomas-de-zamora-patio",
+    "verified": false
+  },
   "remax:b1fda161-f2d9-4389-9f28-d5295f672ca8": {
     "address": "151 Esquina 3 Barrio los Troncos 0",
     "bathrooms": 2,
@@ -33546,6 +34885,64 @@
     "surface_m2": 460.0,
     "title": "Casa 4 ambientes Venta Los Troncos",
     "url": "https://www.remax.com.ar/listings/casa-4-ambientes-venta-los-troncos",
+    "verified": false
+  },
+  "remax:b2b63917-84d3-4f46-a7be-81bae1e36913": {
+    "address": "Bernardo de Irigoyen 1600",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": 750000.0,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [
+      {
+        "label": "Precio 99% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:b2b63917-84d3-4f46-a7be-81bae1e36913",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/ca83e6f1-61f4-4415-a639-a07852b5baf3.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/ca83e6f1-61f4-4415-a639-a07852b5baf3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/7d7faa8b-1507-48e8-9322-52b085438acb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/776e37b1-4c3b-4469-839c-db5880ed60b4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/8199d573-a4c0-4241-a453-13ff10b37df5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/ff8106b3-675a-4969-a287-bf40aa2a2ef6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/b96837f3-af65-488f-b334-98dd3d5256c5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/19e59c43-8e13-4631-b029-4a36e8d1bffe.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/9a3a03b1-1f92-4310-a52e-aeedae567e34.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/ce5b55e5-4465-4b94-a992-6e7fc65079d3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/5fb4840f-17a8-4d57-9967-e6a1d688a76a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/e405228e-8542-46b5-a814-546eb320dd0c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/f138ebf8-787c-478c-ba57-973bf3759ba1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/98d30d6b-db36-486f-97c0-5237ca90ea13.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/c5845f2b-5af5-47f7-91ad-6cda840812f8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/644363be-575e-401d-b136-fa04c9c5e6f5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/c7667c05-d820-4d88-9ebe-ddf66f652446.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/a6857505-eedb-43ad-a565-a583ce327791.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/e301537f-b4bb-4aa8-bcc5-e68ade1ea061.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/914989db-c3ae-4c3c-a882-e14f2e6e562f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/aa77458c-9145-4558-a051-90e665530c69.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/e3cf2d43-c33d-4a57-bda2-cf7fe36238b0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/82290fa7-6335-421e-95fc-0635e86352e6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/f54b263c-9f46-483c-b223-bd0abea008fd.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/a209bf7e-3052-49da-b382-6789f0552360.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/3efe1258-27d5-4c2d-a749-a9002e5c83dc.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/5fd5d285-062f-4b56-ba22-2728044d017e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/dfea3a1a-9a40-4b24-9a69-da5749ddd963.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/48371461-5f95-47a7-908d-cd80c33c6a35.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/0ac2e4ef-fcae-4f1b-9892-0d60491307c5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b2b63917-84d3-4f46-a7be-81bae1e36913/ecac4b2a-6ca7-4aad-b8eb-14b7b8966a3d.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 1400.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 240.0,
+    "title": "Alquiler casa con pileta en San Matias amueblada",
+    "url": "https://www.remax.com.ar/listings/alquiler-casa-con-pileta-en-san-matias-amueblada",
     "verified": false
   },
   "remax:b4326699-04bc-4766-9e67-ec552dde32e5": {
@@ -33761,6 +35158,64 @@
     "url": "https://www.remax.com.ar/listings/venta-casa-5-ambientes-complejo-tiempo-libre-1",
     "verified": false
   },
+  "remax:b9c42b8b-caf2-4c76-911e-eb668e9ab1c0": {
+    "address": "Edison 400",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [
+      {
+        "label": "Precio 64% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:b9c42b8b-caf2-4c76-911e-eb668e9ab1c0",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/5cc22556-00e1-4158-a95e-ca305ba50900.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/5cc22556-00e1-4158-a95e-ca305ba50900.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/ba921d33-9866-4134-a403-f7e45442aaae.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/b60d8745-10cf-4ad6-ac03-b9dac256b64a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/f6045673-02ff-41eb-a27b-964ded2688ba.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/0010d63e-39ef-4ae1-a052-a5519f80c5ec.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/4931ab0d-42c0-4e8a-b857-91eca64e5429.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/e4e2a5ad-78b6-4ec0-8b5d-da749e215ddc.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/b9e4df53-447d-46c9-be49-6d918789d29e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/20091557-a867-4733-aa57-8abb141edbaa.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/a064f811-4753-4b42-91c0-882a3c37e75b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/0d2213ae-468d-4ebd-a06f-3e048d192d61.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/bc1094e6-b3b6-432c-b989-b272aeda2fed.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/e6b7dbea-627b-47a4-bd2f-87bdb20694f1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/31be83c2-cedb-48b0-b9ce-9dcd03ebbb2d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/86e1a935-8dca-457d-8542-5502e5450710.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/59680c55-0f15-4ecc-88d2-d21295b26a2a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/8e5255b8-071e-43e1-bff3-a12d90308f64.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/5105c551-5857-4d99-ab62-f5340e08f999.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/42fdf0bb-cf0c-4b1b-b3ad-599f149fb5ef.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/4b0ebbc4-8c56-4a90-b64e-69ab34abdc74.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/403779e9-bfb7-47f8-b9f7-8734ab09b9a5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/dd746a49-12d7-43c6-be8a-3d1e0161044b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/0c8043f4-048a-4cd2-a989-2dcae41021d0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/70afa9e2-b110-4a06-a9cb-5ed6b6ae4c9a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/b2401b04-ae2e-4fcf-92af-d742fa44d9c3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/67b628e3-2c1d-4d24-8394-ede748b45790.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/945a9017-08ab-41c4-92b9-42a523ac41d4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/b5b90b8e-f7a4-4ef1-92aa-01359fa436e6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/468fd66b-864f-4b14-b08e-e8c7f2733293.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b9c42b8b-caf2-4c76-911e-eb668e9ab1c0/183b85c0-08c6-462c-bf01-d2dbc76288e6.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 96000.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 757.0,
+    "title": "VENTA CASA 4 AMB. PILETA PASO DEL REY MORENO",
+    "url": "https://www.remax.com.ar/listings/venta-casa-4-amb-pileta-paso-del-rey-moreno",
+    "verified": false
+  },
   "remax:bac2345e-70e9-4c85-93b7-a7efc6a541e3": {
     "address": "Teodoro Fels 0",
     "bathrooms": 2,
@@ -33871,7 +35326,7 @@
     "first_seen": "2026-07-17T13:04:10Z",
     "flags": [
       {
-        "label": "Precio 56% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 55% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -33977,6 +35432,58 @@
     "url": "https://www.remax.com.ar/listings/venta-semipiso-en-palermo-chico-coch-terraza-c-dep",
     "verified": false
   },
+  "remax:c178d9ce-3f47-4e9e-aa1a-b0274947d228": {
+    "address": "Los Jazmines & Las Campanillas, del Viso, Provincia de Buenos Aires 0",
+    "bathrooms": 7,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:53:02Z",
+    "flags": [],
+    "id": "remax:c178d9ce-3f47-4e9e-aa1a-b0274947d228",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/a6f52c95-e100-4b45-981a-8db5e0c4b5d1.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/a6f52c95-e100-4b45-981a-8db5e0c4b5d1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/02e5fc78-6dbb-4299-97b6-3aac541d475c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/92722128-4398-44d8-b818-e435ba2dd0f7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/18c2b786-02e9-4391-bc81-73435c673073.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/c2396076-1818-429b-adee-843ff535d57f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/34d064bf-f9ba-44d4-81ab-c287df8cb253.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/40331c92-d591-4a63-988d-ef6fd36c110d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/94513447-bb65-42dc-a14c-fefaf17292c6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/0aa73773-9168-4da9-8fc2-052ecbc41c4e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/a5cfcf5b-c8b5-4bc8-af94-67bffca8ed4a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/5fb1edf7-e497-4bdc-aeb2-1d8ef1b1568a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/247e66c9-36d9-4ad6-a78a-41d4086f8980.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/4d126411-7a8c-447a-93be-ce8bf5c49526.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/66610db8-63df-4291-ac03-49ea98e1cfda.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/9df96ee2-5b7d-491e-8921-a02a1d7054ac.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/459fce0d-2a13-44e3-aedd-b8bde35d2c83.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/960aadd6-b9d1-4507-964b-974a1261f253.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/6dd90f8b-f4c0-4670-af22-72b58a3c3afd.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/3a65ce64-1539-4291-88a6-e0a9aa451de5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/f3a5a93e-78e8-446c-b985-212e747f2cb8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/4465738b-02cd-4eaa-b912-f4f39b4be85c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/557ea1f7-0dcb-4f1e-9254-4eb14cdb51fb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/2301e9d7-a017-4a19-902a-b9fd65304dfc.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/0a1e5b6f-505f-4810-b2c9-0fb5c649b5ab.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/00f21946-911a-4ee8-bce6-fe2697350ee4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/30bd4858-f892-439c-9282-5511849ed578.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/2d4710f8-848f-4fd3-ac8d-81598d83e02b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/b6fc49c3-89be-4721-ba8e-6a2357739f7e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/33914df0-f21d-4977-9442-95acb1ae7e3a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c178d9ce-3f47-4e9e-aa1a-b0274947d228/547578e7-f2fe-4234-9f88-53fb917977f7.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 1299000.0,
+    "price_currency": "USD",
+    "rooms": 6,
+    "search_name": "remax_venta_ph_nunez",
+    "site": "remax",
+    "surface_m2": 1856.0,
+    "title": "VENTA CASA HIGHLAND PARK",
+    "url": "https://www.remax.com.ar/listings/venta-casa-highland-park",
+    "verified": false
+  },
   "remax:c20f99f4-e343-48b5-9408-06722cf1fb1f": {
     "address": "Bermejo 600",
     "bathrooms": 5,
@@ -34027,6 +35534,64 @@
     "surface_m2": 526.0,
     "title": "Venta de casa B. Sta Rita. San Isidro",
     "url": "https://www.remax.com.ar/listings/venta-de-casa-b-sta-rita-san-isidro",
+    "verified": false
+  },
+  "remax:c34ab847-9737-4dfe-b2fb-6612f65542fa": {
+    "address": "Milenio de Polonia 2600",
+    "bathrooms": 3,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [
+      {
+        "label": "Precio 43% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:c34ab847-9737-4dfe-b2fb-6612f65542fa",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/f068d305-cfa8-4a3f-966f-4a63130c27e0.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/f068d305-cfa8-4a3f-966f-4a63130c27e0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/a0af3c9d-49cc-4f68-bf85-79a5f7451f07.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/d3d9b888-6f9b-4962-a2a9-74fb1f1a90d9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/4949682b-a09a-42b1-9154-3fa9371941bb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/4e141b1a-a015-429c-8ae4-694395f66f63.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/65b696ef-ec70-459f-8381-751013713c0d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/1a2dd2d7-d5b5-44db-914e-bae1ab067532.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/9029d08e-568b-4b5a-b8f7-a7133868f439.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/17796aef-2fcc-419e-91b6-ae22db1072ab.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/e59d7d7a-d9ec-4c3d-93ba-89cc3bcc8442.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/e64fa7a8-7d67-4854-9394-2dd604327ff0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/ae19f752-8818-42fa-977f-417b72a5633d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/753d2402-f86a-4485-874e-b2eff2663405.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/4018bdce-76eb-490e-bcdf-6eb4317bd449.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/67676521-b633-47e7-9d5f-0493193e6fa5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/6427e62e-5f8f-4e17-bac6-5117ab32d70c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/f7dabe4c-5da2-4485-abbb-52ffafe25219.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/33e19b6e-c61a-4fc3-8ebf-2b2103209501.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/6b8d3653-014b-4491-93c0-0dcca72aba2d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/aa093010-2a8a-4cda-aa3f-4d27026d4767.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/6691fa0f-35be-4fe2-bbd6-85e40e328ec8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/b182feef-a4f5-46a4-b1d4-6228218b00a8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/37cd4310-2325-469b-8664-6d7ef6c85bea.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/7c71a979-0e3d-49ab-a187-e1535f7a8dcf.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/b4977f55-0e92-48f0-b9a3-3b1843c6c5cb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/3e8bb551-31be-4158-9f2d-0c0814247f98.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/0266ef81-b35e-4700-845a-61699bc593ff.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/6f0a3b08-9d0a-43bf-8262-63c5e5051b96.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/a9ece6fe-850b-4cd0-8406-3ace886c5412.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c34ab847-9737-4dfe-b2fb-6612f65542fa/cc5c9b0d-2015-45d5-96d0-97e272a0bcdb.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 285000.0,
+    "price_currency": "USD",
+    "rooms": 7,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 297.25,
+    "title": "Casa de categoría Barrio Fomento 9 de Julio",
+    "url": "https://www.remax.com.ar/listings/casa-de-categoria-barrio-fomento-9-de-julio",
     "verified": false
   },
   "remax:c4b64160-2f95-415e-8d6f-3f07a7e57839": {
@@ -34215,6 +35780,100 @@
     "surface_m2": 270.0,
     "title": "VETA CASA 6 AMB COCH PARQUE PILETA V SARMIENTO",
     "url": "https://www.remax.com.ar/listings/veta-casa-6-amb-coch-parque-pileta-v-sarmiento",
+    "verified": false
+  },
+  "remax:c9a5eb68-5d1f-4396-8663-82c4ba56355b": {
+    "address": "Ingeniero Jacobacci 600",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [
+      {
+        "label": "Precio 64% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:c9a5eb68-5d1f-4396-8663-82c4ba56355b",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/c9a5eb68-5d1f-4396-8663-82c4ba56355b/4bcc2a6e-1c6a-4325-aa9a-da1b816fc870.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9a5eb68-5d1f-4396-8663-82c4ba56355b/4bcc2a6e-1c6a-4325-aa9a-da1b816fc870.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9a5eb68-5d1f-4396-8663-82c4ba56355b/a3d53890-a465-4f81-963f-c0212a514de7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9a5eb68-5d1f-4396-8663-82c4ba56355b/643a7b85-ef03-407c-a7ba-46d0e4eb50dd.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9a5eb68-5d1f-4396-8663-82c4ba56355b/74e7b1ac-877f-496d-911c-546e9a265df9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9a5eb68-5d1f-4396-8663-82c4ba56355b/495c79ee-b64a-41e5-84b4-97a965b25c28.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9a5eb68-5d1f-4396-8663-82c4ba56355b/6bdc2f87-d262-4628-a89b-083f5cc499e0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9a5eb68-5d1f-4396-8663-82c4ba56355b/9c32a887-e9a6-41a3-bc04-12d6c1aed01d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9a5eb68-5d1f-4396-8663-82c4ba56355b/b1da584e-add2-4fa1-8af5-db72e7afb7eb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9a5eb68-5d1f-4396-8663-82c4ba56355b/9c6f1f2f-fd2d-4656-ac6a-c312bcd54e18.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9a5eb68-5d1f-4396-8663-82c4ba56355b/e3c545ac-c8ff-4d78-8b91-ce3b2a20e8e7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9a5eb68-5d1f-4396-8663-82c4ba56355b/d610d3cc-7da2-4256-a4b1-889765b44440.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9a5eb68-5d1f-4396-8663-82c4ba56355b/b0b3af72-8c3c-4f98-92e7-e06e33f35135.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9a5eb68-5d1f-4396-8663-82c4ba56355b/430a2d38-775d-46e6-b504-8813d84fe539.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9a5eb68-5d1f-4396-8663-82c4ba56355b/4024ab2c-0c24-47be-ba2b-74f271c963e1.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 98000.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 169.0,
+    "title": "Casa de 3 dormitorios con quincho y departamento",
+    "url": "https://www.remax.com.ar/listings/casa-de-3-dormitorios-con-quincho-y-departamento",
+    "verified": false
+  },
+  "remax:c9e7c143-1509-4b78-a9f0-51e8b8516b9c": {
+    "address": "Avenida Bartolome Mitre, Avellaneda 2000",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:57:16Z",
+    "flags": [],
+    "id": "remax:c9e7c143-1509-4b78-a9f0-51e8b8516b9c",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/cf054bcd-3387-476b-a5b6-2bb34c8b42e4.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/cf054bcd-3387-476b-a5b6-2bb34c8b42e4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/779d3328-fa07-4be8-a299-fbea87e27b22.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/ad1c3547-5de7-49b4-9506-6432776f48b9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/c38cd92c-a05e-4cc7-8055-df28ffd12c93.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/0f1013c6-3760-4786-af1a-770d0de5b0ff.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/c767a42e-27cd-4f4d-9685-c9d9a4cf9118.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/78cf49d0-a25e-4cdd-8074-befd0ff45121.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/45305c9b-b24b-4dc3-b1b4-c7cbedc388ab.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/1239394b-e122-48ab-b6dc-13b99ac8279d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/1fd3b6bf-7d9c-4b1b-912e-190ab786d17b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/0b2034b2-9580-4086-9613-7b485c4c5b25.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/cfa08a69-0cd4-4a40-8191-34c90d391b88.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/995ea85f-5d4e-4cee-9ea3-3fe6e2bcf2fa.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/015dd460-6d53-45d7-a4f1-6ca78674e6d3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/c4610e7e-b9da-4a96-a688-f2e1d82fc391.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/ad49792f-2c15-4699-b229-8b752727f880.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/f89b8c48-36ad-4ad5-8402-2527b0cc8ada.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/b0d44e69-63ae-4455-a48b-a6c7103fbdc7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/b783a4b6-3392-400d-a5d1-431d696e8cfc.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/d92caf6f-9c0b-40cd-a91c-73998e066910.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/1608dc70-bcec-48cb-a10c-6d93d89b4461.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/67f199e3-ffa6-4ae8-be72-323088555906.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/e946dfaf-9ac1-4c14-ad03-a5ffc6590b69.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/ca59af74-29d1-47bf-a59c-f8d917ddb98b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/3f9e4c19-b431-4380-8699-34c6aca01f6a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/abd55840-dc2a-42a8-ae0b-7dd8d62d63e5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/758f6209-a5ad-4756-bfa4-611ae549bcc4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/5690f5c4-1167-4ce3-aed5-0f7415d47b70.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/3643305b-a7c5-4f56-afe6-7bf74a0bcfdc.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/c9e7c143-1509-4b78-a9f0-51e8b8516b9c/6757ab30-cfa4-4ef4-b926-197d2dd7ee05.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 330000.0,
+    "price_currency": "USD",
+    "rooms": 9,
+    "search_name": "remax_venta_casa_Saavedra",
+    "site": "remax",
+    "surface_m2": 345.0,
+    "title": "CASA VENTA EN AVELLANEDA Quinta Galli Crucesita",
+    "url": "https://www.remax.com.ar/listings/casa-venta-en-avellaneda-quinta-galli-crucesita",
     "verified": false
   },
   "remax:ca642a03-a23f-47e0-8fe0-5b3ed1642ab7": {
@@ -34411,6 +36070,37 @@
     "surface_m2": 246.0,
     "title": "Propiedad con 3 viviendas",
     "url": "https://www.remax.com.ar/listings/propiedad-con-3-viviendas",
+    "verified": false
+  },
+  "remax:cddcdc4c-532e-4142-a268-ed123dbac12a": {
+    "address": "Camino de Tufi 0",
+    "bathrooms": 3,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [
+      {
+        "label": "Precio 81% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:cddcdc4c-532e-4142-a268-ed123dbac12a",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/cddcdc4c-532e-4142-a268-ed123dbac12a/9754a5ee-2ef0-4832-bc4c-d0ffcf025dab.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/cddcdc4c-532e-4142-a268-ed123dbac12a/9754a5ee-2ef0-4832-bc4c-d0ffcf025dab.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/cddcdc4c-532e-4142-a268-ed123dbac12a/04d11b70-23dc-4445-8caa-ef5f68703bf4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/cddcdc4c-532e-4142-a268-ed123dbac12a/0473126d-cbbc-4e68-a922-c0079e621191.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 65000.0,
+    "price_currency": "USD",
+    "rooms": 5,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 91.0,
+    "title": "VENTA FINCA - 2 DORMI- MAQUITO",
+    "url": "https://www.remax.com.ar/listings/venta-finca-2-dormi-maquito",
     "verified": false
   },
   "remax:cfe47b12-222d-4d1e-acac-96bbdb7392e8": {
@@ -34698,7 +36388,7 @@
     "first_seen": "2026-07-15T14:55:00Z",
     "flags": [
       {
-        "label": "Precio 43% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 42% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -34750,7 +36440,7 @@
     "first_seen": "2026-07-15T14:55:00Z",
     "flags": [
       {
-        "label": "Precio 50% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 49% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -34883,6 +36573,47 @@
     "surface_m2": null,
     "title": "HECTAREA A 500 MTS DE LA RUTA PROV 34-PARC404",
     "url": "https://www.remax.com.ar/listings/hectarea-a-500-mts-de-la-ruta-prov-34-parc404",
+    "verified": false
+  },
+  "remax:dd328257-8426-4e8e-bbf7-d9dd5496b971": {
+    "address": "Ruta 2 0",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": 700000.0,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [],
+    "id": "remax:dd328257-8426-4e8e-bbf7-d9dd5496b971",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/dd328257-8426-4e8e-bbf7-d9dd5496b971/4cc1b24c-32f3-4227-aaaa-8e7bffaca8f4.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/dd328257-8426-4e8e-bbf7-d9dd5496b971/4cc1b24c-32f3-4227-aaaa-8e7bffaca8f4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/dd328257-8426-4e8e-bbf7-d9dd5496b971/86285086-1ec2-453e-8b2b-73488fb2ea96.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/dd328257-8426-4e8e-bbf7-d9dd5496b971/ce899de5-f547-43ae-89a7-72462fc90691.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/dd328257-8426-4e8e-bbf7-d9dd5496b971/145d7b9b-d9a4-424e-a7cb-3154b9c16c65.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/dd328257-8426-4e8e-bbf7-d9dd5496b971/72fffad7-e445-45dc-b956-8a5bd0f84426.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/dd328257-8426-4e8e-bbf7-d9dd5496b971/677045b7-3901-4471-89f0-79d1e51e4531.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/dd328257-8426-4e8e-bbf7-d9dd5496b971/0da6b1da-244d-474e-90d8-da303cd0172d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/dd328257-8426-4e8e-bbf7-d9dd5496b971/5088d15e-ed5b-4d4c-b3bc-216e5b6c8a38.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/dd328257-8426-4e8e-bbf7-d9dd5496b971/f1c639c8-1d27-4775-90ed-ff0c5f33416d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/dd328257-8426-4e8e-bbf7-d9dd5496b971/7181ba9b-d6ac-4c3d-b1c2-0edb70f18cd2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/dd328257-8426-4e8e-bbf7-d9dd5496b971/8cc3ca8e-68ae-44c8-8ff4-2cad45cd59e1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/dd328257-8426-4e8e-bbf7-d9dd5496b971/351e6bcd-e338-4f69-9aae-66b756d6ea59.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/dd328257-8426-4e8e-bbf7-d9dd5496b971/0471927b-11eb-44a3-8dcf-3433d37d123a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/dd328257-8426-4e8e-bbf7-d9dd5496b971/6b9337c8-caf0-43b3-852e-7431d88b53bf.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/dd328257-8426-4e8e-bbf7-d9dd5496b971/5f783b68-5036-49ec-a354-0cfaec528c39.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/dd328257-8426-4e8e-bbf7-d9dd5496b971/4ecddca9-5c58-4ba7-b859-9e4080599d28.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/dd328257-8426-4e8e-bbf7-d9dd5496b971/84e03b1f-b4d6-4217-9827-be2134fe2886.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/dd328257-8426-4e8e-bbf7-d9dd5496b971/7f60273d-c193-4e4d-80b2-97a14b3c89d7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/dd328257-8426-4e8e-bbf7-d9dd5496b971/4ba7dda3-bc65-4c12-a2be-fe59e7a91c9d.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 280000.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 257.67,
+    "title": "Casa en venta en Haras del Sur con Pileta",
+    "url": "https://www.remax.com.ar/listings/casa-en-venta-en-haras-del-sur-con-pileta",
     "verified": false
   },
   "remax:df2ba9c7-7893-4292-8f19-5705242b3318": {
@@ -35135,7 +36866,7 @@
     "first_seen": "2026-07-17T13:04:10Z",
     "flags": [
       {
-        "label": "Precio 43% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 42% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -35193,7 +36924,7 @@
     "first_seen": "2026-07-19T12:53:59Z",
     "flags": [
       {
-        "label": "Precio 69% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 68% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -35277,6 +37008,57 @@
     "url": "https://www.remax.com.ar/listings/venta-casa-4-ambientes-pileta-parrilla-grosellar",
     "verified": false
   },
+  "remax:e3e6511d-489f-4fe4-a3df-b1878934133a": {
+    "address": "Avenida Pellegrini 4500",
+    "bathrooms": 4,
+    "bedrooms": null,
+    "expenses": 190000.0,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [],
+    "id": "remax:e3e6511d-489f-4fe4-a3df-b1878934133a",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/cc1eb6d4-03ee-41d5-abb4-107898b8654a.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/cc1eb6d4-03ee-41d5-abb4-107898b8654a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/9a0452fc-86e4-4473-bfc3-2b029a3cbd6a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/816ff781-38ff-49d7-af36-f3c95a4cf7f6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/faf98064-18d0-4109-be73-478f992a28cb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/1c42c714-49e0-4995-b7a1-bcfaf2d4506d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/a02abe94-2c75-45fe-8f04-1108d92430c6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/6a91460a-f7f0-48c6-b263-2a180421fc1b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/faee512a-720a-4fe4-b048-fc984bc49f3c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/1be09e5d-7dfe-44b8-b70c-02ecc344a491.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/ace9247e-e7f4-4033-ae28-706199931ae7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/693b30de-68ad-4910-a248-8816fe065900.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/861b6ab3-926c-4c8d-ac0f-d6ab813ce46e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/1594e0f1-77bd-431f-8059-fa5ec2872af1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/8dc5677e-b998-4a1b-8b55-7c374d848010.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/ecd244f3-ca39-4b9e-9413-c9bafa2502f7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/b7543bb9-9774-4621-bfaf-83ecef99cda9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/00b82cbd-0c1b-428a-93f6-ed97af85203e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/2b0613c8-4126-4197-b9ea-160c53adad71.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/7dcc03d8-db21-4629-80f1-2927faf2cc15.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/16c46bb0-ccb1-43bf-9f32-6b1f96b6f1bc.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/5ceb826e-5864-4ced-9897-bb64caba7b09.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/644163c8-474a-4b20-8044-319695a4fe06.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/a591d119-cc95-48e3-80f3-9add68237377.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/06020dec-f88d-4d39-8141-56405b04fa8c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/d85d0fd5-ec82-4380-879c-031c6ddafc02.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/6b430c38-ba23-46d2-b38e-f5367825348c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/4d5ed0fe-9eea-4248-97ee-4aab20105cfa.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/a8a9ee79-db51-4972-8e8f-a965eeb08eed.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e3e6511d-489f-4fe4-a3df-b1878934133a/4c69a2c7-282c-4561-a187-b782ac807ce7.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 365000.0,
+    "price_currency": "USD",
+    "rooms": 6,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 250.5,
+    "title": "CASA EN VENTA EN PERGAMINO A ESTRENAR",
+    "url": "https://www.remax.com.ar/listings/casa-en-venta-en-pergamino-a-estrenar",
+    "verified": false
+  },
   "remax:e6585571-8b5e-49e1-b620-be06ed29ea7b": {
     "address": "Neuquén 200",
     "bathrooms": 3,
@@ -35285,7 +37067,7 @@
     "first_seen": "2026-07-15T15:05:02Z",
     "flags": [
       {
-        "label": "Precio 49% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 48% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -35320,6 +37102,47 @@
     "surface_m2": 357.0,
     "title": "VENTA CASA DE 5 AMBIENTES PARQUE Y PILETA PADUA",
     "url": "https://www.remax.com.ar/listings/venta-casa-de-5-ambientes-parque-y-pileta-padua",
+    "verified": false
+  },
+  "remax:e742f892-b70c-4f72-a4ea-dd23bfb4c182": {
+    "address": "Hernandarias 2200",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [
+      {
+        "label": "Precio 68% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:e742f892-b70c-4f72-a4ea-dd23bfb4c182",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/e742f892-b70c-4f72-a4ea-dd23bfb4c182/99afd4b7-e41e-4813-b377-1a0960ee950f.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e742f892-b70c-4f72-a4ea-dd23bfb4c182/99afd4b7-e41e-4813-b377-1a0960ee950f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e742f892-b70c-4f72-a4ea-dd23bfb4c182/24ba3d11-bc22-4425-a58a-a196073f2aae.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e742f892-b70c-4f72-a4ea-dd23bfb4c182/78188128-d8e2-474b-8b83-5b37f876625f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e742f892-b70c-4f72-a4ea-dd23bfb4c182/ec3990e1-9acf-4d17-a9f2-cc820cbf3257.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e742f892-b70c-4f72-a4ea-dd23bfb4c182/ccce10f3-10af-4605-8130-bc5ee682c549.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e742f892-b70c-4f72-a4ea-dd23bfb4c182/37b6f4b6-0c56-4bbe-b92a-6bf6c7423408.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e742f892-b70c-4f72-a4ea-dd23bfb4c182/7a7c8271-e7e4-4fb2-8d8e-4235b06e75c4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e742f892-b70c-4f72-a4ea-dd23bfb4c182/8071df2c-35d6-401b-9144-880bad63d87a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e742f892-b70c-4f72-a4ea-dd23bfb4c182/4b8d6114-1973-414e-8e4b-00fb919ada77.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e742f892-b70c-4f72-a4ea-dd23bfb4c182/8abc7664-c721-443d-9abf-00c4ff26808b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e742f892-b70c-4f72-a4ea-dd23bfb4c182/d47ae66f-d72a-4dfe-a31b-1e6231e5b574.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e742f892-b70c-4f72-a4ea-dd23bfb4c182/4113b31d-ad51-4551-b611-deaa634b69d9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/e742f892-b70c-4f72-a4ea-dd23bfb4c182/f9397d76-26b5-4a8b-aae1-d916ef64dbfa.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 85000.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 110.0,
+    "title": "Casa 2 dormitorios en Santo Tome",
+    "url": "https://www.remax.com.ar/listings/casa-2-dormitorios-en-santo-tome",
     "verified": false
   },
   "remax:e75f6646-3d88-4494-8853-568e7432d602": {
@@ -35388,7 +37211,7 @@
     "first_seen": "2026-07-17T13:04:10Z",
     "flags": [
       {
-        "label": "Precio 56% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 55% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -35431,6 +37254,53 @@
     "surface_m2": 129.0,
     "title": "CASA EN VENTA. 4 AMBIENTES. TRIPLEX. CASEROS",
     "url": "https://www.remax.com.ar/listings/casa-en-venta-4-ambientes-triplex-caseros",
+    "verified": false
+  },
+  "remax:eb56826f-9b6e-4f76-ab74-87a7da9fda1d": {
+    "address": "Barrio San Matias Km 0",
+    "bathrooms": 3,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [],
+    "id": "remax:eb56826f-9b6e-4f76-ab74-87a7da9fda1d",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/4a20ae61-001c-4b53-b256-4784431c0ab3.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/4a20ae61-001c-4b53-b256-4784431c0ab3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/dd92ab3d-24f2-412c-bdfe-0c5e85a90b51.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/49f6ae1b-aad1-469e-b3cf-470fc6a4feb9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/33aeec66-1005-4e0a-9981-e211fa5fc3fa.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/91a8fddc-faec-43e6-bda0-1e6b8e1afa3a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/19141454-6599-4a17-995c-85aada0ad850.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/448097cf-72aa-44d9-a98d-5c8dcb436d14.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/ab4b6e92-c24f-48e0-9064-c524c1cda8c2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/6b851b07-f564-423f-9a0c-29ea7b773e0f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/653b7ab5-fa81-44a6-af62-c16449228763.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/0941cc7c-2c14-4326-b30f-fa37003c6180.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/433419fc-fb02-4469-832f-1539db4c897c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/7dfa7b57-7767-4d38-a4b3-718de5859f78.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/17cca2cf-a479-421e-9d79-9fc80f9430f5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/86bc3461-15f4-4b55-8cae-bfd403e8f255.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/62a31037-ee67-47dc-b65a-dd6df12f94f4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/a2ba9b23-a9bf-43f9-8255-5546a20a5067.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/80b57f14-6321-474c-9d8b-d716c28c955d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/22cc579c-84c4-4881-b589-a271d8dd780d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/e6651a28-4b7a-411c-be74-6e3eb023efea.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/e1a60c42-135d-4e6b-b3a5-8ff8c16e5787.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/291ba637-1459-4bb1-acac-c0746ac1bae5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/24236348-d7bc-47f6-86ff-318d41aeda0e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/fa1bb666-8f48-4eeb-a619-f22b6e84fc2d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/eb56826f-9b6e-4f76-ab74-87a7da9fda1d/d59b788e-8720-4de5-b382-e330b6c1dd1e.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 295000.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 254.0,
+    "title": "Casa en venta en B° San Matias a estrenar",
+    "url": "https://www.remax.com.ar/listings/casa-en-venta-en-b-san-matias-a-estrenar",
     "verified": false
   },
   "remax:ed844868-9bfe-481e-bac9-139873ada57c": {
@@ -35617,6 +37487,116 @@
     "url": "https://www.remax.com.ar/listings/ph-triplex-venta-permuta-floresta-apto-credito",
     "verified": false
   },
+  "remax:ee4c65bd-0850-4bdf-931f-3fdc0e13a85f": {
+    "address": "Boulevard los Castaños 700",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": 800000.0,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [],
+    "id": "remax:ee4c65bd-0850-4bdf-931f-3fdc0e13a85f",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/e2678b3a-0aa5-4803-bb16-8c53e21e970b.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/e2678b3a-0aa5-4803-bb16-8c53e21e970b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/19b4fa85-137b-4f6f-a0c3-2ac2be5d8ea4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/ce8cd551-a84e-4f0f-a13b-513108fa1dc2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/803c2bd7-5dd9-484d-a47c-492ec8f60177.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/73a803d9-def7-4a1a-b718-9de37ff862f0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/64c835c4-3aba-413c-9c55-c0448e510577.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/cb57be14-d19f-4d19-a46f-b2e3a507ec8b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/163b9d02-321a-494c-b390-83b6d1e31213.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/a69e25f3-d298-405c-aa6e-092b21b6bcc1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/a4629bc5-36b0-4631-ac9f-c42b309e9ae8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/ae5e8fa0-13a5-4f60-85bd-25c8e6d31733.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/7977c234-644a-4aa6-9db2-8fd8cc5743f4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/141085db-0dbd-4bd9-bf64-706a888717f8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/c0d5a48b-7e21-4435-8111-de36bf8573ec.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/740ad882-03d1-413c-9fcf-bff2c3971198.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/93143559-e330-4069-abf0-396c59156f8e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/9c8ca99c-739f-4a5a-80fc-5cdfd28a545a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/2c211983-785e-4fe2-a816-3784af7f9d6e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/744bc43b-8279-4de5-8b20-6afdeacd185b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/36f9b8c9-42ac-4c09-abb2-6be12ed6141a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/954616ce-d411-4a15-a51b-f0ee83baaf15.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/a4d0593b-f0c6-4431-ae5b-623964f2b3fa.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/65907a5d-216e-4eaa-94e8-90d1f0dc51c5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/5ca778ce-d4f3-4259-a5e9-cb1529d7ba0f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/a54e4eb8-60ac-480b-b177-f45b936d705d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/3d558969-ecb1-49f1-9a2a-64b29b974f77.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/a54302a3-9cc8-4bc0-8af8-c9fe26e2353f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/8deba44e-1aa2-4842-9ee0-edef1fa860c7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/d275ee02-49fe-44a3-8289-bf67fe128e2e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/ee4c65bd-0850-4bdf-931f-3fdc0e13a85f/61e75355-af19-4c33-8f22-7d221beea814.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 365000.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 124.0,
+    "title": "Depto 4 amb en VENTA La Balconada, Nordelta",
+    "url": "https://www.remax.com.ar/listings/depto-4-amb-en-venta-la-balconada-nordelta",
+    "verified": false
+  },
+  "remax:f0e53c41-baed-42e0-97d2-d178919f5b47": {
+    "address": "Doctor Delfor Díaz 2600",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [
+      {
+        "label": "Precio 78% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:f0e53c41-baed-42e0-97d2-d178919f5b47",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/83acd2e7-cb82-4cf8-98e3-10233913f528.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/83acd2e7-cb82-4cf8-98e3-10233913f528.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/288ae2d7-577d-40c7-972b-13e13b7f3fcc.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/7b51a4e2-aca0-42b6-8124-69863265a902.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/e1065403-da0e-482c-919a-ce86189bdd97.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/e9cf7eef-1f5a-4251-aae1-62b201889d05.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/3ad900fe-6ee6-42ba-8fdf-1ecc56b0444f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/7775088d-0a67-4f55-af50-a8676bb10f4b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/681d7ee2-0715-407e-9b4a-4f769da0aa8c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/a629c587-d373-4568-9cd2-d4c0c5cc3886.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/2fa461b4-f3e6-42a1-8d8c-114a71e3de3b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/e8a92a20-2ccd-4753-ad25-127824b461d0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/5394976c-160f-45ee-b0d7-5f3b202cf113.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/2990a678-3eaf-4b4e-88a6-eb0b0ac1a5ea.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/c1159abf-f919-47ce-9cdf-dafc80226799.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/f4f16893-6126-4fa6-8ed7-d63f1eb77a94.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/83bcc005-ef12-45a7-b313-7ea5b5a3e21d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/e31330c2-172f-47d0-a6ff-802b7c59412a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/b168128c-f96e-4540-8b44-2badbe4505e9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/e652e90d-429a-426a-a82c-c91f9d6987ae.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/e4508735-4c6e-4847-9b79-c2483d853eed.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/4f831562-86bb-4473-b222-66e25eb54453.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/fb8dbc0b-45de-4ee2-abd1-cf3560ce766a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/8e815037-9e18-4b71-b6ea-e4f07147941a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/5e21896d-6d2a-4583-90b8-bde3a2e2d07d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/40cbce75-32e3-4fbf-9598-7ccc55544584.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/b9cfcefd-02c6-43bd-928b-ede2a61a66ab.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/c785a5ca-bd77-46a7-80f0-a039e0171c45.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/7e66a10c-30cb-417a-9a8e-fa8aea453a15.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/aa083092-ad1e-4ce3-a120-0aaf4ece5df3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f0e53c41-baed-42e0-97d2-d178919f5b47/87bc17c7-5fd7-4960-862d-f7169ffe7573.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 59900.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 112.0,
+    "title": "Casa de 4 ambientes mas estudio en HURLINGHAM",
+    "url": "https://www.remax.com.ar/listings/casa-de-4-ambientes-mas-estudio-en-hurlingham",
+    "verified": false
+  },
   "remax:f17f5e04-2618-405a-a170-d468e9a05e22": {
     "address": "Pedro Calderón de la Barca 1100",
     "bathrooms": 2,
@@ -35708,6 +37688,35 @@
     "surface_m2": 484.0,
     "title": "VENTA EXCELENTE 2 PROPIEDADES A RECICLAR EN CARMEN",
     "url": "https://www.remax.com.ar/listings/venta-excelente-2-propiedades-a-reciclar-en-carmen",
+    "verified": false
+  },
+  "remax:f61a233d-84db-413d-90f9-11f9de3950ed": {
+    "address": "Almirante Brown 1700",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-20T13:49:30Z",
+    "flags": [],
+    "id": "remax:f61a233d-84db-413d-90f9-11f9de3950ed",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/f61a233d-84db-413d-90f9-11f9de3950ed/61f921be-3c83-4d9b-9481-69fc26661242.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f61a233d-84db-413d-90f9-11f9de3950ed/61f921be-3c83-4d9b-9481-69fc26661242.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f61a233d-84db-413d-90f9-11f9de3950ed/da8a8671-1881-4c48-aa6a-811e9a4431e7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f61a233d-84db-413d-90f9-11f9de3950ed/7dd39179-9a21-4f74-a19e-b732bfa105f5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f61a233d-84db-413d-90f9-11f9de3950ed/5f1edbd4-79e2-44e3-a8b1-fd33037c4b6b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f61a233d-84db-413d-90f9-11f9de3950ed/e9291f3d-5e5f-4131-9308-15521e59a7f0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f61a233d-84db-413d-90f9-11f9de3950ed/bb13401f-4b7d-4b98-8bdb-77d358a0e6b3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/f61a233d-84db-413d-90f9-11f9de3950ed/72ec614a-0d5d-44f6-8a35-26f9d4dd4b0a.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 310000.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 203.0,
+    "title": "Casa a estrenar en mejor lugar de Chacras de Coria",
+    "url": "https://www.remax.com.ar/listings/casa-a-estrenar-en-mejor-lugar-de-chacras-de-coria",
     "verified": false
   },
   "remax:f69e76f2-e19e-4399-b286-ac5c7e42b815": {
@@ -36317,7 +38326,7 @@
     "first_seen": "2026-07-15T14:56:18Z",
     "flags": [
       {
-        "label": "Precio 47% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 44% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -37648,7 +39657,7 @@
     "first_seen": "2026-07-15T14:56:47Z",
     "flags": [
       {
-        "label": "Precio 48% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 46% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -37687,7 +39696,7 @@
     "first_seen": "2026-07-15T14:57:10Z",
     "flags": [
       {
-        "label": "Precio 54% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 52% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -39912,7 +41921,7 @@
     "first_seen": "2026-07-15T14:57:10Z",
     "flags": [
       {
-        "label": "Precio 43% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 42% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -44890,7 +46899,7 @@
     "first_seen": "2026-07-15T15:10:34Z",
     "flags": [
       {
-        "label": "Precio 60% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 58% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -47197,11 +49206,6 @@
     "first_seen": "2026-07-15T15:10:51Z",
     "flags": [
       {
-        "label": "Precio 40% por debajo del promedio del tipo — verificá que no sea un anzuelo",
-        "level": "high",
-        "type": "price_low"
-      },
-      {
         "label": "Una sola foto o sin fotos",
         "level": "low",
         "type": "few_photos"
@@ -47270,7 +49274,7 @@
     "first_seen": "2026-07-15T14:57:10Z",
     "flags": [
       {
-        "label": "Precio 43% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 42% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -49950,7 +51954,7 @@
     "first_seen": "2026-07-15T14:56:18Z",
     "flags": [
       {
-        "label": "Precio 43% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 42% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -52480,7 +54484,7 @@
     "first_seen": "2026-07-15T14:57:10Z",
     "flags": [
       {
-        "label": "Precio 49% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 48% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -52553,7 +54557,7 @@
     "first_seen": "2026-07-15T14:56:47Z",
     "flags": [
       {
-        "label": "Precio 53% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 51% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -57989,7 +59993,7 @@
     "first_seen": "2026-07-15T15:10:34Z",
     "flags": [
       {
-        "label": "Precio 53% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 52% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -61277,7 +63281,7 @@
     "first_seen": "2026-07-15T14:57:34Z",
     "flags": [
       {
-        "label": "Precio 60% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 58% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -61661,7 +63665,7 @@
     "first_seen": "2026-07-15T14:56:18Z",
     "flags": [
       {
-        "label": "Precio 46% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 44% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -65535,7 +67539,7 @@
     "first_seen": "2026-07-15T14:56:18Z",
     "flags": [
       {
-        "label": "Precio 52% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 50% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -66875,7 +68879,7 @@
     "first_seen": "2026-07-15T14:57:34Z",
     "flags": [
       {
-        "label": "Precio 69% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 68% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -68626,7 +70630,7 @@
     "first_seen": "2026-07-15T14:56:18Z",
     "flags": [
       {
-        "label": "Precio 56% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 55% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
