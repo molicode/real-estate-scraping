@@ -25,7 +25,7 @@ def main() -> int:
         print("✅ Mensaje de prueba enviado")
         return 0
     print(
-        "❌ No se pudo enviar. Revisá que los secrets TELEGRAM_BOT_TOKEN y "
+        "❌ No se pudo enviar. Revisa que los secrets TELEGRAM_BOT_TOKEN y "
         "TELEGRAM_CHAT_ID estén definidos y sean correctos, y que le hayas "
         "escrito al menos un mensaje al bot."
     )

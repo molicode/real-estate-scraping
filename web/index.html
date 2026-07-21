@@ -21,13 +21,13 @@
       <button id="gate-logout" class="btn small hidden" title="Cerrar sesión"><span data-icon="log-out"></span> Salir</button>
     </div>
   </div>
-  <p class="subtitle">Administrá los jobs de scraping de Argenprop, Zonaprop, MercadoLibre y Remax. El scraper corre cada hora en GitHub Actions con los jobs activos.</p>
+  <p class="subtitle">Administra los jobs de scraping de Argenprop, Zonaprop, MercadoLibre y Remax. El scraper corre cada hora en GitHub Actions con los jobs activos.</p>
 </header>
 
 <!-- Pantalla de login -->
 <section id="login-section" class="card login-card hidden">
   <h2><span data-icon="lock"></span> Iniciar sesión</h2>
-  <p class="status">Acceso restringido. Ingresá tus credenciales para administrar el scraper.</p>
+  <p class="status">Acceso restringido. Ingresa tus credenciales para administrar el scraper.</p>
   <form id="login-form">
     <label>Usuario
       <input type="text" id="login-user" autocomplete="username" required>
@@ -64,7 +64,7 @@
     <span class="tb-sep" aria-hidden="true"></span>
     <button id="enable-all" class="btn small"><span data-icon="play"></span> Activar todos</button>
     <button id="disable-all" class="btn small"><span data-icon="stop"></span> Detener todos</button>
-    <span class="info" tabindex="0" data-tip="Los cambios se guardan solos al crear, editar, detener o eliminar un job. El cron corre cada hora y ejecuta los jobs activos que ya hayan cumplido su frecuencia. Si disparás dos jobs a la vez, el segundo espera en cola (no corren en paralelo para no pisarse los datos)."></span>
+    <span class="info" tabindex="0" data-tip="Los cambios se guardan solos al crear, editar, detener o eliminar un job. El cron corre cada hora y ejecuta los jobs activos que ya hayan cumplido su frecuencia. Si disparas dos jobs a la vez, el segundo espera en cola (no corren en paralelo para no pisarse los datos)."></span>
     <label class="sort-ctl">Ordenar
       <select id="job-sort">
         <option value="default">por defecto</option>
@@ -100,7 +100,7 @@
             </select>
           </label>
           <label>Operación
-            <span class="info" tabindex="0" data-tip="Alquiler o compra (venta). Importante: la operación real la define la URL que pegues (buscá 'alquiler' o 'venta' en el portal); este campo etiqueta el job y te permite filtrar por operación en la pestaña Buscar."></span>
+            <span class="info" tabindex="0" data-tip="Alquiler o compra (venta). Importante: la operación real la define la URL que pegues (busca 'alquiler' o 'venta' en el portal); este campo etiqueta el job y te permite filtrar por operación en la pestaña Buscar."></span>
             <select id="f-operation">
               <option value="alquiler">Alquiler</option>
               <option value="venta">Compra (venta)</option>
@@ -127,13 +127,13 @@
             </select>
           </label>
           <label id="wrap-zone">Zona
-            <span class="info" tabindex="0" data-tip="Barrio o ciudad, en minúsculas y con guiones (ej: palermo, villa-urquiza, olivos, la-lucila). Elegí una del menú o escribí otra. Para zonas del GBA (Vicente López: Olivos, La Lucila, Florida…) algunos portales piden la URL exacta: si el menú no trae resultados, usá 'Pegar URL'. En Remax la zona se elige en el sitio."></span>
+            <span class="info" tabindex="0" data-tip="Barrio o ciudad, en minúsculas y con guiones (ej: palermo, villa-urquiza, olivos, la-lucila). Elige una del menú o escribe otra. Para zonas del GBA (Vicente López: Olivos, La Lucila, Florida…) algunos portales piden la URL exacta: si el menú no trae resultados, usa 'Pegar URL'. En Remax la zona se elige en el sitio."></span>
             <input type="text" id="f-zone" placeholder="palermo" list="dl-zones">
             <div id="zone-security" class="zone-sec"></div>
           </label>
         </div>
         <label>URL de búsqueda del portal
-          <span class="info" tabindex="0" data-tip="La URL exacta que el scraper visita cada hora. Con 'Armar con menús' se genera sola; con 'Pegar URL' copiala desde el portal con los filtros del sitio aplicados."></span>
+          <span class="info" tabindex="0" data-tip="La URL exacta que el scraper visita cada hora. Con 'Armar con menús' se genera sola; con 'Pegar URL' cópiala desde el portal con los filtros del sitio aplicados."></span>
           <input type="url" id="f-url" required placeholder="https://...">
           <small id="site-hint"></small>
         </label>
@@ -190,7 +190,7 @@
             <input type="number" id="f-offset" min="0" max="23" placeholder="0–23 (vacío = ya)">
           </label>
           <label>Activo
-            <span class="info" tabindex="0" data-tip="Los jobs detenidos quedan guardados pero no corren en el cron. Igual podés ejecutarlos puntualmente con su botón 'Ejecutar ahora'."></span>
+            <span class="info" tabindex="0" data-tip="Los jobs detenidos quedan guardados pero no corren en el cron. Igual puedes ejecutarlos puntualmente con su botón 'Ejecutar ahora'."></span>
             <select id="f-enabled">
               <option value="true">Sí</option>
               <option value="false">No (detenido)</option>
@@ -203,7 +203,7 @@
         <h3><span class="ic-h" data-icon="banknote"></span> Precio</h3>
         <div class="grid">
           <label>Moneda
-            <span class="info" tabindex="0" data-tip="En Argentina los ALQUILERES se publican casi siempre en pesos (ARS) y las VENTAS en dólares (USD). Los alquileres temporarios suelen estar en USD. Si elegís una moneda, los avisos publicados en la otra se descartan."></span>
+            <span class="info" tabindex="0" data-tip="En Argentina los ALQUILERES se publican casi siempre en pesos (ARS) y las VENTAS en dólares (USD). Los alquileres temporarios suelen estar en USD. Si eliges una moneda, los avisos publicados en la otra se descartan."></span>
             <select id="f-currency">
               <option value="">Cualquiera</option>
               <option value="ARS">ARS (pesos)</option>
@@ -211,7 +211,7 @@
             </select>
           </label>
           <label>Precio mínimo
-            <span class="info" tabindex="0" data-tip="Precio mínimo en la moneda elegida. Útil para descartar avisos mal cargados o con precio simbólico. Dejalo vacío si no lo necesitás."></span>
+            <span class="info" tabindex="0" data-tip="Precio mínimo en la moneda elegida. Útil para descartar avisos mal cargados o con precio simbólico. Déjalo vacío si no lo necesitas."></span>
             <input type="number" id="f-min-price" min="0" placeholder="ej. 300000">
           </label>
           <label>Precio máximo
@@ -236,7 +236,7 @@
             <input type="number" id="f-min-rooms" min="1" placeholder="ej. 2" list="dl-rooms">
           </label>
           <label>Ambientes máx.
-            <span class="info" tabindex="0" data-tip="Tope de ambientes, por si no querés propiedades muy grandes. Dejalo vacío si no te importa."></span>
+            <span class="info" tabindex="0" data-tip="Tope de ambientes, por si no quieres propiedades muy grandes. Déjalo vacío si no te importa."></span>
             <input type="number" id="f-max-rooms" min="1" list="dl-rooms">
           </label>
           <label>Dormitorios mín.
@@ -244,7 +244,7 @@
             <input type="number" id="f-min-bedrooms" min="1" list="dl-bedrooms">
           </label>
           <label>Baños mín.
-            <span class="info" tabindex="0" data-tip="Cantidad mínima de baños (dato estructurado del aviso). El TIPO de baño (en suite, toilette, con bañera…) no viene como dato aparte: filtralo con los chips de abajo, que buscan esas palabras en el aviso."></span>
+            <span class="info" tabindex="0" data-tip="Cantidad mínima de baños (dato estructurado del aviso). El TIPO de baño (en suite, toilette, con bañera…) no viene como dato aparte: fíltralo con los chips de abajo, que buscan esas palabras en el aviso."></span>
             <input type="number" id="f-min-bathrooms" min="1" list="dl-baths">
           </label>
           <label>Superficie mín. (m²)
@@ -253,7 +253,7 @@
           </label>
         </div>
         <label class="baths-help">Tipo de baño (se busca por texto en el aviso)
-          <span class="info" tabindex="0" data-tip="En Argentina: 'baño completo' = inodoro + lavatorio + bidet + ducha o bañadera (el bidet es estándar). 'Toilette' o medio baño = solo inodoro y lavatorio, sin ducha. 'En suite' = baño privado dentro del dormitorio. Tocá un chip para agregarlo a las palabras que DEBE contener."></span>
+          <span class="info" tabindex="0" data-tip="En Argentina: 'baño completo' = inodoro + lavatorio + bidet + ducha o bañadera (el bidet es estándar). 'Toilette' o medio baño = solo inodoro y lavatorio, sin ducha. 'En suite' = baño privado dentro del dormitorio. Toca un chip para agregarlo a las palabras que DEBE contener."></span>
         </label>
         <div class="chip-row" data-target="f-kw-include">
           <button type="button" class="chip" data-kw="en suite">en suite</button>
@@ -269,7 +269,7 @@
       <div class="form-section sec-kw">
         <h3><span class="ic-h" data-icon="type"></span> Palabras clave</h3>
         <label>Palabras deseadas — al menos una (separadas por coma)
-          <span class="info" tabindex="0" data-tip="El aviso pasa si su título o dirección contiene AL MENOS UNA de estas palabras. OJO: solo se busca en el título y la dirección, no en la descripción del aviso (el scraper no la baja), así que datos como el tipo de baño ('toilette') casi nunca aparecen acá — para cantidad de baños usá 'Baños mín.'. Tocá los chips o escribí las tuyas separadas por coma."></span>
+          <span class="info" tabindex="0" data-tip="El aviso pasa si su título o dirección contiene AL MENOS UNA de estas palabras. OJO: solo se busca en el título y la dirección, no en la descripción del aviso (el scraper no la baja), así que datos como el tipo de baño ('toilette') casi nunca aparecen acá — para cantidad de baños usa 'Baños mín.'. Toca los chips o escribe las tuyas separadas por coma."></span>
           <input type="text" id="f-kw-include" placeholder="balcón, luminoso">
         </label>
         <div class="chip-row" data-target="f-kw-include">
@@ -341,10 +341,10 @@
 <section id="tab-top" class="tab-panel hidden">
   <div class="card form-section sec-basic">
     <h3><span class="ic-h" data-icon="sliders"></span> Criterios del ranking
-      <span class="info" tabindex="0" data-tip="Vos definís qué hace 'mejor' a una propiedad y el Top 5 se rearma al instante con los avisos guardados. 'Para vivir' prioriza por tipo de propiedad: 3 dormitorios (una casa banca 2; PH y depto piden 3), 4+ ambientes, patio/jardín en casa y PH, y que la zona/barrio sean seguros según los datos oficiales de delito. Los precios solo se comparan entre avisos de la misma moneda. Tus preferencias quedan guardadas en este navegador."></span>
+      <span class="info" tabindex="0" data-tip="Tú defines qué hace 'mejor' a una propiedad y el Top 5 se rearma al instante con los avisos guardados. 'Para vivir' prioriza por tipo de propiedad: 3 dormitorios (una casa banca 2; PH y depto piden 3), 4+ ambientes, patio/jardín en casa y PH, y que la zona/barrio sean seguros según los datos oficiales de delito. Los precios solo se comparan entre avisos de la misma moneda. Tus preferencias quedan guardadas en este navegador."></span>
     </h3>
     <div class="grid">
-      <label>Qué es "mejor" para vos
+      <label>Qué es "mejor" para ti
         <select id="t-criteria">
           <option value="livable">Para vivir (dormitorios, ambientes, patio y seguridad)</option>
           <option value="balanced">Balanceado (precio 50% + superficie 30% + ambientes 20%)</option>
@@ -490,7 +490,7 @@
           </select>
         </label>
         <label>Señales de riesgo
-          <span class="info" tabindex="0" data-tip="Filtrá por las advertencias automáticas y las tuyas. 'Ocultar riesgo alto' esconde los avisos con alguna señal roja (precio anzuelo, publicación eterna, frase de alerta, zona de inseguridad alta)."></span>
+          <span class="info" tabindex="0" data-tip="Filtra por las advertencias automáticas y las tuyas. 'Ocultar riesgo alto' esconde los avisos con alguna señal roja (precio anzuelo, publicación eterna, frase de alerta, zona de inseguridad alta)."></span>
           <select id="s-risk">
             <option value="">Mostrar todo</option>
             <option value="flagged">Solo con señales</option>
@@ -551,7 +551,7 @@
 
   <div class="card">
     <h3><span class="ic-h" data-icon="map-pin"></span> Mapa de inseguridad
-      <span class="info" tabindex="0" data-tip="CABA coloreada por delitos según los datos abiertos del GCBA (Mapa del Delito). Cambiá entre vista por comuna (delitos cada 100.000 habitantes) y por barrio (total de registros). Tocá una zona para ver el desglose de delitos y la evolución por año. Se actualiza una vez por mes."></span>
+      <span class="info" tabindex="0" data-tip="CABA coloreada por delitos según los datos abiertos del GCBA (Mapa del Delito). Cambia entre vista por comuna (delitos cada 100.000 habitantes) y por barrio (total de registros). Toca una zona para ver el desglose de delitos y la evolución por año. Se actualiza una vez por mes."></span>
     </h3>
     <div class="map-controls">
       <div class="seg" id="map-mode">
@@ -577,8 +577,8 @@
   </div>
 
   <div class="card form-section sec-feat">
-    <h3><span class="ic-h" data-icon="map-pin"></span> Mapa de seguridad por zona (lo mantenés vos)
-      <span class="info" tabindex="0" data-tip="No existe una fuente pública y confiable de inseguridad por barrio, así que este mapa lo armás vos según lo que conocés. La app marca cada aviso cuya dirección o barrio coincida con una zona cargada acá. Se guarda en data/zones.json del repo."></span>
+    <h3><span class="ic-h" data-icon="map-pin"></span> Mapa de seguridad por zona (lo mantienes tú)
+      <span class="info" tabindex="0" data-tip="No existe una fuente pública y confiable de inseguridad por barrio, así que este mapa lo armas tú según lo que conoces. La app marca cada aviso cuya dirección o barrio coincida con una zona cargada acá. Se guarda en data/zones.json del repo."></span>
     </h3>
     <div class="row">
       <input type="text" id="zone-name" placeholder="barrio o zona (ej: constitución)" style="flex:2">
@@ -599,7 +599,7 @@
   <div class="card modal-card">
     <h3><span class="ic-h" data-icon="pencil"></span> Tu nota sobre esta propiedad</h3>
     <p class="status" id="note-target"></p>
-    <label>Nivel que le ponés vos
+    <label>Nivel que le pones tú
       <select id="note-level">
         <option value="">Sin nivel (solo nota)</option>
         <option value="high">Riesgo alto</option>
@@ -646,7 +646,7 @@
       <span class="summary-hint">detalles <span data-icon="chevron-down"></span></span>
     </summary>
     <div class="details-body">
-      <p>Para <strong>ver</strong> los avisos no hace falta nada (el repo es público). Para <strong>editar/ejecutar</strong> jobs o guardar favoritos, conectá un <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained personal access token</a> con acceso a <strong>este repositorio</strong> y permisos <code>Contents: Read and write</code> y <code>Actions: Read and write</code>. Se guarda solo en tu navegador (localStorage).</p>
+      <p>Para <strong>ver</strong> los avisos no hace falta nada (el repo es público). Para <strong>editar/ejecutar</strong> jobs o guardar favoritos, conecta un <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained personal access token</a> con acceso a <strong>este repositorio</strong> y permisos <code>Contents: Read and write</code> y <code>Actions: Read and write</code>. Se guarda solo en tu navegador (localStorage).</p>
       <div class="row">
         <input type="password" id="token-input" placeholder="github_pat_...">
         <button id="token-save" class="btn primary">Conectar</button>
@@ -677,7 +677,7 @@
 </main>
 
 <footer>
-  <p>Los jobs se guardan en <code>jobs.json</code> del repo. El scraper corre cada hora (cron de GitHub Actions) y también podés dispararlo al instante con "Ejecutar ahora".</p>
+  <p>Los jobs se guardan en <code>jobs.json</code> del repo. El scraper corre cada hora (cron de GitHub Actions) y también puedes dispararlo al instante con "Ejecutar ahora".</p>
 </footer>
 
 </div><!-- /app -->

@@ -12,22 +12,22 @@ const TOKEN_KEY = "resc_token";
 const GATE_KEY = "resc_gate";
 const THEME_KEY = "resc_theme";
 
-// SHA-256 de "usuario:contraseña". Para cambiar las credenciales generá
+// SHA-256 de "usuario:contraseña". Para cambiar las credenciales genera
 // un hash nuevo (en la consola del navegador):
 //   await sha256Hex("nuevo-usuario:nueva-clave")
-// y reemplazá el valor de abajo. Nota: esto restringe el acceso a la UI,
+// y reemplaza el valor de abajo. Nota: esto restringe el acceso a la UI,
 // pero la protección real es el token de GitHub que cada uno ingresa.
 const ACCESS_HASH = "9e932d7a7a91db411c0ba210b2bea230d4953a427132bb0120a0e44be436d365";
 
 const SITE_HINTS = {
   argenprop:
-    'Entrá a <a href="https://www.argenprop.com" target="_blank" rel="noopener">argenprop.com</a>, buscá con los filtros del sitio (zona, operación, precio…) y pegá acá la URL de resultados. Ej: https://www.argenprop.com/departamentos/alquiler/palermo',
+    'Entra a <a href="https://www.argenprop.com" target="_blank" rel="noopener">argenprop.com</a>, busca con los filtros del sitio (zona, operación, precio…) y pega acá la URL de resultados. Ej: https://www.argenprop.com/departamentos/alquiler/palermo',
   mercadolibre:
     '<b class="hint-warn">Ojo:</b> MercadoLibre bloquea a los servidores de GitHub: para scrapearlo hace falta el secret SCRAPERAPI_KEY en el repo (ScraperAPI tiene plan gratuito). Ej: https://inmuebles.mercadolibre.com.ar/departamentos/alquiler/capital-federal/',
   zonaprop:
     '<b class="hint-warn">Ojo:</b> Zonaprop usa protección Cloudflare y suele bloquear a los servidores de GitHub: para scrapearlo hace falta el secret SCRAPERAPI_KEY en el repo (ScraperAPI tiene plan gratuito). Ej: https://www.zonaprop.com.ar/departamentos-alquiler-palermo.html',
   remax:
-    'Entrá a <a href="https://www.remax.com.ar" target="_blank" rel="noopener">remax.com.ar</a>, buscá con los filtros del sitio y pegá la URL de resultados (la que empieza con /listings/...). Ej: https://www.remax.com.ar/listings/rent?page=0&pageSize=24&in:operationId=2',
+    'Entra a <a href="https://www.remax.com.ar" target="_blank" rel="noopener">remax.com.ar</a>, busca con los filtros del sitio y pega la URL de resultados (la que empieza con /listings/...). Ej: https://www.remax.com.ar/listings/rent?page=0&pageSize=24&in:operationId=2',
 };
 
 let token = localStorage.getItem(TOKEN_KEY) || "";
@@ -130,7 +130,7 @@ async function gh(path, opts = {}) {
   // alguna acción se cuela sin pasar por requireWrite().
   const method = (opts.method || "GET").toUpperCase();
   if (!token && method !== "GET") {
-    throw new Error("Modo lectura: conectá un token de GitHub para editar o ejecutar.");
+    throw new Error("Modo lectura: conecta un token de GitHub para editar o ejecutar.");
   }
   const headers = {
     Accept: "application/vnd.github+json",
@@ -274,7 +274,7 @@ function enterReadOnly(reason) {
   setConnState("yellow", "Modo lectura — sin token");
   setStatus(
     $("auth-status"),
-    (reason ? reason + " " : "") + "Estás en modo lectura: podés ver todo, pero para editar/ejecutar conectá un token en la pestaña “Conexión”.",
+    (reason ? reason + " " : "") + "Estás en modo lectura: puedes ver todo, pero para editar/ejecutar conecta un token en la pestaña “Conexión”.",
   );
   $("token-save").classList.remove("hidden");
   $("token-clear").classList.add("hidden");
@@ -285,7 +285,7 @@ function enterReadOnly(reason) {
 function requireWrite() {
   if (token && !readOnly) return true;
   alert(
-    "Estás en modo lectura (sin token de GitHub).\n\nPodés ver todo, pero para crear/editar/ejecutar jobs o guardar favoritos necesitás conectar un token en la pestaña “Conexión”.",
+    "Estás en modo lectura (sin token de GitHub).\n\nPuedes ver todo, pero para crear/editar/ejecutar jobs o guardar favoritos necesitas conectar un token en la pestaña “Conexión”.",
   );
   return false;
 }
@@ -402,7 +402,7 @@ function renderScraperUsage() {
     </div>
     ${banner}
     <div class="usage-sub">Se recarga el ${resets || "primero del mes"}. Solo lo usan Zonaprop y Argenprop (lunes y viernes).</div>
-    <div class="usage-sub usage-stamp">${icon("clock", 12)} Consumo real de ScraperAPI${measured ? `, medido ${measured}` : ""}. Se refresca solo cada pocas horas — si mirás el dashboard justo después de una corrida, puede diferir por unos pocos requests.</div>`;
+    <div class="usage-sub usage-stamp">${icon("clock", 12)} Consumo real de ScraperAPI${measured ? `, medido ${measured}` : ""}. Se refresca solo cada pocas horas — si miras el dashboard justo después de una corrida, puede diferir por unos pocos requests.</div>`;
 }
 
 // Mini gráfico de barras: minutos de Actions por día (últimos 14 días).
@@ -600,7 +600,7 @@ function renderJobs() {
   );
   wrap.innerHTML = "";
   if (!jobsDoc.searches.length) {
-    wrap.innerHTML = '<p class="status">No hay jobs todavía. Creá el primero con "Nuevo job".</p>';
+    wrap.innerHTML = '<p class="status">No hay jobs todavía. Crea el primero con "Nuevo job".</p>';
   }
   sortedJobEntries().forEach(({ job, i }) => {
     const enabled = job.enabled !== false;
@@ -637,7 +637,7 @@ function renderJobs() {
           <button class="btn small" data-act="toggle" data-i="${i}" title="${enabled ? "Deja de ejecutarse en el cron (se guarda al instante)" : "Vuelve a la programación (se guarda al instante)"}">${enabled ? icon("stop") + " Detener" : icon("play") + " Activar"}</button>
           <button class="btn small" data-act="run" data-i="${i}" title="Ejecuta SOLO este job ahora mismo, aunque esté detenido">${icon("play")} Ejecutar ahora</button>
           <button class="btn small" data-act="edit" data-i="${i}">${icon("pencil")} Editar</button>
-          <button class="btn small" data-act="clone" data-i="${i}" title="Crear un job nuevo copiando este (filtros, tipo, zona, frecuencia). Después cambiás lo que quieras, ej. el portal.">${icon("copy")} Clonar</button>
+          <button class="btn small" data-act="clone" data-i="${i}" title="Crear un job nuevo copiando este (filtros, tipo, zona, frecuencia). Después cambias lo que quieras, ej. el portal.">${icon("copy")} Clonar</button>
           <button class="btn small danger" data-act="del" data-i="${i}">${icon("trash")} Eliminar</button>
         </div>
         <div class="job-flow" id="job-flow-${i}"></div>
@@ -762,7 +762,7 @@ function watchRun(container, title, dispatchedAt, jobIndices = []) {
   const timer = setInterval(async () => {
     if (++ticks > 90) { // ~7 minutos de vigilancia máxima
       clearInterval(timer);
-      flow(FLOW_STEPS.length - 1, true, "La corrida sigue en GitHub; mirá la pestaña Corridas.", true);
+      flow(FLOW_STEPS.length - 1, true, "La corrida sigue en GitHub; mira la pestaña Corridas.", true);
       return;
     }
     try {
@@ -795,7 +795,7 @@ function watchRun(container, title, dispatchedAt, jobIndices = []) {
       if (job.status === "completed") {
         clearInterval(timer);
         const ok = job.conclusion === "success";
-        let result = escapeHtml("La corrida falló — abrí el log desde la pestaña Corridas.");
+        let result = escapeHtml("La corrida falló — abre el log desde la pestaña Corridas.");
         if (ok) {
           const history = await loadRunHistory();
           const h = history[history.length - 1];
@@ -1204,7 +1204,7 @@ $("run-now").addEventListener("click", async () => {
     .filter(({ s }) => s.enabled !== false && !jobPausedByProxy(s))
     .map(({ idx }) => idx);
   const active = runIndices.length;
-  if (active === 0 && !confirm("Tenés 0 jobs activos: la corrida no va a scrapear nada. ¿Ejecutar igual?")) return;
+  if (active === 0 && !confirm("Tienes 0 jobs activos: la corrida no va a scrapear nada. ¿Ejecutar igual?")) return;
   setStatus($("jobs-status"), "Disparando workflow...");
   try {
     const dispatchedAt = new Date().toISOString();
@@ -1494,7 +1494,7 @@ function renderFavorites() {
     .sort((a, b) => (b.saved_at || "").localeCompare(a.saved_at || ""));
   if (!items.length) {
     $("fav-list").innerHTML =
-      '<p class="status">Todavía no guardaste ningún aviso. Tocá el corazón en la pestaña Buscar o en el Top 5.</p>';
+      '<p class="status">Todavía no guardaste ningún aviso. Toca el corazón en la pestaña Buscar o en el Top 5.</p>';
   } else if (getView("fav") === "list") {
     $("fav-list").innerHTML = listingsTableHtml(items.map((l) => listingRowHtml(l)).join(""));
   } else {
@@ -1566,7 +1566,7 @@ function zoneFlag(l) {
 function noteFlags(l) {
   const n = userNotes[l.id];
   if (!n) return [];
-  if (n.level) return [{ level: n.level, label: n.note ? `Tu nota: ${n.note}` : "Marcada por vos" }];
+  if (n.level) return [{ level: n.level, label: n.note ? `Tu nota: ${n.note}` : "Marcada por ti" }];
   if (n.note) return [{ level: "low", label: `Tu nota: ${n.note}` }];
   return [];
 }
@@ -1891,7 +1891,7 @@ function buildMapSvg(mode) {
 function renderCrimeMap() {
   if (!$("crime-map")) return;
   if (!crimeData || !comunasGeo) {
-    $("crime-map").innerHTML = '<p class="status">La base de delitos todavía no se generó. Corré el workflow "Actualizar base de delitos" en GitHub Actions.</p>';
+    $("crime-map").innerHTML = '<p class="status">La base de delitos todavía no se generó. Corre el workflow "Actualizar base de delitos" en GitHub Actions.</p>';
     return;
   }
   const barrioReady = mapMode === "barrio" && barriosGeo && crimeData.barrios;
@@ -1972,7 +1972,7 @@ function showComunaDetail(key) {
   const box = $("comuna-detail");
   if (!box) return;
   if (key == null) {
-    box.innerHTML = `<p class="status">Tocá ${mapMode === "barrio" ? "un barrio" : "una comuna"} en el mapa para ver el detalle de delitos y su evolución por año.</p>`;
+    box.innerHTML = `<p class="status">Toca ${mapMode === "barrio" ? "un barrio" : "una comuna"} en el mapa para ver el detalle de delitos y su evolución por año.</p>`;
     return;
   }
   if (typeof key === "string") { showBarrioDetail(key); return; }
@@ -2037,7 +2037,7 @@ function renderResults(listings) {
   syncViewToggle("search");
   if (!listings.length) {
     $("results-list").innerHTML =
-      '<p class="status">Ningún aviso coincide con los filtros. Probá aflojar alguno o tocá "Limpiar filtros".</p>';
+      '<p class="status">Ningún aviso coincide con los filtros. Prueba aflojar alguno o toca "Limpiar filtros".</p>';
     return;
   }
   if (getView("search") === "cards") {
@@ -2379,7 +2379,7 @@ document.body.addEventListener("click", (e) => {
 let cyclingTimer = null;
 function startImageCycling() {
   if (cyclingTimer) clearInterval(cyclingTimer);
-  if (prefersReducedMotion) return; // respetá prefers-reduced-motion: sin auto-avance
+  if (prefersReducedMotion) return; // respeta prefers-reduced-motion: sin auto-avance
   cyclingTimer = setInterval(() => {
     document.querySelectorAll(".pcar[data-images]").forEach((pcar) => {
       if (pcar.dataset.manual) return;
@@ -2417,7 +2417,7 @@ function topCardHtml({ l, detail }, rank) {
 function renderTopGroup(operation, container) {
   const top = computeTop(operation);
   if (!top.length) {
-    container.innerHTML = `<p class="status">No hay avisos de ${operation === "venta" ? "venta" : "alquiler"} que cumplan tus criterios. Ajustá los filtros de arriba o activá un job de esa operación.</p>`;
+    container.innerHTML = `<p class="status">No hay avisos de ${operation === "venta" ? "venta" : "alquiler"} que cumplan tus criterios. Ajusta los filtros de arriba o activa un job de esa operación.</p>`;
     return;
   }
   if (getView("top") === "list") {
@@ -2892,8 +2892,8 @@ function deleteErrorHint(ok, total, err) {
   let hint = "";
   if (/\b403\b/.test(err)) {
     hint = /rate limit|secondary/i.test(err)
-      ? " — GitHub frenó por rate limit; esperá un minuto y reintentá con menos corridas."
-      : " — al token le falta el permiso 'Actions: Read and write'. Regeneralo en GitHub con ese permiso y volvé a conectar.";
+      ? " — GitHub frenó por rate limit; espera un minuto y reintenta con menos corridas."
+      : " — al token le falta el permiso 'Actions: Read and write'. Regenéralo en GitHub con ese permiso y vuelve a conectar.";
   }
   return `${ok}/${total} corridas eliminadas. Error: ${err}${hint}`;
 }
@@ -3034,7 +3034,7 @@ function renderZones() {
           <button class="btn small danger" data-zone-del="${escapeHtml(name)}">${icon("trash")} Quitar</button>
         </div>`;
       }).join("")
-    : '<p class="status">Todavía no cargaste zonas. Agregá los barrios que conocés con su nivel de inseguridad.</p>';
+    : '<p class="status">Todavía no cargaste zonas. Agrega los barrios que conoces con su nivel de inseguridad.</p>';
 }
 
 async function persistZones(msg) {
@@ -3058,7 +3058,7 @@ async function persistZones(msg) {
 
 $("zone-add").addEventListener("click", () => {
   const name = $("zone-name").value.trim().toLowerCase();
-  if (!name) { setStatus($("zones-status"), "Escribí un barrio o zona", "error"); return; }
+  if (!name) { setStatus($("zones-status"), "Escribe un barrio o zona", "error"); return; }
   zones[name] = $("zone-level").value;
   $("zone-name").value = "";
   persistZones(`Zona "${name}" guardada`);
@@ -3184,7 +3184,7 @@ function watchCrimeUpdate(dispatchedAt) {
   const timer = setInterval(async () => {
     if (++ticks > 120) { // ~10 min de vigilancia
       clearInterval(timer);
-      renderFlow($("crime-flow"), "Actualizando base de delitos", FLOW_STEPS.length - 1, true, "Sigue en GitHub; recargá en un rato.");
+      renderFlow($("crime-flow"), "Actualizando base de delitos", FLOW_STEPS.length - 1, true, "Sigue en GitHub; recarga en un rato.");
       $("crime-refresh").disabled = false;
       return;
     }
@@ -3208,7 +3208,7 @@ function watchCrimeUpdate(dispatchedAt) {
         renderFlow($("crime-flow"), "Actualizando base de delitos", FLOW_STEPS.length - 1, true, `${icon("check-circle", 14)} Base actualizada`);
         setStatus($("crime-status"), "Base de delitos actualizada", "ok");
       } else {
-        renderFlow($("crime-flow"), "Actualizando base de delitos", FLOW_STEPS.length - 1, true, "La actualización falló — mirá la pestaña Corridas / Actions.");
+        renderFlow($("crime-flow"), "Actualizando base de delitos", FLOW_STEPS.length - 1, true, "La actualización falló — mira la pestaña Corridas / Actions.");
         setStatus($("crime-status"), "La actualización falló", "error");
       }
       $("crime-refresh").disabled = false;

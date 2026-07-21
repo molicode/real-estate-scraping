@@ -85,7 +85,7 @@ def build_searches(config: dict[str, Any], only_job: str | None = None) -> list[
         site = raw.get("site") or detect_site(url)
         if not site:
             raise SystemExit(
-                f"No pude deducir el sitio de la URL '{url}'; agregá 'site:' a la búsqueda"
+                f"No pude deducir el sitio de la URL '{url}'; agrega 'site:' a la búsqueda"
             )
         merged_filters = {**(defaults.get("filters") or {}), **(raw.get("filters") or {})}
         searches.append(
@@ -370,7 +370,7 @@ def main() -> int:
             )
         else:
             logger.info("No hay jobs activos en %s; nada para scrapear", config_path.name)
-            write_github_summary([], {}, ["No hay jobs activos: creá o activá jobs desde la web de administración"])
+            write_github_summary([], {}, ["No hay jobs activos: crea o activa jobs desde la web de administración"])
         return 0
     if only_job:
         logger.info("Ejecución puntual del job '%s'", only_job)
