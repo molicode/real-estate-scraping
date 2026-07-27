@@ -14,6 +14,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -53,6 +54,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -88,6 +90,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -123,6 +126,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -162,6 +166,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -201,6 +206,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -240,6 +246,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -275,6 +282,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -310,6 +318,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -349,6 +358,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -384,6 +394,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -419,6 +430,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -458,6 +470,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -497,6 +510,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -532,6 +546,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -567,6 +582,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -606,6 +622,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -645,6 +662,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -680,6 +698,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -715,6 +734,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -792,6 +812,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -903,6 +924,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -1006,6 +1028,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -1113,6 +1136,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -1228,6 +1252,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -1343,6 +1368,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -1454,6 +1480,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -1557,6 +1584,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -1664,6 +1692,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -1775,6 +1804,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -1878,6 +1908,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -1985,6 +2016,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -2100,6 +2132,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -2211,6 +2244,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -2314,6 +2348,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -2421,6 +2456,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -2536,6 +2572,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -2647,6 +2684,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -2750,6 +2788,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -2857,6 +2896,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "min_rooms": 4,
         "min_bedrooms": 3,
         "min_bathrooms": 2,
@@ -2934,6 +2974,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "require_price": true,
         "keywords_exclude": [
           "temporario",
@@ -2966,6 +3007,7 @@
       "every_hours": 24,
       "filters": {
         "currency": "ARS",
+        "max_price": 1500000,
         "require_price": true,
         "keywords_exclude": [
           "temporario",
