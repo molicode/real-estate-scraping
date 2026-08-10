@@ -2365,5 +2365,57 @@
    "mercadolibre_alquiler_ph_nunez_amplio (mercadolibre): 0 avisos — posible bloqueo o cambio de HTML",
    "mercadolibre_venta_ph_villa-urquiza (mercadolibre): 0 avisos — posible bloqueo o cambio de HTML"
   ]
+ },
+ {
+  "finished_at": "2026-08-10T23:58:44Z",
+  "only_job": null,
+  "jobs": {
+   "argenprop_alquiler_ph_caballito": 0,
+   "zonaprop_alquiler_ph_caballito": 1,
+   "zonaprop_alquiler_ph_villa-crespo": 0,
+   "argenprop_alquiler_ph_villa-crespo": 1,
+   "argenprop_alquiler_ph_nunez": 0,
+   "zonaprop_alquiler_ph_nunez": 0,
+   "argenprop_alquiler_ph_almagro": 3,
+   "zonaprop_alquiler_ph_almagro": 1,
+   "argenprop_alquiler_ph_saavedra": 0,
+   "zonaprop_alquiler_ph_saavedra": 0,
+   "argenprop_venta_ph_caballito": 49,
+   "argenprop_alquiler_casa_caballito": 0,
+   "argenprop_venta_casa_caballito": 83,
+   "zonaprop_venta_ph_caballito": 115,
+   "zonaprop_alquiler_casa_caballito": 0,
+   "zonaprop_venta_casa_caballito": 139,
+   "zonaprop_venta_ph_villa-crespo": 87,
+   "zonaprop_alquiler_casa_villa-crespo": 0,
+   "zonaprop_venta_casa_villa-crespo": 54,
+   "argenprop_venta_ph_villa-crespo": 97,
+   "argenprop_alquiler_casa_villa-crespo": 1,
+   "argenprop_venta_casa_villa-crespo": 36,
+   "argenprop_venta_ph_nunez": 0,
+   "argenprop_alquiler_casa_nunez": 0,
+   "argenprop_venta_casa_nunez": 48,
+   "zonaprop_venta_ph_nunez": 29,
+   "zonaprop_alquiler_casa_nunez": 0,
+   "zonaprop_venta_casa_nunez": 79,
+   "argenprop_venta_ph_almagro": 92,
+   "argenprop_alquiler_casa_almagro": 0,
+   "argenprop_venta_casa_almagro": 7,
+   "zonaprop_venta_ph_almagro": 91,
+   "zonaprop_alquiler_casa_almagro": 1,
+   "zonaprop_venta_casa_almagro": 84,
+   "argenprop_venta_ph_Saavedra": 24,
+   "argenprop_alquiler_casa_Saavedra": 0,
+   "argenprop_venta_casa_Saavedra": 64,
+   "zonaprop_venta_ph_Saavedra": 64,
+   "zonaprop_alquiler_casa_Saavedra": 0,
+   "zonaprop_venta_casa_Saavedra": 93
+  },
+  "found": 1343,
+  "new": 416,
+  "total_stored": 3108,
+  "errors": [
+   "argenprop_venta_ph_nunez (argenprop): 0 avisos — posible bloqueo o cambio de HTML"
+  ]
  }
 ]
