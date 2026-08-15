@@ -9,7 +9,7 @@
       "url": "https://www.argenprop.com/ph/alquiler/caballito",
       "site": "argenprop",
       "operation": "alquiler",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -121,7 +121,7 @@
       "url": "https://www.zonaprop.com.ar/ph-alquiler-caballito.html",
       "site": "zonaprop",
       "operation": "alquiler",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -161,7 +161,7 @@
       "url": "https://www.zonaprop.com.ar/ph-alquiler-villa-crespo.html",
       "site": "zonaprop",
       "operation": "alquiler",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -201,7 +201,7 @@
       "url": "https://www.argenprop.com/ph/alquiler/villa-crespo",
       "site": "argenprop",
       "operation": "alquiler",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -313,7 +313,7 @@
       "url": "https://www.argenprop.com/ph/alquiler/nunez",
       "site": "argenprop",
       "operation": "alquiler",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -425,7 +425,7 @@
       "url": "https://www.zonaprop.com.ar/ph-alquiler-nunez.html",
       "site": "zonaprop",
       "operation": "alquiler",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -465,7 +465,7 @@
       "url": "https://www.argenprop.com/ph/alquiler/almagro",
       "site": "argenprop",
       "operation": "alquiler",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -577,7 +577,7 @@
       "url": "https://www.zonaprop.com.ar/ph-alquiler-almagro.html",
       "site": "zonaprop",
       "operation": "alquiler",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -617,7 +617,7 @@
       "url": "https://www.argenprop.com/ph/alquiler/saavedra",
       "site": "argenprop",
       "operation": "alquiler",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -729,7 +729,7 @@
       "url": "https://www.zonaprop.com.ar/ph-alquiler-saavedra.html",
       "site": "zonaprop",
       "operation": "alquiler",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -769,7 +769,7 @@
       "url": "https://www.argenprop.com/ph/venta/caballito",
       "site": "argenprop",
       "operation": "venta",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -807,7 +807,7 @@
       "url": "https://www.argenprop.com/casas/alquiler/caballito",
       "site": "argenprop",
       "operation": "alquiler",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -847,7 +847,7 @@
       "url": "https://www.argenprop.com/casas/venta/caballito",
       "site": "argenprop",
       "operation": "venta",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -1093,7 +1093,7 @@
       "url": "https://www.zonaprop.com.ar/ph-venta-caballito.html",
       "site": "zonaprop",
       "operation": "venta",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -1131,7 +1131,7 @@
       "url": "https://www.zonaprop.com.ar/casas-alquiler-caballito.html",
       "site": "zonaprop",
       "operation": "alquiler",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -1171,7 +1171,7 @@
       "url": "https://www.zonaprop.com.ar/casas-venta-caballito.html",
       "site": "zonaprop",
       "operation": "venta",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -1209,7 +1209,7 @@
       "url": "https://www.zonaprop.com.ar/ph-venta-villa-crespo.html",
       "site": "zonaprop",
       "operation": "venta",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -1247,7 +1247,7 @@
       "url": "https://www.zonaprop.com.ar/casas-alquiler-villa-crespo.html",
       "site": "zonaprop",
       "operation": "alquiler",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -1287,7 +1287,7 @@
       "url": "https://www.zonaprop.com.ar/casas-venta-villa-crespo.html",
       "site": "zonaprop",
       "operation": "venta",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -1325,7 +1325,7 @@
       "url": "https://www.argenprop.com/ph/venta/villa-crespo",
       "site": "argenprop",
       "operation": "venta",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -1363,7 +1363,7 @@
       "url": "https://www.argenprop.com/casas/alquiler/villa-crespo",
       "site": "argenprop",
       "operation": "alquiler",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -1403,7 +1403,7 @@
       "url": "https://www.argenprop.com/casas/venta/villa-crespo",
       "site": "argenprop",
       "operation": "venta",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -1649,7 +1649,7 @@
       "url": "https://www.argenprop.com/ph/venta/nunez",
       "site": "argenprop",
       "operation": "venta",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -1687,7 +1687,7 @@
       "url": "https://www.argenprop.com/casas/alquiler/nunez",
       "site": "argenprop",
       "operation": "alquiler",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -1727,7 +1727,7 @@
       "url": "https://www.argenprop.com/casas/venta/nunez",
       "site": "argenprop",
       "operation": "venta",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -1973,7 +1973,7 @@
       "url": "https://www.zonaprop.com.ar/ph-venta-nunez.html",
       "site": "zonaprop",
       "operation": "venta",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -2011,7 +2011,7 @@
       "url": "https://www.zonaprop.com.ar/casas-alquiler-nunez.html",
       "site": "zonaprop",
       "operation": "alquiler",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -2051,7 +2051,7 @@
       "url": "https://www.zonaprop.com.ar/casas-venta-nunez.html",
       "site": "zonaprop",
       "operation": "venta",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -2089,7 +2089,7 @@
       "url": "https://www.argenprop.com/ph/venta/almagro",
       "site": "argenprop",
       "operation": "venta",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -2127,7 +2127,7 @@
       "url": "https://www.argenprop.com/casas/alquiler/almagro",
       "site": "argenprop",
       "operation": "alquiler",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -2167,7 +2167,7 @@
       "url": "https://www.argenprop.com/casas/venta/almagro",
       "site": "argenprop",
       "operation": "venta",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -2413,7 +2413,7 @@
       "url": "https://www.zonaprop.com.ar/ph-venta-almagro.html",
       "site": "zonaprop",
       "operation": "venta",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -2451,7 +2451,7 @@
       "url": "https://www.zonaprop.com.ar/casas-alquiler-almagro.html",
       "site": "zonaprop",
       "operation": "alquiler",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -2491,7 +2491,7 @@
       "url": "https://www.zonaprop.com.ar/casas-venta-almagro.html",
       "site": "zonaprop",
       "operation": "venta",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -2529,7 +2529,7 @@
       "url": "https://www.argenprop.com/ph/venta/saavedra",
       "site": "argenprop",
       "operation": "venta",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -2567,7 +2567,7 @@
       "url": "https://www.argenprop.com/casas/alquiler/saavedra",
       "site": "argenprop",
       "operation": "alquiler",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -2607,7 +2607,7 @@
       "url": "https://www.argenprop.com/casas/venta/saavedra",
       "site": "argenprop",
       "operation": "venta",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -2853,7 +2853,7 @@
       "url": "https://www.zonaprop.com.ar/ph-venta-saavedra.html",
       "site": "zonaprop",
       "operation": "venta",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -2891,7 +2891,7 @@
       "url": "https://www.zonaprop.com.ar/casas-alquiler-saavedra.html",
       "site": "zonaprop",
       "operation": "alquiler",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
@@ -2931,7 +2931,7 @@
       "url": "https://www.zonaprop.com.ar/casas-venta-saavedra.html",
       "site": "zonaprop",
       "operation": "venta",
-      "enabled": true,
+      "enabled": false,
       "max_pages": 10,
       "every_hours": 24,
       "filters": {
