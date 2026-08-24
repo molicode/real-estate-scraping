@@ -5239,6 +5239,11 @@
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -8365,6 +8370,11 @@
     "first_seen": "2026-07-15T14:54:06Z",
     "flags": [
       {
+        "label": "Precio 41% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      },
+      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -8812,6 +8822,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
@@ -11503,6 +11518,11 @@
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Precio 84% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
@@ -13626,7 +13646,13 @@
     "bedrooms": 4,
     "expenses": null,
     "first_seen": "2026-07-10T03:52:21Z",
-    "flags": [],
+    "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      }
+    ],
     "id": "argenprop:19829535",
     "image": "https://www.argenprop.com/static-content/53592891/cbf2b070-575b-4a4d-b716-3647381a78a0_u_small.jpg",
     "images": [
@@ -13653,6 +13679,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
@@ -14162,7 +14193,13 @@
     "bedrooms": 3,
     "expenses": null,
     "first_seen": "2026-07-10T03:52:21Z",
-    "flags": [],
+    "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      }
+    ],
     "id": "argenprop:19875552",
     "image": "https://www.argenprop.com/static-content/25557891/03effdb1-bcbf-42ac-8234-4601aab9884e_u_small.jpg",
     "images": [
@@ -17458,6 +17495,11 @@
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Precio 69% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
@@ -17948,6 +17990,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Precio 80% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
@@ -23220,6 +23267,11 @@
     "first_seen": "2026-07-10T03:08:28Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -25449,7 +25501,7 @@
     "first_seen": "2026-07-29T13:48:16Z",
     "flags": [
       {
-        "label": "Precio 53% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 54% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -26364,7 +26416,7 @@
     "first_seen": "2026-07-29T13:48:16Z",
     "flags": [
       {
-        "label": "Precio 52% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 51% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -27487,6 +27539,11 @@
     "first_seen": "2026-07-10T04:17:03Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -27517,6 +27574,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:53:25Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
@@ -28063,6 +28125,11 @@
     "first_seen": "2026-07-10T03:53:25Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Belgrano: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -28226,6 +28293,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:53:25Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
@@ -28510,6 +28582,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:53:25Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
@@ -28854,6 +28931,11 @@
     "first_seen": "2026-07-10T03:51:42Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -28890,6 +28972,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T04:17:03Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
@@ -29234,6 +29321,11 @@
     "first_seen": "2026-07-10T03:53:25Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -29556,6 +29648,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:53:25Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
@@ -37804,6 +37901,11 @@
     "first_seen": "2026-07-10T04:21:47Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Nunez: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -38342,6 +38444,11 @@
     "first_seen": "2026-07-10T03:51:42Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -38655,6 +38762,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T04:21:47Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Nunez: inseguridad media según datos oficiales",
         "level": "med",
@@ -39290,7 +39402,7 @@
     "first_seen": "2026-07-15T15:16:26Z",
     "flags": [
       {
-        "label": "Precio 45% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 44% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -39358,6 +39470,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T04:23:36Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
@@ -39599,6 +39716,11 @@
     "first_seen": "2026-07-10T04:23:36Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -39825,6 +39947,11 @@
     "first_seen": "2026-07-10T04:23:36Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Precio 96% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
@@ -39862,6 +39989,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:52:51Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Nunez: inseguridad media según datos oficiales",
         "level": "med",
@@ -40032,6 +40164,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T04:23:36Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
@@ -40279,6 +40416,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:53:25Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
@@ -42679,11 +42821,6 @@
     "expenses": null,
     "first_seen": "2026-08-02T12:58:11Z",
     "flags": [
-      {
-        "label": "Precio 41% por debajo del promedio del tipo — verificá que no sea un anzuelo",
-        "level": "high",
-        "type": "price_low"
-      },
       {
         "label": "Una sola foto o sin fotos",
         "level": "low",
@@ -45267,6 +45404,38 @@
     "url": "https://inmueble.mercadolibre.com.ar/MLA-3833457738-ph-sin-expensas-venta-6-ambientes-playroom-terraza-propia-villa-urquiza-_JM",
     "verified": false
   },
+  "mercadolibre:MLA3838822766": {
+    "address": "Echeverría 4800, Villa Urquiza, Capital Federal",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-08-24T12:35:10Z",
+    "flags": [
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      },
+      {
+        "label": "Villa Urquiza: inseguridad media según datos oficiales",
+        "level": "med",
+        "type": "crime"
+      }
+    ],
+    "id": "mercadolibre:MLA3838822766",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_906021-MLA116538566621_082026-E.webp",
+    "images": [],
+    "operation": "venta",
+    "price_amount": 290000.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "mercadolibre_venta_ph_villa-urquiza",
+    "site": "mercadolibre",
+    "surface_m2": 110.0,
+    "title": "Ph 4 Ambientes En Venta Villa Urquiza Gran Terraza",
+    "url": "https://inmueble.mercadolibre.com.ar/MLA-3838822766-ph-4-ambientes-en-venta-villa-urquiza-gran-terraza-_JM",
+    "verified": false
+  },
   "mercadolibre:MLA3840342444": {
     "address": "Deheza 3600, Saavedra, Capital Federal",
     "bathrooms": 3,
@@ -45513,7 +45682,7 @@
     "first_seen": "2026-08-07T12:40:35Z",
     "flags": [
       {
-        "label": "Precio 73% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 74% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -45764,7 +45933,7 @@
     "first_seen": "2026-08-02T12:58:52Z",
     "flags": [
       {
-        "label": "Precio 74% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 73% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -46016,7 +46185,7 @@
     "first_seen": "2026-08-23T12:20:42Z",
     "flags": [
       {
-        "label": "Precio 44% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 43% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -46109,7 +46278,7 @@
     "first_seen": "2026-08-03T14:16:53Z",
     "flags": [
       {
-        "label": "Precio 61% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 60% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -47985,7 +48154,7 @@
     "first_seen": "2026-08-05T13:43:31Z",
     "flags": [
       {
-        "label": "Precio 69% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 70% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -49241,7 +49410,7 @@
     "first_seen": "2026-07-23T13:25:35Z",
     "flags": [
       {
-        "label": "Precio 52% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 51% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -49377,6 +49546,49 @@
     "url": "https://www.remax.com.ar/listings/venta-casa-con-jardin-y-parque-barrio-caisamar",
     "verified": false
   },
+  "remax:16edd76f-af62-44f3-9d0f-f1a0465a71bd": {
+    "address": "Zona Sur. Coronel Uriondo 1600",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-08-24T12:27:01Z",
+    "flags": [
+      {
+        "label": "Precio 75% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:16edd76f-af62-44f3-9d0f-f1a0465a71bd",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/16edd76f-af62-44f3-9d0f-f1a0465a71bd/6567610f-705e-4448-8246-fd17a0c89b9e.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/16edd76f-af62-44f3-9d0f-f1a0465a71bd/6567610f-705e-4448-8246-fd17a0c89b9e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/16edd76f-af62-44f3-9d0f-f1a0465a71bd/b59d22f0-72b8-4fe1-a788-ac10c76abcb2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/16edd76f-af62-44f3-9d0f-f1a0465a71bd/810585c0-960d-428d-9841-525816ae0ee0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/16edd76f-af62-44f3-9d0f-f1a0465a71bd/301dd204-b77c-4c50-98e1-66a165e2021f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/16edd76f-af62-44f3-9d0f-f1a0465a71bd/5d82374a-8843-47cc-811b-965521530ac7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/16edd76f-af62-44f3-9d0f-f1a0465a71bd/5519952e-789a-482a-a8c5-408bba3294b2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/16edd76f-af62-44f3-9d0f-f1a0465a71bd/41557e0d-25e7-47e7-abfe-480597219192.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/16edd76f-af62-44f3-9d0f-f1a0465a71bd/fa1c71cd-9f4b-4113-9357-7da95ff02155.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/16edd76f-af62-44f3-9d0f-f1a0465a71bd/558af4cd-32ed-44c3-9fe3-838e608893c7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/16edd76f-af62-44f3-9d0f-f1a0465a71bd/3a6762dd-e67a-4ca3-a4d8-fe2c14e3ec1a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/16edd76f-af62-44f3-9d0f-f1a0465a71bd/3be185a0-5546-4d33-83dd-e496724c534d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/16edd76f-af62-44f3-9d0f-f1a0465a71bd/facb940e-dc5a-40bc-bf60-819adc56f06b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/16edd76f-af62-44f3-9d0f-f1a0465a71bd/02fede55-f270-47d5-82af-396bef4ea522.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/16edd76f-af62-44f3-9d0f-f1a0465a71bd/c4e7300d-bbbe-46f6-965d-300feb76e11e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/16edd76f-af62-44f3-9d0f-f1a0465a71bd/1d57bc02-6780-4de4-98fb-d10b71119d2e.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 60000.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 215.0,
+    "title": "CASA VENTA ZONA SUR 3 DORMITORIOS",
+    "url": "https://www.remax.com.ar/listings/casa-venta-zona-sur-3-dormitorios-1",
+    "verified": false
+  },
   "remax:17134301-6085-4ce0-971f-bd957b702250": {
     "address": "Ruta Nacional 205 0",
     "bathrooms": 3,
@@ -49437,7 +49649,7 @@
     "first_seen": "2026-08-09T12:28:32Z",
     "flags": [
       {
-        "label": "Precio 70% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 69% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -49631,7 +49843,7 @@
     "first_seen": "2026-07-20T13:49:30Z",
     "flags": [
       {
-        "label": "Precio 59% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 58% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -49687,7 +49899,7 @@
     "first_seen": "2026-08-16T12:20:03Z",
     "flags": [
       {
-        "label": "Precio 73% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 74% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -50350,7 +50562,7 @@
     "first_seen": "2026-08-03T14:16:53Z",
     "flags": [
       {
-        "label": "Precio 73% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 72% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -50486,6 +50698,58 @@
     "surface_m2": 199.53,
     "title": "VENTA DEPTO 4 AMB SAN ISIDRO TERRAZA PROPIA AL RIO",
     "url": "https://www.remax.com.ar/listings/venta-depto-4-amb-san-isidro-terraza-propia-al-rio-1",
+    "verified": false
+  },
+  "remax:1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea": {
+    "address": "Juana de Arco 6700",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": 400000.0,
+    "first_seen": "2026-08-24T12:27:01Z",
+    "flags": [],
+    "id": "remax:1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/22926ff6-d703-4182-b5a1-d04802ece15a.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/22926ff6-d703-4182-b5a1-d04802ece15a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/1c07aa36-f04c-4d78-be75-e7092d4a66bf.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/3c02d61e-2988-4e6f-8e07-792ec5364635.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/921d6347-5953-4962-849c-d36e661f76a7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/cbac7413-a6f9-4185-8883-7cff389886d1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/6998e17b-4600-4724-bd3f-a2f2ab9f57dd.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/07d57033-154e-4847-85b8-9a6b8dc210f1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/77d857ef-9ca8-4125-9ac5-71804464b3dd.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/5ce50f49-0846-4846-bf33-8fa460fdd10f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/f27f731c-b2da-4af0-b3e8-bee7924f270c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/cbab6f3d-c1ec-40c7-bae0-3dd08ca178f3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/a5b5ef2d-9a9b-454c-b31d-a62cc4a70c45.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/c1fdca63-3a9e-4b5b-968d-6d102c62592a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/a984e9b8-5885-408d-ac51-6dff15d75956.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/711470ba-7259-474d-a51c-f8293319b5bb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/e9fd19f4-72fa-47fd-9758-bc0345bc0040.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/ee5defc6-5f90-4b19-900d-92f3d1fd04fa.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/4dbb21b7-be03-4b9e-b070-a83e29d8b943.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/9b77dc03-1f3f-40c6-8595-0383929bf9bb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/28b466bf-a27a-4cc6-b36f-fcf37ea010b4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/22469564-9bf3-4135-a989-131b861938cd.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/654e4db4-8a01-4d69-9c8b-41c6d71b986b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/d1ee6a10-b354-4a7b-8098-5153bfe04663.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/f21cf55f-920e-48e3-ad2e-147b4e0af9d7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/65b395df-f2aa-4330-bef9-492ecfdaee2b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/73f1ed8e-49ad-4d2a-9054-194d98954213.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/e1b141b9-d3b5-4143-99eb-7a5f1c32eb20.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/9ab5cbc5-3d78-4ac8-84b3-ff526cb44dc5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/108a3f9d-61bd-48a0-8861-de0571b57e09.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/1aa9ec7e-50ca-4bb1-bba0-ed181322c1ea/d59a1f68-6cbf-44c2-a053-96d81f04141d.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 380000.0,
+    "price_currency": "USD",
+    "rooms": 5,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 1005.0,
+    "title": "VENTA CASA 5 AMB BARRIO SANTA JUANA CANNING",
+    "url": "https://www.remax.com.ar/listings/venta-casa-5-amb-barrio-santa-juana-canning",
     "verified": false
   },
   "remax:1b1e66a6-6d9b-433e-a6ce-c5fe88073f1c": {
@@ -51287,7 +51551,7 @@
     "first_seen": "2026-07-17T13:04:10Z",
     "flags": [
       {
-        "label": "Precio 64% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 63% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -51772,7 +52036,7 @@
     "first_seen": "2026-08-07T12:40:35Z",
     "flags": [
       {
-        "label": "Precio 51% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 50% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -51908,7 +52172,7 @@
     "first_seen": "2026-07-29T13:46:20Z",
     "flags": [
       {
-        "label": "Precio 61% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 62% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -53107,11 +53371,6 @@
     "first_seen": "2026-08-14T12:42:21Z",
     "flags": [
       {
-        "label": "Precio 40% por debajo del promedio del tipo — verificá que no sea un anzuelo",
-        "level": "high",
-        "type": "price_low"
-      },
-      {
         "label": "Belgrano: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -53201,6 +53460,64 @@
     "surface_m2": 177.27,
     "title": "Venta de casa 3 dorm. calle Presbitero Gorriti",
     "url": "https://www.remax.com.ar/listings/venta-de-casa-3-dorm-calle-presbitero-gorriti",
+    "verified": false
+  },
+  "remax:27b3c15e-41bb-416b-89e5-27cddffd9a7d": {
+    "address": "San Luis 500",
+    "bathrooms": 3,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-08-24T12:28:07Z",
+    "flags": [
+      {
+        "label": "Precio 75% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:27b3c15e-41bb-416b-89e5-27cddffd9a7d",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/1e7dd3ea-2248-44ea-a704-83da9510d966.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/1e7dd3ea-2248-44ea-a704-83da9510d966.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/d0f78a6a-25f4-4e3c-9c21-85992003d336.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/009bb758-71b9-4634-afb0-c001fca7a337.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/e8837951-3dd9-4da7-a8d4-134f1279418e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/6d410c71-bdf9-45c8-85d8-41ef5cf5d12c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/39eb9e00-b5b3-4883-8026-0ffae34427c3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/53e515e6-10ef-4e94-9901-d81b42454758.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/cb9b21aa-c869-4d64-b551-aeb461dab666.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/f7c88104-cfa6-4fb0-81ca-47ee49bd31bf.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/6ff023cb-14fa-424a-aa6a-0ac73a9a8c11.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/4d721bd3-8b3c-42a6-954d-c99c7584584a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/01a6fbaa-09c5-4690-9a9c-1991e50bdee0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/ffb63f91-8fe6-4bd6-8c54-4c1e523d3710.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/c0538c29-29a2-48aa-86c5-a2d1987fc187.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/f9383b2c-f5d0-4c1c-a4e0-80f6eb7a8a80.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/5427fc1d-d6a7-4166-b57f-f01142ba48c8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/81c0aea5-75cb-4465-b907-58e4d4802050.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/372a22ce-76c0-41ea-afda-63e4b9baae4f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/8acb5261-8e77-4d49-8868-83ae97884414.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/47d3199d-50d6-4bed-8657-87f9e5b24bf2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/8f92ea23-f891-4cc7-bb9e-ad49e90f6267.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/de0e176f-af68-460b-9a33-c1d0bfa197d2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/d1333ad0-9036-432d-bc64-50493e430d5e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/686945fc-3ded-4996-807f-8d65a42b673e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/e3d773c8-18ab-4b09-bef3-9b1fff6f60f5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/9b1a4c8b-6623-4771-aeff-76905d36c687.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/158cf405-17c1-466a-b212-f0458cc8720f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/0c5c4170-b932-4823-904a-fb38b2f5796e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/e7919b36-da87-4f69-b539-543ea9a289df.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/27b3c15e-41bb-416b-89e5-27cddffd9a7d/37713aaa-4dac-4255-bcc9-112af80500b9.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 75000.0,
+    "price_currency": "USD",
+    "rooms": 5,
+    "search_name": "remax_venta_ph_villa-crespo",
+    "site": "remax",
+    "surface_m2": 127.0,
+    "title": "VENTA CASA 4 DORM EN CENTRO DE COSQUIN",
+    "url": "https://www.remax.com.ar/listings/venta-casa-4-dorm-en-centro-de-cosquin",
     "verified": false
   },
   "remax:27cc0d0c-5b66-4f6c-b31b-c478192bfa6b": {
@@ -53473,7 +53790,7 @@
     "first_seen": "2026-07-27T14:20:07Z",
     "flags": [
       {
-        "label": "Precio 64% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 65% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -53676,6 +53993,51 @@
     "url": "https://www.remax.com.ar/listings/alquiler-casa-4-ambientes-haras-san-pablo",
     "verified": false
   },
+  "remax:295523cc-3f50-4659-892d-7272047db7a3": {
+    "address": "Dardo Rocha 100",
+    "bathrooms": 3,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-08-24T12:27:01Z",
+    "flags": [],
+    "id": "remax:295523cc-3f50-4659-892d-7272047db7a3",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/7ac9ae3c-90bc-47d3-b09a-46069fb7d6f6.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/7ac9ae3c-90bc-47d3-b09a-46069fb7d6f6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/43a51a87-5e80-4301-8651-66112df62e41.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/329b361c-4290-46f0-8fc5-5ee30efabbd5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/246e4554-df61-4ab8-9fd4-adabff1e1684.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/68a39171-d391-4126-a149-d0ff0c13e4aa.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/7a4f0ac2-c921-4686-af17-1732c23850a5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/2dbc0a9d-2a69-47fa-a5c2-3f3f0d67b3d8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/722bcb39-8703-437a-96f3-a1c6f2a525a8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/bc7f0834-45fe-4be4-8990-79199e1808e2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/5d008daf-0b1c-4775-910d-baf9038d54a8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/e05f8017-c817-47bc-a188-2b1f61282a79.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/aa2e36ca-b061-4f73-a394-17a71aacf4bf.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/d279b45d-a3a4-4b56-81d3-5896369938e1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/23f8f5dc-4acc-4fe3-8806-0e1fb15a92af.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/17dad42d-9d04-4a6b-8df3-914f8382a61e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/50b6d615-772e-4a94-b27d-fa531ecb32fa.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/5b17e302-fd95-4ed5-b287-1cf2088baa3c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/19211060-a6b3-42af-a536-bdee7df33e39.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/5fe627c1-410a-4d0f-8834-e3009708c4e4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/f6cddadf-4034-4246-b372-3c987f4287f7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/aa947ed6-6058-4401-b2cc-db9038985728.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/2bbdf690-dddb-413c-a455-090e20522655.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/295523cc-3f50-4659-892d-7272047db7a3/0f50fa77-654a-42a5-88dd-65dbf3006328.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 210000.0,
+    "price_currency": "USD",
+    "rooms": 5,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 273.0,
+    "title": "Casa impecable en Avellaneda",
+    "url": "https://www.remax.com.ar/listings/casa-impecable-en-avellaneda",
+    "verified": false
+  },
   "remax:29da09b9-fdd6-49b2-bfbb-c9866903db53": {
     "address": "Negri 0",
     "bathrooms": 3,
@@ -53830,7 +54192,7 @@
     "first_seen": "2026-08-03T14:16:53Z",
     "flags": [
       {
-        "label": "Precio 61% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 60% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -54862,6 +55224,11 @@
     "first_seen": "2026-07-10T03:52:05Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Precio 99% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
@@ -55378,7 +55745,7 @@
     "first_seen": "2026-07-27T14:12:39Z",
     "flags": [
       {
-        "label": "Precio 64% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 63% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -55838,7 +56205,7 @@
     "first_seen": "2026-08-05T13:43:31Z",
     "flags": [
       {
-        "label": "Precio 53% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 54% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -56094,6 +56461,11 @@
     "first_seen": "2026-07-10T03:52:05Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Precio 47% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
@@ -56126,7 +56498,7 @@
     "first_seen": "2026-07-15T14:55:00Z",
     "flags": [
       {
-        "label": "Precio 58% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 57% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -56274,7 +56646,7 @@
     "first_seen": "2026-07-29T13:46:20Z",
     "flags": [
       {
-        "label": "Precio 56% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 55% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -57081,7 +57453,7 @@
     "first_seen": "2026-07-23T13:25:35Z",
     "flags": [
       {
-        "label": "Precio 70% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 69% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -57858,7 +58230,7 @@
     "first_seen": "2026-07-23T13:25:35Z",
     "flags": [
       {
-        "label": "Precio 44% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 46% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -58121,7 +58493,7 @@
     "first_seen": "2026-08-16T12:20:03Z",
     "flags": [
       {
-        "label": "Precio 81% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 82% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -58564,7 +58936,7 @@
     "first_seen": "2026-08-19T12:37:05Z",
     "flags": [
       {
-        "label": "Precio 59% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 60% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -58803,6 +59175,54 @@
     "surface_m2": 426.0,
     "title": "Salón 426 m2 en el centro de Cutral Co",
     "url": "https://www.remax.com.ar/listings/salon-426-m2-en-el-centro-de-cutral-co",
+    "verified": false
+  },
+  "remax:45b4964f-e90d-41da-ad66-f22162adfd97": {
+    "address": "Santander 2200",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-08-24T12:27:01Z",
+    "flags": [
+      {
+        "label": "Flores: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "remax:45b4964f-e90d-41da-ad66-f22162adfd97",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/45b4964f-e90d-41da-ad66-f22162adfd97/8247f9ee-a44c-4ef7-a9bb-d3ae8f233e56.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/45b4964f-e90d-41da-ad66-f22162adfd97/8247f9ee-a44c-4ef7-a9bb-d3ae8f233e56.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/45b4964f-e90d-41da-ad66-f22162adfd97/d9a4a563-7c39-4959-be94-0c9cc540b5f1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/45b4964f-e90d-41da-ad66-f22162adfd97/95863b43-8431-43c9-b74f-478e6e94d315.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/45b4964f-e90d-41da-ad66-f22162adfd97/84f68e3c-ef28-421c-bebd-5a40bbbebfa0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/45b4964f-e90d-41da-ad66-f22162adfd97/e411f3bb-30d0-4883-8505-41e5afb447fd.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/45b4964f-e90d-41da-ad66-f22162adfd97/2e6c1d80-2f17-406a-be23-e5e8d941cf11.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/45b4964f-e90d-41da-ad66-f22162adfd97/b1041dcc-2e6e-4df8-a1ff-cf66d1497d43.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/45b4964f-e90d-41da-ad66-f22162adfd97/30b26ac6-8fff-498c-a4fd-100a261bdb1f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/45b4964f-e90d-41da-ad66-f22162adfd97/31df9aa8-e27e-4dc1-9548-fb19e3be8528.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/45b4964f-e90d-41da-ad66-f22162adfd97/d516aecb-81f5-4464-89f7-f97c76915b66.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/45b4964f-e90d-41da-ad66-f22162adfd97/8a87fbd3-2d19-46ed-8eba-0608a9999714.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/45b4964f-e90d-41da-ad66-f22162adfd97/aa2b4ac3-d3ba-47a9-907a-07809f01602c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/45b4964f-e90d-41da-ad66-f22162adfd97/de7ce23e-835c-42b9-afcb-b39a977e8393.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/45b4964f-e90d-41da-ad66-f22162adfd97/d32bbcf7-4743-4164-b26e-e9b73552e4df.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/45b4964f-e90d-41da-ad66-f22162adfd97/f80b9071-fcef-4c34-aa6a-b46cc9f87da9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/45b4964f-e90d-41da-ad66-f22162adfd97/09903455-9169-4dba-9b99-260d195b2643.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/45b4964f-e90d-41da-ad66-f22162adfd97/d515621c-9cf6-4855-b7b3-88df2d6ac597.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/45b4964f-e90d-41da-ad66-f22162adfd97/53bc61c7-03b1-4201-a7bd-9897d620c0b7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/45b4964f-e90d-41da-ad66-f22162adfd97/94de9dce-06f8-456b-9a9e-7333f9780e1d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/45b4964f-e90d-41da-ad66-f22162adfd97/19c73300-fa5b-4147-bb19-fe92cb2276e4.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 150000.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 103.0,
+    "title": "Venta PH 4 amb PB patio parrilla Flores",
+    "url": "https://www.remax.com.ar/listings/venta-ph-4-amb-pb-patio-parrilla-flores",
     "verified": false
   },
   "remax:45b60fc8-50c4-4677-b578-787b39446aaa": {
@@ -59546,7 +59966,7 @@
     "first_seen": "2026-08-12T12:44:42Z",
     "flags": [
       {
-        "label": "Precio 51% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 50% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -60327,7 +60747,7 @@
     "first_seen": "2026-08-19T12:37:05Z",
     "flags": [
       {
-        "label": "Precio 74% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 75% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -60678,7 +61098,7 @@
     "first_seen": "2026-07-20T13:49:30Z",
     "flags": [
       {
-        "label": "Precio 56% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 55% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -60987,7 +61407,7 @@
     "first_seen": "2026-08-12T12:44:42Z",
     "flags": [
       {
-        "label": "Precio 43% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 42% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -61411,7 +61831,7 @@
     "first_seen": "2026-08-10T12:44:19Z",
     "flags": [
       {
-        "label": "Precio 51% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 50% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -64365,7 +64785,7 @@
     "first_seen": "2026-08-07T12:40:35Z",
     "flags": [
       {
-        "label": "Precio 71% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 70% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -65646,6 +66066,31 @@
     "url": "https://www.remax.com.ar/listings/deposito-nave-industrial-en-dina-huapi-1",
     "verified": false
   },
+  "remax:64f7923e-02be-4108-b8fc-0c6a4e5cb7a4": {
+    "address": "Avenida Gobernador Vergara 2500",
+    "bathrooms": null,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-08-24T12:32:02Z",
+    "flags": [],
+    "id": "remax:64f7923e-02be-4108-b8fc-0c6a4e5cb7a4",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/64f7923e-02be-4108-b8fc-0c6a4e5cb7a4/71c07614-b957-41d0-b420-493b7db93ac9.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/64f7923e-02be-4108-b8fc-0c6a4e5cb7a4/71c07614-b957-41d0-b420-493b7db93ac9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/64f7923e-02be-4108-b8fc-0c6a4e5cb7a4/3fb90092-6959-4b9c-9653-7dd35d6c8fdc.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/64f7923e-02be-4108-b8fc-0c6a4e5cb7a4/05a85e67-2022-4323-b390-bc3da574bbcf.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 315000.0,
+    "price_currency": "USD",
+    "rooms": null,
+    "search_name": "remax_venta_ph_almagro",
+    "site": "remax",
+    "surface_m2": 507.0,
+    "title": "VENTA DEPOSITO EXCELENTE UBICACIÓN - HURLINGHAM",
+    "url": "https://www.remax.com.ar/listings/venta-deposito-excelente-ubicacion-hurlingham",
+    "verified": false
+  },
   "remax:6511b1f8-359e-4f6a-ab9b-07b1a1dcce40": {
     "address": "Escribano Francisco Vazquez 3500",
     "bathrooms": 2,
@@ -65654,7 +66099,7 @@
     "first_seen": "2026-07-29T13:46:20Z",
     "flags": [
       {
-        "label": "Precio 64% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 63% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -67319,7 +67764,7 @@
     "first_seen": "2026-08-02T12:58:52Z",
     "flags": [
       {
-        "label": "Precio 76% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 75% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -68014,7 +68459,7 @@
     "first_seen": "2026-07-17T13:04:10Z",
     "flags": [
       {
-        "label": "Precio 58% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 57% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -68111,7 +68556,7 @@
     "first_seen": "2026-08-03T14:16:53Z",
     "flags": [
       {
-        "label": "Precio 74% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 73% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -68169,7 +68614,7 @@
     "first_seen": "2026-08-09T12:28:32Z",
     "flags": [
       {
-        "label": "Precio 55% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 54% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -68559,7 +69004,7 @@
     "first_seen": "2026-07-22T13:22:39Z",
     "flags": [
       {
-        "label": "Precio 64% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 63% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -69051,7 +69496,7 @@
     "first_seen": "2026-07-22T13:22:39Z",
     "flags": [
       {
-        "label": "Precio 70% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 71% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -69338,7 +69783,7 @@
     "first_seen": "2026-08-10T12:44:19Z",
     "flags": [
       {
-        "label": "Precio 44% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 43% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -70274,7 +70719,7 @@
     "first_seen": "2026-08-23T12:20:42Z",
     "flags": [
       {
-        "label": "Precio 54% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 53% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -70532,7 +70977,7 @@
     "first_seen": "2026-07-17T13:04:10Z",
     "flags": [
       {
-        "label": "Precio 74% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 73% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -70645,7 +71090,7 @@
     "first_seen": "2026-07-19T12:53:59Z",
     "flags": [
       {
-        "label": "Precio 71% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 70% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -71468,7 +71913,7 @@
     "first_seen": "2026-07-25T00:07:15Z",
     "flags": [
       {
-        "label": "Precio 59% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 58% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -72230,7 +72675,7 @@
     "first_seen": "2026-08-03T14:20:01Z",
     "flags": [
       {
-        "label": "Precio 61% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 60% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -72756,7 +73201,7 @@
     "first_seen": "2026-08-18T12:25:38Z",
     "flags": [
       {
-        "label": "Precio 75% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 71% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -72889,7 +73334,7 @@
     "first_seen": "2026-08-07T12:40:35Z",
     "flags": [
       {
-        "label": "Precio 74% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 73% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -73085,7 +73530,7 @@
     "first_seen": "2026-07-22T13:22:39Z",
     "flags": [
       {
-        "label": "Precio 70% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 69% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -74057,7 +74502,7 @@
     "first_seen": "2026-07-26T12:59:04Z",
     "flags": [
       {
-        "label": "Precio 70% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 69% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -75696,7 +76141,7 @@
     "first_seen": "2026-07-29T13:46:20Z",
     "flags": [
       {
-        "label": "Precio 48% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 47% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -75990,7 +76435,7 @@
     "first_seen": "2026-08-23T12:20:42Z",
     "flags": [
       {
-        "label": "Precio 65% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 64% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -76154,7 +76599,7 @@
     "first_seen": "2026-07-31T13:32:39Z",
     "flags": [
       {
-        "label": "Precio 70% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 69% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -76561,7 +77006,7 @@
     "first_seen": "2026-07-23T13:25:35Z",
     "flags": [
       {
-        "label": "Precio 51% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 50% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -76944,7 +77389,7 @@
     "first_seen": "2026-07-29T13:46:20Z",
     "flags": [
       {
-        "label": "Precio 86% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 87% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -77274,7 +77719,7 @@
     "first_seen": "2026-07-20T13:49:30Z",
     "flags": [
       {
-        "label": "Precio 81% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 80% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -77994,7 +78439,7 @@
     "first_seen": "2026-07-25T00:07:15Z",
     "flags": [
       {
-        "label": "Precio 52% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 51% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -78406,6 +78851,58 @@
     "url": "https://www.remax.com.ar/listings/complejo-de-cabanas-entre-pioneros-y-bustillo-km-6-1",
     "verified": false
   },
+  "remax:af4c8235-0a2d-4ff4-a192-7f1d6e866dd9": {
+    "address": "Los Cuartos 0",
+    "bathrooms": 3,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-08-24T12:33:49Z",
+    "flags": [],
+    "id": "remax:af4c8235-0a2d-4ff4-a192-7f1d6e866dd9",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/c126f574-4234-4f31-927b-a2b3df00849a.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/c126f574-4234-4f31-927b-a2b3df00849a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/636cc397-ac81-4939-b6e8-f08c220a0e3e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/06f6f943-e8a0-4ea9-80f1-61bcfce52899.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/dce4cc1e-e02b-4488-9334-07e16c7f9e73.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/ca54ed24-71af-4651-aca2-5d2fbadd08d3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/e9e15442-aeeb-4368-9204-7084fd0ccfae.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/7759ceb3-8b46-4993-8865-162e12c5e28b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/a5704a12-d5ef-467a-8b13-becc4c3e4195.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/b9d03b0b-0631-45bb-924a-38142ade4f08.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/021d282c-e9ea-4e3f-9ead-d5af810d5eaa.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/b7a6b973-1969-414a-8edb-3f64dcdf77eb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/c264a2f0-8c79-481e-8bc5-beacb72a494d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/bbb76f04-3b82-4c28-9597-e4ff156d65e4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/db1d758c-fd52-4451-845f-f6d7e8c08e59.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/d50bd03f-d222-41a0-889a-3023ab043b30.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/f4424190-248e-4400-8509-9bf53de4b846.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/41b28945-171a-4cc7-9eba-bbcd14141273.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/45ca3933-ace8-49a0-adc6-34d352ba8f0c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/9a47cc7c-fc6c-417d-a8a1-24dd82bc7d16.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/34fa6568-48a4-47a5-93a3-df25720fe043.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/79c1ed3b-d216-4be6-a4a9-12dc96141b45.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/fb687680-9b00-4585-b854-ddf1f00fee63.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/4caaf374-742e-462e-9da8-a65d83706f6c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/ce359af3-84a6-4e38-bc91-98362434e997.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/aa894ca5-5545-4980-9c36-b5acdd33b1c1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/9f1613f5-2c00-4d88-90e0-c731e46d8848.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/29948c61-9bed-42ed-9262-65c2c6a43774.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/cd4996bd-cc7b-4136-8eca-4f845ff0ba0b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/adccf9a5-648b-4fdd-b98c-bde4f9f98b8b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/af4c8235-0a2d-4ff4-a192-7f1d6e866dd9/d2f40869-2758-4cc2-ba61-3e032ee85c1b.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 195000.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_Saavedra",
+    "site": "remax",
+    "surface_m2": 1808.0,
+    "title": "VENTA CASA TAFI DEL VALLE - 3 DORMITORIOS",
+    "url": "https://www.remax.com.ar/listings/venta-casa-tafi-del-valle-3-dormitorios",
+    "verified": false
+  },
   "remax:af52d206-53c5-481f-8e1c-28699b9a8988": {
     "address": "Ayres de Pilar 0",
     "bathrooms": 6,
@@ -78626,13 +79123,7 @@
     "bedrooms": null,
     "expenses": null,
     "first_seen": "2026-07-22T13:22:39Z",
-    "flags": [
-      {
-        "label": "Precio 41% por debajo del promedio del tipo — verificá que no sea un anzuelo",
-        "level": "high",
-        "type": "price_low"
-      }
-    ],
+    "flags": [],
     "id": "remax:b17a6b48-ea47-45d8-a993-18e24e84613b",
     "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/b17a6b48-ea47-45d8-a993-18e24e84613b/0ec7b617-abbd-4a09-83c2-53d840b64f42.jpg",
     "images": [
@@ -79190,6 +79681,58 @@
     "url": "https://www.remax.com.ar/listings/se-vende-casa-4-ambientes-zurita-antes-de-caseros",
     "verified": false
   },
+  "remax:b4c77654-834f-48c2-a7e8-a3aabded3981": {
+    "address": "José M. Carrega 3200",
+    "bathrooms": null,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-08-24T12:33:49Z",
+    "flags": [],
+    "id": "remax:b4c77654-834f-48c2-a7e8-a3aabded3981",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/b450bab1-f7b5-4e59-a047-fbd587d61837.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/b450bab1-f7b5-4e59-a047-fbd587d61837.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/7d736716-ce86-4082-b412-bc3724890879.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/7401ab12-3370-4703-9326-6d55acfbd50f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/7e208637-9406-4b8b-870a-1d842255c66d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/c98d4dcb-fe18-47ff-a710-cacc747f38bc.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/75bace9f-d657-4798-9048-374c9718c2db.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/ddd50715-e2b0-4b03-9f49-af931558b66c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/400c283b-8236-4fce-a6c2-bcfc959970e2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/13b768d2-0910-4c75-aadc-5babf99bd0c3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/c62f790d-a010-457c-8561-804f973120bd.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/2613024a-4baa-48fb-b006-c7bcd1ce2521.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/f5f4b351-2131-4279-9457-345adda67903.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/197b354b-6f5e-43aa-9238-72f22e75cf39.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/a584640e-b467-4138-84f3-4b59823f0916.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/fe21fe9e-96e8-44c4-aaff-3f45b3f0dea2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/c1989948-3323-4902-9577-4e640452679e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/52471e75-1a58-42d5-9922-7acefeb402cb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/88bd5518-16b5-4eac-82f9-55874cbdf949.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/571fb532-b03b-4985-9c7a-2d47b26f2662.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/61997888-3ed8-4a24-b079-3de80d2d89d3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/cd6ef67d-7c74-4958-b47f-150dca4c65ad.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/ff9cf572-e816-4a55-b386-41ec12d03a01.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/1e142c5c-67cb-43b1-85c8-b3c5e6c2e0a5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/a160ad5f-3c03-4159-aac9-26b1022105a8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/f96dad6b-7fd8-4c14-8272-8519809fc932.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/355f76c7-01f2-4d4c-90f5-cc0514cf80c9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/4500fafd-ac0e-4687-b52f-b1e6bad15fa7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/0beb39fa-4cff-4fc6-8c12-250b4aef3eca.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/ac083e62-92cb-4edc-8a11-b3f2b164b0f6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b4c77654-834f-48c2-a7e8-a3aabded3981/4c137a0c-c182-4ea5-a816-9979ece75c19.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 2500000.0,
+    "price_currency": "USD",
+    "rooms": null,
+    "search_name": "remax_venta_ph_Saavedra",
+    "site": "remax",
+    "surface_m2": 1415.0,
+    "title": "VENTA PLANTA PROCESADORA EN BAHIA BLANCA",
+    "url": "https://www.remax.com.ar/listings/venta-planta-procesadora-en-bahia-blanca",
+    "verified": false
+  },
   "remax:b51560a2-a539-4fa1-bb7c-f97a1fdb98ac": {
     "address": "Bernardo de Irigoyen 600",
     "bathrooms": 3,
@@ -79345,7 +79888,7 @@
     "first_seen": "2026-08-21T12:27:17Z",
     "flags": [
       {
-        "label": "Precio 56% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 55% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -79401,7 +79944,13 @@
     "bedrooms": null,
     "expenses": null,
     "first_seen": "2026-08-21T12:27:17Z",
-    "flags": [],
+    "flags": [
+      {
+        "label": "Precio 40% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
     "id": "remax:b5e01b88-a16e-4383-8e53-e6d8f94379bb",
     "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/b5e01b88-a16e-4383-8e53-e6d8f94379bb/dca9a41a-cb7d-42a5-add7-5a43659cc5e3.jpg",
     "images": [
@@ -79738,7 +80287,7 @@
     "first_seen": "2026-08-09T12:28:32Z",
     "flags": [
       {
-        "label": "Precio 43% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 45% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -79897,7 +80446,7 @@
     "first_seen": "2026-07-19T12:53:59Z",
     "flags": [
       {
-        "label": "Precio 51% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 50% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -79950,6 +80499,51 @@
     "surface_m2": 111.0,
     "title": "VENTA PH/TRIPLEX 5 AMB., COCH. Y PATIO - MATADEROS",
     "url": "https://www.remax.com.ar/listings/venta-ph-triplex-5-amb-coch-y-patio-mataderos-1",
+    "verified": false
+  },
+  "remax:b7931a36-e3e5-4c19-b64d-223833260a93": {
+    "address": "Independencia 0",
+    "bathrooms": 3,
+    "bedrooms": null,
+    "expenses": 120000.0,
+    "first_seen": "2026-08-24T12:27:01Z",
+    "flags": [
+      {
+        "label": "Precio 58% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:b7931a36-e3e5-4c19-b64d-223833260a93",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/b7931a36-e3e5-4c19-b64d-223833260a93/c47d3e66-10fa-4a66-914a-c248b9898163.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b7931a36-e3e5-4c19-b64d-223833260a93/c47d3e66-10fa-4a66-914a-c248b9898163.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b7931a36-e3e5-4c19-b64d-223833260a93/dd56759d-dc36-4b4a-af96-cba5590f384c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b7931a36-e3e5-4c19-b64d-223833260a93/59358c08-f209-4c9f-8d1e-bb5549bcdd1c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b7931a36-e3e5-4c19-b64d-223833260a93/1e136540-60ae-4efb-9372-f9aab7770d22.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b7931a36-e3e5-4c19-b64d-223833260a93/29fc5a96-c7cf-420b-8adb-a2c543ee7fd0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b7931a36-e3e5-4c19-b64d-223833260a93/1bbd5c3f-6754-4d38-9317-de6db1155d7e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b7931a36-e3e5-4c19-b64d-223833260a93/80f77a81-b2a3-4586-993e-ace0e865de3c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b7931a36-e3e5-4c19-b64d-223833260a93/05ce5778-0d53-4bf3-a715-e7397e40bf53.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b7931a36-e3e5-4c19-b64d-223833260a93/591655b6-5f59-43bd-824a-0299b7c428ce.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b7931a36-e3e5-4c19-b64d-223833260a93/c00804ee-3342-40b6-8229-329fdd04c509.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b7931a36-e3e5-4c19-b64d-223833260a93/3cf0bbe2-bb0f-4eeb-bd77-1fd30ec1d0ed.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b7931a36-e3e5-4c19-b64d-223833260a93/108373c0-6375-4632-ab95-3ff1b19239c1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b7931a36-e3e5-4c19-b64d-223833260a93/3e0242a0-f463-4c67-ba32-de7c3909dda4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b7931a36-e3e5-4c19-b64d-223833260a93/fd532ac6-f16d-49e2-b2e4-fe8594b5219b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b7931a36-e3e5-4c19-b64d-223833260a93/cdf4314f-b894-458e-bbda-4b5234430c15.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b7931a36-e3e5-4c19-b64d-223833260a93/f3d39d1f-7c10-4b2e-9fc3-93f5326854c2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b7931a36-e3e5-4c19-b64d-223833260a93/c17b105e-2a33-47e8-8f36-b6b0902eefcc.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 130000.0,
+    "price_currency": "USD",
+    "rooms": 6,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 220.0,
+    "title": "IMPORTANTE SEMIPISO EN GALERIA TABYCAST",
+    "url": "https://www.remax.com.ar/listings/importante-semipiso-en-galeria-tabycast",
     "verified": false
   },
   "remax:b7a7ac8c-eb9d-46ae-887b-88b26896ea63": {
@@ -80099,6 +80693,57 @@
     "url": "https://www.remax.com.ar/listings/venta-casa-5-ambientes-complejo-tiempo-libre-1",
     "verified": false
   },
+  "remax:b815742f-fc46-4a4b-9a51-03cd79f82393": {
+    "address": "73 500",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-08-24T12:27:01Z",
+    "flags": [
+      {
+        "label": "Precio 71% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:b815742f-fc46-4a4b-9a51-03cd79f82393",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/02d103a8-c3b9-4e75-acc7-1c6651bb4874.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/02d103a8-c3b9-4e75-acc7-1c6651bb4874.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/fc181330-17a1-4a53-8bd5-bd927a14f3ec.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/102ed068-0d52-444b-8299-3dbb7d3cd8ff.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/bcc6b716-7e6c-4bca-8000-6a7702dc1ac9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/176ef736-6e93-4c1d-bd40-ec98edaf69a4.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/e2b5775d-3d4f-4304-9575-1ea2a56c65cd.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/18da2595-b345-4670-b0c4-ddbd0071145a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/b15a4936-9a30-4ab9-8d06-596af25f4f90.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/3578ea48-7dbd-4926-ab03-2a6b622cf853.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/44a01fcf-c558-4923-8bad-e6ac3619849f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/03524869-c2b7-428d-8164-62ed451ea28a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/08c47ae9-b980-4d4a-8a4f-2e1800ebe867.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/fb237b2b-abd7-466c-b49c-9ad157e83c21.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/3c6b3f00-c600-4b87-b4b9-6284798cd4d3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/a40df5a9-bf1f-4b79-a3c1-6239400c5c61.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/9f9c985c-c6f3-41be-967c-708ee59a3536.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/208bae31-b08c-42ee-9942-058794f4653e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/1cd27e44-ab8e-4b5f-99f0-1b1a96813ccb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/62c6c12b-b5b1-4a2c-800c-fb9ff5cec126.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/6c269374-b967-487c-ab1e-21a081e5811c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/073425bd-a691-4b08-b6f0-21eebe263f00.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/66771757-e920-407a-b0e4-c7aad5372d36.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b815742f-fc46-4a4b-9a51-03cd79f82393/55da2f8e-860d-495c-87e1-0006e3a96c65.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 70000.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 164.0,
+    "title": "SE VENDE CASA EN RECONQUISTA",
+    "url": "https://www.remax.com.ar/listings/se-vende-casa-en-reconquista-2",
+    "verified": false
+  },
   "remax:b8961bcc-0ba6-4178-be27-baa13b924190": {
     "address": "Francisco Pacheco 1500",
     "bathrooms": 2,
@@ -80140,6 +80785,40 @@
     "surface_m2": 170.0,
     "title": "CASA 3 DORMITORIOS KM 8",
     "url": "https://www.remax.com.ar/listings/casa-3-dormitorios-km-8",
+    "verified": false
+  },
+  "remax:b8bfa009-2ad4-44fc-8397-3b6f8e8ae5e2": {
+    "address": "Evaristo López 1300",
+    "bathrooms": 3,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-08-24T12:27:01Z",
+    "flags": [
+      {
+        "label": "Precio 77% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      },
+      {
+        "label": "Una sola foto o sin fotos",
+        "level": "low",
+        "type": "few_photos"
+      }
+    ],
+    "id": "remax:b8bfa009-2ad4-44fc-8397-3b6f8e8ae5e2",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/b8bfa009-2ad4-44fc-8397-3b6f8e8ae5e2/aa77ffa7-5ce5-4b3d-b417-ad59541a7e0d.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/b8bfa009-2ad4-44fc-8397-3b6f8e8ae5e2/aa77ffa7-5ce5-4b3d-b417-ad59541a7e0d.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 80000.0,
+    "price_currency": "USD",
+    "rooms": 11,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 470.0,
+    "title": "Casa en EVARISTO LOPEZ AL 1300 - 470m2 - Goya",
+    "url": "https://www.remax.com.ar/listings/casa-en-evaristo-lopez-al-1300-470m2-goya",
     "verified": false
   },
   "remax:b903ed1f-6843-496e-a72c-e3a023275cc6": {
@@ -80409,13 +81088,7 @@
     "bedrooms": null,
     "expenses": null,
     "first_seen": "2026-08-19T12:37:05Z",
-    "flags": [
-      {
-        "label": "Precio 41% por debajo del promedio del tipo — verificá que no sea un anzuelo",
-        "level": "high",
-        "type": "price_low"
-      }
-    ],
+    "flags": [],
     "id": "remax:bb6981e4-cc63-4d7f-a6a1-a91f074a1794",
     "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/bb6981e4-cc63-4d7f-a6a1-a91f074a1794/ef52b142-e205-4cd1-a29f-0cadc71c660a.jpg",
     "images": [
@@ -80512,6 +81185,64 @@
     "surface_m2": 181.0,
     "title": "CASA EN VENTA EN PERGAMINO ZONA CENTRICA",
     "url": "https://www.remax.com.ar/listings/casa-en-venta-en-pergamino-zona-centrica-1",
+    "verified": false
+  },
+  "remax:bc07d898-f067-42ea-8095-fd60fe982e6d": {
+    "address": "3 de Febrero 1200",
+    "bathrooms": 3,
+    "bedrooms": null,
+    "expenses": 700000.0,
+    "first_seen": "2026-08-24T12:27:01Z",
+    "flags": [
+      {
+        "label": "Belgrano: inseguridad alta según datos oficiales",
+        "level": "high",
+        "type": "crime"
+      }
+    ],
+    "id": "remax:bc07d898-f067-42ea-8095-fd60fe982e6d",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/9a728363-c4af-480c-a95f-fa3f1879665f.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/9a728363-c4af-480c-a95f-fa3f1879665f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/cc13dc81-9d14-4b19-8d15-60b67cb22d4c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/ad6dde8a-0301-47a0-8179-cac0f38eb20d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/5689328a-d90c-4651-9c03-d33c025cf2ac.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/04ec142d-f18f-400c-b939-bbced806abdd.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/1a710fef-fb7e-4dc1-949a-35499294111a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/94f556f2-bf0b-46f9-8328-41ee1f13ac99.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/5f9ac05a-fc19-43be-afe3-2d6f97a0f4f1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/fc8471c3-8b63-4a45-9e11-4f5f6f64e905.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/66da9814-fb01-41f0-993b-0abfb0a25b60.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/216ce731-6bda-4e3c-ac9c-d6ecd234d22b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/35656ab2-50c5-40b6-8ffa-58c73132a6ed.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/e1ffdc2d-617c-4288-b238-0cd1d5ca4de9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/b63bf24c-6012-40df-9df8-3591f768af2d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/cb01d6d9-5a06-49c3-88c8-802cf86916c6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/2a55a89e-4be1-4c57-bc4c-b2b1a11da81b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/382719c0-5dfa-42ba-ad2a-250bc4b31c60.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/12ff4ada-e889-433d-97b5-a928ad16d9a3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/ee8c074f-4954-47bb-9302-558d52dcc475.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/7e3b8295-f6fc-4519-8fdb-d663aef35a65.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/3fe0753f-eaed-42d0-b2f9-588336500188.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/b8aaf174-377d-42ec-9e2d-3f104b722597.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/070b5984-db8a-4cc5-82e9-bf9a6283ef78.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/077bb281-e874-41fe-9598-dd0850d824d5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/8229ae83-092a-4938-85f9-45a5ee82a53e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/89efaab1-5dee-4cb2-8757-292b0187fb66.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/e861f61a-5b43-4a0c-b362-da0f53cbc82e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/0adea594-d404-49a7-98db-6f7603a5be74.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/f242277f-cdcd-4a74-aed3-4303a1da4bb9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bc07d898-f067-42ea-8095-fd60fe982e6d/3fd1d9aa-72dc-45ad-8624-d9989c28586a.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 520000.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 164.51,
+    "title": "DEPTO 4 AMBIENTES EN VENTA BELGRANO C/DEPENDENCIA",
+    "url": "https://www.remax.com.ar/listings/depto-4-ambientes-en-venta-belgrano-c-dependencia",
     "verified": false
   },
   "remax:bc748236-64ee-4cf2-a763-2f22416e22de": {
@@ -81191,6 +81922,116 @@
     "url": "https://www.remax.com.ar/listings/venta-departamento-4-ambientes-a-estrenar",
     "verified": false
   },
+  "remax:bfbff058-1b32-49a5-9d3b-6ac5a69d4b82": {
+    "address": "Calle 85 Bis Esquina 116 100",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-08-24T12:30:27Z",
+    "flags": [
+      {
+        "label": "Precio 66% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      }
+    ],
+    "id": "remax:bfbff058-1b32-49a5-9d3b-6ac5a69d4b82",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/21aa17ff-8e6c-461c-8c82-e3d3a57f5b7a.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/21aa17ff-8e6c-461c-8c82-e3d3a57f5b7a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/89973d4d-b507-4efd-ba7b-17cf66f28df3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/6ae0a620-c8e0-4998-82aa-ecad9d365db8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/246a8bf7-5ac7-4b8f-8d9d-c08b187724d0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/8b85677d-decb-46c1-bab3-f67c47e1e0c8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/9bfaf958-6c21-4e13-8052-2eb34a9a9a21.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/69c314f8-fdaf-4e29-b8e5-6f7a96a3fe45.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/9160c144-7d7d-4d6f-b1b1-a2471ec65dc0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/e5f8d30a-57eb-41de-9a8c-a48d7b10107f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/30fee1a0-e3c8-4eb3-b69a-0a646c7ae2fe.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/c58e6724-4384-4487-8c72-ad504d1b8b22.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/3256461e-35cf-4e69-864c-cbfc53f50f16.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/6fa12fde-f13d-4c31-ae73-30164ea03485.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/baea7979-1b78-4b54-9511-b1dba42da140.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/5ba823e4-217f-4f21-bfeb-2b4b4bd38f1a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/2f807907-06b9-4fa4-a314-9378c7c74f5c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/12ba8f21-1184-4557-88c8-d2aca3c5ea7c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/b28134b8-6628-4b23-acf2-99f3938a3dc7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/1986c7ba-5ac9-40f3-b44a-ebd640821b11.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/175edad1-2ad9-4604-859b-f6a68fa8a6f9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/a27d2a44-b7a0-4833-bfc1-fcd41d6ae8e1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/b29f260a-fe56-4dee-9940-2949d3eb0ee5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/5446ba7f-800f-4a1d-b59b-3cea04d4c662.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/b69446e4-b473-4de1-b596-b84d30453ee9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/cdfcf320-f545-4ce1-8c2c-275a8b140113.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/c394c970-97ff-412c-a49c-d847192db260.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/948b55d2-91b6-42c4-897f-e23f52af44b0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/bd660c24-af58-480a-8cc0-f81ddb1f8782.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/968dba1f-8104-4fb0-98e3-8df6ac8a62f5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfbff058-1b32-49a5-9d3b-6ac5a69d4b82/807ddb62-1235-4b9a-8b11-0dd1cc2451fa.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 82000.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_nunez",
+    "site": "remax",
+    "surface_m2": 354.0,
+    "title": "Venta casa 3 dormitorios y patio La Plata",
+    "url": "https://www.remax.com.ar/listings/venta-casa-3-dormitorios-y-patio-la-plata",
+    "verified": false
+  },
+  "remax:bfd3af07-4aad-4c11-a93a-212a6c81765b": {
+    "address": "Ruta 2 Km 64 Rp1 0",
+    "bathrooms": 3,
+    "bedrooms": null,
+    "expenses": 700000.0,
+    "first_seen": "2026-08-24T12:32:44Z",
+    "flags": [],
+    "id": "remax:bfd3af07-4aad-4c11-a93a-212a6c81765b",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/402dc061-37a7-4c13-ae5a-dabfd6375bdb.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/402dc061-37a7-4c13-ae5a-dabfd6375bdb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/18043623-13ab-480e-9169-53924b77563c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/3888eeec-dbed-4288-8db4-5907609a170b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/441adbf8-015f-4ad6-8f0d-f6be88784485.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/6a443110-1404-4f4e-b954-07b016ae6431.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/7069c07f-d260-4855-bb34-acc2c03798d3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/0e18cc24-0939-49a2-a120-0f30a2799377.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/4b779499-14be-4fa1-804e-a070f0bacb09.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/3d1064c6-b1eb-4efa-80e8-0d6d7565254c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/9fe5a87d-a138-46a8-ab3b-f8cf1455d612.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/4e3ed14b-f685-4224-8551-4f03c5d2fd63.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/9601cd55-ceaf-4666-a20e-18160bad8e85.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/98e2db45-11f5-4b9a-ad55-ab83c5aeac24.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/fc930227-06e7-4277-8db1-9abb2870c514.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/a14e1100-0514-4bc7-accc-15abb1b2cec9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/7df8fc33-7162-4ed3-b901-2111841781af.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/3f12a93d-e7a5-4630-8edb-d6099f59883e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/4e7c1315-b727-4bb4-932e-047faf8b6fee.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/c0f5656c-88ca-43ea-9339-6094e79f35ee.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/9507229a-5e3e-427c-92f2-dd13af41f8c6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/f12d251c-2ba8-436a-a404-7a252eb36994.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/ce42682b-7c9a-45d3-abb6-0af8e586000b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/d500a2bc-4623-4835-a2af-5e0fef9c2678.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/7dbf1fb9-794f-40fe-9cce-e7beafa8787d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/c3a9f02a-76ed-4958-90c2-cadab788f083.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/bfd2f5e0-6f53-48cb-956e-bc29c45c56bc.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/f415e5b1-d296-4aed-abcc-2936e9fe5359.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/68603b41-010b-4dd5-a36d-4244af73e26e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/1430f07a-3a22-4990-a155-220158d39ac9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/bfd3af07-4aad-4c11-a93a-212a6c81765b/b363f6e7-6acd-4776-91bd-ff578d14ffa5.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 220000.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_casa_almagro",
+    "site": "remax",
+    "surface_m2": 245.0,
+    "title": "CASA EN VENTA EN ÁREA 60. BRANDSEN. RUTA 2 KM 64",
+    "url": "https://www.remax.com.ar/listings/casa-en-venta-en-area-60-brandsen-ruta-2-km-64",
+    "verified": false
+  },
   "remax:c00a1d5b-ed15-4f04-b930-277052258d98": {
     "address": "Suipacha 1300",
     "bathrooms": 2,
@@ -81868,7 +82709,7 @@
     "first_seen": "2026-07-19T12:53:59Z",
     "flags": [
       {
-        "label": "Precio 56% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 55% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -83187,6 +84028,11 @@
     "first_seen": "2026-07-10T03:52:05Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Balvanera: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -83214,13 +84060,7 @@
     "bedrooms": null,
     "expenses": null,
     "first_seen": "2026-07-23T13:25:35Z",
-    "flags": [
-      {
-        "label": "Precio 41% por debajo del promedio del tipo — verificá que no sea un anzuelo",
-        "level": "high",
-        "type": "price_low"
-      }
-    ],
+    "flags": [],
     "id": "remax:cc23aa2a-70f4-441a-aae3-fa6350993090",
     "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/cc23aa2a-70f4-441a-aae3-fa6350993090/fd62228a-ff02-4b18-b0c3-b5abfb946487.jpg",
     "images": [
@@ -83610,7 +84450,7 @@
     "first_seen": "2026-07-20T13:49:30Z",
     "flags": [
       {
-        "label": "Precio 79% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 78% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -84468,6 +85308,58 @@
     "url": "https://www.remax.com.ar/listings/casa-tipo-chalet-en-venta-arana-con-pileta",
     "verified": false
   },
+  "remax:d25840bb-8ef0-4e6e-af86-3702f851c627": {
+    "address": "Colectora Oeste Ramal Escobar 0",
+    "bathrooms": 3,
+    "bedrooms": null,
+    "expenses": 580000.0,
+    "first_seen": "2026-08-24T12:27:01Z",
+    "flags": [],
+    "id": "remax:d25840bb-8ef0-4e6e-af86-3702f851c627",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/9a8bebb5-e0fb-43ef-a3b9-65a873b41972.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/9a8bebb5-e0fb-43ef-a3b9-65a873b41972.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/2b296c91-bd3b-482b-8eee-1e7971339b78.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/03ed9ed7-93ca-4c89-b895-60b9d88ad7d9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/4a9e0b70-f9a4-43d7-9736-6f7e471ff091.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/79893bb6-c5cc-4852-afb9-9d9f0401437e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/003c0c07-2d6c-483a-9178-116d5e145e7f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/2c4d92a1-a6a9-4a0c-917e-ee7cc42aec53.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/7b8425ae-9ea5-4ea1-ae03-d9b1f0a250eb.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/e53ad55b-843c-405a-8595-a088282c8dd5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/ab5f3dae-6582-485f-8222-e664111a94c9.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/63bfafd0-d2b6-49e2-ad92-b285ebe56020.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/3fc4d74c-f240-46e4-92ba-8bb091b6bed0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/32587250-0d58-4a05-8be6-b232aaba5c05.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/94965c0a-1d27-4cba-95c9-2bf27d500582.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/5bb100f8-8f45-4d3f-a5e6-f9e721be72c2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/63e56c75-7011-440f-9d73-0bfa00dc352e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/b1bc79a3-0577-4ec2-bc25-7589b57076e1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/2a9539a1-36ec-42fe-afd9-4d89dbe905a3.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/0297f360-8e65-4bff-91a6-e0734fad08e6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/88a82972-f757-489c-9dc9-9455ad9db33d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/594d58e8-0808-4b19-ac64-bb5c56c8682e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/ce60bcdf-28d0-4798-8a07-2cbd0b6f676e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/8a6a01d2-c81c-4641-bfe5-b6b386e18fca.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/3a5fcefe-9f00-48a8-a86a-f127f84526b5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/584c5fa1-c6b0-434f-b27b-d6a6b6b2b81d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/0f702db2-8e87-4dc7-b71e-89db9b03078a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/95e5671a-4cd1-4eb0-b701-b67015d1a53c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/4cf37ae7-4669-4758-ad56-1a2265023916.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/03babaec-7c25-4641-bc82-ed0f69634e59.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d25840bb-8ef0-4e6e-af86-3702f851c627/7026e1e1-7850-49d7-9f12-7ee39d86021d.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 490000.0,
+    "price_currency": "USD",
+    "rooms": 7,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 389.0,
+    "title": "Casa en Barrio Septiembre, Escobar, Nordelta",
+    "url": "https://www.remax.com.ar/listings/casa-en-barrio-septiembre-escobar-nordelta",
+    "verified": false
+  },
   "remax:d27ad841-9f1b-40ff-abc6-2ef9dd97d322": {
     "address": "La Colina Villa de Campo 0",
     "bathrooms": 7,
@@ -84577,7 +85469,7 @@
     "first_seen": "2026-08-12T12:46:30Z",
     "flags": [
       {
-        "label": "Precio 48% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 47% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -84685,12 +85577,12 @@
     "url": "https://www.remax.com.ar/listings/venta-2-casas-en-block-2-cuadras-d-mar-santaclara",
     "verified": false
   },
-  "remax:d35cf602-d640-48e8-a303-a335e87c9b31": {
-    "address": "Florencio Sánchez 2000",
-    "bathrooms": 2,
+  "remax:d3048861-5159-4d66-8b1b-c5924eacb0c4": {
+    "address": "Oroño Nicasio 6500",
+    "bathrooms": 3,
     "bedrooms": null,
     "expenses": null,
-    "first_seen": "2026-07-27T14:20:07Z",
+    "first_seen": "2026-08-24T12:27:01Z",
     "flags": [
       {
         "label": "Precio 41% por debajo del promedio del tipo — verificá que no sea un anzuelo",
@@ -84698,6 +85590,48 @@
         "type": "price_low"
       }
     ],
+    "id": "remax:d3048861-5159-4d66-8b1b-c5924eacb0c4",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/d3048861-5159-4d66-8b1b-c5924eacb0c4/bcc14682-f505-4071-ab48-9647f3a85c62.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d3048861-5159-4d66-8b1b-c5924eacb0c4/bcc14682-f505-4071-ab48-9647f3a85c62.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d3048861-5159-4d66-8b1b-c5924eacb0c4/70b779ca-9826-4a55-a433-deb5559ff64a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d3048861-5159-4d66-8b1b-c5924eacb0c4/ef176cf9-cb41-4bdc-896e-2a91905bb8f5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d3048861-5159-4d66-8b1b-c5924eacb0c4/429f1133-1da8-4300-b136-a6bb81a36ede.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d3048861-5159-4d66-8b1b-c5924eacb0c4/700db28a-69fb-424b-ab54-f3c083280094.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d3048861-5159-4d66-8b1b-c5924eacb0c4/58fc0702-cc8e-4da1-b7a7-4cc96fc017a7.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d3048861-5159-4d66-8b1b-c5924eacb0c4/22e55449-8289-4c99-b809-cb7ed929f990.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d3048861-5159-4d66-8b1b-c5924eacb0c4/cd6e2795-bcbe-4b9a-b8cb-d8985c644373.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d3048861-5159-4d66-8b1b-c5924eacb0c4/b02ae16f-27a9-4672-aeef-3bf2633a06cf.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d3048861-5159-4d66-8b1b-c5924eacb0c4/0ecfd5fa-f492-421c-a528-bf30f66bc947.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d3048861-5159-4d66-8b1b-c5924eacb0c4/5d52bde4-a31c-4869-8521-10ffdf900a20.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d3048861-5159-4d66-8b1b-c5924eacb0c4/e7f90e57-6ce3-4445-9edf-e90970f67e8f.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d3048861-5159-4d66-8b1b-c5924eacb0c4/ac4e0ac7-c65a-4953-aad6-53b43c96073e.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d3048861-5159-4d66-8b1b-c5924eacb0c4/e80222ed-dd2e-4d52-b2b9-d6a3ef132c13.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d3048861-5159-4d66-8b1b-c5924eacb0c4/feb73007-1230-495b-8901-d7405bb4689c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d3048861-5159-4d66-8b1b-c5924eacb0c4/dc46abea-3525-40e6-8396-a564b0547a2c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d3048861-5159-4d66-8b1b-c5924eacb0c4/6d0875fd-b4b8-4bd2-aa4f-a1cc132f93bc.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d3048861-5159-4d66-8b1b-c5924eacb0c4/d025747c-3c5e-4b10-97db-1a9a914460d0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d3048861-5159-4d66-8b1b-c5924eacb0c4/0856dd8a-fd61-41e5-aa14-7e66b3660977.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/d3048861-5159-4d66-8b1b-c5924eacb0c4/e945d384-231a-4fc7-87d0-54666386c9bb.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 145000.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 415.0,
+    "title": "CASA EN VENTA CON JARDIN Y QUINCHO. WILDE",
+    "url": "https://www.remax.com.ar/listings/casa-en-venta-con-jardin-y-quincho-wilde",
+    "verified": false
+  },
+  "remax:d35cf602-d640-48e8-a303-a335e87c9b31": {
+    "address": "Florencio Sánchez 2000",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-07-27T14:20:07Z",
+    "flags": [],
     "id": "remax:d35cf602-d640-48e8-a303-a335e87c9b31",
     "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/d35cf602-d640-48e8-a303-a335e87c9b31/d0d78bf9-a8d7-423f-9854-db3902b2af91.jpg",
     "images": [
@@ -85334,7 +86268,7 @@
     "first_seen": "2026-08-02T12:58:52Z",
     "flags": [
       {
-        "label": "Precio 46% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 45% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -85369,7 +86303,7 @@
     "first_seen": "2026-07-15T14:55:00Z",
     "flags": [
       {
-        "label": "Precio 45% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 44% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -85892,7 +86826,7 @@
     "first_seen": "2026-08-03T14:17:34Z",
     "flags": [
       {
-        "label": "Precio 74% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 73% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -86080,6 +87014,58 @@
     "url": "https://www.remax.com.ar/listings/casa-5-amb-venta-quilmes-oeste-permuta-apto-cred",
     "verified": false
   },
+  "remax:db3ac92a-606d-498a-bb9b-da9ab9ed991b": {
+    "address": "Luisa 0",
+    "bathrooms": 2,
+    "bedrooms": null,
+    "expenses": null,
+    "first_seen": "2026-08-24T12:27:01Z",
+    "flags": [],
+    "id": "remax:db3ac92a-606d-498a-bb9b-da9ab9ed991b",
+    "image": "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/98058137-5144-474c-a1d7-2a5fa6573149.jpg",
+    "images": [
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/98058137-5144-474c-a1d7-2a5fa6573149.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/f020d887-1fec-456f-a565-f7217fb13b01.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/12300062-352b-49a0-9af7-e1d3ba061f05.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/d2151eae-26c5-4771-9429-75d1a1ec3b49.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/9b8800a3-8ec2-4d3d-9f4d-37d369cd8415.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/7e4e6905-7082-47b7-b446-83263220f8c0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/bc792a84-f37f-4a35-8185-6f416faad89c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/e928f61e-3250-4be2-b154-75f7b3da7740.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/e088a703-709c-4f3c-918d-7af399e94dce.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/69b28a7e-0a3b-490f-b0ad-b7aa9065057a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/bf0f3329-445c-4613-b703-389157f3a3d5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/f19079a1-0c94-42bb-a529-e2016df67209.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/2ac9b486-e8d1-433c-b2c8-5bb671f874a2.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/7da3fcf3-1a1a-4b3b-a1ec-ecd6ef0eb264.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/e65c5bfe-c4dc-4ad6-9b80-6ca1c120d3fa.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/42a14bb4-5894-4699-b1a5-19dfb614aad5.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/d9afadaf-02ce-4328-9029-6853680d3e58.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/a9bda7e0-8462-4849-961e-3d21f56ba00d.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/b0674084-5b0c-4883-a0af-db284d3f3dc6.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/80c523c6-ddbc-4431-8dc8-8707dc1ad3d0.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/d59a19b1-b708-4f4a-80fa-5fe8cac67b0a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/faf89a82-4032-4e08-bd6b-5de8e1bad6c1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/3702dab7-5975-405e-93ac-a59f118e463c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/8c8de4a3-5747-4051-9a48-e28291bdae15.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/db6375f3-9302-4383-9efd-a8d5e19556e1.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/a2d8d69f-0ff8-4575-ba78-7c33b723ea9a.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/c243bc0a-5d1f-4404-9318-6586b76ede2b.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/5d1a5c86-8597-4338-a8b1-424b2faa536c.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/fd139bc5-7017-497e-abfe-f08ea781bcd8.jpg",
+      "https://d1acdg20u0pmxj.cloudfront.net/listings/db3ac92a-606d-498a-bb9b-da9ab9ed991b/229ef4f9-114a-4adf-9a23-5e1d77d32e69.jpg"
+    ],
+    "operation": "venta",
+    "price_amount": 174900.0,
+    "price_currency": "USD",
+    "rooms": 4,
+    "search_name": "remax_venta_ph_caballito",
+    "site": "remax",
+    "surface_m2": 600.0,
+    "title": "Casas 3 y 2 amb Sierra de los Padres parque pileta",
+    "url": "https://www.remax.com.ar/listings/casas-3-y-2-amb-sierra-de-los-padres-parque-pileta",
+    "verified": false
+  },
   "remax:db8a2e29-a46a-43e0-a455-d51ccf4dc6e1": {
     "address": "Saavedra 300",
     "bathrooms": 2,
@@ -86146,7 +87132,7 @@
     "first_seen": "2026-07-23T13:25:35Z",
     "flags": [
       {
-        "label": "Precio 78% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 77% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -86454,7 +87440,7 @@
     "first_seen": "2026-08-02T12:58:52Z",
     "flags": [
       {
-        "label": "Precio 79% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 78% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -86805,7 +87791,7 @@
     "first_seen": "2026-08-18T12:25:38Z",
     "flags": [
       {
-        "label": "Precio 80% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 79% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -86858,7 +87844,7 @@
     "first_seen": "2026-07-19T12:53:59Z",
     "flags": [
       {
-        "label": "Precio 64% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 63% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -87011,6 +87997,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:52:05Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Precio 99% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
@@ -89324,7 +90315,7 @@
     "first_seen": "2026-08-03T14:16:53Z",
     "flags": [
       {
-        "label": "Precio 72% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 71% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -90249,7 +91240,7 @@
     "first_seen": "2026-07-20T13:49:30Z",
     "flags": [
       {
-        "label": "Precio 76% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 75% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -90546,7 +91537,7 @@
     "first_seen": "2026-07-22T13:22:39Z",
     "flags": [
       {
-        "label": "Precio 68% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 67% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -90656,7 +91647,7 @@
     "first_seen": "2026-08-16T12:20:03Z",
     "flags": [
       {
-        "label": "Precio 70% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 69% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -90892,7 +91883,7 @@
     "first_seen": "2026-08-02T12:58:52Z",
     "flags": [
       {
-        "label": "Precio 51% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 50% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -91747,7 +92738,7 @@
     "first_seen": "2026-08-03T14:16:53Z",
     "flags": [
       {
-        "label": "Precio 75% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 71% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -91861,7 +92852,7 @@
     "first_seen": "2026-08-18T12:25:38Z",
     "flags": [
       {
-        "label": "Precio 49% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 48% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -92234,7 +93225,7 @@
     "first_seen": "2026-08-16T12:20:03Z",
     "flags": [
       {
-        "label": "Precio 51% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 50% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       }
@@ -92632,6 +93623,11 @@
     "first_seen": "2026-08-10T23:37:18Z",
     "flags": [
       {
+        "label": "Precio 41% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      },
+      {
         "label": "Una sola foto o sin fotos",
         "level": "low",
         "type": "few_photos"
@@ -92665,6 +93661,11 @@
     "expenses": 50000.0,
     "first_seen": "2026-07-10T03:36:04Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
@@ -93107,6 +94108,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:18:56Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
@@ -94196,6 +95202,11 @@
     "first_seen": "2026-07-15T14:56:47Z",
     "flags": [
       {
+        "label": "Precio 41% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "level": "high",
+        "type": "price_low"
+      },
+      {
         "label": "Una sola foto o sin fotos",
         "level": "low",
         "type": "few_photos"
@@ -94230,7 +95241,7 @@
     "first_seen": "2026-07-15T14:57:10Z",
     "flags": [
       {
-        "label": "Precio 47% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 48% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -94575,7 +95586,7 @@
     "first_seen": "2026-07-15T14:57:10Z",
     "flags": [
       {
-        "label": "Precio 46% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 45% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -94823,7 +95834,7 @@
     "first_seen": "2026-07-15T15:10:34Z",
     "flags": [
       {
-        "label": "Precio 42% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 41% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -95100,7 +96111,7 @@
     "first_seen": "2026-08-10T23:42:33Z",
     "flags": [
       {
-        "label": "Precio 41% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 40% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -95415,6 +96426,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
@@ -95928,7 +96944,7 @@
     "first_seen": "2026-07-15T14:57:10Z",
     "flags": [
       {
-        "label": "Precio 41% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 40% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -95967,7 +96983,7 @@
     "first_seen": "2026-08-10T23:37:18Z",
     "flags": [
       {
-        "label": "Precio 41% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 40% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -96518,7 +97534,7 @@
     "first_seen": "2026-07-15T15:10:51Z",
     "flags": [
       {
-        "label": "Precio 48% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 47% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -96834,7 +97850,7 @@
     "first_seen": "2026-07-15T15:10:34Z",
     "flags": [
       {
-        "label": "Precio 48% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 47% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -97111,7 +98127,7 @@
     "first_seen": "2026-07-15T15:15:21Z",
     "flags": [
       {
-        "label": "Precio 49% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 48% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -99861,6 +100877,11 @@
     "first_seen": "2026-07-10T04:19:25Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Precio 80% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
@@ -100035,6 +101056,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T04:20:04Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Villa Crespo: inseguridad alta según datos oficiales",
         "level": "high",
@@ -100274,6 +101300,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T04:23:13Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Nunez: inseguridad media según datos oficiales",
         "level": "med",
@@ -100548,6 +101579,11 @@
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -100821,7 +101857,7 @@
     "first_seen": "2026-07-15T14:57:10Z",
     "flags": [
       {
-        "label": "Precio 41% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 40% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -101409,6 +102445,11 @@
     "first_seen": "2026-07-10T04:27:36Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Saavedra: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -101952,7 +102993,7 @@
     "first_seen": "2026-07-15T15:10:34Z",
     "flags": [
       {
-        "label": "Precio 53% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 54% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -102398,6 +103439,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:52:19Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Comuna 15: inseguridad alta según datos oficiales (19.135 delitos/100k hab)",
         "level": "high",
@@ -103776,6 +104822,11 @@
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -103980,6 +105031,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
@@ -104730,7 +105786,7 @@
     "first_seen": "2026-07-15T15:10:34Z",
     "flags": [
       {
-        "label": "Precio 48% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 47% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -104769,7 +105825,7 @@
     "first_seen": "2026-08-10T23:37:18Z",
     "flags": [
       {
-        "label": "Precio 48% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 47% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -105182,6 +106238,11 @@
     "first_seen": "2026-07-10T03:52:19Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Palermo: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -105350,7 +106411,13 @@
     "bedrooms": 4,
     "expenses": null,
     "first_seen": "2026-07-10T04:27:36Z",
-    "flags": [],
+    "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      }
+    ],
     "id": "zonaprop:58817913",
     "image": "https://imgar.zonapropcdn.com/avisos/1/00/58/81/79/13/360x266/2055247449.jpg?isFirstImage=true",
     "images": [
@@ -105550,6 +106617,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:52:19Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Villa Crespo: inseguridad alta según datos oficiales",
         "level": "high",
@@ -106128,6 +107200,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T04:25:32Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
@@ -106883,6 +107960,11 @@
     "first_seen": "2026-07-10T04:23:13Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Belgrano: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -107019,6 +108101,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Boedo: inseguridad media según datos oficiales",
         "level": "med",
@@ -107366,6 +108453,11 @@
     "first_seen": "2026-07-10T04:27:36Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Saavedra: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -107571,6 +108663,11 @@
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -107605,6 +108702,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T04:25:32Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Boedo: inseguridad media según datos oficiales",
         "level": "med",
@@ -108496,11 +109598,6 @@
     "first_seen": "2026-07-15T14:57:10Z",
     "flags": [
       {
-        "label": "Precio 41% por debajo del promedio del tipo — verificá que no sea un anzuelo",
-        "level": "high",
-        "type": "price_low"
-      },
-      {
         "label": "Una sola foto o sin fotos",
         "level": "low",
         "type": "few_photos"
@@ -109084,6 +110181,11 @@
     "first_seen": "2026-07-10T03:18:56Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Villa Crespo: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -109219,6 +110321,11 @@
     "expenses": 280000.0,
     "first_seen": "2026-07-10T03:36:04Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
@@ -109832,7 +110939,7 @@
     "first_seen": "2026-07-15T14:57:10Z",
     "flags": [
       {
-        "label": "Precio 44% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 43% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -109983,7 +111090,7 @@
     "first_seen": "2026-07-15T14:56:47Z",
     "flags": [
       {
-        "label": "Precio 46% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 47% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -110056,6 +111163,11 @@
     "first_seen": "2026-07-10T04:20:04Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Palermo: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -110091,6 +111203,11 @@
     "first_seen": "2026-07-10T04:20:04Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Comuna 15: inseguridad alta según datos oficiales (19.135 delitos/100k hab)",
         "level": "high",
         "type": "crime"
@@ -110125,6 +111242,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
@@ -110670,6 +111792,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:18:56Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Precio 56% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
@@ -111769,6 +112896,11 @@
     "first_seen": "2026-07-10T03:36:04Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -111938,6 +113070,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
@@ -113062,6 +114199,11 @@
     "first_seen": "2026-07-10T03:36:04Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -114082,6 +115224,11 @@
     "first_seen": "2026-07-10T03:52:19Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Villa Crespo: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -114115,6 +115262,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:18:56Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
@@ -114354,6 +115506,11 @@
     "first_seen": "2026-07-10T04:19:25Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -114558,6 +115715,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T04:27:36Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Saavedra: inseguridad media según datos oficiales",
         "level": "med",
@@ -114864,6 +116026,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:18:56Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Una sola foto o sin fotos",
         "level": "low",
@@ -115305,6 +116472,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:53:21Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Belgrano: inseguridad alta según datos oficiales",
         "level": "high",
@@ -116097,6 +117269,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:52:19Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Una sola foto o sin fotos",
         "level": "low",
@@ -116917,6 +118094,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T04:27:36Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Villa Pueyrredon: inseguridad baja según datos oficiales",
         "level": "low",
@@ -117944,6 +119126,11 @@
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Flores: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -118188,6 +119375,11 @@
     "first_seen": "2026-07-10T03:54:22Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Villa Urquiza: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -118221,6 +119413,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T04:20:04Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Chacarita: inseguridad media según datos oficiales",
         "level": "med",
@@ -118358,6 +119555,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
@@ -118841,7 +120043,7 @@
     "first_seen": "2026-07-15T14:57:34Z",
     "flags": [
       {
-        "label": "Precio 53% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 54% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -119288,6 +120490,11 @@
     "first_seen": "2026-07-10T04:23:13Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Nunez: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -119566,11 +120773,6 @@
     "first_seen": "2026-07-15T14:56:18Z",
     "flags": [
       {
-        "label": "Precio 41% por debajo del promedio del tipo — verificá que no sea un anzuelo",
-        "level": "high",
-        "type": "price_low"
-      },
-      {
         "label": "Una sola foto o sin fotos",
         "level": "low",
         "type": "few_photos"
@@ -119672,6 +120874,11 @@
     "expenses": 300000.0,
     "first_seen": "2026-07-10T03:36:04Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
@@ -119779,6 +120986,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T04:18:58Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Caballito: inseguridad alta según datos oficiales",
         "level": "high",
@@ -119985,6 +121197,11 @@
     "first_seen": "2026-07-10T03:53:21Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Saavedra: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -120155,7 +121372,7 @@
     "first_seen": "2026-07-15T15:15:52Z",
     "flags": [
       {
-        "label": "Precio 41% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 40% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -120193,6 +121410,11 @@
     "expenses": 170000.0,
     "first_seen": "2026-07-10T03:53:21Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Belgrano: inseguridad alta según datos oficiales",
         "level": "high",
@@ -120329,6 +121551,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:54:22Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Precio 64% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
@@ -120811,6 +122038,11 @@
     "first_seen": "2026-07-10T03:54:22Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Villa Urquiza: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -120946,6 +122178,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:36:04Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
@@ -121666,6 +122903,11 @@
     "first_seen": "2026-07-10T03:18:56Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Una sola foto o sin fotos",
         "level": "low",
         "type": "few_photos"
@@ -121801,7 +123043,7 @@
     "first_seen": "2026-07-15T14:57:10Z",
     "flags": [
       {
-        "label": "Precio 45% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 44% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -122797,6 +124039,11 @@
     "first_seen": "2026-07-10T03:53:21Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Nunez: inseguridad media según datos oficiales",
         "level": "med",
         "type": "crime"
@@ -122830,6 +124077,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:36:04Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Almagro: inseguridad alta según datos oficiales",
         "level": "high",
@@ -123137,7 +124389,7 @@
     "first_seen": "2026-07-15T14:56:18Z",
     "flags": [
       {
-        "label": "Precio 44% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 46% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -123311,6 +124563,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T03:52:19Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Palermo: inseguridad alta según datos oficiales",
         "level": "high",
@@ -123584,6 +124841,11 @@
     "first_seen": "2026-07-10T04:20:04Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Villa Crespo: inseguridad alta según datos oficiales",
         "level": "high",
         "type": "crime"
@@ -123618,6 +124880,11 @@
     "expenses": null,
     "first_seen": "2026-07-10T04:23:13Z",
     "flags": [
+      {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
       {
         "label": "Saavedra: inseguridad media según datos oficiales",
         "level": "med",
@@ -124373,6 +125640,11 @@
     "first_seen": "2026-07-10T11:59:18Z",
     "flags": [
       {
+        "label": "Publicada hace al menos 45 días",
+        "level": "med",
+        "type": "stale"
+      },
+      {
         "label": "Una sola foto o sin fotos",
         "level": "low",
         "type": "few_photos"
@@ -124438,7 +125710,7 @@
     "first_seen": "2026-07-15T14:56:18Z",
     "flags": [
       {
-        "label": "Precio 58% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 57% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -129590,7 +130862,7 @@
     "first_seen": "2026-08-10T23:42:33Z",
     "flags": [
       {
-        "label": "Precio 52% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 51% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -130313,11 +131585,6 @@
     "expenses": null,
     "first_seen": "2026-08-10T23:37:18Z",
     "flags": [
-      {
-        "label": "Precio 41% por debajo del promedio del tipo — verificá que no sea un anzuelo",
-        "level": "high",
-        "type": "price_low"
-      },
       {
         "label": "Una sola foto o sin fotos",
         "level": "low",
@@ -131990,7 +133257,7 @@
     "first_seen": "2026-08-10T23:44:12Z",
     "flags": [
       {
-        "label": "Precio 44% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 43% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -133326,7 +134593,7 @@
     "first_seen": "2026-08-10T23:44:12Z",
     "flags": [
       {
-        "label": "Precio 51% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 50% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
@@ -133540,7 +134807,7 @@
     "first_seen": "2026-08-10T23:37:18Z",
     "flags": [
       {
-        "label": "Precio 44% por debajo del promedio del tipo — verificá que no sea un anzuelo",
+        "label": "Precio 46% por debajo del promedio del tipo — verificá que no sea un anzuelo",
         "level": "high",
         "type": "price_low"
       },
