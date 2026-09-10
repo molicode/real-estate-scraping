@@ -1,12 +1,12 @@
 {
   "key_present": true,
-  "checked_at": "2026-09-09T22:59:29Z",
-  "exhausted": true,
-  "request_count": 1080,
+  "checked_at": "2026-09-10T03:29:06Z",
+  "exhausted": false,
+  "request_count": 0,
   "request_limit": 1000,
   "reserve": 60,
-  "remaining": 0,
-  "low": true,
-  "proxy_paused": true,
+  "remaining": 1000,
+  "low": false,
+  "proxy_paused": false,
   "resets_at": "2026-10-01T00:00:00Z"
 }
