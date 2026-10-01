@@ -1,6 +1,6 @@
 {
   "key_present": true,
-  "checked_at": "2026-09-30T21:56:42Z",
+  "checked_at": "2026-10-01T04:36:50Z",
   "exhausted": false,
   "request_count": 0,
   "request_limit": 1000,
@@ -8,5 +8,5 @@
   "remaining": 1000,
   "low": false,
   "proxy_paused": false,
-  "resets_at": "2026-10-01T00:00:00Z"
+  "resets_at": "2026-11-01T00:00:00Z"
 }
